@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **11 / 84 complete** — BE 11/40 · FE 0/44
+Progress: **22 / 84 complete** — BE 22/40 · FE 0/44
 
 ---
 
@@ -10,7 +10,7 @@ Progress: **11 / 84 complete** — BE 11/40 · FE 0/44
 > A does 0.1 first → pushes `main` → both run in parallel. A ships `types/index.ts` early so B never blocks.
 - [x] `[BE]` create-next-app → push `main`
 - [x] `[BE]` Prisma schema (TRD §10.2) + migrate + shared dev DB
-- [ ] `[BE]` FTS tsvector + GIN SQL migration
+- [x] `[BE]` FTS tsvector + GIN SQL migration
 - [x] `[BE]` `lib/db.ts`
 - [x] `[BE]` **`types/index.ts`** — envelope + all DTOs + fn signatures (contract #1)
 - [x] `[BE]` Clerk + `lib/auth.ts`
@@ -29,16 +29,16 @@ Progress: **11 / 84 complete** — BE 11/40 · FE 0/44
 - [ ] `[FE]` mock-data fixtures matching `types/index.ts`
 
 ## Phase 1 — Companies & internships
-- [ ] `[BE]` companies `schema.ts` (Zod, §17)
-- [ ] `[BE]` companies `queries.ts` (getCompanyBySlug, listCompanies, getOpenInternships) — ship early
-- [ ] `[BE]` register-company action (txn + role elevation)
-- [ ] `[BE]` company update actions (all §17, domain re-verify)
-- [ ] `[BE]` founders/links/locations/news/tech actions
-- [ ] `[BE]` domain duplicate detection
-- [ ] `[BE]` internships schema/queries/actions (create/publish/archive)
-- [ ] `[BE]` publish gate — VERIFIED only, server-side (FR-22)
-- [ ] `[BE]` staleness flag (45d)
-- [ ] `[BE]` `/api/companies` + `/api/internships` handlers
+- [x] `[BE]` companies `schema.ts` (Zod, §17)
+- [x] `[BE]` companies `queries.ts` (getCompanyBySlug, listCompanies, getOpenInternships) — ship early
+- [x] `[BE]` register-company action (txn + role elevation)
+- [x] `[BE]` company update actions (all §17, domain re-verify)
+- [x] `[BE]` founders/links/locations/news/tech actions
+- [x] `[BE]` domain duplicate detection
+- [x] `[BE]` internships schema/queries/actions (create/publish/archive)
+- [x] `[BE]` publish gate — VERIFIED only, server-side (FR-22)
+- [x] `[BE]` staleness flag (45d)
+- [x] `[BE]` `/api/companies` + `/api/internships` handlers
 - [ ] `[FE]` landing page
 - [ ] `[FE]` public company directory (grid+cards)
 - [ ] `[FE]` public company profile (§17 read-only, LCP<2s)

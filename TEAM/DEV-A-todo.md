@@ -10,8 +10,8 @@ Branch prefix: `feat/be-…`. After each task: **tick this file + `MASTER-CHECKL
 ## Phase 0 — Foundation & contracts (do first; unblocks everyone)
 - [x] 0.1 `create-next-app` (TS, App Router, Tailwind, ESLint) → push `main` immediately (unblocks Dev B)
 - [x] 0.2 Prisma install + full `schema.prisma` (all models + enums, TRD §10.2)
-- [ ] 0.3 Initial migrate + provision shared dev Postgres (Neon/Supabase); share `DATABASE_URL`
-- [ ] 0.4 Raw SQL migration: `tsvector` generated columns + GIN indexes (TRD §10.4)
+- [x] 0.3 Initial migrate + provision shared dev Postgres (Neon/Supabase); share `DATABASE_URL`
+- [x] 0.4 Raw SQL migration: `tsvector` generated columns + GIN indexes (TRD §10.4)
 - [x] 0.5 `lib/db.ts` Prisma singleton
 - [x] 0.6 **`types/index.ts`** — result envelope, `AppError` subclasses, **all shared DTOs + every query/action signature** (contract #1 — ship early)
 - [x] 0.7 Clerk install + `lib/auth.ts` (`getCurrentUser`)
@@ -23,16 +23,16 @@ Branch prefix: `feat/be-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 0.13 GitHub Actions CI (lint/typecheck/unit/build) + Vitest config; branch protection
 
 ## Phase 1 — Companies & Internships data
-- [ ] 1.1 `features/companies/schema.ts` — Zod, required fields (PRD §17)
-- [ ] 1.2 `features/companies/queries.ts` — `getCompanyBySlug`, `listCompanies(filters)`, `getOpenInternships` (ship early for Dev B)
-- [ ] 1.3 `features/companies/actions.ts` — register (Company+CompanyMember(OWNER)+role elevation, 1 txn) (FR-10)
-- [ ] 1.4 Company profile update actions — all §17 modules; domain-change → re-verify (FR-11/13)
-- [ ] 1.5 Founders/links/locations/news/tech-stack/funding actions (FR-11)
-- [ ] 1.6 Domain duplicate detection at submit (FR-15)
-- [ ] 1.7 `features/internships/{schema,queries,actions}.ts` — create(DRAFT)/update/publish/archive (FR-20/21/23)
-- [ ] 1.8 Publish gate: only VERIFIED company → PUBLISHED, **server-side** (FR-22, NFR 13.4)
-- [ ] 1.9 Staleness flag logic: Open + untouched 45d (FR-24)
-- [ ] 1.10 `app/api/companies` + `app/api/internships` route handlers (paginated, envelope) (TRD §9)
+- [x] 1.1 `features/companies/schema.ts` — Zod, required fields (PRD §17)
+- [x] 1.2 `features/companies/queries.ts` — `getCompanyBySlug`, `listCompanies(filters)`, `getOpenInternships` (ship early for Dev B)
+- [x] 1.3 `features/companies/actions.ts` — register (Company+CompanyMember(OWNER)+role elevation, 1 txn) (FR-10)
+- [x] 1.4 Company profile update actions — all §17 modules; domain-change → re-verify (FR-11/13)
+- [x] 1.5 Founders/links/locations/news/tech-stack/funding actions (FR-11)
+- [x] 1.6 Domain duplicate detection at submit (FR-15)
+- [x] 1.7 `features/internships/{schema,queries,actions}.ts` — create(DRAFT)/update/publish/archive (FR-20/21/23)
+- [x] 1.8 Publish gate: only VERIFIED company → PUBLISHED, **server-side** (FR-22, NFR 13.4)
+- [x] 1.9 Staleness flag logic: Open + untouched 45d (FR-24)
+- [x] 1.10 `app/api/companies` + `app/api/internships` route handlers (paginated, envelope) (TRD §9)
 
 ## Phase 2 — Student, bookmarks, applications data
 - [ ] 2.1 `features/students/{schema,queries,actions}.ts` — profile + resume-url placeholder (PRD §14.1, §21)
