@@ -42,13 +42,13 @@ Branch prefix: `feat/be-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 2.5 `app/api/bookmarks` + `app/api/applications` route handlers
 
 ## Phase 3 — Search, discovery & analytics data
-- [ ] 3.1 `lib/search.ts` — Postgres FTS, `websearch_to_tsquery`, weighted rank (TRD §12)
-- [ ] 3.2 `app/api/search` + `/api/search/suggest` typeahead (≤8) (PRD §16)
-- [ ] 3.3 Search-query logging for admin analytics (FR-33)
-- [ ] 3.4 Recommended-companies query — rules-based (interest/major ↔ category/tech) (PRD §14.1)
-- [ ] 3.5 `TrendingSnapshot` model + Vercel Cron aggregation (TRD §13)
-- [ ] 3.6 `features/analytics/queries.ts` — aggregate/anon company views & bookmarks (FR-70/71, NFR 13.6)
-- [ ] 3.7 `AnalyticsEvent` model + `recordView()` write helper (PRD §19.3)
+- [x] 3.1 `lib/search.ts` — Postgres FTS, `websearch_to_tsquery`, weighted rank (TRD §12)
+- [x] 3.2 `app/api/search` + `/api/search/suggest` typeahead (≤8) (PRD §16)
+- [x] 3.3 Search-query logging for admin analytics (FR-33)
+- [x] 3.4 Recommended-companies query — rules-based (interest/major ↔ category/tech) (PRD §14.1)
+- [x] 3.5 `TrendingSnapshot` model + Vercel Cron aggregation (TRD §13)
+- [x] 3.6 `features/analytics/queries.ts` — aggregate/anon company views & bookmarks (FR-70/71, NFR 13.6)
+- [x] 3.7 `AnalyticsEvent` model + `recordView()` write helper (PRD §19.3)
 
 ## Phase 4 — Verification, admin & platform-analytics data
 - [ ] 4.1 `features/verification` — queue query + approve/request-changes/reject actions → `notify()` (FR-50/51/60)

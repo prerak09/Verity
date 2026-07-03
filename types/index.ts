@@ -582,6 +582,7 @@ export type UpdateStudentProfile = (
 export type GetRecommendedCompanies = (
   userId: string,
 ) => Promise<CompanyCard[]>;
+export type GetTrendingCompanies = (limit?: number) => Promise<CompanyCard[]>;
 
 // features/bookmarks/queries.ts + actions.ts
 export type ListBookmarks = (

@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **27 / 84 complete** — BE 27/40 · FE 0/44
+Progress: **34 / 84 complete** — BE 34/40 · FE 0/44
 
 ---
 
@@ -51,9 +51,9 @@ Progress: **27 / 84 complete** — BE 27/40 · FE 0/44
 - [x] `[BE]` applications schema/queries/actions (status + notes)
 - [x] `[BE]` tracker privacy (excluded from company/admin)
 - [x] `[BE]` `/api/bookmarks` + `/api/applications`
-- [ ] `[BE]` `lib/search.ts` FTS builder
-- [ ] `[BE]` `/api/search` + `/api/search/suggest`
-- [ ] `[BE]` search-query logging (FR-33)
+- [x] `[BE]` `lib/search.ts` FTS builder
+- [x] `[BE]` `/api/search` + `/api/search/suggest`
+- [x] `[BE]` search-query logging (FR-33)
 - [ ] `[FE]` global search bar + typeahead (250ms)
 - [ ] `[FE]` search results + filter sidebar (all facets)
 - [ ] `[FE]` sort controls
@@ -61,10 +61,10 @@ Progress: **27 / 84 complete** — BE 27/40 · FE 0/44
 - [ ] `[FE]` category browse grid
 
 ## Phase 3 — Discovery/analytics data · Student portal UI
-- [ ] `[BE]` recommended-companies query (rules-based)
-- [ ] `[BE]` TrendingSnapshot + cron aggregation
-- [ ] `[BE]` analytics queries (aggregate/anon)
-- [ ] `[BE]` AnalyticsEvent + recordView() helper
+- [x] `[BE]` recommended-companies query (rules-based)
+- [x] `[BE]` TrendingSnapshot + cron aggregation
+- [x] `[BE]` analytics queries (aggregate/anon)
+- [x] `[BE]` AnalyticsEvent + recordView() helper
 - [ ] `[FE]` Student Dashboard — all §15.1 modules
 - [ ] `[FE]` student profile settings form
 - [ ] `[FE]` bookmark toggle button (company + internship)

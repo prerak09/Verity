@@ -27,6 +27,12 @@ const isPublicRoute = createRouteMatcher([
   "/api/internships(.*)",
   "/api/search(.*)",
   "/api/webhooks(.*)", // signature-verified instead of session (TRD §8)
+  "/api/cron(.*)", // Bearer CRON_SECRET instead of session (TRD §13)
+  // Auth'd JSON APIs self-guard via requireUser() → 401 JSON (not an HTML
+  // redirect), so we bypass the middleware route-gate for them.
+  "/api/bookmarks(.*)",
+  "/api/applications(.*)",
+  "/api/students(.*)",
 ]);
 
 const isStudentRoute = createRouteMatcher([
