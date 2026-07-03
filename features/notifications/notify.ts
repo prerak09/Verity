@@ -7,6 +7,7 @@
 
 import { db } from "@/lib/db";
 import { logger } from "@/lib/logger";
+import { sendEmail, notificationEmailHtml, isEmailConfigured } from "@/lib/email";
 import type { NotificationType } from "@/types";
 
 /** Events that also send a transactional email (account-critical). */
@@ -59,11 +60,26 @@ export async function notifyCompany(
 }
 
 async function maybeSendEmail(input: NotifyInput): Promise<void> {
-  // Resend integration lands in task 5.1. Guarded so absence of a key is safe.
-  if (!process.env.RESEND_API_KEY) {
+  if (!isEmailConfigured()) {
     logger.debug("email skipped (no RESEND_API_KEY)", { type: input.type });
     return;
   }
-  // Implemented in 5.1: look up the user's email + send via Resend.
-  logger.info("email queued", { type: input.type });
+  const user = await db.user.findUnique({
+    where: { id: input.userId },
+    select: { email: true },
+  });
+  if (!user?.email) return;
+
+  const url = input.url ? absoluteUrl(input.url) : undefined;
+  await sendEmail({
+    to: user.email,
+    subject: input.title,
+    html: notificationEmailHtml(input.title, input.body, url),
+  });
+}
+
+function absoluteUrl(path: string): string {
+  if (/^https?:\/\//.test(path)) return path;
+  const base = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+  return `${base}${path.startsWith("/") ? "" : "/"}${path}`;
 }

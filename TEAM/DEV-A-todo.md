@@ -62,10 +62,10 @@ Branch prefix: `feat/be-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 4.9 `app/api/admin/**` route handlers
 
 ## Phase 5 — Notifications & hardening
-- [ ] 5.1 `features/notifications/notify.ts` — in-app row + Resend email for email-worthy events (TRD §25, FR-60/63)
+- [x] 5.1 `features/notifications/notify.ts` — in-app row + Resend email for email-worthy events (TRD §25, FR-60/63)
 - [x] 5.2 Notification queries (list, unread, mark-read) for Dev B's UI
-- [ ] 5.3 Daily digest job: bookmarked-company new internship (FR-61)
-- [ ] 5.4 XSS sanitize company descriptions & news before store/return (NFR 13.4)
-- [ ] 5.5 Structural ESLint rule: `actions.ts` importing prisma must import rbac (TRD §20)
-- [ ] 5.6 Integration tests: register→publish gated by verification (RBAC+Prisma) (TRD §20)
-- [ ] 5.7 Seed 100-company demo catalog (G2)
+- [x] 5.3 Daily digest job: bookmarked-company new internship (FR-61)
+- [x] 5.4 XSS sanitize company descriptions & news before store/return (NFR 13.4)
+- [x] 5.5 Structural ESLint rule: `actions.ts` importing prisma must import rbac (TRD §20)
+- [x] 5.6 Integration tests: register→publish gated by verification (RBAC+Prisma) (TRD §20)
+- [x] 5.7 Seed 100-company demo catalog (G2)
