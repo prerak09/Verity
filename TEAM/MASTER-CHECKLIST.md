@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **34 / 84 complete** — BE 34/40 · FE 0/44
+Progress: **44 / 94 complete** — BE 44/50 · FE 0/44
 
 ---
 
@@ -73,15 +73,15 @@ Progress: **34 / 84 complete** — BE 34/40 · FE 0/44
 - [ ] `[FE]` archived-internship "no longer open" state
 
 ## Phase 4 — Verification/admin data · Company portal UI
-- [ ] `[BE]` verification queue query + approve/request/reject + notify
-- [ ] `[BE]` resubmission references prior reason
-- [ ] `[BE]` admin company CRUD + suspend/unpublish
-- [ ] `[BE]` categories & technologies CRUD + merge
-- [ ] `[BE]` reports create/queue/resolve + audit
-- [ ] `[BE]` feature-management actions (windowed, server-checked)
-- [ ] `[BE]` admin user management actions
-- [ ] `[BE]` platform analytics queries
-- [ ] `[BE]` `/api/admin/**` handlers
+- [x] `[BE]` verification queue query + approve/request/reject + notify
+- [x] `[BE]` resubmission references prior reason
+- [x] `[BE]` admin company CRUD + suspend/unpublish
+- [x] `[BE]` categories & technologies CRUD + merge
+- [x] `[BE]` reports create/queue/resolve + audit
+- [x] `[BE]` feature-management actions (windowed, server-checked)
+- [x] `[BE]` admin user management actions
+- [x] `[BE]` platform analytics queries
+- [x] `[BE]` `/api/admin/**` handlers
 - [ ] `[FE]` company onboarding multi-step form
 - [ ] `[FE]` Company Dashboard modules
 - [ ] `[FE]` Company Profile Editor (autosave + last-saved)
@@ -95,7 +95,7 @@ Progress: **34 / 84 complete** — BE 34/40 · FE 0/44
 
 ## Phase 5 — Notifications/hardening · Admin portal UI & QA
 - [ ] `[BE]` `notify.ts` (in-app + Resend)
-- [ ] `[BE]` notification queries (list/unread/mark-read)
+- [x] `[BE]` notification queries (list/unread/mark-read)
 - [ ] `[BE]` daily digest (bookmarked-company new internship)
 - [ ] `[BE]` XSS sanitize descriptions & news
 - [ ] `[BE]` structural ESLint rule (actions must import rbac)

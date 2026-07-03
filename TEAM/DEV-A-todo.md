@@ -51,19 +51,19 @@ Branch prefix: `feat/be-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 3.7 `AnalyticsEvent` model + `recordView()` write helper (PRD §19.3)
 
 ## Phase 4 — Verification, admin & platform-analytics data
-- [ ] 4.1 `features/verification` — queue query + approve/request-changes/reject actions → `notify()` (FR-50/51/60)
-- [ ] 4.2 Resubmission cycle references prior rejection reason (PRD §23)
-- [ ] 4.3 Admin company CRUD + suspend/unpublish (seed path) (FR-14)
-- [ ] 4.4 Categories & Technologies CRUD + merge/rename (FR-54)
-- [ ] 4.5 Reports create + queue + resolve (dismiss/warn/suspend/remove) + audit (FR-52/53)
-- [ ] 4.6 Feature Management actions — windowed, server-checked expiry (FR-55, PRD §23)
-- [ ] 4.7 Admin user management actions — disable/reinstate/role change (FR-05, A5)
-- [ ] 4.8 Platform analytics queries — counts by status, queue throughput, top terms (FR-72, §19.2)
-- [ ] 4.9 `app/api/admin/**` route handlers
+- [x] 4.1 `features/verification` — queue query + approve/request-changes/reject actions → `notify()` (FR-50/51/60)
+- [x] 4.2 Resubmission cycle references prior rejection reason (PRD §23)
+- [x] 4.3 Admin company CRUD + suspend/unpublish (seed path) (FR-14)
+- [x] 4.4 Categories & Technologies CRUD + merge/rename (FR-54)
+- [x] 4.5 Reports create + queue + resolve (dismiss/warn/suspend/remove) + audit (FR-52/53)
+- [x] 4.6 Feature Management actions — windowed, server-checked expiry (FR-55, PRD §23)
+- [x] 4.7 Admin user management actions — disable/reinstate/role change (FR-05, A5)
+- [x] 4.8 Platform analytics queries — counts by status, queue throughput, top terms (FR-72, §19.2)
+- [x] 4.9 `app/api/admin/**` route handlers
 
 ## Phase 5 — Notifications & hardening
 - [ ] 5.1 `features/notifications/notify.ts` — in-app row + Resend email for email-worthy events (TRD §25, FR-60/63)
-- [ ] 5.2 Notification queries (list, unread, mark-read) for Dev B's UI
+- [x] 5.2 Notification queries (list, unread, mark-read) for Dev B's UI
 - [ ] 5.3 Daily digest job: bookmarked-company new internship (FR-61)
 - [ ] 5.4 XSS sanitize company descriptions & news before store/return (NFR 13.4)
 - [ ] 5.5 Structural ESLint rule: `actions.ts` importing prisma must import rbac (TRD §20)

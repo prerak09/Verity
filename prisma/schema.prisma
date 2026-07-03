@@ -117,7 +117,10 @@ model Company {
   visaSponsorship    Boolean                  @default(false)
   employeeCountRange String? // e.g. "11-50"
   verificationStatus VerificationStatus       @default(UNVERIFIED)
+  rejectionReason    String? // last verification rejection/changes reason (PRD §23)
   isFeatured         Boolean                  @default(false)
+  featuredUntil      DateTime? // windowed Featured expiry (FR-55, server-checked)
+  suspendedAt        DateTime? // admin moderation (FR-53 suspend)
   searchVector       Unsupported("tsvector")? // generated column, see 10.4
 
   members      CompanyMember[]
