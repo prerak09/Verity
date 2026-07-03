@@ -12,12 +12,12 @@ Branch prefix: `feat/be-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 0.2 Prisma install + full `schema.prisma` (all models + enums, TRD §10.2)
 - [ ] 0.3 Initial migrate + provision shared dev Postgres (Neon/Supabase); share `DATABASE_URL`
 - [ ] 0.4 Raw SQL migration: `tsvector` generated columns + GIN indexes (TRD §10.4)
-- [ ] 0.5 `lib/db.ts` Prisma singleton
-- [ ] 0.6 **`types/index.ts`** — result envelope, `AppError` subclasses, **all shared DTOs + every query/action signature** (contract #1 — ship early)
+- [x] 0.5 `lib/db.ts` Prisma singleton
+- [x] 0.6 **`types/index.ts`** — result envelope, `AppError` subclasses, **all shared DTOs + every query/action signature** (contract #1 — ship early)
 - [ ] 0.7 Clerk install + `lib/auth.ts` (`getCurrentUser`)
 - [ ] 0.8 `/api/webhooks/clerk` — svix-verified user upsert, default STUDENT (TRD §6)
 - [ ] 0.9 `middleware.ts` — session verify + route-group role gating + `/unauthorized` (TRD §8)
-- [ ] 0.10 `lib/rbac.ts` + `config/roles.ts` permission matrix — **freeze strings** (contract #2)
+- [x] 0.10 `lib/rbac.ts` + `config/roles.ts` permission matrix — **freeze strings** (contract #2)
 - [ ] 0.11 `lib/logger.ts`, `lib/rate-limit.ts`, `lib/cloudinary.ts` (signed upload), `lib/search.ts` (skeleton)
 - [ ] 0.12 `prisma/seed.ts` orchestrator + seed 1 Admin (FR-05)
 - [ ] 0.13 GitHub Actions CI (lint/typecheck/unit/build) + Vitest config; branch protection
