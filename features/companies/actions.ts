@@ -11,6 +11,7 @@ import { requireUser } from "@/lib/auth";
 import { assertCan, isCompanyOwner } from "@/lib/rbac";
 import { handleAction, parseInput } from "@/lib/action";
 import { normalizeDomain } from "@/lib/slug";
+import { sanitizeHtml } from "@/lib/sanitize";
 import {
   registerCompanySchema,
   updateCompanySchema,
@@ -114,6 +115,8 @@ export async function updateCompany(
 
     const data = parseInput(updateCompanySchema, input);
     const { categoryIds, technologyIds, ...scalar } = data;
+    // XSS sanitize rich-text on write (NFR 13.4).
+    if (scalar.about !== undefined) scalar.about = sanitizeHtml(scalar.about);
 
     // FR-13: domain change on a VERIFIED company → back to PENDING re-verify.
     let verificationStatus: VerificationStatus | undefined;
@@ -199,7 +202,12 @@ export async function addCompanyNews(
     await assertOwns(companyId);
     const data = parseInput(companyNewsSchema, input);
     const n = await db.companyNews.create({
-      data: { companyId, ...data, publishedAt: new Date(data.publishedAt) },
+      data: {
+        companyId,
+        ...data,
+        title: sanitizeHtml(data.title), // NFR 13.4
+        publishedAt: new Date(data.publishedAt),
+      },
     });
     return { id: n.id };
   });

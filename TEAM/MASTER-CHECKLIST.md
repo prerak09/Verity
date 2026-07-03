@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **44 / 94 complete** — BE 44/50 · FE 0/44
+Progress: **50 / 94 complete** — BE 50/50 ✅ · FE 0/44
 
 ---
 
@@ -94,13 +94,13 @@ Progress: **44 / 94 complete** — BE 44/50 · FE 0/44
 - [ ] `[FE]` verification banner + "what to fix" checklist
 
 ## Phase 5 — Notifications/hardening · Admin portal UI & QA
-- [ ] `[BE]` `notify.ts` (in-app + Resend)
+- [x] `[BE]` `notify.ts` (in-app + Resend)
 - [x] `[BE]` notification queries (list/unread/mark-read)
-- [ ] `[BE]` daily digest (bookmarked-company new internship)
-- [ ] `[BE]` XSS sanitize descriptions & news
-- [ ] `[BE]` structural ESLint rule (actions must import rbac)
-- [ ] `[BE]` integration tests (register→publish gated)
-- [ ] `[BE]` seed 100-company demo catalog (G2)
+- [x] `[BE]` daily digest (bookmarked-company new internship)
+- [x] `[BE]` XSS sanitize descriptions & news
+- [x] `[BE]` structural ESLint rule (actions must import rbac)
+- [x] `[BE]` integration tests (register→publish gated)
+- [x] `[BE]` seed 100-company demo catalog (G2)
 - [ ] `[FE]` Admin Dashboard modules
 - [ ] `[FE]` Verification Queue UI + action buttons
 - [ ] `[FE]` Admin company/internship management tables

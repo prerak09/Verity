@@ -9,6 +9,7 @@ import { requireUser } from "@/lib/auth";
 import { assertCan, isCompanyMember } from "@/lib/rbac";
 import { handleAction, parseInput } from "@/lib/action";
 import { slugify } from "@/lib/slug";
+import { sanitizeHtml } from "@/lib/sanitize";
 import { createInternshipSchema, updateInternshipSchema } from "./schema";
 import {
   ConflictError,
@@ -64,7 +65,7 @@ export async function createInternship(
         companyId, // Layer 3: bound to the company we authorized against
         slug,
         title: fields.title,
-        description: fields.description,
+        description: sanitizeHtml(fields.description), // NFR 13.4
         location: fields.location,
         remotePolicy: fields.remotePolicy,
         stipend: fields.stipend,
@@ -94,6 +95,9 @@ export async function updateInternship(
     const data = parseInput(updateInternshipSchema, input);
     const { categoryIds, ...fields } = data;
     void categoryIds;
+    if (fields.description !== undefined) {
+      fields.description = sanitizeHtml(fields.description); // NFR 13.4
+    }
 
     const updated = await db.internship.update({
       where: { id: internshipId },
