@@ -33,6 +33,7 @@ const isPublicRoute = createRouteMatcher([
   "/api/bookmarks(.*)",
   "/api/applications(.*)",
   "/api/students(.*)",
+  "/api/admin(.*)", // self-guards via assertCan → 403 JSON (not an HTML redirect)
 ]);
 
 const isStudentRoute = createRouteMatcher([
