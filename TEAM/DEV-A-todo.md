@@ -19,7 +19,7 @@ Branch prefix: `feat/be-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 0.9 `middleware.ts` — session verify + route-group role gating + `/unauthorized` (TRD §8)
 - [x] 0.10 `lib/rbac.ts` + `config/roles.ts` permission matrix — **freeze strings** (contract #2)
 - [x] 0.11 `lib/logger.ts`, `lib/rate-limit.ts`, `lib/cloudinary.ts` (signed upload), `lib/search.ts` (skeleton)
-- [ ] 0.12 `prisma/seed.ts` orchestrator + seed 1 Admin (FR-05)
+- [x] 0.12 `prisma/seed.ts` orchestrator + seed 1 Admin (FR-05)
 - [x] 0.13 GitHub Actions CI (lint/typecheck/unit/build) + Vitest config; branch protection
 
 ## Phase 1 — Companies & Internships data
