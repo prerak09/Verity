@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **5 / 84 complete** — BE 5/40 · FE 0/44
+Progress: **6 / 84 complete** — BE 6/40 · FE 0/44
 
 ---
 
@@ -17,7 +17,7 @@ Progress: **5 / 84 complete** — BE 5/40 · FE 0/44
 - [ ] `[BE]` Clerk webhook (svix)
 - [ ] `[BE]` `middleware.ts` role gating + `/unauthorized`
 - [x] `[BE]` `lib/rbac.ts` + `config/roles.ts` (freeze strings — contract #2)
-- [ ] `[BE]` `lib/logger.ts` + `lib/rate-limit.ts` + `lib/cloudinary.ts` + `lib/search.ts` skeleton
+- [x] `[BE]` `lib/logger.ts` + `lib/rate-limit.ts` + `lib/cloudinary.ts` + `lib/search.ts` skeleton
 - [ ] `[BE]` `prisma/seed.ts` + seed Admin
 - [ ] `[BE]` GitHub Actions CI + Vitest + branch protection
 - [ ] `[FE]` shadcn/ui init + `components/ui/*`

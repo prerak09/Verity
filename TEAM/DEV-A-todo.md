@@ -18,7 +18,7 @@ Branch prefix: `feat/be-…`. After each task: **tick this file + `MASTER-CHECKL
 - [ ] 0.8 `/api/webhooks/clerk` — svix-verified user upsert, default STUDENT (TRD §6)
 - [ ] 0.9 `middleware.ts` — session verify + route-group role gating + `/unauthorized` (TRD §8)
 - [x] 0.10 `lib/rbac.ts` + `config/roles.ts` permission matrix — **freeze strings** (contract #2)
-- [ ] 0.11 `lib/logger.ts`, `lib/rate-limit.ts`, `lib/cloudinary.ts` (signed upload), `lib/search.ts` (skeleton)
+- [x] 0.11 `lib/logger.ts`, `lib/rate-limit.ts`, `lib/cloudinary.ts` (signed upload), `lib/search.ts` (skeleton)
 - [ ] 0.12 `prisma/seed.ts` orchestrator + seed 1 Admin (FR-05)
 - [ ] 0.13 GitHub Actions CI (lint/typecheck/unit/build) + Vitest config; branch protection
 
