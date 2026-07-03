@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **6 / 84 complete** — BE 6/40 · FE 0/44
+Progress: **9 / 84 complete** — BE 9/40 · FE 0/44
 
 ---
 
@@ -13,9 +13,9 @@ Progress: **6 / 84 complete** — BE 6/40 · FE 0/44
 - [ ] `[BE]` FTS tsvector + GIN SQL migration
 - [x] `[BE]` `lib/db.ts`
 - [x] `[BE]` **`types/index.ts`** — envelope + all DTOs + fn signatures (contract #1)
-- [ ] `[BE]` Clerk + `lib/auth.ts`
-- [ ] `[BE]` Clerk webhook (svix)
-- [ ] `[BE]` `middleware.ts` role gating + `/unauthorized`
+- [x] `[BE]` Clerk + `lib/auth.ts`
+- [x] `[BE]` Clerk webhook (svix)
+- [x] `[BE]` `middleware.ts` role gating + `/unauthorized`
 - [x] `[BE]` `lib/rbac.ts` + `config/roles.ts` (freeze strings — contract #2)
 - [x] `[BE]` `lib/logger.ts` + `lib/rate-limit.ts` + `lib/cloudinary.ts` + `lib/search.ts` skeleton
 - [ ] `[BE]` `prisma/seed.ts` + seed Admin
