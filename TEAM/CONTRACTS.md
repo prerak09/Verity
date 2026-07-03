@@ -32,6 +32,14 @@ envelope). Nothing here changes without being written here first.
 
 ---
 
+## Additive contract notes (new exports Dev B can use)
+
+- **`toggleBookmark(input)`** (features/bookmarks/actions) → `Result<{ bookmarked, id }>`.
+  Convenience for the bookmark button; signature type `ToggleBookmark` in `@/types`.
+- **`deleteApplication(id)`** (features/applications/actions) → `Result<null>`.
+  Signature type `DeleteApplication` in `@/types`.
+- **`getBookmarkedIds(userId, targetType)`** → `Set<string>` for toggling UI state.
+
 ## Contract change log (non-additive changes to frozen contracts)
 
 _None yet. Any rename/removal in `types/index.ts` or `config/roles.ts` gets an

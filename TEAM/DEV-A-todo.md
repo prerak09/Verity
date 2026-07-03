@@ -35,11 +35,11 @@ Branch prefix: `feat/be-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 1.10 `app/api/companies` + `app/api/internships` route handlers (paginated, envelope) (TRD §9)
 
 ## Phase 2 — Student, bookmarks, applications data
-- [ ] 2.1 `features/students/{schema,queries,actions}.ts` — profile + resume-url placeholder (PRD §14.1, §21)
-- [ ] 2.2 `features/bookmarks/{schema,queries,actions}.ts` — polymorphic, unique constraint (FR-40/41, TRD §10.3)
-- [ ] 2.3 `features/applications/{schema,queries,actions}.ts` — tracker status + private notes (FR-42/43)
-- [ ] 2.4 Tracker privacy: never exposed to company/admin (FR-44, NFR 13.6)
-- [ ] 2.5 `app/api/bookmarks` + `app/api/applications` route handlers
+- [x] 2.1 `features/students/{schema,queries,actions}.ts` — profile + resume-url placeholder (PRD §14.1, §21)
+- [x] 2.2 `features/bookmarks/{schema,queries,actions}.ts` — polymorphic, unique constraint (FR-40/41, TRD §10.3)
+- [x] 2.3 `features/applications/{schema,queries,actions}.ts` — tracker status + private notes (FR-42/43)
+- [x] 2.4 Tracker privacy: never exposed to company/admin (FR-44, NFR 13.6)
+- [x] 2.5 `app/api/bookmarks` + `app/api/applications` route handlers
 
 ## Phase 3 — Search, discovery & analytics data
 - [ ] 3.1 `lib/search.ts` — Postgres FTS, `websearch_to_tsquery`, weighted rank (TRD §12)

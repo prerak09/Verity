@@ -592,6 +592,9 @@ export type CreateBookmark = (
   input: CreateBookmarkInput,
 ) => Promise<Result<{ id: string }>>;
 export type DeleteBookmark = (bookmarkId: string) => Promise<Result<null>>;
+export type ToggleBookmark = (
+  input: CreateBookmarkInput,
+) => Promise<Result<{ bookmarked: boolean; id: string | null }>>;
 
 // features/applications/queries.ts + actions.ts
 export type ListApplications = (userId: string) => Promise<ApplicationDTO[]>;
@@ -602,6 +605,9 @@ export type UpdateApplication = (
   applicationId: string,
   input: UpdateApplicationInput,
 ) => Promise<Result<ApplicationDTO>>;
+export type DeleteApplication = (
+  applicationId: string,
+) => Promise<Result<null>>;
 
 // lib/search.ts
 export type SearchAll = (

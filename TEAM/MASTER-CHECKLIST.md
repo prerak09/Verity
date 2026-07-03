@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **22 / 84 complete** — BE 22/40 · FE 0/44
+Progress: **27 / 84 complete** — BE 27/40 · FE 0/44
 
 ---
 
@@ -46,11 +46,11 @@ Progress: **22 / 84 complete** — BE 22/40 · FE 0/44
 - [ ] `[FE]` card components + verified badge + chips
 
 ## Phase 2 — Student data · Search UI
-- [ ] `[BE]` students schema/queries/actions (+ resume placeholder)
-- [ ] `[BE]` bookmarks schema/queries/actions (polymorphic, unique)
-- [ ] `[BE]` applications schema/queries/actions (status + notes)
-- [ ] `[BE]` tracker privacy (excluded from company/admin)
-- [ ] `[BE]` `/api/bookmarks` + `/api/applications`
+- [x] `[BE]` students schema/queries/actions (+ resume placeholder)
+- [x] `[BE]` bookmarks schema/queries/actions (polymorphic, unique)
+- [x] `[BE]` applications schema/queries/actions (status + notes)
+- [x] `[BE]` tracker privacy (excluded from company/admin)
+- [x] `[BE]` `/api/bookmarks` + `/api/applications`
 - [ ] `[BE]` `lib/search.ts` FTS builder
 - [ ] `[BE]` `/api/search` + `/api/search/suggest`
 - [ ] `[BE]` search-query logging (FR-33)
