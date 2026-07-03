@@ -2,14 +2,14 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **1 / 84 complete** — BE 1/40 · FE 0/44
+Progress: **2 / 84 complete** — BE 2/40 · FE 0/44
 
 ---
 
 ## Phase 0 — Foundation & contracts (finish before deep feature work)
 > A does 0.1 first → pushes `main` → both run in parallel. A ships `types/index.ts` early so B never blocks.
 - [x] `[BE]` create-next-app → push `main`
-- [ ] `[BE]` Prisma schema (TRD §10.2) + migrate + shared dev DB
+- [x] `[BE]` Prisma schema (TRD §10.2) + migrate + shared dev DB
 - [ ] `[BE]` FTS tsvector + GIN SQL migration
 - [ ] `[BE]` `lib/db.ts`
 - [ ] `[BE]` **`types/index.ts`** — envelope + all DTOs + fn signatures (contract #1)

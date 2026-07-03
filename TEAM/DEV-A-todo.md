@@ -9,7 +9,7 @@ Branch prefix: `feat/be-…`. After each task: **tick this file + `MASTER-CHECKL
 
 ## Phase 0 — Foundation & contracts (do first; unblocks everyone)
 - [x] 0.1 `create-next-app` (TS, App Router, Tailwind, ESLint) → push `main` immediately (unblocks Dev B)
-- [ ] 0.2 Prisma install + full `schema.prisma` (all models + enums, TRD §10.2)
+- [x] 0.2 Prisma install + full `schema.prisma` (all models + enums, TRD §10.2)
 - [ ] 0.3 Initial migrate + provision shared dev Postgres (Neon/Supabase); share `DATABASE_URL`
 - [ ] 0.4 Raw SQL migration: `tsvector` generated columns + GIN indexes (TRD §10.4)
 - [ ] 0.5 `lib/db.ts` Prisma singleton
