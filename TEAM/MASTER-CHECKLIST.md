@@ -2,24 +2,24 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **0 / 84 complete** — BE 0/40 · FE 0/44
+Progress: **34 / 84 complete** — BE 34/40 · FE 0/44
 
 ---
 
 ## Phase 0 — Foundation & contracts (finish before deep feature work)
 > A does 0.1 first → pushes `main` → both run in parallel. A ships `types/index.ts` early so B never blocks.
-- [ ] `[BE]` create-next-app → push `main`
-- [ ] `[BE]` Prisma schema (TRD §10.2) + migrate + shared dev DB
-- [ ] `[BE]` FTS tsvector + GIN SQL migration
-- [ ] `[BE]` `lib/db.ts`
-- [ ] `[BE]` **`types/index.ts`** — envelope + all DTOs + fn signatures (contract #1)
-- [ ] `[BE]` Clerk + `lib/auth.ts`
-- [ ] `[BE]` Clerk webhook (svix)
-- [ ] `[BE]` `middleware.ts` role gating + `/unauthorized`
-- [ ] `[BE]` `lib/rbac.ts` + `config/roles.ts` (freeze strings — contract #2)
-- [ ] `[BE]` `lib/logger.ts` + `lib/rate-limit.ts` + `lib/cloudinary.ts` + `lib/search.ts` skeleton
-- [ ] `[BE]` `prisma/seed.ts` + seed Admin
-- [ ] `[BE]` GitHub Actions CI + Vitest + branch protection
+- [x] `[BE]` create-next-app → push `main`
+- [x] `[BE]` Prisma schema (TRD §10.2) + migrate + shared dev DB
+- [x] `[BE]` FTS tsvector + GIN SQL migration
+- [x] `[BE]` `lib/db.ts`
+- [x] `[BE]` **`types/index.ts`** — envelope + all DTOs + fn signatures (contract #1)
+- [x] `[BE]` Clerk + `lib/auth.ts`
+- [x] `[BE]` Clerk webhook (svix)
+- [x] `[BE]` `middleware.ts` role gating + `/unauthorized`
+- [x] `[BE]` `lib/rbac.ts` + `config/roles.ts` (freeze strings — contract #2)
+- [x] `[BE]` `lib/logger.ts` + `lib/rate-limit.ts` + `lib/cloudinary.ts` + `lib/search.ts` skeleton
+- [x] `[BE]` `prisma/seed.ts` + seed Admin
+- [x] `[BE]` GitHub Actions CI + Vitest + branch protection
 - [ ] `[FE]` shadcn/ui init + `components/ui/*`
 - [ ] `[FE]` design tokens + Tailwind theme + `globals.css` (WCAG AA)
 - [ ] `[FE]` `components/shared/*` (Navbar, Sidebar, EmptyState, Pagination, Skeleton)
@@ -29,16 +29,16 @@ Progress: **0 / 84 complete** — BE 0/40 · FE 0/44
 - [ ] `[FE]` mock-data fixtures matching `types/index.ts`
 
 ## Phase 1 — Companies & internships
-- [ ] `[BE]` companies `schema.ts` (Zod, §17)
-- [ ] `[BE]` companies `queries.ts` (getCompanyBySlug, listCompanies, getOpenInternships) — ship early
-- [ ] `[BE]` register-company action (txn + role elevation)
-- [ ] `[BE]` company update actions (all §17, domain re-verify)
-- [ ] `[BE]` founders/links/locations/news/tech actions
-- [ ] `[BE]` domain duplicate detection
-- [ ] `[BE]` internships schema/queries/actions (create/publish/archive)
-- [ ] `[BE]` publish gate — VERIFIED only, server-side (FR-22)
-- [ ] `[BE]` staleness flag (45d)
-- [ ] `[BE]` `/api/companies` + `/api/internships` handlers
+- [x] `[BE]` companies `schema.ts` (Zod, §17)
+- [x] `[BE]` companies `queries.ts` (getCompanyBySlug, listCompanies, getOpenInternships) — ship early
+- [x] `[BE]` register-company action (txn + role elevation)
+- [x] `[BE]` company update actions (all §17, domain re-verify)
+- [x] `[BE]` founders/links/locations/news/tech actions
+- [x] `[BE]` domain duplicate detection
+- [x] `[BE]` internships schema/queries/actions (create/publish/archive)
+- [x] `[BE]` publish gate — VERIFIED only, server-side (FR-22)
+- [x] `[BE]` staleness flag (45d)
+- [x] `[BE]` `/api/companies` + `/api/internships` handlers
 - [ ] `[FE]` landing page
 - [ ] `[FE]` public company directory (grid+cards)
 - [ ] `[FE]` public company profile (§17 read-only, LCP<2s)
@@ -46,14 +46,14 @@ Progress: **0 / 84 complete** — BE 0/40 · FE 0/44
 - [ ] `[FE]` card components + verified badge + chips
 
 ## Phase 2 — Student data · Search UI
-- [ ] `[BE]` students schema/queries/actions (+ resume placeholder)
-- [ ] `[BE]` bookmarks schema/queries/actions (polymorphic, unique)
-- [ ] `[BE]` applications schema/queries/actions (status + notes)
-- [ ] `[BE]` tracker privacy (excluded from company/admin)
-- [ ] `[BE]` `/api/bookmarks` + `/api/applications`
-- [ ] `[BE]` `lib/search.ts` FTS builder
-- [ ] `[BE]` `/api/search` + `/api/search/suggest`
-- [ ] `[BE]` search-query logging (FR-33)
+- [x] `[BE]` students schema/queries/actions (+ resume placeholder)
+- [x] `[BE]` bookmarks schema/queries/actions (polymorphic, unique)
+- [x] `[BE]` applications schema/queries/actions (status + notes)
+- [x] `[BE]` tracker privacy (excluded from company/admin)
+- [x] `[BE]` `/api/bookmarks` + `/api/applications`
+- [x] `[BE]` `lib/search.ts` FTS builder
+- [x] `[BE]` `/api/search` + `/api/search/suggest`
+- [x] `[BE]` search-query logging (FR-33)
 - [ ] `[FE]` global search bar + typeahead (250ms)
 - [ ] `[FE]` search results + filter sidebar (all facets)
 - [ ] `[FE]` sort controls
@@ -61,10 +61,10 @@ Progress: **0 / 84 complete** — BE 0/40 · FE 0/44
 - [ ] `[FE]` category browse grid
 
 ## Phase 3 — Discovery/analytics data · Student portal UI
-- [ ] `[BE]` recommended-companies query (rules-based)
-- [ ] `[BE]` TrendingSnapshot + cron aggregation
-- [ ] `[BE]` analytics queries (aggregate/anon)
-- [ ] `[BE]` AnalyticsEvent + recordView() helper
+- [x] `[BE]` recommended-companies query (rules-based)
+- [x] `[BE]` TrendingSnapshot + cron aggregation
+- [x] `[BE]` analytics queries (aggregate/anon)
+- [x] `[BE]` AnalyticsEvent + recordView() helper
 - [ ] `[FE]` Student Dashboard — all §15.1 modules
 - [ ] `[FE]` student profile settings form
 - [ ] `[FE]` bookmark toggle button (company + internship)

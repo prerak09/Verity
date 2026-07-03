@@ -1,0 +1,359 @@
+// prisma/schema.prisma
+// Verity — Career Intelligence Platform
+// Core schema per TRD §10.2. FTS `searchVector` columns are declared here as
+// Unsupported("tsvector") so the client is schema-aware, but they are created &
+// maintained by the raw SQL migration in §10.4 (generated STORED columns).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum PlatformRole {
+  STUDENT
+  COMPANY
+  ADMIN
+}
+
+enum CompanyMemberRole {
+  OWNER
+  RECRUITER
+}
+
+enum VerificationStatus {
+  UNVERIFIED
+  PENDING
+  VERIFIED
+  REJECTED
+}
+
+enum FundingStage {
+  BOOTSTRAPPED
+  PRE_SEED
+  SEED
+  SERIES_A
+  SERIES_B
+  SERIES_C_PLUS
+  PUBLIC
+}
+
+enum RemotePolicy {
+  REMOTE
+  HYBRID
+  ONSITE
+}
+
+enum InternshipStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ApplicationStatus {
+  SAVED
+  APPLIED
+  OA
+  INTERVIEW
+  OFFER
+  REJECTED
+  WITHDRAWN
+}
+
+enum BookmarkTargetType {
+  COMPANY
+  INTERNSHIP
+}
+
+model User {
+  id        String       @id @default(cuid())
+  clerkId   String       @unique
+  email     String       @unique
+  name      String?
+  avatarUrl String?
+  role      PlatformRole @default(STUDENT)
+
+  studentProfile     StudentProfile?
+  companyMemberships CompanyMember[]
+  bookmarks          Bookmark[]
+  applications       Application[]
+  reportsFiled       Report[]        @relation("ReportedBy")
+  notifications      Notification[]
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  @@index([role])
+}
+
+model StudentProfile {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id])
+  college   String?
+  gradYear  Int?
+  resumeUrl String? // Cloudinary URL — future AI resume analysis input
+  bio       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Company {
+  id                 String                   @id @default(cuid())
+  slug               String                   @unique
+  name               String
+  tagline            String?
+  about              String?
+  logoUrl            String?
+  bannerUrl          String?
+  websiteUrl         String?
+  fundingStage       FundingStage?
+  remotePolicy       RemotePolicy?
+  visaSponsorship    Boolean                  @default(false)
+  employeeCountRange String? // e.g. "11-50"
+  verificationStatus VerificationStatus       @default(UNVERIFIED)
+  isFeatured         Boolean                  @default(false)
+  searchVector       Unsupported("tsvector")? // generated column, see 10.4
+
+  members      CompanyMember[]
+  internships  Internship[]
+  founders     Founder[]
+  news         CompanyNews[]
+  links        CompanyLink[]
+  locations    CompanyLocation[]
+  technologies CompanyTechnology[]
+  categories   CompanyCategory[]
+  bookmarks    Bookmark[]          @relation("CompanyBookmarks")
+  reports      Report[]            @relation("ReportedCompany")
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  @@index([verificationStatus])
+  @@index([isFeatured])
+}
+
+model CompanyMember {
+  id        String            @id @default(cuid())
+  companyId String
+  userId    String
+  role      CompanyMemberRole @default(RECRUITER)
+  company   Company           @relation(fields: [companyId], references: [id])
+  user      User              @relation(fields: [userId], references: [id])
+  createdAt DateTime          @default(now())
+
+  @@unique([companyId, userId])
+}
+
+model Founder {
+  id              String   @id @default(cuid())
+  companyId       String
+  company         Company  @relation(fields: [companyId], references: [id])
+  name            String
+  title           String? // "Co-founder & CEO"
+  linkedinUrl     String?
+  twitterUrl      String?
+  photoUrl        String?
+  isHiringManager Boolean  @default(false)
+  createdAt       DateTime @default(now())
+}
+
+model CompanyNews {
+  id          String   @id @default(cuid())
+  companyId   String
+  company     Company  @relation(fields: [companyId], references: [id])
+  title       String
+  url         String?
+  publishedAt DateTime
+  createdAt   DateTime @default(now())
+}
+
+model CompanyLink {
+  id        String  @id @default(cuid())
+  companyId String
+  company   Company @relation(fields: [companyId], references: [id])
+  type      String // "twitter" | "linkedin" | "github" | "crunchbase" | ...
+  url       String
+}
+
+model CompanyLocation {
+  id        String  @id @default(cuid())
+  companyId String
+  company   Company @relation(fields: [companyId], references: [id])
+  city      String
+  country   String
+  isHQ      Boolean @default(false)
+}
+
+model Technology {
+  id        String              @id @default(cuid())
+  slug      String              @unique
+  name      String
+  companies CompanyTechnology[]
+}
+
+model CompanyTechnology {
+  companyId    String
+  technologyId String
+  company      Company    @relation(fields: [companyId], references: [id])
+  technology   Technology @relation(fields: [technologyId], references: [id])
+
+  @@id([companyId, technologyId])
+}
+
+model Category {
+  id        String            @id @default(cuid())
+  slug      String            @unique
+  name      String
+  companies CompanyCategory[]
+}
+
+model CompanyCategory {
+  companyId  String
+  categoryId String
+  company    Company  @relation(fields: [companyId], references: [id])
+  category   Category @relation(fields: [categoryId], references: [id])
+
+  @@id([companyId, categoryId])
+}
+
+model Internship {
+  id           String                   @id @default(cuid())
+  companyId    String
+  company      Company                  @relation(fields: [companyId], references: [id])
+  slug         String                   @unique
+  title        String
+  description  String
+  location     String?
+  remotePolicy RemotePolicy?
+  stipend      String?
+  duration     String?
+  applyUrl     String
+  status       InternshipStatus         @default(DRAFT)
+  publishedAt  DateTime?
+  searchVector Unsupported("tsvector")?
+
+  bookmarks    Bookmark[]    @relation("InternshipBookmarks")
+  applications Application[]
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  @@index([status])
+  @@index([companyId])
+}
+
+model Bookmark {
+  id           String             @id @default(cuid())
+  userId       String
+  user         User               @relation(fields: [userId], references: [id])
+  targetType   BookmarkTargetType
+  companyId    String?
+  company      Company?           @relation("CompanyBookmarks", fields: [companyId], references: [id])
+  internshipId String?
+  internship   Internship?        @relation("InternshipBookmarks", fields: [internshipId], references: [id])
+  createdAt    DateTime           @default(now())
+
+  @@unique([userId, companyId, internshipId])
+}
+
+model Application {
+  id           String            @id @default(cuid())
+  userId       String
+  user         User              @relation(fields: [userId], references: [id])
+  internshipId String
+  internship   Internship        @relation(fields: [internshipId], references: [id])
+  status       ApplicationStatus @default(SAVED)
+  notes        String?
+  appliedAt    DateTime?
+  updatedAt    DateTime          @updatedAt
+  createdAt    DateTime          @default(now())
+
+  @@unique([userId, internshipId])
+}
+
+model Report {
+  id              String    @id @default(cuid())
+  reportedById    String
+  reportedBy      User      @relation("ReportedBy", fields: [reportedById], references: [id])
+  targetCompanyId String?
+  targetCompany   Company?  @relation("ReportedCompany", fields: [targetCompanyId], references: [id])
+  reason          String
+  status          String    @default("OPEN") // OPEN | RESOLVED | DISMISSED
+  resolutionNote  String? // admin note on resolve (FR-53 audit)
+  createdAt       DateTime  @default(now())
+  resolvedAt      DateTime?
+
+  @@index([status])
+}
+
+// ── Analytics & discovery (PRD §19.3, TRD §13) ───────────────────────────────
+
+enum AnalyticsEventType {
+  COMPANY_VIEW
+  INTERNSHIP_VIEW
+}
+
+/// First-party event log (PRD §19.3). userId is nullable so anonymous views are
+/// recorded; company-facing analytics only ever read AGGREGATES (NFR §13.6).
+model AnalyticsEvent {
+  id           String             @id @default(cuid())
+  type         AnalyticsEventType
+  companyId    String?
+  internshipId String?
+  userId       String? // nullable — anonymous views allowed
+  createdAt    DateTime           @default(now())
+
+  @@index([type, createdAt])
+  @@index([companyId])
+  @@index([internshipId])
+}
+
+/// Precomputed trending list (TRD §13) written by the cron aggregation so
+/// dashboard reads stay O(1) regardless of platform activity.
+model TrendingSnapshot {
+  id         String   @id @default(cuid())
+  companyId  String
+  score      Float
+  rank       Int
+  windowDays Int      @default(7)
+  computedAt DateTime @default(now())
+
+  @@index([computedAt, rank])
+  @@index([companyId])
+}
+
+/// Search-query log for admin "top terms / unmet demand" analytics (FR-33).
+model SearchQueryLog {
+  id          String   @id @default(cuid())
+  term        String
+  resultCount Int
+  userId      String?
+  createdAt   DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+// ── Notifications (TRD §25) ──────────────────────────────────────────────────
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  type      String // NotificationType union (types/index.ts)
+  title     String
+  body      String
+  url       String?
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([userId, read])
+  @@index([userId, createdAt])
+}
