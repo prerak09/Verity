@@ -388,6 +388,31 @@
     transform: translate(2px, 2px);
     box-shadow: 0 0 0 0 var(--shadow-color);
   }
+
+  /* Minimal prose for sanitized company/internship description HTML
+     (dangerouslySetInnerHTML) — Tailwind's preflight strips default <p>
+     margins, so untyped rich text renders as one unbroken block without this. */
+  .prose-verity {
+    > * + * {
+      margin-top: 1em;
+    }
+    a {
+      @apply text-foreground underline underline-offset-2;
+    }
+    ul,
+    ol {
+      padding-left: 1.25em;
+    }
+    ul {
+      list-style: disc;
+    }
+    ol {
+      list-style: decimal;
+    }
+    strong {
+      @apply font-semibold text-foreground;
+    }
+  }
 }
 
 /* Reduced motion — global honor (doc §16) */
