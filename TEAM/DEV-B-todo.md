@@ -55,7 +55,7 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 5.2 Verification Queue UI — oldest-first, side-by-side fields + external links + action buttons (FR-50/51)
 - [ ] 5.3 Admin Company + Internship management tables + moderation (PRD §14.3)
 - [ ] 5.4 Categories & Technologies management UI (CRUD + merge) (FR-54)
-- [ ] 5.5 Reports queue UI + resolution actions (FR-53)
+- [x] 5.5 Reports queue UI + resolution actions (FR-53)
 - [ ] 5.6 Feature Management UI (windowed) (FR-55)
 - [ ] 5.7 User Management UI (disable/reinstate/role) (A5)
 - [ ] 5.8 Platform Analytics dashboard — KPI cards + trend charts (FR-72)
