@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **67 / 94 complete** — BE 50/50 ✅ · FE 17/44
+Progress: **68 / 94 complete** — BE 50/50 ✅ · FE 18/44
 
 ---
 
@@ -65,7 +65,7 @@ Progress: **67 / 94 complete** — BE 50/50 ✅ · FE 17/44
 - [x] `[BE]` TrendingSnapshot + cron aggregation
 - [x] `[BE]` analytics queries (aggregate/anon)
 - [x] `[BE]` AnalyticsEvent + recordView() helper
-- [ ] `[FE]` Student Dashboard — all §15.1 modules
+- [x] `[FE]` Student Dashboard — all §15.1 modules
 - [ ] `[FE]` student profile settings form
 - [ ] `[FE]` bookmark toggle button (company + internship)
 - [ ] `[FE]` Bookmarks page (2 tabs)
