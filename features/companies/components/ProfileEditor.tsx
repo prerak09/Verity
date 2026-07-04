@@ -20,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { MediaUploadWidget } from "@/features/companies/components/MediaUploadWidget";
+import { FoundersEditor } from "@/features/companies/components/FoundersEditor";
 import {
   Select,
   SelectContent,
@@ -365,6 +366,10 @@ export function ProfileEditor({
             </button>
           ))}
         </div>
+      </SectionCard>
+
+      <SectionCard title="Founders & hiring managers">
+        <FoundersEditor companyId={company.id} initialFounders={company.founders} />
       </SectionCard>
 
       <LinksSection companyId={company.id} initialLinks={company.links} />
