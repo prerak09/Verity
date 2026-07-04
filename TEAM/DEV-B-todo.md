@@ -32,7 +32,7 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 
 ## Phase 3 — Student portal UI
 - [x] 3.1 Student Dashboard — all modules (categories, trending, recommended, recently-added, latest internships, bookmarks preview, tracker preview, recent activity) (PRD §15.1)
-- [ ] 3.2 Student profile settings form (school, major, grad year, interests, notif prefs, resume placeholder) (PRD §14.1)
+- [x] 3.2 Student profile settings form (school, major, grad year, interests, notif prefs, resume placeholder) (PRD §14.1)
 - [ ] 3.3 Bookmark toggle button (client) on company + internship (calls Dev A action) (FR-40/41)
 - [ ] 3.4 Bookmarks page — Companies / Internships tabs, quick remove/navigate (PRD §14.1)
 - [ ] 3.5 Application Tracker — Kanban (Saved→Applied→Interviewing→Offer/Rejected/Withdrawn) drag-to-update + list-view toggle for a11y + notes field (FR-42/43)

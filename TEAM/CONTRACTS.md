@@ -49,6 +49,19 @@ envelope). Nothing here changes without being written here first.
   `CompanyCard` shape, so the UI is fully functional against mock data — the
   gap only matters once this swaps to a real, network-paginated query.
 
+### CR-6 — `StudentProfileDTO`/`StudentProfileInput` missing PRD §14.1 fields
+- PRD §14.1 lists the student profile form as: school, **major**,
+  grad year, **interests**, **notification preferences**, resume placeholder.
+  `StudentProfileDTO`/`StudentProfileInput` in `@/types` only have
+  `name`, `college`, `gradYear`, `resumeUrl`, `bio` — no `major`, no
+  `interests` (array, presumably taxonomy-linked), no notification-prefs
+  shape at all.
+- **Requesting (additive):** `major?: string`, `interests?: string[]`
+  (category slugs?) on both types; a `notificationPrefs` shape TBD once
+  the notification system (Phase 5) settles.
+- Task 3.2 builds the form against the real fields only — no invented
+  inputs for data the contract can't accept yet.
+
 ## Additive contract notes (new exports Dev B can use)
 
 - **`toggleBookmark(input)`** (features/bookmarks/actions) → `Result<{ bookmarked, id }>`.
