@@ -41,7 +41,7 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 ## Phase 4 — Company portal UI
 - [x] 4.1 Company onboarding multi-step form → "Submitted for Verification" (PRD §14.2)
 - [x] 4.2 Company Dashboard modules (verification banner, analytics cards, completeness %, internship counts) (PRD §15.2)
-- [ ] 4.3 Company Profile Editor forms — all §17 modules, autosave + "last saved" indicator (FR-11)
+- [x] 4.3 Company Profile Editor forms — all §17 modules, autosave + "last saved" indicator (FR-11)
 - [ ] 4.4 Logo/media upload widget (Cloudinary signed preset from Dev A) (FR-16)
 - [ ] 4.5 Founders/co-founders/hiring-managers/recruiters repeatable editors (PRD §17)
 - [ ] 4.6 Internship Manager UI — table, inline status toggle, create/edit/archive forms (PRD §14.2)

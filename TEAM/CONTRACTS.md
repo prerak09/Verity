@@ -62,6 +62,17 @@ envelope). Nothing here changes without being written here first.
 - Task 3.2 builds the form against the real fields only — no invented
   inputs for data the contract can't accept yet.
 
+### CR-7 — No `removeCompanyLink`/`removeCompanyLocation` actions
+- `features/companies/actions.ts` has `addCompanyLink`/`addCompanyLocation`
+  but no corresponding remove — only `addFounder`/`removeFounder` has both.
+- 4.3's Profile Editor can add links/locations but can't offer a remove
+  button for either, since no action exists to call. Not a blocker (adding
+  wrong data is rare and support/Admin can fix it), but worth the same
+  add/remove symmetry founders already has.
+- **Requesting (additive):** `removeCompanyLink(companyId, linkId)` and
+  `removeCompanyLocation(companyId, locationId)`, same
+  `Promise<Result<null>>` shape as `removeFounder`.
+
 ## Additive contract notes (new exports Dev B can use)
 
 - **`toggleBookmark(input)`** (features/bookmarks/actions) → `Result<{ bookmarked, id }>`.
