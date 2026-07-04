@@ -25,9 +25,9 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 
 ## Phase 2 — Search & discovery UI
 - [x] 2.1 Global search bar + typeahead client component (debounced 250ms) (PRD §16)
-- [ ] 2.2 Search results page + filter sidebar (category/tech/funding/remote/visa/employees/location) (FR-31)
-- [ ] 2.3 Sort controls (relevance/recent/alpha) (FR-32)
-- [ ] 2.4 Zero-result state → "browse by category" + "suggest a company" form (PRD §16)
+- [x] 2.2 Search results page + filter sidebar (category/tech/funding/remote/visa/employees/location) (FR-31)
+- [x] 2.3 Sort controls (relevance/recent/alpha) (FR-32)
+- [x] 2.4 Zero-result state → "browse by category" + "suggest a company" form (PRD §16)
 - [ ] 2.5 Category browse grid (PRD §14.1)
 
 ## Phase 3 — Student portal UI

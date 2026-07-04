@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **63 / 94 complete** — BE 50/50 ✅ · FE 13/44
+Progress: **66 / 94 complete** — BE 50/50 ✅ · FE 16/44
 
 ---
 
@@ -55,9 +55,9 @@ Progress: **63 / 94 complete** — BE 50/50 ✅ · FE 13/44
 - [x] `[BE]` `/api/search` + `/api/search/suggest`
 - [x] `[BE]` search-query logging (FR-33)
 - [x] `[FE]` global search bar + typeahead (250ms)
-- [ ] `[FE]` search results + filter sidebar (all facets)
-- [ ] `[FE]` sort controls
-- [ ] `[FE]` zero-result state + suggest-a-company form
+- [x] `[FE]` search results + filter sidebar (all facets)
+- [x] `[FE]` sort controls
+- [x] `[FE]` zero-result state + suggest-a-company form
 - [ ] `[FE]` category browse grid
 
 ## Phase 3 — Discovery/analytics data · Student portal UI

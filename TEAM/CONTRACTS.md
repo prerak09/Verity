@@ -32,6 +32,23 @@ envelope). Nothing here changes without being written here first.
 
 ---
 
+## Cross-lane requests (Dev B → Dev A)
+
+### CR-5 — `CompanyFilters` is missing two FR-31 facets
+- **FR-31** lists filters: category, technology, funding stage, remote policy,
+  visa sponsorship, **employee count range**, **location**. `CompanyFilters`
+  in `@/types` has the first five but not the last two.
+- `CompanyCard` also doesn't carry `visaSponsorship` or `employeeCountRange`
+  (only `CompanyDetail` does), so even server-filtered-then-returned cards
+  couldn't display those facets as result metadata today.
+- **Requesting (additive, non-breaking):** `employeeCountRange?: string` and
+  `location?: string` added to `CompanyFilters`; `visaSponsorship` and
+  `employeeCountRange` added to `CompanyCard`.
+- Until then, `(marketing)/search` (2.2) filters against the fuller
+  `MOCK_COMPANY_DETAILS` records directly rather than the truncated
+  `CompanyCard` shape, so the UI is fully functional against mock data — the
+  gap only matters once this swaps to a real, network-paginated query.
+
 ## Additive contract notes (new exports Dev B can use)
 
 - **`toggleBookmark(input)`** (features/bookmarks/actions) → `Result<{ bookmarked, id }>`.
