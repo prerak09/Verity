@@ -188,7 +188,7 @@ export default function LandingPage() {
             <Button
               className="mt-6"
               variant="outline"
-              render={<Link href="/sign-up" />}
+              render={<Link href="/company-onboarding" />}
             >
               Register your company
             </Button>
