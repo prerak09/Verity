@@ -19,6 +19,7 @@ import type {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { MediaUploadWidget } from "@/features/companies/components/MediaUploadWidget";
 import {
   Select,
   SelectContent,
@@ -201,6 +202,22 @@ export function ProfileEditor({
       </div>
 
       <SectionCard title="Basics">
+        <div className="flex flex-wrap gap-6">
+          <MediaUploadWidget
+            companyId={company.id}
+            field="logoUrl"
+            label="Logo"
+            currentUrl={company.logoUrl}
+            shape="square"
+          />
+          <MediaUploadWidget
+            companyId={company.id}
+            field="bannerUrl"
+            label="Banner"
+            currentUrl={company.bannerUrl}
+            shape="wide"
+          />
+        </div>
         <Field label="Company name" htmlFor="name" error={fieldErrors.name}>
           <Input id="name" value={name} onChange={(e) => setName(e.target.value)} />
         </Field>

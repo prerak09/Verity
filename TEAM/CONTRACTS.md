@@ -73,6 +73,25 @@ envelope). Nothing here changes without being written here first.
   `removeCompanyLocation(companyId, locationId)`, same
   `Promise<Result<null>>` shape as `removeFounder`.
 
+### CR-8 — `createSignedUpload` has no Server Action wrapper
+- `lib/cloudinary.ts` exports `createSignedUpload(folder)`, but it's a plain
+  function in a non-`"use server"` file — nothing calls it, and there's no
+  way for client code to request a signature. Confirmed via grep: zero
+  callers anywhere in `features/**` or `app/**`.
+- 4.4's upload widget needs a client-callable action returning `SignedUpload`
+  (timestamp/signature/apiKey/cloudName/folder/allowedFormats) so the
+  browser can POST directly to Cloudinary per the file's own doc comment
+  ("client never receives the API secret... requests a signature from a
+  server action/route").
+- **Requesting (additive):** something like
+  `getSignedUpload(folder: UploadFolder): Promise<Result<SignedUpload>>`
+  in `features/companies/actions.ts` (or a shared `features/uploads/`
+  module if other upload folders — resumes — need it too).
+- Until then, 4.4 mocks only the signing+upload round-trip (a local
+  simulated delay returning a fake URL) — everything downstream of that,
+  i.e. actually persisting the resulting `logoUrl`/`bannerUrl` via
+  `updateCompany`, uses the real action.
+
 ## Additive contract notes (new exports Dev B can use)
 
 - **`toggleBookmark(input)`** (features/bookmarks/actions) → `Result<{ bookmarked, id }>`.
