@@ -87,6 +87,10 @@ envelope). Nothing here changes without being written here first.
   `getSignedUpload(folder: UploadFolder): Promise<Result<SignedUpload>>`
   in `features/companies/actions.ts` (or a shared `features/uploads/`
   module if other upload folders — resumes — need it too).
+- Until then, 4.4 mocks only the signing+upload round-trip (a local
+  simulated delay returning a fake URL) — everything downstream of that,
+  i.e. actually persisting the resulting `logoUrl`/`bannerUrl` via
+  `updateCompany`, uses the real action.
 
 ### CR-9 — `CompanyNews` has no `body` column and no remove action
 - PRD §14.2 describes the Company News Manager as posting "title, **body**,
@@ -104,10 +108,20 @@ envelope). Nothing here changes without being written here first.
 - 4.8's Company News Manager posts title + optional link + published date
   only (no body field, no remove button) — same "build against what the
   contract actually has" approach as CR-6/CR-7.
-- Until then, 4.4 mocks only the signing+upload round-trip (a local
-  simulated delay returning a fake URL) — everything downstream of that,
-  i.e. actually persisting the resulting `logoUrl`/`bannerUrl` via
-  `updateCompany`, uses the real action.
+
+### CR-10 — `CompanyAnalytics` has no real time-series field
+- PRD §14.2/§19 describes the Company Analytics UI as showing "profile
+  views **over time**," but `CompanyAnalytics` in `@/types` only has
+  cumulative snapshots — `profileViews: { total, last30d, last90d }` and
+  `bookmarkCount: { total, last30d }` — no `{ date, count }[]` series to
+  actually plot a trend line from.
+- **Requesting (additive):** something like
+  `profileViewsTrend: { date: string; views: number }[]` (daily or weekly
+  buckets) so a real line chart is possible.
+- 4.9's Analytics page renders the two windows it does have (last 30 days
+  vs. the 60 days before that) as a bar comparison rather than fabricating
+  daily points, plus a real bar chart of `perInternshipViews` (which is
+  already a proper per-item breakdown, no gap there).
 
 ## Additive contract notes (new exports Dev B can use)
 
