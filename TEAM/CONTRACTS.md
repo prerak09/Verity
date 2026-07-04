@@ -123,6 +123,22 @@ envelope). Nothing here changes without being written here first.
   daily points, plus a real bar chart of `perInternshipViews` (which is
   already a proper per-item breakdown, no gap there).
 
+### CR-11 — `CompanyDetail` doesn't expose `rejectionReason`
+- `Company.rejectionReason` exists in the DB and is already threaded into
+  the Admin-facing verification queue DTO (`features/verification/queries.ts`
+  → `priorRejectionReason`), but `CompanyDetail` in `@/types` (the
+  company-facing contract) has no equivalent field. The PRD's "what to fix"
+  checklist (§14.2) calls for showing the Admin's reason text on the
+  company side, which is currently unreachable from `CompanyDetail`.
+- **Requesting (additive):** `rejectionReason: string | null` on
+  `CompanyDetail`, threaded through `getCompanyBySlug`/whatever query backs
+  the company portal's own-profile read.
+- 4.10's Verification Status page computes its "what to fix" checklist
+  client-side from `REQUIRED_FOR_VERIFICATION` + the `CompanyDetail` fields
+  already available (mirrors `getProfileCompleteness`'s logic exactly, no
+  DB call needed), but falls back to a generic message instead of the real
+  Admin reason text until this ships.
+
 ## Additive contract notes (new exports Dev B can use)
 
 - **`toggleBookmark(input)`** (features/bookmarks/actions) → `Result<{ bookmarked, id }>`.

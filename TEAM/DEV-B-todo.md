@@ -48,7 +48,7 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 4.7 Team Members UI — invite, roles OWNER/RECRUITER, revoke, transfer ownership (FR-04)
 - [x] 4.8 Company News CMS UI (last-10) (C6)
 - [x] 4.9 Company Analytics UI — trend charts (PRD §14.2)
-- [ ] 4.10 Verification status banner + "what to fix" checklist (C8)
+- [x] 4.10 Verification status banner + "what to fix" checklist (C8)
 
 ## Phase 5 — Admin portal UI, notifications UI & QA
 - [ ] 5.1 Admin Dashboard modules (PRD §15.3)
