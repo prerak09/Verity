@@ -87,6 +87,23 @@ envelope). Nothing here changes without being written here first.
   `getSignedUpload(folder: UploadFolder): Promise<Result<SignedUpload>>`
   in `features/companies/actions.ts` (or a shared `features/uploads/`
   module if other upload folders — resumes — need it too).
+
+### CR-9 — `CompanyNews` has no `body` column and no remove action
+- PRD §14.2 describes the Company News Manager as posting "title, **body**,
+  optional link", but `prisma/schema.prisma`'s `CompanyNews` model only has
+  `title` / `url` / `publishedAt` — no body/description column at all, and
+  `companyNewsSchema`/`CompanyNewsInput`/`CompanyNewsDTO` in `@/types` match
+  that (no `body` field anywhere in the contract). This is a real gap, not
+  just a label mismatch — same category as CR-6, but confirmed missing at
+  the DB layer too, so it needs a migration, not just an additive type.
+- Also no `removeCompanyNews(companyId, newsId)` — same asymmetry as CR-7.
+- **Requesting:** add `body: String` (or similar) to the `CompanyNews`
+  model + migration, thread through `companyNewsSchema`/`CompanyNewsInput`/
+  `CompanyNewsDTO` (additive), and add `removeCompanyNews` matching
+  `removeFounder`'s shape.
+- 4.8's Company News Manager posts title + optional link + published date
+  only (no body field, no remove button) — same "build against what the
+  contract actually has" approach as CR-6/CR-7.
 - Until then, 4.4 mocks only the signing+upload round-trip (a local
   simulated delay returning a fake URL) — everything downstream of that,
   i.e. actually persisting the resulting `logoUrl`/`bannerUrl` via
