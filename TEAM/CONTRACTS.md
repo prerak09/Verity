@@ -139,6 +139,28 @@ envelope). Nothing here changes without being written here first.
   DB call needed), but falls back to a generic message instead of the real
   Admin reason text until this ships.
 
+### CR-12 — `PlatformAnalytics` has no time-series field, and two stats are permanent V1 stubs
+- Same class of gap as CR-10, but for the Admin-facing DTO: `PlatformAnalytics`
+  is a point-in-time snapshot (`Promise.all` of aggregate/groupBy queries),
+  no `{ date, count }[]` series exists for any metric, so "trend charts"
+  (PRD §15.3/§19) render as current-state bar breakdowns instead.
+- Separately (not really a gap, just calling it out): `queueThroughput.
+  avgTimeToDecisionHours` and `reportVolume.avgResolutionHours` are
+  hardcoded `0` in `getPlatformAnalytics()` per its own code comment — V1
+  doesn't store decision timestamps, so these are permanent stubs, not
+  loading/mock artifacts. `MOCK_PLATFORM_ANALYTICS` shows realistic non-zero
+  numbers (19.5h / 30.2h) for demo purposes, which will visually regress to
+  "Not tracked in V1" the moment this swaps to the real query — expected,
+  not a regression, but flagging so it isn't mistaken for one.
+- **Requesting (additive, optional):** a real time-series field per metric
+  if trend charts become a priority; decision-timestamp tracking if avg
+  time-to-decision/resolution should ever be real numbers.
+- 5.8's Platform Analytics page renders `companyCounts`/`internshipCounts`
+  as status-colored bars (verified=success, pending=warning, rejected=
+  error, matching the existing design-token status colors), `topSearchTerms`
+  as a magnitude bar list, and the two stub fields as "Not tracked in V1"
+  rather than a misleading "0h avg".
+
 ## Additive contract notes (new exports Dev B can use)
 
 - **`toggleBookmark(input)`** (features/bookmarks/actions) → `Result<{ bookmarked, id }>`.
