@@ -40,6 +40,18 @@ envelope). Nothing here changes without being written here first.
   Signature type `DeleteApplication` in `@/types`.
 - **`getBookmarkedIds(userId, targetType)`** → `Set<string>` for toggling UI state.
 
+### Team Members (PRD §14.2, FR-62) — for Dev B's Phase 4.7 UI
+Backend added in `features/team/` (gap surfaced by Dev B). Import:
+- `listTeamMembers(companyId)` (queries) → `TeamMemberDTO[]`
+- `inviteMember({ companyId, email, role? })` → `Result<{ memberId }>`
+- `updateMemberRole({ companyId, memberId, role })` → `Result<{ role }>`
+- `revokeMember({ companyId, memberId })` → `Result<null>`
+- `transferOwnership({ companyId, toMemberId })` → `Result<null>`
+Types `TeamMemberDTO`, `InviteMemberInput`, `UpdateMemberRoleInput`,
+`TransferOwnershipInput` + signatures are in `@/types`. All owner-gated
+(`company:team:manage`); last-owner is protected (use transferOwnership to change owner).
+V1 invite = add an existing Verity user by email (no invite-token table).
+
 ## Contract change log (non-additive changes to frozen contracts)
 
 _None yet. Any rename/removal in `types/index.ts` or `config/roles.ts` gets an

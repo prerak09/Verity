@@ -173,6 +173,17 @@ export interface CompanyMembership {
   role: CompanyMemberRole;
 }
 
+/** A row in the company Team Members UI (PRD §14.2). */
+export interface TeamMemberDTO {
+  id: string; // CompanyMember.id
+  userId: string;
+  name: string | null;
+  email: string;
+  avatarUrl: string | null;
+  role: CompanyMemberRole;
+  joinedAt: string; // ISO
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Company DTOs (PRD §17)
 // ─────────────────────────────────────────────────────────────────────────────
@@ -519,6 +530,23 @@ export interface TaxonomyInput {
   slug: string;
 }
 
+export interface InviteMemberInput {
+  companyId: string;
+  email: string;
+  role?: CompanyMemberRole;
+}
+
+export interface UpdateMemberRoleInput {
+  companyId: string;
+  memberId: string;
+  role: CompanyMemberRole;
+}
+
+export interface TransferOwnershipInput {
+  companyId: string;
+  toMemberId: string;
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // FUNCTION SIGNATURES — the names/shapes Dev B imports. Bodies land per-phase.
 // (Declared as type aliases so the contract is checkable before implementation.)
@@ -547,6 +575,22 @@ export type UpdateCompany = (
 export type SubmitForVerification = (
   companyId: string,
 ) => Promise<Result<{ status: VerificationStatus }>>;
+
+// features/team/queries.ts + actions.ts (PRD §14.2)
+export type ListTeamMembers = (companyId: string) => Promise<TeamMemberDTO[]>;
+export type InviteMember = (
+  input: InviteMemberInput,
+) => Promise<Result<{ memberId: string }>>;
+export type UpdateMemberRole = (
+  input: UpdateMemberRoleInput,
+) => Promise<Result<{ role: CompanyMemberRole }>>;
+export type RevokeMember = (input: {
+  companyId: string;
+  memberId: string;
+}) => Promise<Result<null>>;
+export type TransferOwnership = (
+  input: TransferOwnershipInput,
+) => Promise<Result<null>>;
 
 // features/internships/queries.ts
 export type GetInternshipBySlug = (
