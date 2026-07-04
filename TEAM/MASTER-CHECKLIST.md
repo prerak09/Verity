@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **51 / 94 complete** — BE 50/50 ✅ · FE 1/44
+Progress: **52 / 94 complete** — BE 50/50 ✅ · FE 2/44
 
 ---
 
@@ -21,7 +21,7 @@ Progress: **51 / 94 complete** — BE 50/50 ✅ · FE 1/44
 - [x] `[BE]` `prisma/seed.ts` + seed Admin
 - [x] `[BE]` GitHub Actions CI + Vitest + branch protection
 - [x] `[FE]` shadcn/ui init + `components/ui/*`
-- [ ] `[FE]` design tokens + Tailwind theme + `globals.css` (WCAG AA)
+- [x] `[FE]` design tokens + Tailwind theme + `globals.css` (WCAG AA)
 - [ ] `[FE]` `components/shared/*` (Navbar, Sidebar, EmptyState, Pagination, Skeleton)
 - [ ] `[FE]` root layout + per-group `error.tsx` / `loading.tsx`
 - [ ] `[FE]` four route-group layout shells + nav
