@@ -13,7 +13,7 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 0.3 `components/shared/` — Navbar, Sidebar, EmptyState, Pagination, Logo, Skeleton
 - [x] 0.4 Root `layout.tsx` + portal-specific `error.tsx` + `loading.tsx` per group (TRD §21)
 - [x] 0.5 Four route-group `layout.tsx` shells + nav: `(marketing)`, `(student)`, `(company)`, `(admin)`
-- [ ] 0.6 Sign-in / sign-up pages (Clerk `<SignIn/>`/`<SignUp/>`) + `/unauthorized` page
+- [x] 0.6 Sign-in / sign-up pages (Clerk `<SignIn/>`/`<SignUp/>`) + `/unauthorized` page
 - [ ] 0.7 Mock-data fixtures matching `types/index.ts` (so screens render before real data lands)
 
 ## Phase 1 — Public / marketing pages
