@@ -60,6 +60,7 @@ Branch prefix: `feat/be-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 4.7 Admin user management actions — disable/reinstate/role change (FR-05, A5)
 - [x] 4.8 Platform analytics queries — counts by status, queue throughput, top terms (FR-72, §19.2)
 - [x] 4.9 `app/api/admin/**` route handlers
+- [x] 4.10 `features/team/{schema,queries,actions}.ts` — invite/updateRole/revoke/transfer-ownership (PRD §14.2, FR-62) — *added: gap surfaced by Dev B*
 
 ## Phase 5 — Notifications & hardening
 - [x] 5.1 `features/notifications/notify.ts` — in-app row + Resend email for email-worthy events (TRD §25, FR-60/63)
