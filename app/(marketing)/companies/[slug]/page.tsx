@@ -9,7 +9,8 @@ import { FundingChip } from "@/components/shared/FundingChip";
 import { RemoteChip } from "@/components/shared/RemoteChip";
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
-import { MOCK_COMPANY_DETAILS } from "@/components/lib/mocks";
+import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
+import { MOCK_COMPANY_DETAILS, MOCK_BOOKMARKS } from "@/components/lib/mocks";
 
 // lucide-react dropped brand/logo marks (no Github/Linkedin/Twitter icons) —
 // every link renders with this generic mark; the type label carries the ID.
@@ -105,17 +106,24 @@ export default async function CompanyProfilePage({
           </div>
         </div>
 
-        {company.websiteUrl && (
-          <Link
-            href={company.websiteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border-2 border-border bg-card px-3 text-sm font-medium text-foreground shadow-brutal-xs transition-colors hover:bg-muted"
-          >
-            <Globe className="size-4" aria-hidden />
-            Website
-          </Link>
-        )}
+        <div className="flex shrink-0 items-center gap-2">
+          <BookmarkButton
+            targetType="COMPANY"
+            targetId={company.id}
+            initialBookmarked={MOCK_BOOKMARKS.some((b) => b.company?.slug === company.slug)}
+          />
+          {company.websiteUrl && (
+            <Link
+              href={company.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-9 items-center gap-1.5 rounded-lg border-2 border-border bg-card px-3 text-sm font-medium text-foreground shadow-brutal-xs transition-colors hover:bg-muted"
+            >
+              <Globe className="size-4" aria-hidden />
+              Website
+            </Link>
+          )}
+        </div>
       </div>
 
       <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_320px]">

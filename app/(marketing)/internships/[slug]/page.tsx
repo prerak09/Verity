@@ -6,7 +6,8 @@ import { ExternalLink, MapPin, Clock } from "lucide-react";
 
 import { RemoteChip } from "@/components/shared/RemoteChip";
 import { Button } from "@/components/ui/button";
-import { MOCK_INTERNSHIP_DETAILS } from "@/components/lib/mocks";
+import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
+import { MOCK_INTERNSHIP_DETAILS, MOCK_BOOKMARKS } from "@/components/lib/mocks";
 
 export async function generateMetadata({
   params,
@@ -41,15 +42,24 @@ export default async function InternshipDetailPage({
     <div className="mx-auto max-w-wide px-4 py-10 sm:px-6">
       <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
         <div className="min-w-0">
-          <div className="flex items-center gap-2">
-            <span className="inline-flex items-center rounded-sm border-2 border-border bg-success-bg px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-success-fg">
-              {STATUS_LABEL[internship.status] ?? internship.status}
-            </span>
-            {internship.isStale && (
-              <span className="inline-flex items-center rounded-sm border-2 border-warning-border bg-warning-bg px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-warning-fg">
-                Still open?
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center rounded-sm border-2 border-border bg-success-bg px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-success-fg">
+                {STATUS_LABEL[internship.status] ?? internship.status}
               </span>
-            )}
+              {internship.isStale && (
+                <span className="inline-flex items-center rounded-sm border-2 border-warning-border bg-warning-bg px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-warning-fg">
+                  Still open?
+                </span>
+              )}
+            </div>
+            <BookmarkButton
+              targetType="INTERNSHIP"
+              targetId={internship.id}
+              initialBookmarked={MOCK_BOOKMARKS.some(
+                (b) => b.internship?.slug === internship.slug,
+              )}
+            />
           </div>
 
           <h1 className="mt-3 text-h1 text-foreground">{internship.title}</h1>
