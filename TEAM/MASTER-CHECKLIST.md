@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **88 / 94 complete** — BE 50/50 ✅ · FE 38/44
+Progress: **89 / 94 complete** — BE 50/50 ✅ · FE 39/44
 
 ---
 
@@ -103,7 +103,7 @@ Progress: **88 / 94 complete** — BE 50/50 ✅ · FE 38/44
 - [x] `[BE]` seed 100-company demo catalog (G2)
 - [x] `[FE]` Admin Dashboard modules
 - [x] `[FE]` Verification Queue UI + action buttons
-- [ ] `[FE]` Admin company/internship management tables
+- [x] `[FE]` Admin company/internship management tables
 - [x] `[FE]` categories & technologies management UI
 - [x] `[FE]` reports queue UI
 - [ ] `[FE]` feature management UI

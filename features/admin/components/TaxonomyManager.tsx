@@ -11,6 +11,7 @@ import {
   createTechnology,
   mergeTechnologies,
 } from "@/features/admin/taxonomy";
+import { slugify } from "@/lib/slug";
 import type { TaxonomyRef } from "@/types";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -31,20 +32,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-/**
- * `taxonomySchema` (features/admin/taxonomy.ts) auto-slugifies when `slug` is
- * omitted, but the exported `TaxonomyInput` type requires `slug: string` —
- * passing `""` would fail the schema's regex rather than skip it, so derive
- * a real slug client-side instead.
- */
-function slugify(name: string) {
-  return name
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
 
 function MergeDialog({
   item,

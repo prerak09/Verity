@@ -53,7 +53,7 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 ## Phase 5 — Admin portal UI, notifications UI & QA
 - [x] 5.1 Admin Dashboard modules (PRD §15.3)
 - [x] 5.2 Verification Queue UI — oldest-first, side-by-side fields + external links + action buttons (FR-50/51)
-- [ ] 5.3 Admin Company + Internship management tables + moderation (PRD §14.3)
+- [x] 5.3 Admin Company + Internship management tables + moderation (PRD §14.3)
 - [x] 5.4 Categories & Technologies management UI (CRUD + merge) (FR-54)
 - [x] 5.5 Reports queue UI + resolution actions (FR-53)
 - [ ] 5.6 Feature Management UI (windowed) (FR-55)

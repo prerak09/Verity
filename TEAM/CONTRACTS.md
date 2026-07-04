@@ -183,6 +183,25 @@ envelope). Nothing here changes without being written here first.
   control entirely for Technologies (no action to call yet) rather than
   faking one.
 
+### CR-14 — No admin company list query, and `suspendedAt` isn't on any DTO
+- `features/admin/companies.ts` has `adminCreateCompany`/`suspendCompany`/
+  `reinstateCompany`/`adminUnpublishInternship`, but no list/read query for
+  admin use. The public `listCompanies` (`features/companies/queries.ts`)
+  is hard-scoped to `verificationStatus: "VERIFIED"`, so it can never
+  surface PENDING/UNVERIFIED/REJECTED or suspended companies for moderation.
+- `Company.suspendedAt` exists in Prisma but isn't exposed on `CompanyDetail`,
+  `CompanyCard`, or anywhere else — there's no typed way to know a company
+  is suspended from the client side today.
+- **Requesting (additive):** an admin-facing query (e.g.
+  `getAdminCompanies(): Promise<AdminCompanyDTO[]>`) returning all
+  companies regardless of status, including `suspendedAt`.
+- 5.3's Companies/Internships page lists every `MOCK_COMPANY_DETAILS`
+  entry (already includes non-VERIFIED rows) and tracks "suspended" as
+  local-only UI state (a `Set<companyId>` toggled optimistically on
+  success) rather than inventing a field on the shared `CompanyDetail`
+  type. Wired to the real `adminCreateCompany`/`suspendCompany`/
+  `reinstateCompany`/`adminUnpublishInternship` actions.
+
 ## Additive contract notes (new exports Dev B can use)
 
 - **`toggleBookmark(input)`** (features/bookmarks/actions) → `Result<{ bookmarked, id }>`.
