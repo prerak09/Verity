@@ -1,0 +1,109 @@
+"use client";
+
+import Link from "next/link";
+import { Menu, Bell, User as UserIcon } from "lucide-react";
+
+import { Logo } from "@/components/shared/Logo";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/components/lib/utils";
+
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+interface NavbarProps {
+  variant?: "marketing" | "app";
+  /** Marketing nav links (variant="marketing" only). */
+  links?: NavLink[];
+  /** Center slot for app variant — global search lands here in Phase 2. */
+  centerSlot?: React.ReactNode;
+  /** Rightmost slot override for app variant — user menu lands here once Clerk (0.6) is wired. */
+  userSlot?: React.ReactNode;
+  /** Shows the mobile hamburger and wires it to the parent shell's drawer state (0.5). */
+  onMobileMenuToggle?: () => void;
+  className?: string;
+}
+
+/**
+ * Sticky top bar (doc §12.7). Marketing swaps the center search for nav
+ * links and the right slot for Sign in / Get started; the app variant
+ * carries search + notifications + user menu.
+ */
+export function Navbar({
+  variant = "app",
+  links = [],
+  centerSlot,
+  userSlot,
+  onMobileMenuToggle,
+  className,
+}: NavbarProps) {
+  return (
+    <header
+      className={cn(
+        "sticky top-0 z-40 h-16 border-b-2 border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80",
+        className,
+      )}
+    >
+      <div className="mx-auto flex h-full max-w-wide items-center gap-4 px-4 sm:px-6">
+        {onMobileMenuToggle && (
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            aria-label="Open menu"
+            onClick={onMobileMenuToggle}
+          >
+            <Menu className="size-5" aria-hidden />
+          </Button>
+        )}
+
+        <Logo />
+
+        {variant === "marketing" ? (
+          <>
+            <nav className="ml-6 hidden items-center gap-6 sm:flex">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium text-neutral-600 transition-colors hover:text-foreground"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+            <div className="ml-auto flex items-center gap-2">
+              <Button variant="ghost" size="sm" render={<Link href="/sign-in" />}>
+                Sign in
+              </Button>
+              <Button size="sm" render={<Link href="/sign-up" />}>
+                Get started
+              </Button>
+            </div>
+          </>
+        ) : (
+          <>
+            {centerSlot && (
+              <div className="mx-auto hidden w-full max-w-md sm:block">
+                {centerSlot}
+              </div>
+            )}
+            <nav className="ml-auto flex items-center gap-1">
+              {userSlot ?? (
+                <>
+                  <Button variant="ghost" size="icon" aria-label="Notifications">
+                    <Bell className="size-5" aria-hidden />
+                  </Button>
+                  <Button variant="ghost" size="icon" aria-label="Account">
+                    <UserIcon className="size-5" aria-hidden />
+                  </Button>
+                </>
+              )}
+            </nav>
+          </>
+        )}
+      </div>
+    </header>
+  );
+}
