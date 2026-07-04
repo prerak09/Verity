@@ -4,6 +4,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 import { Navbar } from "@/components/shared/Navbar";
+import { NavSearch } from "@/components/shared/NavSearch";
 import { Sidebar, type NavSection } from "@/components/shared/Sidebar/Sidebar";
 import { Dialog, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
@@ -33,7 +34,10 @@ export function PortalShell({ sections, children }: PortalShellProps) {
 
   return (
     <div className="flex min-h-full flex-col">
-      <Navbar onMobileMenuToggle={() => setMobileNavOpen(true)} />
+      <Navbar
+        onMobileMenuToggle={() => setMobileNavOpen(true)}
+        centerSlot={<NavSearch />}
+      />
       <div className="flex flex-1">
         <Sidebar sections={sections} className="hidden md:flex" />
 
