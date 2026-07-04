@@ -28,7 +28,7 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 2.2 Search results page + filter sidebar (category/tech/funding/remote/visa/employees/location) (FR-31)
 - [x] 2.3 Sort controls (relevance/recent/alpha) (FR-32)
 - [x] 2.4 Zero-result state → "browse by category" + "suggest a company" form (PRD §16)
-- [ ] 2.5 Category browse grid (PRD §14.1)
+- [x] 2.5 Category browse grid (PRD §14.1)
 
 ## Phase 3 — Student portal UI
 - [ ] 3.1 Student Dashboard — all modules (categories, trending, recommended, recently-added, latest internships, bookmarks preview, tracker preview, recent activity) (PRD §15.1)
