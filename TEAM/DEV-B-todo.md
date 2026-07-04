@@ -14,7 +14,7 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 0.4 Root `layout.tsx` + portal-specific `error.tsx` + `loading.tsx` per group (TRD §21)
 - [x] 0.5 Four route-group `layout.tsx` shells + nav: `(marketing)`, `(student)`, `(company)`, `(admin)`
 - [x] 0.6 Sign-in / sign-up pages (Clerk `<SignIn/>`/`<SignUp/>`) + `/unauthorized` page
-- [ ] 0.7 Mock-data fixtures matching `types/index.ts` (so screens render before real data lands)
+- [x] 0.7 Mock-data fixtures matching `types/index.ts` (so screens render before real data lands)
 
 ## Phase 1 — Public / marketing pages
 - [ ] 1.1 Landing page `(marketing)/page.tsx` (PRD §11)

@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **56 / 94 complete** — BE 50/50 ✅ · FE 6/44
+Progress: **57 / 94 complete** — BE 50/50 ✅ · FE 7/44
 
 ---
 
@@ -26,7 +26,7 @@ Progress: **56 / 94 complete** — BE 50/50 ✅ · FE 6/44
 - [x] `[FE]` root layout + per-group `error.tsx` / `loading.tsx`
 - [x] `[FE]` four route-group layout shells + nav
 - [x] `[FE]` sign-in / sign-up (Clerk) + `/unauthorized` page
-- [ ] `[FE]` mock-data fixtures matching `types/index.ts`
+- [x] `[FE]` mock-data fixtures matching `types/index.ts`
 
 ## Phase 1 — Companies & internships
 - [x] `[BE]` companies `schema.ts` (Zod, §17)

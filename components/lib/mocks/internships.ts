@@ -1,0 +1,188 @@
+import type { InternshipCard, InternshipDetail } from "@/types";
+
+const now = Date.now();
+const daysAgo = (n: number) => new Date(now - n * 86_400_000).toISOString();
+
+export const MOCK_INTERNSHIPS: InternshipCard[] = [
+  {
+    id: "int_ledgerly_1",
+    slug: "backend-engineering-intern",
+    title: "Backend Engineering Intern",
+    companyId: "co_ledgerly",
+    companySlug: "ledgerly",
+    companyName: "Ledgerly",
+    companyLogoUrl: null,
+    location: "New York, NY",
+    remotePolicy: "HYBRID",
+    stipend: "$38/hr",
+    status: "PUBLISHED",
+    publishedAt: daysAgo(4),
+    isStale: false,
+  },
+  {
+    id: "int_ledgerly_2",
+    slug: "data-engineering-intern",
+    title: "Data Engineering Intern",
+    companyId: "co_ledgerly",
+    companySlug: "ledgerly",
+    companyName: "Ledgerly",
+    companyLogoUrl: null,
+    location: "New York, NY",
+    remotePolicy: "REMOTE",
+    stipend: "$36/hr",
+    status: "PUBLISHED",
+    publishedAt: daysAgo(52),
+    isStale: true,
+  },
+  {
+    id: "int_arclight_1",
+    slug: "ml-research-intern",
+    title: "ML Research Intern",
+    companyId: "co_arclight",
+    companySlug: "arclight-ai",
+    companyName: "Arclight AI",
+    companyLogoUrl: null,
+    location: "San Francisco, CA",
+    remotePolicy: "ONSITE",
+    stipend: "$45/hr",
+    status: "PUBLISHED",
+    publishedAt: daysAgo(1),
+    isStale: false,
+  },
+  {
+    id: "int_arclight_2",
+    slug: "applied-ai-intern",
+    title: "Applied AI Intern",
+    companyId: "co_arclight",
+    companySlug: "arclight-ai",
+    companyName: "Arclight AI",
+    companyLogoUrl: null,
+    location: "San Francisco, CA",
+    remotePolicy: "HYBRID",
+    stipend: "$42/hr",
+    status: "PUBLISHED",
+    publishedAt: daysAgo(9),
+    isStale: false,
+  },
+  {
+    id: "int_meridian_1",
+    slug: "software-engineering-intern",
+    title: "Software Engineering Intern",
+    companyId: "co_meridian",
+    companySlug: "meridian-health",
+    companyName: "Meridian Health",
+    companyLogoUrl: null,
+    location: "Boston, MA",
+    remotePolicy: "HYBRID",
+    stipend: "$34/hr",
+    status: "PUBLISHED",
+    publishedAt: daysAgo(15),
+    isStale: false,
+  },
+  {
+    id: "int_northwind_1",
+    slug: "platform-engineering-intern",
+    title: "Platform Engineering Intern",
+    companyId: "co_northwind",
+    companySlug: "northwind-climate",
+    companyName: "Northwind Climate",
+    companyLogoUrl: null,
+    location: "Remote (US)",
+    remotePolicy: "REMOTE",
+    stipend: "$40/hr",
+    status: "PUBLISHED",
+    publishedAt: daysAgo(3),
+    isStale: false,
+  },
+  {
+    id: "int_cargobyte_1",
+    slug: "product-engineering-intern",
+    title: "Product Engineering Intern",
+    companyId: "co_cargobyte",
+    companySlug: "cargobyte",
+    companyName: "Cargobyte",
+    companyLogoUrl: null,
+    location: "Austin, TX",
+    remotePolicy: "ONSITE",
+    stipend: "$32/hr",
+    status: "PUBLISHED",
+    publishedAt: daysAgo(21),
+    isStale: false,
+  },
+  {
+    id: "int_haven_1",
+    slug: "frontend-engineering-intern",
+    title: "Frontend Engineering Intern",
+    companyId: "co_haven",
+    companySlug: "haven-consumer",
+    companyName: "Haven",
+    companyLogoUrl: null,
+    location: "Los Angeles, CA",
+    remotePolicy: "HYBRID",
+    stipend: "$33/hr",
+    status: "PUBLISHED",
+    publishedAt: daysAgo(60),
+    isStale: true,
+  },
+  {
+    id: "int_sentrywall_1",
+    slug: "security-engineering-intern",
+    title: "Security Engineering Intern",
+    companyId: "co_sentrywall",
+    companySlug: "sentrywall",
+    companyName: "SentryWall",
+    companyLogoUrl: null,
+    location: "Remote (US)",
+    remotePolicy: "REMOTE",
+    stipend: "$41/hr",
+    status: "PUBLISHED",
+    publishedAt: daysAgo(7),
+    isStale: false,
+  },
+  {
+    id: "int_ledgerly_3",
+    slug: "product-design-intern",
+    title: "Product Design Intern",
+    companyId: "co_ledgerly",
+    companySlug: "ledgerly",
+    companyName: "Ledgerly",
+    companyLogoUrl: null,
+    location: "New York, NY",
+    remotePolicy: "HYBRID",
+    stipend: "$35/hr",
+    status: "DRAFT",
+    publishedAt: null,
+    isStale: false,
+  },
+];
+
+const DESCRIPTIONS: Record<string, string> = {
+  int_ledgerly_1:
+    "<p>Join Ledgerly's payments infrastructure team to build the APIs that move money for thousands of small businesses. You'll ship real endpoints, write migrations, and pair with senior engineers on-call.</p>",
+  int_arclight_1:
+    "<p>Work alongside our research team on retrieval and evaluation for production LLM systems. Expect to read papers, run experiments, and ship at least one improvement to a live model pipeline.</p>",
+};
+
+/** Full detail objects for the handful of internships a detail page mock needs. */
+export const MOCK_INTERNSHIP_DETAILS: Record<string, InternshipDetail> =
+  Object.fromEntries(
+    MOCK_INTERNSHIPS.map((card) => [
+      card.slug,
+      {
+        ...card,
+        description:
+          DESCRIPTIONS[card.id] ??
+          `<p>Work directly with the ${card.companyName} engineering team on real, shipped features from day one. This is a paid, full-time summer internship.</p>`,
+        duration: "12 weeks (Summer)",
+        applyUrl: `https://example.com/careers/${card.companySlug}/${card.slug}`,
+        createdAt: daysAgo(70),
+        updatedAt: card.publishedAt ?? daysAgo(70),
+      } satisfies InternshipDetail,
+    ]),
+  );
+
+export function getMockInternshipsByCompany(companyId: string): InternshipCard[] {
+  return MOCK_INTERNSHIPS.filter(
+    (i) => i.companyId === companyId && i.status === "PUBLISHED",
+  );
+}
