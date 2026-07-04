@@ -2,29 +2,25 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { LucideIcon } from "lucide-react";
 
 import { cn } from "@/components/lib/utils";
 
-/** Public config shape — Sidebar's callers pass icon *components* (e.g. `icon: Search`). */
+/**
+ * Public config shape. `icon` is a pre-rendered element (build it with the
+ * `navIcon()` helper from a Server Component) — a bare icon *component*
+ * can't cross a server→client prop boundary, only rendered elements can,
+ * and this config often flows through PortalShell ("use client").
+ */
 export interface NavItemDef {
   href: string;
-  icon: LucideIcon;
+  icon: React.ReactNode;
   label: string;
   count?: number;
   /** Match the href exactly rather than by prefix (e.g. the portal's own /dashboard root). */
   exact?: boolean;
 }
 
-interface NavItemProps {
-  href: string;
-  /** Already-rendered by Sidebar (a Server Component) — a bare component
-   * reference can't cross the server/client prop boundary, only elements can. */
-  icon: React.ReactNode;
-  label: string;
-  count?: number;
-  exact?: boolean;
-}
+type NavItemProps = NavItemDef;
 
 /**
  * Active nav item gets the full brutalist treatment — border-2 + brand tint

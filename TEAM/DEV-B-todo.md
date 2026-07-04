@@ -11,8 +11,8 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 0.1 `shadcn/ui` init + core primitives in `components/ui/` (button, input, card, dialog, tabs, badge, select, toast, table)
 - [x] 0.2 Design tokens + Tailwind theme + `globals.css` — WCAG AA contrast (NFR 13.5)
 - [x] 0.3 `components/shared/` — Navbar, Sidebar, EmptyState, Pagination, Logo, Skeleton
-- [ ] 0.4 Root `layout.tsx` + portal-specific `error.tsx` + `loading.tsx` per group (TRD §21)
-- [ ] 0.5 Four route-group `layout.tsx` shells + nav: `(marketing)`, `(student)`, `(company)`, `(admin)`
+- [x] 0.4 Root `layout.tsx` + portal-specific `error.tsx` + `loading.tsx` per group (TRD §21)
+- [x] 0.5 Four route-group `layout.tsx` shells + nav: `(marketing)`, `(student)`, `(company)`, `(admin)`
 - [ ] 0.6 Sign-in / sign-up pages (Clerk `<SignIn/>`/`<SignUp/>`) + `/unauthorized` page
 - [ ] 0.7 Mock-data fixtures matching `types/index.ts` (so screens render before real data lands)
 

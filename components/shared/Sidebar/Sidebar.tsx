@@ -43,12 +43,8 @@ export function Sidebar({ sections, footer, className }: SidebarProps) {
                 </p>
               </>
             )}
-            {section.items.map(({ icon: Icon, ...item }) => (
-              <NavItem
-                key={item.href}
-                {...item}
-                icon={<Icon className="size-4 shrink-0" strokeWidth={2} aria-hidden />}
-              />
+            {section.items.map((item) => (
+              <NavItem key={item.href} {...item} />
             ))}
           </div>
         ))}
