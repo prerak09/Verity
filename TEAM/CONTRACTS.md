@@ -161,6 +161,28 @@ envelope). Nothing here changes without being written here first.
   as a magnitude bar list, and the two stub fields as "Not tracked in V1"
   rather than a misleading "0h avg".
 
+### CR-13 — No list query for Categories/Technologies, and `renameTechnology` is missing
+- `features/admin/taxonomy.ts` has `createCategory`/`renameCategory`/
+  `mergeCategories` and `createTechnology`/`mergeTechnologies`, but no
+  `listCategories()`/`listTechnologies()` anywhere in the repo — confirmed
+  via grep for `category.findMany`/`technology.findMany` (zero results
+  outside this file's own merge logic). The admin CRUD page has no real way
+  to load the existing taxonomy to manage.
+- Also asymmetric: `renameCategory(id, name)` exists but there's no
+  `renameTechnology(id, name)` — Technologies can only be created or merged,
+  never renamed.
+- Neither `TaxonomyRef` nor any other DTO carries a company-usage count
+  (e.g. "Fintech — 14 companies"), which would make the merge picker much
+  safer to use blind.
+- **Requesting (additive):** `listCategories(): Promise<TaxonomyRef[]>` /
+  `listTechnologies(): Promise<TaxonomyRef[]>` (ideally
+  `{ ...TaxonomyRef, companyCount: number }` for the merge UX), and
+  `renameTechnology(id, name)` matching `renameCategory`'s shape.
+- 5.4's Taxonomy Manager lists `MOCK_CATEGORIES`/`MOCK_TECHNOLOGIES`,
+  wires create/rename/merge to the real actions, and omits the rename
+  control entirely for Technologies (no action to call yet) rather than
+  faking one.
+
 ## Additive contract notes (new exports Dev B can use)
 
 - **`toggleBookmark(input)`** (features/bookmarks/actions) → `Result<{ bookmarked, id }>`.
