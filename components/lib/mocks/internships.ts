@@ -154,6 +154,23 @@ export const MOCK_INTERNSHIPS: InternshipCard[] = [
     publishedAt: null,
     isStale: false,
   },
+  {
+    id: "int_cargobyte_2",
+    slug: "growth-intern",
+    title: "Growth Intern",
+    companyId: "co_cargobyte",
+    companySlug: "cargobyte",
+    companyName: "Cargobyte",
+    companyLogoUrl: null,
+    location: "Austin, TX",
+    remotePolicy: "ONSITE",
+    stipend: "$30/hr",
+    // Archived (doc §23): a student's existing bookmark/tracker entry must
+    // persist and clearly show "no longer open" — never silently break.
+    status: "ARCHIVED",
+    publishedAt: daysAgo(120),
+    isStale: false,
+  },
 ];
 
 const DESCRIPTIONS: Record<string, string> = {

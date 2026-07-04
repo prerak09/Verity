@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **72 / 94 complete** — BE 50/50 ✅ · FE 22/44
+Progress: **73 / 94 complete** — BE 50/50 ✅ · FE 23/44
 
 ---
 
@@ -70,7 +70,7 @@ Progress: **72 / 94 complete** — BE 50/50 ✅ · FE 22/44
 - [x] `[FE]` bookmark toggle button (company + internship)
 - [x] `[FE]` Bookmarks page (2 tabs)
 - [x] `[FE]` Application Tracker Kanban + list toggle + notes
-- [ ] `[FE]` archived-internship "no longer open" state
+- [x] `[FE]` archived-internship "no longer open" state
 
 ## Phase 4 — Verification/admin data · Company portal UI
 - [x] `[BE]` verification queue query + approve/request/reject + notify

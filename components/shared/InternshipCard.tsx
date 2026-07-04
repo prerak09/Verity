@@ -22,10 +22,13 @@ export function InternshipCard({
   bookmarkSlot?: React.ReactNode;
   className?: string;
 }) {
+  const archived = internship.status === "ARCHIVED";
+
   return (
     <div
       className={cn(
         "group relative flex gap-4 rounded-xl border-2 border-border bg-card p-4 shadow-brutal-md transition-[transform,box-shadow] duration-150 hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-brutal-lg",
+        archived && "opacity-70 grayscale-[35%]",
         className,
       )}
     >
@@ -73,16 +76,26 @@ export function InternshipCard({
           </p>
         )}
         <div className="mt-2 flex flex-wrap items-center gap-2">
-          {internship.remotePolicy && <RemoteChip policy={internship.remotePolicy} />}
-          {internship.stipend && (
-            <span className="text-body-sm font-medium text-foreground">
-              {internship.stipend}
+          {archived ? (
+            // Bookmark/tracker entries persist after a company archives the
+            // role — never silently break the link, always say so (doc §23).
+            <span className="inline-flex items-center rounded-sm border-2 border-border bg-muted px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-muted-foreground">
+              No longer open
             </span>
-          )}
-          {internship.isStale && (
-            <span className="inline-flex items-center rounded-sm border-2 border-warning-border bg-warning-bg px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-warning-fg">
-              Still open?
-            </span>
+          ) : (
+            <>
+              {internship.remotePolicy && <RemoteChip policy={internship.remotePolicy} />}
+              {internship.stipend && (
+                <span className="text-body-sm font-medium text-foreground">
+                  {internship.stipend}
+                </span>
+              )}
+              {internship.isStale && (
+                <span className="inline-flex items-center rounded-sm border-2 border-warning-border bg-warning-bg px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-warning-fg">
+                  Still open?
+                </span>
+              )}
+            </>
           )}
         </div>
       </div>

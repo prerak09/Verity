@@ -36,7 +36,7 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 3.3 Bookmark toggle button (client) on company + internship (calls Dev A action) (FR-40/41)
 - [x] 3.4 Bookmarks page — Companies / Internships tabs, quick remove/navigate (PRD §14.1)
 - [x] 3.5 Application Tracker — Kanban (Saved→Applied→Interviewing→Offer/Rejected/Withdrawn) drag-to-update + list-view toggle for a11y + notes field (FR-42/43)
-- [ ] 3.6 Archived-internship bookmark shows "no longer open" state (PRD §23)
+- [x] 3.6 Archived-internship bookmark shows "no longer open" state (PRD §23)
 
 ## Phase 4 — Company portal UI
 - [ ] 4.1 Company onboarding multi-step form → "Submitted for Verification" (PRD §14.2)

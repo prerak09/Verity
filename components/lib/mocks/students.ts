@@ -52,6 +52,15 @@ export const MOCK_BOOKMARKS: BookmarkDTO[] = [
     company: companyBySlug("sentrywall"),
     internship: null,
   },
+  {
+    id: "bm_5",
+    targetType: "INTERNSHIP",
+    createdAt: daysAgo(45),
+    company: null,
+    // Archived since this bookmark was saved (doc §23) — exercises the
+    // "no longer open" state on the Bookmarks page.
+    internship: internshipBySlug("growth-intern"),
+  },
 ];
 
 export const MOCK_APPLICATIONS: ApplicationDTO[] = [
