@@ -13,11 +13,15 @@ export function BookmarkButton({
   targetType,
   targetId,
   initialBookmarked,
+  onToggle,
   className,
 }: {
   targetType: BookmarkTargetType;
   targetId: string;
   initialBookmarked: boolean;
+  /** Fired after a confirmed (non-optimistic) state change — e.g. the
+   * Bookmarks page (3.4) uses this to drop the row on unbookmark. */
+  onToggle?: (bookmarked: boolean) => void;
   className?: string;
 }) {
   const [bookmarked, setBookmarked] = useState(initialBookmarked);
@@ -37,6 +41,7 @@ export function BookmarkButton({
 
     if (result.success) {
       setBookmarked(result.data.bookmarked);
+      onToggle?.(result.data.bookmarked);
     } else {
       setBookmarked(!next); // revert
       toast.error(result.error.message);

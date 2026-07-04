@@ -14,10 +14,12 @@ import { cn } from "@/components/lib/utils";
 export function InternshipCard({
   internship,
   hideCompany = false,
+  bookmarkSlot,
   className,
 }: {
   internship: InternshipCardDTO;
   hideCompany?: boolean;
+  bookmarkSlot?: React.ReactNode;
   className?: string;
 }) {
   return (
@@ -84,6 +86,10 @@ export function InternshipCard({
           )}
         </div>
       </div>
+
+      {bookmarkSlot && (
+        <div className="relative z-10 shrink-0">{bookmarkSlot}</div>
+      )}
     </div>
   );
 }
