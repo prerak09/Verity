@@ -20,8 +20,8 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 1.1 Landing page `(marketing)/page.tsx` (PRD §11)
 - [x] 1.2 Public company directory `(marketing)/companies/page.tsx` (grid + cards)
 - [x] 1.3 Public company profile `[slug]/page.tsx` — RSC, all §17 modules read-only, LCP<2s (NFR 13.1)
-- [ ] 1.4 Public internship list + `[slug]` detail — external "Apply on company site" CTA (FR-25)
-- [ ] 1.5 Company/internship card components, verified badge, funding/remote chips
+- [x] 1.4 Public internship list + `[slug]` detail — external "Apply on company site" CTA (FR-25)
+- [x] 1.5 Company/internship card components, verified badge, funding/remote chips
 
 ## Phase 2 — Search & discovery UI
 - [ ] 2.1 Global search bar + typeahead client component (debounced 250ms) (PRD §16)
