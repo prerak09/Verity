@@ -8,7 +8,7 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 ---
 
 ## Phase 0 — Design system & shells (start after Dev A pushes 0.1 to `main`)
-- [ ] 0.1 `shadcn/ui` init + core primitives in `components/ui/` (button, input, card, dialog, tabs, badge, select, toast, table)
+- [x] 0.1 `shadcn/ui` init + core primitives in `components/ui/` (button, input, card, dialog, tabs, badge, select, toast, table)
 - [ ] 0.2 Design tokens + Tailwind theme + `globals.css` — WCAG AA contrast (NFR 13.5)
 - [ ] 0.3 `components/shared/` — Navbar, Sidebar, EmptyState, Pagination, Logo, Skeleton
 - [ ] 0.4 Root `layout.tsx` + portal-specific `error.tsx` + `loading.tsx` per group (TRD §21)
