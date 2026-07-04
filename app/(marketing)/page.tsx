@@ -1,65 +1,200 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ShieldCheck, Users, Briefcase, BadgeCheck } from "lucide-react";
 
-export default function Home() {
+import { Button } from "@/components/ui/button";
+
+const QUESTIONS = [
+  {
+    icon: ShieldCheck,
+    title: "Company Intelligence",
+    question: "Is this company legitimate, funded, and actually hiring?",
+    description:
+      "Funding stage, headcount, remote policy, and verification status — the due-diligence students used to skip because it took too long.",
+  },
+  {
+    icon: Users,
+    title: "Founder & People Intelligence",
+    question: "Who works here, who founded it, and who do I talk to?",
+    description:
+      "Founders and hiring managers, listed by name, with the profiles LinkedIn buries behind an algorithm.",
+  },
+  {
+    icon: Briefcase,
+    title: "Internship Discovery & Tracking",
+    question: "What does the role look like, and how do I track my application?",
+    description:
+      "Every open internship in one place, plus a tracker that follows your application from Saved to Offer.",
+  },
+];
+
+export default function LandingPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* Hero */}
+      <section className="border-b-2 border-border bg-muted">
+        <div className="mx-auto grid max-w-wide gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-28">
+          <div>
+            <p className="text-overline text-brand-700">
+              CAREER INTELLIGENCE PLATFORM
+            </p>
+            <h1 className="mt-3 text-display-lg text-foreground sm:text-display-xl">
+              Know a company before you apply.
+            </h1>
+            <p className="mt-5 max-w-prose text-body-lg text-muted-foreground">
+              Crunchbase&apos;s rigor, LinkedIn&apos;s people-graph, and
+              Linear&apos;s craft — applied to the internship search. Every
+              company on Verity is manually verified. No scraping, no AI
+              guesswork.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Button size="lg" render={<Link href="/sign-up" />}>
+                Get started
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                render={<Link href="/companies" />}
+              >
+                Browse companies
+              </Button>
+            </div>
+          </div>
+
+          <div className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-lg">
+            <div className="flex items-center gap-3 border-b border-border-subtle pb-4">
+              <span
+                aria-hidden
+                className="inline-flex size-9 shrink-0 items-center justify-center rounded-md border-2 shadow-brutal-xs"
+                style={{
+                  background: "var(--verified-fill)",
+                  borderColor: "var(--verified-ring)",
+                }}
+              >
+                <BadgeCheck className="size-5 text-white" strokeWidth={3} aria-hidden />
+              </span>
+              <div>
+                <p className="font-display text-h4 text-foreground">Ledgerly</p>
+                <p className="text-body-sm text-muted-foreground">
+                  Payments infrastructure &middot; Series B
+                </p>
+              </div>
+            </div>
+            <dl className="mt-4 grid grid-cols-2 gap-y-3 text-body-sm">
+              <dt className="text-muted-foreground">Founders</dt>
+              <dd className="text-right font-medium text-foreground">2 listed</dd>
+              <dt className="text-muted-foreground">Remote policy</dt>
+              <dd className="text-right font-medium text-foreground">Hybrid</dd>
+              <dt className="text-muted-foreground">Open internships</dt>
+              <dd className="text-right font-medium text-foreground">3 roles</dd>
+              <dt className="text-muted-foreground">Last verified</dt>
+              <dd className="text-right font-medium text-foreground">This week</dd>
+            </dl>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Three questions */}
+      <section className="mx-auto max-w-wide px-4 py-20 sm:px-6">
+        <div className="max-w-2xl">
+          <h2 className="text-h1 text-foreground">
+            A job board answers what&apos;s open. Verity answers what students
+            actually ask.
+          </h2>
         </div>
-      </main>
-    </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {QUESTIONS.map(({ icon: Icon, title, question, description }) => (
+            <div
+              key={title}
+              className="rounded-xl border-2 border-border bg-card p-6 shadow-brutal-sm"
+            >
+              <div className="flex size-11 items-center justify-center rounded-lg border-2 border-border bg-brand-50">
+                <Icon className="size-5 text-brand-700" strokeWidth={1.75} aria-hidden />
+              </div>
+              <p className="mt-4 text-overline text-muted-foreground">
+                {title}
+              </p>
+              <p className="mt-2 font-display text-h4 text-foreground">
+                &ldquo;{question}&rdquo;
+              </p>
+              <p className="mt-2 text-body-sm text-muted-foreground">
+                {description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Trust / verification */}
+      <section className="border-y-2 border-border bg-muted">
+        <div className="mx-auto grid max-w-wide gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="text-overline text-brand-700">HOW VERIFICATION WORKS</p>
+            <h2 className="mt-3 text-h1 text-foreground">
+              The verified badge means something because it&apos;s rare.
+            </h2>
+            <p className="mt-4 max-w-prose text-body text-muted-foreground">
+              Every company profile is entered by the company itself and
+              checked by an Admin before it goes live — domain ownership,
+              funding claims, and open roles included. Nothing is scraped,
+              nothing is AI-generated. If a badge is on the page, a person
+              looked at it.
+            </p>
+          </div>
+          <div className="flex items-center gap-4 rounded-xl border-2 border-border bg-card p-6 shadow-brutal-md">
+            <span
+              aria-hidden
+              className="inline-flex size-12 shrink-0 items-center justify-center rounded-md border-2 shadow-brutal-sm"
+              style={{
+                background: "var(--verified-fill)",
+                borderColor: "var(--verified-ring)",
+              }}
+            >
+              <BadgeCheck className="size-6 text-white" strokeWidth={3} aria-hidden />
+            </span>
+            <p className="text-body-sm text-muted-foreground">
+              This exact badge appears nowhere else in the product — not on
+              buttons, not on filters — so it can never be confused with an
+              ordinary UI element.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Dual CTA */}
+      <section className="mx-auto max-w-wide px-4 py-20 sm:px-6">
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-xl border-2 border-border bg-card p-8 shadow-brutal-sm">
+            <p className="text-overline text-muted-foreground">FOR STUDENTS</p>
+            <h3 className="mt-2 font-display text-h2 text-foreground">
+              Search is free, always.
+            </h3>
+            <p className="mt-2 text-body-sm text-muted-foreground">
+              Bookmark companies, track applications from Saved to Offer, and
+              stop re-researching the same company twice.
+            </p>
+            <Button className="mt-6" render={<Link href="/sign-up" />}>
+              Get started
+            </Button>
+          </div>
+          <div className="rounded-xl border-2 border-border bg-card p-8 shadow-brutal-sm">
+            <p className="text-overline text-muted-foreground">FOR COMPANIES</p>
+            <h3 className="mt-2 font-display text-h2 text-foreground">
+              Claim your profile.
+            </h3>
+            <p className="mt-2 text-body-sm text-muted-foreground">
+              An unclaimed, unverified profile is a missed hire. Self-serve
+              verification, no Admin bottleneck.
+            </p>
+            <Button
+              className="mt-6"
+              variant="outline"
+              render={<Link href="/sign-up" />}
+            >
+              Register your company
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

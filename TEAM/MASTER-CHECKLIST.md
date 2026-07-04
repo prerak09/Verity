@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **57 / 94 complete** — BE 50/50 ✅ · FE 7/44
+Progress: **58 / 94 complete** — BE 50/50 ✅ · FE 8/44
 
 ---
 
@@ -39,7 +39,7 @@ Progress: **57 / 94 complete** — BE 50/50 ✅ · FE 7/44
 - [x] `[BE]` publish gate — VERIFIED only, server-side (FR-22)
 - [x] `[BE]` staleness flag (45d)
 - [x] `[BE]` `/api/companies` + `/api/internships` handlers
-- [ ] `[FE]` landing page
+- [x] `[FE]` landing page
 - [ ] `[FE]` public company directory (grid+cards)
 - [ ] `[FE]` public company profile (§17 read-only, LCP<2s)
 - [ ] `[FE]` public internship list + detail (external Apply CTA)

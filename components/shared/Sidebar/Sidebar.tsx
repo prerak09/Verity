@@ -24,7 +24,7 @@ export function Sidebar({ sections, footer, className }: SidebarProps) {
   return (
     <aside
       className={cn(
-        "flex h-full w-64 shrink-0 flex-col border-r-2 border-border bg-neutral-50",
+        "flex h-full w-64 shrink-0 flex-col border-r-2 border-border bg-muted",
         className,
       )}
     >

@@ -54,7 +54,17 @@ function roleFromClaims(sessionClaims: unknown): PlatformRole | null {
   return null;
 }
 
-export default clerkMiddleware(async (auth, req) => {
+// Dev-only bypass: clerkMiddleware() validates the request Host header against
+// a live Clerk backend instance derived from the publishable key, so a
+// synthetic/placeholder key (no real Clerk project) fails on *every* request
+// with a raw "host_invalid" error page — there's no way to satisfy that check
+// without real Clerk credentials. MOCK_AUTH lets local dev skip Clerk
+// entirely and pair with lib/auth.ts's mock CurrentUser. Gated on NODE_ENV so
+// a stray env var can never disable auth in a deployed environment.
+const MOCK_AUTH =
+  process.env.MOCK_AUTH === "true" && process.env.NODE_ENV !== "production";
+
+const withClerk = clerkMiddleware(async (auth, req) => {
   if (isPublicRoute(req)) return NextResponse.next();
 
   const { userId, sessionClaims, redirectToSignIn } = await auth();
@@ -83,6 +93,12 @@ export default clerkMiddleware(async (auth, req) => {
 
   return NextResponse.next();
 });
+
+export default MOCK_AUTH
+  ? function mockAuthMiddleware() {
+      return NextResponse.next();
+    }
+  : withClerk;
 
 export const config = {
   matcher: [

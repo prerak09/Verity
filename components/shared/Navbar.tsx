@@ -1,10 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { Menu, Bell, User as UserIcon } from "lucide-react";
 
 import { Logo } from "@/components/shared/Logo";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { cn } from "@/components/lib/utils";
 
 interface NavLink {
@@ -38,6 +40,8 @@ export function Navbar({
   onMobileMenuToggle,
   className,
 }: NavbarProps) {
+  const [marketingMenuOpen, setMarketingMenuOpen] = useState(false);
+
   return (
     <header
       className={cn(
@@ -67,20 +71,58 @@ export function Navbar({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-neutral-600 transition-colors hover:text-foreground"
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
             <div className="ml-auto flex items-center gap-2">
-              <Button variant="ghost" size="sm" render={<Link href="/sign-in" />}>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="sm:hidden"
+                aria-label="Open menu"
+                onClick={() => setMarketingMenuOpen(true)}
+              >
+                <Menu className="size-5" aria-hidden />
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="hidden sm:inline-flex"
+                render={<Link href="/sign-in" />}
+              >
                 Sign in
               </Button>
               <Button size="sm" render={<Link href="/sign-up" />}>
                 Get started
               </Button>
             </div>
+
+            <Dialog open={marketingMenuOpen} onOpenChange={setMarketingMenuOpen}>
+              <DialogContent className="border-2 border-border shadow-brutal-md sm:hidden">
+                <nav className="flex flex-col gap-1">
+                  {links.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted"
+                      onClick={() => setMarketingMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                  <Link
+                    href="/sign-in"
+                    className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted"
+                    onClick={() => setMarketingMenuOpen(false)}
+                  >
+                    Sign in
+                  </Link>
+                </nav>
+              </DialogContent>
+            </Dialog>
           </>
         ) : (
           <>

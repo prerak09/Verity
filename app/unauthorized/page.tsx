@@ -17,7 +17,7 @@ const LINKS = [
  */
 export default function UnauthorizedPage() {
   return (
-    <div className="flex min-h-full flex-1 flex-col items-center justify-center gap-8 bg-neutral-50 px-4 py-16 text-center">
+    <div className="flex min-h-full flex-1 flex-col items-center justify-center gap-8 bg-muted px-4 py-16 text-center">
       <Logo />
       <div className="flex flex-col items-center gap-4">
         <div className="flex size-14 items-center justify-center rounded-xl border-2 border-warning-border bg-warning-bg shadow-brutal-sm">

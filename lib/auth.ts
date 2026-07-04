@@ -6,7 +6,39 @@
 
 import { auth, currentUser as clerkCurrentUser } from "@clerk/nextjs/server";
 import { db } from "@/lib/db";
-import { UnauthenticatedError, type CurrentUser } from "@/types";
+import {
+  UnauthenticatedError,
+  type CurrentUser,
+  type PlatformRole,
+} from "@/types";
+
+// Dev-only bypass paired with middleware.ts's MOCK_AUTH — lets local dev
+// preview all three portals without a real Clerk project. Gated on NODE_ENV
+// so it can never activate in a deployed environment. MOCK_AUTH_ROLE picks
+// which portal's session to simulate.
+const MOCK_AUTH =
+  process.env.MOCK_AUTH === "true" && process.env.NODE_ENV !== "production";
+const MOCK_ROLE: PlatformRole =
+  (process.env.MOCK_AUTH_ROLE as PlatformRole | undefined) ?? "STUDENT";
+const MOCK_CURRENT_USER: CurrentUser = {
+  id: "mock_user_1",
+  clerkId: "mock_clerk_1",
+  email: "mock@example.com",
+  name: "Mock User",
+  avatarUrl: null,
+  role: MOCK_ROLE,
+  memberships:
+    MOCK_ROLE === "COMPANY"
+      ? [
+          {
+            companyId: "co_ledgerly",
+            companySlug: "ledgerly",
+            companyName: "Ledgerly",
+            role: "OWNER",
+          },
+        ]
+      : [],
+};
 
 /**
  * Resolve the current authenticated user (with company memberships) from the
@@ -14,6 +46,8 @@ import { UnauthenticatedError, type CurrentUser } from "@/types";
  * should use requireUser() instead.
  */
 export async function getCurrentUser(): Promise<CurrentUser | null> {
+  if (MOCK_AUTH) return MOCK_CURRENT_USER;
+
   const { userId: clerkId } = await auth();
   if (!clerkId) return null;
 

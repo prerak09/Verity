@@ -40,8 +40,8 @@ export function EmptyState({
         className,
       )}
     >
-      <div className="flex size-14 items-center justify-center rounded-xl border-2 border-border bg-neutral-50 shadow-brutal-sm">
-        <Icon className="size-7 text-neutral-400" strokeWidth={1.75} aria-hidden />
+      <div className="flex size-14 items-center justify-center rounded-xl border-2 border-border bg-muted shadow-brutal-sm">
+        <Icon className="size-7 text-muted-foreground" strokeWidth={1.75} aria-hidden />
       </div>
       <h4 className="mt-4 font-display text-lg font-semibold text-foreground">
         {title}

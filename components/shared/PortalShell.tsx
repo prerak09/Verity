@@ -42,7 +42,7 @@ export function PortalShell({ sections, children }: PortalShellProps) {
             <DialogOverlay />
             <DialogPrimitive.Popup
               data-slot="mobile-nav-content"
-              className="fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] border-r-2 border-border bg-neutral-50 shadow-brutal-xl outline-none duration-150 data-open:animate-in data-open:slide-in-from-left data-closed:animate-out data-closed:slide-out-to-left"
+              className="fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] border-r-2 border-border bg-muted shadow-brutal-xl outline-none duration-150 data-open:animate-in data-open:slide-in-from-left data-closed:animate-out data-closed:slide-out-to-left"
             >
               <Sidebar sections={sections} className="h-full w-full" />
             </DialogPrimitive.Popup>

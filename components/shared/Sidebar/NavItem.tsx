@@ -38,7 +38,7 @@ export function NavItem({ href, icon, label, count, exact }: NavItemProps) {
         "group flex h-10 items-center gap-2.5 rounded-md px-3 text-sm font-medium transition-colors",
         active
           ? "border-2 border-border bg-brand-50 text-brand-800 shadow-brutal-xs"
-          : "border-2 border-transparent text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900",
+          : "border-2 border-transparent text-muted-foreground hover:bg-muted hover:text-foreground",
       )}
     >
       {icon}

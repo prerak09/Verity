@@ -17,7 +17,7 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 0.7 Mock-data fixtures matching `types/index.ts` (so screens render before real data lands)
 
 ## Phase 1 — Public / marketing pages
-- [ ] 1.1 Landing page `(marketing)/page.tsx` (PRD §11)
+- [x] 1.1 Landing page `(marketing)/page.tsx` (PRD §11)
 - [ ] 1.2 Public company directory `(marketing)/companies/page.tsx` (grid + cards)
 - [ ] 1.3 Public company profile `[slug]/page.tsx` — RSC, all §17 modules read-only, LCP<2s (NFR 13.1)
 - [ ] 1.4 Public internship list + `[slug]` detail — external "Apply on company site" CTA (FR-25)
