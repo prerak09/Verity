@@ -209,6 +209,21 @@ envelope). Nothing here changes without being written here first.
   page does the same for `isFeatured`/`featuredUntil`, wired to
   `featureCompany`/`unfeatureCompany`.
 
+### CR-15 — No admin user list query, no `AdminUserDTO`, and no mock at all
+- `features/admin/users.ts` has `changeUserRole`/`disableUser`/
+  `reinstateUser`, but there is no list-users query anywhere in the repo
+  (confirmed via grep) and no admin-facing user DTO in `@/types` — unlike
+  every other admin area, there wasn't even an existing mock fixture to
+  build against. This is the largest gap of the 8 admin pages.
+- **Requesting (additive):** `listUsers(filters?): Promise<AdminUserDTO[]>`
+  (or paginated) returning `{ id, name, email, role, createdAt, disabledAt,
+  companyMemberships? }`.
+- 5.7's User Management page defines a local `AdminUserRow` type and
+  `MOCK_ADMIN_USERS` fixture in `features/admin/mock-users.ts` (kept out of
+  `components/lib/mocks/` since it doesn't match a real shared contract),
+  wired to the real `changeUserRole`/`disableUser`/`reinstateUser` actions.
+  Swap to `listUsers()` + `AdminUserDTO` the moment they ship.
+
 ## Additive contract notes (new exports Dev B can use)
 
 - **`toggleBookmark(input)`** (features/bookmarks/actions) → `Result<{ bookmarked, id }>`.
