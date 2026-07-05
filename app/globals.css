@@ -78,18 +78,35 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Brand primitive scale — "Verity Violet" (doc §3.2), invariant */
-  --color-brand-50: #F5F3FF;
-  --color-brand-100: #EDE9FE;
-  --color-brand-200: #DDD6FE;
-  --color-brand-300: #C4B5FD;
-  --color-brand-400: #A78BFA;
-  --color-brand-500: #8B5CF6;
-  --color-brand-600: #7C3AED;
-  --color-brand-700: #6D28D9;
-  --color-brand-800: #5B21B6;
-  --color-brand-900: #4C1D95;
-  --color-brand-950: #2E1065;
+  /* Brand primitive scale — retro-rebrand purple */
+  --color-brand-50: #F0EDFF;
+  --color-brand-100: #E3DEFF;
+  --color-brand-200: #C7BEFF;
+  --color-brand-300: #AB9DFF;
+  --color-brand-400: #937FFF;
+  --color-brand-500: #7C6FEE;
+  --color-brand-600: #6A5CDB;
+  --color-brand-700: #5849C2;
+  --color-brand-800: #46389D;
+  --color-brand-900: #342B75;
+  --color-brand-950: #201A4A;
+
+  /* Retro-rebrand accents — lime, pink, butter (used prominently, not rare) */
+  --color-lime-100: #EEFCC8;
+  --color-lime-200: #DFF98F;
+  --color-lime-300: #D4F547;
+  --color-lime-400: #C4E62E;
+  --color-lime-500: #A8CC1E;
+  --color-lime-foreground: #202B04;
+  --color-pink-100: #FFE3F0;
+  --color-pink-200: #FFC1DF;
+  --color-pink-300: #FF9EC9;
+  --color-pink-400: #FB7EB6;
+  --color-pink-foreground: #4A0E29;
+  --color-butter-100: #FDF1C8;
+  --color-butter-200: #FBE49A;
+  --color-butter-300: #F5C94B;
+  --color-butter-foreground: #3D2C02;
 
   /* Neutral primitive scale — warm-tinted ink/paper ramp (doc §3.3) */
   --color-neutral-50: #FAFAF9;
@@ -133,10 +150,10 @@
   --color-funding-public-fg: #854D0E;
   --color-funding-public-border: #713F12;
 
-  /* Type (doc §4/§20 — Geist is the wired face; sans/display share it) */
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  /* Type — retro-terminal rebrand: Space Mono everywhere (display/body/mono share it) */
+  --font-sans: var(--font-space-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-display: var(--font-space-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-mono: var(--font-space-mono), ui-monospace, "SF Mono", Menlo, monospace;
 
   --text-display-2xl: 4.5rem;
   --text-display-2xl--line-height: 1.02;
@@ -224,28 +241,28 @@
 }
 
 :root {
-  --background: #FAFAF9; /* neutral-50 */
-  --foreground: #1C1B19; /* neutral-900 */
+  --background: #F7F3E3; /* retro-rebrand: warm cream, not neutral-50 gray */
+  --foreground: #14120E; /* near-black ink */
   --card: #FFFFFF;
-  --card-foreground: #1C1B19;
+  --card-foreground: #14120E;
   --popover: #FFFFFF;
-  --popover-foreground: #1C1B19;
-  --muted: #F4F4F2; /* neutral-100 */
-  --muted-foreground: #78756E; /* neutral-500 */
+  --popover-foreground: #14120E;
+  --muted: #EFEAD6; /* cream-tinted muted, was neutral-100 */
+  --muted-foreground: #6B685F;
 
-  --primary: #7C3AED; /* brand-600 — 5.9:1 on paper (doc §3.2) */
+  --primary: #7C6FEE; /* retro-rebrand purple, brighter than brand-600 */
   --primary-foreground: #FFFFFF;
-  --secondary: #F4F4F2; /* neutral-100 */
-  --secondary-foreground: #1C1B19;
-  --accent: #F5F3FF; /* brand-50 — structural hover/selected tint, not lime */
-  --accent-foreground: #4C1D95; /* brand-900 */
+  --secondary: #EFEAD6;
+  --secondary-foreground: #14120E;
+  --accent: #F0EDFF;
+  --accent-foreground: #4C1D95;
   --destructive: #B91C1C; /* error-fg */
 
-  --border: #0A0A09; /* neutral-950 — brutalist hard border (doc §8) */
-  --border-subtle: #E7E5E1; /* neutral-200 — non-structural hairlines */
-  --border-strong: #0A0A09;
+  --border: #000000; /* pure black — retro-rebrand hard border */
+  --border-subtle: #DCD5B8;
+  --border-strong: #000000;
   --input: #FFFFFF;
-  --ring: #7C3AED;
+  --ring: #7C6FEE;
 
   --success-fg: #15803D;
   --success-bg: #DCFCE7;
@@ -295,19 +312,19 @@
   --muted: #2A2825;
   --muted-foreground: #A8A59E; /* neutral-400 */
 
-  --primary: #8B5CF6; /* brand-500 */
+  --primary: #937FFF; /* brand-400 */
   --primary-foreground: #FFFFFF;
   --secondary: #3F3D38; /* neutral-700 */
   --secondary-foreground: #FAFAF9;
-  --accent: #3B2A5C; /* muted brand-900-ish tint on dark */
-  --accent-foreground: #DDD6FE; /* brand-200 */
+  --accent: #342B75; /* brand-900 tint on dark */
+  --accent-foreground: #E3DEFF; /* brand-100 */
   --destructive: #F87171;
 
   --border: #3F3D38; /* neutral-700 */
   --border-subtle: #2A2825; /* neutral-800 */
   --border-strong: #FAFAF9; /* inverts in dark (doc §21) */
   --input: #2A2825;
-  --ring: #A78BFA; /* brand-400 */
+  --ring: #937FFF; /* brand-400 */
 
   --success-fg: #4ADE80;
   --success-bg: #052E16;

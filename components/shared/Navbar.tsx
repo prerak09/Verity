@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, User as UserIcon } from "lucide-react";
+import { Menu, User as UserIcon, ChevronDown } from "lucide-react";
 
 import { Logo } from "@/components/shared/Logo";
 import { NotificationBell } from "@/components/shared/NotificationBell";
@@ -46,7 +46,10 @@ export function Navbar({
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 h-16 border-b-2 border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80",
+        "sticky top-0 z-40 h-16 border-b-2 border-border",
+        variant === "marketing"
+          ? "bg-lime-200"
+          : "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80",
         className,
       )}
     >
@@ -70,11 +73,12 @@ export function Navbar({
             <nav className="ml-6 hidden items-center gap-6 sm:flex">
               {links.map((link) => (
                 <Link
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className="inline-flex items-center gap-1 text-sm font-bold text-foreground/80 transition-colors hover:text-foreground"
                 >
                   {link.label}
+                  {link.label === "Resources" && <ChevronDown className="size-3.5" aria-hidden />}
                 </Link>
               ))}
             </nav>
@@ -89,15 +93,15 @@ export function Navbar({
                 <Menu className="size-5" aria-hidden />
               </Button>
               <Button
-                variant="ghost"
+                variant="outline"
                 size="sm"
-                className="hidden sm:inline-flex"
+                className="hidden bg-card sm:inline-flex"
                 render={<Link href="/sign-in" />}
               >
-                Sign in
+                Log in
               </Button>
               <Button size="sm" render={<Link href="/sign-up" />}>
-                Get started
+                Sign up
               </Button>
             </div>
 
@@ -106,7 +110,7 @@ export function Navbar({
                 <nav className="flex flex-col gap-1">
                   {links.map((link) => (
                     <Link
-                      key={link.href}
+                      key={link.label}
                       href={link.href}
                       className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted"
                       onClick={() => setMarketingMenuOpen(false)}
@@ -119,7 +123,7 @@ export function Navbar({
                     className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted"
                     onClick={() => setMarketingMenuOpen(false)}
                   >
-                    Sign in
+                    Log in
                   </Link>
                 </nav>
               </DialogContent>
