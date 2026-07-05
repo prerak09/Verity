@@ -44,6 +44,22 @@ export async function listInternships(
     company: { deletedAt: null, verificationStatus: "VERIFIED" },
     ...(filters.remotePolicy ? { remotePolicy: filters.remotePolicy } : {}),
     ...(filters.companySlug ? { company: { slug: filters.companySlug } } : {}),
+    ...(filters.location
+      ? { location: { contains: filters.location, mode: "insensitive" } }
+      : {}),
+    ...(filters.department
+      ? { department: { contains: filters.department, mode: "insensitive" } }
+      : {}),
+    ...(filters.jobType ? { jobType: filters.jobType } : {}),
+    ...(filters.q
+      ? {
+          OR: [
+            { title: { contains: filters.q, mode: "insensitive" } },
+            { description: { contains: filters.q, mode: "insensitive" } },
+            { company: { name: { contains: filters.q, mode: "insensitive" } } },
+          ],
+        }
+      : {}),
   };
 
   const orderBy: Prisma.InternshipOrderByWithRelationInput =
@@ -71,4 +87,32 @@ export async function listInternships(
       totalPages: Math.max(1, Math.ceil(totalCount / pageSize)),
     },
   };
+}
+
+const LISTED_WHERE: Prisma.InternshipWhereInput = {
+  status: "PUBLISHED",
+  deletedAt: null,
+  company: { deletedAt: null, verificationStatus: "VERIFIED" },
+};
+
+/** Distinct locations across open listings, for the jobs-page filter dropdown. */
+export async function listInternshipLocations(): Promise<string[]> {
+  const rows = await db.internship.findMany({
+    where: { ...LISTED_WHERE, location: { not: null } },
+    select: { location: true },
+    distinct: ["location"],
+    orderBy: { location: "asc" },
+  });
+  return rows.map((r) => r.location).filter((l): l is string => Boolean(l));
+}
+
+/** Distinct departments across open listings, for the jobs-page filter dropdown. */
+export async function listInternshipDepartments(): Promise<string[]> {
+  const rows = await db.internship.findMany({
+    where: { ...LISTED_WHERE, department: { not: null } },
+    select: { department: true },
+    distinct: ["department"],
+    orderBy: { department: "asc" },
+  });
+  return rows.map((r) => r.department).filter((d): d is string => Boolean(d));
 }

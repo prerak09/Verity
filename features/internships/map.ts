@@ -33,6 +33,8 @@ export function toInternshipCard(
     companyName: company.name,
     companyLogoUrl: company.logoUrl,
     location: i.location,
+    department: i.department,
+    jobType: i.jobType,
     remotePolicy: i.remotePolicy,
     stipend: i.stipend,
     status: i.status,

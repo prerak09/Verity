@@ -7,6 +7,7 @@ import { cn } from "@/components/lib/utils";
 interface EmptyStateAction {
   label: string;
   href: string;
+  icon?: LucideIcon;
 }
 
 interface EmptyStateProps {
@@ -53,6 +54,7 @@ export function EmptyState({
         <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
           {action && (
             <Button size="sm" render={<Link href={action.href} />}>
+              {action.icon && <action.icon className="size-4" aria-hidden />}
               {action.label}
             </Button>
           )}

@@ -1,36 +1,67 @@
 import type { Metadata } from "next";
-import { Briefcase } from "lucide-react";
+import { Armchair, Bell } from "lucide-react";
 
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { Pagination } from "@/components/shared/Pagination";
-import { listInternships } from "@/features/internships/queries";
-import type { InternshipCard as InternshipCardDTO, PageMeta } from "@/types";
+import { InternshipsFilterBar } from "@/features/internships/components/InternshipsFilterBar";
+import {
+  listInternships,
+  listInternshipLocations,
+  listInternshipDepartments,
+} from "@/features/internships/queries";
+import type { InternshipCard as InternshipCardDTO, JobType, PageMeta, RemotePolicy } from "@/types";
 
 export const metadata: Metadata = {
-  title: "Internships",
+  title: "Jobs",
   description:
-    "Every open internship on Verity, from manually verified companies.",
+    "Every open job from manually verified companies on Verity.",
 };
 
 const PAGE_SIZE = 12;
 
 export const dynamic = "force-dynamic";
 
+interface JobsSearchParams {
+  q?: string;
+  location?: string;
+  department?: string;
+  jobType?: string;
+  remotePolicy?: string;
+  page?: string;
+}
+
 export default async function InternshipsListPage({
   searchParams,
 }: {
-  searchParams: Promise<{ page?: string }>;
+  searchParams: Promise<JobsSearchParams>;
 }) {
-  const { page: pageParam } = await searchParams;
-  const page = Math.max(1, Number(pageParam) || 1);
+  const params = await searchParams;
+  const page = Math.max(1, Number(params.page) || 1);
 
   let internships: InternshipCardDTO[] = [];
   let meta: PageMeta = { page, pageSize: PAGE_SIZE, totalCount: 0, totalPages: 1 };
+  let locations: string[] = [];
+  let departments: string[] = [];
   try {
-    const result = await listInternships({ page, pageSize: PAGE_SIZE, sort: "recent" });
+    const [result, locationOptions, departmentOptions] = await Promise.all([
+      listInternships({
+        page,
+        pageSize: PAGE_SIZE,
+        sort: "recent",
+        q: params.q || undefined,
+        location: params.location || undefined,
+        department: params.department || undefined,
+        jobType: (params.jobType as JobType) || undefined,
+        remotePolicy: (params.remotePolicy as RemotePolicy) || undefined,
+      }),
+      listInternshipLocations(),
+      listInternshipDepartments(),
+    ]);
     internships = result.data;
     meta = result.meta;
+    locations = locationOptions;
+    departments = departmentOptions;
   } catch {
     // DB unreachable — fall through to empty state.
   }
@@ -40,18 +71,20 @@ export default async function InternshipsListPage({
     <div className="mx-auto max-w-wide px-4 py-12 sm:px-6">
       <div className="max-w-2xl">
         <span className="retro-eyebrow">Open Roles</span>
-        <h1 className="mt-4 font-display text-4xl font-bold text-neutral-950">Internships</h1>
+        <h1 className="mt-4 font-display text-4xl font-bold text-neutral-950">Jobs</h1>
         <p className="mt-2 font-mono text-sm text-neutral-700">
-          {totalCount} open internships from verified companies.
+          {totalCount} open {totalCount === 1 ? "job" : "jobs"} from verified companies.
         </p>
       </div>
 
+      <InternshipsFilterBar locations={locations} departments={departments} />
+
       {internships.length === 0 ? (
         <EmptyState
-          icon={Briefcase}
-          title="No open internships right now"
-          description="Check back soon, or browse verified companies instead."
-          action={{ label: "Browse companies", href: "/companies" }}
+          icon={Armchair}
+          title="No jobs available right now"
+          description="We don't have any open positions at the moment. Please check back later — new opportunities are added every day!"
+          action={{ label: "Get notified when new jobs are posted", href: "/sign-up", icon: Bell }}
           className="mt-8"
         />
       ) : (
@@ -63,7 +96,14 @@ export default async function InternshipsListPage({
           </div>
           <Pagination
             meta={meta}
-            href={(p) => `/internships?page=${p}`}
+            href={(p) => {
+              const next = new URLSearchParams();
+              for (const [k, v] of Object.entries(params)) {
+                if (v && k !== "page") next.set(k, v);
+              }
+              next.set("page", String(p));
+              return `/internships?${next.toString()}`;
+            }}
             className="mt-10"
           />
         </>

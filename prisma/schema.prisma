@@ -48,6 +48,13 @@ enum RemotePolicy {
   ONSITE
 }
 
+enum JobType {
+  FULL_TIME
+  PART_TIME
+  CONTRACT
+  INTERNSHIP
+}
+
 enum InternshipStatus {
   DRAFT
   PUBLISHED
@@ -234,6 +241,8 @@ model Internship {
   title        String
   description  String
   location     String?
+  department   String?
+  jobType      JobType?
   remotePolicy RemotePolicy?
   stipend      String?
   duration     String?

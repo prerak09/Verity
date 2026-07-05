@@ -24,6 +24,8 @@ interface DemoCompany {
     title: string;
     description: string;
     location: string;
+    department: string;
+    jobType: "FULL_TIME" | "PART_TIME" | "CONTRACT" | "INTERNSHIP";
     remotePolicy: "REMOTE" | "HYBRID" | "ONSITE";
     stipend: string;
     duration: string;
@@ -54,6 +56,8 @@ const COMPANIES: DemoCompany[] = [
         description:
           "Work alongside the research team on multilingual model training, evaluation, and inference optimization.",
         location: "Bengaluru",
+        department: "AI Research",
+        jobType: "INTERNSHIP",
         remotePolicy: "HYBRID",
         stipend: "₹80,000/mo",
         duration: "3–6 months",
@@ -83,6 +87,8 @@ const COMPANIES: DemoCompany[] = [
         description:
           "Contribute to the core GraphQL engine and metadata APIs. Strong Go/Haskell interest a plus.",
         location: "Remote",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
         remotePolicy: "REMOTE",
         stipend: "Competitive",
         duration: "6 months",
@@ -112,6 +118,8 @@ const COMPANIES: DemoCompany[] = [
         description:
           "Build merchant-facing dashboards in React/TypeScript with a focus on performance and accessibility.",
         location: "Bengaluru",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
         remotePolicy: "ONSITE",
         stipend: "₹1,00,000/mo",
         duration: "6 months",
@@ -141,6 +149,8 @@ const COMPANIES: DemoCompany[] = [
         description:
           "Ship features across the Postman web app and platform services. React + Node experience preferred.",
         location: "Bengaluru / Remote",
+        department: "Product Engineering",
+        jobType: "INTERNSHIP",
         remotePolicy: "HYBRID",
         stipend: "₹90,000/mo",
         duration: "6 months",
@@ -170,6 +180,8 @@ const COMPANIES: DemoCompany[] = [
         description:
           "Work on high-throughput trading infrastructure and internal tools. Systems-level curiosity valued.",
         location: "Bengaluru",
+        department: "Platform Engineering",
+        jobType: "INTERNSHIP",
         remotePolicy: "ONSITE",
         stipend: "₹75,000/mo",
         duration: "3–6 months",
@@ -265,6 +277,8 @@ export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) 
           title: i.title,
           description: i.description,
           location: i.location,
+          department: i.department,
+          jobType: i.jobType,
           remotePolicy: i.remotePolicy,
           stipend: i.stipend,
           duration: i.duration,
@@ -277,6 +291,8 @@ export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) 
           title: i.title,
           description: i.description,
           location: i.location,
+          department: i.department,
+          jobType: i.jobType,
           remotePolicy: i.remotePolicy,
           stipend: i.stipend,
           duration: i.duration,

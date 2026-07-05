@@ -37,6 +37,8 @@ interface InternshipSearchRow {
   slug: string;
   title: string;
   location: string | null;
+  department: string | null;
+  jobType: InternshipCard["jobType"];
   remotePolicy: InternshipCard["remotePolicy"];
   stipend: string | null;
   status: InternshipCard["status"];
@@ -82,7 +84,7 @@ export async function searchInternships(
 ): Promise<InternshipCard[]> {
   const rows = await db.$queryRaw<InternshipSearchRow[]>`
     SELECT
-      i."id", i."slug", i."title", i."location", i."remotePolicy",
+      i."id", i."slug", i."title", i."location", i."department", i."jobType", i."remotePolicy",
       i."stipend", i."status", i."publishedAt",
       c."id" AS "companyId", c."slug" AS "companySlug",
       c."name" AS "companyName", c."logoUrl" AS "companyLogoUrl"
@@ -106,6 +108,8 @@ export async function searchInternships(
     companyName: r.companyName,
     companyLogoUrl: r.companyLogoUrl,
     location: r.location,
+    department: r.department,
+    jobType: r.jobType,
     remotePolicy: r.remotePolicy,
     stipend: r.stipend,
     status: r.status,

@@ -17,6 +17,7 @@ import type {
   VerificationStatus,
   FundingStage,
   RemotePolicy,
+  JobType,
   InternshipStatus,
   ApplicationStatus,
   BookmarkTargetType,
@@ -29,6 +30,7 @@ export type {
   VerificationStatus,
   FundingStage,
   RemotePolicy,
+  JobType,
   InternshipStatus,
   ApplicationStatus,
   BookmarkTargetType,
@@ -286,6 +288,8 @@ export interface InternshipCard {
   companyName: string;
   companyLogoUrl: string | null;
   location: string | null;
+  department: string | null;
+  jobType: JobType | null;
   remotePolicy: RemotePolicy | null;
   stipend: string | null;
   status: InternshipStatus;
@@ -352,6 +356,9 @@ export interface CompanyFilters extends PaginationParams {
 export interface InternshipFilters extends PaginationParams {
   q?: string;
   category?: string;
+  location?: string;
+  department?: string;
+  jobType?: JobType;
   remotePolicy?: RemotePolicy;
   companySlug?: string;
   sort?: "recent" | "title";
@@ -489,6 +496,8 @@ export interface InternshipInput {
   title: string;
   description: string;
   location?: string;
+  department?: string;
+  jobType?: JobType;
   remotePolicy?: RemotePolicy;
   stipend?: string;
   duration?: string;
@@ -599,6 +608,8 @@ export type GetInternshipBySlug = (
 export type ListInternships = (
   filters: InternshipFilters,
 ) => Promise<Paginated<InternshipCard>>;
+export type ListInternshipLocations = () => Promise<string[]>;
+export type ListInternshipDepartments = () => Promise<string[]>;
 
 // features/internships/actions.ts
 export type CreateInternship = (

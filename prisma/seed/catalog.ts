@@ -23,6 +23,8 @@ const CITIES = [
   { city: "Singapore", country: "Singapore" },
   { city: "Toronto", country: "Canada" },
 ];
+const DEPARTMENTS = ["Engineering", "Product", "Design", "Data & AI", "Marketing", "Operations"];
+const JOB_TYPES = ["INTERNSHIP", "FULL_TIME", "PART_TIME", "CONTRACT"] as const;
 
 const NAME_PREFIXES = [
   "Nova", "Quant", "Hyper", "Bright", "Cloud", "Data", "Flux", "Ada", "Vega", "Orbit",
@@ -97,15 +99,19 @@ export async function seedCatalog(count = 100) {
     const internCount = (i % 2) + 1;
     for (let j = 0; j < internCount; j++) {
       const iSlug = `${slug}-intern-${j + 1}`;
+      const department = pick(DEPARTMENTS, i + j);
+      const jobType = pick(JOB_TYPES, i + j * 2);
       await db.internship.upsert({
         where: { slug: iSlug },
-        update: { status: "PUBLISHED" },
+        update: { status: "PUBLISHED", department, jobType },
         create: {
           companyId: company.id,
           slug: iSlug,
           title: `${pick(["Software", "Frontend", "Backend", "ML", "Data", "Platform"], i + j)} Engineering Intern`,
           description: `Join ${name} as an intern and work on ${category} products with ${tech1} and ${tech2}. Demo listing for the Verity catalog.`,
           location: remotePolicy === "REMOTE" ? "Remote" : loc.city,
+          department,
+          jobType,
           remotePolicy,
           stipend: pick(["₹50,000/mo", "₹80,000/mo", "$4,000/mo", "Competitive"], i + j),
           duration: pick(["3 months", "6 months", "3–6 months"], i + j),

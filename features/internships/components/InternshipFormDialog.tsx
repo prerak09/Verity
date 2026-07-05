@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { Plus, Pencil } from "lucide-react";
 
 import { createInternship, updateInternship } from "@/features/internships/actions";
-import type { FieldErrors, InternshipDetail, InternshipInput, RemotePolicy } from "@/types";
+import type { FieldErrors, InternshipDetail, InternshipInput, JobType, RemotePolicy } from "@/types";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -30,6 +30,13 @@ const REMOTE_POLICIES: { value: RemotePolicy; label: string }[] = [
   { value: "REMOTE", label: "Remote" },
   { value: "HYBRID", label: "Hybrid" },
   { value: "ONSITE", label: "Onsite" },
+];
+
+const JOB_TYPES: { value: JobType; label: string }[] = [
+  { value: "INTERNSHIP", label: "Internship" },
+  { value: "FULL_TIME", label: "Full-time" },
+  { value: "PART_TIME", label: "Part-time" },
+  { value: "CONTRACT", label: "Contract" },
 ];
 
 function Field({
@@ -64,6 +71,8 @@ function toFormState(internship?: InternshipDetail) {
     title: internship?.title ?? "",
     description: internship?.description ?? "",
     location: internship?.location ?? "",
+    department: internship?.department ?? "",
+    jobType: internship?.jobType ?? undefined,
     remotePolicy: internship?.remotePolicy ?? undefined,
     stipend: internship?.stipend ?? "",
     duration: internship?.duration ?? "",
@@ -101,6 +110,8 @@ export function InternshipFormDialog({
       title: form.title,
       description: form.description,
       location: form.location || undefined,
+      department: form.department || undefined,
+      jobType: form.jobType,
       remotePolicy: form.remotePolicy,
       stipend: form.stipend || undefined,
       duration: form.duration || undefined,
@@ -197,6 +208,37 @@ export function InternshipFormDialog({
                   {REMOTE_POLICIES.map((r) => (
                     <SelectItem key={r.value} value={r.value}>
                       {r.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </Field>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Field label="Department" htmlFor="department" error={fieldErrors.department}>
+              <Input
+                id="department"
+                placeholder="Engineering"
+                value={form.department}
+                onChange={(e) => setForm((f) => ({ ...f, department: e.target.value }))}
+              />
+            </Field>
+            <Field label="Job type" htmlFor="jobType" error={fieldErrors.jobType}>
+              <Select
+                value={form.jobType}
+                onValueChange={(v) => setForm((f) => ({ ...f, jobType: v as JobType }))}
+              >
+                <SelectTrigger id="jobType" className="w-full">
+                  <SelectValue>
+                    {(v: JobType) =>
+                      JOB_TYPES.find((j) => j.value === v)?.label ?? "Select…"
+                    }
+                  </SelectValue>
+                </SelectTrigger>
+                <SelectContent>
+                  {JOB_TYPES.map((j) => (
+                    <SelectItem key={j.value} value={j.value}>
+                      {j.label}
                     </SelectItem>
                   ))}
                 </SelectContent>

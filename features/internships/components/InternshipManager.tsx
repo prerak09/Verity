@@ -119,6 +119,8 @@ export function InternshipManager({
         companyName: prev[0]?.companyName ?? "",
         companyLogoUrl: prev[0]?.companyLogoUrl ?? null,
         location: input.location ?? null,
+        department: input.department ?? null,
+        jobType: input.jobType ?? null,
         remotePolicy: input.remotePolicy ?? null,
         stipend: input.stipend ?? null,
         status: "DRAFT",
