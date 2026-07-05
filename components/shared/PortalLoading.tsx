@@ -10,7 +10,7 @@ export function PortalLoading() {
           <KpiCardSkeleton key={i} />
         ))}
       </div>
-      <div className="rounded-xl border-[3px] border-neutral-950 p-4 shadow-brutal-sm">
+      <div className="rounded-[4px] border-[3px] border-neutral-950 p-4 shadow-brutal-sm">
         <TableSkeleton rows={5} columns={4} />
       </div>
     </div>

@@ -32,7 +32,7 @@ export function RouteErrorFallback({
           : "flex flex-1 flex-col items-center justify-center gap-4 px-6 py-24 text-center"
       }
     >
-      <div className="flex size-14 items-center justify-center rounded-xl border-2 border-error-border bg-error-bg shadow-brutal-sm">
+      <div className="flex size-14 items-center justify-center rounded-[4px] border-2 border-error-border bg-error-bg shadow-brutal-sm">
         <AlertTriangle className="size-7 text-error-fg" strokeWidth={1.75} aria-hidden />
       </div>
       <div>

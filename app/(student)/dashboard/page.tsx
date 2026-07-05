@@ -90,7 +90,7 @@ export default function StudentDashboardPage() {
   return (
     <div className="mx-auto max-w-wide space-y-10 px-4 py-8 sm:px-6">
       <div>
-        <h1 className="text-h1 text-foreground">Dashboard</h1>
+        <h1 className="font-display text-3xl font-bold text-neutral-950">Dashboard</h1>
         <p className="mt-1 text-body text-muted-foreground">
           Welcome back — here&apos;s what&apos;s new.
         </p>

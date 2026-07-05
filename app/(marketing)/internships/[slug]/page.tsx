@@ -62,7 +62,7 @@ export default async function InternshipDetailPage({
             />
           </div>
 
-          <h1 className="mt-3 text-h1 text-foreground">{internship.title}</h1>
+          <h1 className="mt-3 font-display text-3xl font-bold text-neutral-950">{internship.title}</h1>
 
           <Link
             href={`/companies/${internship.companySlug}`}
@@ -107,7 +107,7 @@ export default async function InternshipDetailPage({
           </div>
 
           <div className="mt-8 border-t-2 border-border pt-8">
-            <h2 className="text-h3 text-foreground">About this role</h2>
+            <h2 className="font-display text-xl font-bold text-neutral-950">About this role</h2>
             <div
               className="prose-verity mt-3 max-w-copy text-body text-muted-foreground"
               dangerouslySetInnerHTML={{ __html: internship.description }}
@@ -117,7 +117,7 @@ export default async function InternshipDetailPage({
 
         {/* Apply CTA — external deep-link only, no in-app application form (FR-25) */}
         <aside>
-          <div className="sticky top-24 rounded-xl border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-md">
+          <div className="sticky top-24 rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-md">
             <p className="text-overline text-muted-foreground">Ready to apply?</p>
             <p className="mt-1 text-body-sm text-muted-foreground">
               Applications are handled on {internship.companyName}&apos;s own
