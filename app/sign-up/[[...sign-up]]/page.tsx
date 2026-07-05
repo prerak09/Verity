@@ -1,7 +1,10 @@
 import { SignUp } from "@clerk/nextjs";
 
 import { AuthShell } from "@/components/shared/AuthShell";
+import { DemoAuthPanel } from "@/components/shared/DemoAuthPanel";
 import { clerkRetroAppearance } from "@/components/lib/clerk-appearance";
+
+const demoMode = process.env.NEXT_PUBLIC_DEMO_MODE === "true";
 
 export default function SignUpPage() {
   return (
@@ -17,7 +20,11 @@ export default function SignUpPage() {
         role: "Product Designer",
       }}
     >
-      <SignUp appearance={clerkRetroAppearance} />
+      {demoMode ? (
+        <DemoAuthPanel mode="sign-up" />
+      ) : (
+        <SignUp appearance={clerkRetroAppearance} />
+      )}
     </AuthShell>
   );
 }
