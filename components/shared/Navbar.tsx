@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, User as UserIcon } from "lucide-react";
+import { Menu, User as UserIcon, ChevronDown } from "lucide-react";
 
 import { Logo } from "@/components/shared/Logo";
 import { NotificationBell } from "@/components/shared/NotificationBell";
@@ -132,13 +132,20 @@ export function Navbar({
                 {centerSlot}
               </div>
             )}
-            <nav className="ml-auto flex items-center gap-1">
+            <nav className="ml-auto flex items-center gap-2">
               {userSlot ?? (
                 <>
                   <NotificationBell />
-                  <Button variant="ghost" size="icon" aria-label="Account">
-                    <UserIcon className="size-5" aria-hidden />
-                  </Button>
+                  <button
+                    type="button"
+                    aria-label="Account"
+                    className="flex items-center gap-2 rounded-[3px] border-[3px] border-neutral-950 bg-card py-1 pl-1 pr-2.5 [box-shadow:2px_2px_0_0_var(--color-neutral-950)] transition-transform hover:-translate-y-0.5"
+                  >
+                    <span className="grid size-7 place-items-center rounded-[2px] border-2 border-neutral-950 bg-tile-lavender">
+                      <UserIcon className="size-4 text-neutral-950" strokeWidth={2.25} aria-hidden />
+                    </span>
+                    <ChevronDown className="size-3.5 text-neutral-700" aria-hidden />
+                  </button>
                 </>
               )}
             </nav>
