@@ -10,7 +10,10 @@ import { RemoteChip } from "@/components/shared/RemoteChip";
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
-import { MOCK_COMPANY_DETAILS, MOCK_BOOKMARKS } from "@/components/lib/mocks";
+import { ProfileTabNav } from "@/components/shared/ProfileTabNav";
+import { getCompanyBySlug } from "@/features/companies/queries";
+
+export const dynamic = "force-dynamic";
 
 // lucide-react dropped brand/logo marks (no Github/Linkedin/Twitter icons) —
 // every link renders with this generic mark; the type label carries the ID.
@@ -33,7 +36,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const company = MOCK_COMPANY_DETAILS[slug];
+  const company = await getCompanyBySlug(slug);
   if (!company) return {};
   return {
     title: company.name,
@@ -47,7 +50,7 @@ export default async function CompanyProfilePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const company = MOCK_COMPANY_DETAILS[slug];
+  const company = await getCompanyBySlug(slug);
   if (!company) notFound();
 
   const founders = company.founders.filter((f) => !f.isHiringManager);
@@ -110,7 +113,7 @@ export default async function CompanyProfilePage({
           <BookmarkButton
             targetType="COMPANY"
             targetId={company.id}
-            initialBookmarked={MOCK_BOOKMARKS.some((b) => b.company?.slug === company.slug)}
+            initialBookmarked={false}
           />
           {company.websiteUrl && (
             <Link
@@ -126,11 +129,21 @@ export default async function CompanyProfilePage({
         </div>
       </div>
 
-      <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_320px]">
+      <ProfileTabNav
+        tabs={[
+          ...(company.about ? [{ id: "about", label: "About" }] : []),
+          ...(founders.length > 0 ? [{ id: "team", label: "Team" }] : []),
+          ...(company.technologies.length > 0 ? [{ id: "tech", label: "Tech" }] : []),
+          { id: "careers", label: `Careers (${company.openInternships.length})` },
+          ...(company.news.length > 0 ? [{ id: "news", label: "News" }] : []),
+        ]}
+      />
+
+      <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
         {/* Main column */}
         <div className="min-w-0 space-y-10">
           {company.about && (
-            <section>
+            <section id="about" className="scroll-mt-32">
               <h2 className="font-display text-xl font-bold text-neutral-950">About</h2>
               <div
                 className="prose-verity mt-3 max-w-copy text-body text-muted-foreground"
@@ -140,7 +153,7 @@ export default async function CompanyProfilePage({
           )}
 
           {company.technologies.length > 0 && (
-            <section>
+            <section id="tech" className="scroll-mt-32">
               <h2 className="font-display text-xl font-bold text-neutral-950">Tech stack</h2>
               <div className="mt-3 flex flex-wrap gap-2">
                 {company.technologies.map((t) => (
@@ -155,7 +168,7 @@ export default async function CompanyProfilePage({
             </section>
           )}
 
-          <section>
+          <section id="careers" className="scroll-mt-32">
             <h2 className="font-display text-xl font-bold text-neutral-950">Open internships</h2>
             {company.openInternships.length > 0 ? (
               <div className="mt-3 space-y-3">
@@ -179,7 +192,7 @@ export default async function CompanyProfilePage({
           </section>
 
           {company.news.length > 0 && (
-            <section>
+            <section id="news" className="scroll-mt-32">
               <h2 className="font-display text-xl font-bold text-neutral-950">Recent news</h2>
               <ul className="mt-3 space-y-4">
                 {company.news.map((item) => (
@@ -218,8 +231,8 @@ export default async function CompanyProfilePage({
         {/* Sidebar */}
         <aside className="space-y-8">
           {founders.length > 0 && (
-            <section>
-              <h2 className="text-overline text-muted-foreground">Founders</h2>
+            <section id="team" className="scroll-mt-32">
+              <h2 className="font-display text-xl font-bold text-neutral-950">Founders</h2>
               <ul className="mt-3 space-y-3">
                 {founders.map((f) => (
                   <li key={f.id} className="flex items-center gap-3">

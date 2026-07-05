@@ -4,8 +4,8 @@ import { Briefcase } from "lucide-react";
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { Pagination } from "@/components/shared/Pagination";
-import { MOCK_INTERNSHIPS } from "@/components/lib/mocks";
-import type { PageMeta } from "@/types";
+import { listInternships } from "@/features/internships/queries";
+import type { InternshipCard as InternshipCardDTO, PageMeta } from "@/types";
 
 export const metadata: Metadata = {
   title: "Internships",
@@ -15,6 +15,8 @@ export const metadata: Metadata = {
 
 const PAGE_SIZE = 12;
 
+export const dynamic = "force-dynamic";
+
 export default async function InternshipsListPage({
   searchParams,
 }: {
@@ -23,15 +25,16 @@ export default async function InternshipsListPage({
   const { page: pageParam } = await searchParams;
   const page = Math.max(1, Number(pageParam) || 1);
 
-  const openInternships = MOCK_INTERNSHIPS.filter(
-    (i) => i.status === "PUBLISHED",
-  );
-  const totalCount = openInternships.length;
-  const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
-  const start = (page - 1) * PAGE_SIZE;
-  const internships = openInternships.slice(start, start + PAGE_SIZE);
-
-  const meta: PageMeta = { page, pageSize: PAGE_SIZE, totalCount, totalPages };
+  let internships: InternshipCardDTO[] = [];
+  let meta: PageMeta = { page, pageSize: PAGE_SIZE, totalCount: 0, totalPages: 1 };
+  try {
+    const result = await listInternships({ page, pageSize: PAGE_SIZE, sort: "recent" });
+    internships = result.data;
+    meta = result.meta;
+  } catch {
+    // DB unreachable — fall through to empty state.
+  }
+  const totalCount = meta.totalCount;
 
   return (
     <div className="mx-auto max-w-wide px-4 py-12 sm:px-6">

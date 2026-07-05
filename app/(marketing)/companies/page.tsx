@@ -4,8 +4,8 @@ import { Building2 } from "lucide-react";
 import { CompanyCard } from "@/components/shared/CompanyCard";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { Pagination } from "@/components/shared/Pagination";
-import { MOCK_COMPANIES } from "@/components/lib/mocks";
-import type { PageMeta } from "@/types";
+import { listCompanies } from "@/features/companies/queries";
+import type { CompanyCard as CompanyCardDTO, PageMeta } from "@/types";
 
 export const metadata: Metadata = {
   title: "Companies",
@@ -15,6 +15,8 @@ export const metadata: Metadata = {
 
 const PAGE_SIZE = 12;
 
+export const dynamic = "force-dynamic";
+
 export default async function CompaniesDirectoryPage({
   searchParams,
 }: {
@@ -23,12 +25,16 @@ export default async function CompaniesDirectoryPage({
   const { page: pageParam } = await searchParams;
   const page = Math.max(1, Number(pageParam) || 1);
 
-  const totalCount = MOCK_COMPANIES.length;
-  const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
-  const start = (page - 1) * PAGE_SIZE;
-  const companies = MOCK_COMPANIES.slice(start, start + PAGE_SIZE);
-
-  const meta: PageMeta = { page, pageSize: PAGE_SIZE, totalCount, totalPages };
+  let companies: CompanyCardDTO[] = [];
+  let meta: PageMeta = { page, pageSize: PAGE_SIZE, totalCount: 0, totalPages: 1 };
+  try {
+    const result = await listCompanies({ page, pageSize: PAGE_SIZE, sort: "recent" });
+    companies = result.data;
+    meta = result.meta;
+  } catch {
+    // DB unreachable — render the empty state instead of a hard 500.
+  }
+  const totalCount = meta.totalCount;
 
   return (
     <div className="mx-auto max-w-wide px-4 py-12 sm:px-6">

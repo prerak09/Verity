@@ -20,7 +20,7 @@ const MOCK_AUTH =
   (process.env.MOCK_AUTH === "true" && process.env.NODE_ENV !== "production") ||
   process.env.NEXT_PUBLIC_DEMO_MODE === "true";
 const MOCK_ROLE: PlatformRole =
-  (process.env.MOCK_AUTH_ROLE as PlatformRole | undefined) ?? "ADMIN";
+  (process.env.MOCK_AUTH_ROLE as PlatformRole | undefined) ?? "STUDENT";
 const MOCK_CURRENT_USER: CurrentUser = {
   id: "mock_user_1",
   clerkId: "mock_clerk_1",
