@@ -81,7 +81,7 @@ function SectionCard({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-sm">
+    <section className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-sm">
       <h2 className="text-h4 text-foreground">{title}</h2>
       <div className="mt-4 space-y-4">{children}</div>
     </section>
@@ -189,7 +189,7 @@ export function ProfileEditor({
       <div className="sticky top-20 z-10 -mt-2 flex justify-end">
         <span
           className={cn(
-            "rounded-md border-2 border-border bg-popover px-3 py-1 text-caption font-medium shadow-brutal-xs",
+            "rounded-md border-[3px] border-neutral-950 bg-popover px-3 py-1 text-caption font-medium shadow-brutal-xs",
             saveState === "error" ? "text-error-fg" : "text-muted-foreground",
           )}
         >
@@ -338,7 +338,7 @@ export function ProfileEditor({
               className={cn(
                 "rounded-sm border-2 px-2.5 py-1 text-body-sm font-medium",
                 categoryIds.includes(c.id)
-                  ? "border-border bg-brand-50 text-brand-800"
+                  ? "border-border bg-tile-lavender text-brand-800"
                   : "border-transparent bg-muted text-foreground hover:border-border",
               )}
             >
@@ -358,7 +358,7 @@ export function ProfileEditor({
               className={cn(
                 "rounded-sm border-2 px-2.5 py-1 text-body-sm font-medium",
                 technologyIds.includes(t.id)
-                  ? "border-border bg-brand-50 text-brand-800"
+                  ? "border-border bg-tile-lavender text-brand-800"
                   : "border-transparent bg-muted text-foreground hover:border-border",
               )}
             >

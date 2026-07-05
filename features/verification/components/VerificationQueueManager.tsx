@@ -126,12 +126,12 @@ function QueueCard({
   }
 
   return (
-    <div className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-sm">
+    <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-sm">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="flex items-center gap-3">
           <div
             aria-hidden
-            className="flex size-10 shrink-0 items-center justify-center rounded-md border-2 border-border bg-muted text-body font-semibold text-muted-foreground"
+            className="flex size-10 shrink-0 items-center justify-center rounded-md border-[3px] border-neutral-950 bg-muted text-body font-semibold text-muted-foreground"
           >
             {item.companyName.charAt(0)}
           </div>
@@ -277,7 +277,7 @@ export function VerificationQueueManager({
 
   if (queue.length === 0) {
     return (
-      <div className="rounded-xl border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
+      <div className="rounded-[4px] border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
         Queue is empty — nothing pending review.
       </div>
     );

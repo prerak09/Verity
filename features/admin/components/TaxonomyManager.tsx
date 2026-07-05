@@ -116,7 +116,7 @@ function TaxonomyRow({
   }
 
   return (
-    <li className="flex items-center gap-3 rounded-lg border-2 border-border-subtle p-3">
+    <li className="flex items-center gap-3 rounded-lg border-[3px] border-neutral-950-subtle p-3">
       {editing ? (
         <>
           <Input value={name} onChange={(e) => setName(e.target.value)} className="flex-1" />
@@ -193,7 +193,7 @@ function TaxonomySection({
   }
 
   return (
-    <div className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-sm">
+    <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-sm">
       <h2 className="text-h4 text-foreground">{title}</h2>
       <ul className="mt-4 space-y-2">
         {items.map((item) => (

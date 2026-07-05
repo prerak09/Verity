@@ -329,7 +329,7 @@ export function TeamMembersManager({
         <InviteMemberDialog companyId={companyId} onInvited={handleInvited} />
       </div>
 
-      <div className="rounded-xl border-2 border-border bg-card shadow-brutal-sm">
+      <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card shadow-brutal-sm">
         <Table>
           <TableHeader>
             <TableRow>

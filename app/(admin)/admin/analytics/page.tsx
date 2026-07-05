@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function AdminAnalyticsPage() {
   return (
     <div className="mx-auto max-w-wide px-4 py-8 sm:px-6">
-      <h1 className="text-h1 text-foreground">Platform Analytics</h1>
+      <h1 className="font-display text-3xl font-bold text-neutral-950">Platform Analytics</h1>
       <p className="mt-1 text-body text-muted-foreground">
         Point-in-time snapshot across the whole platform.
       </p>

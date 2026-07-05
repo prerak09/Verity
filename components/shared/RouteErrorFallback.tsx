@@ -36,7 +36,7 @@ export function RouteErrorFallback({
         <AlertTriangle className="size-7 text-error-fg" strokeWidth={1.75} aria-hidden />
       </div>
       <div>
-        <h2 className="font-display text-h3 text-foreground">
+        <h2 className="font-display font-display text-xl font-bold text-neutral-950">
           Something broke on our end
         </h2>
         <p className="mt-1 max-w-sm text-body-sm text-muted-foreground">

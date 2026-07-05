@@ -65,7 +65,7 @@ export function CompanyNewsManager({
 
   return (
     <div className="space-y-4">
-      <div className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-sm">
+      <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-sm">
         <h2 className="text-h4 text-foreground">New update</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-[1fr_auto]">
           <div className="grid gap-3 sm:grid-cols-2">
@@ -116,11 +116,11 @@ export function CompanyNewsManager({
       </div>
 
       {news.length === 0 ? (
-        <div className="rounded-xl border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
+        <div className="rounded-[4px] border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
           No updates yet. Post your first one to show up on your public profile.
         </div>
       ) : (
-        <div className="rounded-xl border-2 border-border bg-card shadow-brutal-sm">
+        <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card shadow-brutal-sm">
           <ul className="divide-y divide-border-subtle">
             {news.map((item, index) => (
               <li key={item.id} className="flex items-center gap-3 p-4">

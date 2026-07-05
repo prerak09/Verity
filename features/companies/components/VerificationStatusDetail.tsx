@@ -92,7 +92,7 @@ export function VerificationStatusDetail({
 
   return (
     <div className="space-y-4">
-      <div className={`rounded-xl border-2 p-5 ${TONE_CLASSES[config.tone]}`}>
+      <div className={`rounded-[4px] border-2 p-5 ${TONE_CLASSES[config.tone]}`}>
         <div className="flex items-center gap-3">
           <Icon className="size-6 shrink-0" strokeWidth={1.75} aria-hidden />
           <div>
@@ -108,7 +108,7 @@ export function VerificationStatusDetail({
       </div>
 
       {showChecklist && (
-        <div className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-sm">
+        <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-sm">
           <h2 className="text-h4 text-foreground">What to fix</h2>
           <ul className="mt-3 space-y-2">
             {(Object.keys(FIELD_LABEL) as (keyof typeof FIELD_LABEL)[]).map((field) => {

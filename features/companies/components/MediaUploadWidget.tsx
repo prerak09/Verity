@@ -65,7 +65,7 @@ export function MediaUploadWidget({
       <div className="mt-1.5 flex items-center gap-4">
         <div
           className={cn(
-            "flex shrink-0 items-center justify-center overflow-hidden rounded-lg border-2 border-border bg-muted",
+            "flex shrink-0 items-center justify-center overflow-hidden rounded-lg border-[3px] border-neutral-950 bg-muted",
             shape === "square" ? "size-20" : "h-20 w-40",
           )}
         >
