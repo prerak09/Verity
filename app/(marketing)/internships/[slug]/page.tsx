@@ -8,7 +8,9 @@ import { RemoteChip } from "@/components/shared/RemoteChip";
 import { Button } from "@/components/ui/button";
 import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
 import { AddToTrackerButton } from "@/features/applications/components/AddToTrackerButton";
-import { MOCK_INTERNSHIP_DETAILS, MOCK_BOOKMARKS, MOCK_APPLICATIONS } from "@/components/lib/mocks";
+import { getInternshipBySlug } from "@/features/internships/queries";
+
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
@@ -16,7 +18,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const internship = MOCK_INTERNSHIP_DETAILS[slug];
+  const internship = await getInternshipBySlug(slug);
   if (!internship) return {};
   return {
     title: `${internship.title} at ${internship.companyName}`,
@@ -36,7 +38,7 @@ export default async function InternshipDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const internship = MOCK_INTERNSHIP_DETAILS[slug];
+  const internship = await getInternshipBySlug(slug);
   if (!internship) notFound();
 
   return (
@@ -57,9 +59,7 @@ export default async function InternshipDetailPage({
             <BookmarkButton
               targetType="INTERNSHIP"
               targetId={internship.id}
-              initialBookmarked={MOCK_BOOKMARKS.some(
-                (b) => b.internship?.slug === internship.slug,
-              )}
+              initialBookmarked={false}
             />
           </div>
 
@@ -140,9 +140,7 @@ export default async function InternshipDetailPage({
             </Button>
             <AddToTrackerButton
               internshipId={internship.id}
-              initialTracked={MOCK_APPLICATIONS.some(
-                (a) => a.internship.slug === internship.slug,
-              )}
+              initialTracked={false}
             />
           </div>
         </aside>

@@ -10,7 +10,9 @@ import { RemoteChip } from "@/components/shared/RemoteChip";
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
-import { MOCK_COMPANY_DETAILS, MOCK_BOOKMARKS } from "@/components/lib/mocks";
+import { getCompanyBySlug } from "@/features/companies/queries";
+
+export const dynamic = "force-dynamic";
 
 // lucide-react dropped brand/logo marks (no Github/Linkedin/Twitter icons) —
 // every link renders with this generic mark; the type label carries the ID.
@@ -33,7 +35,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const company = MOCK_COMPANY_DETAILS[slug];
+  const company = await getCompanyBySlug(slug);
   if (!company) return {};
   return {
     title: company.name,
@@ -47,7 +49,7 @@ export default async function CompanyProfilePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const company = MOCK_COMPANY_DETAILS[slug];
+  const company = await getCompanyBySlug(slug);
   if (!company) notFound();
 
   const founders = company.founders.filter((f) => !f.isHiringManager);
@@ -110,7 +112,7 @@ export default async function CompanyProfilePage({
           <BookmarkButton
             targetType="COMPANY"
             targetId={company.id}
-            initialBookmarked={MOCK_BOOKMARKS.some((b) => b.company?.slug === company.slug)}
+            initialBookmarked={false}
           />
           {company.websiteUrl && (
             <Link
