@@ -121,6 +121,7 @@ function FilterPill({
   return (
     <Link
       href={href}
+      aria-current={active ? "true" : undefined}
       className={
         active
           ? "inline-flex items-center gap-1 rounded-sm border-[3px] border-neutral-950 bg-tile-lavender px-2 py-1 text-body-sm font-medium text-brand-800 shadow-brutal-xs"
@@ -197,6 +198,7 @@ export default async function SearchPage({
           <input
             type="search"
             name="q"
+            aria-label="Search companies, categories, tech"
             defaultValue={q ?? ""}
             placeholder="Search companies, categories, tech…"
             className="w-full bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground"

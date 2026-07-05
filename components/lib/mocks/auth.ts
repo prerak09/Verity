@@ -10,18 +10,22 @@ export const MOCK_CURRENT_STUDENT: CurrentUser = {
   memberships: [],
 };
 
+// Meridian Health (PENDING, sparser profile) rather than the fully-verified
+// Ledgerly — the company portal needs to demonstrate the verification
+// banner and "incomplete profile" nudges throughout Phase 4, which a
+// fully-verified company would never show.
 export const MOCK_CURRENT_COMPANY_OWNER: CurrentUser = {
   id: "user_company_1",
   clerkId: "user_mock_company_1",
-  email: "priya@ledgerly.example.com",
-  name: "Priya Raman",
+  email: "sam@meridianhealth.example.com",
+  name: "Dr. Sam Okafor",
   avatarUrl: null,
   role: "COMPANY",
   memberships: [
     {
-      companyId: "co_ledgerly",
-      companySlug: "ledgerly",
-      companyName: "Ledgerly",
+      companyId: "co_meridian",
+      companySlug: "meridian-health",
+      companyName: "Meridian Health",
       role: "OWNER",
     },
   ],

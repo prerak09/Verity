@@ -1,0 +1,243 @@
+"use client";
+
+import { useState } from "react";
+import { toast } from "sonner";
+import { Plus, Pencil } from "lucide-react";
+
+import { createInternship, updateInternship } from "@/features/internships/actions";
+import type { FieldErrors, InternshipDetail, InternshipInput, RemotePolicy } from "@/types";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+const REMOTE_POLICIES: { value: RemotePolicy; label: string }[] = [
+  { value: "REMOTE", label: "Remote" },
+  { value: "HYBRID", label: "Hybrid" },
+  { value: "ONSITE", label: "Onsite" },
+];
+
+function Field({
+  label,
+  htmlFor,
+  error,
+  children,
+}: {
+  label: string;
+  htmlFor: string;
+  error?: string[];
+  children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <label htmlFor={htmlFor} className="text-body-sm font-medium text-foreground">
+        {label}
+      </label>
+      <div className="mt-1.5">{children}</div>
+      {error && (
+        <p role="alert" className="mt-1 text-caption text-error-fg">
+          {error[0]}
+        </p>
+      )}
+    </div>
+  );
+}
+
+/** Empty draft used for both "create" (no `internship`) and "edit" (prefilled). */
+function toFormState(internship?: InternshipDetail) {
+  return {
+    title: internship?.title ?? "",
+    description: internship?.description ?? "",
+    location: internship?.location ?? "",
+    remotePolicy: internship?.remotePolicy ?? undefined,
+    stipend: internship?.stipend ?? "",
+    duration: internship?.duration ?? "",
+    applyUrl: internship?.applyUrl ?? "",
+  };
+}
+
+export function InternshipFormDialog({
+  companyId,
+  internship,
+  onCreated,
+  onUpdated,
+}: {
+  companyId: string;
+  /** Present → edit an existing listing; absent → create a new (DRAFT) one. */
+  internship?: InternshipDetail;
+  onCreated?: (input: InternshipInput, result: { id: string; slug: string }) => void;
+  onUpdated?: (result: InternshipDetail) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [form, setForm] = useState(() => toFormState(internship));
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  const [pending, setPending] = useState(false);
+
+  function reset() {
+    setForm(toFormState(internship));
+    setFieldErrors({});
+  }
+
+  async function handleSubmit() {
+    setPending(true);
+    setFieldErrors({});
+
+    const input: InternshipInput = {
+      title: form.title,
+      description: form.description,
+      location: form.location || undefined,
+      remotePolicy: form.remotePolicy,
+      stipend: form.stipend || undefined,
+      duration: form.duration || undefined,
+      applyUrl: form.applyUrl,
+    };
+
+    const result = internship
+      ? await updateInternship(internship.id, input)
+      : await createInternship(companyId, input);
+
+    setPending(false);
+
+    if (result.success) {
+      toast.success(internship ? "Listing updated." : "Listing created as a draft.");
+      if (internship) {
+        onUpdated?.(result.data as InternshipDetail);
+      } else {
+        onCreated?.(input, result.data as { id: string; slug: string });
+      }
+      setOpen(false);
+    } else {
+      if (result.error.fieldErrors) setFieldErrors(result.error.fieldErrors);
+      toast.error(result.error.message);
+    }
+  }
+
+  return (
+    <Dialog
+      open={open}
+      onOpenChange={(next) => {
+        setOpen(next);
+        if (next) reset();
+      }}
+    >
+      <DialogTrigger
+        render={
+          <Button type="button" size={internship ? "icon-sm" : "sm"} variant={internship ? "ghost" : "outline"} />
+        }
+      >
+        {internship ? (
+          <>
+            <Pencil className="size-4" aria-hidden />
+            <span className="sr-only">Edit {internship.title}</span>
+          </>
+        ) : (
+          <>
+            <Plus className="size-4" aria-hidden />
+            New internship
+          </>
+        )}
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-lg">
+        <DialogHeader>
+          <DialogTitle>{internship ? "Edit internship" : "New internship"}</DialogTitle>
+        </DialogHeader>
+
+        <div className="space-y-3">
+          <Field label="Title" htmlFor="title" error={fieldErrors.title}>
+            <Input
+              id="title"
+              value={form.title}
+              onChange={(e) => setForm((f) => ({ ...f, title: e.target.value }))}
+            />
+          </Field>
+          <Field label="Description" htmlFor="description" error={fieldErrors.description}>
+            <Textarea
+              id="description"
+              rows={4}
+              value={form.description}
+              onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))}
+            />
+          </Field>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Field label="Location" htmlFor="location" error={fieldErrors.location}>
+              <Input
+                id="location"
+                value={form.location}
+                onChange={(e) => setForm((f) => ({ ...f, location: e.target.value }))}
+              />
+            </Field>
+            <Field label="Remote policy" htmlFor="remotePolicy" error={fieldErrors.remotePolicy}>
+              <Select
+                value={form.remotePolicy}
+                onValueChange={(v) => setForm((f) => ({ ...f, remotePolicy: v as RemotePolicy }))}
+              >
+                <SelectTrigger id="remotePolicy" className="w-full">
+                  <SelectValue>
+                    {(v: RemotePolicy) =>
+                      REMOTE_POLICIES.find((r) => r.value === v)?.label ?? "Select…"
+                    }
+                  </SelectValue>
+                </SelectTrigger>
+                <SelectContent>
+                  {REMOTE_POLICIES.map((r) => (
+                    <SelectItem key={r.value} value={r.value}>
+                      {r.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </Field>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Field label="Stipend" htmlFor="stipend" error={fieldErrors.stipend}>
+              <Input
+                id="stipend"
+                placeholder="$3,000/mo"
+                value={form.stipend}
+                onChange={(e) => setForm((f) => ({ ...f, stipend: e.target.value }))}
+              />
+            </Field>
+            <Field label="Duration" htmlFor="duration" error={fieldErrors.duration}>
+              <Input
+                id="duration"
+                placeholder="12 weeks (Summer)"
+                value={form.duration}
+                onChange={(e) => setForm((f) => ({ ...f, duration: e.target.value }))}
+              />
+            </Field>
+          </div>
+          <Field label="Apply URL" htmlFor="applyUrl" error={fieldErrors.applyUrl}>
+            <Input
+              id="applyUrl"
+              placeholder="https://example.com/careers/…"
+              value={form.applyUrl}
+              onChange={(e) => setForm((f) => ({ ...f, applyUrl: e.target.value }))}
+            />
+          </Field>
+        </div>
+
+        <DialogFooter>
+          <DialogClose render={<Button type="button" variant="outline" />}>Cancel</DialogClose>
+          <Button type="button" onClick={handleSubmit} disabled={pending}>
+            {internship ? "Save changes" : "Create draft"}
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+}

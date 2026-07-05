@@ -30,10 +30,15 @@ const MOCK_CURRENT_USER: CurrentUser = {
   memberships:
     MOCK_ROLE === "COMPANY"
       ? [
+          // Kept in sync with components/lib/mocks/auth.ts's
+          // MOCK_CURRENT_COMPANY_OWNER — both need to point at the same
+          // company or assertCan()'s ownership check fails with a real
+          // (correct) FORBIDDEN, not a bug, just a mismatch between the
+          // two mock "current user" sources.
           {
-            companyId: "co_ledgerly",
-            companySlug: "ledgerly",
-            companyName: "Ledgerly",
+            companyId: "co_meridian",
+            companySlug: "meridian-health",
+            companyName: "Meridian Health",
             role: "OWNER",
           },
         ]
