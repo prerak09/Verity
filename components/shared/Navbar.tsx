@@ -101,7 +101,7 @@ export function Navbar({
             </div>
 
             <Dialog open={marketingMenuOpen} onOpenChange={setMarketingMenuOpen}>
-              <DialogContent className="border-2 border-border shadow-brutal-md sm:hidden">
+              <DialogContent className="border-[3px] border-neutral-950 shadow-brutal-md sm:hidden">
                 <nav className="flex flex-col gap-1">
                   {links.map((link) => (
                     <Link

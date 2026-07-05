@@ -102,7 +102,7 @@ export default function StudentDashboardPage() {
             <Link
               key={category.id}
               href={`/search?category=${category.slug}`}
-              className="shrink-0 rounded-sm border-2 border-border bg-muted px-3 py-1.5 text-body-sm font-medium text-foreground hover:border-brand-600"
+              className="shrink-0 rounded-sm border-[3px] border-neutral-950 bg-muted px-3 py-1.5 text-body-sm font-medium text-foreground hover:border-brand-600"
             >
               {category.name}
             </Link>
@@ -189,7 +189,7 @@ export default function StudentDashboardPage() {
             <Link
               key={status}
               href="/applications"
-              className="rounded-lg border-2 border-border bg-card p-3 text-center shadow-brutal-xs hover:bg-muted"
+              className="rounded-lg border-[3px] border-neutral-950 bg-card p-3 text-center shadow-brutal-xs hover:bg-muted"
             >
               <p className="font-display text-h3 tabular text-foreground">{count}</p>
               <p className="mt-0.5 text-caption text-muted-foreground">

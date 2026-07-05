@@ -22,7 +22,7 @@ export function RemoteChip({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1 rounded-sm border-2 border-border bg-transparent px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-foreground",
+        "inline-flex items-center gap-1 rounded-sm border-[3px] border-neutral-950 bg-transparent px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-foreground",
         className,
       )}
     >

@@ -35,16 +35,16 @@ export function NavItem({ href, icon, label, count, exact }: NavItemProps) {
       href={href}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "group flex h-10 items-center gap-2.5 rounded-md px-3 text-sm font-medium transition-colors",
+        "group flex h-10 items-center gap-2.5 rounded-[3px] px-3 font-mono text-sm font-bold transition-colors",
         active
-          ? "border-2 border-border bg-brand-50 text-brand-800 shadow-brutal-xs"
-          : "border-2 border-transparent text-muted-foreground hover:bg-muted hover:text-foreground",
+          ? "border-2 border-neutral-950 bg-tile-lavender text-neutral-950 [box-shadow:2px_2px_0_0_var(--color-neutral-950)]"
+          : "border-2 border-transparent text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-950",
       )}
     >
       {icon}
       <span className="flex-1 truncate">{label}</span>
       {count != null && count > 0 && (
-        <span className="rounded-sm border-2 border-border bg-background px-1.5 text-[0.6875rem] font-bold tabular-nums">
+        <span className="rounded-[3px] border-2 border-neutral-950 bg-lime px-1.5 text-[0.6875rem] font-bold tabular-nums">
           {count}
         </span>
       )}

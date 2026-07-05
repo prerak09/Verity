@@ -1,3 +1,5 @@
+import { Minus, Square, X } from "lucide-react";
+
 import { cn } from "@/components/lib/utils";
 
 /**
@@ -22,9 +24,9 @@ export function WindowChrome({
       <div className={cn("retro-titlebar", titlebarClassName)}>
         <span className="truncate">{title}</span>
         <span className="flex items-center gap-1.5" aria-hidden>
-          <span className="retro-winbtn">–</span>
-          <span className="retro-winbtn">▢</span>
-          <span className="retro-winbtn">✕</span>
+          <span className="retro-winbtn"><Minus className="size-3" strokeWidth={3} /></span>
+          <span className="retro-winbtn"><Square className="size-2.5" strokeWidth={3} /></span>
+          <span className="retro-winbtn"><X className="size-3" strokeWidth={3} /></span>
         </span>
       </div>
       <div className={cn("p-4", bodyClassName)}>{children}</div>

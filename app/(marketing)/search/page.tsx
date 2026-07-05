@@ -123,7 +123,7 @@ function FilterPill({
       href={href}
       className={
         active
-          ? "inline-flex items-center gap-1 rounded-sm border-2 border-border bg-brand-50 px-2 py-1 text-body-sm font-medium text-brand-800 shadow-brutal-xs"
+          ? "inline-flex items-center gap-1 rounded-sm border-[3px] border-neutral-950 bg-tile-lavender px-2 py-1 text-body-sm font-medium text-brand-800 shadow-brutal-xs"
           : "inline-flex items-center gap-1 rounded-sm border-2 border-transparent bg-muted px-2 py-1 text-body-sm font-medium text-foreground hover:border-border"
       }
     >
@@ -192,7 +192,7 @@ export default async function SearchPage({
   return (
     <div className="mx-auto max-w-wide px-4 py-10 sm:px-6">
       <form action="/search" method="get" className="max-w-lg">
-        <div className="flex h-11 items-center gap-2 rounded-md border-2 border-border bg-card px-3 shadow-brutal-xs">
+        <div className="flex h-11 items-center gap-2 rounded-md border-[3px] border-neutral-950 bg-card px-3 shadow-brutal-xs">
           <Search className="size-4 shrink-0 text-muted-foreground" aria-hidden />
           <input
             type="search"

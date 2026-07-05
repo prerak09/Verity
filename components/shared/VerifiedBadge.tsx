@@ -34,14 +34,11 @@ export function VerifiedBadge({
       aria-label={label}
       title={label}
       className={cn(
-        "inline-flex shrink-0 items-center justify-center rounded-md border-2 shadow-brutal-xs",
+        "inline-flex shrink-0 items-center justify-center rounded-full border-2 border-neutral-950",
         size === "sm" ? "size-5" : "size-6",
         className,
       )}
-      style={{
-        background: "var(--verified-fill)",
-        borderColor: "var(--verified-ring)",
-      }}
+      style={{ background: "#7C3AED" }}
     >
       <BadgeCheck
         className={size === "sm" ? "size-3 text-white" : "size-3.5 text-white"}

@@ -13,13 +13,13 @@ export function DashboardSection({
   return (
     <section>
       <div className="flex items-center justify-between">
-        <h2 className="text-h3 text-foreground">{title}</h2>
+        <h2 className="font-display text-xl font-bold text-neutral-950">{title}</h2>
         {viewAllHref && (
           <Link
             href={viewAllHref}
-            className="text-body-sm font-medium text-foreground hover:underline"
+            className="font-mono text-sm font-bold text-primary hover:underline underline-offset-4"
           >
-            View all
+            View all →
           </Link>
         )}
       </div>

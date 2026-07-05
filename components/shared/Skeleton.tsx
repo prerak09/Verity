@@ -10,7 +10,7 @@ export function Skeleton({ className }: { className?: string }) {
     <div
       aria-hidden
       className={cn(
-        "animate-shimmer rounded-md border-2 border-border-subtle bg-muted bg-[length:200%_100%] motion-reduce:animate-none",
+        "animate-shimmer rounded-md border-[3px] border-neutral-950-subtle bg-muted bg-[length:200%_100%] motion-reduce:animate-none",
         className,
       )}
       style={{
@@ -24,7 +24,7 @@ export function Skeleton({ className }: { className?: string }) {
 /** Matches CompanyCard's composite dimensions (doc §14.3 / §12.2). */
 export function CompanyCardSkeleton() {
   return (
-    <div className="flex gap-4 rounded-xl border-2 border-border p-4 shadow-brutal-md">
+    <div className="flex gap-4 rounded-xl border-[3px] border-neutral-950 p-4 shadow-brutal-md">
       <Skeleton className="size-14 shrink-0" />
       <div className="flex-1 space-y-2">
         <Skeleton className="h-4 w-1/2" />
@@ -62,7 +62,7 @@ export function TableSkeleton({
 /** Big-number KPI card skeleton (doc §14.3). */
 export function KpiCardSkeleton() {
   return (
-    <div className="space-y-2 rounded-xl border-2 border-border p-4 shadow-brutal-sm">
+    <div className="space-y-2 rounded-xl border-[3px] border-neutral-950 p-4 shadow-brutal-sm">
       <Skeleton className="h-3 w-16" />
       <Skeleton className="h-8 w-24" />
     </div>

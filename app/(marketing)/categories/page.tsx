@@ -45,8 +45,8 @@ export default function CategoriesPage() {
   return (
     <div className="mx-auto max-w-wide px-4 py-12 sm:px-6">
       <div className="max-w-2xl">
-        <p className="text-overline text-brand-700">BROWSE</p>
-        <h1 className="mt-2 text-h1 text-foreground">Categories</h1>
+        <span className="retro-eyebrow">Browse</span>
+        <h1 className="mt-4 font-display text-4xl font-bold text-neutral-950">Categories</h1>
         <p className="mt-2 text-body text-muted-foreground">
           Find verified companies by the space they work in.
         </p>
@@ -60,9 +60,9 @@ export default function CategoriesPage() {
             <Link
               key={category.id}
               href={`/search?category=${category.slug}`}
-              className="group rounded-xl border-2 border-border bg-card p-5 shadow-brutal-md transition-[transform,box-shadow] duration-150 hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-brutal-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="group rounded-xl border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-md transition-[transform,box-shadow] duration-150 hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-brutal-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              <div className="flex size-11 items-center justify-center rounded-lg border-2 border-border bg-brand-50">
+              <div className="flex size-11 items-center justify-center rounded-lg border-[3px] border-neutral-950 bg-tile-lavender">
                 <Icon className="size-5 text-brand-700" strokeWidth={1.75} aria-hidden />
               </div>
               <p className="mt-4 font-display text-h4 text-foreground">

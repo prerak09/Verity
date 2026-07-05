@@ -27,14 +27,14 @@ export function InternshipCard({
   return (
     <div
       className={cn(
-        "group relative flex gap-4 rounded-xl border-2 border-border bg-card p-4 shadow-brutal-md transition-[transform,box-shadow] duration-150 hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-brutal-lg",
+        "retro-card retro-hover group relative flex gap-4 p-4",
         archived && "opacity-70 grayscale-[35%]",
         className,
       )}
     >
       <Link
         href={`/internships/${internship.slug}`}
-        className="absolute inset-0 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        className="absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
         <span className="sr-only">View {internship.title}</span>
       </Link>
@@ -45,23 +45,23 @@ export function InternshipCard({
             <Image
               src={internship.companyLogoUrl}
               alt=""
-              width={48}
-              height={48}
-              className="size-12 shrink-0 rounded-md border-2 border-border object-cover"
+              width={52}
+              height={52}
+              className="size-12 shrink-0 rounded-[3px] border-[3px] border-neutral-950 object-cover"
             />
           ) : (
             <div
               aria-hidden
-              className="flex size-12 shrink-0 items-center justify-center rounded-md border-2 border-border bg-muted text-muted-foreground"
+              className="flex size-12 shrink-0 items-center justify-center rounded-[3px] border-[3px] border-neutral-950 bg-tile-blue text-neutral-950"
             >
-              <Briefcase className="size-5" strokeWidth={1.75} />
+              <Briefcase className="size-5" strokeWidth={2} />
             </div>
           )}
         </>
       )}
 
       <div className="min-w-0 flex-1">
-        <h3 className="truncate font-display text-base font-semibold text-foreground">
+        <h3 className="truncate font-display text-base font-bold text-neutral-950">
           {internship.title}
         </h3>
         {!hideCompany && (
@@ -79,7 +79,7 @@ export function InternshipCard({
           {archived ? (
             // Bookmark/tracker entries persist after a company archives the
             // role — never silently break the link, always say so (doc §23).
-            <span className="inline-flex items-center rounded-sm border-2 border-border bg-muted px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-muted-foreground">
+            <span className="inline-flex items-center rounded-sm border-[3px] border-neutral-950 bg-muted px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-muted-foreground">
               No longer open
             </span>
           ) : (

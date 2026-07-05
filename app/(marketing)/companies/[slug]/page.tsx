@@ -63,13 +63,13 @@ export default async function CompanyProfilePage({
             alt=""
             width={80}
             height={80}
-            className="size-20 shrink-0 rounded-xl border-2 border-border object-cover"
+            className="size-20 shrink-0 rounded-xl border-[3px] border-neutral-950 object-cover"
             priority
           />
         ) : (
           <div
             aria-hidden
-            className="flex size-20 shrink-0 items-center justify-center rounded-xl border-2 border-border bg-muted font-display text-2xl font-semibold text-muted-foreground"
+            className="flex size-20 shrink-0 items-center justify-center rounded-xl border-[3px] border-neutral-950 bg-muted font-display text-2xl font-semibold text-muted-foreground"
           >
             {company.name.charAt(0).toUpperCase()}
           </div>
@@ -91,7 +91,7 @@ export default async function CompanyProfilePage({
             {company.categories.map((c) => (
               <span
                 key={c.id}
-                className="inline-flex items-center rounded-sm border-2 border-border bg-transparent px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-foreground"
+                className="inline-flex items-center rounded-sm border-[3px] border-neutral-950 bg-transparent px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-foreground"
               >
                 {c.name}
               </span>
@@ -117,7 +117,7 @@ export default async function CompanyProfilePage({
               href={company.websiteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-9 items-center gap-1.5 rounded-lg border-2 border-border bg-card px-3 text-sm font-medium text-foreground shadow-brutal-xs transition-colors hover:bg-muted"
+              className="inline-flex h-9 items-center gap-1.5 rounded-lg border-[3px] border-neutral-950 bg-card px-3 text-sm font-medium text-foreground shadow-brutal-xs transition-colors hover:bg-muted"
             >
               <Globe className="size-4" aria-hidden />
               Website
@@ -146,7 +146,7 @@ export default async function CompanyProfilePage({
                 {company.technologies.map((t) => (
                   <span
                     key={t.id}
-                    className="rounded-sm border-2 border-border bg-muted px-2 py-1 text-body-sm font-medium text-foreground"
+                    className="rounded-sm border-[3px] border-neutral-950 bg-muted px-2 py-1 text-body-sm font-medium text-foreground"
                   >
                     {t.name}
                   </span>
@@ -225,7 +225,7 @@ export default async function CompanyProfilePage({
                   <li key={f.id} className="flex items-center gap-3">
                     <div
                       aria-hidden
-                      className="flex size-9 shrink-0 items-center justify-center rounded-md border-2 border-border bg-muted text-sm font-semibold text-muted-foreground"
+                      className="flex size-9 shrink-0 items-center justify-center rounded-md border-[3px] border-neutral-950 bg-muted text-sm font-semibold text-muted-foreground"
                     >
                       {f.name.charAt(0)}
                     </div>
@@ -266,7 +266,7 @@ export default async function CompanyProfilePage({
                   <li key={f.id} className="flex items-center gap-3">
                     <div
                       aria-hidden
-                      className="flex size-9 shrink-0 items-center justify-center rounded-md border-2 border-border bg-muted text-sm font-semibold text-muted-foreground"
+                      className="flex size-9 shrink-0 items-center justify-center rounded-md border-[3px] border-neutral-950 bg-muted text-sm font-semibold text-muted-foreground"
                     >
                       {f.name.charAt(0)}
                     </div>

@@ -23,14 +23,11 @@ export function CompanyCard({
 }) {
   return (
     <div
-      className={cn(
-        "group relative flex gap-4 rounded-xl border-2 border-border bg-card p-4 shadow-brutal-md transition-[transform,box-shadow] duration-150 hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-brutal-lg",
-        className,
-      )}
+      className={cn("retro-card retro-hover group relative flex gap-4 p-4", className)}
     >
       <Link
         href={`/companies/${company.slug}`}
-        className="absolute inset-0 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        className="absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
         <span className="sr-only">View {company.name}</span>
       </Link>
@@ -39,14 +36,14 @@ export function CompanyCard({
         <Image
           src={company.logoUrl}
           alt=""
-          width={56}
-          height={56}
-          className="size-14 shrink-0 rounded-md border-2 border-border object-cover"
+          width={64}
+          height={64}
+          className="size-16 shrink-0 rounded-[3px] border-[3px] border-neutral-950 object-cover"
         />
       ) : (
         <div
           aria-hidden
-          className="flex size-14 shrink-0 items-center justify-center rounded-md border-2 border-border bg-muted font-display text-lg font-semibold text-muted-foreground"
+          className="flex size-16 shrink-0 items-center justify-center rounded-[3px] border-[3px] border-neutral-950 bg-tile-lavender font-display text-2xl font-bold text-neutral-950"
         >
           {company.name.charAt(0).toUpperCase()}
         </div>
@@ -54,24 +51,29 @@ export function CompanyCard({
 
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-2">
-          <h3 className="truncate font-display text-base font-semibold text-foreground">
+          <h3 className="truncate font-display text-lg font-bold text-neutral-950">
             {company.name}
           </h3>
           {company.verified && <VerifiedBadge size="sm" />}
+          {company.openInternshipCount > 0 && (
+            <span className="ml-auto hidden items-center rounded-[3px] border-2 border-neutral-950 bg-lime px-2 py-0.5 font-mono text-[0.6875rem] font-bold text-neutral-950 sm:inline-flex">
+              {company.openInternshipCount} Hiring
+            </span>
+          )}
         </div>
         {company.tagline && (
-          <p className="mt-0.5 line-clamp-1 text-body-sm text-muted-foreground">
+          <p className="mt-1 line-clamp-2 font-mono text-sm text-neutral-700">
             {company.tagline}
           </p>
         )}
-        <div className="mt-2 flex flex-wrap items-center gap-2">
-          {company.fundingStage && <FundingChip stage={company.fundingStage} />}
-          {company.remotePolicy && <RemoteChip policy={company.remotePolicy} />}
-          {company.openInternshipCount > 0 && (
-            <span className="text-[0.6875rem] font-bold uppercase tracking-wide text-success-fg">
-              {company.openInternshipCount} open
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          {company.categories?.[0] && (
+            <span className="inline-flex items-center rounded-[3px] border-2 border-neutral-950 bg-card px-2 py-0.5 font-mono text-[0.6875rem] font-bold text-neutral-800">
+              {company.categories[0].name}
             </span>
           )}
+          {company.fundingStage && <FundingChip stage={company.fundingStage} />}
+          {company.remotePolicy && <RemoteChip policy={company.remotePolicy} />}
         </div>
       </div>
 

@@ -17,17 +17,17 @@ const LINKS = [
  */
 export default function UnauthorizedPage() {
   return (
-    <div className="flex min-h-full flex-1 flex-col items-center justify-center gap-8 bg-muted px-4 py-16 text-center">
+    <div className="flex min-h-full flex-1 flex-col items-center justify-center gap-8 px-4 py-16 text-center">
       <Logo />
-      <div className="flex flex-col items-center gap-4">
-        <div className="flex size-14 items-center justify-center rounded-xl border-2 border-warning-border bg-warning-bg shadow-brutal-sm">
-          <ShieldAlert className="size-7 text-warning-fg" strokeWidth={1.75} aria-hidden />
+      <div className="retro-card flex max-w-md flex-col items-center gap-4 p-8">
+        <div className="flex size-16 items-center justify-center rounded-[3px] border-[3px] border-neutral-950 bg-tile-yellow [box-shadow:3px_3px_0_0_var(--color-neutral-950)]">
+          <ShieldAlert className="size-8 text-neutral-950" strokeWidth={2} aria-hidden />
         </div>
         <div>
-          <h1 className="font-display text-h3 text-foreground">
+          <h1 className="font-display text-2xl font-bold text-neutral-950">
             Wrong portal for this account
           </h1>
-          <p className="mt-1 max-w-sm text-body-sm text-muted-foreground">
+          <p className="mt-2 max-w-sm font-mono text-sm text-neutral-700">
             Your account doesn&apos;t have access to that page. Here&apos;s where
             you can go instead.
           </p>

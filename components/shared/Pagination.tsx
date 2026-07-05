@@ -88,7 +88,7 @@ function PageLink({
   const base = cn(
     "flex h-9 min-w-9 items-center justify-center rounded-md px-2 text-sm font-medium tabular-nums transition-colors",
     active
-      ? "border-2 border-border bg-brand-50 text-brand-800 shadow-brutal-xs"
+      ? "border-[3px] border-neutral-950 bg-tile-lavender text-brand-800 shadow-brutal-xs"
       : "border-2 border-transparent text-muted-foreground hover:bg-muted hover:text-foreground",
     disabled && "pointer-events-none opacity-40",
   );

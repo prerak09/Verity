@@ -36,9 +36,9 @@ export default async function InternshipsListPage({
   return (
     <div className="mx-auto max-w-wide px-4 py-12 sm:px-6">
       <div className="max-w-2xl">
-        <p className="text-overline text-brand-700">OPEN ROLES</p>
-        <h1 className="mt-2 text-h1 text-foreground">Internships</h1>
-        <p className="mt-2 text-body text-muted-foreground">
+        <span className="retro-eyebrow">Open Roles</span>
+        <h1 className="mt-4 font-display text-4xl font-bold text-neutral-950">Internships</h1>
+        <p className="mt-2 font-mono text-sm text-neutral-700">
           {totalCount} open internships from verified companies.
         </p>
       </div>
