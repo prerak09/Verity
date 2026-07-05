@@ -1,13 +1,11 @@
 import Link from "next/link";
-import { BadgeCheck } from "lucide-react";
+import { Asterisk } from "lucide-react";
 
 import { cn } from "@/components/lib/utils";
 
 /**
- * The wordmark lockup (doc §2.1): the mark *is* a verified badge — brand and
- * trust signal are the same object by design (principle P5). Never recolor
- * the glyph square; it borrows the reserved --verified-fill/--verified-ring
- * pair, not the brand scale.
+ * Retro-rebrand wordmark: lime square + asterisk mark, bold tracked-tight
+ * uppercase mono wordmark.
  */
 export function Logo({
   href = "/",
@@ -28,18 +26,14 @@ export function Logo({
     >
       <span
         aria-hidden
-        className="inline-flex size-7 shrink-0 items-center justify-center rounded-md border-2 shadow-brutal-xs"
-        style={{
-          background: "var(--verified-fill)",
-          borderColor: "var(--verified-ring)",
-        }}
+        className="inline-flex size-7 shrink-0 items-center justify-center rounded-md border-2 border-border bg-butter-300 shadow-brutal-xs"
       >
-        <BadgeCheck className="size-4 text-white" strokeWidth={3} />
+        <Asterisk className="size-4 text-foreground" strokeWidth={3} />
       </span>
       {iconOnly ? (
         <span className="sr-only">Verity</span>
       ) : (
-        <span className="font-display text-lg font-extrabold tracking-[-0.02em] text-foreground">
+        <span className="font-display text-lg font-bold tracking-[-0.01em] text-foreground uppercase">
           Verity
         </span>
       )}

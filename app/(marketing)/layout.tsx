@@ -2,9 +2,12 @@ import { Navbar } from "@/components/shared/Navbar";
 import { Logo } from "@/components/shared/Logo";
 
 const NAV_LINKS = [
-  { href: "/companies", label: "Companies" },
-  { href: "/internships", label: "Internships" },
-  { href: "/categories", label: "Categories" },
+  { href: "/", label: "Product" },
+  { href: "/companies", label: "Browse Startups" },
+  { href: "/internships", label: "Career" },
+  { href: "/companies", label: "Users" },
+  { href: "/categories", label: "Resources" },
+  { href: "/companies", label: "Pricing" },
 ];
 
 export default function MarketingLayout({
