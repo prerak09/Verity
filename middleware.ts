@@ -61,8 +61,12 @@ function roleFromClaims(sessionClaims: unknown): PlatformRole | null {
 // without real Clerk credentials. MOCK_AUTH lets local dev skip Clerk
 // entirely and pair with lib/auth.ts's mock CurrentUser. Gated on NODE_ENV so
 // a stray env var can never disable auth in a deployed environment.
+// DEMO_MODE explicitly opts a deployed preview into the mock bypass (no Clerk
+// needed) so the retro UI is publicly browsable without credentials. Normal
+// prod deploys leave it unset and require real Clerk auth.
 const MOCK_AUTH =
-  process.env.MOCK_AUTH === "true" && process.env.NODE_ENV !== "production";
+  (process.env.MOCK_AUTH === "true" && process.env.NODE_ENV !== "production") ||
+  process.env.NEXT_PUBLIC_DEMO_MODE === "true";
 
 const withClerk = clerkMiddleware(async (auth, req) => {
   if (isPublicRoute(req)) return NextResponse.next();

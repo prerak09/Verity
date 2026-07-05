@@ -17,9 +17,10 @@ import {
 // so it can never activate in a deployed environment. MOCK_AUTH_ROLE picks
 // which portal's session to simulate.
 const MOCK_AUTH =
-  process.env.MOCK_AUTH === "true" && process.env.NODE_ENV !== "production";
+  (process.env.MOCK_AUTH === "true" && process.env.NODE_ENV !== "production") ||
+  process.env.NEXT_PUBLIC_DEMO_MODE === "true";
 const MOCK_ROLE: PlatformRole =
-  (process.env.MOCK_AUTH_ROLE as PlatformRole | undefined) ?? "STUDENT";
+  (process.env.MOCK_AUTH_ROLE as PlatformRole | undefined) ?? "ADMIN";
 const MOCK_CURRENT_USER: CurrentUser = {
   id: "mock_user_1",
   clerkId: "mock_clerk_1",

@@ -39,28 +39,38 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Demo mode runs the public preview without a real Clerk project, so we skip
+  // ClerkProvider entirely (auth is mocked in middleware + lib/auth.ts).
+  const demoMode = process.env.NEXT_PUBLIC_DEMO_MODE === "true";
+
+  const tree = (
+    <html
+      lang="en"
+      className={`${displayFace.variable} ${monoBody.variable} ${pixelFace.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          forcedTheme="light"
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+
+  if (demoMode) return tree;
+
   return (
     <ClerkProvider
       signInUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL}
       signUpUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL}
     >
-      <html
-        lang="en"
-        className={`${displayFace.variable} ${monoBody.variable} ${pixelFace.variable} h-full antialiased`}
-        suppressHydrationWarning
-      >
-        <body className="min-h-full flex flex-col">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem={false}
-            forcedTheme="light"
-          >
-            {children}
-            <Toaster />
-          </ThemeProvider>
-        </body>
-      </html>
+      {tree}
     </ClerkProvider>
   );
 }
