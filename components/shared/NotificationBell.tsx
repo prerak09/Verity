@@ -46,7 +46,10 @@ function NotificationRow({
       <div className="flex items-start justify-between gap-2">
         <p className="text-body-sm font-medium text-foreground">{notification.title}</p>
         {!notification.read && (
-          <span aria-hidden className="mt-1 size-2 shrink-0 rounded-full bg-primary" />
+          <span className="mt-0.5 inline-flex shrink-0 items-center gap-1 text-caption font-medium text-primary">
+            <span aria-hidden className="size-2 rounded-full bg-primary" />
+            Unread
+          </span>
         )}
       </div>
       <p className="mt-0.5 text-body-sm text-muted-foreground">{notification.body}</p>

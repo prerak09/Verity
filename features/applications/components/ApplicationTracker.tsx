@@ -104,6 +104,7 @@ function ApplicationCard({
         onBlur={() => {
           if (notes !== (app.notes ?? "")) onNotesChange(notes);
         }}
+        aria-label={`Private note for ${app.internship.title} at ${app.internship.companyName}`}
         placeholder="Add a private note…"
         rows={2}
         className="mt-2 text-caption"
