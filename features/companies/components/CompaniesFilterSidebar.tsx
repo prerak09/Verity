@@ -1,7 +1,8 @@
 "use client";
 
+import { useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { SlidersHorizontal, RotateCcw } from "lucide-react";
+import { SlidersHorizontal, RotateCcw, Loader2 } from "lucide-react";
 
 import type { FundingStage, TaxonomyRef } from "@/types";
 import { cn } from "@/components/lib/utils";
@@ -59,6 +60,7 @@ export function CompaniesFilterSidebar({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const [isPending, startTransition] = useTransition();
 
   const category = searchParams.get("category");
   const location = searchParams.get("location");
@@ -70,7 +72,8 @@ export function CompaniesFilterSidebar({
     else params.delete(key);
     params.delete("page");
     const qs = params.toString();
-    router.push(qs ? `${pathname}?${qs}` : pathname);
+    const href = qs ? `${pathname}?${qs}` : pathname;
+    startTransition(() => router.push(href));
   }
 
   function clearAll() {
@@ -80,7 +83,8 @@ export function CompaniesFilterSidebar({
     }
     params.delete("page");
     const qs = params.toString();
-    router.push(qs ? `${pathname}?${qs}` : pathname);
+    const href = qs ? `${pathname}?${qs}` : pathname;
+    startTransition(() => router.push(href));
   }
 
   const hasActiveFilters = Boolean(
@@ -90,10 +94,15 @@ export function CompaniesFilterSidebar({
   return (
     <aside className="retro-card space-y-4 p-4 lg:sticky lg:top-24 lg:self-start">
       <div className="flex items-center gap-2 border-b-2 border-neutral-950/10 pb-3 font-mono text-sm font-bold uppercase tracking-[0.06em] text-neutral-950">
-        <SlidersHorizontal className="size-4" aria-hidden />
+        {isPending ? (
+          <Loader2 className="size-4 animate-spin" aria-hidden />
+        ) : (
+          <SlidersHorizontal className="size-4" aria-hidden />
+        )}
         Filters
       </div>
 
+      <div className={cn("space-y-4 transition-opacity", isPending && "pointer-events-none opacity-60")}>
       <FilterSection title="Industry">
         <CheckboxRow label="All Industries" checked={!category} onChange={() => updateParam("category", null)} />
         {categories.map((c) => (
@@ -129,6 +138,7 @@ export function CompaniesFilterSidebar({
           />
         ))}
       </FilterSection>
+      </div>
 
       {hasActiveFilters && (
         <button

@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { Search, LayoutGrid, List } from "lucide-react";
+import { Search, LayoutGrid, List, Loader2 } from "lucide-react";
 
 import {
   Select,
@@ -33,6 +33,7 @@ export function CompaniesFilterBar({ view }: { view: "grid" | "list" }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const [isPending, startTransition] = useTransition();
 
   const [q, setQ] = useState(searchParams.get("q") ?? "");
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -51,7 +52,8 @@ export function CompaniesFilterBar({ view }: { view: "grid" | "list" }) {
     }
     params.delete("page");
     const qs = params.toString();
-    router.push(qs ? `${pathname}?${qs}` : pathname);
+    const href = qs ? `${pathname}?${qs}` : pathname;
+    startTransition(() => router.push(href));
   }
 
   function handleSearchChange(value: string) {
@@ -80,10 +82,14 @@ export function CompaniesFilterBar({ view }: { view: "grid" | "list" }) {
   const sort = searchParams.get("sort") ?? "relevance";
 
   return (
-    <div className="mt-8 space-y-4">
+    <div className={cn("mt-8 space-y-4 transition-opacity", isPending && "opacity-70")}>
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <div className="flex h-11 min-w-[240px] flex-1 items-center gap-2 rounded-md border-[3px] border-neutral-950 bg-card px-3 shadow-brutal-xs">
-          <Search className="size-4 shrink-0 text-muted-foreground" aria-hidden />
+          {isPending ? (
+            <Loader2 className="size-4 shrink-0 animate-spin text-muted-foreground" aria-hidden />
+          ) : (
+            <Search className="size-4 shrink-0 text-muted-foreground" aria-hidden />
+          )}
           <input
             type="search"
             aria-label="Search startups, keywords, or industries"

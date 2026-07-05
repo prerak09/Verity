@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { Search, SlidersHorizontal } from "lucide-react";
+import { Search, SlidersHorizontal, Loader2 } from "lucide-react";
 
 import {
   Select,
@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/components/lib/utils";
 import type { JobType, RemotePolicy } from "@/types";
 
 const ALL = "all";
@@ -42,6 +43,7 @@ export function InternshipsFilterBar({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const [isPending, startTransition] = useTransition();
 
   const [q, setQ] = useState(searchParams.get("q") ?? "");
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -62,7 +64,8 @@ export function InternshipsFilterBar({
     }
     params.delete("page");
     const qs = params.toString();
-    router.push(qs ? `${pathname}?${qs}` : pathname);
+    const href = qs ? `${pathname}?${qs}` : pathname;
+    startTransition(() => router.push(href));
   }
 
   function handleSearchChange(value: string) {
@@ -77,9 +80,18 @@ export function InternshipsFilterBar({
   const remotePolicy = searchParams.get("remotePolicy") ?? ALL;
 
   return (
-    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+    <div
+      className={cn(
+        "mt-8 flex flex-col gap-3 transition-opacity sm:flex-row sm:flex-wrap sm:items-center",
+        isPending && "opacity-70",
+      )}
+    >
       <div className="flex h-11 min-w-[240px] flex-1 items-center gap-2 rounded-md border-[3px] border-neutral-950 bg-card px-3 shadow-brutal-xs">
-        <Search className="size-4 shrink-0 text-muted-foreground" aria-hidden />
+        {isPending ? (
+          <Loader2 className="size-4 shrink-0 animate-spin text-muted-foreground" aria-hidden />
+        ) : (
+          <Search className="size-4 shrink-0 text-muted-foreground" aria-hidden />
+        )}
         <input
           type="search"
           aria-label="Search by title, keyword, or company"
