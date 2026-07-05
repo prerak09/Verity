@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **83 / 94 complete** — BE 50/50 ✅ · FE 33/44
+Progress: **94 / 94 complete** — BE 50/50 ✅ · FE 44/44 🎉
 
 ---
 
@@ -101,17 +101,17 @@ Progress: **83 / 94 complete** — BE 50/50 ✅ · FE 33/44
 - [x] `[BE]` structural ESLint rule (actions must import rbac)
 - [x] `[BE]` integration tests (register→publish gated)
 - [x] `[BE]` seed 100-company demo catalog (G2)
-- [ ] `[FE]` Admin Dashboard modules
-- [ ] `[FE]` Verification Queue UI + action buttons
-- [ ] `[FE]` Admin company/internship management tables
-- [ ] `[FE]` categories & technologies management UI
-- [ ] `[FE]` reports queue UI
-- [ ] `[FE]` feature management UI
-- [ ] `[FE]` user management UI
-- [ ] `[FE]` platform analytics dashboard (KPI cards + charts)
-- [ ] `[FE]` notification center UI + bell badge
-- [ ] `[FE]` accessibility pass (student-facing)
-- [ ] `[FE]` E2E happy-path (Playwright)
+- [x] `[FE]` Admin Dashboard modules
+- [x] `[FE]` Verification Queue UI + action buttons
+- [x] `[FE]` Admin company/internship management tables
+- [x] `[FE]` categories & technologies management UI
+- [x] `[FE]` reports queue UI
+- [x] `[FE]` feature management UI
+- [x] `[FE]` user management UI
+- [x] `[FE]` platform analytics dashboard (KPI cards + charts)
+- [x] `[FE]` notification center UI + bell badge
+- [x] `[FE]` accessibility pass (student-facing)
+- [x] `[FE]` E2E happy-path (Playwright)
 
 ---
 

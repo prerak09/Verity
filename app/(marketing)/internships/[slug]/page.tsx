@@ -7,7 +7,8 @@ import { ExternalLink, MapPin, Clock } from "lucide-react";
 import { RemoteChip } from "@/components/shared/RemoteChip";
 import { Button } from "@/components/ui/button";
 import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
-import { MOCK_INTERNSHIP_DETAILS, MOCK_BOOKMARKS } from "@/components/lib/mocks";
+import { AddToTrackerButton } from "@/features/applications/components/AddToTrackerButton";
+import { MOCK_INTERNSHIP_DETAILS, MOCK_BOOKMARKS, MOCK_APPLICATIONS } from "@/components/lib/mocks";
 
 export async function generateMetadata({
   params,
@@ -137,6 +138,12 @@ export default async function InternshipDetailPage({
               Apply on company site
               <ExternalLink className="size-4" aria-hidden />
             </Button>
+            <AddToTrackerButton
+              internshipId={internship.id}
+              initialTracked={MOCK_APPLICATIONS.some(
+                (a) => a.internship.slug === internship.slug,
+              )}
+            />
           </div>
         </aside>
       </div>
