@@ -100,9 +100,11 @@ export function NavSearch({ className }: { className?: string }) {
         <input
           type="search"
           role="combobox"
+          aria-label="Search companies"
           aria-expanded={open}
           aria-autocomplete="list"
           aria-controls="nav-search-listbox"
+          aria-activedescendant={activeIndex >= 0 ? `nav-search-option-${activeIndex}` : undefined}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -137,7 +139,12 @@ export function NavSearch({ className }: { className?: string }) {
               {results.map((result, i) => {
                 const Icon = TYPE_ICON[result.type];
                 return (
-                  <li key={`${result.type}-${result.slug}`} role="option" aria-selected={i === activeIndex}>
+                  <li
+                    key={`${result.type}-${result.slug}`}
+                    id={`nav-search-option-${i}`}
+                    role="option"
+                    aria-selected={i === activeIndex}
+                  >
                     <button
                       type="button"
                       onClick={() => navigateTo(result)}

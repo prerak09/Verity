@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, Bell, User as UserIcon } from "lucide-react";
+import { Menu, User as UserIcon } from "lucide-react";
 
 import { Logo } from "@/components/shared/Logo";
+import { NotificationBell } from "@/components/shared/NotificationBell";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { cn } from "@/components/lib/utils";
@@ -134,9 +135,7 @@ export function Navbar({
             <nav className="ml-auto flex items-center gap-1">
               {userSlot ?? (
                 <>
-                  <Button variant="ghost" size="icon" aria-label="Notifications">
-                    <Bell className="size-5" aria-hidden />
-                  </Button>
+                  <NotificationBell />
                   <Button variant="ghost" size="icon" aria-label="Account">
                     <UserIcon className="size-5" aria-hidden />
                   </Button>

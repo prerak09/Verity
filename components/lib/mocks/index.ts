@@ -11,3 +11,4 @@ export * from "./analytics";
 export * from "./notifications";
 export * from "./search";
 export * from "./auth";
+export * from "./team";

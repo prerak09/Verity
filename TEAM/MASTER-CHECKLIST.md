@@ -2,7 +2,7 @@
 
 Single tracker for **both** devs. Tags: `[BE]` = Dev A (data & logic), `[FE]` = Dev B (UI). **Whoever finishes a task ticks it here in the same PR** — so `main` always shows live progress from both at once. Detail: `DEV-A-todo.md`, `DEV-B-todo.md`. Rules: `00-work-division.md`.
 
-Progress: **73 / 94 complete** — BE 50/50 ✅ · FE 23/44
+Progress: **94 / 94 complete** — BE 50/50 ✅ · FE 44/44 🎉
 
 ---
 
@@ -82,16 +82,16 @@ Progress: **73 / 94 complete** — BE 50/50 ✅ · FE 23/44
 - [x] `[BE]` admin user management actions
 - [x] `[BE]` platform analytics queries
 - [x] `[BE]` `/api/admin/**` handlers
-- [ ] `[FE]` company onboarding multi-step form
-- [ ] `[FE]` Company Dashboard modules
-- [ ] `[FE]` Company Profile Editor (autosave + last-saved)
-- [ ] `[FE]` logo/media upload widget
-- [ ] `[FE]` founders/team repeatable editors
-- [ ] `[FE]` Internship Manager UI
-- [ ] `[FE]` Team Members UI (invite/roles/revoke/transfer)
-- [ ] `[FE]` Company News CMS UI
-- [ ] `[FE]` Company Analytics UI (charts)
-- [ ] `[FE]` verification banner + "what to fix" checklist
+- [x] `[FE]` company onboarding multi-step form
+- [x] `[FE]` Company Dashboard modules
+- [x] `[FE]` Company Profile Editor (autosave + last-saved)
+- [x] `[FE]` logo/media upload widget
+- [x] `[FE]` founders/team repeatable editors
+- [x] `[FE]` Internship Manager UI
+- [x] `[FE]` Team Members UI (invite/roles/revoke/transfer)
+- [x] `[FE]` Company News CMS UI
+- [x] `[FE]` Company Analytics UI (charts)
+- [x] `[FE]` verification banner + "what to fix" checklist
 
 ## Phase 5 — Notifications/hardening · Admin portal UI & QA
 - [x] `[BE]` `notify.ts` (in-app + Resend)
@@ -101,17 +101,17 @@ Progress: **73 / 94 complete** — BE 50/50 ✅ · FE 23/44
 - [x] `[BE]` structural ESLint rule (actions must import rbac)
 - [x] `[BE]` integration tests (register→publish gated)
 - [x] `[BE]` seed 100-company demo catalog (G2)
-- [ ] `[FE]` Admin Dashboard modules
-- [ ] `[FE]` Verification Queue UI + action buttons
-- [ ] `[FE]` Admin company/internship management tables
-- [ ] `[FE]` categories & technologies management UI
-- [ ] `[FE]` reports queue UI
-- [ ] `[FE]` feature management UI
-- [ ] `[FE]` user management UI
-- [ ] `[FE]` platform analytics dashboard (KPI cards + charts)
-- [ ] `[FE]` notification center UI + bell badge
-- [ ] `[FE]` accessibility pass (student-facing)
-- [ ] `[FE]` E2E happy-path (Playwright)
+- [x] `[FE]` Admin Dashboard modules
+- [x] `[FE]` Verification Queue UI + action buttons
+- [x] `[FE]` Admin company/internship management tables
+- [x] `[FE]` categories & technologies management UI
+- [x] `[FE]` reports queue UI
+- [x] `[FE]` feature management UI
+- [x] `[FE]` user management UI
+- [x] `[FE]` platform analytics dashboard (KPI cards + charts)
+- [x] `[FE]` notification center UI + bell badge
+- [x] `[FE]` accessibility pass (student-facing)
+- [x] `[FE]` E2E happy-path (Playwright)
 
 ---
 
