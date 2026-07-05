@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { toast } from "sonner";
-import { ExternalLink, Link2 } from "lucide-react";
+import { CheckCircle2, ExternalLink, Link2 } from "lucide-react";
 
+import { EmptyState } from "@/components/shared/EmptyState";
 import {
   approveVerification,
   rejectVerification,
@@ -277,9 +278,11 @@ export function VerificationQueueManager({
 
   if (queue.length === 0) {
     return (
-      <div className="rounded-xl border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
-        Queue is empty — nothing pending review.
-      </div>
+      <EmptyState
+        icon={CheckCircle2}
+        title="Queue's clear"
+        description="No companies waiting on review. Nice."
+      />
     );
   }
 

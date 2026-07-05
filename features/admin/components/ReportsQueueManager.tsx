@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import Link from "next/link";
+import { Flag } from "lucide-react";
 
 import { resolveReport, type ResolveAction } from "@/features/admin/reports";
 import type { ReportDTO } from "@/types";
+import { EmptyState } from "@/components/shared/EmptyState";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -140,9 +142,12 @@ export function ReportsQueueManager({ initialReports }: { initialReports: Report
 
   if (reports.length === 0) {
     return (
-      <div className="rounded-xl border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
-        No reports yet.
-      </div>
+      <EmptyState
+        icon={Flag}
+        title="No reports"
+        description="Nothing has been reported yet."
+        compact
+      />
     );
   }
 

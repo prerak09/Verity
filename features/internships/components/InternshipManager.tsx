@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import Link from "next/link";
+import { Briefcase } from "lucide-react";
 
 import { archiveInternship, publishInternship } from "@/features/internships/actions";
 import type { InternshipDetail, InternshipInput, VerificationStatus } from "@/types";
+import { EmptyState } from "@/components/shared/EmptyState";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -158,9 +160,12 @@ export function InternshipManager({
       )}
 
       {internships.length === 0 ? (
-        <div className="rounded-xl border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
-          No internships yet. Create your first listing to get started.
-        </div>
+        <EmptyState
+          icon={Briefcase}
+          title="No internships yet"
+          description="Create your first listing to get started."
+          compact
+        />
       ) : (
         <div className="rounded-xl border-2 border-border bg-card shadow-brutal-sm">
           <Table>

@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Link2 } from "lucide-react";
+import { Plus, Link2, Newspaper } from "lucide-react";
 
 import { addCompanyNews } from "@/features/companies/actions";
 import type { CompanyNewsDTO } from "@/types";
+import { EmptyState } from "@/components/shared/EmptyState";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -116,9 +117,12 @@ export function CompanyNewsManager({
       </div>
 
       {news.length === 0 ? (
-        <div className="rounded-xl border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
-          No updates yet. Post your first one to show up on your public profile.
-        </div>
+        <EmptyState
+          icon={Newspaper}
+          title="No updates yet"
+          description="Post your first one to show up on your public profile."
+          compact
+        />
       ) : (
         <div className="rounded-xl border-2 border-border bg-card shadow-brutal-sm">
           <ul className="divide-y divide-border-subtle">
