@@ -1,13 +1,10 @@
 import Link from "next/link";
-import { BadgeCheck } from "lucide-react";
 
 import { cn } from "@/components/lib/utils";
 
 /**
- * The wordmark lockup (doc §2.1): the mark *is* a verified badge — brand and
- * trust signal are the same object by design (principle P5). Never recolor
- * the glyph square; it borrows the reserved --verified-fill/--verified-ring
- * pair, not the brand scale.
+ * verity.exe wordmark: a lime pixel-square with an asterisk mark + chunky
+ * uppercase "VERITY". Retro brand lockup matching the reference screenshots.
  */
 export function Logo({
   href = "/",
@@ -22,24 +19,20 @@ export function Logo({
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        "group inline-flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         className,
       )}
     >
       <span
         aria-hidden
-        className="inline-flex size-7 shrink-0 items-center justify-center rounded-md border-2 shadow-brutal-xs"
-        style={{
-          background: "var(--verified-fill)",
-          borderColor: "var(--verified-ring)",
-        }}
+        className="inline-flex size-9 shrink-0 items-center justify-center rounded-[3px] border-[3px] border-neutral-950 bg-lime text-neutral-950 [box-shadow:2px_2px_0_0_var(--color-neutral-950)] transition-transform group-hover:-translate-y-0.5"
       >
-        <BadgeCheck className="size-4 text-white" strokeWidth={3} />
+        <span className="font-pixel text-lg leading-none">*</span>
       </span>
       {iconOnly ? (
         <span className="sr-only">Verity</span>
       ) : (
-        <span className="font-display text-lg font-extrabold tracking-[-0.02em] text-foreground">
+        <span className="font-display text-xl font-bold uppercase tracking-[0.02em] text-neutral-950">
           Verity
         </span>
       )}

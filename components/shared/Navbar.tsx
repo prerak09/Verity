@@ -45,7 +45,7 @@ export function Navbar({
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 h-16 border-b-2 border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80",
+        "sticky top-0 z-40 h-16 border-b-[3px] border-neutral-950 bg-[#EFF3D2]",
         className,
       )}
     >
@@ -66,37 +66,37 @@ export function Navbar({
 
         {variant === "marketing" ? (
           <>
-            <nav className="ml-6 hidden items-center gap-6 sm:flex">
+            <nav className="ml-8 hidden items-center gap-6 md:flex">
               {links.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  className="font-mono text-sm font-medium text-neutral-800 transition-colors hover:text-neutral-950 hover:underline underline-offset-4"
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
-            <div className="ml-auto flex items-center gap-2">
+            <div className="ml-auto flex items-center gap-2.5">
               <Button
                 variant="ghost"
                 size="icon"
-                className="sm:hidden"
+                className="md:hidden"
                 aria-label="Open menu"
                 onClick={() => setMarketingMenuOpen(true)}
               >
                 <Menu className="size-5" aria-hidden />
               </Button>
               <Button
-                variant="ghost"
+                variant="outline"
                 size="sm"
                 className="hidden sm:inline-flex"
                 render={<Link href="/sign-in" />}
               >
-                Sign in
+                Log in
               </Button>
-              <Button size="sm" render={<Link href="/sign-up" />}>
-                Get started
+              <Button variant="secondary" size="sm" render={<Link href="/sign-up" />}>
+                Sign up
               </Button>
             </div>
 

@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "next-themes";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, JetBrains_Mono, Silkscreen } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Retro verity.exe theme: Space Grotesk = chunky display headings,
+// JetBrains Mono = terminal body, Silkscreen = pixel accents/logo.
+const displayFace = Space_Grotesk({
+  variable: "--font-display-face",
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const monoBody = JetBrains_Mono({
+  variable: "--font-mono-body",
   subsets: ["latin"],
+  weight: ["400", "500", "700", "800"],
+});
+
+const pixelFace = Silkscreen({
+  variable: "--font-pixel-face",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -36,11 +46,16 @@ export default function RootLayout({
     >
       <html
         lang="en"
-        className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+        className={`${displayFace.variable} ${monoBody.variable} ${pixelFace.variable} h-full antialiased`}
         suppressHydrationWarning
       >
         <body className="min-h-full flex flex-col">
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem={false}
+            forcedTheme="light"
+          >
             {children}
             <Toaster />
           </ThemeProvider>
