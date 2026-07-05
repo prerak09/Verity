@@ -5,15 +5,21 @@ import { DashboardSection } from "@/components/shared/DashboardSection";
 import { CompanyCard } from "@/components/shared/CompanyCard";
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
-import {
-  MOCK_CATEGORIES,
-  MOCK_COMPANIES,
-  MOCK_COMPANY_DETAILS,
-  MOCK_INTERNSHIPS,
-  MOCK_BOOKMARKS,
-  MOCK_APPLICATIONS,
-} from "@/components/lib/mocks";
-import type { ApplicationStatus } from "@/types";
+import { MOCK_CATEGORIES } from "@/components/lib/mocks";
+import { getCurrentUser } from "@/lib/auth";
+import { listCompanies, getOpenInternships } from "@/features/companies/queries";
+import { listInternships } from "@/features/internships/queries";
+import { getTrendingCompanies } from "@/features/trending/queries";
+import { getRecommendedCompanies } from "@/features/students/recommendations";
+import { listBookmarks } from "@/features/bookmarks/queries";
+import { listApplications } from "@/features/applications/queries";
+import type {
+  ApplicationStatus,
+  CompanyCard as CompanyCardDTO,
+  InternshipCard as InternshipCardDTO,
+  BookmarkDTO,
+  ApplicationDTO,
+} from "@/types";
 
 const STATUS_ORDER: ApplicationStatus[] = [
   "SAVED",
@@ -47,38 +53,58 @@ function HScroll({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function StudentDashboardPage() {
-  // Trending / Recommended don't have dedicated mocks distinct from the
-  // catalog (no trending-velocity or recommendation-score field on
-  // CompanyDetail) — sliced from the same verified pool with a different
-  // order, same way the real rules-based query would narrow it server-side.
-  const verified = MOCK_COMPANIES.filter((c) => c.verified);
-  const trending = verified.slice(0, 4);
-  const recommended = [...verified].reverse().slice(0, 4);
+export const dynamic = "force-dynamic";
 
-  const recentlyAdded = Object.values(MOCK_COMPANY_DETAILS)
-    .filter((c) => c.verified)
-    .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
-    .slice(0, 4);
+export default async function StudentDashboardPage() {
+  let trending: CompanyCardDTO[] = [];
+  let recommended: CompanyCardDTO[] = [];
+  let recentlyAdded: CompanyCardDTO[] = [];
+  let latestInternships: InternshipCardDTO[] = [];
+  let bookmarkPreview: BookmarkDTO[] = [];
+  let applications: ApplicationDTO[] = [];
 
-  const latestInternships = MOCK_INTERNSHIPS.filter((i) => i.status === "PUBLISHED")
-    .sort((a, b) => (b.publishedAt ?? "").localeCompare(a.publishedAt ?? ""))
-    .slice(0, 4);
+  try {
+    const user = await getCurrentUser();
+    const [trend, recent, latest] = await Promise.all([
+      getTrendingCompanies(4),
+      listCompanies({ page: 1, pageSize: 4, sort: "recent" }),
+      listInternships({ page: 1, pageSize: 4, sort: "recent" }),
+    ]);
+    trending = trend;
+    recentlyAdded = recent.data;
+    latestInternships = latest.data;
 
-  const bookmarkPreview = MOCK_BOOKMARKS.slice(0, 4);
+    if (user) {
+      const [recs, bms, apps] = await Promise.all([
+        getRecommendedCompanies(user.id),
+        listBookmarks(user.id),
+        listApplications(user.id),
+      ]);
+      recommended = recs.slice(0, 4);
+      bookmarkPreview = bms.slice(0, 4);
+      applications = apps;
+    }
+  } catch {
+    // DB unreachable — sections render their empty states.
+  }
+
+  // Fall back to trending for recommended when the user has no signal yet.
+  if (recommended.length === 0) recommended = trending;
+
+  void getOpenInternships; // reserved for a future per-company dashboard widget
 
   const tracker = STATUS_ORDER.map((status) => ({
     status,
-    count: MOCK_APPLICATIONS.filter((a) => a.status === status).length,
+    count: applications.filter((a) => a.status === status).length,
   }));
 
   const activity = [
-    ...MOCK_BOOKMARKS.map((b) => ({
+    ...bookmarkPreview.map((b) => ({
       icon: Bookmark,
       text: `Bookmarked ${b.company?.name ?? b.internship?.title}`,
       at: b.createdAt,
     })),
-    ...MOCK_APPLICATIONS.map((a) => ({
+    ...applications.map((a) => ({
       icon: Briefcase,
       text: `${STATUS_LABEL[a.status]} — ${a.internship.title}`,
       at: a.updatedAt,
@@ -131,18 +157,7 @@ export default function StudentDashboardPage() {
           {recentlyAdded.map((company) => (
             <CompanyCard
               key={company.id}
-              company={{
-                id: company.id,
-                slug: company.slug,
-                name: company.name,
-                tagline: company.tagline,
-                logoUrl: company.logoUrl,
-                fundingStage: company.fundingStage,
-                remotePolicy: company.remotePolicy,
-                verified: company.verified,
-                categories: company.categories,
-                openInternshipCount: company.openInternships.length,
-              }}
+              company={company}
               className="w-80 shrink-0"
             />
           ))}
