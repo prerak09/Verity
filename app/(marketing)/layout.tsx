@@ -6,7 +6,7 @@ const NAV_LINKS = [
   { href: "/companies", label: "Browse Startups" },
   { href: "/internships", label: "Career" },
   { href: "/companies", label: "Users" },
-  { href: "/categories", label: "Resources" },
+  { href: "/categories", label: "Category" },
   { href: "/sign-up", label: "Pricing" },
 ];
 
