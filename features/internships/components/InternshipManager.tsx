@@ -159,66 +159,68 @@ export function InternshipManager({
         </p>
       )}
 
-      {internships.length === 0 ? (
-        <EmptyState
-          icon={Briefcase}
-          title="No internships yet"
-          description="Create your first listing to get started."
-          compact
-        />
-      ) : (
-        <div className="rounded-xl border-2 border-border bg-card shadow-brutal-sm">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Title</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead>Location</TableHead>
-                <TableHead>Stipend</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Title</TableHead>
+            <TableHead>Status</TableHead>
+            <TableHead>Location</TableHead>
+            <TableHead>Stipend</TableHead>
+            <TableHead className="text-right">Actions</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {internships.length === 0 ? (
+            <TableRow>
+              <TableCell colSpan={5}>
+                <EmptyState
+                  icon={Briefcase}
+                  title="No internships yet"
+                  description="Create your first listing to get started."
+                  compact
+                />
+              </TableCell>
+            </TableRow>
+          ) : (
+            internships.map((internship) => (
+              <TableRow key={internship.id}>
+                <TableCell className="max-w-64 truncate font-medium text-foreground">
+                  {internship.status === "PUBLISHED" ? (
+                    <Link
+                      href={`/internships/${internship.slug}`}
+                      className="hover:underline"
+                    >
+                      {internship.title}
+                    </Link>
+                  ) : (
+                    internship.title
+                  )}
+                </TableCell>
+                <TableCell>
+                  <StatusToggle
+                    internship={internship}
+                    companyVerified={companyVerified}
+                    onChange={(status) => handleStatusChange(internship.id, status)}
+                  />
+                </TableCell>
+                <TableCell className="text-muted-foreground">
+                  {internship.location ?? "—"}
+                </TableCell>
+                <TableCell className="text-muted-foreground">
+                  {internship.stipend ?? "—"}
+                </TableCell>
+                <TableCell className="text-right">
+                  <InternshipFormDialog
+                    companyId={companyId}
+                    internship={internship}
+                    onUpdated={handleUpdated}
+                  />
+                </TableCell>
               </TableRow>
-            </TableHeader>
-            <TableBody>
-              {internships.map((internship) => (
-                <TableRow key={internship.id}>
-                  <TableCell className="max-w-64 truncate font-medium text-foreground">
-                    {internship.status === "PUBLISHED" ? (
-                      <Link
-                        href={`/internships/${internship.slug}`}
-                        className="hover:underline"
-                      >
-                        {internship.title}
-                      </Link>
-                    ) : (
-                      internship.title
-                    )}
-                  </TableCell>
-                  <TableCell>
-                    <StatusToggle
-                      internship={internship}
-                      companyVerified={companyVerified}
-                      onChange={(status) => handleStatusChange(internship.id, status)}
-                    />
-                  </TableCell>
-                  <TableCell className="text-muted-foreground">
-                    {internship.location ?? "—"}
-                  </TableCell>
-                  <TableCell className="text-muted-foreground">
-                    {internship.stipend ?? "—"}
-                  </TableCell>
-                  <TableCell className="text-right">
-                    <InternshipFormDialog
-                      companyId={companyId}
-                      internship={internship}
-                      onUpdated={handleUpdated}
-                    />
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      )}
+            ))
+          )}
+        </TableBody>
+      </Table>
     </div>
   );
 }

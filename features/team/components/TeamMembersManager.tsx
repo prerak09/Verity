@@ -329,31 +329,29 @@ export function TeamMembersManager({
         <InviteMemberDialog companyId={companyId} onInvited={handleInvited} />
       </div>
 
-      <div className="rounded-xl border-2 border-border bg-card shadow-brutal-sm">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Name</TableHead>
-              <TableHead>Email</TableHead>
-              <TableHead>Role</TableHead>
-              <TableHead className="text-right">Actions</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {members.map((member) => (
-              <MemberRow
-                key={member.id}
-                companyId={companyId}
-                member={member}
-                isSelf={member.userId === currentUserId}
-                onRoleChanged={handleRoleChanged}
-                onRevoked={handleRevoked}
-                onTransferred={handleTransferred}
-              />
-            ))}
-          </TableBody>
-        </Table>
-      </div>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Name</TableHead>
+            <TableHead>Email</TableHead>
+            <TableHead>Role</TableHead>
+            <TableHead className="text-right">Actions</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {members.map((member) => (
+            <MemberRow
+              key={member.id}
+              companyId={companyId}
+              member={member}
+              isSelf={member.userId === currentUserId}
+              onRoleChanged={handleRoleChanged}
+              onRevoked={handleRevoked}
+              onTransferred={handleTransferred}
+            />
+          ))}
+        </TableBody>
+      </Table>
     </div>
   );
 }

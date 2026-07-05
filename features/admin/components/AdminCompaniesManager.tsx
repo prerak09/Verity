@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import Link from "next/link";
-import { Plus } from "lucide-react";
+import { Plus, MoreHorizontal, Building2, Briefcase } from "lucide-react";
 
 import {
   adminCreateCompany,
@@ -13,6 +13,7 @@ import {
 } from "@/features/admin/companies";
 import { slugify } from "@/lib/slug";
 import type { CompanyDetail, FieldErrors, InternshipCard } from "@/types";
+import { EmptyState } from "@/components/shared/EmptyState";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -33,6 +34,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 /**
  * `Company.suspendedAt` exists in Prisma but isn't exposed on any DTO
@@ -189,15 +196,23 @@ function CompanyRow({
         )}
       </TableCell>
       <TableCell className="text-right">
-        {suspended ? (
-          <Button type="button" size="sm" variant="outline" disabled={pending} onClick={handleReinstate}>
-            Reinstate
-          </Button>
-        ) : (
-          <Button type="button" size="sm" variant="destructive" disabled={pending} onClick={handleSuspend}>
-            Suspend
-          </Button>
-        )}
+        <DropdownMenu>
+          <DropdownMenuTrigger
+            render={<Button type="button" size="icon-sm" variant="ghost" disabled={pending} />}
+          >
+            <MoreHorizontal className="size-4" aria-hidden />
+            <span className="sr-only">Actions for {company.name}</span>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            {suspended ? (
+              <DropdownMenuItem onClick={handleReinstate}>Reinstate</DropdownMenuItem>
+            ) : (
+              <DropdownMenuItem variant="destructive" onClick={handleSuspend}>
+                Suspend
+              </DropdownMenuItem>
+            )}
+          </DropdownMenuContent>
+        </DropdownMenu>
       </TableCell>
     </TableRow>
   );
@@ -229,9 +244,19 @@ function InternshipRow({ internship, onUnpublished }: { internship: InternshipCa
       </TableCell>
       <TableCell className="text-right">
         {internship.status === "PUBLISHED" && (
-          <Button type="button" size="sm" variant="destructive" disabled={pending} onClick={handleUnpublish}>
-            Unpublish
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              render={<Button type="button" size="icon-sm" variant="ghost" disabled={pending} />}
+            >
+              <MoreHorizontal className="size-4" aria-hidden />
+              <span className="sr-only">Actions for {internship.title}</span>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem variant="destructive" onClick={handleUnpublish}>
+                Unpublish
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         )}
       </TableCell>
     </TableRow>
@@ -301,49 +326,61 @@ export function AdminCompaniesManager({
           <h2 className="text-h3 text-foreground">Companies</h2>
           <CreateCompanyDialog onCreated={handleCreated} />
         </div>
-        <div className="mt-3 rounded-xl border-2 border-border bg-card shadow-brutal-sm">
-          <Table>
-            <TableHeader>
+        <Table className="mt-3">
+          <TableHeader>
+            <TableRow>
+              <TableHead>Name</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead>Suspended</TableHead>
+              <TableHead className="text-right">Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {companies.length === 0 ? (
               <TableRow>
-                <TableHead>Name</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead>Suspended</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
+                <TableCell colSpan={4}>
+                  <EmptyState icon={Building2} title="No companies" description="Create one to get started." compact />
+                </TableCell>
               </TableRow>
-            </TableHeader>
-            <TableBody>
-              {companies.map((c) => (
+            ) : (
+              companies.map((c) => (
                 <CompanyRow
                   key={c.id}
                   company={c}
                   suspended={suspendedIds.has(c.id)}
                   onToggleSuspended={handleToggleSuspended}
                 />
-              ))}
-            </TableBody>
-          </Table>
-        </div>
+              ))
+            )}
+          </TableBody>
+        </Table>
       </div>
 
       <div>
         <h2 className="text-h3 text-foreground">Internships</h2>
-        <div className="mt-3 rounded-xl border-2 border-border bg-card shadow-brutal-sm">
-          <Table>
-            <TableHeader>
+        <Table className="mt-3">
+          <TableHeader>
+            <TableRow>
+              <TableHead>Title</TableHead>
+              <TableHead>Company</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead className="text-right">Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {internships.length === 0 ? (
               <TableRow>
-                <TableHead>Title</TableHead>
-                <TableHead>Company</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
+                <TableCell colSpan={4}>
+                  <EmptyState icon={Briefcase} title="No internships" description="Nothing posted yet." compact />
+                </TableCell>
               </TableRow>
-            </TableHeader>
-            <TableBody>
-              {internships.map((i) => (
+            ) : (
+              internships.map((i) => (
                 <InternshipRow key={i.id} internship={i} onUnpublished={handleUnpublished} />
-              ))}
-            </TableBody>
-          </Table>
-        </div>
+              ))
+            )}
+          </TableBody>
+        </Table>
       </div>
     </div>
   );

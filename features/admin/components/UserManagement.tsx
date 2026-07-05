@@ -2,10 +2,12 @@
 
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
+import { MoreHorizontal, SearchX } from "lucide-react";
 
 import { changeUserRole, disableUser, reinstateUser } from "@/features/admin/users";
 import type { AdminUserRow } from "@/features/admin/mock-users";
 import type { PlatformRole } from "@/types";
+import { EmptyState } from "@/components/shared/EmptyState";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,6 +26,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const ROLE_LABEL: Record<PlatformRole, string> = {
   STUDENT: "Student",
@@ -100,15 +108,23 @@ function UserRow({
         {user.disabledAt ? <Badge variant="destructive">Disabled</Badge> : <Badge variant="outline">Active</Badge>}
       </TableCell>
       <TableCell className="text-right">
-        {user.disabledAt ? (
-          <Button type="button" size="sm" variant="outline" disabled={pending} onClick={handleReinstate}>
-            Reinstate
-          </Button>
-        ) : (
-          <Button type="button" size="sm" variant="destructive" disabled={pending} onClick={handleDisable}>
-            Disable
-          </Button>
-        )}
+        <DropdownMenu>
+          <DropdownMenuTrigger
+            render={<Button type="button" size="icon-sm" variant="ghost" disabled={pending} />}
+          >
+            <MoreHorizontal className="size-4" aria-hidden />
+            <span className="sr-only">Actions for {user.name ?? user.email}</span>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            {user.disabledAt ? (
+              <DropdownMenuItem onClick={handleReinstate}>Reinstate</DropdownMenuItem>
+            ) : (
+              <DropdownMenuItem variant="destructive" onClick={handleDisable}>
+                Disable
+              </DropdownMenuItem>
+            )}
+          </DropdownMenuContent>
+        </DropdownMenu>
       </TableCell>
     </TableRow>
   );
@@ -150,32 +166,40 @@ export function UserManagement({
         placeholder="Search by name or email…"
         className="max-w-sm"
       />
-      <div className="rounded-xl border-2 border-border bg-card shadow-brutal-sm">
-        <Table>
-          <TableHeader>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Name</TableHead>
+            <TableHead>Email</TableHead>
+            <TableHead>Role</TableHead>
+            <TableHead>Status</TableHead>
+            <TableHead className="text-right">Actions</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {filtered.length === 0 ? (
             <TableRow>
-              <TableHead>Name</TableHead>
-              <TableHead>Email</TableHead>
-              <TableHead>Role</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead className="text-right">Actions</TableHead>
+              <TableCell colSpan={5}>
+                <EmptyState
+                  icon={SearchX}
+                  title="No users match"
+                  description="Try a different name or email."
+                  compact
+                />
+              </TableCell>
             </TableRow>
-          </TableHeader>
-          <TableBody>
-            {filtered.map((user) => (
+          ) : (
+            filtered.map((user) => (
               <UserRow
                 key={user.id}
                 user={user}
                 onRoleChanged={handleRoleChanged}
                 onDisabledChanged={handleDisabledChanged}
               />
-            ))}
-          </TableBody>
-        </Table>
-        {filtered.length === 0 && (
-          <p className="p-6 text-center text-body-sm text-muted-foreground">No users match your search.</p>
-        )}
-      </div>
+            ))
+          )}
+        </TableBody>
+      </Table>
     </div>
   );
 }
