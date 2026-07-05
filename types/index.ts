@@ -202,6 +202,8 @@ export interface CompanyCard {
   verified: boolean;
   categories: TaxonomyRef[];
   openInternshipCount: number;
+  /** "City, Country" of the HQ location — optional, only populated by listCompanies. */
+  location?: string | null;
 }
 
 export interface TaxonomyRef {
@@ -343,14 +345,19 @@ export interface ApplicationDTO {
 // Search & discovery (PRD §16, TRD §12)
 // ─────────────────────────────────────────────────────────────────────────────
 
+/** "EARLY_STAGE"/"WELL_FUNDED" are quick-filter groups; a bare FundingStage is exact. */
+export type FundingStageFilter = FundingStage | "EARLY_STAGE" | "WELL_FUNDED";
+
 export interface CompanyFilters extends PaginationParams {
   q?: string;
   category?: string; // slug
   technology?: string; // slug
-  fundingStage?: FundingStage;
+  location?: string; // country or city, partial match
+  fundingStage?: FundingStageFilter;
   remotePolicy?: RemotePolicy;
   visaSponsorship?: boolean;
-  sort?: "trending" | "recent" | "name";
+  hiringNow?: boolean; // has at least one open (PUBLISHED) internship
+  sort?: "relevance" | "trending" | "recent" | "name";
 }
 
 export interface InternshipFilters extends PaginationParams {
@@ -566,6 +573,8 @@ export type GetCompanyBySlug = (slug: string) => Promise<CompanyDetail | null>;
 export type ListCompanies = (
   filters: CompanyFilters,
 ) => Promise<Paginated<CompanyCard>>;
+export type ListCompanyLocations = () => Promise<string[]>;
+export type ListCategories = () => Promise<TaxonomyRef[]>;
 export type GetOpenInternships = (
   companyId: string,
 ) => Promise<InternshipCard[]>;

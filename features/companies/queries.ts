@@ -11,6 +11,7 @@ import type {
   CompanyCard,
   CompanyDetail,
   CompanyFilters,
+  FundingStage,
   InternshipCard,
   Paginated,
   ProfileCompleteness,
@@ -109,8 +110,21 @@ export async function getCompanyBySlug(
   };
 }
 
-/** Paginated, filtered directory list (TRD §9.2). Non-search filters only;
- *  full-text search goes through lib/search.ts. */
+const EARLY_STAGES: FundingStage[] = ["BOOTSTRAPPED", "PRE_SEED", "SEED"];
+const WELL_FUNDED_STAGES: FundingStage[] = ["SERIES_B", "SERIES_C_PLUS", "PUBLIC"];
+
+function resolveFundingStageWhere(
+  stage: CompanyFilters["fundingStage"],
+): Prisma.CompanyWhereInput["fundingStage"] | undefined {
+  if (!stage) return undefined;
+  if (stage === "EARLY_STAGE") return { in: EARLY_STAGES };
+  if (stage === "WELL_FUNDED") return { in: WELL_FUNDED_STAGES };
+  return stage;
+}
+
+/** Paginated, filtered directory list (TRD §9.2). `q` is a simple contains
+ *  match here; ranked full-text search for the dedicated search page goes
+ *  through lib/search.ts. */
 export async function listCompanies(
   filters: CompanyFilters,
 ): Promise<Paginated<CompanyCard>> {
@@ -119,7 +133,9 @@ export async function listCompanies(
   const where: Prisma.CompanyWhereInput = {
     deletedAt: null,
     verificationStatus: "VERIFIED",
-    ...(filters.fundingStage ? { fundingStage: filters.fundingStage } : {}),
+    ...(filters.fundingStage
+      ? { fundingStage: resolveFundingStageWhere(filters.fundingStage) }
+      : {}),
     ...(filters.remotePolicy ? { remotePolicy: filters.remotePolicy } : {}),
     ...(filters.visaSponsorship !== undefined
       ? { visaSponsorship: filters.visaSponsorship }
@@ -129,6 +145,30 @@ export async function listCompanies(
       : {}),
     ...(filters.technology
       ? { technologies: { some: { technology: { slug: filters.technology } } } }
+      : {}),
+    ...(filters.location
+      ? {
+          locations: {
+            some: {
+              OR: [
+                { city: { contains: filters.location, mode: "insensitive" } },
+                { country: { contains: filters.location, mode: "insensitive" } },
+              ],
+            },
+          },
+        }
+      : {}),
+    ...(filters.hiringNow
+      ? { internships: { some: { status: "PUBLISHED", deletedAt: null } } }
+      : {}),
+    ...(filters.q
+      ? {
+          OR: [
+            { name: { contains: filters.q, mode: "insensitive" } },
+            { tagline: { contains: filters.q, mode: "insensitive" } },
+            { categories: { some: { category: { name: { contains: filters.q, mode: "insensitive" } } } } },
+          ],
+        }
       : {}),
   };
 
@@ -147,6 +187,7 @@ export async function listCompanies(
       take: pageSize,
       include: {
         categories: { include: { category: true } },
+        locations: { where: { isHQ: true }, take: 1 },
         _count: {
           select: {
             internships: { where: { status: "PUBLISHED", deletedAt: null } },
@@ -172,6 +213,7 @@ export async function listCompanies(
       name: cc.category.name,
     })),
     openInternshipCount: c._count.internships,
+    location: c.locations[0] ? `${c.locations[0].city}, ${c.locations[0].country}` : null,
   }));
 
   return {
@@ -237,4 +279,21 @@ export async function getProfileCompleteness(
     missingRequiredFields: missing,
     canSubmitForVerification: missing.length === 0,
   };
+}
+
+/** Distinct countries across verified companies, for the directory's location filter. */
+export async function listCompanyLocations(): Promise<string[]> {
+  const rows = await db.companyLocation.findMany({
+    where: { company: { deletedAt: null, verificationStatus: "VERIFIED" } },
+    select: { country: true },
+    distinct: ["country"],
+    orderBy: { country: "asc" },
+  });
+  return rows.map((r) => r.country);
+}
+
+/** Full category taxonomy, for the directory's industry filter. */
+export async function listCategories(): Promise<TaxonomyRef[]> {
+  const rows = await db.category.findMany({ orderBy: { name: "asc" } });
+  return rows.map((c) => ({ id: c.id, slug: c.slug, name: c.name }));
 }

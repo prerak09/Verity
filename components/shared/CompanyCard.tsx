@@ -7,6 +7,24 @@ import { FundingChip } from "@/components/shared/FundingChip";
 import { RemoteChip } from "@/components/shared/RemoteChip";
 import { cn } from "@/components/lib/utils";
 
+const TILE_CLASSES = [
+  "bg-tile-lavender",
+  "bg-tile-pink",
+  "bg-tile-yellow",
+  "bg-tile-blue",
+  "bg-tile-mint",
+  "bg-tile-lime",
+] as const;
+
+/** Deterministic pick so the same company always renders the same tile color. */
+export function tileColorClass(seed: string): string {
+  let hash = 0;
+  for (let i = 0; i < seed.length; i++) {
+    hash = (hash * 31 + seed.charCodeAt(i)) | 0;
+  }
+  return TILE_CLASSES[Math.abs(hash) % TILE_CLASSES.length];
+}
+
 /**
  * Interactive card variant (doc §12.2/§12.9): hard border + shadow, raises
  * on hover/focus. `bookmarkSlot` is left for Phase 3.3 to inject the real
@@ -43,7 +61,10 @@ export function CompanyCard({
       ) : (
         <div
           aria-hidden
-          className="flex size-16 shrink-0 items-center justify-center rounded-[3px] border-[3px] border-neutral-950 bg-tile-lavender font-display text-2xl font-bold text-neutral-950"
+          className={cn(
+            "flex size-16 shrink-0 items-center justify-center rounded-[3px] border-[3px] border-neutral-950 font-display text-2xl font-bold text-neutral-950",
+            tileColorClass(company.id),
+          )}
         >
           {company.name.charAt(0).toUpperCase()}
         </div>
