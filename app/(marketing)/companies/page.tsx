@@ -33,11 +33,13 @@ export default async function CompaniesDirectoryPage({
   return (
     <div className="mx-auto max-w-wide px-4 py-12 sm:px-6">
       <div className="max-w-2xl">
-        <p className="text-overline text-brand-700">DIRECTORY</p>
-        <h1 className="mt-2 text-h1 text-foreground">Companies</h1>
-        <p className="mt-2 text-body text-muted-foreground">
-          {totalCount} companies, every one manually verified before it goes
-          live.
+        <span className="retro-eyebrow">Directory</span>
+        <h1 className="mt-4 font-display text-4xl font-bold text-neutral-950">
+          Browse Startups
+        </h1>
+        <p className="mt-2 font-mono text-sm text-neutral-700">
+          {totalCount} verified startups. Discover and explore exciting
+          opportunities.
         </p>
       </div>
 

@@ -51,7 +51,7 @@ function FeaturedRow({
   }
 
   return (
-    <li className="flex items-center justify-between gap-3 rounded-lg border-2 border-border-subtle p-3">
+    <li className="flex items-center justify-between gap-3 rounded-lg border-[3px] border-neutral-950-subtle p-3">
       <div>
         <Link href={`/companies/${company.slug}`} target="_blank" className="text-body-sm font-medium text-foreground hover:underline">
           {company.name}
@@ -109,7 +109,7 @@ export function FeaturedManager({ companies }: { companies: CompanyDetail[] }) {
 
   return (
     <div className="space-y-4">
-      <div className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-sm">
+      <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-sm">
         <h2 className="text-h4 text-foreground">Feature a company</h2>
         <div className="mt-3 flex flex-wrap items-end gap-2">
           <div className="min-w-64">
@@ -151,7 +151,7 @@ export function FeaturedManager({ companies }: { companies: CompanyDetail[] }) {
         </div>
       </div>
 
-      <div className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-sm">
+      <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-sm">
         <h2 className="text-h4 text-foreground">Currently featured</h2>
         {featuredCompanies.length === 0 ? (
           <p className="mt-3 text-body-sm text-muted-foreground">No companies are currently featured.</p>

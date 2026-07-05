@@ -85,11 +85,11 @@ export function FoundersEditor({
           {founders.map((founder) => (
             <li
               key={founder.id}
-              className="flex items-center gap-3 rounded-lg border-2 border-border bg-card p-3"
+              className="flex items-center gap-3 rounded-lg border-[3px] border-neutral-950 bg-card p-3"
             >
               <div
                 aria-hidden
-                className="flex size-9 shrink-0 items-center justify-center rounded-md border-2 border-border bg-muted text-sm font-semibold text-muted-foreground"
+                className="flex size-9 shrink-0 items-center justify-center rounded-md border-[3px] border-neutral-950 bg-muted text-sm font-semibold text-muted-foreground"
               >
                 {founder.name.charAt(0)}
               </div>
@@ -119,7 +119,7 @@ export function FoundersEditor({
         </ul>
       )}
 
-      <div className="rounded-lg border-2 border-border-subtle p-3">
+      <div className="rounded-lg border-[3px] border-neutral-950-subtle p-3">
         <div className="grid gap-2 sm:grid-cols-2">
           <div>
             <label className="text-caption text-muted-foreground">Name</label>

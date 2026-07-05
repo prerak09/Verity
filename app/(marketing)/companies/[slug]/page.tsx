@@ -56,20 +56,20 @@ export default async function CompanyProfilePage({
   return (
     <div className="mx-auto max-w-wide px-4 py-10 sm:px-6">
       {/* Hero */}
-      <div className="flex flex-col gap-6 border-b-2 border-border pb-8 sm:flex-row sm:items-start">
+      <div className="flex flex-col gap-6 border-b-[3px] border-neutral-950 pb-8 sm:flex-row sm:items-start">
         {company.logoUrl ? (
           <Image
             src={company.logoUrl}
             alt=""
             width={80}
             height={80}
-            className="size-20 shrink-0 rounded-xl border-2 border-border object-cover"
+            className="size-20 shrink-0 rounded-[4px] border-[3px] border-neutral-950 object-cover"
             priority
           />
         ) : (
           <div
             aria-hidden
-            className="flex size-20 shrink-0 items-center justify-center rounded-xl border-2 border-border bg-muted font-display text-2xl font-semibold text-muted-foreground"
+            className="flex size-20 shrink-0 items-center justify-center rounded-[4px] border-[3px] border-neutral-950 bg-tile-lavender font-display text-3xl font-bold text-neutral-950"
           >
             {company.name.charAt(0).toUpperCase()}
           </div>
@@ -77,7 +77,7 @@ export default async function CompanyProfilePage({
 
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <h1 className="text-h1 text-foreground">{company.name}</h1>
+            <h1 className="font-display text-3xl font-bold text-neutral-950">{company.name}</h1>
             {company.verified && (
               <VerifiedBadge date={company.updatedAt} />
             )}
@@ -91,7 +91,7 @@ export default async function CompanyProfilePage({
             {company.categories.map((c) => (
               <span
                 key={c.id}
-                className="inline-flex items-center rounded-sm border-2 border-border bg-transparent px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-foreground"
+                className="inline-flex items-center rounded-sm border-[3px] border-neutral-950 bg-transparent px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-foreground"
               >
                 {c.name}
               </span>
@@ -117,7 +117,7 @@ export default async function CompanyProfilePage({
               href={company.websiteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-9 items-center gap-1.5 rounded-lg border-2 border-border bg-card px-3 text-sm font-medium text-foreground shadow-brutal-xs transition-colors hover:bg-muted"
+              className="inline-flex h-9 items-center gap-1.5 rounded-lg border-[3px] border-neutral-950 bg-card px-3 text-sm font-medium text-foreground shadow-brutal-xs transition-colors hover:bg-muted"
             >
               <Globe className="size-4" aria-hidden />
               Website
@@ -131,7 +131,7 @@ export default async function CompanyProfilePage({
         <div className="min-w-0 space-y-10">
           {company.about && (
             <section>
-              <h2 className="text-h3 text-foreground">About</h2>
+              <h2 className="font-display text-xl font-bold text-neutral-950">About</h2>
               <div
                 className="prose-verity mt-3 max-w-copy text-body text-muted-foreground"
                 dangerouslySetInnerHTML={{ __html: company.about }}
@@ -141,12 +141,12 @@ export default async function CompanyProfilePage({
 
           {company.technologies.length > 0 && (
             <section>
-              <h2 className="text-h3 text-foreground">Tech stack</h2>
+              <h2 className="font-display text-xl font-bold text-neutral-950">Tech stack</h2>
               <div className="mt-3 flex flex-wrap gap-2">
                 {company.technologies.map((t) => (
                   <span
                     key={t.id}
-                    className="rounded-sm border-2 border-border bg-muted px-2 py-1 text-body-sm font-medium text-foreground"
+                    className="rounded-sm border-[3px] border-neutral-950 bg-muted px-2 py-1 text-body-sm font-medium text-foreground"
                   >
                     {t.name}
                   </span>
@@ -156,7 +156,7 @@ export default async function CompanyProfilePage({
           )}
 
           <section>
-            <h2 className="text-h3 text-foreground">Open internships</h2>
+            <h2 className="font-display text-xl font-bold text-neutral-950">Open internships</h2>
             {company.openInternships.length > 0 ? (
               <div className="mt-3 space-y-3">
                 {company.openInternships.map((internship) => (
@@ -180,7 +180,7 @@ export default async function CompanyProfilePage({
 
           {company.news.length > 0 && (
             <section>
-              <h2 className="text-h3 text-foreground">Recent news</h2>
+              <h2 className="font-display text-xl font-bold text-neutral-950">Recent news</h2>
               <ul className="mt-3 space-y-4">
                 {company.news.map((item) => (
                   <li key={item.id} className="flex gap-3">
@@ -225,7 +225,7 @@ export default async function CompanyProfilePage({
                   <li key={f.id} className="flex items-center gap-3">
                     <div
                       aria-hidden
-                      className="flex size-9 shrink-0 items-center justify-center rounded-md border-2 border-border bg-muted text-sm font-semibold text-muted-foreground"
+                      className="flex size-9 shrink-0 items-center justify-center rounded-md border-[3px] border-neutral-950 bg-muted text-sm font-semibold text-muted-foreground"
                     >
                       {f.name.charAt(0)}
                     </div>
@@ -266,7 +266,7 @@ export default async function CompanyProfilePage({
                   <li key={f.id} className="flex items-center gap-3">
                     <div
                       aria-hidden
-                      className="flex size-9 shrink-0 items-center justify-center rounded-md border-2 border-border bg-muted text-sm font-semibold text-muted-foreground"
+                      className="flex size-9 shrink-0 items-center justify-center rounded-md border-[3px] border-neutral-950 bg-muted text-sm font-semibold text-muted-foreground"
                     >
                       {f.name.charAt(0)}
                     </div>

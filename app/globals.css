@@ -60,6 +60,19 @@
   --color-verified-fill: var(--verified-fill);
   --color-verified-ring: var(--verified-ring);
 
+  /* Retro accent tiles + lime/lavender exposed as Tailwind color utilities */
+  --color-tile-pink: var(--color-tile-pink, #F9C6D3);
+  --color-tile-yellow: #FCE38A;
+  --color-tile-lavender: #B9A9F5;
+  --color-tile-blue: #A9C7F5;
+  --color-tile-lime: #C4F542;
+  --color-tile-mint: #A7E8C4;
+  --color-lime: #C4F542;
+  --color-lavender-200: #E4DCFB;
+  --color-lavender-300: #CBBEF7;
+  --color-lavender-400: #B9A9F5;
+  --color-lavender-500: #9B87F0;
+
   /* Charts (doc doesn't specify; derived from the palette for 4.9/5.8) */
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -104,11 +117,28 @@
   --color-neutral-900: #1C1B19;
   --color-neutral-950: #0A0A09;
 
-  /* "Signal Lime" — rare editorial highlight only (doc §3.5). See note above. */
-  --color-signal-300: #D9F99D;
-  --color-signal-400: #BEF264;
-  --color-signal-500: #A3E635;
+  /* "Signal Lime" — now a FIRST-CLASS retro accent (verity.exe theme).
+     Used on primary CTAs, badges, highlight tiles. Bright chartreuse. */
+  --color-signal-300: #E4FB8C;
+  --color-signal-400: #D4F542;
+  --color-signal-500: #C4F542; /* hero CTA lime */
+  --color-signal-600: #AEE035;
   --color-signal-foreground: #1A2E05;
+  --color-lime: #C4F542;
+
+  /* Retro pastel accent tiles (the pink/yellow/blue/lavender squares) */
+  --color-tile-pink: #F9C6D3;
+  --color-tile-yellow: #FCE38A;
+  --color-tile-lavender: #B9A9F5;
+  --color-tile-blue: #A9C7F5;
+  --color-tile-lime: #C4F542;
+  --color-tile-mint: #A7E8C4;
+
+  /* Lavender/violet retro fills */
+  --color-lavender-200: #E4DCFB;
+  --color-lavender-300: #CBBEF7;
+  --color-lavender-400: #B9A9F5;
+  --color-lavender-500: #9B87F0;
 
   /* Funding-stage chips (doc §3.7) */
   --color-funding-bootstrapped-bg: #F4F4F2;
@@ -133,10 +163,12 @@
   --color-funding-public-fg: #854D0E;
   --color-funding-public-border: #713F12;
 
-  /* Type (doc §4/§20 — Geist is the wired face; sans/display share it) */
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  /* Type — retro verity.exe theme. Body is MONOSPACE-forward (terminal feel);
+     display headings use Space Grotesk (chunky geometric). */
+  --font-sans: var(--font-mono-body), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-display: var(--font-display-face), "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-body), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-pixel: var(--font-pixel-face), "Silkscreen", ui-monospace, monospace;
 
   --text-display-2xl: 4.5rem;
   --text-display-2xl--line-height: 1.02;
@@ -183,22 +215,25 @@
   --text-mono-sm--line-height: 1.5;
   --text-mono-sm--font-weight: 500;
 
-  /* Radius — fixed scale, not calc-derived (doc §7) */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-2xl: 24px;
+  /* Radius — retro/pixel = near-sharp corners. Kept tiny, not rounded. */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
+  --radius-2xl: 8px;
   --radius-full: 9999px;
 
-  /* Hard-offset "brutalist" shadows, theme-aware via --shadow-color (doc §9) */
-  --shadow-brutal-xs: 1px 1px 0 0 var(--shadow-color);
-  --shadow-brutal-sm: 2px 2px 0 0 var(--shadow-color);
+  /* Hard-offset retro shadows (no blur), theme-aware via --shadow-color */
+  --shadow-brutal-xs: 2px 2px 0 0 var(--shadow-color);
+  --shadow-brutal-sm: 3px 3px 0 0 var(--shadow-color);
   --shadow-brutal-md: 4px 4px 0 0 var(--shadow-color);
   --shadow-brutal-lg: 6px 6px 0 0 var(--shadow-color);
   --shadow-brutal-xl: 8px 8px 0 0 var(--shadow-color);
   --shadow-brutal-2xl: 12px 12px 0 0 var(--shadow-color);
   --shadow-brutal-emphasis: 4px 4px 0 0 var(--shadow-color-emphasis);
+
+  /* Retro border width token */
+  --border-retro: 3px;
 
   /* Layout. Note: "copy" not "prose" — Tailwind ships max-w-prose as a
      hardcoded 65ch static utility independent of --container-*, so a
@@ -224,22 +259,22 @@
 }
 
 :root {
-  --background: #FAFAF9; /* neutral-50 */
-  --foreground: #1C1B19; /* neutral-900 */
+  --background: #FBFAF2; /* retro cream paper */
+  --foreground: #0A0A09; /* near-black ink */
   --card: #FFFFFF;
-  --card-foreground: #1C1B19;
+  --card-foreground: #0A0A09;
   --popover: #FFFFFF;
-  --popover-foreground: #1C1B19;
-  --muted: #F4F4F2; /* neutral-100 */
-  --muted-foreground: #78756E; /* neutral-500 */
+  --popover-foreground: #0A0A09;
+  --muted: #F1EFE4; /* warm cream muted */
+  --muted-foreground: #57544E; /* neutral-600 */
 
-  --primary: #7C3AED; /* brand-600 — 5.9:1 on paper (doc §3.2) */
+  --primary: #7C3AED; /* brand-600 violet — kept for primary/link */
   --primary-foreground: #FFFFFF;
-  --secondary: #F4F4F2; /* neutral-100 */
-  --secondary-foreground: #1C1B19;
-  --accent: #F5F3FF; /* brand-50 — structural hover/selected tint, not lime */
-  --accent-foreground: #4C1D95; /* brand-900 */
-  --destructive: #B91C1C; /* error-fg */
+  --secondary: #F1EFE4;
+  --secondary-foreground: #0A0A09;
+  --accent: #C4F542; /* LIME is the real accent now (retro CTA) */
+  --accent-foreground: #1A2E05;
+  --destructive: #E5484D;
 
   --border: #0A0A09; /* neutral-950 — brutalist hard border (doc §8) */
   --border-subtle: #E7E5E1; /* neutral-200 — non-structural hairlines */
@@ -352,9 +387,20 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     text-rendering: optimizeLegibility;
+    /* subtle dotted paper texture, like the screenshots */
+    background-image: radial-gradient(
+      var(--color-neutral-200) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
   }
   html {
     @apply font-sans;
+  }
+  /* Display headings use the chunky geometric face by default */
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 
   /* Numeric alignment helper (tables, KPI cards, timestamps) */
@@ -368,7 +414,8 @@
   }
 
   ::selection {
-    @apply bg-brand-200 text-brand-950;
+    background: var(--color-lime);
+    color: #0A0A09;
   }
 }
 
@@ -387,6 +434,90 @@
   .brutal-raise:active {
     transform: translate(2px, 2px);
     box-shadow: 0 0 0 0 var(--shadow-color);
+  }
+
+  /* ── RETRO SYSTEM (verity.exe theme) ─────────────────────────────────── */
+
+  /* Hard 3px black border everywhere */
+  .retro-border {
+    border: var(--border-retro) solid var(--color-neutral-950);
+  }
+  /* Hard offset shadow, no blur */
+  .retro-shadow { box-shadow: 4px 4px 0 0 var(--color-neutral-950); }
+  .retro-shadow-sm { box-shadow: 3px 3px 0 0 var(--color-neutral-950); }
+  .retro-shadow-lg { box-shadow: 6px 6px 0 0 var(--color-neutral-950); }
+
+  /* Standard retro card: border + hard shadow + sharp corners on paper */
+  .retro-card {
+    background: var(--card);
+    border: var(--border-retro) solid var(--color-neutral-950);
+    border-radius: var(--radius-md);
+    box-shadow: 4px 4px 0 0 var(--color-neutral-950);
+  }
+
+  /* Interactive lift on hover (cards, tiles) */
+  .retro-hover {
+    transition:
+      transform 120ms var(--ease-brutal-out),
+      box-shadow 120ms var(--ease-brutal-out);
+  }
+  .retro-hover:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 var(--color-neutral-950);
+  }
+
+  /* verity.exe window chrome */
+  .retro-window {
+    border: var(--border-retro) solid var(--color-neutral-950);
+    border-radius: var(--radius-md);
+    box-shadow: 6px 6px 0 0 var(--color-neutral-950);
+    background: var(--card);
+    overflow: hidden;
+  }
+  .retro-titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    border-bottom: var(--border-retro) solid var(--color-neutral-950);
+    background: var(--color-lavender-400);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.8125rem;
+  }
+  /* window control dots/buttons */
+  .retro-winbtn {
+    width: 1.1rem; height: 1.1rem;
+    display: inline-grid; place-items: center;
+    border: 2px solid var(--color-neutral-950);
+    background: #fff;
+    font-size: 0.7rem; line-height: 1;
+  }
+
+  /* Pastel accent tile */
+  .retro-tile {
+    border: var(--border-retro) solid var(--color-neutral-950);
+    border-radius: var(--radius-md);
+    box-shadow: 3px 3px 0 0 var(--color-neutral-950);
+    padding: 0.75rem 1rem;
+  }
+
+  /* Pixel-perfect image rendering for pixel-art assets */
+  .pixelated { image-rendering: pixelated; }
+
+  /* Overline label chip (e.g. VERIFIED STARTUP INTELLIGENCE) */
+  .retro-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.6rem;
+    border: 2px solid var(--color-neutral-950);
+    background: var(--color-lavender-300);
+    border-radius: var(--radius-sm);
   }
 
   /* Minimal prose for sanitized company/internship description HTML

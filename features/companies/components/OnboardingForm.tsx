@@ -104,10 +104,10 @@ export function OnboardingForm() {
   if (submitted) {
     return (
       <div className="flex flex-col items-center text-center">
-        <div className="flex size-14 items-center justify-center rounded-xl border-2 border-success-border bg-success-bg shadow-brutal-sm">
+        <div className="flex size-14 items-center justify-center rounded-[4px] border-2 border-success-border bg-success-bg shadow-brutal-sm">
           <CheckCircle2 className="size-7 text-success-fg" strokeWidth={1.75} aria-hidden />
         </div>
-        <h2 className="mt-4 font-display text-h3 text-foreground">
+        <h2 className="mt-4 font-display font-display text-xl font-bold text-neutral-950">
           Submitted for verification
         </h2>
         <p className="mt-1 max-w-sm text-body-sm text-muted-foreground">
@@ -131,7 +131,7 @@ export function OnboardingForm() {
               className={cn(
                 "flex size-6 items-center justify-center rounded-full border-2 text-caption font-bold",
                 i <= step
-                  ? "border-brand-600 bg-brand-50 text-brand-800"
+                  ? "border-brand-600 bg-tile-lavender text-brand-800"
                   : "border-border text-muted-foreground",
               )}
             >
@@ -201,7 +201,7 @@ export function OnboardingForm() {
               />
             </Field>
 
-            <div className="rounded-lg border-2 border-border bg-muted p-4">
+            <div className="rounded-lg border-[3px] border-neutral-950 bg-muted p-4">
               <p className="text-overline text-muted-foreground">Review</p>
               <dl className="mt-2 space-y-1 text-body-sm">
                 <div className="flex justify-between gap-4">

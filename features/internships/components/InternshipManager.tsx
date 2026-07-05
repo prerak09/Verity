@@ -152,17 +152,17 @@ export function InternshipManager({
       </div>
 
       {!companyVerified && (
-        <p className="rounded-lg border-2 border-border-subtle bg-muted p-3 text-caption text-muted-foreground">
+        <p className="rounded-lg border-[3px] border-neutral-950-subtle bg-muted p-3 text-caption text-muted-foreground">
           Publishing is disabled until your company is verified.
         </p>
       )}
 
       {internships.length === 0 ? (
-        <div className="rounded-xl border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
+        <div className="rounded-[4px] border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
           No internships yet. Create your first listing to get started.
         </div>
       ) : (
-        <div className="rounded-xl border-2 border-border bg-card shadow-brutal-sm">
+        <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card shadow-brutal-sm">
           <Table>
             <TableHeader>
               <TableRow>

@@ -18,7 +18,7 @@ function BarList({
   const max = Math.max(...rows.map((r) => r.value), 1);
 
   return (
-    <div className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-sm">
+    <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-sm">
       <h2 className="text-h4 text-foreground">{title}</h2>
       <div className="mt-4 space-y-3">
         {rows.map((row) => (

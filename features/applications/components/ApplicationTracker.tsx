@@ -85,7 +85,7 @@ function ApplicationCard({
   const [notes, setNotes] = useState(app.notes ?? "");
 
   return (
-    <div className="rounded-lg border-2 border-border bg-card p-3 shadow-brutal-xs">
+    <div className="rounded-lg border-[3px] border-neutral-950 bg-card p-3 shadow-brutal-xs">
       <Link
         href={`/internships/${app.internship.slug}`}
         className="text-body-sm font-semibold text-foreground hover:underline"
@@ -152,7 +152,7 @@ export function ApplicationTracker({
         {announcement}
       </div>
 
-      <div className="flex items-center justify-end gap-1 rounded-lg border-2 border-border p-0.5 w-fit ml-auto">
+      <div className="flex items-center justify-end gap-1 rounded-lg border-[3px] border-neutral-950 p-0.5 w-fit ml-auto">
         <button
           type="button"
           onClick={() => setView("kanban")}
@@ -212,7 +212,7 @@ export function ApplicationTracker({
           {items.map((app) => (
             <div
               key={app.id}
-              className="flex items-center gap-3 rounded-lg border-2 border-border bg-card p-3"
+              className="flex items-center gap-3 rounded-lg border-[3px] border-neutral-950 bg-card p-3"
             >
               <Link
                 href={`/internships/${app.internship.slug}`}

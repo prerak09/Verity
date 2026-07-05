@@ -90,7 +90,7 @@ export default function StudentDashboardPage() {
   return (
     <div className="mx-auto max-w-wide space-y-10 px-4 py-8 sm:px-6">
       <div>
-        <h1 className="text-h1 text-foreground">Dashboard</h1>
+        <h1 className="font-display text-3xl font-bold text-neutral-950">Dashboard</h1>
         <p className="mt-1 text-body text-muted-foreground">
           Welcome back — here&apos;s what&apos;s new.
         </p>
@@ -102,7 +102,7 @@ export default function StudentDashboardPage() {
             <Link
               key={category.id}
               href={`/search?category=${category.slug}`}
-              className="shrink-0 rounded-sm border-2 border-border bg-muted px-3 py-1.5 text-body-sm font-medium text-foreground hover:border-brand-600"
+              className="shrink-0 rounded-sm border-[3px] border-neutral-950 bg-muted px-3 py-1.5 text-body-sm font-medium text-foreground hover:border-brand-600"
             >
               {category.name}
             </Link>
@@ -189,7 +189,7 @@ export default function StudentDashboardPage() {
             <Link
               key={status}
               href="/applications"
-              className="rounded-lg border-2 border-border bg-card p-3 text-center shadow-brutal-xs hover:bg-muted"
+              className="rounded-lg border-[3px] border-neutral-950 bg-card p-3 text-center shadow-brutal-xs hover:bg-muted"
             >
               <p className="font-display text-h3 tabular text-foreground">{count}</p>
               <p className="mt-0.5 text-caption text-muted-foreground">

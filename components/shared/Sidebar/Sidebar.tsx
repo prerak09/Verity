@@ -24,11 +24,11 @@ export function Sidebar({ sections, footer, className }: SidebarProps) {
   return (
     <aside
       className={cn(
-        "flex h-full w-64 shrink-0 flex-col border-r-2 border-border bg-muted",
+        "flex h-full w-64 shrink-0 flex-col border-r-[3px] border-neutral-950 bg-[#F6F4E8]",
         className,
       )}
     >
-      <div className="flex h-16 shrink-0 items-center border-b-2 border-border px-4">
+      <div className="flex h-16 shrink-0 items-center border-b-[3px] border-neutral-950 px-4">
         <Logo />
       </div>
 
@@ -37,8 +37,8 @@ export function Sidebar({ sections, footer, className }: SidebarProps) {
           <div key={section.label ?? i} className="space-y-1">
             {section.label && (
               <>
-                {i > 0 && <div className="my-2 border-t border-border-subtle" />}
-                <p className="px-3 text-overline text-muted-foreground">
+                {i > 0 && <div className="my-2 border-t-2 border-neutral-300" />}
+                <p className="px-3 font-mono text-[0.6875rem] font-bold uppercase tracking-[0.08em] text-neutral-500">
                   {section.label}
                 </p>
               </>

@@ -20,7 +20,7 @@ function ModuleCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-sm">
+    <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-sm">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <h2 className="text-h4 text-foreground">{title}</h2>
@@ -40,7 +40,7 @@ function ModuleCard({
 
 function StatTile({ label, value }: { label: string; value: number }) {
   return (
-    <div className="rounded-xl border-2 border-border bg-card p-4 shadow-brutal-sm">
+    <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-4 shadow-brutal-sm">
       <p className="text-overline text-muted-foreground">{label}</p>
       <p className="tabular mt-2 font-display text-display-lg text-foreground">
         {value.toLocaleString()}

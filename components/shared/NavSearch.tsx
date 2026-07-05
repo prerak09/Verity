@@ -95,7 +95,7 @@ export function NavSearch({ className }: { className?: string }) {
 
   return (
     <div ref={containerRef} className={cn("relative w-full", className)}>
-      <div className="flex h-9 w-full items-center gap-2 rounded-md border-2 border-border bg-card px-3 shadow-brutal-xs">
+      <div className="flex h-9 w-full items-center gap-2 rounded-md border-[3px] border-neutral-950 bg-card px-3 shadow-brutal-xs">
         <Search className="size-4 shrink-0 text-muted-foreground" aria-hidden />
         <input
           type="search"
@@ -118,7 +118,7 @@ export function NavSearch({ className }: { className?: string }) {
         <div
           id="nav-search-listbox"
           role="listbox"
-          className="absolute top-full left-0 z-50 mt-1.5 w-full overflow-hidden rounded-lg border-2 border-border bg-popover shadow-brutal-lg"
+          className="absolute top-full left-0 z-50 mt-1.5 w-full overflow-hidden rounded-lg border-[3px] border-neutral-950 bg-popover shadow-brutal-lg"
         >
           {results.length === 0 ? (
             <div className="p-4 text-center">
@@ -152,7 +152,7 @@ export function NavSearch({ className }: { className?: string }) {
                       className={cn(
                         "flex w-full items-center gap-2.5 border-l-2 border-transparent px-3 py-2 text-left text-sm",
                         i === activeIndex
-                          ? "border-brand-600 bg-brand-50 text-brand-800"
+                          ? "border-brand-600 bg-tile-lavender text-brand-800"
                           : "text-foreground hover:bg-muted",
                       )}
                     >

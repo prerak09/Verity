@@ -298,10 +298,10 @@ export function AdminCompaniesManager({
     <div className="space-y-6">
       <div>
         <div className="flex items-center justify-between">
-          <h2 className="text-h3 text-foreground">Companies</h2>
+          <h2 className="font-display text-xl font-bold text-neutral-950">Companies</h2>
           <CreateCompanyDialog onCreated={handleCreated} />
         </div>
-        <div className="mt-3 rounded-xl border-2 border-border bg-card shadow-brutal-sm">
+        <div className="mt-3 rounded-[4px] border-[3px] border-neutral-950 bg-card shadow-brutal-sm">
           <Table>
             <TableHeader>
               <TableRow>
@@ -326,8 +326,8 @@ export function AdminCompaniesManager({
       </div>
 
       <div>
-        <h2 className="text-h3 text-foreground">Internships</h2>
-        <div className="mt-3 rounded-xl border-2 border-border bg-card shadow-brutal-sm">
+        <h2 className="font-display text-xl font-bold text-neutral-950">Internships</h2>
+        <div className="mt-3 rounded-[4px] border-[3px] border-neutral-950 bg-card shadow-brutal-sm">
           <Table>
             <TableHeader>
               <TableRow>

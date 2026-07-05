@@ -22,7 +22,7 @@ function KpiCard({
   trend?: string;
 }) {
   return (
-    <div className="rounded-xl border-2 border-border bg-card p-4 shadow-brutal-sm">
+    <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-4 shadow-brutal-sm">
       <div className="flex items-center gap-2 text-muted-foreground">
         <Icon className="size-4" strokeWidth={1.75} aria-hidden />
         <p className="text-overline">{label}</p>
@@ -52,7 +52,7 @@ export default function CompanyDashboardPage() {
   return (
     <div className="mx-auto max-w-wide space-y-8 px-4 py-8 sm:px-6">
       <div>
-        <h1 className="text-h1 text-foreground">{company.name} Dashboard</h1>
+        <h1 className="font-display text-3xl font-bold text-neutral-950">{company.name} Dashboard</h1>
         <p className="mt-1 text-body text-muted-foreground">
           Here&apos;s how your profile is doing.
         </p>
@@ -61,7 +61,7 @@ export default function CompanyDashboardPage() {
       <VerificationBanner status={company.verificationStatus} />
 
       <section>
-        <h2 className="text-h3 text-foreground">Analytics</h2>
+        <h2 className="font-display text-xl font-bold text-neutral-950">Analytics</h2>
         <div className="mt-3 grid gap-4 sm:grid-cols-3">
           <KpiCard
             icon={Eye}
@@ -85,7 +85,7 @@ export default function CompanyDashboardPage() {
       </section>
 
       <section className="grid gap-4 sm:grid-cols-2">
-        <div className="rounded-xl border-2 border-border bg-card p-4 shadow-brutal-sm">
+        <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-4 shadow-brutal-sm">
           <div className="flex items-center justify-between">
             <h2 className="text-h4 text-foreground">Profile completeness</h2>
             <Link
@@ -106,7 +106,7 @@ export default function CompanyDashboardPage() {
           </p>
         </div>
 
-        <div className="rounded-xl border-2 border-border bg-card p-4 shadow-brutal-sm">
+        <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-4 shadow-brutal-sm">
           <div className="flex items-center justify-between">
             <h2 className="text-h4 text-foreground">Internships</h2>
             <Button size="sm" render={<Link href="/company/internships" />}>
@@ -115,7 +115,7 @@ export default function CompanyDashboardPage() {
           </div>
           <div className="mt-3 grid grid-cols-3 gap-2 text-center">
             <div>
-              <p className="tabular font-display text-h3 text-foreground">
+              <p className="tabular font-display font-display text-xl font-bold text-neutral-950">
                 {counts.DRAFT}
               </p>
               <p className="text-caption text-muted-foreground">Draft</p>

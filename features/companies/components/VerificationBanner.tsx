@@ -57,7 +57,7 @@ export function VerificationBanner({ status }: { status: VerificationStatus }) {
   const Icon = config.icon;
 
   return (
-    <div className={`flex items-center gap-4 rounded-xl border-2 p-4 ${TONE_CLASSES[config.tone]}`}>
+    <div className={`flex items-center gap-4 rounded-[4px] border-2 p-4 ${TONE_CLASSES[config.tone]}`}>
       <Icon className="size-6 shrink-0" strokeWidth={1.75} aria-hidden />
       <div className="min-w-0 flex-1">
         <p className="font-semibold">{config.title}</p>

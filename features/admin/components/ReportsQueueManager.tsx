@@ -140,7 +140,7 @@ export function ReportsQueueManager({ initialReports }: { initialReports: Report
 
   if (reports.length === 0) {
     return (
-      <div className="rounded-xl border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
+      <div className="rounded-[4px] border-2 border-dashed border-border-subtle p-8 text-center text-body-sm text-muted-foreground">
         No reports yet.
       </div>
     );
@@ -149,7 +149,7 @@ export function ReportsQueueManager({ initialReports }: { initialReports: Report
   return (
     <div className="space-y-3">
       {reports.map((report) => (
-        <div key={report.id} className="rounded-xl border-2 border-border bg-card p-4 shadow-brutal-sm">
+        <div key={report.id} className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-4 shadow-brutal-sm">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2">

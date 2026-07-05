@@ -11,7 +11,7 @@ import type { PlatformAnalytics } from "@/types";
 
 function StatTile({ label, value }: { label: string; value: string | number }) {
   return (
-    <div className="rounded-xl border-2 border-border bg-card p-4 shadow-brutal-sm">
+    <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-4 shadow-brutal-sm">
       <p className="text-overline text-muted-foreground">{label}</p>
       <p className="tabular mt-2 font-display text-display-lg text-foreground">
         {typeof value === "number" ? value.toLocaleString() : value}
@@ -30,7 +30,7 @@ function StatusBarList({
   const max = Math.max(...rows.map((r) => r.value), 1);
 
   return (
-    <div className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-sm">
+    <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-sm">
       <h2 className="text-h4 text-foreground">{title}</h2>
       <div className="mt-4 space-y-3">
         {rows.map((row) => (
@@ -95,7 +95,7 @@ export function PlatformAnalyticsCharts({ analytics }: { analytics: PlatformAnal
         }))}
       />
 
-      <div className="rounded-xl border-2 border-border bg-card p-5 shadow-brutal-sm">
+      <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-5 shadow-brutal-sm">
         <h2 className="text-h4 text-foreground">Top search terms</h2>
         <div className="mt-4 space-y-3">
           {topTerms.length === 0 ? (

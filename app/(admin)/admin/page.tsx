@@ -19,7 +19,7 @@ export default function AdminDashboardPage() {
 
   return (
     <div className="mx-auto max-w-wide px-4 py-8 sm:px-6">
-      <h1 className="text-h1 text-foreground">Admin Dashboard</h1>
+      <h1 className="font-display text-3xl font-bold text-neutral-950">Admin Dashboard</h1>
       <p className="mt-1 text-body text-muted-foreground">
         Platform-wide status at a glance.
       </p>
