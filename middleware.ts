@@ -109,5 +109,6 @@ export const config = {
     // Skip Next internals and static files; always run on API routes.
     "/((?!_next|.*\\..*).*)",
     "/(api|trpc)(.*)",
+    "/__clerk/:path*",
   ],
 };
