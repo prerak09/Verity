@@ -61,4 +61,4 @@ Branch prefix: `feat/fe-…`. After each task: **tick this file + `MASTER-CHECKL
 - [x] 5.8 Platform Analytics dashboard — KPI cards + trend charts (FR-72)
 - [x] 5.9 Notification center UI + unread bell badge (PRD §20)
 - [x] 5.10 Accessibility pass on all student-facing pages — keyboard nav, contrast (NFR 13.5)
-- [ ] 5.11 E2E (Playwright): sign-up → search → view profile → bookmark → add to tracker → update status (TRD §20)
+- [x] 5.11 E2E (Playwright): sign-up → search → view profile → bookmark → add to tracker → update status (TRD §20)
