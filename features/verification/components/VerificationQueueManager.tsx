@@ -187,7 +187,7 @@ function QueueCard({
               </div>
               <div>
                 <p className="text-caption text-muted-foreground">About</p>
-                <p
+                <div
                   className="text-foreground"
                   dangerouslySetInnerHTML={{ __html: detail.about ?? "—" }}
                 />
