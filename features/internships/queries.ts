@@ -116,3 +116,16 @@ export async function listInternshipDepartments(): Promise<string[]> {
   });
   return rows.map((r) => r.department).filter((d): d is string => Boolean(d));
 }
+
+/** Every internship regardless of status/company, for the admin moderation table. */
+export async function listAllInternshipsForAdmin(): Promise<InternshipCard[]> {
+  const internships = await db.internship.findMany({
+    where: { deletedAt: null },
+    orderBy: { updatedAt: "desc" },
+    take: 300,
+    include: {
+      company: { select: { id: true, slug: true, name: true, logoUrl: true } },
+    },
+  });
+  return internships.map((i) => toInternshipCard(i, i.company));
+}

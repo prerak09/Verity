@@ -1,21 +1,8 @@
-import type { PlatformRole } from "@/types";
+import type { AdminUserDTO } from "@/types";
 
-/**
- * No `AdminUserDTO` or `listUsers` query exists anywhere in the backend yet
- * (confirmed: no list-users function, no admin-facing user type in
- * `@/types`) — this is the one admin area with nothing to build against,
- * not even a mock. Kept local to `features/admin/` rather than in
- * `components/lib/mocks/` since it doesn't match a real shared contract.
- * Logged as CONTRACTS.md CR-15.
- */
-export interface AdminUserRow {
-  id: string;
-  name: string | null;
-  email: string;
-  role: PlatformRole;
-  createdAt: string;
-  disabledAt: string | null;
-}
+/** Re-exported for call sites written against the old local-only name (CR-15,
+ * now resolved — `listUsers()` in ./users.ts returns real `AdminUserDTO[]`). */
+export type AdminUserRow = AdminUserDTO;
 
 const now = Date.now();
 const daysAgo = (n: number) => new Date(now - n * 86_400_000).toISOString();

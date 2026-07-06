@@ -711,3 +711,23 @@ export type MarkAllNotificationsRead = (
 export type UpdateEmailNotifications = (
   enabled: boolean,
 ) => Promise<Result<{ emailNotificationsEnabled: boolean }>>;
+
+// features/admin/companies.ts (additive — CONTRACTS.md CR-14)
+export type GetAdminCompanies = () => Promise<CompanyDetail[]>;
+
+// features/admin/taxonomy.ts (additive — CONTRACTS.md CR-13)
+export type ListTechnologies = () => Promise<TaxonomyRef[]>;
+
+// features/internships/queries.ts (additive — admin moderation table)
+export type ListAllInternshipsForAdmin = () => Promise<InternshipCard[]>;
+
+// features/admin/users.ts (additive — CONTRACTS.md CR-15)
+export interface AdminUserDTO {
+  id: string;
+  name: string | null;
+  email: string;
+  role: PlatformRole;
+  createdAt: string;
+  disabledAt: string | null;
+}
+export type ListUsers = () => Promise<AdminUserDTO[]>;

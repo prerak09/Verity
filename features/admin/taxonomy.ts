@@ -9,7 +9,19 @@ import { assertCan } from "@/lib/rbac";
 import { handleAction, parseInput } from "@/lib/action";
 import { slugify } from "@/lib/slug";
 import { z } from "zod";
-import { ConflictError, NotFoundError, type Result, type TaxonomyInput } from "@/types";
+import {
+  ConflictError,
+  NotFoundError,
+  type Result,
+  type TaxonomyInput,
+  type TaxonomyRef,
+} from "@/types";
+
+/** Full technology taxonomy, for the admin CRUD page (CONTRACTS.md CR-13). */
+export async function listTechnologies(): Promise<TaxonomyRef[]> {
+  const rows = await db.technology.findMany({ orderBy: { name: "asc" } });
+  return rows.map((t) => ({ id: t.id, slug: t.slug, name: t.name }));
+}
 
 const taxonomySchema = z.object({
   name: z.string().trim().min(2).max(80),

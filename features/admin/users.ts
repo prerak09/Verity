@@ -10,7 +10,31 @@ import { requireUser } from "@/lib/auth";
 import { assertCan } from "@/lib/rbac";
 import { handleAction, parseInput } from "@/lib/action";
 import { z } from "zod";
-import { ConflictError, NotFoundError, type PlatformRole, type Result } from "@/types";
+import {
+  ConflictError,
+  NotFoundError,
+  type AdminUserDTO,
+  type PlatformRole,
+  type Result,
+} from "@/types";
+
+/** All accounts, newest first (CONTRACTS.md CR-15). `disabledAt` reuses
+ * `deletedAt`, which disableUser()/reinstateUser() already treat as a soft
+ * "disabled" flag rather than a real delete. */
+export async function listUsers(): Promise<AdminUserDTO[]> {
+  const users = await db.user.findMany({
+    orderBy: { createdAt: "desc" },
+    take: 300,
+  });
+  return users.map((u) => ({
+    id: u.id,
+    name: u.name,
+    email: u.email,
+    role: u.role,
+    createdAt: u.createdAt.toISOString(),
+    disabledAt: u.deletedAt ? u.deletedAt.toISOString() : null,
+  }));
+}
 
 const roleSchema = z.object({
   userId: z.string().cuid(),
