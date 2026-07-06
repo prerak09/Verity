@@ -14,18 +14,13 @@ import { NextResponse } from "next/server";
 import type { PlatformRole } from "@prisma/client";
 
 // Public routes — no auth required (TRD §8 step 2).
+// Browsing pages (/, /companies, /internships, /categories, /search) now
+// require sign-in too — only auth pages, the unauthorized page, and
+// signature/token-verified webhooks stay open.
 const isPublicRoute = createRouteMatcher([
-  "/",
-  "/companies(.*)",
-  "/internships(.*)",
-  "/categories(.*)",
-  "/search(.*)",
   "/sign-in(.*)",
   "/sign-up(.*)",
   "/unauthorized",
-  "/api/companies(.*)",
-  "/api/internships(.*)",
-  "/api/search(.*)",
   "/api/webhooks(.*)", // signature-verified instead of session (TRD §8)
   "/api/cron(.*)", // Bearer CRON_SECRET instead of session (TRD §13)
   // Auth'd JSON APIs self-guard via requireUser() → 401 JSON (not an HTML
