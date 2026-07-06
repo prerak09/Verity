@@ -14,10 +14,11 @@ import { NextResponse } from "next/server";
 import type { PlatformRole } from "@prisma/client";
 
 // Public routes — no auth required (TRD §8 step 2).
-// Browsing pages (/, /companies, /internships, /categories, /search) now
-// require sign-in too — only auth pages, the unauthorized page, and
-// signature/token-verified webhooks stay open.
+// Browsing pages (/companies, /internships, /categories, /search) require
+// sign-in — only the landing page, the team page, auth pages, the
+// unauthorized page, and signature/token-verified webhooks stay open.
 const isPublicRoute = createRouteMatcher([
+  "/", // landing page — public marketing entry point
   "/team", // About/team page — public marketing content, no user data
   "/sign-in(.*)",
   "/sign-up(.*)",
