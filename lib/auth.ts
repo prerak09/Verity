@@ -5,12 +5,20 @@
 // that lib/rbac.ts and every action consumes.
 
 import { auth, currentUser as clerkCurrentUser } from "@clerk/nextjs/server";
+import { Prisma } from "@prisma/client";
 import { db } from "@/lib/db";
 import {
   UnauthenticatedError,
   type CurrentUser,
   type PlatformRole,
 } from "@/types";
+
+/** Prisma P2022: the column exists in the generated client but not yet in the
+ * database — i.e. a migration (like 20260706120000_add_user_email_notifications)
+ * hasn't been deployed to this environment yet. */
+function isMissingColumnError(e: unknown): boolean {
+  return e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2022";
+}
 
 // Dev-only bypass paired with middleware.ts's MOCK_AUTH — lets local dev
 // preview all three portals without a real Clerk project. Gated on NODE_ENV
@@ -58,14 +66,37 @@ export async function getCurrentUser(): Promise<CurrentUser | null> {
   const { userId: clerkId } = await auth();
   if (!clerkId) return null;
 
-  const user = await db.user.findFirst({
-    where: { clerkId, deletedAt: null },
-    include: {
-      companyMemberships: {
-        include: { company: { select: { slug: true, name: true } } },
-      },
+  const membershipsInclude = {
+    companyMemberships: {
+      include: { company: { select: { slug: true, name: true } } },
     },
-  });
+  } as const;
+
+  let user;
+  let emailNotificationsEnabled = true;
+  try {
+    user = await db.user.findFirst({
+      where: { clerkId, deletedAt: null },
+      include: membershipsInclude,
+    });
+    if (user) emailNotificationsEnabled = user.emailNotificationsEnabled;
+  } catch (e) {
+    if (!isMissingColumnError(e)) throw e;
+    // Migration not deployed yet — degrade gracefully instead of a hard 500
+    // on every authenticated page. Real value once the migration lands.
+    user = await db.user.findFirst({
+      where: { clerkId, deletedAt: null },
+      select: {
+        id: true,
+        clerkId: true,
+        email: true,
+        name: true,
+        avatarUrl: true,
+        role: true,
+        ...membershipsInclude,
+      },
+    });
+  }
 
   // Session exists but the webhook-driven upsert hasn't landed yet (rare race on
   // first sign-up). Fall back to a lazy upsert from the Clerk profile so the app
@@ -81,7 +112,7 @@ export async function getCurrentUser(): Promise<CurrentUser | null> {
     name: user.name,
     avatarUrl: user.avatarUrl,
     role: user.role,
-    emailNotificationsEnabled: user.emailNotificationsEnabled,
+    emailNotificationsEnabled,
     memberships: user.companyMemberships.map((m) => ({
       companyId: m.companyId,
       companySlug: m.company.slug,
@@ -111,7 +142,7 @@ async function lazyUpsertFromClerk(clerkId: string): Promise<CurrentUser | null>
     profile.emailAddresses[0]?.emailAddress;
   if (!email) return null;
 
-  const user = await db.user.upsert({
+  const upsertArgs = {
     where: { clerkId },
     update: {},
     create: {
@@ -122,7 +153,21 @@ async function lazyUpsertFromClerk(clerkId: string): Promise<CurrentUser | null>
       avatarUrl: profile.imageUrl ?? null,
       // role defaults to STUDENT per schema (TRD §6).
     },
-  });
+  } as const;
+
+  let user;
+  let emailNotificationsEnabled = true;
+  try {
+    user = await db.user.upsert(upsertArgs);
+    emailNotificationsEnabled = user.emailNotificationsEnabled;
+  } catch (e) {
+    if (!isMissingColumnError(e)) throw e;
+    // Migration not deployed yet — see isMissingColumnError above.
+    user = await db.user.upsert({
+      ...upsertArgs,
+      select: { id: true, clerkId: true, email: true, name: true, avatarUrl: true, role: true },
+    });
+  }
 
   return {
     id: user.id,
@@ -131,7 +176,7 @@ async function lazyUpsertFromClerk(clerkId: string): Promise<CurrentUser | null>
     name: user.name,
     avatarUrl: user.avatarUrl,
     role: user.role,
-    emailNotificationsEnabled: user.emailNotificationsEnabled,
+    emailNotificationsEnabled,
     memberships: [],
   };
 }
