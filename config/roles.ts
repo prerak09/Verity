@@ -12,6 +12,7 @@ export const PERMISSIONS = {
     "application:create",
     "application:update:own",
     "profile:update:own",
+    "settings:update:own",
   ],
   COMPANY_OWNER: [
     "company:update:own",
@@ -20,12 +21,14 @@ export const PERMISSIONS = {
     "internship:update:own",
     "internship:archive:own",
     "analytics:view:own",
+    "settings:update:own",
   ],
   COMPANY_RECRUITER: [
     "internship:create",
     "internship:update:own",
     "internship:archive:own",
     "analytics:view:own",
+    "settings:update:own",
   ],
   ADMIN: [
     "user:manage",
@@ -37,6 +40,7 @@ export const PERMISSIONS = {
     "featured:manage",
     "report:handle",
     "analytics:view:all",
+    "settings:update:own",
   ],
 } as const;
 

@@ -7,6 +7,7 @@ import {
   BarChart3,
   ShieldCheck,
   Settings,
+  HelpCircle,
 } from "lucide-react";
 
 import { PortalShell } from "@/components/shared/PortalShell";
@@ -31,6 +32,12 @@ const SECTIONS: NavSection[] = [
       { href: "/company/settings", icon: navIcon(Settings), label: "Settings" },
     ],
   },
+  {
+    label: "Support",
+    items: [
+      { href: "/company/help", icon: navIcon(HelpCircle), label: "Help Center" },
+    ],
+  },
 ];
 
 export default function CompanyLayout({
@@ -38,5 +45,9 @@ export default function CompanyLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <PortalShell sections={SECTIONS}>{children}</PortalShell>;
+  return (
+    <PortalShell sections={SECTIONS} settingsHref="/company/settings">
+      {children}
+    </PortalShell>
+  );
 }

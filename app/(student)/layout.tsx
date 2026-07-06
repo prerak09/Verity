@@ -1,4 +1,4 @@
-import { LayoutDashboard, Search, Bookmark, Briefcase, UserCircle } from "lucide-react";
+import { LayoutDashboard, Search, Bookmark, Briefcase, UserCircle, Settings, HelpCircle } from "lucide-react";
 
 import { PortalShell } from "@/components/shared/PortalShell";
 import { navIcon } from "@/components/shared/Sidebar/nav-icon";
@@ -17,6 +17,13 @@ const SECTIONS: NavSection[] = [
     label: "Account",
     items: [
       { href: "/dashboard/profile", icon: navIcon(UserCircle), label: "Profile" },
+      { href: "/dashboard/settings", icon: navIcon(Settings), label: "Settings" },
+    ],
+  },
+  {
+    label: "Support",
+    items: [
+      { href: "/dashboard/help", icon: navIcon(HelpCircle), label: "Help Center" },
     ],
   },
 ];
@@ -26,5 +33,9 @@ export default function StudentLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <PortalShell sections={SECTIONS}>{children}</PortalShell>;
+  return (
+    <PortalShell sections={SECTIONS} profileHref="/dashboard/profile" settingsHref="/dashboard/settings">
+      {children}
+    </PortalShell>
+  );
 }

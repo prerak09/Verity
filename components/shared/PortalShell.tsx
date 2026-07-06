@@ -6,11 +6,16 @@ import { usePathname } from "next/navigation";
 import { Navbar } from "@/components/shared/Navbar";
 import { NavSearch } from "@/components/shared/NavSearch";
 import { Sidebar, type NavSection } from "@/components/shared/Sidebar/Sidebar";
+import { SidebarLogoutButton } from "@/components/shared/Sidebar/SidebarLogoutButton";
 import { Dialog, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 
 interface PortalShellProps {
   sections: NavSection[];
+  /** This portal's own profile page (student/company). Admin has none. */
+  profileHref?: string;
+  /** This portal's own settings page. */
+  settingsHref: string;
   children: React.ReactNode;
 }
 
@@ -19,7 +24,7 @@ interface PortalShellProps {
  * (student/company/admin — doc §12.6/§12.7). Desktop keeps the rail
  * visible; `< md` collapses it behind the hamburger into a slide-over.
  */
-export function PortalShell({ sections, children }: PortalShellProps) {
+export function PortalShell({ sections, profileHref, settingsHref, children }: PortalShellProps) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const pathname = usePathname();
 
@@ -37,9 +42,11 @@ export function PortalShell({ sections, children }: PortalShellProps) {
       <Navbar
         onMobileMenuToggle={() => setMobileNavOpen(true)}
         centerSlot={<NavSearch />}
+        profileHref={profileHref}
+        settingsHref={settingsHref}
       />
       <div className="flex flex-1">
-        <Sidebar sections={sections} className="hidden md:flex" />
+        <Sidebar sections={sections} footer={<SidebarLogoutButton />} className="hidden md:flex" />
 
         <Dialog open={mobileNavOpen} onOpenChange={setMobileNavOpen}>
           <DialogPortal>
@@ -48,7 +55,7 @@ export function PortalShell({ sections, children }: PortalShellProps) {
               data-slot="mobile-nav-content"
               className="fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] border-r-2 border-border bg-muted shadow-brutal-xl outline-none duration-150 data-open:animate-in data-open:slide-in-from-left data-closed:animate-out data-closed:slide-out-to-left"
             >
-              <Sidebar sections={sections} className="h-full w-full" />
+              <Sidebar sections={sections} footer={<SidebarLogoutButton />} className="h-full w-full" />
             </DialogPrimitive.Popup>
           </DialogPortal>
         </Dialog>

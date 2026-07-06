@@ -7,6 +7,8 @@ import {
   Tags,
   Star,
   BarChart3,
+  Settings,
+  HelpCircle,
 } from "lucide-react";
 
 import { PortalShell } from "@/components/shared/PortalShell";
@@ -26,6 +28,18 @@ const SECTIONS: NavSection[] = [
       { href: "/admin/analytics", icon: navIcon(BarChart3), label: "Platform Analytics" },
     ],
   },
+  {
+    label: "Account",
+    items: [
+      { href: "/admin/settings", icon: navIcon(Settings), label: "Settings" },
+    ],
+  },
+  {
+    label: "Support",
+    items: [
+      { href: "/admin/help", icon: navIcon(HelpCircle), label: "Help Center" },
+    ],
+  },
 ];
 
 export default function AdminLayout({
@@ -33,5 +47,9 @@ export default function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <PortalShell sections={SECTIONS}>{children}</PortalShell>;
+  return (
+    <PortalShell sections={SECTIONS} settingsHref="/admin/settings">
+      {children}
+    </PortalShell>
+  );
 }

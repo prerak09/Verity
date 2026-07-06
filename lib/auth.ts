@@ -28,6 +28,7 @@ const MOCK_CURRENT_USER: CurrentUser = {
   name: "Mock User",
   avatarUrl: null,
   role: MOCK_ROLE,
+  emailNotificationsEnabled: true,
   memberships:
     MOCK_ROLE === "COMPANY"
       ? [
@@ -80,6 +81,7 @@ export async function getCurrentUser(): Promise<CurrentUser | null> {
     name: user.name,
     avatarUrl: user.avatarUrl,
     role: user.role,
+    emailNotificationsEnabled: user.emailNotificationsEnabled,
     memberships: user.companyMemberships.map((m) => ({
       companyId: m.companyId,
       companySlug: m.company.slug,
@@ -129,6 +131,7 @@ async function lazyUpsertFromClerk(clerkId: string): Promise<CurrentUser | null>
     name: user.name,
     avatarUrl: user.avatarUrl,
     role: user.role,
+    emailNotificationsEnabled: user.emailNotificationsEnabled,
     memberships: [],
   };
 }

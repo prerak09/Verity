@@ -2,12 +2,21 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, User as UserIcon, ChevronDown } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useClerk } from "@clerk/nextjs";
+import { Menu, User as UserIcon, ChevronDown, UserCircle, Settings, LogOut } from "lucide-react";
 
 import { Logo } from "@/components/shared/Logo";
 import { NotificationBell } from "@/components/shared/NotificationBell";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/components/lib/utils";
 
 interface NavLink {
@@ -22,6 +31,10 @@ interface NavbarProps {
   links?: NavLink[];
   /** Marketing only: swaps Log in/Sign up for the signed-in bell + account button. */
   signedIn?: boolean;
+  /** App variant: this portal's own profile page (student/company). Admin has none. */
+  profileHref?: string;
+  /** App variant: this portal's own settings page. */
+  settingsHref?: string;
   /** Center slot for app variant — global search lands here in Phase 2. */
   centerSlot?: React.ReactNode;
   /** Rightmost slot override for app variant — user menu lands here once Clerk (0.6) is wired. */
@@ -32,20 +45,56 @@ interface NavbarProps {
 }
 
 /** Bell + avatar chip shown once a session exists (app shell, and marketing when signed in). */
-function AccountMenu() {
+function AccountMenu({
+  profileHref,
+  settingsHref = "/dashboard",
+}: {
+  /** Omitted where there's no personal profile to edit (e.g. admin). */
+  profileHref?: string;
+  settingsHref?: string;
+}) {
+  const router = useRouter();
+  const { signOut } = useClerk();
+
   return (
     <>
       <NotificationBell />
-      <button
-        type="button"
-        aria-label="Account"
-        className="flex items-center gap-2 rounded-[3px] border-[3px] border-neutral-950 bg-card py-1 pl-1 pr-2.5 [box-shadow:2px_2px_0_0_var(--color-neutral-950)] transition-transform hover:-translate-y-0.5"
-      >
-        <span className="grid size-7 place-items-center rounded-[2px] border-2 border-neutral-950 bg-tile-lavender">
-          <UserIcon className="size-4 text-neutral-950" strokeWidth={2.25} aria-hidden />
-        </span>
-        <ChevronDown className="size-3.5 text-neutral-700" aria-hidden />
-      </button>
+      <DropdownMenu>
+        <DropdownMenuTrigger
+          render={
+            <button
+              type="button"
+              aria-label="Account"
+              className="flex items-center gap-2 rounded-[3px] border-[3px] border-neutral-950 bg-card py-1 pl-1 pr-2.5 [box-shadow:2px_2px_0_0_var(--color-neutral-950)] transition-transform hover:-translate-y-0.5"
+            />
+          }
+        >
+          <span className="grid size-7 place-items-center rounded-[2px] border-2 border-neutral-950 bg-tile-lavender">
+            <UserIcon className="size-4 text-neutral-950" strokeWidth={2.25} aria-hidden />
+          </span>
+          <ChevronDown className="size-3.5 text-neutral-700" aria-hidden />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          {profileHref && (
+            <DropdownMenuItem render={<Link href={profileHref} />}>
+              <UserCircle />
+              Profile
+            </DropdownMenuItem>
+          )}
+          <DropdownMenuItem render={<Link href={settingsHref} />}>
+            <Settings />
+            Settings
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem
+            variant="destructive"
+            onClick={() => signOut(() => router.push("/"))}
+          >
+            <LogOut />
+            Log out
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </>
   );
 }
@@ -59,6 +108,8 @@ export function Navbar({
   variant = "app",
   links = [],
   signedIn = false,
+  profileHref,
+  settingsHref,
   centerSlot,
   userSlot,
   onMobileMenuToggle,
@@ -167,7 +218,7 @@ export function Navbar({
               </div>
             )}
             <nav className="ml-auto flex items-center gap-2">
-              {userSlot ?? <AccountMenu />}
+              {userSlot ?? <AccountMenu profileHref={profileHref} settingsHref={settingsHref} />}
             </nav>
           </>
         )}

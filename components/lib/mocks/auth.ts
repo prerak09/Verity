@@ -7,6 +7,7 @@ export const MOCK_CURRENT_STUDENT: CurrentUser = {
   name: "Jordan Ames",
   avatarUrl: null,
   role: "STUDENT",
+  emailNotificationsEnabled: true,
   memberships: [],
 };
 
@@ -21,6 +22,7 @@ export const MOCK_CURRENT_COMPANY_OWNER: CurrentUser = {
   name: "Dr. Sam Okafor",
   avatarUrl: null,
   role: "COMPANY",
+  emailNotificationsEnabled: true,
   memberships: [
     {
       companyId: "co_meridian",
@@ -38,5 +40,6 @@ export const MOCK_CURRENT_ADMIN: CurrentUser = {
   name: "Verity Admin",
   avatarUrl: null,
   role: "ADMIN",
+  emailNotificationsEnabled: true,
   memberships: [],
 };

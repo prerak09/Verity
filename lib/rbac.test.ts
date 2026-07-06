@@ -10,6 +10,7 @@ function user(overrides: Partial<CurrentUser>): CurrentUser {
     name: null,
     avatarUrl: null,
     role: "STUDENT",
+    emailNotificationsEnabled: true,
     memberships: [],
     ...overrides,
   };

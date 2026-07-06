@@ -164,6 +164,7 @@ export interface CurrentUser {
   name: string | null;
   avatarUrl: string | null;
   role: PlatformRole;
+  emailNotificationsEnabled: boolean;
   /** Company memberships (empty for students/admins). */
   memberships: CompanyMembership[];
 }
@@ -705,3 +706,8 @@ export type MarkNotificationRead = (id: string) => Promise<Result<null>>;
 export type MarkAllNotificationsRead = (
   userId: string,
 ) => Promise<Result<null>>;
+
+// features/settings/actions.ts
+export type UpdateEmailNotifications = (
+  enabled: boolean,
+) => Promise<Result<{ emailNotificationsEnabled: boolean }>>;

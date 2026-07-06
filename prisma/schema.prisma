@@ -83,6 +83,7 @@ model User {
   name      String?
   avatarUrl String?
   role      PlatformRole @default(STUDENT)
+  emailNotificationsEnabled Boolean @default(true)
 
   studentProfile     StudentProfile?
   companyMemberships CompanyMember[]
