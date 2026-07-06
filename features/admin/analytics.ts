@@ -72,3 +72,17 @@ export async function getPlatformAnalytics(): Promise<PlatformAnalytics> {
     },
   };
 }
+
+/** Taxonomy + featured counts for the admin dashboard's module cards. */
+export async function getDashboardCounts(): Promise<{
+  categoryCount: number;
+  technologyCount: number;
+  featuredCount: number;
+}> {
+  const [categoryCount, technologyCount, featuredCount] = await Promise.all([
+    db.category.count(),
+    db.technology.count(),
+    db.company.count({ where: { isFeatured: true, deletedAt: null } }),
+  ]);
+  return { categoryCount, technologyCount, featuredCount };
+}
