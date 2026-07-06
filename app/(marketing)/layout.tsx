@@ -3,7 +3,7 @@ import { Logo } from "@/components/shared/Logo";
 import { getCurrentUser } from "@/lib/auth";
 
 const NAV_LINKS = [
-  { href: "/companies", label: "Team" },
+  { href: "/team", label: "Team" },
   { href: "/companies", label: "Browse Startups" },
   { href: "/internships", label: "Career", badge: "NEW" },
   { href: "/categories", label: "Category" },

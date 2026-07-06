@@ -18,6 +18,7 @@ import type { PlatformRole } from "@prisma/client";
 // require sign-in too — only auth pages, the unauthorized page, and
 // signature/token-verified webhooks stay open.
 const isPublicRoute = createRouteMatcher([
+  "/team", // About/team page — public marketing content, no user data
   "/sign-in(.*)",
   "/sign-up(.*)",
   "/unauthorized",
