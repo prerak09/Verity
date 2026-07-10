@@ -7,7 +7,7 @@ const NAV_LINKS = [
   { href: "/internships", label: "Career" },
   { href: "/companies", label: "Users" },
   { href: "/categories", label: "Resources" },
-  { href: "/companies", label: "Pricing" },
+  { href: "/dashboard", label: "Dashboard" },
 ];
 
 export default function MarketingLayout({

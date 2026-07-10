@@ -8,10 +8,6 @@ import {
   IdCard,
   Play,
   ArrowRight,
-  Globe,
-  Briefcase,
-  Users,
-  Star,
   Asterisk,
   Sparkle,
   Minus,
@@ -340,27 +336,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Bottom stat bar */}
-      <section className="border-t-2 border-border bg-brand-400">
-        <div className="mx-auto grid max-w-wide grid-cols-2 gap-6 px-4 py-10 sm:px-6 md:grid-cols-4">
-          {[
-            { icon: Globe, value: "12K+", label: "Startups Tracked" },
-            { icon: Briefcase, value: "2K+", label: "Open Internships Tracked" },
-            { icon: Users, value: "85+", label: "Countries Covered" },
-            { icon: Star, value: "4.8/5", label: "Loved by Users" },
-          ].map(({ icon: Icon, value, label }) => (
-            <div key={label} className="flex items-center gap-3">
-              <span className="flex size-10 shrink-0 items-center justify-center rounded-lg border-2 border-border bg-card">
-                <Icon className="size-5 text-foreground" strokeWidth={1.75} aria-hidden />
-              </span>
-              <div>
-                <p className="font-display text-h3 font-bold text-white">{value}</p>
-                <p className="text-caption text-white/80">{label}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
     </>
   );
 }
