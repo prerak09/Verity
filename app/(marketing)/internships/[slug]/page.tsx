@@ -5,9 +5,9 @@ import { notFound } from "next/navigation";
 import { ExternalLink, MapPin, Clock } from "lucide-react";
 
 import { RemoteChip } from "@/components/shared/RemoteChip";
-import { Button } from "@/components/ui/button";
 import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
 import { AddToTrackerButton } from "@/features/applications/components/AddToTrackerButton";
+import { ApplyButton } from "@/features/internships/components/ApplyButton";
 import { getInternshipBySlug } from "@/features/internships/queries";
 
 export const dynamic = "force-dynamic";
@@ -124,20 +124,7 @@ export default async function InternshipDetailPage({
               Applications are handled on {internship.companyName}&apos;s own
               site — Verity doesn&apos;t collect applications directly.
             </p>
-            <Button
-              className="mt-4 w-full"
-              size="lg"
-              render={
-                <Link
-                  href={internship.applyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                />
-              }
-            >
-              Apply on company site
-              <ExternalLink className="size-4" aria-hidden />
-            </Button>
+            <ApplyButton applyUrl={internship.applyUrl} />
             <AddToTrackerButton
               internshipId={internship.id}
               initialTracked={false}

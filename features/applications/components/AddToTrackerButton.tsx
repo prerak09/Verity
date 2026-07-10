@@ -6,6 +6,7 @@ import { Check, Plus } from "lucide-react";
 
 import { createApplication } from "@/features/applications/actions";
 import { Button } from "@/components/ui/button";
+import { SignInGate } from "@/components/shared/SignInGate";
 
 /**
  * FR-25 keeps "Apply" as an external-only deep link — Verity never collects
@@ -37,24 +38,33 @@ export function AddToTrackerButton({
   }
 
   return (
-    <Button
-      type="button"
-      variant="outline"
-      className="mt-2 w-full"
-      disabled={pending || tracked}
-      onClick={handleClick}
-    >
-      {tracked ? (
-        <>
-          <Check className="size-4" aria-hidden />
-          In your tracker
-        </>
-      ) : (
-        <>
+    <SignInGate
+      trigger={
+        <Button type="button" variant="outline" className="mt-2 w-full">
           <Plus className="size-4" aria-hidden />
           Add to tracker
-        </>
-      )}
-    </Button>
+        </Button>
+      }
+    >
+      <Button
+        type="button"
+        variant="outline"
+        className="mt-2 w-full"
+        disabled={pending || tracked}
+        onClick={handleClick}
+      >
+        {tracked ? (
+          <>
+            <Check className="size-4" aria-hidden />
+            In your tracker
+          </>
+        ) : (
+          <>
+            <Plus className="size-4" aria-hidden />
+            Add to tracker
+          </>
+        )}
+      </Button>
+    </SignInGate>
   );
 }
