@@ -9,10 +9,9 @@ import {
   adminCreateCompany,
   suspendCompany,
   reinstateCompany,
-  adminUnpublishInternship,
 } from "@/features/admin/companies";
 import { slugify } from "@/lib/slug";
-import type { CompanyDetail, FieldErrors, InternshipCard } from "@/types";
+import type { CompanyDetail, FieldErrors } from "@/types";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -189,50 +188,25 @@ function CompanyRow({
         )}
       </TableCell>
       <TableCell className="text-right">
-        {suspended ? (
-          <Button type="button" size="sm" variant="outline" disabled={pending} onClick={handleReinstate}>
-            Reinstate
+        <div className="flex items-center justify-end gap-2">
+          <Button
+            type="button"
+            size="sm"
+            variant="secondary"
+            render={<Link href={`/admin/companies/${company.id}`} />}
+          >
+            Manage
           </Button>
-        ) : (
-          <Button type="button" size="sm" variant="destructive" disabled={pending} onClick={handleSuspend}>
-            Suspend
-          </Button>
-        )}
-      </TableCell>
-    </TableRow>
-  );
-}
-
-function InternshipRow({ internship, onUnpublished }: { internship: InternshipCard; onUnpublished: (id: string) => void }) {
-  const [pending, setPending] = useState(false);
-
-  async function handleUnpublish() {
-    setPending(true);
-    const result = await adminUnpublishInternship(internship.id);
-    setPending(false);
-    if (result.success) {
-      toast.success(`${internship.title} unpublished.`);
-      onUnpublished(internship.id);
-    } else {
-      toast.error(result.error.message);
-    }
-  }
-
-  return (
-    <TableRow>
-      <TableCell className="font-medium text-foreground">{internship.title}</TableCell>
-      <TableCell className="text-muted-foreground">{internship.companyName}</TableCell>
-      <TableCell>
-        <Badge variant={internship.status === "PUBLISHED" ? "default" : "outline"}>
-          {internship.status}
-        </Badge>
-      </TableCell>
-      <TableCell className="text-right">
-        {internship.status === "PUBLISHED" && (
-          <Button type="button" size="sm" variant="destructive" disabled={pending} onClick={handleUnpublish}>
-            Unpublish
-          </Button>
-        )}
+          {suspended ? (
+            <Button type="button" size="sm" variant="outline" disabled={pending} onClick={handleReinstate}>
+              Reinstate
+            </Button>
+          ) : (
+            <Button type="button" size="sm" variant="destructive" disabled={pending} onClick={handleSuspend}>
+              Suspend
+            </Button>
+          )}
+        </div>
       </TableCell>
     </TableRow>
   );
@@ -240,14 +214,11 @@ function InternshipRow({ internship, onUnpublished }: { internship: InternshipCa
 
 export function AdminCompaniesManager({
   initialCompanies,
-  initialInternships,
 }: {
   initialCompanies: CompanyDetail[];
-  initialInternships: InternshipCard[];
 }) {
   const [companies, setCompanies] = useState(initialCompanies);
   const [suspendedIds, setSuspendedIds] = useState<Set<string>>(new Set());
-  const [internships, setInternships] = useState(initialInternships);
 
   function handleCreated(id: string, slug: string, name: string) {
     setCompanies((prev) => [
@@ -290,10 +261,6 @@ export function AdminCompaniesManager({
     });
   }
 
-  function handleUnpublished(id: string) {
-    setInternships((prev) => prev.map((i) => (i.id === id ? { ...i, status: "ARCHIVED" } : i)));
-  }
-
   return (
     <div className="space-y-6">
       <div>
@@ -301,6 +268,10 @@ export function AdminCompaniesManager({
           <h2 className="font-display text-xl font-bold text-neutral-950">Companies</h2>
           <CreateCompanyDialog onCreated={handleCreated} />
         </div>
+        <p className="mt-2 font-mono text-sm text-neutral-600">
+          Click <span className="font-bold">Manage</span> on a company to edit its
+          profile and add internships &amp; jobs.
+        </p>
         <div className="mt-3 rounded-[4px] border-[3px] border-neutral-950 bg-card shadow-brutal-sm">
           <Table>
             <TableHeader>
@@ -319,27 +290,6 @@ export function AdminCompaniesManager({
                   suspended={suspendedIds.has(c.id)}
                   onToggleSuspended={handleToggleSuspended}
                 />
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      </div>
-
-      <div>
-        <h2 className="font-display text-xl font-bold text-neutral-950">Internships</h2>
-        <div className="mt-3 rounded-[4px] border-[3px] border-neutral-950 bg-card shadow-brutal-sm">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Title</TableHead>
-                <TableHead>Company</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {internships.map((i) => (
-                <InternshipRow key={i.id} internship={i} onUnpublished={handleUnpublished} />
               ))}
             </TableBody>
           </Table>

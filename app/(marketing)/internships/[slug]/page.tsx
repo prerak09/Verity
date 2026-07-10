@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ExternalLink, MapPin, Clock } from "lucide-react";
+import { MapPin, Clock } from "lucide-react";
 
 import { RemoteChip } from "@/components/shared/RemoteChip";
 import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
