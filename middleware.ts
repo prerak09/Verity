@@ -9,7 +9,7 @@
 // WHERE ownership filter is Layer 3. Role is read from the JWT publicMetadata
 // claim (synced by the Clerk webhook) so there's no DB round-trip here (TRD §6).
 
-import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { clerkMiddleware, createRouteMatcher, clerkClient } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import type { PlatformRole } from "@prisma/client";
 
@@ -84,7 +84,24 @@ const withClerk = clerkMiddleware(async (auth, req) => {
     return redirectToSignIn({ returnBackUrl: req.url });
   }
 
-  const role = roleFromClaims(sessionClaims);
+  // Role gating only matters for /admin and /company. Read it from the session
+  // token claim first; if it's absent (the default session token doesn't carry
+  // publicMetadata unless a JWT template adds it), fall back to fetching the
+  // user's publicMetadata.role straight from Clerk — the DB-synced source.
+  const needsRoleCheck = isAdminRoute(req) || isCompanyRoute(req);
+  let role = roleFromClaims(sessionClaims);
+  if (needsRoleCheck && !role) {
+    try {
+      const client = await clerkClient();
+      const user = await client.users.getUser(userId);
+      const r = user.publicMetadata?.role;
+      if (r === "STUDENT" || r === "COMPANY" || r === "ADMIN") role = r;
+    } catch {
+      // On lookup failure, fall through — the page-level assertCan (Layer 2)
+      // is the authoritative gate and will still block a wrong role.
+    }
+  }
+
   const unauthorized = new URL("/unauthorized", req.url);
 
   // /admin/* → ADMIN only.
