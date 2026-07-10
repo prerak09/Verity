@@ -128,10 +128,21 @@ export async function listInternshipDepartments(): Promise<string[]> {
   return rows.map((r) => r.department).filter((d): d is string => Boolean(d));
 }
 
-/** Every internship regardless of status/company, for the admin moderation table. */
-export async function listAllInternshipsForAdmin(): Promise<InternshipCard[]> {
+/** Every listing regardless of status/company, for the admin moderation tables.
+ *  `kind` splits internships (jobType INTERNSHIP or null) from jobs (the rest),
+ *  so the two dedicated admin sections stay populated by the same add-in-company
+ *  flow — the jobType chosen when the listing is created routes it here. */
+export async function listAllInternshipsForAdmin(
+  kind?: "internship" | "job",
+): Promise<InternshipCard[]> {
+  const where: Prisma.InternshipWhereInput = { deletedAt: null };
+  if (kind === "internship") {
+    where.OR = [{ jobType: "INTERNSHIP" }, { jobType: null }];
+  } else if (kind === "job") {
+    where.jobType = { in: ["FULL_TIME", "PART_TIME", "CONTRACT"] };
+  }
   const internships = await db.internship.findMany({
-    where: { deletedAt: null },
+    where,
     orderBy: { updatedAt: "desc" },
     take: 300,
     include: {

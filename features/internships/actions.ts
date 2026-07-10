@@ -67,6 +67,8 @@ export async function createInternship(
         title: fields.title,
         description: sanitizeHtml(fields.description), // NFR 13.4
         location: fields.location,
+        department: fields.department,
+        jobType: fields.jobType, // routes the listing to internships vs jobs
         remotePolicy: fields.remotePolicy,
         stipend: fields.stipend,
         duration: fields.duration,
