@@ -3,6 +3,7 @@
 // types/index.ts: getCompanyBySlug, listCompanies, getOpenInternships,
 // getProfileCompleteness.
 
+import { unstable_cache } from "next/cache";
 import { Prisma } from "@prisma/client";
 import { db } from "@/lib/db";
 import { REQUIRED_FOR_VERIFICATION } from "./schema";
@@ -30,8 +31,19 @@ function clampPage(filters: CompanyFilters) {
   return { page, pageSize, skip: (page - 1) * pageSize };
 }
 
-/** Full public company profile by slug (only VERIFIED, non-deleted). */
-export async function getCompanyBySlug(
+/** Full public company profile by slug (only VERIFIED, non-deleted).
+ *  Cached per-slug (tag `company:{slug}`) — profile edits already call
+ *  revalidateTag('company:{slug}'), so the cache stays correct while repeat
+ *  views skip the DB entirely. 5-min safety TTL. */
+export function getCompanyBySlug(slug: string): Promise<CompanyDetail | null> {
+  return unstable_cache(
+    () => getCompanyBySlugUncached(slug),
+    ["company-by-slug", slug],
+    { tags: [`company:${slug}`], revalidate: 300 },
+  )();
+}
+
+async function getCompanyBySlugUncached(
   slug: string,
 ): Promise<CompanyDetail | null> {
   const c = await db.company.findFirst({
@@ -125,7 +137,20 @@ function resolveFundingStageWhere(
 /** Paginated, filtered directory list (TRD §9.2). `q` is a simple contains
  *  match here; ranked full-text search for the dedicated search page goes
  *  through lib/search.ts. */
-export async function listCompanies(
+export function listCompanies(
+  filters: CompanyFilters,
+): Promise<Paginated<CompanyCard>> {
+  // Cache keyed on the exact filter set (tag `companies:list` for bulk
+  // invalidation on catalog changes). 60s revalidate keeps the directory fresh
+  // enough while making the common page-1 view instant on repeat loads.
+  return unstable_cache(
+    () => listCompaniesUncached(filters),
+    ["companies-list", JSON.stringify(filters)],
+    { tags: ["companies:list"], revalidate: 60 },
+  )();
+}
+
+async function listCompaniesUncached(
   filters: CompanyFilters,
 ): Promise<Paginated<CompanyCard>> {
   const { page, pageSize, skip } = clampPage(filters);

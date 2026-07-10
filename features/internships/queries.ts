@@ -1,5 +1,6 @@
 // features/internships/queries.ts — internship reads (TRD §9.2, PRD §18).
 
+import { unstable_cache } from "next/cache";
 import { Prisma } from "@prisma/client";
 import { db } from "@/lib/db";
 import { toInternshipCard, toInternshipDetail } from "./map";
@@ -28,7 +29,17 @@ export async function getInternshipBySlug(
 }
 
 /** Paginated, filtered internship list (published only). */
-export async function listInternships(
+export function listInternships(
+  filters: InternshipFilters,
+): Promise<Paginated<InternshipCard>> {
+  return unstable_cache(
+    () => listInternshipsUncached(filters),
+    ["internships-list", JSON.stringify(filters)],
+    { tags: ["internships:list"], revalidate: 60 },
+  )();
+}
+
+async function listInternshipsUncached(
   filters: InternshipFilters,
 ): Promise<Paginated<InternshipCard>> {
   const page = Math.max(1, filters.page ?? 1);
