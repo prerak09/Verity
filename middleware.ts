@@ -14,15 +14,24 @@ import { NextResponse } from "next/server";
 import type { PlatformRole } from "@prisma/client";
 
 // Public routes — no auth required (TRD §8 step 2).
-// Browsing pages (/companies, /internships, /categories, /search) require
-// sign-in — only the landing page, the team page, auth pages, the
-// unauthorized page, and signature/token-verified webhooks stay open.
+// Discovery is OPEN: anyone can browse companies, internships, categories, and
+// search WITHOUT signing in (students discover before creating an account).
+// The *actions* — apply / bookmark / add-to-tracker — prompt sign-in client-side
+// instead (see components/shared/SignInGate). Only the student/company/admin
+// portals are gated below.
 const isPublicRoute = createRouteMatcher([
-  "/", // landing page — public marketing entry point
-  "/team", // About/team page — public marketing content, no user data
+  "/", // landing page
+  "/team", // about/team page
+  "/companies(.*)", // directory + public company profiles
+  "/internships(.*)", // job/internship list + detail
+  "/categories(.*)", // category browse
+  "/search(.*)", // search results
   "/sign-in(.*)",
   "/sign-up(.*)",
   "/unauthorized",
+  "/api/companies(.*)", // public read APIs
+  "/api/internships(.*)",
+  "/api/search(.*)",
   "/api/webhooks(.*)", // signature-verified instead of session (TRD §8)
   "/api/cron(.*)", // Bearer CRON_SECRET instead of session (TRD §13)
   // Auth'd JSON APIs self-guard via requireUser() → 401 JSON (not an HTML

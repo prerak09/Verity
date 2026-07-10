@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import { toggleBookmark } from "@/features/bookmarks/actions";
 import type { BookmarkTargetType } from "@/types";
 import { Button } from "@/components/ui/button";
+import { SignInGate } from "@/components/shared/SignInGate";
 import { cn } from "@/components/lib/utils";
 
 export function BookmarkButton({
@@ -49,20 +50,33 @@ export function BookmarkButton({
   }
 
   return (
-    <Button
-      variant="outline"
-      size="icon"
-      disabled={pending}
-      onClick={handleClick}
-      aria-pressed={bookmarked}
-      aria-label={bookmarked ? "Remove bookmark" : "Bookmark"}
-      className={cn(bookmarked && "border-brand-600 text-brand-700", className)}
+    <SignInGate
+      trigger={
+        <Button
+          variant="outline"
+          size="icon"
+          aria-label="Bookmark"
+          className={className}
+        >
+          <Bookmark className="size-4" fill="none" aria-hidden />
+        </Button>
+      }
     >
-      <Bookmark
-        className="size-4"
-        fill={bookmarked ? "currentColor" : "none"}
-        aria-hidden
-      />
-    </Button>
+      <Button
+        variant="outline"
+        size="icon"
+        disabled={pending}
+        onClick={handleClick}
+        aria-pressed={bookmarked}
+        aria-label={bookmarked ? "Remove bookmark" : "Bookmark"}
+        className={cn(bookmarked && "border-brand-600 text-brand-700", className)}
+      >
+        <Bookmark
+          className="size-4"
+          fill={bookmarked ? "currentColor" : "none"}
+          aria-hidden
+        />
+      </Button>
+    </SignInGate>
   );
 }
