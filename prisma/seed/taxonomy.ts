@@ -27,6 +27,7 @@ const TECHNOLOGIES = [
   { slug: "gcp", name: "GCP" },
   { slug: "kubernetes", name: "Kubernetes" },
   { slug: "nodejs", name: "Node.js" },
+  { slug: "cpp", name: "C++" },
 ];
 
 export async function seedTaxonomy(db: PrismaClient): Promise<SeededTaxonomy> {

@@ -262,6 +262,63 @@ const COMPANIES: DemoCompany[] = [
       },
     ],
   },
+  {
+    slug: "didi-autonomous-driving",
+    name: "DiDi Autonomous Driving",
+    tagline: "Level 4 autonomous driving for shared mobility",
+    about:
+      "DiDi's autonomous driving division was established in 2016 and became an independent company in August 2019, focused on Level 4 autonomous driving technology to make transportation safer and more efficient through shared-mobility fleet integration (robotaxis). Headquartered in Beijing with U.S. R&D operations in the San Francisco Bay Area, it's led by co-founder and CEO Zhang Bo and backed by investors including SoftBank Vision Fund 2, GAC Capital, and Valeo, having raised over $1.5B across multiple rounds including a 2-billion-yuan Series D in October 2025.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/75/DiDi_Logo.svg",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.didiglobal.com/science/intelligent-driving",
+    categories: ["ai-ml", "consumer"],
+    technologies: ["cpp"],
+    location: { city: "Beijing", country: "China" },
+    founders: [{ name: "Zhang Bo", title: "Co-founder & CEO, Autonomous Driving" }],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/didi-autonomous-driving/" },
+      { type: "twitter", url: "https://x.com/didiglobal" },
+    ],
+    internships: [
+      {
+        slug: "didi-motion-planning-engineer-phd-intern",
+        title: "Motion Planning Engineer (PhD, Intern)",
+        description: `
+<p>DiDi's autonomous driving division, established in 2016, became independent in August 2019. The organization focuses on Level 4 autonomous driving technology to make transportation safer and more efficient through shared-mobility fleet integration.</p>
+<p>This position targets PhD graduates with strong research backgrounds to develop next-generation planning systems for autonomous vehicles using algorithm design and system integration expertise.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Implement behavioral planning solutions for lane changes, merges, yields, and multi-agent interactions.</li>
+<li>Design motion planning algorithms combining geometry-based path reasoning and context-aware speed reasoning.</li>
+<li>Develop core geometry and velocity planning systems for feasibility and comfort.</li>
+<li>Model driving environments and agent behaviors for robust world representation.</li>
+<li>Formulate cost functions balancing safety, comfort, and efficiency.</li>
+<li>Analyze system performance through simulation and real-world data analysis.</li>
+<li>Collaborate across Perception, Prediction, and Control teams.</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>PhD (completed or in-progress) in Robotics, Computer Science, Electrical Engineering, or a related field.</li>
+<li>Research/internship experience in motion planning algorithms, behavioral planning, trajectory optimization, or multi-agent modeling.</li>
+<li>Publications in top conferences (RSS, ICRA, IROS, CVPR, NeurIPS, CoRL).</li>
+<li>C++ proficiency for real-time algorithm implementation.</li>
+<li>Strong analytical and communication skills with a collaborative approach.</li>
+</ul>
+<p><strong>Benefits:</strong> top-performing interns may convert to full-time positions upon program completion; eligible for intern benefits.</p>
+`.trim(),
+        location: "San Jose, CA",
+        department: "Autonomous Driving",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$46/hour",
+        duration: "Not specified",
+        applyUrl: "https://job-boards.greenhouse.io/didi/jobs/8056492",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
