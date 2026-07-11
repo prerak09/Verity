@@ -319,6 +319,299 @@ const COMPANIES: DemoCompany[] = [
       },
     ],
   },
+  {
+    slug: "blaze",
+    name: "Blaze",
+    tagline: "Global Venmo for cross-border payments",
+    about:
+      "Blaze (YC S24) is a peer-to-peer payments app that uses USDC to make cross-border payments fast and cheap between any two people anywhere in the world, built for digital nomads and expats who want the seamless \"Venmo experience\" globally.",
+    logoUrl: "https://bookface-images.s3.us-west-2.amazonaws.com/logos/052bc2e2a09c898237e40b2e50a9b471dc81330b.png",
+    fundingStage: "SEED",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1-10",
+    websiteUrl: "https://blaze.money",
+    categories: ["fintech"],
+    technologies: ["react", "nodejs", "typescript", "graphql", "postgres"],
+    location: { city: "San Francisco", country: "USA" },
+    founders: [
+      {
+        name: "Faiyam Rahman",
+        title: "Co-founder & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/faiyam-rahman/",
+      },
+      {
+        name: "Luc Succès",
+        title: "Co-founder",
+        linkedinUrl: "https://www.linkedin.com/in/lucsucces/",
+      },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/blazepayments" },
+      { type: "twitter", url: "https://x.com/blaze_payments" },
+      { type: "instagram", url: "https://www.instagram.com/blaze.payments/" },
+    ],
+    internships: [
+      {
+        slug: "blaze-junior-software-engineer",
+        title: "Junior Software Engineer",
+        description: `
+<p>YC-backed fintech startup building cross-border payment solutions using USDC technology for US, Latin America, and global markets.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Leverage AI tools (Cursor, code generation) to accelerate frontend and backend feature development.</li>
+<li>Build end-to-end features using React, React Native, and NodeJS.</li>
+<li>Debug technical issues across platforms, combining AI workflows with hands-on problem-solving.</li>
+<li>Collaborate on secure, scalable code for high-reliability financial applications.</li>
+<li>Engage in system design discussions, proposing AI-enhanced solutions.</li>
+<li>Stay current on AI advancements in software engineering.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Demonstrated project portfolio (school, personal, hackathons, open-source work).</li>
+<li>Strong JavaScript, CSS, and modern web technology foundation.</li>
+<li>Familiarity with React, React Native, or similar frameworks.</li>
+<li>Proficiency in AI development tools (Cursor, Windsurf, GitHub Copilot).</li>
+<li>Graduating senior or recent CS graduate.</li>
+<li>Strong problem-solving and mathematical abilities.</li>
+<li>Fintech passion.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Experience with Next.js, GraphQL, PostgreSQL, TypeScript, NestJS.</li>
+<li>Hackathon wins or coding competition achievements.</li>
+<li>AI-driven project experience.</li>
+</ul>
+`.trim(),
+        location: "Mexico City, CDMX, Mexico",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "$10K–$18K/yr + 0.25%–0.50% equity",
+        duration: "Permanent",
+        applyUrl: "https://www.workatastartup.com/jobs/77590",
+      },
+    ],
+  },
+  {
+    slug: "peakflo",
+    name: "Peakflo",
+    tagline: "Agentic workflows that automate back-office operations",
+    about:
+      "Peakflo (YC W22) builds agentic workflows and one-click ERP integrations that help finance teams eliminate manual work across invoice-to-cash, procure-to-pay, and travel & expense reimbursement. 100+ businesses use Peakflo to save 1,000+ man-hours/month on finance ops and get paid 15-25 days faster.",
+    logoUrl: "https://bookface-images.s3.us-west-2.amazonaws.com/logos/c54017d959d79a792abd80ffdf6f95e446befaee.png",
+    fundingStage: "SEED",
+    remotePolicy: "REMOTE",
+    visaSponsorship: false,
+    employeeCountRange: "11-50",
+    websiteUrl: "https://peakflo.co",
+    categories: ["saas", "fintech", "ai-ml"],
+    technologies: ["python", "gcp"],
+    location: { city: "Singapore", country: "Singapore" },
+    founders: [
+      {
+        name: "Saurabh Chauhan",
+        title: "Founder & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/saurabh-chauhan/",
+      },
+      { name: "Dmitry Vedenyapin", title: "Co-founder & CTO" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/peakflo" },
+      { type: "twitter", url: "https://x.com/getpeakflo" },
+    ],
+    internships: [
+      {
+        slug: "peakflo-forward-deployed-engineer",
+        title: "Forward Deployed Engineer (FDE)",
+        description: `
+<p>Peakflo seeks a Forward Deployed Engineer to bridge agentic AI technology with real-world financial workflows, focusing on developing machine learning solutions for business growth and product optimization.</p>
+<p><strong>Voice AI &amp; Prompt Engineering</strong></p>
+<ul>
+<li>Design conversational flows accounting for natural speech patterns, pauses, and interruptions optimized for voice-only interactions.</li>
+<li>Implement LLM feedback loops and self-reflection mechanisms to detect hallucinations and improve prompts.</li>
+<li>Establish A/B testing pipelines and performance QA tailored to financial use cases.</li>
+<li>Integrate prompts with speech recognition, intent extraction, and telephony APIs while maintaining real-time responsiveness.</li>
+</ul>
+<p><strong>Agentic Architecture, LLMs &amp; RAG</strong></p>
+<ul>
+<li>Develop hierarchical finance AI agents coordinating multiple sub-agents for modularity.</li>
+<li>Optimize performance using leading LLM platforms (Gemini, GPT, Claude).</li>
+<li>Integrate retrieval-augmented generation with enterprise knowledge bases and financial APIs.</li>
+<li>Architect LLM systems with third-party tools, email interactions, and user chat interfaces.</li>
+</ul>
+<p><strong>Data Analytics &amp; Workflow Automation</strong></p>
+<ul>
+<li>Analyze business processes and operational bottlenecks to identify improvements.</li>
+<li>Automate workflows and reporting using Python and SQL.</li>
+<li>Build dashboards and data monitoring frameworks.</li>
+<li>Collaborate with product, engineering, and operational teams on requirements.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Bachelor's or Master's degree in Statistics, Machine Learning, Data Science, Computer Science, or related field.</li>
+<li>0.5–2 years industry experience with ML, NLP, LLM fine-tuning, and prompt engineering.</li>
+<li>Strong Python proficiency (back-end development focus).</li>
+<li>Fluent English communication skills (written and verbal).</li>
+<li>Production ML deployment experience.</li>
+<li>Cloud platform familiarity (Google Cloud preferred).</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Experience with multiple LLM platforms and orchestration frameworks (LangChain, LlamaIndex).</li>
+<li>Advanced NLP techniques and library knowledge.</li>
+<li>Software engineering best practices and Git version control expertise.</li>
+</ul>
+<p><strong>Benefits</strong> include a competitive compensation package, rapid career growth and skill development opportunities, a collaborative and innovative work environment, and flexible hours with remote work options.</p>
+`.trim(),
+        location: "India (Remote)",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "₹1M–₹1.3M/year",
+        duration: "Permanent",
+        applyUrl: "https://www.workatastartup.com/jobs/91111",
+      },
+    ],
+  },
+  {
+    slug: "venu-ai",
+    name: "Venu AI",
+    tagline: "Meet qualified leads in person by automating conference production",
+    about:
+      "Venu AI (YC W21) helps B2B companies meet qualified sales leads in person by automating conference production — hosting a conference and meeting ~100 qualified sales leads every 3 months, fully automated. Based in San Jose, CA.",
+    logoUrl: "https://bookface-images.s3.amazonaws.com/small_logos/9c457be8f075da33530f9e844d5a01a959451c8d.png",
+    fundingStage: "SEED",
+    remotePolicy: "REMOTE",
+    visaSponsorship: false,
+    employeeCountRange: "1-10",
+    websiteUrl: "https://venu3d.com",
+    categories: ["saas", "consumer"],
+    technologies: ["python", "react", "django", "azure"],
+    location: { city: "San Jose", country: "USA" },
+    founders: [
+      {
+        name: "Jeremy Lam",
+        title: "Founder & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/jeremyclam/",
+      },
+      {
+        name: "Justin Chen",
+        title: "Founder",
+        linkedinUrl: "https://www.linkedin.com/in/chenjustint",
+      },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/venu3d" },
+      { type: "twitter", url: "https://x.com/venu_3d" },
+    ],
+    internships: [
+      {
+        slug: "venu-ai-software-engineering-intern",
+        title: "Software Engineering Intern",
+        description: `
+<p>This is a part-time AI software engineering opportunity with significant responsibilities and high impact, initially unpaid.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Build AI features automating manual tasks and solving customer pain points on the Venu platform.</li>
+<li>Serve as a customer, using Venu AI to host conferences and develop customer empathy.</li>
+<li>Rapidly acquire proficiency in Python, React, Django, Microsoft Azure AI/ML, databases, and GitHub DevOps automation.</li>
+<li>Deliver a first feature within 2 weeks; contribute to complete product delivery within 2 months.</li>
+<li>Demonstrate passion, proactivity, strong communication, and commitment to team success.</li>
+</ul>
+<p><strong>Required Skills:</strong> Microsoft Azure, Python, React.</p>
+<p><strong>Interview Process</strong></p>
+<ul>
+<li>Identify a B2B SaaS startup CEO via LinkedIn and the company website.</li>
+<li>Complete the provided email template with relevant information.</li>
+<li>Send the email to jeremy@venu3d.com.</li>
+<li>Watch the onboarding video before scheduling a call.</li>
+<li>Schedule an onboarding call to receive an offer letter.</li>
+</ul>
+`.trim(),
+        location: "Remote",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "REMOTE",
+        stipend: "Unpaid",
+        duration: "Part-time, up to 5 hrs/week",
+        applyUrl: "https://www.workatastartup.com/jobs/71363",
+      },
+    ],
+  },
+  {
+    slug: "superkalam",
+    name: "SuperKalam",
+    tagline: "AI-powered super mentor for test prep",
+    about:
+      "SuperKalam (YC W23) is India's first AI-led personal mentor for students preparing for competitive exams, starting with UPSC Civil Services and expanding into K-12. It serves 60,000+ students with instant answer evaluation, unlimited MCQ practice, and 24/7 doubt resolution, and is backed by Y Combinator and Google for Startups.",
+    logoUrl: "https://superkalam.com/assets/images/LogoWithTextV2.webp",
+    fundingStage: "SEED",
+    remotePolicy: "REMOTE",
+    visaSponsorship: false,
+    employeeCountRange: "11-50",
+    websiteUrl: "https://superkalam.com",
+    categories: ["edtech", "ai-ml"],
+    technologies: ["python", "nodejs", "postgres"],
+    location: { city: "Bengaluru", country: "India" },
+    founders: [
+      {
+        name: "Vimal Singh Rathore",
+        title: "Founder & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/vimalsinghrathore",
+      },
+      {
+        name: "Aseem Gupta",
+        title: "Founder & CTO",
+        linkedinUrl: "https://www.linkedin.com/in/-aseemgupta",
+      },
+    ],
+    links: [
+      { type: "twitter", url: "https://twitter.com/SuperKalam_" },
+      { type: "instagram", url: "https://instagram.com/superkalam_" },
+      { type: "youtube", url: "https://www.youtube.com/@superkalam_" },
+      { type: "facebook", url: "https://www.facebook.com/superkalamofficial" },
+    ],
+    internships: [
+      {
+        slug: "superkalam-ai-ml-research-intern",
+        title: "AI/ML Research (Internship)",
+        description: `
+<p>Seeking candidates with experience in traditional ML techniques and generative agentic workflows for a fast-paced environment. Applicants are encouraged to email a Loom demo with walkthroughs of their top two projects.</p>
+<p><strong>Key Requirements</strong></p>
+<ul>
+<li>Prior internship in AI/ML, or quality projects using Python/NodeJS.</li>
+<li>Experience building agentic workflows and AI pipelines (mandatory).</li>
+<li>Work with AI voice agents using STT/TTS.</li>
+<li>Experience with retrieval RAGs or knowledge graphs.</li>
+<li>Prompt engineering proficiency.</li>
+<li>GitHub and Google Colab comfort.</li>
+</ul>
+<p><strong>Bonus Skills</strong></p>
+<ul>
+<li>Model training in text, image, or voice domains.</li>
+<li>Dashboard/workflow creation using Claude Code or Codex.</li>
+<li>PostgreSQL, rate limiting, and basic security knowledge.</li>
+</ul>
+<p><strong>Core Responsibilities</strong></p>
+<ul>
+<li>Build pipelines and prepare high-quality datasets with the content team.</li>
+<li>Research and implement approaches from academic papers/blogs.</li>
+<li>Execute AI experiments and fine-tuning tasks.</li>
+<li>Stay current with emerging models, training techniques, and tools.</li>
+<li>Demonstrate smooth communication, ownership, and agility.</li>
+</ul>
+`.trim(),
+        location: "India (Remote / Bengaluru preferred)",
+        department: "Engineering, Machine Learning",
+        jobType: "INTERNSHIP",
+        remotePolicy: "REMOTE",
+        stipend: "₹25,000–₹40,000/month",
+        duration: "4 to 6+ months",
+        applyUrl: "https://www.workatastartup.com/jobs/64551",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
