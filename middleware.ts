@@ -40,6 +40,7 @@ const isPublicRoute = createRouteMatcher([
   "/api/applications(.*)",
   "/api/students(.*)",
   "/api/admin(.*)", // self-guards via assertCan → 403 JSON (not an HTML redirect)
+  "/api/dev(.*)", // self-guards via NODE_ENV check; never active in production
 ]);
 
 const isStudentRoute = createRouteMatcher([
