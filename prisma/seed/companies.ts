@@ -113,6 +113,155 @@ const COMPANIES: DemoCompany[] = [
       },
     ],
   },
+  {
+    slug: "pylon",
+    name: "Pylon",
+    tagline: "AI-native B2B post-sales support platform",
+    about:
+      "Pylon is the all-in-one B2B post-sales support platform, bringing together ticketing, omnichannel support (Slack Connect, Microsoft Teams), a chat widget, knowledge base, and an AI support bot for customer success and support teams. Backed by a16z and BCV, it's used by 1,500+ companies including Linear, Cognition, and Modal Labs.",
+    logoUrl: "https://bookface-images.s3.us-west-2.amazonaws.com/logos/1a9690e8b8b1a3f2d8331e0ec28282de4aef8008.png",
+    fundingStage: "SERIES_B",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "51-200",
+    websiteUrl: "https://usepylon.com",
+    categories: ["saas", "ai-ml"],
+    technologies: ["react", "go", "graphql", "aws"],
+    location: { city: "San Francisco", country: "USA" },
+    founders: [
+      {
+        name: "Marty Kausas",
+        title: "Co-founder & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/martykausas",
+      },
+      {
+        name: "Advith Chelikani",
+        title: "Co-founder & CTO",
+        linkedinUrl: "https://www.linkedin.com/in/advith/",
+      },
+      {
+        name: "Robert Eng",
+        title: "Co-founder & CPO",
+        linkedinUrl: "https://www.linkedin.com/in/robert-eng/",
+      },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/usepylon/" },
+      { type: "twitter", url: "https://x.com/usepylon" },
+    ],
+    internships: [
+      {
+        slug: "pylon-software-engineer-intern",
+        title: "Software Engineer, Intern",
+        description: `
+<p>We're building the all-in-one B2B post-sales support platform powered by conversational data and layered with intelligence to help our customers run their operations in real-time. We're backed by a16z, BCV, General Catalyst, and Y Combinator. Currently more than 1,500 companies — including Linear, Cognition (makers of Devin), Modal Labs, and Incident.io — run their support and customer success workflows with Pylon.</p>
+<p>Our product has a very large problem space so there's a ton of stuff to build and take ownership of — we'd be excited to get your help as we're hiring several extremely talented software engineers across the stack.</p>
+<p><strong>What You'll Do</strong></p>
+<ul>
+<li>Build features so our customers in post-sales roles (Customer Support & Customer Success) run their operations more efficiently by leveraging AI.</li>
+<li>Build prototypes, work independently, iterate quickly, and ship fast.</li>
+<li>Have high autonomy, own things end to end, and project manage your own work.</li>
+<li>Work with PMs, designers, and other engineers in a highly collaborative, non-waterfall way.</li>
+<li>Collaborate with a strong technical team of senior engineers from places like Samsara, Affinity, Airbnb, and Meta.</li>
+</ul>
+<p><strong>What We're Looking For</strong></p>
+<ul>
+<li>You are pursuing a bachelor's or master's degree in computer science, engineering, or another related field and are graduating between December 2026 and Summer 2027.</li>
+<li>You have a growth mindset, want to constantly improve, and want to receive feedback.</li>
+<li>You're in SF or you're willing to relocate (the internship will take place in Summer 2027).</li>
+</ul>
+<p><strong>Nice to Have</strong></p>
+<ul>
+<li>Relevant internship experience or side projects building product features, with a demonstration of strong full-stack fundamentals.</li>
+<li>Internship experience at high-growth startups and the ability to navigate ambiguous environments.</li>
+<li>Heavy use of AI for software development and the ability to juggle multiple workstreams at the same time.</li>
+<li>Experience with Pylon's tech stack (React, Golang, GraphQL, and AWS).</li>
+</ul>
+<p><strong>Perks</strong> include commuter benefits, parental leave, 14 company holidays plus unlimited PTO, an annual offsite, lunch/dinner/snacks at the office, and a fitness stipend.</p>
+`.trim(),
+        location: "San Francisco",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Summer 2027",
+        applyUrl: "https://jobs.ashbyhq.com/pylon-labs/fcea8b52-81f1-4b0c-b575-d7b180faec4d",
+      },
+    ],
+  },
+  {
+    slug: "meshy",
+    name: "Meshy",
+    tagline: "The leading 3D generative AI company",
+    about:
+      "Meshy is a 3D generative AI company on a mission to unleash 3D creativity by transforming the content creation pipeline — turning text and images into textured 3D models in minutes. Headquartered in Silicon Valley, it's backed by Sequoia and GGV, with 5M+ users and 40M+ models generated. Founder and CEO Yuanming (Ethan) Hu earned his Ph.D. in graphics and AI from MIT, where he developed the Taichi GPU programming language.",
+    logoUrl: "https://www.meshy.ai/icon3.png",
+    fundingStage: "SERIES_A",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "51-200",
+    websiteUrl: "https://www.meshy.ai",
+    categories: ["ai-ml", "consumer"],
+    technologies: ["python", "go", "typescript", "react", "pytorch", "aws", "gcp", "kubernetes"],
+    location: { city: "Sunnyvale", country: "USA" },
+    founders: [
+      {
+        name: "Yuanming (Ethan) Hu",
+        title: "Founder & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/ethan-yuanming-hu/",
+      },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/meshyai/" },
+      { type: "twitter", url: "https://twitter.com/MeshyAI" },
+      { type: "instagram", url: "https://www.instagram.com/meshy.ai/" },
+      { type: "youtube", url: "https://www.youtube.com/@MeshyAI" },
+      { type: "discord", url: "https://discord.com/invite/KgD5yVM9Y4" },
+      { type: "tiktok", url: "https://www.tiktok.com/@meshy.ai" },
+    ],
+    internships: [
+      {
+        slug: "meshy-fullstack-engineer-intern",
+        title: "Fullstack Engineer Intern",
+        description: `
+<p>We're looking for talented and motivated interns to join our engineering team and help build the next generation of AI-powered 3D and creative tools. As a Fullstack Engineer Intern, you'll work on real production projects alongside experienced engineers and researchers — from designing scalable systems to training large-scale machine learning models, or building product features that reach users worldwide.</p>
+<p>This is a high-impact role for someone who loves learning fast, solving complex problems, and building things that matter.</p>
+<p><strong>What We're Looking For</strong></p>
+<ul>
+<li>Currently pursuing a Bachelor's or Master's degree in Computer Science, Engineering, or related field.</li>
+<li>Strong programming fundamentals and familiarity with at least one of: Python, Go, or JavaScript/TypeScript.</li>
+<li>Solid understanding of data structures, algorithms, and software design principles.</li>
+<li>Curiosity and ability to quickly pick up new tools and frameworks.</li>
+<li>Excellent communication and collaboration skills — you enjoy working in a fast-paced, high-ownership environment.</li>
+</ul>
+<p><strong>Nice to Have</strong></p>
+<ul>
+<li>Experience with distributed systems or cloud platforms (AWS, GCP, Kubernetes).</li>
+<li>Web development (React, Node.js).</li>
+<li>Machine learning frameworks (e.g. PyTorch).</li>
+<li>Graphics / 3D systems or GPU programming (CUDA, Triton).</li>
+<li>Contributions to open-source projects or personal side projects.</li>
+</ul>
+<p><strong>Why You'll Love It Here</strong></p>
+<ul>
+<li>Work on cutting-edge technology at the intersection of AI, 3D, and creativity.</li>
+<li>Collaborate with a world-class, globally distributed engineering and research team.</li>
+<li>Learn directly from senior engineers and gain hands-on experience in large-scale systems and modern AI workflows.</li>
+<li>Potential return offer for outstanding interns.</li>
+</ul>
+<p><strong>Compensation:</strong> the hourly rate for this position is $40–$50 per hour, determined based on the candidate's qualifications, experience, and skills.</p>
+<p><strong>Benefits</strong> include comprehensive health, dental, and vision insurance, and the latest and best office equipment.</p>
+`.trim(),
+        location: "Bay Area, CA",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$40–$50/hour",
+        duration: "Not specified",
+        applyUrl: "https://jobs.ashbyhq.com/meshy/262d74c7-8aab-474e-9fc6-8c8c48ec6572",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {

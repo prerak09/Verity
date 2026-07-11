@@ -22,6 +22,11 @@ const TECHNOLOGIES = [
   { slug: "go", name: "Go" },
   { slug: "rust", name: "Rust" },
   { slug: "pytorch", name: "PyTorch" },
+  { slug: "graphql", name: "GraphQL" },
+  { slug: "aws", name: "AWS" },
+  { slug: "gcp", name: "GCP" },
+  { slug: "kubernetes", name: "Kubernetes" },
+  { slug: "nodejs", name: "Node.js" },
 ];
 
 export async function seedTaxonomy(db: PrismaClient): Promise<SeededTaxonomy> {
