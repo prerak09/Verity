@@ -31,6 +31,7 @@ const TECHNOLOGIES = [
   { slug: "cpp", name: "C++" },
   { slug: "django", name: "Django" },
   { slug: "azure", name: "Azure" },
+  { slug: "mongodb", name: "MongoDB" },
 ];
 
 export async function seedTaxonomy(db: PrismaClient): Promise<SeededTaxonomy> {

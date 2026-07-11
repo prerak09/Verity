@@ -406,7 +406,7 @@ const COMPANIES: DemoCompany[] = [
     employeeCountRange: "11-50",
     websiteUrl: "https://peakflo.co",
     categories: ["saas", "fintech", "ai-ml"],
-    technologies: ["python", "gcp"],
+    technologies: ["python", "gcp", "postgres", "mongodb"],
     location: { city: "Singapore", country: "Singapore" },
     founders: [
       {
@@ -472,6 +472,231 @@ const COMPANIES: DemoCompany[] = [
         duration: "Permanent",
         applyUrl: "https://www.workatastartup.com/jobs/91111",
       },
+      {
+        slug: "peakflo-product-manager-intern",
+        title: "Product Manager Intern",
+        description: `
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Design and optimize autonomous workflows for Procure-to-Pay and Invoice-to-Cash processes.</li>
+<li>Assist in defining product strategy and roadmap for specific modules.</li>
+<li>Take ownership of high-impact features including multi-channel process triggers and vendor/customer portals.</li>
+<li>Bridge engineering, design, and go-to-market teams.</li>
+<li>Engage directly with B2B clients to uncover operational pain points and translate insights into actionable epics.</li>
+<li>Drive product development from ideation to launch using Agile methodologies.</li>
+<li>Define and track key product metrics like workflow completion rates and error reduction.</li>
+</ul>
+<p><strong>Core Requirements</strong></p>
+<ul>
+<li>Currently pursuing or recently completed Bachelor's or Master's degree in Business, Computer Science, Engineering, Finance, or related field.</li>
+<li>Exceptional written and verbal English communication skills.</li>
+<li>Strong analytical and problem-solving abilities with a systems-thinking approach.</li>
+<li>High user empathy focused on friction elimination.</li>
+<li>Extreme attention to detail in fast-paced startup environments.</li>
+<li>Genuine passion for Agentic AI.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Experience with Jira, Linear, Figma, or Notion.</li>
+<li>Background in B2B SaaS, FinTech, or accounting operations.</li>
+<li>Familiarity with ERP functionality and API/SFTP integrations.</li>
+<li>Understanding of LLM capabilities and AI agents.</li>
+</ul>
+<p><strong>Benefits</strong> include a competitive stipend, performance-based full-time conversion opportunity, comprehensive benefits post-conversion, mentorship from founders and product leaders, and flexible hours with remote work options.</p>
+`.trim(),
+        location: "India (Remote)",
+        department: "Product",
+        jobType: "INTERNSHIP",
+        remotePolicy: "REMOTE",
+        stipend: "₹360K–₹480K/year",
+        duration: "Not specified",
+        applyUrl: "https://www.workatastartup.com/jobs/95821",
+      },
+      {
+        slug: "peakflo-technical-operations-ai-automation-engineer-bangkok",
+        title: "Technical Operations & AI Automation Engineer (Bangkok/Hybrid)",
+        description: `
+<p>Peakflo seeks an engineer to own escalated production issues and build AI automation to prevent recurring problems. This L2 support and automation position reports directly to the CTO.</p>
+<p><strong>L2 Investigation &amp; Incident Response</strong></p>
+<ul>
+<li>Manage escalated production issues including database anomalies, failed transactions, and data corruption.</li>
+<li>Analyze PostgreSQL/MongoDB queries, slow logs, and index performance.</li>
+<li>Resolve payment failures across Southeast Asian payment rails and PSP integrations.</li>
+<li>Execute complex data migrations with zero data loss.</li>
+<li>Document post-mortems and develop runbooks.</li>
+</ul>
+<p><strong>AI-Powered Automation</strong></p>
+<ul>
+<li>Build internal AI agents automating repetitive investigation workflows.</li>
+<li>Deploy LLM-powered diagnostics for log analysis and anomaly detection.</li>
+<li>Instrument systems with observability tools (Langfuse, OpenLLMetry).</li>
+<li>Automate manual tasks identified as repetitive.</li>
+</ul>
+<p><strong>Platform &amp; Developer Tooling</strong></p>
+<ul>
+<li>Build CLI tools, dashboards, and internal scripts.</li>
+<li>Manage CI/CD pipelines and deployment workflows.</li>
+<li>Maintain GCP infrastructure (IAM, secrets, Docker/K8s).</li>
+<li>Partner on ERP integrations (NetSuite, Xero) and payment provider onboarding.</li>
+</ul>
+<p><strong>Required Skills</strong></p>
+<ul>
+<li>PostgreSQL/MongoDB fluency with query optimization expertise.</li>
+<li>Payment flow debugging and financial data pipeline experience.</li>
+<li>Python and bash scripting proficiency.</li>
+<li>Comfort managing ambiguous, high-pressure incidents.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Southeast Asian payment provider experience (GrabPay, PayNow, PromptPay, Xendit).</li>
+<li>Hands-on AI coding agent usage (Claude Code, Cursor, Copilot).</li>
+<li>LLMOps production deployment experience.</li>
+<li>Fintech or B2B SaaS background.</li>
+<li>ERP integration familiarity.</li>
+</ul>
+`.trim(),
+        location: "Bangkok, Thailand",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.workatastartup.com/jobs/92435",
+      },
+      {
+        slug: "peakflo-technical-operations-ai-automation-engineer-india",
+        title: "Technical Operations & AI Automation Engineer (India/Remote)",
+        description: `
+<p>Peakflo seeks an engineer combining technical operations expertise with AI automation capabilities — an L2 support and automation role serving as the final escalation point for production database issues, complex migrations, and payment flow failures, while automating repeatable solutions.</p>
+<p><strong>L2 Investigation &amp; Incident Response</strong></p>
+<ul>
+<li>Own escalated production issues including database anomalies, failed transactions, and data corruption.</li>
+<li>Conduct deep PostgreSQL/MongoDB query analysis: explain plans, slow query logs, lock contention evaluation.</li>
+<li>Triage payment failures across Southeast Asian payment rails and reconciliation gaps.</li>
+<li>Lead complex data migrations with zero data loss tolerance.</li>
+<li>Author post-mortems and runbooks.</li>
+</ul>
+<p><strong>AI-Powered Automation</strong></p>
+<ul>
+<li>Build internal AI agents automating investigation workflows.</li>
+<li>Deploy LLM-powered diagnostics for log summarization and anomaly detection.</li>
+<li>Instrument production systems with observability tooling (Langfuse, OpenLLMetry).</li>
+<li>Automate any manually repeated task.</li>
+</ul>
+<p><strong>Platform &amp; Developer Tooling</strong></p>
+<ul>
+<li>Build CLI tools, internal dashboards, and deployment scripts.</li>
+<li>Manage CI/CD pipelines and staging/production alignment.</li>
+<li>Maintain GCP infrastructure: IAM, secrets, Docker/Kubernetes deployments.</li>
+<li>Support ERP integrations (NetSuite, Xero) and payment provider onboarding.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Fluency with PostgreSQL and/or MongoDB with explain plan proficiency.</li>
+<li>Experience debugging payment flows and financial data pipelines.</li>
+<li>Strong Python and bash scripting capabilities.</li>
+<li>Ability to own ambiguous, high-pressure incidents with limited documentation.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Southeast Asian payment provider experience (GrabPay, PayNow, PromptPay, Xendit).</li>
+<li>AI coding agent experience (Claude Code, Cursor, Copilot).</li>
+<li>LLMOps exposure in production environments.</li>
+<li>Fintech, B2B SaaS, or finance operations background.</li>
+<li>NetSuite or Xero integration familiarity.</li>
+</ul>
+<p><strong>Benefits</strong> include competitive compensation, comprehensive health and wellness coverage, direct CTO access from day one, flexible hours and remote work options, and deep engineering platform exposure.</p>
+`.trim(),
+        location: "India (Remote)",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "₹1.2M–₹1.6M/year",
+        duration: "Permanent",
+        applyUrl: "https://www.workatastartup.com/jobs/91984",
+      },
+      {
+        slug: "peakflo-machine-learning-engineer-intern",
+        title: "Machine Learning (ML) Engineer Intern",
+        description: `
+<p>Peakflo is an AI-powered fintech startup backed by Y Combinator (W22) and Google AI Accelerator, automating accounts payable and receivable processes for over 100 companies globally.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li><strong>Voice-Optimized Prompt Design</strong> — design conversational flows that account for natural speech patterns (pauses, interruptions, intonation) while ensuring clarity for text-to-speech systems.</li>
+<li><strong>Agentic Architecture Development</strong> — build hierarchical finance AI agents coordinating sub-agents for research, analysis, and reporting across sequential or plan-and-execute workflows.</li>
+<li><strong>Continuous Prompt Refinement</strong> — implement feedback loops, A/B testing, prompt versioning, and fine-tune leading LLMs (Gemini, GPT, Claude) for financial applications.</li>
+<li><strong>RAG Integration &amp; Grounding</strong> — integrate retrieval-augmented generation with enterprise knowledge bases and financial APIs while maintaining domain-specific context control.</li>
+<li><strong>Voice Integration &amp; Tech Stack Collaboration</strong> — partner with engineering teams integrating prompts with speech recognition, intent extraction, LiveKit voice infrastructure, and telephony APIs.</li>
+<li><strong>AI Solution Development</strong> — create complementary components including OCR models, chatbots, and automated approval systems supporting financial workflows.</li>
+</ul>
+<p><strong>Experience Requirements</strong></p>
+<ul>
+<li>Bachelor's or Master's degree in Statistics, Machine Learning, Data Science, or related field.</li>
+<li>0.5–2 years of industry experience with ML, Statistics, LLM fine-tuning, or prompt engineering.</li>
+<li>Fluent English (written and verbal).</li>
+<li>Strong Python back-end development experience.</li>
+<li>Production-level ML product deployment experience.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Experience with multiple LLM platforms.</li>
+<li>Familiarity with NLP libraries and techniques.</li>
+<li>Software engineering best practices knowledge.</li>
+<li>Git version control proficiency.</li>
+</ul>
+<p><strong>Benefits</strong> include a performance-based full-time role conversion opportunity, benefits package upon conversion, career growth and skill development, and flexible hours.</p>
+`.trim(),
+        location: "India (Remote)",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "REMOTE",
+        stipend: "₹480K–₹600K/year",
+        duration: "Not specified",
+        applyUrl: "https://www.workatastartup.com/jobs/90065",
+      },
+      {
+        slug: "peakflo-data-analyst",
+        title: "Data Analyst",
+        description: `
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Examine business workflows, identify data quality gaps, and pinpoint operational inefficiencies to drive improvements.</li>
+<li>Engineer scalable solutions targeting recurring operational problems.</li>
+<li>Build Python and SQL-based automation for workflows, data transformations, and reporting systems.</li>
+<li>Develop dashboards, monitoring frameworks, and comprehensive reporting infrastructure.</li>
+<li>Work with product, engineering, and operations teams to establish specifications and execute implementations.</li>
+<li>Execute root cause investigations and communicate findings with strategic recommendations.</li>
+<li>Optimize existing automation frameworks and data pipelines for increased scalability.</li>
+<li>Provide transparent documentation of processes and solutions for organizational stakeholders.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Approximately 1 year of professional experience in analytics, automation, or operational data roles.</li>
+<li>Demonstrated expertise building and deploying cursor-based agents (or comparable tools) with MCP server integration.</li>
+<li>Strong Python capabilities, particularly for data handling, automation, and API integration.</li>
+<li>Solid SQL competency including complex operations and query optimization.</li>
+<li>Logical problem-solving ability with analytical depth.</li>
+<li>Capacity to architect extensible solutions rather than temporary patches.</li>
+<li>Skill translating unclear specifications into logical workflows.</li>
+<li>Strong interpersonal and documentation abilities.</li>
+<li>Detail-oriented with an action-oriented mindset.</li>
+<li>Cross-functional collaboration and multitasking proficiency.</li>
+<li>Git version control familiarity.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Cloud infrastructure experience (Docker, Kubernetes, GCP).</li>
+<li>Exposure to workflow automation platforms like n8n, Airflow, or dbt.</li>
+</ul>
+`.trim(),
+        location: "India (Remote)",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "₹700K–₹1M/year",
+        duration: "Permanent",
+        applyUrl: "https://www.workatastartup.com/jobs/86654",
+      },
     ],
   },
   {
@@ -536,6 +761,29 @@ const COMPANIES: DemoCompany[] = [
         stipend: "Unpaid",
         duration: "Part-time, up to 5 hrs/week",
         applyUrl: "https://www.workatastartup.com/jobs/71363",
+      },
+      {
+        slug: "venu-ai-conference-director",
+        title: "Conference Director",
+        description: `
+<p>Candidates will host their own conference using Venu's platform and generate income through conference sponsorships. Venu AI is a Harvard and Y Combinator-backed startup founded by Jeremy Lam. The company helps founders build top-of-funnel sales, achieve 40% response rates from qualified leads, establish communities, and host automated 100-person conferences within 90 days.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Own conference production, strategy, and execution end-to-end, hosting a 100-person conference within 3 months.</li>
+<li>Utilize Venu AI to automate conference production workflows.</li>
+<li>Analyze weekly campaign data, identify challenges, develop strategy solutions, and iterate continuously.</li>
+<li>Demonstrate passionate, proactive teamwork with strong communication skills and positive energy.</li>
+<li>Support team members in achieving success and fulfillment.</li>
+</ul>
+<p><strong>Application Process:</strong> candidates must research a B2B SaaS startup CEO, personalize an outreach email using a provided template, and send it to jeremy@venu3d.com. Selected applicants complete onboarding training and schedule calls with the team.</p>
+`.trim(),
+        location: "Remote",
+        department: "Sales",
+        jobType: "CONTRACT",
+        remotePolicy: "REMOTE",
+        stipend: "$500–$1.5K/month",
+        duration: "Not specified",
+        applyUrl: "https://www.workatastartup.com/jobs/75840",
       },
     ],
   },
