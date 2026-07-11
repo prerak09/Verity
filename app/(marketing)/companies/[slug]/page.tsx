@@ -66,7 +66,7 @@ export default async function CompanyProfilePage({
             alt=""
             width={80}
             height={80}
-            className="size-20 shrink-0 rounded-[4px] border-[3px] border-neutral-950 object-cover"
+            className="size-20 shrink-0 rounded-[4px] border-[3px] border-neutral-950 bg-white object-contain p-2"
             priority
           />
         ) : (

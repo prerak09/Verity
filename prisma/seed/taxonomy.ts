@@ -10,6 +10,7 @@ const CATEGORIES = [
   { slug: "healthtech", name: "Healthtech" },
   { slug: "saas", name: "SaaS" },
   { slug: "consumer", name: "Consumer" },
+  { slug: "infrastructure", name: "Cloud Infrastructure & Security" },
 ];
 
 const TECHNOLOGIES = [

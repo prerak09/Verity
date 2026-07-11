@@ -10,7 +10,8 @@ interface DemoCompany {
   name: string;
   tagline: string;
   about: string;
-  fundingStage: "SEED" | "SERIES_A" | "SERIES_B";
+  logoUrl?: string;
+  fundingStage: "BOOTSTRAPPED" | "PRE_SEED" | "SEED" | "SERIES_A" | "SERIES_B" | "SERIES_C_PLUS" | "PUBLIC";
   remotePolicy: "REMOTE" | "HYBRID" | "ONSITE";
   visaSponsorship: boolean;
   employeeCountRange: string;
@@ -18,7 +19,8 @@ interface DemoCompany {
   categories: string[]; // slugs
   technologies: string[]; // slugs
   location: { city: string; country: string };
-  founders: { name: string; title: string }[];
+  founders: { name: string; title: string; linkedinUrl?: string; twitterUrl?: string; isHiringManager?: boolean }[];
+  links?: { type: string; url: string }[];
   internships: {
     slug: string;
     title: string;
@@ -189,6 +191,83 @@ const COMPANIES: DemoCompany[] = [
       },
     ],
   },
+  {
+    slug: "cloudflare",
+    name: "Cloudflare",
+    tagline: "The leading connectivity cloud company",
+    about:
+      "Cloudflare operates a global network that provides content delivery, DDoS mitigation, DNS, and cybersecurity services, making websites, APIs, and applications faster and more secure. Founded in 2009 and headquartered in San Francisco, it went public on the NYSE (NET) in 2019.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.cloudflare.com",
+    categories: ["infrastructure", "devtools"],
+    technologies: ["go", "typescript", "postgres"],
+    location: { city: "San Francisco", country: "USA" },
+    founders: [
+      {
+        name: "Matthew Prince",
+        title: "Co-founder & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/mprince/",
+      },
+      {
+        name: "Michelle Zatlyn",
+        title: "Co-founder & President",
+        linkedinUrl: "https://www.linkedin.com/in/michellezatlyn/",
+      },
+      { name: "Lee Holloway", title: "Co-founder" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/cloudflare" },
+      { type: "twitter", url: "https://x.com/cloudflare" },
+      { type: "github", url: "https://github.com/cloudflare" },
+      { type: "youtube", url: "https://www.youtube.com/@cloudflare" },
+      { type: "discord", url: "https://discord.cloudflare.com" },
+    ],
+    internships: [
+      {
+        slug: "cloudflare-systems-engineer-data-residency",
+        title: "Systems Engineer - Global Resource Management (Data Residency)",
+        description: `
+<p>Join the Data Residency Architecture (DRA) program, a small, high-autonomy team building the infrastructure that lets customers keep their data in a country or region of their choosing.</p>
+<p><strong>What You'll Work On</strong></p>
+<ul>
+<li><strong>Regional API Routing</strong> — Build per-account API hostname generation and routing so that customer requests terminate in their chosen country, integrating with Cloudflare's Data Localization Suite and edge API gateway.</li>
+<li><strong>Dashboard Integration</strong> — Modify the Cloudflare dashboard so that API calls route through regional endpoints while surfacing clear regional indicators to the customer.</li>
+<li><strong>Account Creation & Provisioning</strong> — Build the account creation flow that captures country/region selection and integrates with the Control Plane Platform orchestrator to provision per-account regional storage and configuration.</li>
+<li><strong>Internal Tooling</strong> — Build admin tooling (provisioning integrations, billing shims, operational dashboards) so that support, sales, and finance teams can manage DRA accounts without violating residency constraints.</li>
+<li><strong>Cross-Team Integration</strong> — Work across the DRA program to integrate with regional storage, cryptographic key management, and logging infrastructure built by other teams.</li>
+<li><strong>Migration & Self-Service</strong> — Help design the path from manual provisioning (MVP) to dashboard self-service, and eventually tooling that migrates existing enterprise customers into DRA.</li>
+</ul>
+<p><strong>Required</strong></p>
+<ul>
+<li>3+ years of professional software engineering experience building production systems at scale.</li>
+<li>Proficiency in Go. Cloudflare's backend services and core platform are written in Go.</li>
+<li>Comfort or willingness to work in TypeScript. The control plane uses Cloudflare Workers (TypeScript), and the dashboard is a TypeScript application.</li>
+<li>Experience designing and building REST APIs — routing, authentication, request lifecycle, and how frontends consume distributed backends.</li>
+<li>Comfort with distributed systems tradeoffs — data locality, replication, consistency models, and the latency implications of geographically distributed infrastructure.</li>
+<li>Ability to work across team boundaries; DRA spans nearly every engineering organization at Cloudflare.</li>
+</ul>
+<p><strong>Nice to Have</strong></p>
+<ul>
+<li>Experience with data residency, sovereignty, or compliance engineering (GDPR, EU Data Act, EUCS, FedRAMP, or equivalent regulatory frameworks).</li>
+<li>Familiarity with edge computing platforms such as Cloudflare Workers, Durable Objects, or similar serverless/edge-native runtimes.</li>
+<li>Familiarity with PostgreSQL, ClickHouse, or SQLite in production environments.</li>
+</ul>
+<p><strong>Benefits</strong> include medical/dental/vision insurance, retirement plans, flexible PTO, mental health support, parental leave, and stock participation.</p>
+`.trim(),
+        location: "Austin, Texas",
+        department: "Data Residency Architecture (DRA)",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/cloudflare/jobs/8015230",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
@@ -199,6 +278,7 @@ export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) 
         name: c.name,
         tagline: c.tagline,
         about: c.about,
+        logoUrl: c.logoUrl,
         fundingStage: c.fundingStage,
         remotePolicy: c.remotePolicy,
         visaSponsorship: c.visaSponsorship,
@@ -211,6 +291,7 @@ export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) 
         name: c.name,
         tagline: c.tagline,
         about: c.about,
+        logoUrl: c.logoUrl,
         fundingStage: c.fundingStage,
         remotePolicy: c.remotePolicy,
         visaSponsorship: c.visaSponsorship,
@@ -265,8 +346,27 @@ export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) 
           companyId: company.id,
           name: f.name,
           title: f.title,
+          linkedinUrl: f.linkedinUrl,
+          twitterUrl: f.twitterUrl,
+          isHiringManager: f.isHiringManager ?? false,
         })),
       });
+    }
+
+    // Social links (only add if none exist yet, to stay idempotent).
+    if (c.links?.length) {
+      const existingLinks = await db.companyLink.count({
+        where: { companyId: company.id },
+      });
+      if (existingLinks === 0) {
+        await db.companyLink.createMany({
+          data: c.links.map((l) => ({
+            companyId: company.id,
+            type: l.type,
+            url: l.url,
+          })),
+        });
+      }
     }
 
     // Internships (published).

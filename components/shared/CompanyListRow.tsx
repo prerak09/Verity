@@ -27,7 +27,7 @@ export function CompanyListRow({
           alt=""
           width={64}
           height={64}
-          className="size-16 shrink-0 rounded-[3px] border-[3px] border-neutral-950 object-cover"
+          className="size-16 shrink-0 rounded-[3px] border-[3px] border-neutral-950 bg-white object-contain p-1.5"
         />
       ) : (
         <div
