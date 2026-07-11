@@ -6,7 +6,7 @@
 import { revalidateTag } from "next/cache";
 import { db } from "@/lib/db";
 import { requireUser } from "@/lib/auth";
-import { assertCan, isCompanyMember } from "@/lib/rbac";
+import { assertCan, can, isCompanyMember } from "@/lib/rbac";
 import { handleAction, parseInput } from "@/lib/action";
 import { slugify } from "@/lib/slug";
 import { sanitizeHtml } from "@/lib/sanitize";
@@ -89,9 +89,11 @@ export async function updateInternship(
   return handleAction(async () => {
     const user = await requireUser();
     const internship = await loadOwned(internshipId);
-    assertCan(user, "internship:update:own", internship.companyId);
-    if (!isCompanyMember(user, internship.companyId)) {
-      throw new ForbiddenError("You are not a member of this company.");
+    if (!can(user, "internship:moderate")) {
+      assertCan(user, "internship:update:own", internship.companyId);
+      if (!isCompanyMember(user, internship.companyId)) {
+        throw new ForbiddenError("You are not a member of this company.");
+      }
     }
 
     const data = parseInput(updateInternshipSchema, input);
@@ -124,9 +126,11 @@ export async function publishInternship(
   return handleAction(async () => {
     const user = await requireUser();
     const internship = await loadOwned(internshipId);
-    assertCan(user, "internship:update:own", internship.companyId);
-    if (!isCompanyMember(user, internship.companyId)) {
-      throw new ForbiddenError("You are not a member of this company.");
+    if (!can(user, "internship:moderate")) {
+      assertCan(user, "internship:update:own", internship.companyId);
+      if (!isCompanyMember(user, internship.companyId)) {
+        throw new ForbiddenError("You are not a member of this company.");
+      }
     }
 
     if (internship.company.verificationStatus !== "VERIFIED") {
@@ -158,9 +162,11 @@ export async function archiveInternship(
   return handleAction(async () => {
     const user = await requireUser();
     const internship = await loadOwned(internshipId);
-    assertCan(user, "internship:archive:own", internship.companyId);
-    if (!isCompanyMember(user, internship.companyId)) {
-      throw new ForbiddenError("You are not a member of this company.");
+    if (!can(user, "internship:moderate")) {
+      assertCan(user, "internship:archive:own", internship.companyId);
+      if (!isCompanyMember(user, internship.companyId)) {
+        throw new ForbiddenError("You are not a member of this company.");
+      }
     }
 
     const updated = await db.internship.update({
