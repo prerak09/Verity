@@ -18,6 +18,7 @@ import type {
   FundingStage,
   RemotePolicy,
   JobType,
+  Season,
   InternshipStatus,
   ApplicationStatus,
   BookmarkTargetType,
@@ -31,6 +32,7 @@ export type {
   FundingStage,
   RemotePolicy,
   JobType,
+  Season,
   InternshipStatus,
   ApplicationStatus,
   BookmarkTargetType,
@@ -293,6 +295,7 @@ export interface InternshipCard {
   location: string | null;
   department: string | null;
   jobType: JobType | null;
+  season: Season | null;
   remotePolicy: RemotePolicy | null;
   stipend: string | null;
   status: InternshipStatus;
@@ -318,8 +321,17 @@ export interface StudentProfileDTO {
   name: string | null;
   email: string;
   avatarUrl: string | null;
+  headline: string | null;
+  location: string | null;
   college: string | null;
+  degree: string | null;
+  major: string | null;
   gradYear: number | null;
+  skills: string[];
+  interests: string[];
+  linkedinUrl: string | null;
+  githubUrl: string | null;
+  portfolioUrl: string | null;
   resumeUrl: string | null;
   bio: string | null;
 }
@@ -367,9 +379,13 @@ export interface InternshipFilters extends PaginationParams {
   location?: string;
   department?: string;
   jobType?: JobType;
+  season?: Season;
+  /** Strict listing split: "internship" = INTERNSHIP only; "job" = full-time/
+   *  part-time/contract only. Keeps /internships and /jobs from bleeding. */
+  kind?: "internship" | "job";
   remotePolicy?: RemotePolicy;
   companySlug?: string;
-  sort?: "recent" | "title";
+  sort?: "recent" | "title" | "season";
 }
 
 export interface SearchResults {
@@ -506,6 +522,7 @@ export interface InternshipInput {
   location?: string;
   department?: string;
   jobType?: JobType;
+  season?: Season;
   remotePolicy?: RemotePolicy;
   stipend?: string;
   duration?: string;
@@ -515,8 +532,17 @@ export interface InternshipInput {
 
 export interface StudentProfileInput {
   name?: string;
+  headline?: string;
+  location?: string;
   college?: string;
+  degree?: string;
+  major?: string;
   gradYear?: number;
+  skills?: string[];
+  interests?: string[];
+  linkedinUrl?: string;
+  githubUrl?: string;
+  portfolioUrl?: string;
   resumeUrl?: string;
   bio?: string;
 }

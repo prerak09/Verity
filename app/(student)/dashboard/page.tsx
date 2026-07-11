@@ -5,6 +5,7 @@ import { DashboardSection } from "@/components/shared/DashboardSection";
 import { CompanyCard } from "@/components/shared/CompanyCard";
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
+import { ProfileCompletionBanner } from "@/components/shared/ProfileCompletionBanner";
 import { MOCK_CATEGORIES } from "@/components/lib/mocks";
 import { getCurrentUser } from "@/lib/auth";
 import { listCompanies, getOpenInternships } from "@/features/companies/queries";
@@ -13,6 +14,7 @@ import { getTrendingCompanies } from "@/features/trending/queries";
 import { getRecommendedCompanies } from "@/features/students/recommendations";
 import { listBookmarks } from "@/features/bookmarks/queries";
 import { listApplications } from "@/features/applications/queries";
+import { getStudentProfile, profileCompletenessPercent } from "@/features/students/queries";
 import type {
   ApplicationStatus,
   CompanyCard as CompanyCardDTO,
@@ -62,6 +64,7 @@ export default async function StudentDashboardPage() {
   let latestInternships: InternshipCardDTO[] = [];
   let bookmarkPreview: BookmarkDTO[] = [];
   let applications: ApplicationDTO[] = [];
+  let profilePercent = 100;
 
   try {
     const user = await getCurrentUser();
@@ -75,14 +78,16 @@ export default async function StudentDashboardPage() {
     latestInternships = latest.data;
 
     if (user) {
-      const [recs, bms, apps] = await Promise.all([
+      const [recs, bms, apps, profile] = await Promise.all([
         getRecommendedCompanies(user.id),
         listBookmarks(user.id),
         listApplications(user.id),
+        getStudentProfile(user.id),
       ]);
       recommended = recs.slice(0, 4);
       bookmarkPreview = bms.slice(0, 4);
       applications = apps;
+      if (profile) profilePercent = profileCompletenessPercent(profile);
     }
   } catch {
     // DB unreachable — sections render their empty states.
@@ -115,6 +120,7 @@ export default async function StudentDashboardPage() {
 
   return (
     <div className="mx-auto max-w-wide space-y-10 px-4 py-8 sm:px-6">
+      <ProfileCompletionBanner percent={profilePercent} />
       <div>
         <h1 className="font-display text-3xl font-bold text-neutral-950">Dashboard</h1>
         <p className="mt-1 text-body text-muted-foreground">

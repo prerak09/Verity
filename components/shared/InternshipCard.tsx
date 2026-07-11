@@ -2,9 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { Briefcase } from "lucide-react";
 
-import type { InternshipCard as InternshipCardDTO } from "@/types";
+import type { InternshipCard as InternshipCardDTO, Season } from "@/types";
 import { RemoteChip } from "@/components/shared/RemoteChip";
 import { cn } from "@/components/lib/utils";
+
+const SEASON_LABEL: Record<Season, string> = {
+  SUMMER: "Summer",
+  FALL: "Fall",
+  SPRING: "Spring",
+  WINTER: "Winter",
+  YEAR_ROUND: "Year-round",
+};
 
 /**
  * Same interactive-card language as CompanyCard (doc §12.2). `hideCompany`
@@ -85,6 +93,11 @@ export function InternshipCard({
           ) : (
             <>
               {internship.remotePolicy && <RemoteChip policy={internship.remotePolicy} />}
+              {internship.season && (
+                <span className="inline-flex items-center rounded-sm border-2 border-neutral-950 bg-tile-lavender px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-neutral-950">
+                  {SEASON_LABEL[internship.season]}
+                </span>
+              )}
               {internship.stipend && (
                 <span className="text-body-sm font-medium text-foreground">
                   {internship.stipend}

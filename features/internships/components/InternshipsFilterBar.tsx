@@ -13,15 +13,23 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/components/lib/utils";
-import type { JobType, RemotePolicy } from "@/types";
+import type { JobType, RemotePolicy, Season } from "@/types";
 
 const ALL = "all";
 
+// Jobs page only — internships are split out into their own /internships surface.
 const JOB_TYPES: { value: JobType; label: string }[] = [
-  { value: "INTERNSHIP", label: "Internship" },
   { value: "FULL_TIME", label: "Full-time" },
   { value: "PART_TIME", label: "Part-time" },
   { value: "CONTRACT", label: "Contract" },
+];
+
+const SEASONS: { value: Season; label: string }[] = [
+  { value: "SUMMER", label: "Summer" },
+  { value: "FALL", label: "Fall" },
+  { value: "SPRING", label: "Spring" },
+  { value: "WINTER", label: "Winter" },
+  { value: "YEAR_ROUND", label: "Year-round" },
 ];
 
 const REMOTE_POLICIES: { value: RemotePolicy; label: string }[] = [
@@ -36,9 +44,12 @@ const selectTriggerClass =
 export function InternshipsFilterBar({
   locations,
   departments,
+  variant = "internship",
 }: {
   locations: string[];
   departments: string[];
+  /** "internship" surfaces a Season filter; "job" surfaces a Job Type filter. */
+  variant?: "internship" | "job";
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -77,6 +88,7 @@ export function InternshipsFilterBar({
   const location = searchParams.get("location") ?? ALL;
   const department = searchParams.get("department") ?? ALL;
   const jobType = searchParams.get("jobType") ?? ALL;
+  const season = searchParams.get("season") ?? ALL;
   const remotePolicy = searchParams.get("remotePolicy") ?? ALL;
 
   return (
@@ -130,21 +142,39 @@ export function InternshipsFilterBar({
         </SelectContent>
       </Select>
 
-      <Select value={jobType} onValueChange={(v) => updateParam("jobType", v)}>
-        <SelectTrigger className={selectTriggerClass}>
-          <SelectValue>
-            {(v: string) => (v === ALL ? "All Job Types" : JOB_TYPES.find((j) => j.value === v)?.label ?? v)}
-          </SelectValue>
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value={ALL}>All Job Types</SelectItem>
-          {JOB_TYPES.map((j) => (
-            <SelectItem key={j.value} value={j.value}>
-              {j.label}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+      {variant === "job" ? (
+        <Select value={jobType} onValueChange={(v) => updateParam("jobType", v)}>
+          <SelectTrigger className={selectTriggerClass}>
+            <SelectValue>
+              {(v: string) => (v === ALL ? "All Job Types" : JOB_TYPES.find((j) => j.value === v)?.label ?? v)}
+            </SelectValue>
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value={ALL}>All Job Types</SelectItem>
+            {JOB_TYPES.map((j) => (
+              <SelectItem key={j.value} value={j.value}>
+                {j.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      ) : (
+        <Select value={season} onValueChange={(v) => updateParam("season", v)}>
+          <SelectTrigger className={selectTriggerClass}>
+            <SelectValue>
+              {(v: string) => (v === ALL ? "All Seasons" : SEASONS.find((s) => s.value === v)?.label ?? v)}
+            </SelectValue>
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value={ALL}>All Seasons</SelectItem>
+            {SEASONS.map((s) => (
+              <SelectItem key={s.value} value={s.value}>
+                {s.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      )}
 
       <Button
         type="button"

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { GraduationCap, Bell } from "lucide-react";
+import { Armchair, Bell } from "lucide-react";
 
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
@@ -10,31 +10,31 @@ import {
   listInternshipLocations,
   listInternshipDepartments,
 } from "@/features/internships/queries";
-import type { InternshipCard as InternshipCardDTO, PageMeta, RemotePolicy, Season } from "@/types";
+import type { InternshipCard as InternshipCardDTO, JobType, PageMeta, RemotePolicy } from "@/types";
 
 export const metadata: Metadata = {
-  title: "Internships",
+  title: "Jobs",
   description:
-    "Every open internship from manually verified startups on Verity, sortable by season.",
+    "Full-time, part-time, and contract roles from manually verified startups on Verity.",
 };
 
 const PAGE_SIZE = 12;
 
 export const dynamic = "force-dynamic";
 
-interface InternshipsSearchParams {
+interface JobsSearchParams {
   q?: string;
   location?: string;
   department?: string;
-  season?: string;
+  jobType?: string;
   remotePolicy?: string;
   page?: string;
 }
 
-export default async function InternshipsListPage({
+export default async function JobsListPage({
   searchParams,
 }: {
-  searchParams: Promise<InternshipsSearchParams>;
+  searchParams: Promise<JobsSearchParams>;
 }) {
   const params = await searchParams;
   const page = Math.max(1, Number(params.page) || 1);
@@ -48,12 +48,12 @@ export default async function InternshipsListPage({
       listInternships({
         page,
         pageSize: PAGE_SIZE,
-        kind: "internship",
+        kind: "job",
         sort: "recent",
         q: params.q || undefined,
         location: params.location || undefined,
         department: params.department || undefined,
-        season: (params.season as Season) || undefined,
+        jobType: (params.jobType as JobType) || undefined,
         remotePolicy: (params.remotePolicy as RemotePolicy) || undefined,
       }),
       listInternshipLocations(),
@@ -71,26 +71,26 @@ export default async function InternshipsListPage({
   return (
     <div className="mx-auto max-w-wide px-4 py-12 sm:px-6">
       <div className="max-w-2xl">
-        <span className="retro-eyebrow">Internships</span>
-        <h1 className="mt-4 font-display text-4xl font-bold text-neutral-950">Internships</h1>
+        <span className="retro-eyebrow">Open Roles</span>
+        <h1 className="mt-4 font-display text-4xl font-bold text-neutral-950">Jobs</h1>
         <p className="mt-2 font-mono text-sm text-neutral-700">
-          {totalCount} open {totalCount === 1 ? "internship" : "internships"} from verified startups
-          — filter by season.
+          {totalCount} open {totalCount === 1 ? "job" : "jobs"} from verified startups —
+          full-time, part-time, and contract.
         </p>
       </div>
 
       <InternshipsFilterBar
         locations={locations}
         departments={departments}
-        variant="internship"
+        variant="job"
       />
 
       {internships.length === 0 ? (
         <EmptyState
-          icon={GraduationCap}
-          title="No internships available right now"
-          description="We don't have any open internships at the moment. Please check back later — new opportunities are added every day!"
-          action={{ label: "Get notified when new internships are posted", href: "/sign-up", icon: Bell }}
+          icon={Armchair}
+          title="No jobs available right now"
+          description="We don't have any open positions at the moment. Please check back later — new opportunities are added every day!"
+          action={{ label: "Get notified when new jobs are posted", href: "/sign-up", icon: Bell }}
           className="mt-8"
         />
       ) : (
@@ -108,7 +108,7 @@ export default async function InternshipsListPage({
                 if (v && k !== "page") next.set(k, v);
               }
               next.set("page", String(p));
-              return `/internships?${next.toString()}`;
+              return `/jobs?${next.toString()}`;
             }}
             className="mt-10"
           />

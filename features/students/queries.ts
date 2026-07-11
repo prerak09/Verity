@@ -20,9 +20,38 @@ export async function getStudentProfile(
     name: user.name,
     email: user.email,
     avatarUrl: user.avatarUrl,
+    headline: p?.headline ?? null,
+    location: p?.location ?? null,
     college: p?.college ?? null,
+    degree: p?.degree ?? null,
+    major: p?.major ?? null,
     gradYear: p?.gradYear ?? null,
+    skills: p?.skills ?? [],
+    interests: p?.interests ?? [],
+    linkedinUrl: p?.linkedinUrl ?? null,
+    githubUrl: p?.githubUrl ?? null,
+    portfolioUrl: p?.portfolioUrl ?? null,
     resumeUrl: p?.resumeUrl ?? null,
     bio: p?.bio ?? null,
   };
+}
+
+/** 0–100 completeness across the key profile fields (for the dashboard meter). */
+export function profileCompletenessPercent(p: StudentProfileDTO): number {
+  const checks = [
+    !!p.name,
+    !!p.headline,
+    !!p.location,
+    !!p.college,
+    !!p.degree,
+    !!p.major,
+    p.gradYear != null,
+    p.skills.length > 0,
+    p.interests.length > 0,
+    !!p.linkedinUrl,
+    !!p.resumeUrl,
+    !!p.bio,
+  ];
+  const filled = checks.filter(Boolean).length;
+  return Math.round((filled / checks.length) * 100);
 }
