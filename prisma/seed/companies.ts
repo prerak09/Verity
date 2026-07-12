@@ -2709,6 +2709,129 @@ const COMPANIES: DemoCompany[] = [
       },
     ],
   },
+  {
+    slug: "qualcomm",
+    name: "Qualcomm",
+    tagline: "Inventing the technologies that keep the world connected",
+    about:
+      "Qualcomm was established on July 1, 1985 by Irwin Jacobs and six other former Linkabit employees (Andrew Viterbi, Franklin Antonio, Adelia Coffman, Andrew Cohen, Klein Gilhousen, and Harvey White). Headquartered in San Diego, California, Qualcomm is publicly traded (NASDAQ: QCOM) and led by President & CEO Cristiano Amon. Qualcomm pioneered 5G technology and Snapdragon chips that power most Android devices.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fc/Qualcomm-Logo.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.qualcomm.com",
+    categories: ["ai-ml", "infrastructure"],
+    technologies: [],
+    location: { city: "San Diego", country: "USA" },
+    founders: [
+      { name: "Irwin Jacobs", title: "Co-founder" },
+      { name: "Andrew Viterbi", title: "Co-founder" },
+      {
+        name: "Cristiano Amon",
+        title: "President & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/cristiano-r-amon/",
+      },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/qualcomm" },
+      { type: "twitter", url: "https://x.com/Qualcomm" },
+    ],
+    internships: [
+      {
+        slug: "qualcomm-interim-engineering-intern-hardware",
+        title: "Interim Engineering Intern (1 Year) - Hardware",
+        description: `
+<p><strong>Company:</strong> Qualcomm India Private Limited</p>
+<p><strong>Job Area:</strong> Interns Group &gt; Interim Engineering Intern - HW</p>
+<p>Qualcomm is a company of inventors that unlocked 5G, ushering in an age of rapid acceleration in connectivity and new possibilities that will transform industries, create jobs, and enrich lives. It takes inventive minds with diverse skills, backgrounds, and cultures to transform 5G's potential into world-changing technologies and products.</p>
+<p><em>Note: the detailed Responsibilities, Required Qualifications, and Preferred Qualifications sections were not filled in on this posting at the source (Qualcomm's own career site shows placeholder text in place of the actual content) — reproduced here as published rather than invented.</em></p>
+<p>Qualcomm offers continuous learning and development programs, tuition reimbursement, and mentorships alongside comprehensive benefits.</p>
+`.trim(),
+        location: "Bangalore, Karnataka, India",
+        department: "Interim Engineering Intern - HW",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "1 year",
+        applyUrl: "https://careers.qualcomm.com/careers/job/446717035054?domain=qualcomm.com&hl=en",
+      },
+    ],
+  },
+  {
+    slug: "payu",
+    name: "PayU",
+    tagline: "Powering payments for online businesses",
+    about:
+      "PayU is a fintech company founded in 2002 and headquartered in Hoofddorp, Netherlands, empowering businesses to accept and process online payments across web and mobile applications. Owned by Prosus (Naspers Group) and led by Global CEO Anirban Mukherjee, PayU has ~3,350 employees and a valuation of ~$2.87B as of late 2024. This listing is with PayU Payments Private Limited, its India entity.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cd/PayU.svg",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://payu.in",
+    categories: ["fintech"],
+    technologies: [],
+    location: { city: "Hoofddorp", country: "Netherlands" },
+    founders: [
+      { name: "Nitin Gupta", title: "Co-founder" },
+      { name: "Amrish Rau", title: "Co-founder" },
+      { name: "Anirban Mukherjee", title: "Global CEO" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/payu" },
+      { type: "twitter", url: "https://twitter.com/payuindia" },
+    ],
+    internships: [
+      {
+        slug: "payu-fpa-intern",
+        title: "Intern (Financial Planning & Analysis)",
+        description: `
+<p>The FP&amp;A team functions as a strategic pillar within PayU's Finance Organization, driving analytical decision-making and financial insights across the company. The team manages budgeting, quarterly reviews, financial modeling, and performance analytics while supporting growth in the fintech sector.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Assist with monthly, quarterly, and annual financial planning and forecasting across business units.</li>
+<li>Develop and maintain financial models, dashboards, and reporting templates.</li>
+<li>Analyze variance between actual performance and budget/forecast.</li>
+<li>Support executive-level presentations and board materials.</li>
+<li>Conduct financial analysis on new business initiatives and market expansion.</li>
+<li>Maintain and enhance automated reporting using Excel and BI tools.</li>
+<li>Assist in annual budgeting processes.</li>
+<li>Monitor KPIs and business metrics.</li>
+<li>Support ad-hoc financial analysis requests.</li>
+<li>Collaborate cross-functionally and streamline FP&amp;A processes.</li>
+<li>Research industry benchmarks and competitive analysis.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Advanced Microsoft Excel proficiency (financial modeling, pivot tables, complex formulas).</li>
+<li>Basic understanding of financial statements and accounting principles.</li>
+<li>Strong analytical and quantitative problem-solving skills.</li>
+<li>Excellent attention to detail.</li>
+<li>Outstanding written and verbal communication abilities.</li>
+<li>Ability to manage multiple priorities independently.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Data visualization tools experience (Power BI, Tableau).</li>
+<li>Previous finance/consulting/analytics internship experience.</li>
+<li>ERP systems familiarity (SAP, Oracle).</li>
+<li>Understanding of fintech and digital payments.</li>
+<li>SQL, Python, or data analysis tool experience.</li>
+<li>Professional certifications (CFA, FRM, CPA) in progress.</li>
+</ul>
+<p><strong>Commitment:</strong> 6-month full-time internship with potential extension; immediate availability preferred.</p>
+`.trim(),
+        location: "Gurgaon, Haryana, India",
+        department: "Finance (FP&A)",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "6 months",
+        applyUrl: "https://www.linkedin.com/jobs/view/4435957773/",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
