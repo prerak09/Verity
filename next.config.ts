@@ -28,6 +28,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.meesho.io" },
       { protocol: "https", hostname: "cdn.sanity.io" },
       { protocol: "https", hostname: "www.ory.com" },
+      { protocol: "https", hostname: "www.finn.com" },
     ],
   },
 };
