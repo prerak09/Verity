@@ -800,7 +800,7 @@ const COMPANIES: DemoCompany[] = [
     employeeCountRange: "11-50",
     websiteUrl: "https://superkalam.com",
     categories: ["edtech", "ai-ml"],
-    technologies: ["python", "nodejs", "postgres"],
+    technologies: ["python", "nodejs", "postgres", "typescript", "react-native", "nextjs", "redis", "mysql", "aws"],
     location: { city: "Bengaluru", country: "India" },
     founders: [
       {
@@ -857,6 +857,156 @@ const COMPANIES: DemoCompany[] = [
         stipend: "₹25,000–₹40,000/month",
         duration: "4 to 6+ months",
         applyUrl: "https://www.workatastartup.com/jobs/64551",
+      },
+      {
+        slug: "superkalam-mobile-engineer-react-native-fullstack",
+        title: "Mobile Engineer (React Native + Fullstack)",
+        description: `
+<p>SuperKalam is building an AI-powered education platform similar to Duolingo. This role involves developing features across mobile and backend systems during a significant growth period for the company.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Build new features and initiatives in backend and mobile applications.</li>
+<li>Manage deployments, performance optimization, and push notifications.</li>
+<li>Establish tooling and run experiments, including automation workflows and AI systems.</li>
+<li>Participate in product and design reviews.</li>
+<li>Advance team technical capabilities by staying current with evolving technologies.</li>
+<li>Balance speed-to-production with quality considerations.</li>
+<li>Demonstrate smooth communication, ownership, and agility.</li>
+</ul>
+<p><strong>Core Requirements</strong></p>
+<ul>
+<li>Strong JavaScript/TypeScript fundamentals and object-oriented programming.</li>
+<li>React Native expertise with high-quality UI, smooth animations, and mobile optimization knowledge.</li>
+<li>Backend skills: CRUD APIs, Redis, caching, PostgreSQL/MySQL, rate limiting, basic scaling and security.</li>
+<li>Cloud platform experience (AWS, Azure, or GCP).</li>
+<li>System design proficiency at both low and high levels.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>2+ years product-based startup experience.</li>
+<li>AI/ML background or production AI pipeline experience.</li>
+<li>Elasticsearch familiarity.</li>
+<li>Python proficiency.</li>
+<li>Agentic workflow development.</li>
+<li>Voice agent implementation.</li>
+</ul>
+`.trim(),
+        location: "Bengaluru, India",
+        department: "Engineering, Full Stack",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "₹1.5M–₹3.4M/year + ESOPs",
+        duration: "Permanent",
+        applyUrl: "https://www.workatastartup.com/jobs/90951",
+      },
+      {
+        slug: "superkalam-mobile-engineer-react-native-intern",
+        title: "Mobile Engineer - React Native (Internship)",
+        description: `
+<p>Position for developers with prior high-quality mobile app experience seeking a fast-paced environment. Applicants are encouraged to submit a Loom demo and project walkthrough.</p>
+<p><strong>Key Requirements</strong></p>
+<ul>
+<li>Minimum 4+ months of prior internship experience in React Native (mandatory).</li>
+<li>Previously built high-quality production mobile apps in React Native.</li>
+<li>Solid JavaScript/TypeScript understanding and mastery of SOLID principles.</li>
+<li>Capability to build exceptional UI layouts and fluid animations.</li>
+<li>Native Android development knowledge, including bridge writing.</li>
+</ul>
+<p><strong>Bonus Skills</strong></p>
+<ul>
+<li>Push notifications, persistent notifications, and widgets.</li>
+<li>Meta ad integration.</li>
+<li>Personalization/gamification app experience.</li>
+<li>PostgreSQL, rate limiting basics, and security fundamentals.</li>
+</ul>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Build high-quality features from scratch in a lean team.</li>
+<li>Prioritize smooth communication, ownership, and agility.</li>
+</ul>
+<p><strong>Growth Opportunity:</strong> 50%+ of the team converted from internships to full-time roles with 1-2+ year tenure.</p>
+`.trim(),
+        location: "India (Remote / Bengaluru preferred)",
+        department: "Engineering, Android",
+        jobType: "INTERNSHIP",
+        remotePolicy: "REMOTE",
+        stipend: "₹25,000–₹45,000/month",
+        duration: "4 to 6+ months",
+        applyUrl: "https://www.workatastartup.com/jobs/67538",
+      },
+      {
+        slug: "superkalam-fullstack-engineer-intern",
+        title: "Fullstack Engineer (Internship)",
+        description: `
+<p>This role targets developers who have previously built high-quality web apps and worked on backend systems, and thrive in fast-paced environments. Candidates should submit a Loom video walkthrough of their top two projects to stand out.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Build landing pages, payment interfaces, and interactive applications on superkalam.com and heyhomi.in.</li>
+<li>Allocate approximately 80% effort toward frontend development initially.</li>
+<li>Create student dashboards with personalization features, streaks, and other modules.</li>
+<li>Develop backend features, AI integrations, and experimental projects.</li>
+<li>Optimize page performance and ensure responsive design.</li>
+<li>Take on increasing responsibilities as you progress.</li>
+</ul>
+<p><strong>Requirements</strong></p>
+<ul>
+<li>Demonstrated experience building multiple Next.js projects with quality UI and performance optimization.</li>
+<li>Backend expertise including database design, scalable architecture, caching, and complete feature implementation.</li>
+<li>Proficiency in JavaScript, Node.js, and TypeScript.</li>
+<li>Prior internship experience showing production-level work depth.</li>
+<li>Bonus: experience with AI projects using LangGraph, RAG implementations, or voice technologies.</li>
+<li>Strong communication skills and a natural ownership mindset.</li>
+</ul>
+<p><strong>Tech Stack:</strong> Next.js/React Native, Tailwind CSS, Express.js/NestJS, PostgreSQL, Redis.</p>
+<p><strong>Growth Opportunity:</strong> over 50% of the team transitioned from internships to full-time roles with 1-2+ year tenure.</p>
+`.trim(),
+        location: "Bengaluru, India (Remote preferred)",
+        department: "Engineering, Full Stack",
+        jobType: "INTERNSHIP",
+        remotePolicy: "REMOTE",
+        stipend: "₹25,000–₹35,000/month",
+        duration: "4 to 6+ months",
+        applyUrl: "https://www.workatastartup.com/jobs/64578",
+      },
+      {
+        slug: "superkalam-lead-product-designer",
+        title: "Lead Product Designer (Core Team, 3-4yrs experience)",
+        description: `
+<p>SuperKalam seeks a designer with exceptional quality standards and strong ownership to create phenomenal user experiences for an AI-powered education platform comparable to Duolingo.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Collaborate closely with founders and the engineering team on strategic initiatives.</li>
+<li>Lead prototyping using Figma and AI-powered design tools.</li>
+<li>Create visual enhancements through illustrations and animations (Jitter, Rive, Lottie).</li>
+<li>Conduct user research including surveys and user interviews.</li>
+<li>Make data-driven design decisions with awareness of cross-platform challenges.</li>
+<li>Implement organized design thinking with competitive analysis.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>3-4 years demonstrating both functional and beautiful design execution.</li>
+<li>Proven product thinking from product-based organizations.</li>
+<li>Strong design portfolio.</li>
+<li>Experience with dark/light modes and design systems.</li>
+<li>AI integration in design processes and workflows.</li>
+<li>Proficiency with Figma.</li>
+<li>Multidisciplinary thinking (motion design, animation tools).</li>
+</ul>
+<p><strong>Preferred Skills</strong></p>
+<ul>
+<li>Gamification and personalization flow experience.</li>
+<li>Rapid learning mindset for early-stage startup growth.</li>
+<li>Balance between design perfection and speed.</li>
+<li>Strong individual contributor mentality.</li>
+</ul>
+`.trim(),
+        location: "Bengaluru, India",
+        department: "Design",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "₹1.8M–₹3M/year + ESOPs",
+        duration: "Permanent",
+        applyUrl: "https://www.workatastartup.com/jobs/65916",
       },
     ],
   },
