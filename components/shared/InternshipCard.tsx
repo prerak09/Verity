@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Briefcase } from "lucide-react";
 
 import type { InternshipCard as InternshipCardDTO, Season } from "@/types";
 import { RemoteChip } from "@/components/shared/RemoteChip";
+import { CompanyLogo } from "@/components/shared/CompanyLogo";
 import { cn } from "@/components/lib/utils";
 
 const SEASON_LABEL: Record<Season, string> = {
@@ -48,24 +47,12 @@ export function InternshipCard({
       </Link>
 
       {!hideCompany && (
-        <>
-          {internship.companyLogoUrl ? (
-            <Image
-              src={internship.companyLogoUrl}
-              alt=""
-              width={52}
-              height={52}
-              className="size-12 shrink-0 rounded-[3px] border-[3px] border-neutral-950 object-cover"
-            />
-          ) : (
-            <div
-              aria-hidden
-              className="flex size-12 shrink-0 items-center justify-center rounded-[3px] border-[3px] border-neutral-950 bg-tile-blue text-neutral-950"
-            >
-              <Briefcase className="size-5" strokeWidth={2} />
-            </div>
-          )}
-        </>
+        <CompanyLogo
+          src={internship.companyLogoUrl}
+          name={internship.companyName}
+          seed={internship.companyId}
+          size={48}
+        />
       )}
 
       <div className="min-w-0 flex-1">
