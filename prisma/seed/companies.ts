@@ -1917,6 +1917,83 @@ const COMPANIES: DemoCompany[] = [
         duration: "Not specified",
         applyUrl: "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/China-Shanghai/Robotics-Software-Intern--Deployment-and-Humanoids---2026_JR2019641",
       },
+      {
+        slug: "nvidia-performance-engineer-intern-systems-software",
+        title: "Performance Engineer Intern, Systems Software - Fall 2026",
+        description: `
+<p>NVIDIA is a worldwide technology company headquartered in Santa Clara, California. NVIDIA manufactures graphics processing units (GPUs), as well as system on a chip units (SOCs) for the expanding markets. Our work in visual computing has led to thousands of patented inventions, breakthrough technologies, deep industry relationships and a globally recognized brand.</p>
+<p>You would join the team responsible for the maintenance, development, and execution of Desktop Gaming Performance testing in Linux and Windows environments for the world's fastest, power efficient GPUs. This job has a preferred duration of 8-12 months.</p>
+<p><strong>What You'll Be Doing</strong></p>
+<ul>
+<li>Writing and maintaining containerized GPU accelerated workloads for the financial services industry, from deep learning training and inference, to portfolio optimization and backtesting.</li>
+<li>Running, validating, and analyzing benchmarking models at scale on HPC clusters.</li>
+<li>Visualizing performance data, building charts and dashboards using internal schemas and tooling.</li>
+<li>Working closely with the latest and greatest in financial AI models and tooling to help build reference models for NVIDIA.</li>
+</ul>
+<p><strong>What We Need to See</strong></p>
+<ul>
+<li>Enrolled in a Bachelor's program majoring in Computer Engineering, Software Engineering, Computer Science, or related field.</li>
+<li>Desire to improve code quality by learning and applying computer science fundamentals, algorithms, and data structures.</li>
+<li>Comfort with teamwork, collaboration, and a desire to reach across functional borders to develop new partnerships.</li>
+<li>Active experience with Python.</li>
+<li>Working comfort in a Linux command-line environment with version control.</li>
+<li>Foundational understanding and interest of the machine learning lifecycle (training, evaluation, and inference).</li>
+</ul>
+<p><strong>Ways to Stand Out from the Crowd</strong></p>
+<ul>
+<li>Familiarity with PyTorch and/or training, testing, and evaluating machine learning models.</li>
+<li>Experience with GPU computing or CUDA and libraries like cuOPT, CUTLASS, cuDNN, etc.</li>
+<li>Exposure to workload orchestration and job schedulers (Kubernetes, Slurm).</li>
+<li>Experience with containerized applications and resource management.</li>
+<li>Interest in quantitative finance and applying performance data to real-world problems.</li>
+</ul>
+`.trim(),
+        location: "St. Louis, MO",
+        department: "Systems Software",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$20–$71/hour",
+        duration: "8-12 months",
+        applyUrl: "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-MO-St-Louis/Performance-Engineer-Intern--Systems-Software---Fall-2026_JR2015779",
+      },
+      {
+        slug: "nvidia-quantum-research-scientist-intern",
+        title: "Quantum Research Scientist Intern - Fall 2026",
+        description: `
+<p>Today, NVIDIA is tapping into the unlimited potential of AI to define the next era of computing. NVIDIA is deeply invested in the future of quantum computing, building the accelerated platforms (cuQuantum, CUDA-Q, and NVIDIA Ising) that researchers around the world rely on to design, simulate, and scale quantum systems. This role works at the intersection of design, calibration, and quantum error correction, prototyping large-scale pipelines to computationally tackle fundamental problems in quantum hardware.</p>
+<p><strong>What You'll Be Doing</strong></p>
+<ul>
+<li>Develop agentic AI systems for quantum computing applications.</li>
+<li>Prototype a high-performance agentic pipeline for quantum EDA (Electronic Design Automation) of superconducting qubits.</li>
+<li>Collect, organize, and curate data to support digital twin development and NVIDIA Ising model workflows.</li>
+<li>Accelerate and deploy quantum calibration primitives.</li>
+<li>Combine electromagnetic and quantum simulations to extract relevant parameters and construct accurate Hamiltonians of the devices.</li>
+</ul>
+<p><strong>What We Need to See</strong></p>
+<ul>
+<li>Pursuing a Master's or PhD in Physics, Electrical/Computer Engineering, Computer Science, or related field.</li>
+<li>Proficiency in Python and a strong background in quantum computing fundamentals, including a deep understanding of at least one qubit modality.</li>
+<li>Familiarity with, or the ability to quickly ramp up on, standard design software.</li>
+<li>Exposure to electromagnetic simulation tools such as Ansys HFSS, Palace, or comparable solvers.</li>
+<li>Strong teamwork, communication, and documentation skills.</li>
+</ul>
+<p><strong>Ways to Stand Out from the Crowd</strong></p>
+<ul>
+<li>Hands-on experience with the design, simulation, calibration, and operation of quantum hardware systems (including superconducting qubits, Ion Traps, Neutral Atoms, or other leading physical modalities).</li>
+<li>Experience building agentic or LLM-driven workflows for scientific automation and tool orchestration.</li>
+<li>GPU-accelerated simulation experience with cuQuantum, CUDA-Q, or related NVIDIA quantum software.</li>
+<li>Familiarity with classical machine learning methods.</li>
+<li>A track record of publications in premier quantum computing or applied physics venues (e.g., PRX Quantum, Quantum, npj Quantum Information).</li>
+</ul>
+`.trim(),
+        location: "Remote (CA)",
+        department: "Quantum Computing",
+        jobType: "INTERNSHIP",
+        remotePolicy: "REMOTE",
+        stipend: "$20–$71/hour",
+        duration: "Not specified",
+        applyUrl: "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Remote/Quantum-Research-Scientist-Intern---Fall-2026_JR2018244",
+      },
     ],
   },
   {
@@ -1984,6 +2061,651 @@ const COMPANIES: DemoCompany[] = [
         stipend: "Not specified",
         duration: "September 21, 2026 – April 23, 2027",
         applyUrl: "https://jobs.ashbyhq.com/rivianvw.tech/75874976-540a-4e5c-aa72-1b23669c5211",
+      },
+    ],
+  },
+  {
+    slug: "tower-research-capital",
+    name: "Tower Research Capital",
+    tagline: "A leading quantitative trading firm",
+    about:
+      "Tower Research Capital is a leading quantitative trading firm founded in 1998, built on a high-performance platform and independent trading teams. Tower is home to some of the world's best systematic trading and engineering talent, with a 25+ year track record of innovation. Headquartered in NYC's historic Equitable Building, Tower has over a dozen offices worldwide including Chicago, London, Amsterdam, Singapore, and Hong Kong.",
+    logoUrl: "https://tower-research.com/wp-content/uploads/2024/06/Logo.svg",
+    fundingStage: "BOOTSTRAPPED",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://tower-research.com",
+    categories: ["fintech"],
+    technologies: ["cpp", "python"],
+    location: { city: "New York", country: "USA" },
+    founders: [
+      {
+        name: "Mark Gorton",
+        title: "Founder & Chairman",
+        linkedinUrl: "https://www.linkedin.com/in/mark-gorton-9729701b1/",
+      },
+      { name: "Alistair Brown", title: "Co-founder" },
+      { name: "Albert An", title: "CEO" },
+    ],
+    links: [],
+    internships: [
+      {
+        slug: "tower-research-quantitative-developer-intern",
+        title: "Quantitative Developer Intern - Summer 2027",
+        description: `
+<p>Tower Research Capital is a leading quantitative trading firm founded in 1998. Tower has built its business on a high-performance platform and independent trading teams. We have a 25+ year track record of innovation and a reputation for discovering unique market opportunities.</p>
+<p>Tower is home to some of the world's best systematic trading and engineering talent. We empower portfolio managers to build their teams and strategies independently while providing the economies of scale that come from a large, global organization.</p>
+<p>Engineers thrive at Tower while developing electronic trading infrastructure at a world class level. Our engineers solve challenging problems in the realms of low-latency programming, FPGA technology, hardware acceleration and machine learning.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Architect and optimize performant low-latency trading and high-throughput training systems.</li>
+<li>Work extensively with traders and researchers.</li>
+<li>Create tools to analyze data for patterns.</li>
+<li>Make market observations and conduct post-trade analysis.</li>
+<li>Develop, augment, and calibrate exchange simulators.</li>
+<li>Operate the team's high-frequency trading strategies.</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>Bachelor's, Master's, or PhD student.</li>
+<li>Majoring in computer science, mathematics, physics, electrical engineering, or related fields.</li>
+<li>Proficient in an object-oriented programming language (C++ and Python preferred).</li>
+<li>A working knowledge of Linux/Unix.</li>
+<li>Strong problem-solving abilities.</li>
+<li>A passion for new technologies and ideas.</li>
+<li>The ability to manage multiple tasks in a fast-paced environment.</li>
+<li>Strong communication skills.</li>
+<li>Interest in financial markets.</li>
+</ul>
+<p><strong>Preferred Qualifications (not required)</strong></p>
+<ul>
+<li>Past industry experience.</li>
+<li>Experience as a Teaching Assistant and/or participation in relevant Olympiads.</li>
+<li>Familiarity with machine learning, data analysis, market research and data modeling.</li>
+</ul>
+<p><strong>Benefits</strong> include a competitive compensation package, housing accommodation, free breakfast/lunch/snacks daily, networking and social events, and mentorship from senior management.</p>
+`.trim(),
+        location: "New York, NY / Chicago, IL",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$3,500–$5,700/week",
+        duration: "Summer 2027",
+        applyUrl: "https://tower-research.com/open-positions/?gh_jid=8044334",
+      },
+    ],
+  },
+  {
+    slug: "imc-trading",
+    name: "IMC Trading",
+    tagline: "A global market maker and proprietary trading firm",
+    about:
+      "IMC (International Marketmaker's Combination) is a proprietary trading firm and market maker founded in 1989 by Robert Defares and René Schelvis, two traders on the floor of the Amsterdam Equity Options Exchange. Headquartered in Amsterdam's Zuidas business district, IMC employs over 1,600 people across offices in Chicago, Sydney, Mumbai, Zug, Seoul, London, New York, and Hong Kong.",
+    fundingStage: "BOOTSTRAPPED",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.imc.com",
+    categories: ["fintech", "ai-ml"],
+    technologies: ["java", "cpp", "python", "pytorch", "tensorflow", "jax"],
+    location: { city: "Amsterdam", country: "Netherlands" },
+    founders: [
+      { name: "Robert Defares", title: "Co-founder & CEO" },
+      { name: "René Schelvis", title: "Co-founder" },
+    ],
+    links: [],
+    internships: [
+      {
+        slug: "imc-software-engineer-intern",
+        title: "Software Engineer Intern - Summer 2027",
+        description: `
+<p>IMC is a proprietary trading firm and market maker. This 10-week internship gives you the chance to engage with meaningful projects that could influence business outcomes, alongside classroom training covering financial markets, IMC technology, and coding fundamentals.</p>
+<p><strong>Core Responsibilities</strong></p>
+<ul>
+<li>Engage with meaningful projects that could influence business outcomes.</li>
+<li>Participate in classroom training covering financial markets overview, IMC technology, and coding fundamentals.</li>
+<li>Build relationships with traders and technologists in a problem-solving-focused environment.</li>
+<li>Attend professional development sessions exploring career trajectory at IMC.</li>
+<li>Participate in summer events and social activities with cohort members.</li>
+</ul>
+<p><strong>Required Skills &amp; Experience</strong></p>
+<ul>
+<li>Strong algorithmic and data structure knowledge.</li>
+<li>Proficiency in Java or C++ (preferred).</li>
+<li>Strong analytical abilities and programmatic problem-solving interest.</li>
+<li>Collaborative mindset for cross-functional teamwork.</li>
+<li>Ability to begin June 7, 2027.</li>
+</ul>
+<p>Prior financial markets experience is not required, but interest in the field is encouraged. Selected interns meeting performance standards may receive graduate position offers.</p>
+`.trim(),
+        location: "Chicago, IL",
+        department: "Engineering/Technology",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$200,000/year",
+        duration: "10 weeks, Summer 2027",
+        applyUrl: "https://job-boards.eu.greenhouse.io/imc/jobs/4823924101",
+      },
+      {
+        slug: "imc-machine-learning-research-intern",
+        title: "Machine Learning Research Intern - Summer 2027 - Chicago",
+        description: `
+<p>IMC is seeking PhD candidates for a 10–12 week in-person Machine Learning Research internship in Chicago, conducting hands-on research designing and applying original machine learning algorithms.</p>
+<p><strong>Core Responsibilities</strong></p>
+<ul>
+<li>Conduct hands-on research designing and applying original machine learning algorithms.</li>
+<li>Analyze large-scale datasets to develop predictive models.</li>
+<li>Build research skills through mentorship and feedback.</li>
+<li>Deepen understanding of quantitative trading via classroom instruction.</li>
+</ul>
+<p><strong>Required Skills &amp; Experience</strong></p>
+<ul>
+<li>Strong foundations in machine learning, probability, and statistics.</li>
+<li>Demonstrated hands-on experience with deep learning (neural networks, sequence modeling, optimization).</li>
+<li>Python proficiency and expertise with PyTorch, TensorFlow, and/or JAX.</li>
+<li>Proven research excellence via publications at NeurIPS, ICML, ICLR, or equivalent venues.</li>
+<li>Must start in-person June 7, 2027.</li>
+</ul>
+<p>Travel and accommodation are covered. High-performing interns may advance to full-time Graduate Researcher roles post-graduation.</p>
+`.trim(),
+        location: "Chicago, IL",
+        department: "Machine Learning Research",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$300,000/year",
+        duration: "10–12 weeks, Summer 2027",
+        applyUrl: "https://job-boards.eu.greenhouse.io/imc/jobs/4907430101",
+      },
+    ],
+  },
+  {
+    slug: "walleye-capital",
+    name: "Walleye Capital",
+    tagline: "A global multi-strategy investment firm",
+    about:
+      "Walleye Capital is a global multi-strategy investment firm founded in 2005 as an options market-making firm in Minnesota by Irving Kessler and Peter Goddard. Headquartered in New York with offices in London and Dubai, Walleye has surpassed $10B in assets under management, focusing on innovation through fundamental research, quantitative methods, and AI to generate alpha across global markets.",
+    logoUrl: "https://walleyecapital.com/i/svg/logo_walleye_color.svg",
+    fundingStage: "BOOTSTRAPPED",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "201-500",
+    websiteUrl: "https://walleyecapital.com",
+    categories: ["fintech", "ai-ml"],
+    technologies: ["python"],
+    location: { city: "New York", country: "USA" },
+    founders: [
+      { name: "Irving Kessler", title: "Co-founder" },
+      { name: "Peter Goddard", title: "Co-founder" },
+      {
+        name: "Will England",
+        title: "Partner, CEO & Co-Chief Investment Officer",
+        linkedinUrl: "https://www.linkedin.com/in/wiengland/",
+      },
+    ],
+    links: [],
+    internships: [
+      {
+        slug: "walleye-investment-data-science-intern",
+        title: "Investment Data Science Intern (Summer 2027)",
+        description: `
+<p>Walleye Capital seeks interns for high-impact projects supporting long/short discretionary investment strategies through alternative data research, thematic investment analysis, and stock-specific assessments. This 10-week internship runs June–August 2027 in NYC.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Partner with Central Data Science on research initiatives, supporting both production insight pipelines and ad hoc analytics.</li>
+<li>Collaborate with portfolio managers identifying areas where alternative/fundamental data strengthens investment theses.</li>
+<li>Conduct exploratory data analysis, signal validation, and performance attribution studies.</li>
+<li>Evaluate new data vendors through quantitative and qualitative assessment.</li>
+<li>Learn data science workflows on cloud and Linux infrastructure.</li>
+<li>Clean, transform, and manage structured/unstructured datasets while maintaining code quality and documentation.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Pursuing undergraduate or non-MBA master's in a STEM field, expected graduation December 2027–June 2028.</li>
+<li>Strong quantitative skills, programming proficiency, statistical knowledge, and problem-solving ability.</li>
+<li>Self-motivation, adaptability, attention to detail, and enthusiasm for leveraging AI tools.</li>
+<li>Thrives in collaborative environments valuing intellectual humility and continuous learning.</li>
+</ul>
+<p><strong>Application Deadline:</strong> Friday, July 31 at 11:59pm ET.</p>
+`.trim(),
+        location: "New York, NY",
+        department: "Central Data Science / Investment",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$14,000/month + $10,000 housing stipend",
+        duration: "10 weeks, Summer 2027",
+        applyUrl: "https://job-boards.greenhouse.io/walleyecapital-external-students/jobs/4676587006",
+      },
+      {
+        slug: "walleye-quantic-quantitative-developer-intern",
+        title: "Quantic – Quantitative Developer Intern (Summer 2027)",
+        description: `
+<p>Walleye Capital seeks technically proficient interns for the Quantic team, one of the most successful trading teams in the industry, operating in equities, options, and futures markets.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Create quantitative infrastructure for alpha generation and algorithmic trading.</li>
+<li>Design data pipelines and ensure data quality in financial datasets.</li>
+<li>Collaborate with traders on proprietary strategy development.</li>
+<li>Build reporting tools for strategy risk and trade execution analysis.</li>
+<li>Oversee automated trading systems using coding and AI tools.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Pursuing undergraduate or advanced degree in computer science, engineering, statistics, mathematics, or related field, expected graduation December 2027–June 2028.</li>
+<li>Strong quantitative skills with proficiency in a scripting language (Python/Bash/Perl) and UNIX/Linux experience.</li>
+<li>Familiarity with machine learning packages.</li>
+<li>Self-starter mentality for complex problem-solving.</li>
+<li>Interest in systematic investing and AI applications.</li>
+<li>Collaborative mindset valuing intellectual humility, creativity, and continuous learning.</li>
+</ul>
+<p><strong>Application Deadline:</strong> Friday, July 31 at 11:59pm ET.</p>
+`.trim(),
+        location: "Boston, MA",
+        department: "Quantic (Quantitative Investment)",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$20,000/month + $10,000 housing stipend",
+        duration: "10 weeks, Summer 2027",
+        applyUrl: "https://job-boards.greenhouse.io/walleyecapital-external-students/jobs/4679168006",
+      },
+      {
+        slug: "walleye-volatility-trading-developer-intern",
+        title: "Volatility Trading Developer Intern (Summer 2027)",
+        description: `
+<p>Support Walleye Capital's Equity Volatility business by collaborating with traders, developers, quants, and operations teams to develop and optimize tools for trading operations and infrastructure across a 10-week summer internship (June–August 2027).</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Collaborate with traders implementing and scaling strategies, building datasets, automating workflows, and integrating trading signals.</li>
+<li>Design tools supporting trading inputs (earnings, dividends, interest rates, model parameters) and critical processes like Early Exercise and Expiration workflows.</li>
+<li>Assist modernizing legacy systems across risk, P&amp;L, operations, and execution for improved reliability and performance.</li>
+<li>Research financial and technical contexts to ensure design decisions reflect real-world applications.</li>
+<li>Utilize AI tools to enhance efficiency and workflows.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Pursuing undergraduate or non-MBA master's degree in mathematics, computer science, engineering, or related field, expected graduation December 2027–June 2028.</li>
+<li>Strong quantitative and analytical skills with programming proficiency (Python, Java, or C++).</li>
+<li>Self-motivated, adaptable, detail-oriented with ability managing multiple priorities.</li>
+<li>Clear communication abilities, both written and verbal.</li>
+<li>Collaborative mindset valuing intellectual humility, creativity, and continuous learning.</li>
+</ul>
+<p><strong>Application Deadline:</strong> Friday, July 31 at 11:59pm ET.</p>
+`.trim(),
+        location: "New York, NY",
+        department: "Equity Volatility",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$14,000/month + $10,000 housing stipend",
+        duration: "10 weeks, Summer 2027",
+        applyUrl: "https://job-boards.greenhouse.io/walleyecapital-external-students/jobs/4679434006",
+      },
+    ],
+  },
+  {
+    slug: "ellipsis-labs",
+    name: "Ellipsis Labs",
+    tagline: "Building sustainable and efficient DeFi protocols",
+    about:
+      "Ellipsis Labs is a profitable, venture-backed New York startup building sustainable and efficient DeFi protocols on high-throughput decentralized infrastructure. Its flagship product, Phoenix Perpetuals, brings professional-grade perpetual futures to Solana; it also operates SolFi, a proprietary automated market maker, and Phoenix Legacy, a limit order book on Solana. Combined, these products have facilitated over $285B in trading volume across Solana markets.",
+    logoUrl: "https://cdn.prod.website-files.com/6682d4d014f82df8a5f50485/66d9f238b66f6d2933d63def_logo.svg",
+    fundingStage: "SERIES_A",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "11-50",
+    websiteUrl: "https://www.ellipsislabs.xyz",
+    categories: ["fintech", "ai-ml"],
+    technologies: ["typescript", "rust", "python", "react", "docker"],
+    location: { city: "New York", country: "USA" },
+    founders: [
+      {
+        name: "Eugene Chen",
+        title: "Co-founder",
+        linkedinUrl: "https://www.linkedin.com/in/eugene-chen-a4940880/",
+      },
+      {
+        name: "Jarry Xiao",
+        title: "Co-founder",
+        linkedinUrl: "https://www.linkedin.com/in/jarryxiao/",
+      },
+    ],
+    links: [{ type: "linkedin", url: "https://www.linkedin.com/company/ellipsis-labs" }],
+    internships: [
+      {
+        slug: "ellipsis-labs-software-engineer-2027-intern",
+        title: "Software Engineer - 2027 Interns",
+        description: `
+<p>Ellipsis Labs is a profitable, venture-backed New York-based startup building sustainable and efficient DeFi protocols on high-throughput decentralized infrastructure. Our long-term goal is to build a better financial system.</p>
+<p>Our flagship product, Phoenix Perpetuals, brings professional-grade perpetual futures to Solana. Building on our experience developing efficient markets, Ellipsis Labs also operates SolFi, a proprietary automated market maker that provides efficient liquidity for key trading pairs. Our foundational product, Phoenix Legacy, is a limit order book on the Solana blockchain that established our expertise in operating high-performance markets. Combined, these products have facilitated over $285B in trading volume across Solana markets.</p>
+<p>Ellipsis Labs is seeking software engineering summer interns to join our team in 2027. As an early-stage startup, we appreciate bright generalists who can iterate and ship quickly.</p>
+<p><strong>In this role, you will</strong></p>
+<ul>
+<li>Build real product features and/or platform components across the stack — front end, back end, infra, or on-chain — based on your skills and interest.</li>
+<li>Own scoped projects end-to-end: problem definition → design → implementation → testing → deployment → monitoring.</li>
+<li>Collaborate with design and engineering to deliver fast, reliable, and secure experiences.</li>
+<li>Instrument and improve performance, reliability, and observability; write clear tests and documentation.</li>
+</ul>
+<p><strong>Qualifications — Required</strong></p>
+<ul>
+<li>Hands-on experience building software (courses, personal projects, research, or internships) in one or more languages such as TypeScript/JavaScript, Python, Rust, Java, C/C++; you write clear, tested code.</li>
+<li>Solid CS fundamentals (data structures, algorithms, systems thinking) and familiarity with Git and basic debugging.</li>
+<li>Ability to make informed trade-offs with business context; high agency and a team-first mindset.</li>
+<li>Curiosity about DeFi/crypto (prior domain experience not required).</li>
+</ul>
+<p><strong>Qualifications — Preferred</strong></p>
+<ul>
+<li>Experience in one or more areas: full-stack web (React/JavaScript), backend APIs/services, infrastructure/DevOps (Docker, CI/CD, cloud), or on-chain/low-level systems.</li>
+<li>Familiarity with blockchain technology (Solana a plus).</li>
+<li>Interest or experience in fintech/trading.</li>
+<li>Rust or TypeScript proficiency.</li>
+</ul>
+`.trim(),
+        location: "New York, NY",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Summer 2027",
+        applyUrl: "https://jobs.ashbyhq.com/ellipsislabs/02136b22-35b1-4b3d-8bef-567c3380a849",
+      },
+    ],
+  },
+  {
+    slug: "uber-freight",
+    name: "Uber Freight",
+    tagline: "AI-powered logistics network connecting shippers and carriers",
+    about:
+      "Uber Freight is a logistics technology company launched by Uber in 2017, connecting long-haul truck drivers with companies needing cargo shipping. Led by CEO Rebecca Tinucci (former Tesla charging infrastructure lead) since 2025, and chaired by founder Lior Ron, Uber Freight has built a scaled AI logistics network with its own logistics-specific large language model integrated into an upgraded Transportation Management System.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/58/Uber_logo_2018.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.uberfreight.com",
+    categories: ["logistics", "saas", "ai-ml"],
+    technologies: ["python"],
+    location: { city: "Bellevue", country: "USA" },
+    founders: [
+      {
+        name: "Lior Ron",
+        title: "Founder & Chairman",
+        linkedinUrl: "https://www.linkedin.com/in/lioron/",
+      },
+      {
+        name: "Rebecca Tinucci",
+        title: "CEO",
+        linkedinUrl: "https://www.linkedin.com/in/rebecca-tinucci",
+      },
+    ],
+    links: [],
+    internships: [
+      {
+        slug: "uber-freight-data-scientist-intern",
+        title: "Data Scientist Intern - Fall 2026",
+        description: `
+<p>The intern will work across cross-functional teams on data-driven logistics challenges at Uber Freight.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Collaborate with data scientists, engineers, and stakeholders to address business problems.</li>
+<li>Implement statistical and machine learning approaches such as causal inference, recommender systems, and time series forecasting.</li>
+<li>Manage projects independently from initial exploration through production deployment.</li>
+<li>Contribute to internal data product enhancements.</li>
+<li>Communicate findings to technical and non-technical audiences.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Currently pursuing a Bachelor's, Master's, or PhD in a quantitative field with expected graduation Fall 2026 or Spring 2027.</li>
+<li>Programming proficiency in Python or R for model development.</li>
+<li>SQL competency for data manipulation.</li>
+<li>Understanding of statistical/ML methods including regression, classification trees, unsupervised learning, and causal inference.</li>
+<li>Strong problem-solving abilities in ambiguous settings.</li>
+<li>Collaborative approach and willingness to grow in a dynamic environment.</li>
+</ul>
+<p><strong>Note:</strong> No immigration sponsorship or transfer is available for this role.</p>
+`.trim(),
+        location: "Chicago, IL 60607",
+        department: "Data Science",
+        jobType: "INTERNSHIP",
+        remotePolicy: "HYBRID",
+        stipend: "$30/hour",
+        duration: "Not specified",
+        applyUrl: "https://job-boards.greenhouse.io/uberfreight/jobs/5194491008",
+      },
+    ],
+  },
+  {
+    slug: "figure-ai",
+    name: "Figure AI",
+    tagline: "Building general-purpose humanoid robots",
+    about:
+      "Figure AI is an artificial intelligence and robotics company founded in May 2022 by Brett Adcock, developing general-purpose humanoid robots. Figure has raised over $1B in funding at a $39B post-money valuation from investors including Jeff Bezos, Microsoft, NVIDIA, Intel, and the startup-funding divisions of Amazon and OpenAI.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Figure-ai-logo.svg",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "201-500",
+    websiteUrl: "https://www.figure.ai",
+    categories: ["ai-ml"],
+    technologies: ["cpp", "python"],
+    location: { city: "Sunnyvale", country: "USA" },
+    founders: [
+      {
+        name: "Brett Adcock",
+        title: "Founder & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/brettadcock/",
+      },
+    ],
+    links: [],
+    internships: [
+      {
+        slug: "figure-ai-firmware-intern",
+        title: "Firmware Intern [Fall 2026]",
+        description: `
+<p>Figure seeks a firmware engineering intern to support robotics development by enabling board bring-up, developing and validating new firmware features, and assisting with integration and testing.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Design, implement, and test firmware in C/C++ for motor controllers, battery management systems, and sensing hardware.</li>
+<li>Develop Python tools for test automation and hardware calibration.</li>
+<li>Contribute to CI/CD infrastructure development.</li>
+<li>Support hardware/software integration in laboratory settings.</li>
+</ul>
+<p><strong>Core Requirements</strong></p>
+<ul>
+<li>Undergraduate senior or recent graduate in Computer Engineering, Computer Science, or related field.</li>
+<li>Fluency in C, C++, and Python.</li>
+<li>Experience implementing low level software on bare-metal systems and RTOS.</li>
+<li>Strong computer architecture knowledge.</li>
+<li>Deep understanding of communication buses and protocols like Ethernet, EtherCAT, Serial, CAN, or USB.</li>
+<li>Proficiency with oscilloscopes, logic analyzers, and in-circuit debugging tools.</li>
+</ul>
+<p><strong>Bonus Qualifications</strong></p>
+<ul>
+<li>Motor controller or battery management systems experience.</li>
+<li>CI/CD infrastructure implementation background.</li>
+<li>Agile and test-driven development familiarity.</li>
+</ul>
+`.trim(),
+        location: "San Jose, CA",
+        department: "Firmware Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$40–$45/hour",
+        duration: "Minimum 10 weeks (1–2 terms preferred)",
+        applyUrl: "https://job-boards.greenhouse.io/figureai/jobs/4691070006",
+      },
+    ],
+  },
+  {
+    slug: "intuitive-surgical",
+    name: "Intuitive",
+    tagline: "Robotic-assisted surgery, pioneered",
+    about:
+      "Intuitive (Intuitive Surgical), incorporated in 1995 by Frederic Moll, John Freund, and Robert Younge, pioneered robotic-assisted surgery with its da Vinci and Ion platforms. Publicly traded (NASDAQ: ISRG) and headquartered in Sunnyvale, California, Intuitive is led by CEO Dave Rosa, who succeeded longtime CEO Gary Guthart (now Executive Chair) in July 2025.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/01/Intuitive_Surgical_logo.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.intuitive.com",
+    categories: ["healthtech", "ai-ml"],
+    technologies: ["python", "cpp", "pytorch", "opencv"],
+    location: { city: "Sunnyvale", country: "USA" },
+    founders: [
+      { name: "Frederic Moll", title: "Co-founder" },
+      { name: "Dave Rosa", title: "CEO" },
+      { name: "Gary Guthart", title: "Executive Chair (former CEO)" },
+    ],
+    links: [{ type: "linkedin", url: "https://www.linkedin.com/company/intuitivesurgical" }],
+    internships: [
+      {
+        slug: "intuitive-computer-vision-engineering-intern",
+        title: "Computer Vision Engineering Intern - Fall 2026",
+        description: `
+<p>Join an R&amp;D team advancing computer vision for robotic endoscopic video technologies, focusing on vision foundation/diffusion models, feature detection, and multimodal video analysis.</p>
+<p><strong>Essential Duties</strong></p>
+<ul>
+<li>Explore and experiment with state-of-the-art computer vision models.</li>
+<li>Prototype algorithms and evaluate performance on public/proprietary datasets.</li>
+<li>Conduct literature surveys and summarize key findings in reports and presentations.</li>
+</ul>
+<p><strong>Required Skills &amp; Experience</strong></p>
+<ul>
+<li>Hands-on expertise in computer vision, deep learning, video analysis.</li>
+<li>Knowledge in vision-language models, diffusion models, feature detection, or multimodal learning.</li>
+<li>Proficiency in programming with Python or C++.</li>
+<li>Experience with PyTorch, OpenCV, DINO/CLIP, HuggingFace Transformers.</li>
+<li>Strong research and communication abilities.</li>
+<li>Self-driven; ability for rapid prototyping.</li>
+</ul>
+<p><strong>Education:</strong> currently enrolled in PhD or Master's in Computer Science, Robotics, Engineering, or related field, returning to degree program Spring 2027.</p>
+<p><strong>Availability:</strong> full-time (40 hours/week) for 10-12 weeks starting August/September 2026.</p>
+`.trim(),
+        location: "Sunnyvale, CA",
+        department: "R&D",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$62–$82/hour (region-dependent)",
+        duration: "10-12 weeks",
+        applyUrl: "https://jobs.smartrecruiters.com/Intuitive/744000133458290",
+      },
+    ],
+  },
+  {
+    slug: "samsung-research-america",
+    name: "Samsung Research America",
+    tagline: "Samsung Electronics' U.S. research and innovation arm",
+    about:
+      "Samsung Research America (SRA) is Samsung Electronics' U.S.-based research organization, headquartered in Mountain View, California, with locations across the U.S. SRA conducts long-term research across AI, multimodal understanding and generation, and other advanced technologies with potential for direct impact on future Samsung products. Samsung Electronics is publicly traded (KRX: 005930).",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://sra.samsung.com",
+    categories: ["ai-ml", "consumer"],
+    technologies: ["python", "pytorch"],
+    location: { city: "Mountain View", country: "USA" },
+    founders: [],
+    links: [],
+    internships: [
+      {
+        slug: "samsung-research-america-fall-intern-computer-vision-ai",
+        title: "2026 Fall Intern, Computer Vision/AI",
+        description: `
+<p>The Vision Intelligence lab at Samsung's Mountain View research center seeks interns to conduct long-term research with potential for direct impact on future Samsung products. The team focuses on advancing multimodal understanding and generation technologies.</p>
+<p><strong>Core Responsibilities</strong></p>
+<ul>
+<li>Research multi-modal models in retrieval, question answering, reasoning, generation, and editing.</li>
+<li>Develop maintainable code implementing research concepts.</li>
+<li>Collaborate with team members discussing findings and refining methodologies.</li>
+<li>Execute experiments while documenting progress and presenting insights.</li>
+<li>Prepare findings for major conference or journal submissions.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Currently enrolled in MS or PhD program.</li>
+<li>Proficiency in Python, PyTorch, and Transformers frameworks.</li>
+<li>Prior publications in top-tier venues (CVPR, ECCV, ICCV, ICML, NeurIPS, AAAI).</li>
+<li>Expertise in VLMs, diffusion models, efficient multi-modal design, or Vision Language Action Models.</li>
+<li>Strong communication abilities.</li>
+</ul>
+`.trim(),
+        location: "Mountain View, CA",
+        department: "Samsung AI Research Center (SAIC), Vision Intelligence Lab",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$48–$63/hour",
+        duration: "Not specified",
+        applyUrl: "https://job-boards.greenhouse.io/samsungresearchamericainternship/jobs/8560657002",
+      },
+    ],
+  },
+  {
+    slug: "solopulse",
+    name: "SoloPulse",
+    tagline: "Architecting the foundational layer of signal intelligence",
+    about:
+      "SoloPulse Corp is a dual-use radar company founded in 2022 by Allyson McKinney, Victoria Rische, and Michael McKinney, headquartered in Norcross, GA. Using novel advanced wave theory algorithms underpinned by the principles of special relativity, SoloPulse achieves state-of-the-art resolution and latency metrics for products like SIGMA (target fixes and situational awareness) and NOVA (real-time actionable intelligence), serving civilian and military autonomy and safety needs. The company has raised $9.75M across two funding rounds.",
+    logoUrl: "https://solopulse.com/wp-content/uploads/2026/03/SoluPulse-logo-2-Vectorized.png",
+    fundingStage: "SEED",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "11-50",
+    websiteUrl: "https://solopulse.com",
+    categories: ["ai-ml", "infrastructure"],
+    technologies: ["python", "cpp", "cuda", "pytorch"],
+    location: { city: "Norcross", country: "USA" },
+    founders: [
+      {
+        name: "Allyson McKinney",
+        title: "CEO & Co-founder",
+        linkedinUrl: "https://www.linkedin.com/in/allyson-mckinney-31b534b3/",
+      },
+      {
+        name: "Victoria Rische",
+        title: "Co-founder & COO",
+        linkedinUrl: "https://www.linkedin.com/in/victoria-rische11",
+      },
+      { name: "Michael McKinney", title: "Co-founder" },
+    ],
+    links: [{ type: "linkedin", url: "https://www.linkedin.com/company/solopulse-corp" }],
+    internships: [
+      {
+        slug: "solopulse-software-engineer-intern-co-op",
+        title: "Software Engineer Intern/Co-Op - Fall 2026",
+        description: `
+<p>SoloPulse Corp is a dual-use radar company committed to the relentless exploration of the frontiers of radar sensing technology. Through the utilization of novel advanced wave theory algorithms, underpinned by the principles of special relativity, SoloPulse can achieve state of the art resolution and latency metrics. Located in Atlanta, GA, SoloPulse stands as a venture-backed startup, diligently cultivating strategic collaborations to proactively address critical safety imperatives and emerging autonomy needs across both civilian and military domains.</p>
+<p>As a Software Engineer Intern/Co-op at SoloPulse, you will play a critical role in the development of our software solutions. You will work on a wide range of tasks, from algorithm development to frontend-backend integration.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Design, develop, test, and deploy software solutions using a variety of programming languages and technologies.</li>
+<li>Implement and maintain both frontend and backend components of our applications.</li>
+<li>Develop and optimize algorithms to solve complex problems.</li>
+<li>Engineer low-latency solutions to proprietary computational operations.</li>
+<li>Collaborate with cross-functional teams to understand and define software requirements.</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>Must be pursuing a Bachelor's, Master's, or PhD in Computer Science, Computer Engineering or related quantitative field from an accredited 4-year university.</li>
+<li>Proficiency in Python and C++.</li>
+<li>Familiarity with embedded and real-time systems programming.</li>
+<li>Knowledge of software architecture and design paradigms.</li>
+<li>Strong communication and teamwork skills.</li>
+<li>Willingness to take ownership of projects and work autonomously.</li>
+</ul>
+<p><strong>Bonus Qualifications</strong></p>
+<ul>
+<li>A strong portfolio of personal software or hardware-related projects.</li>
+<li>Familiarity with the CUDA toolkit and associated programming practices.</li>
+<li>Familiarity with GPU-accelerated libraries such as PyTorch and OpenGL/ThreeJS.</li>
+</ul>
+`.trim(),
+        location: "Peachtree Corners, GA",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Not specified",
+        applyUrl: "https://jobs.lever.co/solopulseco/00fbde18-a387-4c9f-97d4-77059aec7b56",
       },
     ],
   },

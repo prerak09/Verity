@@ -12,6 +12,7 @@ const CATEGORIES = [
   { slug: "consumer", name: "Consumer" },
   { slug: "infrastructure", name: "Cloud Infrastructure & Security" },
   { slug: "edtech", name: "Edtech" },
+  { slug: "logistics", name: "Logistics" },
 ];
 
 const TECHNOLOGIES = [
@@ -44,6 +45,9 @@ const TECHNOLOGIES = [
   { slug: "ruby", name: "Ruby" },
   { slug: "cuda", name: "CUDA" },
   { slug: "ros2", name: "ROS2" },
+  { slug: "tensorflow", name: "TensorFlow" },
+  { slug: "jax", name: "JAX" },
+  { slug: "opencv", name: "OpenCV" },
 ];
 
 export async function seedTaxonomy(db: PrismaClient): Promise<SeededTaxonomy> {
