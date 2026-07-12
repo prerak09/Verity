@@ -121,6 +121,7 @@ export function InternshipManager({
         location: input.location ?? null,
         department: input.department ?? null,
         jobType: input.jobType ?? null,
+        season: input.season ?? null,
         remotePolicy: input.remotePolicy ?? null,
         stipend: input.stipend ?? null,
         status: "DRAFT",

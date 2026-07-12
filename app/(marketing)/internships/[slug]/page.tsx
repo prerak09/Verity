@@ -32,6 +32,14 @@ const STATUS_LABEL: Record<string, string> = {
   ARCHIVED: "Closed",
 };
 
+const SEASON_LABEL: Record<string, string> = {
+  SUMMER: "Summer",
+  FALL: "Fall",
+  SPRING: "Spring",
+  WINTER: "Winter",
+  YEAR_ROUND: "Year-round",
+};
+
 export default async function InternshipDetailPage({
   params,
 }: {
@@ -96,6 +104,11 @@ export default async function InternshipDetailPage({
               </span>
             )}
             {internship.remotePolicy && <RemoteChip policy={internship.remotePolicy} />}
+            {internship.season && (
+              <span className="inline-flex items-center rounded-sm border-2 border-neutral-950 bg-tile-lavender px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-neutral-950">
+                {SEASON_LABEL[internship.season] ?? internship.season}
+              </span>
+            )}
             {internship.duration && (
               <span className="inline-flex items-center gap-1">
                 <Clock className="size-4" aria-hidden />

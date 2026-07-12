@@ -4,10 +4,9 @@ import { getCurrentUser } from "@/lib/auth";
 
 const NAV_LINKS = [
   { href: "/companies", label: "Startups" },
-  { href: "/internships", label: "Jobs", badge: "NEW" },
+  { href: "/internships", label: "Internships" },
+  { href: "/jobs", label: "Jobs", badge: "NEW" },
   { href: "/categories", label: "Categories" },
-  { href: "/team", label: "Team" },
-  { href: "/sign-up", label: "Pricing" },
 ];
 
 export default async function MarketingLayout({

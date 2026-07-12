@@ -4,6 +4,7 @@ import { z } from "zod";
 import { REMOTE_POLICIES } from "@/features/companies/schema";
 
 export const JOB_TYPES = ["FULL_TIME", "PART_TIME", "CONTRACT", "INTERNSHIP"] as const;
+export const SEASONS = ["SUMMER", "FALL", "SPRING", "WINTER", "YEAR_ROUND"] as const;
 
 const httpsUrl = z
   .string()
@@ -18,6 +19,7 @@ export const createInternshipSchema = z.object({
   location: z.string().trim().min(1, "Location is required.").max(160),
   department: z.string().trim().max(120).optional(),
   jobType: z.enum(JOB_TYPES).optional(),
+  season: z.enum(SEASONS).optional(),
   remotePolicy: z.enum(REMOTE_POLICIES),
   stipend: z.string().trim().max(80).optional(),
   duration: z.string().trim().max(80).optional(),

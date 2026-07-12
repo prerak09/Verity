@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 
 import type { CompanyCard as CompanyCardDTO } from "@/types";
 import { VerifiedBadge } from "@/components/shared/VerifiedBadge";
 import { FundingChip } from "@/components/shared/FundingChip";
 import { RemoteChip } from "@/components/shared/RemoteChip";
+import { CompanyLogo } from "@/components/shared/CompanyLogo";
 import { cn } from "@/components/lib/utils";
 
 const TILE_CLASSES = [
@@ -50,25 +50,12 @@ export function CompanyCard({
         <span className="sr-only">View {company.name}</span>
       </Link>
 
-      {company.logoUrl ? (
-        <Image
-          src={company.logoUrl}
-          alt=""
-          width={64}
-          height={64}
-          className="size-16 shrink-0 rounded-[3px] border-[3px] border-neutral-950 bg-white object-contain p-1.5"
-        />
-      ) : (
-        <div
-          aria-hidden
-          className={cn(
-            "flex size-16 shrink-0 items-center justify-center rounded-[3px] border-[3px] border-neutral-950 font-display text-2xl font-bold text-neutral-950",
-            tileColorClass(company.id),
-          )}
-        >
-          {company.name.charAt(0).toUpperCase()}
-        </div>
-      )}
+      <CompanyLogo
+        src={company.logoUrl}
+        name={company.name}
+        seed={company.id}
+        size={64}
+      />
 
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-2">
