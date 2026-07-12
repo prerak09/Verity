@@ -1747,6 +1747,246 @@ const COMPANIES: DemoCompany[] = [
       },
     ],
   },
+  {
+    slug: "microsoft",
+    name: "Microsoft",
+    tagline: "Empowering every person and organization on the planet to achieve more",
+    about:
+      "Microsoft, founded in 1975 by Bill Gates and Paul Allen, is a multinational technology company headquartered in Redmond, Washington, led by Chairman and CEO Satya Nadella. Publicly traded (NASDAQ: MSFT), Microsoft builds products spanning cloud computing (Azure), productivity software (Microsoft 365), operating systems (Windows), gaming (Xbox), and AI (Copilot).",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.microsoft.com",
+    categories: ["saas", "ai-ml", "infrastructure"],
+    technologies: [],
+    location: { city: "Redmond", country: "USA" },
+    founders: [
+      {
+        name: "Bill Gates",
+        title: "Co-founder",
+        linkedinUrl: "https://www.linkedin.com/in/williamhgates/",
+      },
+      { name: "Paul Allen", title: "Co-founder" },
+      {
+        name: "Satya Nadella",
+        title: "Chairman & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/satyanadella/",
+      },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/microsoft" },
+      { type: "twitter", url: "https://x.com/microsoft" },
+    ],
+    internships: [
+      {
+        slug: "microsoft-software-engineering-intern-brazil",
+        title: "Software Engineering INTERN",
+        description: `
+<p>Come build community, explore your passions and do your best work at Microsoft with thousands of students from every corner of the world. This opportunity will allow you to bring your aspirations, talent, potential — and excitement for the journey ahead.</p>
+<p>As a Software Engineering (SWE) Intern, you will work with teammates to solve problems and build innovative software solutions. You will apply your passion for customers and product quality as you provide technical guidance to Technical Program Managers and Product Managers. You will also be expected to demonstrate an ability to learn and adopt relevant new technologies, tools, methods and processes to leverage in your solutions. This opportunity will enable you to advance your career by designing, developing, and testing next-generation software that will empower every person and organization on the planet to achieve more.</p>
+<p>At Microsoft, interns work on real-world projects in collaboration with teams across the world. Microsoft's mission is to empower every person and every organization on the planet to achieve more.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Apply engineering principles to solve complex problems through sound and creative engineering.</li>
+<li>Work with appropriate stakeholders to determine user requirements for a feature.</li>
+<li>Quickly learn new engineering methods and incorporate them into work processes.</li>
+<li>Seek feedback and apply internal or industry best practices to improve technical solutions.</li>
+<li>Demonstrate skill in time management and completing software projects in a cooperative team environment.</li>
+<li>Review current developments and proactively seek new knowledge that will improve the availability, reliability, efficiency, observability, and performance of products while also driving consistency in monitoring and operations at scale.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Currently pursuing a bachelor's degree in Engineering, Computer Science, or a related field.</li>
+<li>Intermediate or advanced English proficiency.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Ability to demonstrate an understanding of computer science fundamentals, including data structures and algorithms.</li>
+<li>Experience programming in an object-oriented language.</li>
+</ul>
+`.trim(),
+        location: "Brazil (Multiple Locations)",
+        department: "Software Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Not specified",
+        applyUrl: "https://apply.careers.microsoft.com/careers/job/1970393556875247",
+      },
+      {
+        slug: "microsoft-software-engineering-intern-india",
+        title: "Software Engineering INTERN",
+        description: `
+<p>Come build community, explore your passions and do your best work at Microsoft with thousands of university interns from every corner of the world. This opportunity will allow you to bring your aspirations, talent, potential — and excitement for the journey ahead.</p>
+<p>As a Software Engineering Intern, you will work with teammates to solve problems and build innovative software solutions. You will apply your passion for customers and product quality as you provide technical guidance to Technical Program Managers and Product Managers. You will learn and adopt relevant new technologies, tools, methods, and processes to leverage in your solutions.</p>
+<p>At Microsoft, interns work on real-world projects in collaboration with teams across the world. Microsoft's mission is to empower every person and every organization on the planet to achieve more.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Apply engineering principles to solve complex problems through sound and creative engineering.</li>
+<li>Work with appropriate stakeholders to determine user requirements for a feature.</li>
+<li>Quickly learn new engineering methods and incorporate them into work processes.</li>
+<li>Seek feedback and apply internal or industry best practices to improve technical solutions.</li>
+<li>Demonstrate skill in time management and completing software projects in a cooperative team environment.</li>
+<li>Review current developments and proactively seek new knowledge that will improve the availability, reliability, efficiency, observability, and performance of products while also driving consistency in monitoring and operations at scale.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Currently pursuing a Bachelor's or Master's degree in Computer Science, Engineering, or a related field.</li>
+<li>Must have at least 1 semester/term remaining following the completion of the internship.</li>
+<li>One year of programming experience in an object-oriented language.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Ability to demonstrate an understanding of computer science fundamentals, including data structures and algorithms.</li>
+</ul>
+`.trim(),
+        location: "India (Multiple Locations)",
+        department: "Software Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Not specified",
+        applyUrl: "https://apply.careers.microsoft.com/careers/job/1970393556911730",
+      },
+    ],
+  },
+  {
+    slug: "nvidia",
+    name: "NVIDIA",
+    tagline: "The engine of AI, powering the next era of computing",
+    about:
+      "NVIDIA, founded in 1993 by Jensen Huang, Chris Malachowsky, and Curtis Priem, is headquartered in Santa Clara, California. Publicly traded (NASDAQ: NVDA), NVIDIA pioneered GPU computing and has become a leading force in AI, robotics, and accelerated computing, with its GPUs acting as the brains of computers, robots, and self-driving cars.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a4/NVIDIA_logo.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.nvidia.com",
+    categories: ["ai-ml", "infrastructure"],
+    technologies: ["python", "cpp", "pytorch", "cuda", "ros2"],
+    location: { city: "Santa Clara", country: "USA" },
+    founders: [
+      {
+        name: "Jensen Huang",
+        title: "Founder & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/jenhsunhuang/",
+      },
+      { name: "Chris Malachowsky", title: "Co-founder" },
+      { name: "Curtis Priem", title: "Co-founder" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/nvidia" },
+      { type: "twitter", url: "https://x.com/nvidia" },
+    ],
+    internships: [
+      {
+        slug: "nvidia-robotics-software-intern-deployment-humanoids",
+        title: "Robotics Software Intern, Deployment and Humanoids - 2026",
+        description: `
+<p>NVIDIA has been transforming computer graphics, PC gaming, and accelerated computing for more than 25 years. Today, NVIDIA is tapping into the unlimited potential of AI to define the next era of computing — an era in which its GPUs act as the brains of computers, robots, and self-driving cars that can understand the world.</p>
+<p>As a Robotics Software Intern on the Isaac Applications Team, you will help build the platform for Physical AI robots — enabling sim-first development, real-world deployment, and continuous learning to make them smarter over time. The ideal candidate will have strong software engineering skills for (soft) realtime robotics applications and real-world experience with multi-body robots, such as humanoids or quadrupeds.</p>
+<p><strong>What You'll Be Doing</strong></p>
+<ul>
+<li>Bring the latest advancements in Physical AI to simulated and real humanoid robots by building the humanoid reference platform showcasing the power of NVIDIA's technology.</li>
+<li>Collaborate across team boundaries to integrate NVIDIA robotics products such as Thor and Isaac Sim / Isaac Lab into one solution for humanoid robots.</li>
+<li>Work in a professional software development team in a corporate environment.</li>
+</ul>
+<p><strong>What We Need to See</strong></p>
+<ul>
+<li>Currently pursuing a degree in Computer Science, Robotics, Engineering, or a related field (MS or PhD).</li>
+<li>Proficiency in C++ and Python programming languages.</li>
+<li>Experience with simulated and real robots.</li>
+<li>Knowledge of common tools and libraries for robotics and learning (e.g. PyTorch, CUDA, ROS2, physics simulators like Isaac Sim and MuJoCo).</li>
+<li>Academic classes or coursework in machine learning, control, and robotics systems.</li>
+<li>Deployment experience on robots (sim2real).</li>
+</ul>
+<p><strong>Ways to Stand Out from the Crowd</strong></p>
+<ul>
+<li>Previous internships or hands-on experience with robotic systems in a commercial or academic setting.</li>
+<li>Experience with NVIDIA robotics tools (Isaac Lab, Isaac ROS) and hardware (Jetson platform).</li>
+<li>Experience with humanoid robots.</li>
+</ul>
+`.trim(),
+        location: "Shanghai, China",
+        department: "Isaac Applications Team, Robotics",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Not specified",
+        applyUrl: "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/China-Shanghai/Robotics-Software-Intern--Deployment-and-Humanoids---2026_JR2019641",
+      },
+    ],
+  },
+  {
+    slug: "rivian-vw-group-technologies",
+    name: "Rivian and Volkswagen Group Technologies",
+    tagline: "Building the software-defined vehicle platform for Rivian and Volkswagen",
+    about:
+      "Rivian and Volkswagen Group Technologies (RV Tech) is a joint venture between Rivian and Volkswagen Group, established in 2024 to advance software-defined vehicles — spanning operating systems, zonal controllers, and cloud and connectivity solutions. Owned equally by both companies, it's co-led by Rivian's Chief Software Officer Wassym Bensaid and Volkswagen Group's Chief Technology Officer Carsten Helbing. Volkswagen has committed up to $5.8B to the venture, including equity investment and milestone-based funding.",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://rivianvw.tech",
+    categories: ["ai-ml", "infrastructure"],
+    technologies: ["java", "cpp"],
+    location: { city: "Vancouver", country: "Canada" },
+    founders: [
+      {
+        name: "Wassym Bensaid",
+        title: "Co-CEO (Chief Software Officer, Rivian)",
+        linkedinUrl: "https://www.linkedin.com/in/wassymbensaid/",
+      },
+      {
+        name: "Carsten Helbing",
+        title: "Co-CEO (Chief Technology Officer, Volkswagen Group)",
+        linkedinUrl: "https://www.linkedin.com/in/carsten-helbing-918412142/",
+      },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/rivian-and-vw-group-technologies" },
+    ],
+    internships: [
+      {
+        slug: "rvtech-software-engineer-intern-android-connectivity",
+        title: "Software Engineer Intern - Android Connectivity (Fall-Spring Co-op)",
+        description: `
+<p>Rivian and Volkswagen Group Technologies is a joint venture between two industry leaders with a clear vision for automotive's next chapter. From operating systems to zonal controllers to cloud and connectivity solutions, the joint venture addresses the challenges of electric vehicles through technology that will set the standards for software-defined vehicles around the world.</p>
+<p>As a Software Engineer Intern - Android Connectivity, you will collaborate with a dynamic team to design, develop, and ship features in Kotlin, Java, and C++ that power Bluetooth, Wi-Fi, and cellular experiences in Rivian and Volkswagen vehicles. You will integrate Android connectivity APIs and broadcast vehicle states across distributed ECUs, debugging complex issues across the app, framework, and hardware layers.</p>
+<p><strong>Duration:</strong> Full-time, September 21, 2026 – April 23, 2027. Applicants must be available to work from the Yaletown Office (Vancouver) for the full duration of the co-op.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Design, develop, and ship Android features in Kotlin, Java, and C++ across the apps and shared libraries that power Bluetooth, Wi-Fi, Hotspot, and Cellular experiences in Rivian and Volkswagen vehicles.</li>
+<li>Integrate Android platform connectivity APIs and contribute to the services that broadcast connectivity state across distributed in-vehicle ECUs.</li>
+<li>Debug and resolve issues spanning app, framework, and hardware layers, working to root-cause field-reported connectivity problems.</li>
+<li>Participate in code reviews, design discussions, and architecture modelling, taking a feature from design through merge.</li>
+<li>Collaborate with product, UI/UX, platform, and embedded counterparts to translate connectivity requirements into shippable user experiences.</li>
+</ul>
+<p><strong>Minimum Qualifications</strong></p>
+<ul>
+<li>Currently pursuing a B.S. or M.S. in Computer Science, Software Engineering, Computer Engineering, Electrical Engineering, or equivalent, enrolled at an accredited Canadian university.</li>
+<li>Must have the intent to return to school full-time following completion of this internship.</li>
+<li>Proficient in at least one of the following: Java, Kotlin, or C++.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Working knowledge of Bluetooth concepts (Classic vs. BLE, GATT, pairing/bonding) and exposure to common profiles (A2DP, AVRCP, HFP, PBAP, MAP).</li>
+<li>Working knowledge of networking concepts: TCP/IP, DHCP, DNS, IP routing, iptables, Wi-Fi (STA/SoftAP), and tethering/hotspot fundamentals.</li>
+<li>Familiarity with the Android ConnectivityManager, NetworkCallback, WifiManager, or BluetoothAdapter APIs.</li>
+</ul>
+`.trim(),
+        location: "Vancouver, British Columbia, Canada",
+        department: "CTO",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "September 21, 2026 – April 23, 2027",
+        applyUrl: "https://jobs.ashbyhq.com/rivianvw.tech/75874976-540a-4e5c-aa72-1b23669c5211",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {

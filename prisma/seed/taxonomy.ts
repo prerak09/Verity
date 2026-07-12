@@ -42,6 +42,8 @@ const TECHNOLOGIES = [
   { slug: "fastapi", name: "FastAPI" },
   { slug: "docker", name: "Docker" },
   { slug: "ruby", name: "Ruby" },
+  { slug: "cuda", name: "CUDA" },
+  { slug: "ros2", name: "ROS2" },
 ];
 
 export async function seedTaxonomy(db: PrismaClient): Promise<SeededTaxonomy> {
