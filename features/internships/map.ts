@@ -35,6 +35,7 @@ export function toInternshipCard(
     location: i.location,
     department: i.department,
     jobType: i.jobType,
+    season: i.season,
     remotePolicy: i.remotePolicy,
     stipend: i.stipend,
     status: i.status,

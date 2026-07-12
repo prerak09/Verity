@@ -49,6 +49,24 @@ async function listInternshipsUncached(
   );
   const skip = (page - 1) * pageSize;
 
+  // Compose independent OR groups (kind split + full-text search) under AND so
+  // they never clobber each other via object-spread key collisions.
+  const and: Prisma.InternshipWhereInput[] = [];
+  if (filters.kind === "internship") {
+    and.push({ OR: [{ jobType: "INTERNSHIP" }, { jobType: null }] });
+  } else if (filters.kind === "job") {
+    and.push({ jobType: { in: ["FULL_TIME", "PART_TIME", "CONTRACT"] } });
+  }
+  if (filters.q) {
+    and.push({
+      OR: [
+        { title: { contains: filters.q, mode: "insensitive" } },
+        { description: { contains: filters.q, mode: "insensitive" } },
+        { company: { name: { contains: filters.q, mode: "insensitive" } } },
+      ],
+    });
+  }
+
   const where: Prisma.InternshipWhereInput = {
     status: "PUBLISHED",
     deletedAt: null,
@@ -62,19 +80,16 @@ async function listInternshipsUncached(
       ? { department: { contains: filters.department, mode: "insensitive" } }
       : {}),
     ...(filters.jobType ? { jobType: filters.jobType } : {}),
-    ...(filters.q
-      ? {
-          OR: [
-            { title: { contains: filters.q, mode: "insensitive" } },
-            { description: { contains: filters.q, mode: "insensitive" } },
-            { company: { name: { contains: filters.q, mode: "insensitive" } } },
-          ],
-        }
-      : {}),
+    ...(filters.season ? { season: filters.season } : {}),
+    ...(and.length ? { AND: and } : {}),
   };
 
   const orderBy: Prisma.InternshipOrderByWithRelationInput =
-    filters.sort === "title" ? { title: "asc" } : { publishedAt: "desc" };
+    filters.sort === "title"
+      ? { title: "asc" }
+      : filters.sort === "season"
+        ? { season: "asc" }
+        : { publishedAt: "desc" };
 
   const [rows, totalCount] = await Promise.all([
     db.internship.findMany({

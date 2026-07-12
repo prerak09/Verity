@@ -17,22 +17,31 @@ export default async function StudentProfileSettingsPage() {
   const user = await getCurrentUser();
   if (!user) redirect("/sign-in");
 
+  // Profile row is created lazily on first save; getStudentProfile seeds the
+  // form from the user's identity (name/email) until then.
   let profile: StudentProfileDTO;
   try {
-    // Profile row is created lazily on first save; until then we seed the form
-    // from the user's identity (name/email always present).
-    profile =
-      (await getStudentProfile(user.id)) ?? {
-        id: "",
-        userId: user.id,
-        name: user.name,
-        email: user.email,
-        avatarUrl: user.avatarUrl,
-        college: null,
-        gradYear: null,
-        resumeUrl: null,
-        bio: null,
-      };
+    profile = (await getStudentProfile(user.id)) ?? {
+      ...MOCK_STUDENT_PROFILE,
+      id: "",
+      userId: user.id,
+      name: user.name,
+      email: user.email,
+      avatarUrl: user.avatarUrl,
+      headline: null,
+      location: null,
+      college: null,
+      degree: null,
+      major: null,
+      gradYear: null,
+      skills: [],
+      interests: [],
+      linkedinUrl: null,
+      githubUrl: null,
+      portfolioUrl: null,
+      resumeUrl: null,
+      bio: null,
+    };
   } catch {
     profile = MOCK_STUDENT_PROFILE;
   }

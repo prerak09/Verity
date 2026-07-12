@@ -69,6 +69,7 @@ export async function createInternship(
         location: fields.location,
         department: fields.department,
         jobType: fields.jobType, // routes the listing to internships vs jobs
+        season: fields.season,
         remotePolicy: fields.remotePolicy,
         stipend: fields.stipend,
         duration: fields.duration,
@@ -111,6 +112,7 @@ export async function updateInternship(
       },
     });
     revalidateTag(`internship:${updated.slug}`, "max");
+    revalidateTag("internships:list", "max");
     return toInternshipDetail(updated, updated.company);
   });
 }
@@ -151,6 +153,7 @@ export async function publishInternship(
       select: { status: true, slug: true },
     });
     revalidateTag(`internship:${updated.slug}`, "max");
+    revalidateTag("internships:list", "max");
     return { status: updated.status };
   });
 }
@@ -175,6 +178,7 @@ export async function archiveInternship(
       select: { status: true, slug: true },
     });
     revalidateTag(`internship:${updated.slug}`, "max");
+    revalidateTag("internships:list", "max");
     return { status: updated.status };
   });
 }

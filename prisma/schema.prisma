@@ -55,6 +55,14 @@ enum JobType {
   INTERNSHIP
 }
 
+enum Season {
+  SUMMER
+  FALL
+  SPRING
+  WINTER
+  YEAR_ROUND
+}
+
 enum InternshipStatus {
   DRAFT
   PUBLISHED
@@ -77,13 +85,13 @@ enum BookmarkTargetType {
 }
 
 model User {
-  id        String       @id @default(cuid())
-  clerkId   String       @unique
-  email     String       @unique
-  name      String?
-  avatarUrl String?
-  role      PlatformRole @default(STUDENT)
-  emailNotificationsEnabled Boolean @default(true)
+  id                        String       @id @default(cuid())
+  clerkId                   String       @unique
+  email                     String       @unique
+  name                      String?
+  avatarUrl                 String?
+  role                      PlatformRole @default(STUDENT)
+  emailNotificationsEnabled Boolean      @default(true)
 
   studentProfile     StudentProfile?
   companyMemberships CompanyMember[]
@@ -100,15 +108,24 @@ model User {
 }
 
 model StudentProfile {
-  id        String   @id @default(cuid())
-  userId    String   @unique
-  user      User     @relation(fields: [userId], references: [id])
-  college   String?
-  gradYear  Int?
-  resumeUrl String? // Cloudinary URL — future AI resume analysis input
-  bio       String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id           String   @id @default(cuid())
+  userId       String   @unique
+  user         User     @relation(fields: [userId], references: [id])
+  headline     String? // e.g. "CS undergrad · aspiring ML engineer"
+  location     String?
+  college      String?
+  degree       String? // e.g. "B.Tech", "B.S."
+  major        String? // e.g. "Computer Science"
+  gradYear     Int?
+  skills       String[] @default([]) // tags: React, Python, ...
+  interests    String[] @default([]) // tags: Frontend, AI/ML, Fintech, ...
+  linkedinUrl  String?
+  githubUrl    String?
+  portfolioUrl String?
+  resumeUrl    String? // Cloudinary URL — future AI resume analysis input
+  bio          String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }
 
 model Company {
@@ -244,6 +261,7 @@ model Internship {
   location     String?
   department   String?
   jobType      JobType?
+  season       Season? // internships: Summer/Fall/... for season sort+filter
   remotePolicy RemotePolicy?
   stipend      String?
   duration     String?

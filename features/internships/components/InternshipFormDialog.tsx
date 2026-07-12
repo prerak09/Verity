@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { Plus, Pencil } from "lucide-react";
 
 import { createInternship, updateInternship } from "@/features/internships/actions";
-import type { FieldErrors, InternshipDetail, InternshipInput, JobType, RemotePolicy } from "@/types";
+import type { FieldErrors, InternshipDetail, InternshipInput, JobType, RemotePolicy, Season } from "@/types";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -37,6 +37,14 @@ const JOB_TYPES: { value: JobType; label: string }[] = [
   { value: "FULL_TIME", label: "Full-time" },
   { value: "PART_TIME", label: "Part-time" },
   { value: "CONTRACT", label: "Contract" },
+];
+
+const SEASONS: { value: Season; label: string }[] = [
+  { value: "SUMMER", label: "Summer" },
+  { value: "FALL", label: "Fall" },
+  { value: "SPRING", label: "Spring" },
+  { value: "WINTER", label: "Winter" },
+  { value: "YEAR_ROUND", label: "Year-round" },
 ];
 
 function Field({
@@ -73,6 +81,7 @@ function toFormState(internship?: InternshipDetail) {
     location: internship?.location ?? "",
     department: internship?.department ?? "",
     jobType: internship?.jobType ?? undefined,
+    season: internship?.season ?? undefined,
     remotePolicy: internship?.remotePolicy ?? undefined,
     stipend: internship?.stipend ?? "",
     duration: internship?.duration ?? "",
@@ -112,6 +121,8 @@ export function InternshipFormDialog({
       location: form.location || undefined,
       department: form.department || undefined,
       jobType: form.jobType,
+      // Season only applies to internships; clear it for other job types.
+      season: form.jobType === "INTERNSHIP" ? form.season : undefined,
       remotePolicy: form.remotePolicy,
       stipend: form.stipend || undefined,
       duration: form.duration || undefined,
@@ -245,6 +256,27 @@ export function InternshipFormDialog({
               </Select>
             </Field>
           </div>
+          {form.jobType === "INTERNSHIP" && (
+            <Field label="Season" htmlFor="season" error={fieldErrors.season}>
+              <Select
+                value={form.season}
+                onValueChange={(v) => setForm((f) => ({ ...f, season: v as Season }))}
+              >
+                <SelectTrigger id="season" className="w-full">
+                  <SelectValue>
+                    {(v: Season) => SEASONS.find((s) => s.value === v)?.label ?? "Select…"}
+                  </SelectValue>
+                </SelectTrigger>
+                <SelectContent>
+                  {SEASONS.map((s) => (
+                    <SelectItem key={s.value} value={s.value}>
+                      {s.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </Field>
+          )}
           <div className="grid gap-3 sm:grid-cols-2">
             <Field label="Stipend" htmlFor="stipend" error={fieldErrors.stipend}>
               <Input
