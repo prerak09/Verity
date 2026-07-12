@@ -2832,6 +2832,417 @@ const COMPANIES: DemoCompany[] = [
       },
     ],
   },
+  {
+    slug: "meesho",
+    name: "Meesho",
+    tagline: "Democratising internet commerce for everyone",
+    about:
+      "Meesho (Meri Shop) is a social commerce platform founded in December 2015 by Vidit Aatrey and Sanjeev Barnwal, both IIT Delhi alumni, with a mission to be an e-commerce destination for Indian consumers and enable small businesses to succeed online. Meesho offers sellers zero commission and affordable shipping, connecting them with customers across urban, semi-urban, and rural India via a pan-India logistics network. Headquartered in Bengaluru, Meesho has raised $1.36B from investors including SoftBank, Prosus, Elevation Capital, and Peak XV Partners.",
+    logoUrl: "https://www.meesho.io/img/meesho-logo.png",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.meesho.com",
+    categories: ["consumer", "saas"],
+    technologies: ["android", "kotlin", "java", "python", "aws", "kubernetes", "docker", "postgres", "mysql", "elasticsearch"],
+    location: { city: "Bengaluru", country: "India" },
+    founders: [
+      {
+        name: "Vidit Aatrey",
+        title: "Founder & CEO",
+        linkedinUrl: "https://in.linkedin.com/in/vidit-aatrey-a3639120",
+      },
+      { name: "Sanjeev Barnwal", title: "Co-founder & CTO" },
+    ],
+    links: [{ type: "linkedin", url: "https://in.linkedin.com/company/meesho" }],
+    internships: [
+      {
+        slug: "meesho-architect-android",
+        title: "Architect - Android",
+        description: `
+<p><strong>About the Team</strong><strong></strong>When 10% of Indian households shop with us, it’s important to build resilient systems to manage millions of orders every day. We’ve done this – with zero downtime! 😎 </p><p>Sounds impossible? Well, that’s the kind of Engineering muscle that has helped Meesho become the e-commerce giant that it is today. We value speed over perfection, and see failures as opportunities to become better. We’ve taken steps to inculcate a strong ‘Founder’s Mindset’ across our engineering teams, making us grow and move fast.</p><p>We want Meesho to be at everyone’s fingertips! And, YOU can make that happen. </p><p>We place special emphasis on the continuous growth of each team member - and we do this with regular 1-1s and open communication. As Android Architect, you will be part of self-starters who thrive on teamwork and constructive feedback. </p><p>We know how to party as hard as we work! If we aren’t building unparalleled tech solutions, you can find us debating the plot points of our favourite books and games – or even gossiping over chai. So, if a day filled with building impactful solutions with a fun team sounds appealing to you, join us.</p><p><strong>About the Role </strong><strong></strong></p><p>As our Android Architect, you will join us in the Android Platform team. This is your opportunity to be a trailblazer in your industry. </p><p>In this role, you will primarily focus on building a roadmap for our Android Platform. You will lead and contribute to all our engineering efforts – from planning and organisation to execution and delivery. You will collaborate closely with QA, other Engineers, Product Managers, and Designers across the company to shape the future of our Android platform.</p><p>In addition, you will also actively participate in external conferences and conduct knowledge sharing sessions for the team.</p><p><strong>What you will do</strong></p><ul><li><p>Define and evolve the long-term Android architecture strategy, including modularization and migration paths away from legacy stacks</p></li><li><p>Drive cross-team architectural decisions and write ADRs that align mobile and platform teams on shared patterns</p></li><li><p>Lead architectural reviews, deep-dive design sessions, and refactoring of high-impact surfaces</p></li><li><p>Set engineering standards for code quality, testing strategy, and release readiness</p></li><li><p>Own end-to-end app performance — startup, jank, memory, ANRs, battery.</p></li><li><p>Champion AI-assisted developer workflows — Claude Code, Cursor, Codex, AI-driven code review and test generation and measure productivity impact.&nbsp;</p></li><li><p>Identify and lead 2–3 crucial strategic projects per year from problem framing through rollout.&nbsp;</p></li><li><p>Build the next generation of internal SDKs, design system components, and platform libraries consumed by other Android engineers.</p></li><li><p>Recruit, mentor, and grow Android engineers; partner on hiring loops and career growth</p></li><li><p>Perform deep code reviews that raise the technical bar</p></li><li><p>Represent Android in cross-functional planning and shape the broader mobile roadmap</p></li></ul><p><strong>What you will need</strong></p><ul><li>8+ years of Android development experience, with at least 2 shipped production apps</li><li><p>Strong command of Jetpack Compose, state management, and the modern Android UI toolkit</p></li><li><p>Hands-on experience with the modern Jetpack stack: Hilt, Room, DataStore, WorkManager, Navigation, Paging</p></li><li><p>Solid understanding of architecture patterns — unidirectional data flow, MVI, clean architecture — and how to make them testable</p></li><li><p>Proven debugging skills — memory leaks, ANRs, jank, cold-start regressions.</p></li><li><p>Experience with performance tooling: Macrobenchmark, Baseline Profiles, App Startup, and R8 optimization</p></li><li><p>Proficiency with modern networking and serialization (Retrofit + OkHttp, kotlinx.serialization or Moshi) and image loading.</p></li><li><p>Strong grasp of concurrency, structured concurrency with Coroutines, and reactive streams.</p></li><li><p>Experience with modularization at scale, Gradle build optimization (KSP, configuration cache, build cache), and CI/CD pipelines</p></li><li><p>Comfort with AI-assisted development tools (Claude Code, Cursor, Codex) in day-to-day workflow</p></li><li><p>Understanding of advanced Android internals — custom Compose layouts, background execution constraints, process lifecycle, security best practices</p></li><li><p>Strong Git, code review, and collaboration habits</p></li></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Demand",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/040a5a75-28d2-4b56-904b-071c41d4ea90",
+      },
+      {
+        slug: "meesho-senior-principal-data-scientist",
+        title: "Senior Principal Data Scientist",
+        description: `
+<p><strong>About the role</strong><strong></strong></p><p>Are you a strategic thinker with a passion for solving large-scale problems using data? Do you enjoy mentoring high-performing teams and building ML systems that directly impact millions of users? We're looking for a <strong>Senior Principal Data Scientist</strong> to lead a team of skilled data scientists in building intelligent systems that power Meesho’s next phase of growth.</p><p>In this role, you’ll own the data science roadmap for a key business charter, guiding the team through ambiguity and complexity to deliver production-grade ML solutions. You’ll work closely with product, tech, and business leaders to translate complex challenges into scalable, measurable, and impactful outcomes. As a people and technical leader, you’ll ensure model efficiency, system reliability, and scientific excellence while fostering a culture of innovation, collaboration, and continuous improvement.</p><p><strong>What You Will Do</strong></p><ul><h2>&nbsp;</h2><li><p>Lead, grow, and mentor a high-performing team of data scientists.</p></li><li><p>Own all data science systems and models in your charter — from strategy to deployment and monitoring.</p></li><li><p>Collaborate with senior product, engineering, and business leaders to define and prioritize impactful DS initiatives.</p></li><li><p>Drive platformization, system architecture decisions, and ML lifecycle improvements across the charter.</p></li><li><p>Ensure model scalability, performance, and cost efficiency, while upholding best practices in experimentation and statistical rigor.</p></li><li><p>Guide the team in reading and implementing state-of-the-art research, and facilitate build vs. buy decisions.</p></li><li><p>Lead RCA for critical production issues and improve system observability, documentation, and service uptime.</p></li></ul><p><strong>What You Will Need</strong></p><ul><li><p>Master’s degree (PhD preferred) in Machine Learning, Statistics, Computer Science, or a related quantitative field.</p></li><li><p>10+ years of experience in Data Science or Analytics, with at least 2–3 years of people management experience.</p></li><li><p>Proven track record of building and deploying ML models in production at scale.</p></li><li><p>Experience managing teams of 10+ data scientists and delivering across cross-functional charters.</p></li><li><p>Deep expertise in ML algorithms, experimental design, and performance monitoring.</p></li><li><p>Strong coding skills (Python, SQL) and familiarity with Big Data technologies like Spark, Hive, or Redshift.</p></li><li><p>Ability to translate business needs into technical solutions, prioritize roadmaps, and estimate effort accurately.</p></li><li><p>Strong communication and stakeholder management skills with a bias for action and clarity in execution.</p></li><h3><strong>Bonus Points For</strong></h3><li><p>Experience leading ML initiatives in B2C or e-commerce settings.</p></li><li><p>Contributions to internal tools, open-source libraries, or research publications.</p></li><li><p>Experience in personalization, recommendations, ranking, or supply chain ML problems.</p></li><li><p>Strong understanding of ML system performance trade-offs — latency, cost, and throughput.</p></li><p><strong></strong></p></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Data Science",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/322aaf36-0d79-4190-876f-8b2e91b707bf",
+      },
+      {
+        slug: "meesho-principal-data-scientist",
+        title: "Principal Data Scientist",
+        description: `
+<strong>About the Team</strong> Our Data Science team is the Avengers to Meesho’s S.H.I.E.L.D 🛡️. And why not? We are the ones who assemble during the toughest challenges and devise creative solutions, building intelligent systems for millions of our users looking at a thousand different categories of products. We’ve barely scratched the surface, and have amazing challenges in charting the future of commerce for Bharat. Our typical day involves dealing with fraud detection, inventory optimisation, and platform vernacularisation. <strong>About the Role</strong> As a Principal Data Scientist in our AdTech team, you’ll drive innovation in our advertising platform using advanced machine learning and statistical methods. You’ll tackle complex problems in real-time bidding, ad ranking optimization, budget efficiency, and performance measurement that directly impact our business’s bottom line. This role requires technical excellence and business acumen and you’ll collaborate with cross-functional teams to transform data insights into actionable strategies that enhance our advertising ecosystem.<p><strong>What you will do</strong></p><ul><li>Design and develop sophisticated bidding, budget pacing and other algorithms that optimize ad spend or ROI.</li><li>Create frameworks and experimental design to measure ad effectiveness and ROI.</li><li>Collaborate with product and engineering teams to translate business requirements into efficient AI/ML solutions.</li><li>Communicate long-term roadmap, insights and recommendations to tech and business leadership.</li><li>Mentor junior data scientists and provide technical <a rel="noopener noreferrer" href="http://guidance.Lead">guidance.</a></li><li>Lead research initiatives in machine learning, auction theory and advertising technology.</li></ul><p><strong>What you will need</strong></p><ul><li>B.Tech in Computer Science, Machine Learning, or a related field with at least 6+ years of experience in AI/ML research.</li><li>Experience in auction theory, predictive modelling, causal inference, and reinforcement learning.</li><li>Expertise in PyTorch or TensorFlow, and proficiency in Python as well as big data technologies.</li><li>History of mentoring junior data scientists, and comfortable in driving multiple problem statements.</li><li>Excellent communication skills, able to explain complex concepts to both technical and non-technical audiences.</li><strong>Preferred Qualifications:</strong><li>M.Tech or Ph.d in Computer Science with a specialization in Machine Learning.</li><li>3+ years of experience applying machine learning and statistical modeling in AdTech, or related domains.</li><li>Exposure in real-time bidding systems, programmatic advertising, or ad exchanges.</li><li>Track record of successful research-to-product transitions.</li><li>Strong publication record in top AI conferences (e.g., NeurIPS, ICML, ICLR, KDD, CVPR, AAAI).</li></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Data Science",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/3d5bf582-493f-4298-b7de-e42a7d58a358",
+      },
+      {
+        slug: "meesho-data-scientist-iii",
+        title: "Data Scientist III",
+        description: `
+<strong>About the Team</strong> Our Data Science team is the Avengers to Meesho’s S.H.I.E.L.D 🛡️. And why not? We are the ones who assemble during the toughest challenges and devise creative solutions, building intelligent systems for millions of our users looking at a thousand different categories of products. We’ve barely scratched the surface, and have amazing challenges in charting the future of commerce for Bharat. Our typical day involves dealing with fraud detection, inventory optimisation, and platform vernacularisation. As Data Scientist, you will navigate uncharted territories with us, discovering new paths to creating solutions for our users.🔍 You will be at the forefront of interesting challenges and solve unique customer problems in an untapped market. But wait – there’s more to us. Our team is huge on having a well-rounded personal and professional life. When we aren't nose-deep in data, you will most likely find us belting “Summer of 69” at the nearest Karaoke bar, or debating who the best Spider-Man is: Maguire, Garfield, or Holland? You tell us ☺️ <strong>About the Role </strong> Love deep data? Love discussing solutions instead of problems? Then you could be our next Data Scientist. In a nutshell, your primary responsibility will be enhancing the productivity and utilisation of the generated data. Other things you will do include working closely with the business stakeholders, transforming scattered pieces of information into valuable data and sharing and presenting your valuable insights with peers.<p><strong>What you will do </strong></p><ul><li>Develop models and run experiments to infer insights from hard data</li><li>Improve our product usability and identify new growth opportunities</li><li>Understand reseller preferences to provide them with the most relevant products</li><li>Designing discount programs to help our resellers sell more&nbsp;</li><li>Help resellers better recognise end-customer preferences to improve their revenue</li><li>Use data to identify bottlenecks that will help our suppliers meet their SLA requirements</li><li>Model seasonal demand to predict key organisational metrics</li><li>Mentor junior data scientists in the team</li></ul><p><strong>What you will need</strong></p><ul><li>Bachelor's/Master's degree in computer science (or similar degrees)</li><li>4-7 years of experience as a Data Scientist in a fast-paced organization, preferably B2C</li><li>Familiarity with Neural Networks, Machine Learning etc.</li><li>Familiarity with tools like SQL, R, Python, etc.</li><li>Strong understanding of Statistics and Linear Algebra&nbsp;</li><li>Strong understanding of hypothesis/model testing and ability to identify common model testing errors</li><li>Experience designing and running A/B tests and drawing insights from them &nbsp;</li><li>Proficiency in machine learning algorithms&nbsp;</li><li>Excellent analytical skills to fetch data from reliable sources to generate accurate insights</li><li>Experience in tech and product teams is a plus&nbsp;</li> Bonus points for: <li>Experience in working on personalization or other ML problems&nbsp;</li><li>Familiarity with Big Data tech stacks like Apache Spark, Hadoop, Redshift</li></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Data Science",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/489fe662-5d28-4305-953e-91ee21e8538c",
+      },
+      {
+        slug: "meesho-software-development-engineer-iii-devops",
+        title: "Software Development Engineer III DevOps",
+        description: `
+<strong>About the team</strong> DevOps - because even the best developers need heroes. Whether you agree or not, a Senior DevOps Engineer is definitely nothing less than a hero to us - and with good reason! When 5% of Indian households shop with us, it’s important to build resilient systems to manage millions of orders every day. We’ve done this – with zero downtime! 😎 Sounds impossible? Well, that’s the kind of Engineering muscle that has helped Meesho become the e-commerce giant that it is today. We value speed over perfection, and see failures as opportunities to become better. We’ve taken steps to inculcate a strong ‘Founder’s Mindset’ across our engineering teams, making us grow and move fast. We place special emphasis on the continuous growth of each team member - and we do this with regular 1-1s and open communication. As Senior DevOps Engineer, you will be part of self-starters who thrive on teamwork and constructive feedback. We know how to party as hard as we work! If we aren’t building unparalleled tech solutions, you can find us debating the plot points of our favourite books and games – or even gossipping over chai. So, if a day filled with building impactful solutions with a fun team sounds appealing to you, join us. <strong>About the role</strong> As DevOps Engineer with us, your primary responsibility will be to create systems that serve as the brains of complex distributed products. You will closely mentor younger engineers on the team. You will work on code modularity, scalability, reusability and contribute to team building in the Engineering org.<p><strong>What you will do</strong></p><ul><li>Develop reusable Infrastructure code and testing frameworks for Infrastructure</li><li>Develop tools and frameworks to allow Meesho engineers to provision infrastructure and manage access controls&nbsp;</li><li>Design and develop solutions for cloud security, secrets management and key rotations&nbsp;</li><li>Design a centralised logging and metrics platform that can handle Meesho’s scale</li><li>Take on new infrastructure requirements and develop infrastructure as code</li><li>Work with the Applications teams to help them onboard container platform</li><li>Scale the Meesho platform to handle millions of requests concurrently&nbsp;</li><li>Reduce Mean Time To Recovery (MTTR), enable High Availability and Disaster Recovery&nbsp;</li></ul><p><strong>What you will need</strong></p><ul><li>Bachelors / Masters degree in Computer Science</li><li>At least 4 to 7 years of in-depth and hands-on professional experience in DevOps/Infrastructure Engineering domain</li><li>Proficiency in Strong Systems, Linux, OpenSource, InfraStructure Engineering, DevOps fundamentals&nbsp;</li><li>Understanding of compliance and security&nbsp;</li><li>Must have an in-depth understanding of SDL</li><li>Ability to write infrastructure as code for public or private clouds&nbsp;</li><li>Ability to implement modern cloud Integration architecture&nbsp;</li><li>Knowledge of configuration and infra management (Chef/Puppet/Ansible and Terraform)&nbsp; or CI tools (Any)&nbsp;</li><li>Knowledge of scripting language: Python, Shell, Go (proficiency in any one)&nbsp;</li><li>Knowledge of container services like Docker, Kubernetes, EKS/GKE, etc.&nbsp;</li><li>Knowledge of designing and implementing end-to-end monitoring solutions in the cloud</li></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Infrastructure",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/60e0d986-abe8-42ee-b172-0d9aecb307b7",
+      },
+      {
+        slug: "meesho-software-development-engineer-iii-data",
+        title: "Software Development Engineer III Data",
+        description: `
+When 5% of Indian households shop with us, it’s important to build data-backed, resilient systems to manage millions of orders every day. We’ve done this – with zero downtime! 😎 Sounds impossible? Well, that’s the kind of Engineering muscle that has helped Meesho become the e-commerce giant that it is today. We value speed over perfection, and see failures as opportunities to become better. We’ve taken steps to inculcate a strong ‘Founder’s Mindset’ across our engineering teams, making us grow and move fast. We place special emphasis on the continuous growth of each team member - and we do this with regular 1-1s and open communication. Tech Culture We have a unique tech culture where engineers are seen as problem solvers. The engineering org is divided into multiple pods and each pod is aligned to a particular business theme. It is a culture driven by logical debates & arguments rather than authority. At Meesho, you get to solve hard technical problems at scale as well as have a significant impact on the lives of millions of entrepreneurs. You are expected to contribute to the Solutioning of product problems as well as challenge existing solutions. Meesho’s user base has grown 4x in the last 1 year and we have more than 50 million downloads of our app. Here are a few projects we have completed last year to scale oursystems for this growth: ● We have developed API gateway aggregators using frameworks like Hystrix and spring-cloud-gateway for circuit breaking and parallel processing. ● Our serving microservices handle more than 15K RPS on normal days and during saledays this can go to 30K RPS. Being a consumer app, these systems have SLAs of ~10ms ● Our distributed scheduler tracks more than 50 million shipments periodically fromdifferent partners and does async processing involving RDBMS. ● We use an in-house video streaming platform to support a wide variety of devices and networks. <p><strong>What You’ll Do</strong></p><ul><li>Design and implement <strong>scalable and fault-tolerant data pipelines</strong> (batch and streaming) using frameworks like <strong>Apache Spark</strong>, <strong>Flink</strong>, and <strong>Kafka</strong>.</li><li>Lead the <strong>design and development of data platforms and reusable frameworks</strong> that serve multiple teams and use cases.</li><li>Build and optimize <strong>data models and schemas</strong> to support large-scale <strong>operational and analytical</strong> workloads.</li><li><strong>Deeply understand Apache Spark internals</strong> and be capable of modifying or extending the <strong>open-source Spark codebase</strong> as needed.</li><li>Develop <strong>streaming solutions</strong> using tools like <strong>Apache Flink</strong>, <strong>Spark Structured Streaming</strong>.</li><li>Drive initiatives that <strong>abstract infrastructure complexity</strong>, enabling <strong>ML, analytics, and product teams</strong> to build faster on the platform.</li><li>Champion a <strong>platform-building mindset</strong> focused on <strong>reusability</strong>, <strong>extensibility</strong>, and <strong>developer self-service</strong>.</li><li>Ensure <strong>data quality, consistency, and governance</strong> through validation frameworks, observability tooling, and access controls.</li><li>Optimize infrastructure for <strong>cost, latency, performance</strong>, and <strong>scalability</strong> in <strong>modern cloud-native environments</strong>.</li><li><strong>Mentor and guide junior engineers</strong>, contribute to architecture reviews, and uphold high engineering standards.</li><li>Collaborate cross-functionally with product, ML, and data teams to align technical solutions with business needs.</li></ul><p><strong>What We’re Looking For</strong></p><ul><li><strong>5-8 years</strong> of professional experience in software/data engineering with a focus on <strong>distributed data systems</strong>.</li><li>Strong programming skills in <strong>Java</strong>, <strong>Scala</strong>, or <strong>Python</strong>, and expertise in <strong>SQL</strong>.</li><li>At least <strong>2 years of hands-on experience</strong> with big data systems including <strong>Apache Kafka</strong>, <strong>Apache Spark/EMR/Dataproc</strong>, <strong>Hive</strong>, <strong>Delta Lake</strong>, <strong>Presto/Trino</strong>, <strong>Airflow</strong>, and <strong>data lineage tools</strong> (e.g., Datahb,Marquez, OpenLineage).</li><li>Experience implementing and <strong>tuning Spark/Delta Lake/Presto</strong> at <strong>terabyte-scale</strong> or beyond.</li><li>Strong understanding of <strong>Apache Spark internals</strong> (Catalyst, Tungsten, shuffle, etc.) with experience customizing or contributing to open-source code.</li><li>Familiarity&nbsp; and worked with modern open-source and cloud-native data stack components such as:</li><li><strong>Apache Iceberg</strong>, <strong>Hudi</strong>, or <strong>Delta Lake</strong></li><li><strong>Trino/Presto</strong>, <strong>DuckDB</strong>, or <strong>ClickHouse,Pinot ,Druid</strong></li><li><strong>Airflow</strong>, <strong>Dagster</strong>, or <strong>Prefect</strong></li><li><strong>DBT</strong>, <strong>Great Expectations</strong>, <strong>DataHub</strong>, or <strong>OpenMetadata</strong></li><li><strong>Kubernetes</strong>, <strong>Terraform</strong>, <strong>Docker</strong></li><li>Strong <strong>analytical and problem-solving skills</strong>, with the ability to debug complex issues in large-scale systems.</li><li>Exposure to <strong>data security, privacy, observability</strong>, and <strong>compliance</strong> frameworks is a plus.</li></ul><p><strong>Good to Have</strong></p><ul><li>Contributions to open-source projects in the <strong>big data ecosystem</strong> (e.g., Spark, Kafka, Hive, Airflow)</li><li>Hands-on <strong>data modeling</strong> experience and exposure to <strong>end-to-end data pipeline development</strong></li><li>Familiarity with <strong>OLAP data cubes</strong> and BI/reporting tools such as <strong>Tableau, Power BI, Superset, or Looker</strong></li><li>Working knowledge of tools and technologies like <strong>ELK Stack (Elasticsearch, Logstash, Kibana)</strong>, <strong>Redis</strong>, and <strong>MySQL</strong></li><li>Exposure to backend technologies including <strong>RxJava</strong>, <strong>Spring Boot</strong>, and <strong>Microservices architecture</strong></li></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Data Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/7bb1de7e-8756-412b-8c71-0ba40863edc8",
+      },
+      {
+        slug: "meesho-associate-compliance-manager",
+        title: "Associate Compliance Manager",
+        description: `
+<p><strong>About the Team </strong></p><p>Meesho's Security & Compliance team safeguards a platform that 5% of Indian households shop with - millions of orders, billions of data points, zero downtime as a baseline. We own the Information Security Management System, drive every external certification, and shape how Meesho earns trust with sellers, buyers, partners and regulators. We move fast, default to automation, and obsess over evidence.</p><p><strong>About the Role</strong></p><p>This is a <strong>hands-on individual contributor role</strong> for someone who wants to <strong>drive</strong> - not just oversee - a multi-framework compliance program. You'll be the DRI for ISO 27001:2022 and SOC 2 Type II, run end-to-end ITGC and TPRM cycles, and help operationalise India's DPDP Rules 2025 across a product organisation that processes data at meaningful scale. You'll work directly with Engineering, IT, Legal, Product, and external auditors.</p><p><strong>What you will do</strong></p><ul><li><p><strong>Certifications &amp; external audits</strong></p></li><li><p>Own the certification and surveillance cycle for <strong>ISO 27001:2022</strong> and <strong>SOC 2 Type II</strong>; act as the single point of contact for external auditors.</p></li><li><p>Plan and execute readiness assessments, gap closure, evidence collection, control walkthroughs, and management responses.</p></li><li><p>Maintain audit calendars, evidence repositories, and bridge letters between audit windows.</p></li><li><p>Drive <strong>PCI DSS v4.0.1</strong> scope-reduction and assessment activities for in-scope environments.</p></li><p><strong>ISMS, policies &amp; frameworks</strong></p><li><p>Maintain Meesho's ISMS aligned to ISO 27001:2022 - all 93 Annex A controls mapped across Organizational, People, Physical and Technological themes, with named owners and live evidence.</p></li><li><p>Author, review, version-control and socialise security policies, standards, and procedures.</p></li><li><p>Map controls across frameworks: <strong>ISO 27001:2022, SOC 2 TSC, PCI DSS v4.0.1, NIST CSF 2.0, CIS Controls v8, DPDP</strong>.</p></li><p><strong>ITGC &amp; internal audits</strong></p><li><p>Design, test and continuously improve <strong>IT General Controls</strong>: access management, change management, IT operations, and SDLC.</p></li><li><p>Plan and execute internal audits; track findings to closure with engineering and IT.</p></li><li><p>Build and maintain the enterprise risk register; run <strong>RCSA</strong>, define KRIs, drive risk treatment plans and residual-risk acceptance with leadership.</p></li><p><strong>Third-Party Risk Management (TPRM)</strong></p><li><p>Run the full vendor lifecycle: intake → tiering → security due diligence (SIG / CAIQ / SOC 2 / ISO reviews) → contractual controls → continuous monitoring → offboarding.</p></li><li><p>Partner with Legal and Procurement to embed security clauses in MSAs, DPAs, and sub-processor agreements.</p></li><li><p>Conduct on-site / virtual vendor audits for tier-1 vendors and report to the security council.</p></li><p><strong>Privacy &amp; data protection</strong></p><li><p>Operationalise the <strong>DPDP Act 2023 + DPDP Rules 2025</strong> across the business: DPIAs, consent and notice flows, data-principal rights, 72-hour breach notification, and Records of Processing Activity.</p></li><li><p>Prepare Meesho for likely <strong>Significant Data Fiduciary (SDF)</strong> obligations: independent data-auditor coordination, DPO interfacing, algorithmic transparency, and children's-data safeguards.</p></li><li><p>Track IT Act, CERT-In directions, and sector-specific guidelines as relevant.</p></li><p><strong>Business continuity</strong></p><li><p>Maintain BCP and DR aligned to <strong>ISO 22301</strong> - BIAs, RTO/RPO definitions, and annual DR / failover testing.</p></li><p><strong>Awareness &amp; culture</strong></p><li><p>Run organisation-wide security and privacy awareness: onboarding, refreshers, phishing simulations, and role-based modules.</p></li><p><strong>Partner &amp; customer trust</strong></p><li><p>Respond to seller, partner and enterprise security questionnaires; maintain the Trust Center and security collateral.</p></li></ul><p><strong>What you will need</strong></p><ul><p>&nbsp;</p><li><p>4–6 years in security compliance, IT audit, or GRC at a <strong>product company</strong> (SaaS, fintech, e-commerce, payments, consumer internet).</p></li><li><p>Hands-on experience driving <strong>ISO 27001:2022</strong> end-to-end: gap → implementation → certification → surveillance.</p></li><li><p>Hands-on experience driving <strong>SOC 2 Type II</strong> end-to-end, including auditor management.</p></li><li><p>Strong <strong>ITGC</strong> experience: access, change, ops, and SDLC control design and testing.</p></li><li><p>Strong <strong>TPRM</strong> experience across the full vendor lifecycle.</p></li><li><p>Working knowledge of <strong>cloud (AWS and/or GCP)</strong> - shared-responsibility model, CIS benchmarks, native services for evidence (AWS Config, GCP SCC, CloudTrail, IAM Analyzer).</p></li><li><p>Demonstrated stakeholder management with Engineering, IT, Legal, Product, and external auditors.</p></li><li><p>Excellent written communication - you'll author policies, audit responses, and risk reports read by senior leadership.</p></li><p><strong>Nice to have</strong></p><li><p>DPDP Act 2023 / DPDP Rules 2025 implementation experience; familiarity with GDPR or ISO 27701.</p></li><li><p>Hands-on with a GRC platform: <strong>Sprinto, Vanta, Drata, OneTrust, AuditBoard, MetricStream, ServiceNow GRC, or Archer</strong>.</p></li><li><p>ISO 22301 BCMS experience.</p></li><li><p>Exposure to RBI / SEBI / IRDAI sectoral compliance.</p></li><li><p>PCI DSS v4.0.1 experience.</p></li><p><strong>Certifications</strong></p><li><p>ISO 27001:2022 <strong>Lead Auditor / Lead Implementer</strong></p></li><li><p><strong>CISA</strong></p></li><li><p><strong>CIPP/E or DCPP</strong> (privacy)</p></li></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Infrastructure",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/80ab7795-de6b-4dfe-9a66-a8ad5e7b8a83",
+      },
+      {
+        slug: "meesho-software-architect-supply",
+        title: "Software Architect - Supply",
+        description: `
+<strong>About the team</strong> When 14%+ of Indian households shop with us, it’s important to build resilient systems to manage millions of orders every day. We’ve done this – with zero downtime! 😎 Sounds impossible? Well, that’s the kind of Engineering muscle that has helped Meesho become the e-commerce giant that it is today. We value speed over perfection, and see failures as opportunities to become better. We’ve taken steps to inculcate a strong ‘Founder’s Mindset’ across our engineering teams, making us grow and move fast. We know how to party as hard as we work! If we aren’t building unparalleled tech solutions, you can find us debating the plot points of our favourite books and games – or even gossipping over chai. So, if a day filled with building impactful solutions with a fun team sounds appealing to you, join us. <strong>Tech Culture</strong> We have a unique tech culture where engineers are seen as problem solvers. The engineering org is divided into multiple pods and each pod is aligned to a particular business theme. It is a culture driven by logical debates & arguments rather than authority. At Meesho, you get to solve hard technical problems at scale as well as have a significant impact on the lives of millions of users and entrepreneurs. You are expected to contribute to the solutioning of product problems as well as challenge existing solutions. <strong>Our tech stack reflects the diverse requirements of our company:</strong> ● Backend: Java, Spring, MySQL, Go, Hbase,Redis, Kafka, Spark, Elastic-Search, Airflow, Presto, Redis, Dragonfly ● Mobile: Swift, Kotlin, RxJava, Dagger, MVVM with Data Binding, Mesh Design Library ● Web: ReactJS, Redux, NodeJS, Typescript ● Automation: RestAssured, Appium, Java, Jenkins, CircleCI ● Infrastructure: AWS, GCP <strong>About the role</strong> In the Fulfilment org, we are building systems at scale that determine product serviceability, predict delivery timelines for each Meesho package and building India's most reliable logistics service by leveraging our deep tech expertise. This space requires deep research, graph algorithms and high-scale systems to model our real world network and drive efficiency as well as re-route packages when node or transport services are disrupted. We place special emphasis on the continuous growth of each engineer. As Architect, you will have a special role to play in technical mentorship and influence over a large number of engineers and helping them learn to make sound technical decisions team member - and we do this with regular 1-1s and open communication. As an Architect, you will be part of self-starters who thrive on teamwork and constructive feedback. A typical day in your role would involve thinking about long term evolution of our systems, building in flexibility to support future use cases, reviewing design documents from various engineers. You'll be debugging hard technical problems, making tradeoffs on how to solve for now, while incorporating and kicking off long-term solutions. You'll help unblock junior engineers, lead exploration of new technologies and work with other architects in the company to ensure across the board we're building top-notch tech.<p><strong>What you will do</strong></p><ul><li>Design and architect highly scalable systems delivering best in class performance and service robustness</li><li>Collaborate with teams to develop and support the smooth 24x7 operation of our service</li><li>Create prototypes and proofs-of-concept for iterative development&nbsp;</li><li>Take complete ownership of projects and their development cycle</li><li>Drive internal and external activities to build Meesho’s tech brand and attract top tech talent</li><li>Design, participate and constantly improve our hiring process for engineering roles</li><li>Lead complex projects and collaborate across teams</li><li>Constantly explore ways to improve our systems and drive implementation</li></ul><p><strong>What you will need</strong></p><ul><li>Bachelors / Masters in Computer Science with at least 8 years of professional experience.</li><li>Exceptional design and architectural skills; experience in building large scale distributed systems</li><li>Experience in low latency and scalable systems (B2C)</li><li>Expertise in Java/J2EE and multithreading</li><li>Deep understanding of transactional and NoSQL DBs</li><li>Deep understanding of messaging systems like Kafka</li><li>Good experience on cloud infrastructure preferably AWS</li><li>Good to have: Data pipelines, Spark</li><li>Ability to think and analyze both breadth-wise and depth-wise while designing and implementing services</li><li>Excellent teamwork skills, flexibility, and ability to handle multiple tasks</li></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Supply & Fulfilment",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/be6609b0-539b-41c4-aa79-d2cc0916d3d8",
+      },
+      {
+        slug: "meesho-engineering-manager-backend",
+        title: "Engineering Manager -Backend",
+        description: `
+<strong>About Meesho </strong><strong>Mission and Vision </strong> Meesho is India’s fastest-growing internet commerce company, driven by the mission to democratize internet commerce for everyone (DICE). Our vision is to enable 100 million small businesses and entrepreneurs in India to succeed online, making online commerce accessible to all. This core purpose guides us in empowering sellers across the country and bringing a diverse range of products to first-time internet shoppers. By leveraging technology and a unique zero commission model, Meesho has opened the doors of e-commerce to millions who were previously underserved. <strong>Technological Scale & Innovation</strong><strong></strong>At Meesho, technology is at the heart of our success. We have invested in a scalable infrastructure and innovative solutions to meet the demands of a vast user base and complex marketplace. Some key highlights include: <strong>Massive Scale: </strong>Our backend systems handle millions of orders per day from across India, reaching about 5% of all Indian households, all with near-zero downtime to date. Achieving this level of reliability and performance in a hyper-growth environment is a testament to our engineering excellence. <strong>Marketplace Reach</strong>: Over 1.75 million sellers are registered on Meesho’s platform, supported by our state-of-the-art tech infrastructure and pan-India logistics network. This wide reach — covering virtually every serviceable pin code in the country — presents unique engineering challenges in areas like search, personalization, and payments at scale. <strong>Scalable Architecture: </strong>We continually innovate our architecture for growth.. Our quest to serve a billion Indian users has helped us evolve our technologies from a monolith to microservices to now a high scale federated architecture. This evolution allows us to build and deploy features rapidly while maintaining stability for a fast-growing user base. <strong>Cutting-edge Tech Stack: </strong>Our platform is built using modern, open-source technologies on the cloud while ensuring high efficiency. We strategically choose proven tools (for example, Java and Golang for services, Kafka for messaging, Dragonfly and Redis for caching, ScyllaDB, MySQL and Mongo for Data) and leverage GCP infrastructure to ensure high performance, reliability, and flexibility. By focusing on the right tools for the right problems, we innovate pragmatically rather than chasing every new tech hype, which helps us solve real-world problems effectively. <strong>Engineering Culture & Challenges </strong> Engineering at Meesho is driven by a bold and inclusive culture that values innovation, ownership, and continuous improvement. We believe that building great products goes hand-in-hand with building a great team. Key aspects of our engineering culture include: <strong>Long Term Thinking</strong>: We believe in thinking for tomorrow while building for today, this approach has helped us not only to handle and evolve for scale but also focus on extensibility and stability by investing in the platform <strong>Lightspeed:</strong> We prioritize rapid iteration and delivery. Engineers are encouraged to ship fast and refine continuously, as we value in order to learn and adapt quickly. <strong>Continuous Improvement</strong>: We view failures and bugs as opportunities to improve. A blameless post-mortem culture ensures that mistakes become lessons, fostering an environment where learning from failure drives resilience and innovation. <strong> Ownership Mindset:</strong> Every engineer is empowered to act like an owner. We instill a “Founder’s Mindset,” encouraging engineers to take end-to-end ownership of projects and drive them with an entrepreneurial spirit. This means our teams proactively identify problems and champion solutions, just as a founder would for their own product. Engineering at Meesho is more than just writing code – it's about solving complex, impactful problems at an unprecedented scale. Our engineers tackle challenging use cases (from enabling real-time logistics across India to optimizing a vast product catalog for the next billion users), making a tangible impact on millions of entrepreneurs and customers. We maintain a professional, yet passionate work environment where the drive to innovate is balanced with a pragmatic approach to problem-solving. <strong>About the Role</strong> We are looking for Engineering Manager well-versed with emerging technologies to join our team. As an Engineering Manager, you will ensure consistency and quality by shaping the right strategies. You will keep an eye on all engineering projects and ensure all duties are fulfilled . You will analyse other employees’ tasks and carry on collaborations effectively. You will also transform newbies into experts and build reports on the progress of all projects.<p><strong>What you will do</strong></p><ul><li>Design tasks for other engineers as per Meesho’s guidelines</li><li>Perform regular performance evaluation and share and seek feedback</li><li>Keep a closer look on various projects and monitor the progress</li><li>Carry on smooth collaborations with the sales team and design teams to innovate on new products</li><li>Manage engineers and take ownership of the project while ensuring product scalability</li><li>Conduct regular meetings to plan and develop reports on the progress of projects&nbsp;</li></ul><p><strong> What you will need</strong></p><ul><li>Bachelor's/Master’s in computer science</li><li>At least 7+ years professional experience</li><li>At least 2 years of experience in managing software development teams</li><li>Able to drive sprints and OKRs</li><li>Deep understanding of transactional and NoSQL DBs</li><li>Deep understanding of Messaging systems – Kafka</li><li>Good experience on cloud infrastructure - AWS/GCS</li><li>Good to have: Data pipelines, ES</li><li>Exceptional team managing skills; experience in building large scale distributed Systems</li><li>Experience in Scalable Systems</li><li>Expertise in Java/Python and multithreading&nbsp;</li></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Supply & Fulfilment",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/cb16706c-296f-4567-a41f-86206a54ee29",
+      },
+      {
+        slug: "meesho-security-architect-ai-powered-security-engineering",
+        title: "Security Architect - AI-Powered Security Engineering",
+        description: `
+<h2><strong>Security Architect - AI-Powered Security EngineeringAbout the Team</strong></h2><p>The security team at Meesho is like the Avengers to Meesho's S.H.I.E.L.D. When 5% of Indian households shop with us, it’s important to build resilient systems to manage millions of orders every day. We’ve done this, with zero downtime! We value speed over perfection, and see failures as opportunities to become better. By 2030, Meesho will be the world’s most trusted and secure digital ecosystem, operating on an AI-native, Zero-Trust, self-healing architecture. As we shift toward an era where autonomous agents generate and deploy code, we want to ensure our security scales seamlessly with engineering velocity. We place special emphasis on the continuous growth of each team member, fostering a strong 'Founder’s Mindset' that helps us move fast.</p><h2><strong>About the Role</strong></h2><p>We are looking for a highly technical, hands-on Security Architect (Individual Contributor) to guide and lead our AI-Powered Security Engineering charter. In this role, you will bridge the gap between conventional DevSecOps, infrastructure security, and the rapidly evolving landscape of AI. You will optimize our AI-driven Software Development Lifecycle (SDLC) by designing secure-by-default guardrails for both human developers and AI coding agents. Your mission is to ensure near-zero vulnerabilities from application and data security failures reach production. A significant portion of your focus will involve advanced Red Teaming, utilizing LLMs to improve Meesho's security posture, and architecting defenses for our autonomous AI systems against prompt injection, data leakage, and jailbreaking attacks.</p><p><strong>What You Will Do</strong></p><ul><h2>&nbsp;</h2><ul><li><p><strong>Lead AI Security Architecture:</strong> Drive the technical roadmap and high-level design to continuously prevent, detect, and autonomously contain threats across our systems and AI agents.</p></li><li><p><strong>Hands-on Prototyping &amp; POCs:</strong> Build proof-of-concepts for autonomous agent harnesses that automatically detect, analyze, and mitigate security vulnerabilities in real-time.</p></li><li><p><strong>AI SDLC Optimization:</strong> Architect non-bypassable security guardrails across the SDLC for both developers and AI coding agents to ensure production systems are secured by default.</p></li><li><p><strong>Red Teaming &amp; Adversarial Validation:</strong> Proactively execute adversarial testing by simulating real attack scenarios across APIs, AI systems, and infrastructure to validate defense mechanisms.</p></li><li><p><strong>Protect AI Systems:</strong> Design deep technical defenses to protect all AI agents and experimental features from prompt injection, system misuse, manipulation, and unauthorized actions.</p></li><li><p><strong>Zero-Trust Governance:</strong> Architect a Zero Trust Identity Control Plane that eliminates implicit trust, ensuring access for both humans and autonomous agents is time-bound, least-privileged, and continuously verified.</p></li><li><p><strong>Technical Leadership &amp; Influence:</strong> Act as a security expert and IC leader. Mentor security engineers, provide architectural guidance across the organization, and partner closely with ML, DevOps, and Platform teams to evangelize secure coding practices without direct reporting lines.</p></li></ul></ul><p><strong>What You Will Need</strong></p><ul><h2>&nbsp;</h2><ul><li><p><strong>Experience:</strong> 10+ years of hands-on technical experience across different areas of security, including infrastructure security, product security, system design, and DevSecOps.</p></li><li><p><strong>AI/ML Security Expertise:</strong> Proven track record of leveraging coding agents and LLMs for security workflows, Red Teaming GenAI models, and building defenses against jailbreaking, adversarial ML, and model hallucination risks.</p></li><li><p><strong>DevSecOps &amp; Cloud Mastery:</strong> Deep technical proficiency with cloud platforms like AWS or GCP, including their security tools, Docker, and containerization technologies.</p></li><li><p><strong>Technical Proficiency:</strong> Proficiency in programming languages such as Java, Node.js, and Python, combined with hands-on experience securing production code, developing security tooling, and performing manual source code reviews.</p></li><li><p><strong>Strategic Vision &amp; Threat Modeling:</strong> Ability to architect secure-by-default platform capabilities so all services inherit baseline security automatically, paired with advanced threat modeling skills for AI-native and distributed architectures.</p></li><h2><strong>Bonus Points</strong></h2><ul><li><p>Relevant certifications such as GIAC Web Application Penetration Tester (GWAPT) or OffSec’s Advanced Web Attacks and Exploitation (WEB-300).</p></li><li><p>Strong understanding of emerging AI security frameworks (e.g., MITRE ATLAS, NIST AI RMF).</p></li><li><p>Experience participating in bug bounty programs or speaking at meetups/conferences.</p></li><li><p>Developing Security products and frameworks.</p></li></ul></ul></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Infrastructure",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/f2de8c5f-1636-428d-aaea-af1400142975",
+      },
+      {
+        slug: "meesho-security-engineer-iv",
+        title: "Security Engineer IV",
+        description: `
+<strong>About the Team</strong> The security team at Meesho is like the Avengers to Meesho's S.H.I.E.L.D. After all, when 5% of Indian households shop with us, it’s important to build resilient systems to manage millions of orders every day. We’ve done this – with zero downtime! 😎 Sounds impossible? Well, that’s the kind of Engineering muscle that has helped Meesho become the e-commerce giant it is today. We value speed over perfection, and see failures as opportunities to become better. We’ve taken steps to inculcate a strong ‘Founder’s Mindset’ across our engineering teams, making us grow and move fast. We place special emphasis on the continuous growth of each team member - and we do this with regular 1-1s and open communication. As a Security Engineer, you will be part of self-starters who thrive on teamwork and constructive feedback. We know how to party as hard as we work! If we aren’t building unparalleled tech solutions, you can find us debating the plot points of our favorite books and games – or even gossiping over chai. So, if a day filled with building impactful solutions with a fun team sounds appealing to you, join us. <strong>About the Role</strong> As a Security Engineer 4, your role is integral in ensuring the security of our products throughout their development lifecycle. You will be involved from the very beginning, participating in threat modeling and design reviews to identify potential risks early. You'll also integrate and manage SAST tools within our CI/CD pipeline, ensuring continuous security testing as code evolves. Additionally, you'll lead and conduct vulnerability assessments and penetration testing (VAPT) to proactively uncover and address security vulnerabilities before they reach production. <p><strong>What you will do</strong></p><ul><li>Lead and manage all aspects of the Secure Software Development Lifecycle (SDLC).</li><li>Implement and manage security tools within the CI/CD pipeline (DevSecOps).</li><li>Conduct and oversee VAPT for web applications, APIs, iOS, and Android apps.</li><li>Perform threat modeling, design, and architecture reviews to identify potential risks.</li><li>Execute manual source code reviews and enhance security in production environments.</li><li>Manage and optimize a self-managed bug bounty program.</li><li>Provide security architectural guidance to Engineering and IT teams.</li><li>Manage issues identified from penetration tests and bug bounty programs.</li><li>Lead security training and awareness campaigns across the organization.</li><li>Manage Web Application Firewalls (WAF) to ensure robust protection.</li><li>Engage in the Security Champions program to integrate security practices within teams.</li><li>Assist in creating and maintaining Security Risk Models for both new and existing systems.</li></ul><p><strong>What you will need</strong></p><ul><li>7+ years of experience in product security, with a focus on application security and Dev SecOps.</li><li>Proven experience in leading architectural changes or cross-team efforts to mitigate security vulnerabilities.</li><li>Proficiency in programming languages such as Java, React, Node.js, and Python.</li><li>Hands-on experience with manual source code reviews and securing production code.</li><li>Expertise in deploying and managing security tools in CI/CD pipelines.</li><li>Experience with Git, Jenkins, Artifactory, or other similar technologies.</li><li>Strong background in securing the software development lifecycle, including eliminating classes of vulnerabilities.</li><li>Proficiency with cloud platforms like AWS or GCP, including their security tools.</li><li>Experience with Docker and containerization technologies is highly desirable.</li><li>Additional experience in infrastructure security, particularly in GCP, Docker, and containerization, is a bonus.</li></ul><p><strong>Bonus Points</strong></p><ul><li>Relevant certifications such as GIAC Web Application Penetration Tester (GWAPT), OffSec’s Advanced Web Attacks and Exploitation (WEB-300), etc.</li><li>Strong understanding of SSO protocols, including OAuth and SAML.</li><li>Experience speaking at meetups or conferences.</li><li>Experience participating in bug bounty programs.</li></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Infrastructure",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/f4e2e8e1-6863-4fe0-85fb-7840189cad3f",
+      },
+      {
+        slug: "meesho-engineering-manager-data-platform",
+        title: "Engineering Manager- Data Platform",
+        description: `
+<strong>About the Role</strong> We are looking for a seasoned Engineering Manager to lead our Data Platform. You will own the architecture and evolution of a Petabyte-scale Data Lakehouse and a Self-serve Analytics Platform, enabling real-time decision-making across the organization. In this role, you will drive consistency and quality by defining the right engineering strategies. You will oversee multiple engineering projects, ensure timely execution, collaborate across functions, and mentor engineers to grow into high-performing contributors. <p><strong>What You Will Do</strong></p><ul><li>Drive technical roadmap and architecture for driving efficiency across the platform along with automated data governance.</li><li>Define and monitor SLOs/SLAs for data availability, latency, and quality across real-time and batch pipelines.</li><li>Drive excellence in engineering quality and lead solutioning for complex product problems</li><li>Collaborate with Analytics, Data Science and Product teams to drive adoption of the Self-Serve Platform and reduce time to high quality insights.</li><li>Champion robust data security standards, including RBAC, PII masking, and encryption, to ensure DPDP compliance in a democratized data environment.</li><li>Manage engineers end-to-end, taking ownership of project delivery and product scalability</li><li>Conduct regular planning, review, and retrospective meetings</li><li>Create and present progress reports for ongoing projects and initiatives</li></ul><p><strong>What You Will Need</strong></p><ul><li>Bachelor’s or Master’s degree in Computer Science or a related field</li><li>8+ years of overall professional experience</li><li>2+ years of experience managing software development teams</li><li>Experience managing a high-performing team of engineers with varying seniority.</li><li>Proven ability to develop and implement distributed systems and platforms at scale.</li><li>Expertise in Scala, Java, Python, or Go</li><li>Proficiency in Apache Spark and its core architecture, including platform-based optimization on Spark batch and streaming workloads.</li><li>Deep experience with Open Table Formats like Delta Lake, Apache Iceberg or Apache Hudi.</li><li>Deep understanding of transactional and NoSQL databases</li><li>Knowledge of messaging systems, especially Kafka</li><li>Hands-on experience with cloud infrastructure, preferably GCP/AWS</li><li>Good understanding of streaming and real-time data pipelines</li><li>Expertise in data modeling, data quality, and utilizing data validation tools is essential.</li><li>Proficiency in Business Intelligence (BI) tools, including but not limited to Tableau, Metabase, and Superset.</li><li>Proficiency in Real-time OLAP engines (Apache Pinot, Apache Druid, or ClickHouse) and Stream Processing (Apache Flink or Spark Streaming).</li></ul><p><strong>Good to Have</strong></p><ul><li>Experience managing infrastructure utilizing Kubernetes and Helm.</li><li>Understanding of workflow orchestration utilizing Apache Airflow etc.</li><li>Experience designing dynamic DAGs, managing backfills, and optimizing scheduler performance at scale.</li><li>Experience managing infrastructure components utilizing Kubernetes and Helm.</li><li>Experience implementing centralized data access control layers (e.g., Apache Ranger) and auditing frameworks</li></ul><p><strong>Leadership & Collaboration</strong></p><ul><li>Ability to drive sprints and OKRs effectively.</li><li>Strong stakeholder management and cross-functional collaboration skills.</li><li>Exceptional people management and mentorship capabilities.</li></ul><p><strong>Why Join Meesho</strong></p><ul><li>Work on data systems at massive scale impacting millions of users</li><li>Own and influence core data infrastructure powering one of India’s fastest-growing platforms</li><li>Collaborate with smart, driven engineers and leaders in a high-ownership culture</li><li>Opportunity to shape technology, people, and processes in a rapidly evolving ecosystem</li></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Data Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/fc6d0443-48a8-4535-9d2b-5f9b32a136e3",
+      },
+      {
+        slug: "meesho-engineering-manager-infrastructure-platform",
+        title: "Engineering Manager- Infrastructure platform",
+        description: `
+<strong>About Meesho</strong><strong>Mission and Vision</strong> Meesho is India’s fastest-growing internet commerce company, driven by the mission todemocratize e-commerce for everyone. Our vision is to enable 100 million small businessesand entrepreneurs in India to succeed online, making online commerce accessible to all. Thiscore purpose guides us in empowering sellers across the country and bringing a diverse rangeof products to first-time internet shoppers. By leveraging technology and a uniquesocial-commerce model, Meesho has opened the doors of e-commerce to millions who werepreviously underserved. <strong>Technological Scale & Innovation</strong> At Meesho, technology is at the heart of our success. We have invested in a scalableinfrastructure and innovative solutions to meet the demands of a vast user base and complexmarketplace. Some key highlights include: ● <strong>Massive Scale:</strong> Our backend systems handle millions of orders per day from acrossIndia, reaching about 5% of all Indian households, all with near-zero downtime to <a rel="noopener noreferrer" href="http://date.Achieving">date.Achieving</a> this level of reliability and performance in a hyper-growth environment is atestament to our engineering excellence. ● <strong>Scale converted to Infrastructure:</strong> Our production systems in its peak handle a cumulative 14 M RPS, powered by over 1000+ microservices spawning over 450K cores running on public cloud. Every service is containerised and runs on multiple Kubernetes clusters with inter and intra cluster traffic doing pod-to-pod direct communication. ● <strong>Marketplace Reach:</strong> Over <a rel="noopener noreferrer" href="http://1.75">1.75</a> million sellers are registered on Meesho’s platform,supported by our state-of-the-art tech infrastructure and pan-India logistics <a rel="noopener noreferrer" href="http://network.This">network.This</a> wide reach — covering virtually every serviceable pin code in the country —presents unique engineering challenges in areas like search, personalization, andpayments at scale. ● <strong>Scalable Architecture: </strong>We continually innovate our architecture for growth. Meeshobegan with a monolithic codebase but quickly evolved to a microservices-drivenarchitecture, re-architecting critical systems to seamlessly handle current and futurescale. This evolution allows us to build and deploy features rapidly while maintainingstability for a fast-growing user base. ● <strong>Cutting-edge Tech Stack</strong>: Our platform is built using modern, open-source technologieson the cloud. We strategically choose proven tools (example, Kubernetes for containerisation, Java and Golang forservices, Kafka, Redis, ScyllaDB, mysql etc) and leverage GCP cloudinfrastructure to ensure high performance, reliability, and flexibility. By focusing on theright tools for the right problems, we innovate pragmatically rather than chasing everynew tech hype, which helps us solve real-world problems effectively. <strong>Engineering Culture & Challenges</strong> Engineering at Meesho is driven by a bold and inclusive culture that values innovation,ownership, and continuous improvement. We believe that building great products goeshand-in-hand with building a great team. Key aspects of our engineering cultureinclude: ●<strong> Speed Over Perfection</strong>: We prioritize rapid iteration and delivery. Engineers areencouraged to ship fast and refine continuously, as we value speed over perfection inorder to learn and adapt quickly. ● <strong>Continuous Improvement:</strong> We view failures and bugs as opportunities to improve. Ablameless post-mortem culture ensures that mistakes become lessons, fostering anenvironment where learning from failure drives resilience and innovation. ● <strong>Ownership Mindset: </strong>Every engineer is empowered to act like an owner. We instill a“Founder’s Mindset,” encouraging engineers to take end-to-end ownership of projectsand drive them with an entrepreneurial spirit. This means our teams proactively identifyproblems and champion solutions, just as a founder would for their own product. Engineering at Meesho is more than just writing code – it's about solving complex, impactfulproblems at an unprecedented scale. Our engineers tackle challenging use cases (from enabling real-time logistics across India to optimizing a vast product catalog for the next billionusers), making a tangible impact on millions of entrepreneurs and customers. We maintain aprofessional, yet passionate work environment where the drive to innovate is balanced with apragmatic approach to problem-solving. <strong>About the role</strong> We are looking for an technically driven Engineering Manager well-versed with emerging technologies to join our team.As an Engineering Manager, you will ensure consistency and quality by shaping the rightstrategies. You will keep an eye on all engineering projects and ensure all duties are fulfilled. You will analyse other employees’ tasks and carry on collaborations effectively. You will also transform newbies into experts and build reports on the progress of all projects.<p><strong>What you will do</strong></p><ul><li>Own Meesho’s compute and network Platform</li><li>Perform regular performance evaluations and share and seek feedback with the team members</li><li>Conduct regular meetings to plan and develop reports on project progress</li><li>Collaborate with the product-engineering and architect counterparts to innovate on new features on platform</li><li>Manage engineers and take ownership of projects while ensuring product scalability</li><li>Own and maintain the uptime of Meesho tech systems</li></ul><p><strong>What you will need</strong></p><ul><li>Bachelor’s or Master’s degree in Computer Science</li><li>At least 9+ years of professional experience</li><li>Minimum 2 years of experience managing (around 10 member) software development teams</li><li>Ability to drive projects in accordance with OKRs</li><li>Exceptional team management skills and experience in running large complex projects with clear articulation to leadership</li><li>Experience in handling and leading teams across any of SRE/AIOps and Platform&nbsp;</li><li>Deep understanding of containerisation and Automation of infrastructure(Kubernetes, Terraform)</li><li>Good understanding of programming languages(Python or GO)</li><li>Strong expertise in handling at scale infrastructure with high stability, uptime, and cost effectiveness</li><li>Deep expertise in building scalable platforms, on cloud or on-prem</li><li>Preferably to have experience on public clouds like GCP or AWS</li></ul>
+`.trim(),
+        location: "Bangalore, Karnataka",
+        department: "Infrastructure",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.lever.co/meesho/fcebd937-47fd-4efe-b1de-1ad8ba571e32",
+      },
+    ],
+  },
+  {
+    slug: "superside",
+    name: "Superside",
+    tagline: "AI-powered creative partner for enterprise teams",
+    about:
+      "Superside (formerly Konsus) is a YC-backed, always-on design company co-founded by Fredrik Thomassen and Jing Kjeldsen, pairing AI tools with a global network of vetted creative talent to deliver design, video, and marketing creative for enterprise teams like Amazon and Meta. Remote-first with employees across 60+ countries, Superside has raised $33.5M from investors including Y Combinator, Freestyle, and Slack Fund.",
+    logoUrl: "https://cdn.sanity.io/images/k0dlbavy/production/790d16cce09755bcd60b3ad8ed511ba85bf72937-48x48.svg",
+    fundingStage: "SERIES_B",
+    remotePolicy: "REMOTE",
+    visaSponsorship: false,
+    employeeCountRange: "201-500",
+    websiteUrl: "https://www.superside.com",
+    categories: ["saas", "ai-ml"],
+    technologies: [],
+    location: { city: "Wilmington", country: "USA" },
+    founders: [
+      {
+        name: "Fredrik Thomassen",
+        title: "Co-founder & CEO",
+        linkedinUrl: "https://no.linkedin.com/in/fredrikthomassen",
+      },
+      { name: "Jing Kjeldsen", title: "Co-founder" },
+      { name: "Haakon Heir", title: "Co-founder & COO" },
+    ],
+    links: [],
+    internships: [
+      {
+        slug: "superside-staff-product-manager",
+        title: "Staff Product Manager",
+        description: `
+<p>Superside seeks a Staff Product Manager to oversee Superspace, its main platform serving customers and internal creative teams. The role involves leading Superside's largest product pod and shaping the future of how customers, creatives, and AI work together.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Own product strategy and execution for Superspace while balancing customer value, business impact, and operational efficiency.</li>
+<li>Lead cross-functional teams including designers and engineers.</li>
+<li>Partner with Operations and Services to enhance workflows.</li>
+<li>Define Superspace's approach for multiple user segments.</li>
+<li>Create cohesive experiences across product teams.</li>
+<li>Build AI-native workflows integrating human expertise and AI agents.</li>
+<li>Establish prioritization frameworks.</li>
+<li>Prototype and validate product concepts.</li>
+<li>Drive adoption and engagement metrics.</li>
+<li>Influence strategy alongside senior leadership.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>8+ years in product management; 4+ years at Senior or Staff level.</li>
+<li>Complex B2B, platform, marketplace, or AI product experience.</li>
+<li>Demonstrated ability delivering measurable business outcomes.</li>
+<li>Deep curiosity about AI and hands-on experience working with AI-powered products.</li>
+<li>Multi-stakeholder management capabilities.</li>
+<li>Technical acumen discussing architecture and implementation trade-offs.</li>
+<li>Data-driven decision-making experience.</li>
+</ul>
+`.trim(),
+        location: "Remote",
+        department: "Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://careers.superside.com/jobs/staff-product-manager",
+      },
+    ],
+  },
+  {
+    slug: "floy",
+    name: "Floy",
+    tagline: "AI second opinion for radiologists",
+    about:
+      "Floy GmbH is a Munich-based health-tech company founded in 2021 by Benedikt Schneider and Leander Maerkisch, developing AI software that analyzes CT and MRI scans as a second opinion for radiologists, detecting incidental findings and hard-to-see abnormalities. Floy has raised roughly €9M from investors including HV Capital, All Iron Ventures, and 10x Founders.",
+    logoUrl: "https://cdn.prod.website-files.com/66f7b48c0855a2b7dbf4f206/698db765d122fb099ee7b3fe_scarlet_logo_rgb_charcoal.svg",
+    fundingStage: "SEED",
+    remotePolicy: "REMOTE",
+    visaSponsorship: false,
+    employeeCountRange: "11-50",
+    websiteUrl: "https://www.floy.com",
+    categories: ["healthtech", "ai-ml"],
+    technologies: ["react", "react-native", "typescript", "nodejs", "docker", "kubernetes"],
+    location: { city: "Munich", country: "Germany" },
+    founders: [
+      {
+        name: "Benedikt Schneider",
+        title: "Co-founder & CEO",
+        linkedinUrl: "https://de.linkedin.com/in/benediktschneider",
+      },
+      { name: "Leander Maerkisch", title: "Co-founder" },
+    ],
+    links: [],
+    internships: [
+      {
+        slug: "floy-senior-full-stack-engineer-react",
+        title: "(Senior) Full Stack Engineer (React)",
+        description: `
+<p><strong>Your mission</strong></p>
+<p>We are seeking a highly skilled and experienced Software Engineer to join our team. Even the best of algorithms are worthless without excellent integration into practice. You drive the adoption of our deep learning models by building the surrounding user experience. Your role will be critical in building reliable, scalable, and accessible services directly impacting patients' lives.</p>
+<p><strong>Your Responsibilities</strong></p>
+<ul>
+<li>Design, develop, and maintain full-stack web applications using React, React Native, and TypeScript on the front end and NestJS or similar technologies on the back end.</li>
+<li>Write clean, scalable, and maintainable code with a strong emphasis on TypeScript best practices.</li>
+<li>Architect and implement solutions to meet both functional and non-functional requirements, ensuring performance, scalability, and security.</li>
+<li>Collaborate with product managers, designers, and other engineers.</li>
+<li>Lead code reviews and mentor junior engineers to uphold high engineering standards.</li>
+</ul>
+<p><strong>What Are We Looking For?</strong></p>
+<ul>
+<li>A degree in a relevant scientific (Computer Science, Software Engineering) discipline or equivalent experience in a related field.</li>
+<li>5+ years of professional experience in software development, with a focus on React and TypeScript.</li>
+<li>Strong expertise in building and deploying scalable front-end architectures with modern frameworks and libraries.</li>
+<li>Knowledge of database systems, both SQL and NoSQL.</li>
+<li>Knowledge in Docker, Kubernetes, CI/CD pipelines, and the use of cloud platforms.</li>
+<li>A keen eye for detail and a commitment to accuracy.</li>
+<li>Excellent English skills.</li>
+<li>Strong commitment to teamwork.</li>
+</ul>
+<p><strong>Good-to-have</strong></p>
+<ul>
+<li>Experience working with DICOM and/or in the radiology field.</li>
+<li>Experience in computer graphics, especially WebGL, GLSL, Three.js.</li>
+</ul>
+<p><strong>Why Us</strong></p>
+<p>Pioneer medical AI to maximize human health. Become part of an ambitious team valuing individuals, dedication and a joyful work experience. Solve novel challenges with life-saving implications. We accelerate your learning with rapid feedback, biweekly 1:1 sessions and inspiring problems. We give you autonomy, flexibility and the opportunity to connect with brilliant minds, plus a flexible remote team culture, company retreats and fair compensation.</p>
+`.trim(),
+        location: "Hamburg, Germany",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://floy.jobs.personio.com/job/2606936",
+      },
+    ],
+  },
+  {
+    slug: "ory",
+    name: "Ory",
+    tagline: "The leading open-source identity and access management ecosystem",
+    about:
+      "Ory Corp, founded in 2019 by Thomas Aidan Curran, Aeneas Rekkas, and Simon Kohl, is the leading open-source identity management, authentication, and authorization ecosystem, with more than 30,000 community members. Headquartered in Munich, Germany, Ory provides a modern, modular, cloud-agnostic, API-first approach to IAM that scales with unmatched UX and deployment flexibility. Ory has raised $27.5M in a Series A led by Insight Partners and Balderton Capital.",
+    logoUrl: "https://www.ory.com/icon.svg",
+    fundingStage: "SERIES_A",
+    remotePolicy: "REMOTE",
+    visaSponsorship: false,
+    employeeCountRange: "51-200",
+    websiteUrl: "https://www.ory.com",
+    categories: ["infrastructure", "devtools"],
+    technologies: ["go", "kubernetes", "rust"],
+    location: { city: "Munich", country: "Germany" },
+    founders: [
+      {
+        name: "Thomas Aidan Curran",
+        title: "Founder & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/thomasaidancurran/",
+      },
+      {
+        name: "Aeneas Rekkas",
+        title: "Co-founder & CTO",
+        linkedinUrl: "https://www.linkedin.com/in/aeneasr/",
+      },
+      { name: "Simon Kohl", title: "Co-founder" },
+    ],
+    links: [],
+    internships: [
+      {
+        slug: "ory-software-engineer",
+        title: "Software Engineer",
+        description: `
+<p>With more than 30,000 members, Ory is the leading open-source identity management, authentication, and authorization ecosystem and community in the world. Ory provides a modern and modular approach to IAM programs that scales, provides unmatched UX and deployment flexibility supporting enterprise deployments across the world.</p>
+<p>This role is responsible for designing, engineering, testing, running, automating, and documenting Ory services in both closed and open source work.</p>
+<p><strong>Key Tasks and Deliverables</strong></p>
+<ul>
+<li>Design, implement and maintain production code for Ory Network and Ory Open Source, that is well tested, follows security best practices and is easy-to-use.</li>
+<li>Implement Identity and Access Management industry standards.</li>
+<li>Implement proof of concepts for products and features.</li>
+<li>Write documentation (internal &amp; external) for built features.</li>
+<li>Collaborate with other teams on cross-platform and cross-application technical challenges.</li>
+<li>Contribute to Ory's Open Source projects and the team's Software Development Life Cycle.</li>
+<li>Devise innovative ideas for solving Ory Network customer problems and translate these ideas into technical designs.</li>
+<li>Provide technical leadership and solve end-to-end problems — software design, efficient implementation, and product offering.</li>
+<li>Participate in on-call rotations (shifts).</li>
+</ul>
+<p><strong>Minimum Requirements</strong></p>
+<ul>
+<li>5+ years of professional software development experience.</li>
+<li>Experience with the Go programming language (must have). Experience with other languages such as Java, C/C++, C#, Rust, Kotlin, Python, or JavaScript is also welcome.</li>
+<li>Experience architecting and developing solutions to ambiguous problems.</li>
+<li>Experience working with Kubernetes and Cloud Provider products.</li>
+<li>A Bachelor's degree in Computer Science or related technical field or equivalent practical experience.</li>
+<li>Previous experience in Identity and Access Management is a plus.</li>
+</ul>
+<p><strong>Mindset:</strong> a desire to excel, act with courage, persevere, learn and innovate; alignment with Ory's core values (think big, move fast, passion &amp; excellence, innovation, customer centricity, respect); results-oriented delivery on KPIs.</p>
+`.trim(),
+        location: "Munich, Germany",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ory.jobs.personio.de/job/2334461",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {

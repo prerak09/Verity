@@ -25,6 +25,9 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "walleyecapital.com" },
       { protocol: "https", hostname: "cdn.prod.website-files.com" },
       { protocol: "https", hostname: "solopulse.com" },
+      { protocol: "https", hostname: "www.meesho.io" },
+      { protocol: "https", hostname: "cdn.sanity.io" },
+      { protocol: "https", hostname: "www.ory.com" },
     ],
   },
 };
