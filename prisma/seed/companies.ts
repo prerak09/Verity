@@ -1306,7 +1306,446 @@ const COMPANIES: DemoCompany[] = [
         stipend: "Not specified",
         duration: "Permanent",
         applyUrl: "https://fa-ewmy-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4345",
-      },    ],
+      },
+    ],
+  },
+  {
+    slug: "fin",
+    name: "Fin",
+    tagline: "The highest-performing Customer Agent (formerly Intercom)",
+    about:
+      "Fin — formerly Intercom, founded in 2011 by Eoghan McCabe, Des Traynor, Ciaran Lee, and David Barrett — is the AI Customer Agent company, serving nearly 30,000 businesses across service, sales, and ecommerce channels. The company renamed itself from Intercom to Fin in May 2026 to reflect its AI agent product becoming the core of the business (the Intercom name lives on as its customer service software platform). Headquartered in San Francisco with offices in Dublin, London, Chicago, and Sydney, Fin has ~1,400 employees and has raised $242M in venture funding plus $250M in venture debt from Hercules Capital. In late 2026, Fin agreed to be acquired by Salesforce for approximately $3.6B, a deal expected to close in Q4 of Salesforce's fiscal year 2027.",
+    logoUrl: "https://fin.ai/favicons/favicon-black-96x96.png",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://fin.ai",
+    categories: ["saas", "ai-ml"],
+    technologies: ["python", "ruby", "aws"],
+    location: { city: "San Francisco", country: "USA" },
+    founders: [
+      {
+        name: "Eoghan McCabe",
+        title: "Co-founder & CEO",
+        linkedinUrl: "https://www.linkedin.com/in/eoghanmccabe/",
+      },
+      {
+        name: "Des Traynor",
+        title: "Co-founder",
+        linkedinUrl: "https://ie.linkedin.com/in/destraynor",
+      },
+      {
+        name: "Ciaran Lee",
+        title: "Co-founder & Chief Engineer",
+        linkedinUrl: "https://www.linkedin.com/in/ciaran-lee-51bb402/",
+      },
+      { name: "David Barrett", title: "Co-founder & Engineer" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/fin" },
+      { type: "twitter", url: "https://x.com/fin_ai" },
+      { type: "youtube", url: "https://www.youtube.com/channel/UCJG0MvLP03kyzzAkD-w98aQ" },
+    ],
+    internships: [
+      {
+        slug: "fin-forward-deployed-software-engineer-dublin",
+        title: "Forward Deployed Software Engineer",
+        description: `
+<p>Fin is the AI Customer Agent company on a mission to help businesses provide perfect customer experiences, serving nearly 30,000 global businesses. This role bridges the gap between customer needs and product innovation, working on AI Agent for Customer Service implementations for strategic accounts.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Enable customer adoption by helping prospects leverage Fin's AI capabilities.</li>
+<li>Embed with strategic customers to understand business challenges and technical requirements.</li>
+<li>Code alongside customer technical teams as a trusted expert.</li>
+<li>Collaborate with Sales, Success, and Product teams for seamless delivery.</li>
+<li>Contribute to scaling the Forward Deployed Engineering function.</li>
+</ul>
+<p><strong>Required Skills</strong></p>
+<ul>
+<li>Strong engineering background (Computer Science, Math, or Physics preferred).</li>
+<li>SaaS product experience; startup background advantageous.</li>
+<li>AI/ML interest with ability to learn novel architectures quickly.</li>
+<li>Cross-functional collaboration abilities.</li>
+<li>Proficiency in a high-level programming language (JavaScript, Python, Ruby, etc.).</li>
+<li>Rapid prototyping and shipping capabilities.</li>
+<li>REST API expertise.</li>
+<li>Strong communication across technical and non-technical audiences.</li>
+<li>Willingness to travel and work on-site with customers.</li>
+</ul>
+<p><strong>Benefits</strong> include competitive salary and equity, daily lunch and snacks, pension matching (up to 4%), comprehensive health/dental insurance, flexible PTO, parental leave, Cycle-to-Work Scheme support, and a standard-issue MacBook.</p>
+`.trim(),
+        location: "Dublin, Ireland",
+        department: "Forward Deployed Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/intercom/jobs/7982566",
+      },
+      {
+        slug: "fin-forward-deployed-software-engineer-london",
+        title: "Forward Deployed Software Engineer",
+        description: `
+<p>Fin is the AI Customer Agent company on a mission to help businesses provide perfect customer experiences, serving nearly 30,000 global businesses.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Facilitate Fin adoption by helping prospects unlock the power of Fin's AI capabilities to automate and scale their support operations.</li>
+<li>Embed with strategic customers to understand challenges and provide technical guidance.</li>
+<li>Code alongside customer technical teams as a trusted expert.</li>
+<li>Collaborate with Sales, Success, and Product teams for seamless delivery.</li>
+<li>Contribute to scaling the Forward Deployed function through documented best practices.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Strong engineering background (Computer Science, Mathematics, Software Engineering, or Physics).</li>
+<li>SaaS product development experience.</li>
+<li>Interest in AI/ML with ability to understand novel problems and architectures.</li>
+<li>Cross-functional collaboration skills.</li>
+<li>Proficiency in at least one high-level programming language.</li>
+<li>Ability to prototype and ship quality software quickly.</li>
+<li>REST API expertise.</li>
+<li>Strong communication across technical and non-technical audiences.</li>
+<li>Willingness to travel and work on-site with customers.</li>
+</ul>
+<p><strong>Benefits</strong> include competitive salary and equity, weekday meals, health/dental insurance, pension matching (4%), flexible PTO, parental leave, and a standard-issue MacBook.</p>
+`.trim(),
+        location: "London, England",
+        department: "Forward Deployed Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/intercom/jobs/7556413",
+      },
+      {
+        slug: "fin-it-systems-engineer-sf",
+        title: "IT Systems Engineer",
+        description: `
+<p>This role focuses on evolving IT infrastructure with a focus on deliverability, identity & access management, and compliance.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Solve automation and integration challenges across teams and business processes.</li>
+<li>Design and maintain automations addressing identity management, endpoint management, security, compliance, and email deliverability.</li>
+<li>Participate in cross-organizational infrastructure projects emphasizing infrastructure-as-code.</li>
+<li>Promote automation adoption through education and enablement.</li>
+<li>Evaluate emerging tools and beta features to optimize operations.</li>
+<li>Drive IT incident response coordination.</li>
+<li>Integrate AI tools and automate infrastructure via platforms like Tines and Workato.</li>
+</ul>
+<p><strong>Core Requirements</strong></p>
+<ul>
+<li>Passion for systems and automation.</li>
+<li>3-5 years of systems engineering experience.</li>
+<li>Good knowledge of high-level programming languages (Ruby, Python, Perl).</li>
+<li>Cloud systems experience. Primary infrastructure includes AWS, Okta, Google Workspace, Jamf Pro, Intune, Tines, and Workato.</li>
+</ul>
+<p><strong>Nice to Have:</strong> NetSuite ERP and billing system integration experience.</p>
+<p><strong>Compensation:</strong> $142,000–$162,000 base (San Francisco Bay Area), plus equity, comprehensive medical/dental/vision coverage, unlimited Claude Code access, flexible PTO, parental leave, 401(k) matching, and equipment flexibility.</p>
+`.trim(),
+        location: "San Francisco, CA",
+        department: "IT",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "$142,000–$162,000/year",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/intercom/jobs/7918638",
+      },
+      {
+        slug: "fin-it-systems-engineer-dublin-london",
+        title: "IT Systems Engineer",
+        description: `
+<p>Fin seeks a Systems Engineer to evolve IT infrastructure with emphasis on deliverability, identity & access management, and compliance. The role suits professionals from traditional systems engineering or DevOps backgrounds seeking cloud-native experience, or those in identity management looking to advance.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Solve team and organizational automation/integration problems.</li>
+<li>Design and maintain automations addressing identity & access management, endpoint management, security, compliance, and enterprise email deliverability.</li>
+<li>Execute infrastructure-as-code projects across the organization.</li>
+<li>Promote automation adoption through enablement and education.</li>
+<li>Participate in emerging AI tools and infrastructure initiatives.</li>
+<li>Drive IT incident response coordination.</li>
+<li>Integrate AI tooling and develop automated infrastructure via Tines and Workato.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Passion for systems and automation in fast-moving environments.</li>
+<li>3-5 years of Systems Engineer experience with strong problem-solving abilities.</li>
+<li>Proficiency in high-level programming languages (Ruby, Python, Perl, etc.).</li>
+<li>Cloud systems experience; primary infrastructure uses AWS, Okta, Google Workspace, Jamf Pro, Intune, Tines, and Workato.</li>
+</ul>
+<p><strong>Preferred Experience</strong></p>
+<ul>
+<li>iPaaS platforms and enterprise email deliverability expertise.</li>
+<li>Integration experience between billing systems and NetSuite ERP.</li>
+</ul>
+`.trim(),
+        location: "Dublin, Ireland / London, England",
+        department: "IT",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/intercom/jobs/7930382",
+      },
+      {
+        slug: "fin-senior-data-scientist-london",
+        title: "Senior Data Scientist",
+        description: `
+<p>Fin is an AI Customer Agent company serving nearly 30,000 businesses. The Research, Analytics & Data Science (RAD) team drives decision-making through data science and research, generating insights that shape customer empathy and product strategy.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Partner with product teams to identify critical questions and provide data-driven answers.</li>
+<li>Develop product success metrics, set targets, and measure outcomes.</li>
+<li>Design and maintain end-to-end data pipelines with stakeholder collaboration.</li>
+<li>Work with product researchers to understand customers and business dynamics.</li>
+<li>Influence product roadmap through exploratory analysis.</li>
+<li>Use AI tools to accelerate analysis and automate workflows.</li>
+<li>Build scalable dashboards and self-serve analytics capabilities.</li>
+<li>Communicate compelling data stories across the organization.</li>
+</ul>
+<p><strong>Required Skills</strong></p>
+<ul>
+<li>5+ years of experience working with data to solve problems and drive evidence-based decisions.</li>
+<li>SQL proficiency and statistical grounding.</li>
+<li>Product team collaboration experience.</li>
+<li>Track record delivering actionable insights with minimal oversight.</li>
+<li>Strong communication abilities.</li>
+<li>Scientific computing language experience (e.g. Python).</li>
+<li>AI tool proficiency increasingly important.</li>
+</ul>
+<p><strong>Bonus Skills:</strong> data modeling, ETL/dbt experience, internal tool building.</p>
+<p><strong>Benefits</strong> include competitive salary, equity, unlimited Claude Code access, lunches, insurance, and flexible time off.</p>
+`.trim(),
+        location: "London, England",
+        department: "Research, Analytics & Data Science (RAD)",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/intercom/jobs/7749323",
+      },
+      {
+        slug: "fin-senior-engineer-infrastructure-platform",
+        title: "Senior Engineer, Infrastructure Platform",
+        description: `
+<p>Fin is an AI Customer Agent company founded in 2011, serving nearly 30,000 global businesses. The company emphasizes shipping velocity and reliable infrastructure as competitive advantages. This role builds infrastructure platforms where "shipping is our heartbeat" — making reliability, observability, secure deployment, and velocity the default experience. The team leverages AI extensively, using coding agents and self-authored skills to automate work.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Automate everything: eradicate manual, repetitive, and unscalable work.</li>
+<li>Drive architectural evolution and plan generational infrastructure changes.</li>
+<li>Own reliability of core services and engineer preventative solutions.</li>
+<li>Adopt full-stack problem-solving across infrastructure and application layers.</li>
+<li>Abstract shared concerns through enablement and documentation.</li>
+<li>Hold accountability with empathy while raising team standards.</li>
+<li>Lead complex initiatives independently with complete ownership.</li>
+<li>Build AI-native leverage using coding agents and agent skills.</li>
+</ul>
+<p><strong>Required Skills</strong></p>
+<ul>
+<li>Cloud infrastructure expertise (AWS preferred) with distributed systems experience.</li>
+<li>Deep programming knowledge, treating infrastructure as software engineering.</li>
+<li>Operational obsession with reliability metrics and telemetry focus.</li>
+<li>Developer empathy — understanding product team friction points.</li>
+<li>Proven independent execution on cross-team initiatives.</li>
+<li>Strong technical communication and asynchronous collaboration abilities.</li>
+<li>"AI-first by default" approach with a demonstrated automation track record.</li>
+</ul>
+<p><strong>Benefits</strong> include competitive salary, equity, daily catered lunch, unlimited Claude access, pension matching (4%), comprehensive health/dental coverage, flexible PTO, parental leave, Cycle-to-Work Scheme support, and a standard-issue MacBook.</p>
+`.trim(),
+        location: "Dublin, Ireland",
+        department: "Infra-Platform, Infraservices",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/intercom/jobs/7731665",
+      },
+      {
+        slug: "fin-senior-forward-deployed-engineer-dublin",
+        title: "Senior Forward Deployed Engineer",
+        description: `
+<p>Fin is the AI Customer Agent company on a mission to help businesses provide perfect customer experiences, serving nearly 30,000 global businesses.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Facilitate Fin adoption with prospects by showcasing AI capabilities for support automation.</li>
+<li>Embed with strategic customers to understand business challenges and technical requirements.</li>
+<li>Provide hands-on technical expertise, coding side-by-side to drive projects to completion.</li>
+<li>Collaborate with Sales, Success, and Product teams for seamless customer experiences.</li>
+<li>Shape the Forward Deployed Engineering function and codify best practices.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Deep knowledge of high-level programming languages (JavaScript, Python, Ruby, etc.).</li>
+<li>Strong AI/ML interest and ability to understand novel problems and trade-offs.</li>
+<li>REST API proficiency for system integration.</li>
+<li>Fast prototyping and shipping capability with a quality focus.</li>
+<li>Cross-functional collaboration skills.</li>
+<li>Strong communication across technical and non-technical audiences.</li>
+<li>Willingness to travel and work on-site with customers.</li>
+</ul>
+`.trim(),
+        location: "Dublin, Ireland",
+        department: "Forward Deployed Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/intercom/jobs/7218259",
+      },
+      {
+        slug: "fin-senior-forward-deployed-engineer-london",
+        title: "Senior Forward Deployed Engineer",
+        description: `
+<p>Fin is an AI Customer Agent company founded in 2011, serving nearly 30,000 businesses globally with AI-powered customer support solutions integrated with Intercom's help desk platform. This is a founding Senior Forward Deployed Engineer role designed to bridge strategic customers' business goals with Fin's AI capabilities, offering ownership, creativity, and the opportunity to lead R&D and Go-to-Market teams.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Drive Fin adoption by helping prospects leverage AI capabilities for support automation.</li>
+<li>Embed with strategic customers to understand business challenges and technical requirements.</li>
+<li>Work hands-on alongside customer technical teams as expert advisor and coder.</li>
+<li>Collaborate with Sales, Success, and Product teams for seamless experiences.</li>
+<li>Establish best practices and codify insights from customer engagements.</li>
+</ul>
+<p><strong>Required Skills</strong></p>
+<ul>
+<li>SaaS product building experience.</li>
+<li>AI/ML interest with ability to understand novel problems and architectural trade-offs.</li>
+<li>Strong cross-functional collaboration capabilities.</li>
+<li>Proficiency in high-level programming languages (JavaScript, Python, Ruby, etc.).</li>
+<li>Ability to prototype and ship quality software quickly.</li>
+<li>REST API expertise.</li>
+<li>Excellent communication across technical and non-technical audiences.</li>
+<li>Willingness to travel and work on-site with customers.</li>
+</ul>
+<p><strong>Benefits</strong> include competitive salary, equity, daily lunch, pension matching (4%), comprehensive health/dental insurance, flexible PTO, parental leave, Cycle-to-Work Scheme, and a standard-issue MacBook.</p>
+`.trim(),
+        location: "London, England",
+        department: "Forward Deployed Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/intercom/jobs/7462098",
+      },
+      {
+        slug: "fin-director-product-analytics",
+        title: "Director, Product Analytics",
+        description: `
+<p>This leadership position guides product analytics in an AI-native B2B SaaS environment, emphasizing strategic influence over traditional experimentation frameworks. Also referred to internally as "Product Data Science Leader, Fin."</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Support leaders in prioritizing Fin's strategic focus areas.</li>
+<li>Analyze ambiguous product questions with structured data-driven insights.</li>
+<li>Identify product performance gaps and intervention opportunities.</li>
+<li>Influence zero-to-one product direction in evolving areas.</li>
+<li>Define engagement depth for product data science initiatives.</li>
+<li>Architect AI-enhanced analytical methodologies while maintaining rigor standards.</li>
+<li>Enhance visibility into product performance and business impact.</li>
+<li>Collaborate across product, engineering, design, research, and sales functions.</li>
+<li>Challenge weak reasoning while building stakeholder trust.</li>
+<li>Design operating models for product data science functions.</li>
+<li>Coach teams and prioritize high-impact analytical work.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Leadership experience navigating complex product landscapes.</li>
+<li>Demonstrated ability shaping organizational strategy.</li>
+<li>Comfort with ambiguity and sound judgment under incomplete information.</li>
+<li>Senior stakeholder influence capabilities.</li>
+<li>Strong analytical and technical competencies.</li>
+<li>A clear viewpoint on AI-native product data science practices.</li>
+<li>Experience evolving team composition and capabilities.</li>
+<li>Discernment regarding data scientist specialization needs.</li>
+<li>Judgment on responsible AI application in analytics.</li>
+<li>Cross-functional translation and stakeholder management skills.</li>
+<li>Strong credibility and communication presence.</li>
+<li>Operating model design or evolution experience.</li>
+<li>Ideally, AI-native or fast-moving SaaS background.</li>
+</ul>
+<p><strong>Benefits</strong> include competitive salary, equity, pension matching up to 4%, health/dental insurance, flexible PTO, parental leave, and Cycle-to-Work Scheme.</p>
+`.trim(),
+        location: "Berlin, Germany / Dublin, Ireland / London, England / EMEA Remote",
+        department: "Product Data Science",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/intercom/jobs/8030046",
+      },
+      {
+        slug: "fin-senior-data-scientist-ai-tooling",
+        title: "Senior Data Scientist - AI Tooling",
+        description: `
+<p>Fin is an AI Customer Agent company enabling businesses to deliver customer support across service, sales, and ecommerce channels using proprietary AI models. The Research, Analytics & Data Science (RAD) team transforms insights into action through customer, product, and business analytics. This role focuses on building LLM and agent-powered workflows that automate GTM processes, moving beyond static dashboards to actionable tools.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Design, evaluate, and ship AI-powered internal tools for GTM use cases including account research, next-best-action recommendations, renewal propensity modeling, and post-call summarization.</li>
+<li>Own the full lifecycle from problem definition through production deployment.</li>
+<li>Rapidly prototype with users, then productionize for iteration.</li>
+<li>Define success through usage metrics and measurable business impact.</li>
+<li>Document playbooks and enable team adoption.</li>
+</ul>
+<p><strong>Required Skills</strong></p>
+<ul>
+<li>At least 3 years of Product or GTM analytics experience.</li>
+<li>Proven GTM data science impact with shipped models/tools affecting conversion, cycle time, or retention.</li>
+<li>LLM/ML application experience with RAG, prompt design, vector search, and evaluations.</li>
+<li>Strong SQL proficiency and Python or R fluency.</li>
+<li>Experience with orchestration tools (DBT, Airflow).</li>
+<li>Excellent communication translating data concepts for non-technical audiences.</li>
+<li>Collaborative product mindset working with Sales and Success teams.</li>
+</ul>
+<p><strong>Benefits</strong> include competitive equity, daily lunch, health/dental insurance, flexible vacation, parental leave, and a standard-issue MacBook.</p>
+`.trim(),
+        location: "Dublin, Ireland / London, England",
+        department: "Research, Analytics & Data Science (RAD)",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/intercom/jobs/7314809",
+      },
+      {
+        slug: "fin-senior-data-scientist-product-analytics",
+        title: "Senior Data Scientist - Product Analytics",
+        description: `
+<p>The Research, Analytics & Data Science (RAD) team uses data to enable evidence-based decision-making, partnering across R&D to help the company understand users, products, and business metrics.</p>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Partner with product teams, identifying important questions and answering them through data analysis.</li>
+<li>Collaborate with product managers, designers, and engineers developing success metrics and measuring outcomes.</li>
+<li>Design and maintain end-to-end data pipelines, working with stakeholders on data collection and refinement.</li>
+<li>Build understanding of customers and products alongside product researchers.</li>
+<li>Influence product roadmap through experimentation and quantitative research.</li>
+<li>Build and automate models and dashboards.</li>
+<li>Communicate findings across the organization.</li>
+<li>Shape RAD foundations and organizational operations.</li>
+</ul>
+<p><strong>Required Skills</strong></p>
+<ul>
+<li>5+ years of data problem-solving experience.</li>
+<li>Excellent SQL skills and statistical/analytical competency.</li>
+<li>Track record delivering actionable insights with minimal supervision.</li>
+<li>Strong technical and non-technical communication abilities.</li>
+<li>Growth mindset with an ownership focus.</li>
+<li>Scientific computing language experience (such as R or Python).</li>
+</ul>
+<p><strong>Bonus Skills</strong></p>
+<ul>
+<li>BI/visualization tools (Tableau, Superset, Looker).</li>
+<li>Data modeling and ETL pipeline experience.</li>
+<li>Product team experience.</li>
+<li>AI tool proficiency for data science workflows.</li>
+</ul>
+`.trim(),
+        location: "London, England",
+        department: "Research, Analytics & Data Science (RAD)",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/intercom/jobs/6317929",
+      },
+    ],
   },
 ];
 
