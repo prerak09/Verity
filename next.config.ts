@@ -17,6 +17,13 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   // Don't advertise the framework/version (audit ISSUE-035).
   poweredByHeader: false,
+  // isomorphic-dompurify pulls in jsdom, which dynamically requires resource
+  // files (e.g. xhr-sync-worker.js) that Vercel's serverless function tracer
+  // drops when the package gets bundled instead of treated as external — the
+  // internship/job detail pages 500 in production (but not `next start`)
+  // because their generateMetadata() calls excerpt() -> jsdom. Marking both
+  // packages external makes Vercel copy them whole instead of tracing them.
+  serverExternalPackages: ["isomorphic-dompurify", "jsdom"],
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
