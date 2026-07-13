@@ -1,4 +1,16 @@
-import { LayoutDashboard, Search, Bookmark, Briefcase, UserCircle, Settings, HelpCircle } from "lucide-react";
+import {
+  LayoutDashboard,
+  Search,
+  Bookmark,
+  Briefcase,
+  UserCircle,
+  Settings,
+  HelpCircle,
+  Building2,
+  GraduationCap,
+  Layers,
+  LayoutGrid,
+} from "lucide-react";
 
 import { PortalShell } from "@/components/shared/PortalShell";
 import { navIcon } from "@/components/shared/Sidebar/nav-icon";
@@ -11,6 +23,10 @@ const SECTIONS: NavSection[] = [
       { href: "/search", icon: navIcon(Search), label: "Search" },
       { href: "/bookmarks", icon: navIcon(Bookmark), label: "Bookmarks" },
       { href: "/applications", icon: navIcon(Briefcase), label: "Applications" },
+      { href: "/companies", icon: navIcon(Building2), label: "Startups" },
+      { href: "/internships", icon: navIcon(GraduationCap), label: "Internships" },
+      { href: "/jobs", icon: navIcon(Layers), label: "Jobs" },
+      { href: "/categories", icon: navIcon(LayoutGrid), label: "Categories" },
     ],
   },
   {
