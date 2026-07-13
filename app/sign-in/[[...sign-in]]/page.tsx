@@ -17,7 +17,7 @@ export default function SignInPage() {
         role: "Growth Manager",
       }}
     >
-      <SignIn appearance={clerkRetroAppearance} />
+      <SignIn appearance={clerkRetroAppearance} fallbackRedirectUrl="/dashboard" />
     </AuthShell>
   );
 }

@@ -17,7 +17,7 @@ export default function SignUpPage() {
         role: "Product Designer",
       }}
     >
-      <SignUp appearance={clerkRetroAppearance} />
+      <SignUp appearance={clerkRetroAppearance} fallbackRedirectUrl="/dashboard" />
     </AuthShell>
   );
 }
