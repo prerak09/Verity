@@ -199,13 +199,15 @@ export function Navbar({
                       {link.label}
                     </Link>
                   ))}
-                  <Link
-                    href={signedIn ? "/dashboard" : "/sign-in"}
-                    className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted"
-                    onClick={() => setMarketingMenuOpen(false)}
-                  >
-                    {signedIn ? "Dashboard" : "Sign in"}
-                  </Link>
+                  {!signedIn && (
+                    <Link
+                      href="/sign-in"
+                      className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted"
+                      onClick={() => setMarketingMenuOpen(false)}
+                    >
+                      Sign in
+                    </Link>
+                  )}
                 </nav>
               </DialogContent>
             </Dialog>

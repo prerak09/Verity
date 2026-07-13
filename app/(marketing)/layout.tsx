@@ -15,10 +15,13 @@ export default async function MarketingLayout({
   children: React.ReactNode;
 }) {
   const user = await getCurrentUser();
+  const navLinks = user
+    ? [...NAV_LINKS, { href: "/dashboard", label: "Dashboard" }]
+    : NAV_LINKS;
 
   return (
     <div className="flex min-h-full flex-col">
-      <Navbar variant="marketing" links={NAV_LINKS} signedIn={Boolean(user)} />
+      <Navbar variant="marketing" links={navLinks} signedIn={Boolean(user)} />
       <main className="flex-1">{children}</main>
       <footer className="border-t-[3px] border-neutral-950 bg-[#EFF3D2]">
         <div className="mx-auto flex max-w-wide flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6">
