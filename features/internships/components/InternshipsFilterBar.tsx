@@ -13,7 +13,8 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/components/lib/utils";
-import type { JobType, RemotePolicy, Season } from "@/types";
+import type { JobType, RemotePolicy } from "@/types";
+import { SEASON_OPTIONS } from "@/config/seasons";
 
 const ALL = "all";
 
@@ -24,13 +25,7 @@ const JOB_TYPES: { value: JobType; label: string }[] = [
   { value: "CONTRACT", label: "Contract" },
 ];
 
-const SEASONS: { value: Season; label: string }[] = [
-  { value: "SUMMER", label: "Summer" },
-  { value: "FALL", label: "Fall" },
-  { value: "SPRING", label: "Spring" },
-  { value: "WINTER", label: "Winter" },
-  { value: "YEAR_ROUND", label: "Year-round" },
-];
+const SEASONS = SEASON_OPTIONS;
 
 const REMOTE_POLICIES: { value: RemotePolicy; label: string }[] = [
   { value: "REMOTE", label: "Remote" },
@@ -90,6 +85,20 @@ export function InternshipsFilterBar({
   const jobType = searchParams.get("jobType") ?? ALL;
   const season = searchParams.get("season") ?? ALL;
   const remotePolicy = searchParams.get("remotePolicy") ?? ALL;
+  const sort = searchParams.get("sort") ?? "recent";
+
+  // Internships can additionally sort by season; jobs cannot.
+  const sortOptions =
+    variant === "internship"
+      ? [
+          { value: "recent", label: "Most recent" },
+          { value: "title", label: "Title (A–Z)" },
+          { value: "season", label: "By season" },
+        ]
+      : [
+          { value: "recent", label: "Most recent" },
+          { value: "title", label: "Title (A–Z)" },
+        ];
 
   return (
     <div
@@ -207,6 +216,23 @@ export function InternshipsFilterBar({
           </SelectContent>
         </Select>
       )}
+
+      <Select value={sort} onValueChange={(v) => updateParam("sort", v)}>
+        <SelectTrigger className={selectTriggerClass} aria-label="Sort">
+          <SelectValue>
+            {(v: string) =>
+              `Sort: ${sortOptions.find((s) => s.value === v)?.label ?? "Most recent"}`
+            }
+          </SelectValue>
+        </SelectTrigger>
+        <SelectContent>
+          {sortOptions.map((s) => (
+            <SelectItem key={s.value} value={s.value}>
+              {s.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
     </div>
   );
 }

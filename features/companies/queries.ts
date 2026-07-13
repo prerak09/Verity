@@ -322,3 +322,34 @@ export async function listCategories(): Promise<TaxonomyRef[]> {
   const rows = await db.category.findMany({ orderBy: { name: "asc" } });
   return rows.map((c) => ({ id: c.id, slug: c.slug, name: c.name }));
 }
+
+export interface CategoryWithCount extends TaxonomyRef {
+  companyCount: number;
+}
+
+/** Categories with a live count of verified, non-deleted companies in each. */
+export async function listCategoriesWithCounts(): Promise<CategoryWithCount[]> {
+  const rows = await db.category.findMany({
+    orderBy: { name: "asc" },
+    select: {
+      id: true,
+      slug: true,
+      name: true,
+      _count: {
+        select: {
+          companies: {
+            where: {
+              company: { deletedAt: null, verificationStatus: "VERIFIED" },
+            },
+          },
+        },
+      },
+    },
+  });
+  return rows.map((c) => ({
+    id: c.id,
+    slug: c.slug,
+    name: c.name,
+    companyCount: c._count.companies,
+  }));
+}

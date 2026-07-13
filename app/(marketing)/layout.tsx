@@ -22,12 +22,12 @@ export default async function MarketingLayout({
   return (
     <div className="flex min-h-full flex-col">
       <Navbar variant="marketing" links={navLinks} signedIn={Boolean(user)} />
-      <main className="flex-1">{children}</main>
+      <main id="main-content" className="flex-1">{children}</main>
       <footer className="border-t-[3px] border-neutral-950 bg-[#EFF3D2]">
         <div className="mx-auto flex max-w-wide flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6">
           <Logo />
           <p className="font-mono text-sm text-neutral-700">
-            &copy; {new Date().getFullYear()} Verity. Verified startups, real internships.
+            &copy; {new Date().getFullYear()} Verity. Verified startups, real opportunities.
           </p>
         </div>
       </footer>

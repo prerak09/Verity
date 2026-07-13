@@ -3,6 +3,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "next-themes";
 import { Space_Grotesk, JetBrains_Mono, Silkscreen } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
 // Retro verity.exe theme: Space Grotesk = chunky display headings,
@@ -26,12 +27,29 @@ const pixelFace = Silkscreen({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl()),
   title: {
     default: "Verity — Career Intelligence Platform",
     template: "%s · Verity",
   },
   description:
     "Verified companies, real internships. Verity is the trust layer for student career discovery.",
+  applicationName: "Verity",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: "Verity",
+    title: "Verity — Verified startups, real internships",
+    description:
+      "Discover manually verified startups and their open internships and jobs. Verity is the trust layer for student career discovery.",
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Verity — Verified startups, real internships",
+    description:
+      "Discover manually verified startups and their open internships and jobs.",
+  },
 };
 
 export default function RootLayout({
@@ -50,6 +68,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-[3px] focus:border-[3px] focus:border-neutral-950 focus:bg-lime focus:px-4 focus:py-2 focus:font-mono focus:text-sm focus:font-bold focus:text-neutral-950"
+        >
+          Skip to content
+        </a>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

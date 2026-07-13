@@ -12,6 +12,8 @@ import { EmptyState } from "@/components/shared/EmptyState";
 import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
 import { ProfileTabNav } from "@/components/shared/ProfileTabNav";
 import { getCompanyBySlug } from "@/features/companies/queries";
+import { getCurrentUser } from "@/lib/auth";
+import { getBookmarkedIds } from "@/features/bookmarks/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -52,6 +54,17 @@ export default async function CompanyProfilePage({
   const { slug } = await params;
   const company = await getCompanyBySlug(slug);
   if (!company) notFound();
+
+  let initialBookmarked = false;
+  try {
+    const user = await getCurrentUser();
+    if (user) {
+      const bookmarkedIds = await getBookmarkedIds(user.id, "COMPANY");
+      initialBookmarked = bookmarkedIds.has(company.id);
+    }
+  } catch {
+    // Anonymous or error → not bookmarked.
+  }
 
   const founders = company.founders.filter((f) => !f.isHiringManager);
   const hiringManagers = company.founders.filter((f) => f.isHiringManager);
@@ -113,7 +126,7 @@ export default async function CompanyProfilePage({
           <BookmarkButton
             targetType="COMPANY"
             targetId={company.id}
-            initialBookmarked={false}
+            initialBookmarked={initialBookmarked}
           />
           {company.websiteUrl && (
             <Link

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Bell } from "lucide-react";
 
@@ -8,7 +8,6 @@ import {
   markNotificationRead,
   markAllNotificationsRead,
 } from "@/features/notifications/actions";
-import { MOCK_NOTIFICATIONS } from "@/components/lib/mocks";
 import type { NotificationDTO } from "@/types";
 import { Button } from "@/components/ui/button";
 import {
@@ -74,8 +73,32 @@ function NotificationRow({
 
 export function NotificationBell() {
   const [open, setOpen] = useState(false);
-  const [notifications, setNotifications] = useState(MOCK_NOTIFICATIONS);
+  const [notifications, setNotifications] = useState<NotificationDTO[]>([]);
+  const [loaded, setLoaded] = useState(false);
   const unreadCount = notifications.filter((n) => !n.read).length;
+
+  // Fetch the signed-in user's real notifications once, on mount. A 401 (not
+  // signed in) or any error simply leaves the list empty — no fake badge.
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch("/api/notifications");
+        if (!res.ok) return;
+        const json = (await res.json()) as { data?: NotificationDTO[] };
+        if (!cancelled) setNotifications(json.data ?? []);
+      } catch {
+        // Leave empty.
+      } finally {
+        if (!cancelled) setLoaded(true);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  void loaded;
 
   async function handleRead(id: string) {
     setNotifications((prev) => prev.map((n) => (n.id === id ? { ...n, read: true } : n)));

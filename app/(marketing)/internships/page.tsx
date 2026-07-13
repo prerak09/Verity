@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { GraduationCap, Bell } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
@@ -28,7 +28,12 @@ interface InternshipsSearchParams {
   department?: string;
   season?: string;
   remotePolicy?: string;
+  sort?: string;
   page?: string;
+}
+
+function parseSort(v: string | undefined): "recent" | "title" | "season" {
+  return v === "title" || v === "season" ? v : "recent";
 }
 
 export default async function InternshipsListPage({
@@ -49,15 +54,15 @@ export default async function InternshipsListPage({
         page,
         pageSize: PAGE_SIZE,
         kind: "internship",
-        sort: "recent",
+        sort: parseSort(params.sort),
         q: params.q || undefined,
         location: params.location || undefined,
         department: params.department || undefined,
         season: (params.season as Season) || undefined,
         remotePolicy: (params.remotePolicy as RemotePolicy) || undefined,
       }),
-      listInternshipLocations(),
-      listInternshipDepartments(),
+      listInternshipLocations("internship"),
+      listInternshipDepartments("internship"),
     ]);
     internships = result.data;
     meta = result.meta;
@@ -89,8 +94,8 @@ export default async function InternshipsListPage({
         <EmptyState
           icon={GraduationCap}
           title="No internships available right now"
-          description="We don't have any open internships at the moment. Please check back later — new opportunities are added every day!"
-          action={{ label: "Get notified when new internships are posted", href: "/sign-up", icon: Bell }}
+          description="No open internships match right now. Explore verified startups, or check back soon — new roles are added regularly."
+          action={{ label: "Browse startups", href: "/companies" }}
           className="mt-8"
         />
       ) : (

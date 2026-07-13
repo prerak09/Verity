@@ -1,17 +1,10 @@
 import Link from "next/link";
 
-import type { InternshipCard as InternshipCardDTO, Season } from "@/types";
+import type { InternshipCard as InternshipCardDTO } from "@/types";
 import { RemoteChip } from "@/components/shared/RemoteChip";
 import { CompanyLogo } from "@/components/shared/CompanyLogo";
+import { SEASON_LABEL } from "@/config/seasons";
 import { cn } from "@/components/lib/utils";
-
-const SEASON_LABEL: Record<Season, string> = {
-  SUMMER: "Summer",
-  FALL: "Fall",
-  SPRING: "Spring",
-  WINTER: "Winter",
-  YEAR_ROUND: "Year-round",
-};
 
 /**
  * Same interactive-card language as CompanyCard (doc §12.2). `hideCompany`

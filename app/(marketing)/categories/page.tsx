@@ -13,12 +13,14 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import { MOCK_CATEGORIES, MOCK_COMPANY_DETAILS } from "@/components/lib/mocks";
+import { listCategoriesWithCounts, type CategoryWithCount } from "@/features/companies/queries";
 
 export const metadata: Metadata = {
   title: "Categories",
   description: "Browse verified companies by category.",
 };
+
+export const dynamic = "force-dynamic";
 
 // Small, deliberate icon set per category (doc's card language, not a
 // data field — categories in the DTO are just { id, slug, name }).
@@ -33,13 +35,12 @@ const CATEGORY_ICONS: Record<string, LucideIcon> = {
   security: ShieldCheck,
 };
 
-export default function CategoriesPage() {
-  const companies = Object.values(MOCK_COMPANY_DETAILS);
-  const counts = new Map<string, number>();
-  for (const company of companies) {
-    for (const category of company.categories) {
-      counts.set(category.slug, (counts.get(category.slug) ?? 0) + 1);
-    }
+export default async function CategoriesPage() {
+  let categories: CategoryWithCount[] = [];
+  try {
+    categories = await listCategoriesWithCounts();
+  } catch {
+    // DB unreachable — render an empty grid rather than a hard 500.
   }
 
   return (
@@ -53,9 +54,9 @@ export default function CategoriesPage() {
       </div>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {MOCK_CATEGORIES.map((category) => {
+        {categories.map((category) => {
           const Icon = CATEGORY_ICONS[category.slug] ?? Tag;
-          const count = counts.get(category.slug) ?? 0;
+          const count = category.companyCount;
           return (
             <Link
               key={category.id}
