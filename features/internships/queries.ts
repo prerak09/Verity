@@ -121,10 +121,24 @@ const LISTED_WHERE: Prisma.InternshipWhereInput = {
   company: { deletedAt: null, verificationStatus: "VERIFIED" },
 };
 
-/** Distinct locations across open listings, for the jobs-page filter dropdown. */
-export async function listInternshipLocations(): Promise<string[]> {
+/** The jobType predicate for a given listing kind (internship vs job). */
+function kindWhere(kind?: "internship" | "job"): Prisma.InternshipWhereInput {
+  if (kind === "internship") {
+    return { OR: [{ jobType: "INTERNSHIP" }, { jobType: null }] };
+  }
+  if (kind === "job") {
+    return { jobType: { in: ["FULL_TIME", "PART_TIME", "CONTRACT"] } };
+  }
+  return {};
+}
+
+/** Distinct locations across open listings, scoped to a kind so the /internships
+ *  and /jobs filter dropdowns only offer locations that actually have results. */
+export async function listInternshipLocations(
+  kind?: "internship" | "job",
+): Promise<string[]> {
   const rows = await db.internship.findMany({
-    where: { ...LISTED_WHERE, location: { not: null } },
+    where: { ...LISTED_WHERE, ...kindWhere(kind), location: { not: null } },
     select: { location: true },
     distinct: ["location"],
     orderBy: { location: "asc" },
@@ -132,10 +146,12 @@ export async function listInternshipLocations(): Promise<string[]> {
   return rows.map((r) => r.location).filter((l): l is string => Boolean(l));
 }
 
-/** Distinct departments across open listings, for the jobs-page filter dropdown. */
-export async function listInternshipDepartments(): Promise<string[]> {
+/** Distinct departments across open listings, scoped to a kind (see above). */
+export async function listInternshipDepartments(
+  kind?: "internship" | "job",
+): Promise<string[]> {
   const rows = await db.internship.findMany({
-    where: { ...LISTED_WHERE, department: { not: null } },
+    where: { ...LISTED_WHERE, ...kindWhere(kind), department: { not: null } },
     select: { department: true },
     distinct: ["department"],
     orderBy: { department: "asc" },

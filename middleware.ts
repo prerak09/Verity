@@ -23,7 +23,8 @@ const isPublicRoute = createRouteMatcher([
   "/", // landing page
   "/team", // about/team page
   "/companies(.*)", // directory + public company profiles
-  "/internships(.*)", // job/internship list + detail
+  "/internships(.*)", // internship list + detail
+  "/jobs(.*)", // full-time/part-time/contract job list
   "/categories(.*)", // category browse
   "/search(.*)", // search results
   "/sign-in(.*)",
@@ -39,6 +40,7 @@ const isPublicRoute = createRouteMatcher([
   "/api/bookmarks(.*)",
   "/api/applications(.*)",
   "/api/students(.*)",
+  "/api/notifications(.*)",
   "/api/admin(.*)", // self-guards via assertCan → 403 JSON (not an HTML redirect)
   "/api/dev(.*)", // self-guards via NODE_ENV check; never active in production
 ]);
@@ -68,15 +70,30 @@ function roleFromClaims(sessionClaims: unknown): PlatformRole | null {
 // without real Clerk credentials. MOCK_AUTH lets local dev skip Clerk
 // entirely and pair with lib/auth.ts's mock CurrentUser. Gated on NODE_ENV so
 // a stray env var can never disable auth in a deployed environment.
-// DEMO_MODE explicitly opts a deployed preview into the mock bypass (no Clerk
-// needed) so the retro UI is publicly browsable without credentials. Normal
-// prod deploys leave it unset and require real Clerk auth.
+// DEMO_MODE explicitly opts a deployed *preview* into the mock bypass (no Clerk
+// needed) so the retro UI is publicly browsable without credentials. It is hard
+// gated against the production deployment: even if the env var is set on prod,
+// VERCEL_ENV === "production" keeps real Clerk auth on. NODE_ENV alone is
+// insufficient because Vercel preview builds also report NODE_ENV=production.
+const IS_PROD_DEPLOY =
+  process.env.VERCEL_ENV === "production" ||
+  (process.env.NODE_ENV === "production" && !process.env.VERCEL_ENV);
 const MOCK_AUTH =
-  (process.env.MOCK_AUTH === "true" && process.env.NODE_ENV !== "production") ||
-  process.env.NEXT_PUBLIC_DEMO_MODE === "true";
+  !IS_PROD_DEPLOY &&
+  (process.env.MOCK_AUTH === "true" ||
+    process.env.NEXT_PUBLIC_DEMO_MODE === "true");
 
 const withClerk = clerkMiddleware(async (auth, req) => {
   if (isPublicRoute(req)) return NextResponse.next();
+
+  // Only the known portal prefixes are gated. Any other unmatched path (a typo,
+  // a stale link, a removed route) is NOT force-redirected to sign-in — we let
+  // it fall through so Next can render the branded 404 with a proper status,
+  // instead of bouncing anonymous users into an auth loop toward a page that
+  // doesn't exist.
+  const isProtected =
+    isStudentRoute(req) || isCompanyRoute(req) || isAdminRoute(req);
+  if (!isProtected) return NextResponse.next();
 
   const { userId, sessionClaims, redirectToSignIn } = await auth();
 

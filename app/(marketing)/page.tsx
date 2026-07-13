@@ -9,12 +9,20 @@ import {
   Globe,
   Briefcase,
   Users,
-  Star,
+  BadgeCheck,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { WindowChrome } from "@/components/shared/WindowChrome";
 import { StatTile } from "@/components/shared/StatTile";
+import { getPlatformStats, type PlatformStats } from "@/features/stats/queries";
+
+/** "1,240" for small numbers; "12K+" once it's worth rounding. Never inflates. */
+function formatCount(n: number): string {
+  if (n >= 1000) return `${Math.floor(n / 1000)}K+`;
+  if (n >= 100) return `${Math.floor(n / 100) * 100}+`;
+  return String(n);
+}
 
 const FEATURES = [
   {
@@ -64,16 +72,30 @@ const STEPS = [
   },
 ];
 
-const TRUSTED = ["Google for Startups", "Y Combinator", "techstars_", "ANTLER", "Startmate"];
+function footerStats(stats: PlatformStats) {
+  return [
+    { icon: Globe, value: formatCount(stats.verifiedCompanies), label: "Verified Startups" },
+    { icon: Briefcase, value: formatCount(stats.openInternships), label: "Open Roles" },
+    { icon: Users, value: formatCount(stats.totalStudents), label: "Students" },
+    { icon: BadgeCheck, value: "100%", label: "Human-Verified" },
+  ];
+}
 
-const FOOTER_STATS = [
-  { icon: Globe, value: "12K+", label: "Startups Tracked" },
-  { icon: Briefcase, value: "2K+", label: "Open Internships" },
-  { icon: Users, value: "85+", label: "Countries Covered" },
-  { icon: Star, value: "4.8/5", label: "Loved by Users" },
-];
+export const revalidate = 300;
 
-export default function LandingPage() {
+export default async function LandingPage() {
+  let stats: PlatformStats = {
+    verifiedCompanies: 0,
+    openInternships: 0,
+    totalStudents: 0,
+    countries: 0,
+  };
+  try {
+    stats = await getPlatformStats();
+  } catch {
+    // DB unreachable — hero renders zeros rather than a hard 500.
+  }
+
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────── */}
@@ -113,9 +135,9 @@ export default function LandingPage() {
               ))}
             </div>
             <p className="font-mono text-sm font-medium text-neutral-800">
-              Join 48K+ users
+              Every company
               <br />
-              worldwide
+              manually verified
             </p>
           </div>
         </div>
@@ -133,32 +155,18 @@ export default function LandingPage() {
               </span>
             </div>
             <div className="grid gap-3">
-              <StatTile value="12K+" label="Startups Tracked" color="pink" />
-              <StatTile value="2K+" label="Open Internships" color="mint" />
-              <StatTile value="85+" label="Countries Covered" color="yellow" />
+              <StatTile value={formatCount(stats.verifiedCompanies)} label="Verified Startups" color="pink" />
+              <StatTile value={formatCount(stats.openInternships)} label="Open Roles" color="mint" />
+              <StatTile value={formatCount(stats.countries)} label="Countries" color="yellow" />
               <StatTile value="100%" label="Verified Data" color="lavender" />
             </div>
           </div>
         </WindowChrome>
       </section>
 
-      {/* ── Trusted by ───────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-wide px-4 pb-6 sm:px-6">
-        <div className="flex flex-wrap items-center gap-x-8 gap-y-4 rounded-[4px] border-[3px] border-neutral-950 bg-[#EBEFD0] px-6 py-5">
-          <span className="retro-eyebrow bg-card">Trusted by</span>
-          {TRUSTED.map((name) => (
-            <span
-              key={name}
-              className="font-display text-lg font-bold text-neutral-900"
-            >
-              {name}
-            </span>
-          ))}
-        </div>
-      </section>
-
       {/* ── Feature cards ────────────────────────────────────────────── */}
       <section className="mx-auto max-w-wide px-4 py-14 sm:px-6">
+        <h2 className="sr-only">What Verity offers</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES.map(({ icon: Icon, tile, title, body }) => (
             <div key={title} className="retro-card retro-hover p-6">
@@ -211,7 +219,7 @@ export default function LandingPage() {
       {/* ── Footer stat bar ──────────────────────────────────────────── */}
       <section className="mx-auto max-w-wide px-4 pb-16 sm:px-6">
         <div className="grid gap-4 rounded-[4px] border-[3px] border-neutral-950 bg-tile-lavender p-5 [box-shadow:6px_6px_0_0_var(--color-neutral-950)] sm:grid-cols-2 lg:grid-cols-4">
-          {FOOTER_STATS.map(({ icon: Icon, value, label }) => (
+          {footerStats(stats).map(({ icon: Icon, value, label }) => (
             <div key={label} className="flex items-center gap-3">
               <span className="inline-flex size-11 items-center justify-center rounded-[3px] border-[3px] border-neutral-950 bg-card">
                 <Icon className="size-5 text-neutral-950" strokeWidth={2} aria-hidden />

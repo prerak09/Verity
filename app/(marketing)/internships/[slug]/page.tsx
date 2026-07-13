@@ -9,6 +9,11 @@ import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
 import { AddToTrackerButton } from "@/features/applications/components/AddToTrackerButton";
 import { ApplyButton } from "@/features/internships/components/ApplyButton";
 import { getInternshipBySlug } from "@/features/internships/queries";
+import { getCurrentUser } from "@/lib/auth";
+import { getBookmarkedIds } from "@/features/bookmarks/queries";
+import { listApplications } from "@/features/applications/queries";
+import { SEASON_LABEL } from "@/config/seasons";
+import { excerpt } from "@/lib/sanitize";
 
 export const dynamic = "force-dynamic";
 
@@ -22,7 +27,7 @@ export async function generateMetadata({
   if (!internship) return {};
   return {
     title: `${internship.title} at ${internship.companyName}`,
-    description: internship.description.replace(/<[^>]+>/g, "").slice(0, 160),
+    description: excerpt(internship.description, 160),
   };
 }
 
@@ -32,13 +37,6 @@ const STATUS_LABEL: Record<string, string> = {
   ARCHIVED: "Closed",
 };
 
-const SEASON_LABEL: Record<string, string> = {
-  SUMMER: "Summer",
-  FALL: "Fall",
-  SPRING: "Spring",
-  WINTER: "Winter",
-  YEAR_ROUND: "Year-round",
-};
 
 export default async function InternshipDetailPage({
   params,
@@ -48,6 +46,26 @@ export default async function InternshipDetailPage({
   const { slug } = await params;
   const internship = await getInternshipBySlug(slug);
   if (!internship) notFound();
+
+  // Reflect the viewer's real saved/tracked state so the buttons don't reset
+  // to "off" on revisit (audit ISSUE-015). Anonymous or on error → false.
+  let initialBookmarked = false;
+  let initialTracked = false;
+  try {
+    const user = await getCurrentUser();
+    if (user) {
+      const [bookmarkedIds, applications] = await Promise.all([
+        getBookmarkedIds(user.id, "INTERNSHIP"),
+        listApplications(user.id),
+      ]);
+      initialBookmarked = bookmarkedIds.has(internship.id);
+      initialTracked = applications.some(
+        (a) => a.internship.id === internship.id,
+      );
+    }
+  } catch {
+    // Fall back to false on any failure.
+  }
 
   return (
     <div className="mx-auto max-w-wide px-4 py-10 sm:px-6">
@@ -67,7 +85,7 @@ export default async function InternshipDetailPage({
             <BookmarkButton
               targetType="INTERNSHIP"
               targetId={internship.id}
-              initialBookmarked={false}
+              initialBookmarked={initialBookmarked}
             />
           </div>
 
@@ -140,7 +158,7 @@ export default async function InternshipDetailPage({
             <ApplyButton applyUrl={internship.applyUrl} />
             <AddToTrackerButton
               internshipId={internship.id}
-              initialTracked={false}
+              initialTracked={initialTracked}
             />
           </div>
         </aside>

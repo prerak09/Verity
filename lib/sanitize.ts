@@ -28,3 +28,36 @@ export function stripTags(input: string | null | undefined): string {
   if (!input) return "";
   return DOMPurify.sanitize(input, { ALLOWED_TAGS: [], ALLOWED_ATTR: [] });
 }
+
+const NAMED_ENTITIES: Record<string, string> = {
+  "&amp;": "&",
+  "&lt;": "<",
+  "&gt;": ">",
+  "&quot;": '"',
+  "&#39;": "'",
+  "&apos;": "'",
+  "&nbsp;": " ",
+};
+
+/**
+ * Plain-text excerpt for meta descriptions / social snippets: strips tags AND
+ * decodes the common HTML entities left behind (&amp;, &nbsp;, …) so the text
+ * never leaks raw entity codes (audit ISSUE-031), then collapses whitespace and
+ * truncates to `max` chars on a word boundary.
+ */
+export function excerpt(
+  input: string | null | undefined,
+  max = 160,
+): string {
+  if (!input) return "";
+  let text = stripTags(input);
+  text = text.replace(
+    /&(amp|lt|gt|quot|#39|apos|nbsp);/g,
+    (m) => NAMED_ENTITIES[m] ?? m,
+  );
+  text = text.replace(/\s+/g, " ").trim();
+  if (text.length <= max) return text;
+  const clipped = text.slice(0, max);
+  const lastSpace = clipped.lastIndexOf(" ");
+  return `${(lastSpace > 40 ? clipped.slice(0, lastSpace) : clipped).trimEnd()}…`;
+}

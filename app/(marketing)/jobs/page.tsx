@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Armchair, Bell } from "lucide-react";
+import { Armchair } from "lucide-react";
 
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
@@ -28,6 +28,7 @@ interface JobsSearchParams {
   department?: string;
   jobType?: string;
   remotePolicy?: string;
+  sort?: string;
   page?: string;
 }
 
@@ -49,15 +50,15 @@ export default async function JobsListPage({
         page,
         pageSize: PAGE_SIZE,
         kind: "job",
-        sort: "recent",
+        sort: params.sort === "title" ? "title" : "recent",
         q: params.q || undefined,
         location: params.location || undefined,
         department: params.department || undefined,
         jobType: (params.jobType as JobType) || undefined,
         remotePolicy: (params.remotePolicy as RemotePolicy) || undefined,
       }),
-      listInternshipLocations(),
-      listInternshipDepartments(),
+      listInternshipLocations("job"),
+      listInternshipDepartments("job"),
     ]);
     internships = result.data;
     meta = result.meta;
@@ -89,8 +90,8 @@ export default async function JobsListPage({
         <EmptyState
           icon={Armchair}
           title="No jobs available right now"
-          description="We don't have any open positions at the moment. Please check back later — new opportunities are added every day!"
-          action={{ label: "Get notified when new jobs are posted", href: "/sign-up", icon: Bell }}
+          description="No open positions match right now. Explore verified startups, or check back soon — new roles are added regularly."
+          action={{ label: "Browse startups", href: "/companies" }}
           className="mt-8"
         />
       ) : (

@@ -6,9 +6,8 @@ import { CompanyCard } from "@/components/shared/CompanyCard";
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { ProfileCompletionBanner } from "@/components/shared/ProfileCompletionBanner";
-import { MOCK_CATEGORIES } from "@/components/lib/mocks";
 import { getCurrentUser } from "@/lib/auth";
-import { listCompanies, getOpenInternships } from "@/features/companies/queries";
+import { listCompanies, getOpenInternships, listCategories } from "@/features/companies/queries";
 import { listInternships } from "@/features/internships/queries";
 import { getTrendingCompanies } from "@/features/trending/queries";
 import { getRecommendedCompanies } from "@/features/students/recommendations";
@@ -21,6 +20,7 @@ import type {
   InternshipCard as InternshipCardDTO,
   BookmarkDTO,
   ApplicationDTO,
+  TaxonomyRef,
 } from "@/types";
 
 const STATUS_ORDER: ApplicationStatus[] = [
@@ -64,18 +64,21 @@ export default async function StudentDashboardPage() {
   let latestInternships: InternshipCardDTO[] = [];
   let bookmarkPreview: BookmarkDTO[] = [];
   let applications: ApplicationDTO[] = [];
+  let categories: TaxonomyRef[] = [];
   let profilePercent = 100;
 
   try {
     const user = await getCurrentUser();
-    const [trend, recent, latest] = await Promise.all([
+    const [trend, recent, latest, cats] = await Promise.all([
       getTrendingCompanies(4),
       listCompanies({ page: 1, pageSize: 4, sort: "recent" }),
       listInternships({ page: 1, pageSize: 4, sort: "recent" }),
+      listCategories(),
     ]);
     trending = trend;
     recentlyAdded = recent.data;
     latestInternships = latest.data;
+    categories = cats;
 
     if (user) {
       const [recs, bms, apps, profile] = await Promise.all([
@@ -128,19 +131,21 @@ export default async function StudentDashboardPage() {
         </p>
       </div>
 
-      <DashboardSection title="Categories" viewAllHref="/categories">
-        <div className="flex gap-2 overflow-x-auto pb-2">
-          {MOCK_CATEGORIES.map((category) => (
-            <Link
-              key={category.id}
-              href={`/search?category=${category.slug}`}
-              className="shrink-0 rounded-sm border-[3px] border-neutral-950 bg-muted px-3 py-1.5 text-body-sm font-medium text-foreground hover:border-brand-600"
-            >
-              {category.name}
-            </Link>
-          ))}
-        </div>
-      </DashboardSection>
+      {categories.length > 0 && (
+        <DashboardSection title="Categories" viewAllHref="/categories">
+          <div className="flex gap-2 overflow-x-auto pb-2">
+            {categories.map((category) => (
+              <Link
+                key={category.id}
+                href={`/search?category=${category.slug}`}
+                className="shrink-0 rounded-sm border-[3px] border-neutral-950 bg-muted px-3 py-1.5 text-body-sm font-medium text-foreground hover:border-brand-600"
+              >
+                {category.name}
+              </Link>
+            ))}
+          </div>
+        </DashboardSection>
+      )}
 
       <DashboardSection title="Trending companies" viewAllHref="/search?sort=trending">
         <HScroll>
@@ -205,7 +210,7 @@ export default async function StudentDashboardPage() {
       </DashboardSection>
 
       <DashboardSection title="Application tracker" viewAllHref="/applications">
-        <div className="grid grid-cols-5 gap-2">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
           {tracker.map(({ status, count }) => (
             <Link
               key={status}
