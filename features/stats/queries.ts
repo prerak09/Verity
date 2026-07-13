@@ -49,3 +49,36 @@ export function getPlatformStats(): Promise<PlatformStats> {
     revalidate: 300,
   })();
 }
+
+export interface FeaturedLogo {
+  slug: string;
+  name: string;
+  logoUrl: string;
+}
+
+async function getFeaturedLogosUncached(limit: number): Promise<FeaturedLogo[]> {
+  const rows = await db.company.findMany({
+    where: {
+      deletedAt: null,
+      verificationStatus: "VERIFIED",
+      logoUrl: { not: null },
+    },
+    // Featured first, then the freshest — keeps the strip lively without a
+    // random shuffle that would bust the cache every request.
+    orderBy: [{ isFeatured: "desc" }, { updatedAt: "desc" }],
+    take: limit,
+    select: { slug: true, name: true, logoUrl: true },
+  });
+  return rows
+    .filter((r): r is FeaturedLogo => Boolean(r.logoUrl))
+    .map((r) => ({ slug: r.slug, name: r.name, logoUrl: r.logoUrl }));
+}
+
+/** Verified companies that actually have a logo, for the landing-page strip. */
+export function getFeaturedLogos(limit = 12): Promise<FeaturedLogo[]> {
+  return unstable_cache(
+    () => getFeaturedLogosUncached(limit),
+    ["featured-logos", String(limit)],
+    { tags: ["companies:list"], revalidate: 300 },
+  )();
+}

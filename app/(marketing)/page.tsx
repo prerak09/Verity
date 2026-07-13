@@ -1,21 +1,29 @@
 import Link from "next/link";
 import {
   Search,
-  Zap,
-  Mail,
+  BadgeCheck,
   Bookmark,
   ArrowRight,
   Play,
-  Globe,
-  Briefcase,
   Users,
-  BadgeCheck,
+  Mail,
+  Building2,
+  GraduationCap,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { WindowChrome } from "@/components/shared/WindowChrome";
 import { StatTile } from "@/components/shared/StatTile";
-import { getPlatformStats, type PlatformStats } from "@/features/stats/queries";
+import { InternshipCard } from "@/components/shared/InternshipCard";
+import { CompanyLogo } from "@/components/shared/CompanyLogo";
+import { listInternships } from "@/features/internships/queries";
+import {
+  getPlatformStats,
+  getFeaturedLogos,
+  type PlatformStats,
+  type FeaturedLogo,
+} from "@/features/stats/queries";
+import type { InternshipCard as InternshipCardDTO } from "@/types";
 
 /** "1,240" for small numbers; "12K+" once it's worth rounding. Never inflates. */
 function formatCount(n: number): string {
@@ -26,28 +34,22 @@ function formatCount(n: number): string {
 
 const FEATURES = [
   {
-    icon: Search,
+    icon: BadgeCheck,
     tile: "bg-tile-lavender",
-    title: "Verified Data",
-    body: "We verify every detail so you can trust what you see.",
+    title: "Manually verified",
+    body: "Every company is checked by a human before it appears — no scraped listings, no ghost roles.",
   },
   {
-    icon: Zap,
+    icon: Search,
     tile: "bg-tile-yellow",
-    title: "Live Insights",
-    body: "Stay updated with the latest hiring signals and company news.",
-  },
-  {
-    icon: Mail,
-    tile: "bg-tile-pink",
-    title: "Smart Outreach",
-    body: "Personalized emails that help you stand out and get replies.",
+    title: "Real open roles",
+    body: "Internships and jobs pulled straight from verified startups, split cleanly by season and type.",
   },
   {
     icon: Bookmark,
     tile: "bg-tile-lime",
-    title: "Track Everything",
-    body: "Save, organize, and track your applications in one place.",
+    title: "Track it all",
+    body: "Bookmark companies, save roles, and follow every application from saved to offer in one place.",
   },
 ];
 
@@ -56,30 +58,21 @@ const STEPS = [
     n: "1",
     icon: Search,
     title: "Discover",
-    body: "Search and filter startups using 20+ smart filters to find the right ones.",
+    body: "Browse verified startups and filter open roles by category, season, and remote policy.",
   },
   {
     n: "2",
     icon: Users,
     title: "Verify",
-    body: "We collect and verify company, founder, and hiring information.",
+    body: "We confirm every company, founder, and role so you never chase a listing that isn't real.",
   },
   {
     n: "3",
     icon: Mail,
-    title: "Connect",
-    body: "Get personalized email templates and build meaningful connections.",
+    title: "Apply",
+    body: "Apply on the company's own site and track where each application stands from your dashboard.",
   },
 ];
-
-function footerStats(stats: PlatformStats) {
-  return [
-    { icon: Globe, value: formatCount(stats.verifiedCompanies), label: "Verified Startups" },
-    { icon: Briefcase, value: formatCount(stats.openInternships), label: "Open Roles" },
-    { icon: Users, value: formatCount(stats.totalStudents), label: "Students" },
-    { icon: BadgeCheck, value: "100%", label: "Human-Verified" },
-  ];
-}
 
 export const revalidate = 300;
 
@@ -90,19 +83,49 @@ export default async function LandingPage() {
     totalStudents: 0,
     countries: 0,
   };
+  let logos: FeaturedLogo[] = [];
+  let latestRoles: InternshipCardDTO[] = [];
+
   try {
-    stats = await getPlatformStats();
+    const [s, l, roles] = await Promise.all([
+      getPlatformStats(),
+      getFeaturedLogos(12),
+      // Over-fetch, then keep at most one role per company so the strip shows a
+      // spread of startups instead of four listings from one bulk importer.
+      listInternships({ page: 1, pageSize: 24, sort: "recent" }),
+    ]);
+    stats = s;
+    logos = l;
+
+    const seen = new Set<string>();
+    for (const role of roles.data) {
+      if (seen.has(role.companyId)) continue;
+      seen.add(role.companyId);
+      latestRoles.push(role);
+      if (latestRoles.length === 4) break;
+    }
+    // If fewer than 4 distinct companies exist, backfill to keep the row full.
+    if (latestRoles.length < 4) {
+      for (const role of roles.data) {
+        if (latestRoles.some((r) => r.id === role.id)) continue;
+        latestRoles.push(role);
+        if (latestRoles.length === 4) break;
+      }
+    }
   } catch {
-    // DB unreachable — hero renders zeros rather than a hard 500.
+    // DB unreachable — hero renders with zeros and the thin sections hide below.
   }
+
+  const showLogos = logos.length >= 6;
+  const showRoles = latestRoles.length >= 3;
 
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="mx-auto grid max-w-wide items-center gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_1fr] lg:py-20">
+      <section className="mx-auto grid max-w-wide items-center gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
         <div>
           <span className="retro-eyebrow">Verified Startup Intelligence</span>
-          <h1 className="mt-6 font-display text-6xl font-bold leading-[0.95] tracking-tight text-neutral-950 sm:text-7xl">
+          <h1 className="mt-6 font-display text-5xl font-bold leading-[0.98] tracking-tight text-neutral-950 sm:text-6xl">
             Discover.
             <br />
             Verify.
@@ -112,37 +135,39 @@ export default async function LandingPage() {
             </span>
           </h1>
           <p className="mt-7 max-w-md font-mono text-[15px] leading-relaxed text-neutral-700">
-            Verity helps users discover verified startups, explore open roles,
-            and connect with the right people to grow their careers.
+            Verity is the trust layer for startup careers — discover manually
+            verified startups, explore their real open internships and jobs, and
+            track every application in one place.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button size="lg" render={<Link href="/companies" />}>
-              Explore Startups <ArrowRight className="size-4" />
+              Explore startups <ArrowRight className="size-4" />
             </Button>
-            <Button variant="outline" size="lg" render={<Link href="/sign-up" />}>
-              See how it works <Play className="size-3.5" />
+            <Button
+              variant="outline"
+              size="lg"
+              render={<Link href="/internships" />}
+            >
+              Browse internships <Play className="size-3.5" />
             </Button>
           </div>
-          <div className="mt-8 flex items-center gap-3">
-            <div className="flex -space-x-2">
-              {["#F9C6D3", "#B9A9F5", "#FCE38A", "#A9C7F5", "#C4F542"].map((c) => (
-                <span
-                  key={c}
-                  className="inline-block size-9 rounded-[3px] border-[3px] border-neutral-950"
-                  style={{ background: c }}
-                  aria-hidden
-                />
-              ))}
-            </div>
-            <p className="font-mono text-sm font-medium text-neutral-800">
-              Every company
-              <br />
-              manually verified
-            </p>
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-sm text-neutral-700">
+            <span className="inline-flex items-center gap-1.5">
+              <BadgeCheck className="size-4 text-brand-700" strokeWidth={2.25} aria-hidden />
+              100% human-verified
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Building2 className="size-4 text-brand-700" strokeWidth={2.25} aria-hidden />
+              {formatCount(stats.verifiedCompanies)} startups
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <GraduationCap className="size-4 text-brand-700" strokeWidth={2.25} aria-hidden />
+              {formatCount(stats.openInternships)} open roles
+            </span>
           </div>
         </div>
 
-        {/* verity.exe window with pixel city + stat tiles */}
+        {/* verity.exe window with pixel city + two real stat tiles */}
         <WindowChrome title="verity.exe" bodyClassName="p-4">
           <div className="grid gap-4 sm:grid-cols-[1.3fr_1fr]">
             <div className="relative flex items-center justify-center overflow-hidden rounded-[3px] border-[3px] border-neutral-950 bg-neutral-950 p-6">
@@ -155,19 +180,79 @@ export default async function LandingPage() {
               </span>
             </div>
             <div className="grid gap-3">
-              <StatTile value={formatCount(stats.verifiedCompanies)} label="Verified Startups" color="pink" />
-              <StatTile value={formatCount(stats.openInternships)} label="Open Roles" color="mint" />
-              <StatTile value={formatCount(stats.countries)} label="Countries" color="yellow" />
-              <StatTile value="100%" label="Verified Data" color="lavender" />
+              <StatTile
+                value={formatCount(stats.verifiedCompanies)}
+                label="Verified Startups"
+                color="pink"
+              />
+              <StatTile
+                value={formatCount(stats.openInternships)}
+                label="Open Roles"
+                color="mint"
+              />
+              <StatTile value="100%" label="Human-Verified" color="lavender" />
             </div>
           </div>
         </WindowChrome>
       </section>
 
+      {/* ── Verified company strip ───────────────────────────────────── */}
+      {showLogos && (
+        <section className="mx-auto max-w-wide px-4 pb-8 sm:px-6">
+          <div className="rounded-[4px] border-[3px] border-neutral-950 bg-[#EBEFD0] px-6 py-5">
+            <span className="retro-eyebrow bg-card">Verified on Verity</span>
+            <div className="mt-4 flex flex-wrap items-center gap-4">
+              {logos.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/companies/${c.slug}`}
+                  className="rounded-[3px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  title={c.name}
+                >
+                  <CompanyLogo
+                    src={c.logoUrl}
+                    name={c.name}
+                    seed={c.slug}
+                    size={48}
+                    className="transition-transform hover:-translate-y-0.5"
+                  />
+                  <span className="sr-only">{c.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Open roles right now ─────────────────────────────────────── */}
+      {showRoles && (
+        <section className="mx-auto max-w-wide px-4 py-10 sm:px-6">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <span className="retro-eyebrow">Hiring now</span>
+              <h2 className="mt-3 font-display text-3xl font-bold text-neutral-950">
+                Open right now
+              </h2>
+            </div>
+            <Link
+              href="/internships"
+              className="inline-flex shrink-0 items-center gap-1 font-mono text-sm font-medium text-neutral-800 hover:underline"
+            >
+              View all <ArrowRight className="size-3.5" aria-hidden />
+            </Link>
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {latestRoles.map((role) => (
+              <InternshipCard key={role.id} internship={role} />
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* ── Feature cards ────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-wide px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-wide px-4 py-12 sm:px-6">
         <h2 className="sr-only">What Verity offers</h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map(({ icon: Icon, tile, title, body }) => (
             <div key={title} className="retro-card retro-hover p-6">
               <span
@@ -209,31 +294,36 @@ export default async function LandingPage() {
             </div>
           ))}
         </div>
-        <div className="mt-10 flex justify-center">
-          <Button size="lg" render={<Link href="/companies" />}>
-            Explore Startups <ArrowRight className="size-4" />
-          </Button>
-        </div>
       </section>
 
-      {/* ── Footer stat bar ──────────────────────────────────────────── */}
-      <section className="mx-auto max-w-wide px-4 pb-16 sm:px-6">
-        <div className="grid gap-4 rounded-[4px] border-[3px] border-neutral-950 bg-tile-lavender p-5 [box-shadow:6px_6px_0_0_var(--color-neutral-950)] sm:grid-cols-2 lg:grid-cols-4">
-          {footerStats(stats).map(({ icon: Icon, value, label }) => (
-            <div key={label} className="flex items-center gap-3">
-              <span className="inline-flex size-11 items-center justify-center rounded-[3px] border-[3px] border-neutral-950 bg-card">
-                <Icon className="size-5 text-neutral-950" strokeWidth={2} aria-hidden />
-              </span>
-              <div>
-                <div className="font-display text-2xl font-bold leading-none text-neutral-950 tabular">
-                  {value}
-                </div>
-                <div className="mt-1 font-mono text-xs font-medium text-neutral-800">
-                  {label}
-                </div>
-              </div>
-            </div>
-          ))}
+      {/* ── Closing CTA band ─────────────────────────────────────────── */}
+      <section className="mx-auto max-w-wide px-4 py-14 sm:px-6">
+        <div className="rounded-[4px] border-[3px] border-neutral-950 bg-primary p-8 text-center [box-shadow:6px_6px_0_0_var(--color-neutral-950)] sm:p-12">
+          <h2 className="font-display text-3xl font-bold text-primary-foreground sm:text-4xl">
+            Start discovering — free
+          </h2>
+          <p className="mx-auto mt-3 max-w-lg font-mono text-sm leading-relaxed text-primary-foreground/90">
+            Create a free account to bookmark startups, save roles, and track
+            your applications. Hiring? List your startup and reach students who
+            want to work at verified companies.
+          </p>
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+            <Button
+              size="lg"
+              variant="secondary"
+              render={<Link href="/sign-up" />}
+            >
+              <GraduationCap className="size-4" /> Join as a student
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              render={<Link href="/company-onboarding" />}
+            >
+              <Building2 className="size-4" /> List your startup
+            </Button>
+          </div>
         </div>
       </section>
     </>
