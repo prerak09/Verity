@@ -18,6 +18,7 @@ import {
   Search as SearchIcon,
 } from "lucide-react";
 
+import { cn } from "@/components/lib/utils";
 import { DashboardSection } from "@/components/shared/DashboardSection";
 import { CompanyCard } from "@/components/shared/CompanyCard";
 import { InternshipCard } from "@/components/shared/InternshipCard";
@@ -65,6 +66,15 @@ const CATEGORY_ICON: Record<string, React.ElementType> = {
   logistics: Truck,
   mobility: Car,
 };
+
+const CATEGORY_TILE_BG = [
+  "bg-tile-lavender",
+  "bg-tile-lime",
+  "bg-tile-yellow",
+  "bg-tile-pink",
+  "bg-tile-mint",
+  "bg-tile-blue",
+];
 
 function timeAgo(iso: string): string {
   const ms = Date.now() - new Date(iso).getTime();
@@ -232,15 +242,18 @@ export default async function StudentDashboardPage() {
       <div className="grid gap-6 lg:grid-cols-2">
         <DashboardSection title="Browse by category" viewAllHref="/categories">
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-            {categories.map((category) => {
+            {categories.map((category, i) => {
               const Icon = CATEGORY_ICON[category.slug] ?? Layers;
               return (
                 <Link
                   key={category.id}
                   href={`/search?category=${category.slug}`}
-                  className="retro-card retro-hover flex flex-col items-center gap-2 p-3 text-center"
+                  className={cn(
+                    "retro-tile retro-hover flex flex-col items-center gap-2 text-center",
+                    CATEGORY_TILE_BG[i % CATEGORY_TILE_BG.length],
+                  )}
                 >
-                  <span className="flex size-9 items-center justify-center rounded-[3px] border-2 border-neutral-950 bg-tile-lavender">
+                  <span className="flex size-9 items-center justify-center rounded-[3px] border-2 border-neutral-950 bg-card">
                     <Icon className="size-4.5 text-neutral-950" strokeWidth={1.75} aria-hidden />
                   </span>
                   <span className="text-caption font-medium text-foreground">{category.name}</span>
