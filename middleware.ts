@@ -23,7 +23,8 @@ const isPublicRoute = createRouteMatcher([
   "/", // landing page
   "/team", // about/team page
   "/companies(.*)", // directory + public company profiles
-  "/internships(.*)", // job/internship list + detail
+  "/internships(.*)", // internship list + detail
+  "/jobs(.*)", // full-time/part-time/contract job list
   "/categories(.*)", // category browse
   "/search(.*)", // search results
   "/sign-in(.*)",
