@@ -21,12 +21,15 @@ export function StatTile({
   label,
   color = "lavender",
   icon,
+  /** Small caption under the label, e.g. "↑ 18 this week" or "5 in progress". */
+  delta,
   className,
 }: {
   value: string;
   label: string;
   color?: TileColor;
   icon?: React.ReactNode;
+  delta?: string;
   className?: string;
 }) {
   return (
@@ -49,6 +52,11 @@ export function StatTile({
         <div className="mt-1 font-mono text-xs font-medium text-neutral-800">
           {label}
         </div>
+        {delta && (
+          <div className="mt-0.5 font-mono text-[0.6875rem] font-semibold text-neutral-600">
+            {delta}
+          </div>
+        )}
       </div>
     </div>
   );

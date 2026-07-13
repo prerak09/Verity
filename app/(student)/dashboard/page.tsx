@@ -1,35 +1,48 @@
 import Link from "next/link";
-import { Bookmark, Briefcase } from "lucide-react";
+import {
+  Building2,
+  Layers,
+  Bookmark,
+  Send,
+  CheckCircle2,
+  Briefcase,
+  Brain,
+  Code2,
+  DollarSign,
+  HeartPulse,
+  ShoppingBag,
+  ShieldCheck,
+  GraduationCap,
+  Truck,
+  Car,
+  Search as SearchIcon,
+} from "lucide-react";
 
 import { DashboardSection } from "@/components/shared/DashboardSection";
 import { CompanyCard } from "@/components/shared/CompanyCard";
 import { InternshipCard } from "@/components/shared/InternshipCard";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { ProfileCompletionBanner } from "@/components/shared/ProfileCompletionBanner";
-import { MOCK_CATEGORIES } from "@/components/lib/mocks";
+import { StatTile } from "@/components/shared/StatTile";
+import { Button } from "@/components/ui/button";
 import { getCurrentUser } from "@/lib/auth";
-import { listCompanies, getOpenInternships } from "@/features/companies/queries";
-import { listInternships } from "@/features/internships/queries";
-import { getTrendingCompanies } from "@/features/trending/queries";
-import { getRecommendedCompanies } from "@/features/students/recommendations";
-import { listBookmarks } from "@/features/bookmarks/queries";
+import { listCategories } from "@/features/companies/queries";
 import { listApplications } from "@/features/applications/queries";
-import { getStudentProfile, profileCompletenessPercent } from "@/features/students/queries";
+import {
+  getStudentProfile,
+  profileCompletenessPercent,
+  getDashboardStats,
+  getContinueItems,
+  type DashboardStats,
+} from "@/features/students/queries";
 import type {
   ApplicationStatus,
-  CompanyCard as CompanyCardDTO,
-  InternshipCard as InternshipCardDTO,
   BookmarkDTO,
   ApplicationDTO,
+  TaxonomyRef,
 } from "@/types";
 
-const STATUS_ORDER: ApplicationStatus[] = [
-  "SAVED",
-  "APPLIED",
-  "OA",
-  "INTERVIEW",
-  "OFFER",
-];
+const STATUS_ORDER: ApplicationStatus[] = ["SAVED", "APPLIED", "OA", "INTERVIEW", "OFFER"];
 const STATUS_LABEL: Record<ApplicationStatus, string> = {
   SAVED: "Saved",
   APPLIED: "Applied",
@@ -38,6 +51,19 @@ const STATUS_LABEL: Record<ApplicationStatus, string> = {
   OFFER: "Offer",
   REJECTED: "Rejected",
   WITHDRAWN: "Withdrawn",
+};
+
+const CATEGORY_ICON: Record<string, React.ElementType> = {
+  fintech: DollarSign,
+  "ai-ml": Brain,
+  devtools: Code2,
+  healthtech: HeartPulse,
+  saas: Layers,
+  consumer: ShoppingBag,
+  infrastructure: ShieldCheck,
+  edtech: GraduationCap,
+  logistics: Truck,
+  mobility: Car,
 };
 
 function timeAgo(iso: string): string {
@@ -49,54 +75,44 @@ function timeAgo(iso: string): string {
   return `${Math.floor(days / 30)}mo ago`;
 }
 
-function HScroll({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="-mx-1 flex gap-4 overflow-x-auto px-1 pb-2">{children}</div>
-  );
-}
-
 export const dynamic = "force-dynamic";
 
+const EMPTY_STATS: DashboardStats = {
+  companiesTracked: { value: 0, deltaWeek: 0 },
+  jobsFound: { value: 0, deltaWeek: 0 },
+  bookmarks: { value: 0, deltaWeek: 0 },
+  applications: { value: 0, inProgress: 0 },
+  responses: { value: 0, deltaWeek: 0 },
+};
+
 export default async function StudentDashboardPage() {
-  let trending: CompanyCardDTO[] = [];
-  let recommended: CompanyCardDTO[] = [];
-  let recentlyAdded: CompanyCardDTO[] = [];
-  let latestInternships: InternshipCardDTO[] = [];
-  let bookmarkPreview: BookmarkDTO[] = [];
-  let applications: ApplicationDTO[] = [];
+  let firstName = "there";
   let profilePercent = 100;
+  let stats: DashboardStats = EMPTY_STATS;
+  let continueItems: BookmarkDTO[] = [];
+  let applications: ApplicationDTO[] = [];
+  let categories: TaxonomyRef[] = [];
 
   try {
-    const user = await getCurrentUser();
-    const [trend, recent, latest] = await Promise.all([
-      getTrendingCompanies(4),
-      listCompanies({ page: 1, pageSize: 4, sort: "recent" }),
-      listInternships({ page: 1, pageSize: 4, sort: "recent" }),
-    ]);
-    trending = trend;
-    recentlyAdded = recent.data;
-    latestInternships = latest.data;
+    const [user, cats] = await Promise.all([getCurrentUser(), listCategories()]);
+    categories = cats;
 
     if (user) {
-      const [recs, bms, apps, profile] = await Promise.all([
-        getRecommendedCompanies(user.id),
-        listBookmarks(user.id),
-        listApplications(user.id),
+      firstName = user.name?.split(" ")[0] || "there";
+      const [profile, dashboardStats, items, apps] = await Promise.all([
         getStudentProfile(user.id),
+        getDashboardStats(user.id),
+        getContinueItems(user.id),
+        listApplications(user.id),
       ]);
-      recommended = recs.slice(0, 4);
-      bookmarkPreview = bms.slice(0, 4);
-      applications = apps;
       if (profile) profilePercent = profileCompletenessPercent(profile);
+      stats = dashboardStats;
+      continueItems = items;
+      applications = apps;
     }
   } catch {
     // DB unreachable — sections render their empty states.
   }
-
-  // Fall back to trending for recommended when the user has no signal yet.
-  if (recommended.length === 0) recommended = trending;
-
-  void getOpenInternships; // reserved for a future per-company dashboard widget
 
   const tracker = STATUS_ORDER.map((status) => ({
     status,
@@ -104,14 +120,14 @@ export default async function StudentDashboardPage() {
   }));
 
   const activity = [
-    ...bookmarkPreview.map((b) => ({
+    ...continueItems.map((b) => ({
       icon: Bookmark,
-      text: `Bookmarked ${b.company?.name ?? b.internship?.title}`,
+      text: `You bookmarked ${b.company?.name ?? b.internship?.title}`,
       at: b.createdAt,
     })),
     ...applications.map((a) => ({
       icon: Briefcase,
-      text: `${STATUS_LABEL[a.status]} — ${a.internship.title}`,
+      text: `${STATUS_LABEL[a.status]} — ${a.internship.title} at ${a.internship.companyName}`,
       at: a.updatedAt,
     })),
   ]
@@ -119,125 +135,167 @@ export default async function StudentDashboardPage() {
     .slice(0, 6);
 
   return (
-    <div className="mx-auto max-w-wide space-y-10 px-4 py-8 sm:px-6">
+    <div className="mx-auto max-w-wide space-y-8 px-4 py-8 sm:px-6">
       <ProfileCompletionBanner percent={profilePercent} />
+
       <div>
-        <h1 className="font-display text-3xl font-bold text-neutral-950">Dashboard</h1>
+        <h1 className="font-display text-3xl font-bold text-neutral-950">
+          Welcome back, {firstName} 👋
+        </h1>
         <p className="mt-1 text-body text-muted-foreground">
-          Welcome back — here&apos;s what&apos;s new.
+          Let&apos;s find your next great opportunity.
         </p>
       </div>
 
-      <DashboardSection title="Categories" viewAllHref="/categories">
-        <div className="flex gap-2 overflow-x-auto pb-2">
-          {MOCK_CATEGORIES.map((category) => (
-            <Link
-              key={category.id}
-              href={`/search?category=${category.slug}`}
-              className="shrink-0 rounded-sm border-[3px] border-neutral-950 bg-muted px-3 py-1.5 text-body-sm font-medium text-foreground hover:border-brand-600"
-            >
-              {category.name}
-            </Link>
-          ))}
-        </div>
-      </DashboardSection>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <StatTile
+          icon={<Building2 />}
+          value={stats.companiesTracked.value.toLocaleString()}
+          label="Companies Tracked"
+          color="lavender"
+          delta={stats.companiesTracked.deltaWeek > 0 ? `↑ ${stats.companiesTracked.deltaWeek} this week` : undefined}
+        />
+        <StatTile
+          icon={<Layers />}
+          value={stats.jobsFound.value.toLocaleString()}
+          label="Jobs Found"
+          color="lime"
+          delta={stats.jobsFound.deltaWeek > 0 ? `↑ ${stats.jobsFound.deltaWeek} this week` : undefined}
+        />
+        <StatTile
+          icon={<Bookmark />}
+          value={stats.bookmarks.value.toLocaleString()}
+          label="Bookmarks"
+          color="yellow"
+          delta={stats.bookmarks.deltaWeek > 0 ? `↑ ${stats.bookmarks.deltaWeek} this week` : undefined}
+        />
+        <StatTile
+          icon={<Send />}
+          value={stats.applications.value.toLocaleString()}
+          label="Applications"
+          color="lavender"
+          delta={stats.applications.inProgress > 0 ? `${stats.applications.inProgress} in progress` : undefined}
+        />
+        <StatTile
+          icon={<CheckCircle2 />}
+          value={stats.responses.value.toLocaleString()}
+          label="Responses"
+          color="mint"
+          delta={stats.responses.deltaWeek > 0 ? `↑ ${stats.responses.deltaWeek} this week` : undefined}
+        />
+      </div>
 
-      <DashboardSection title="Trending companies" viewAllHref="/search?sort=trending">
-        <HScroll>
-          {trending.map((company) => (
-            <CompanyCard key={company.id} company={company} className="w-80 shrink-0" />
-          ))}
-        </HScroll>
-      </DashboardSection>
-
-      <DashboardSection title="Recommended for you" viewAllHref="/search">
-        <HScroll>
-          {recommended.map((company) => (
-            <CompanyCard key={company.id} company={company} className="w-80 shrink-0" />
-          ))}
-        </HScroll>
-      </DashboardSection>
-
-      <DashboardSection title="Recently added" viewAllHref="/search?sort=recent">
-        <HScroll>
-          {recentlyAdded.map((company) => (
-            <CompanyCard
-              key={company.id}
-              company={company}
-              className="w-80 shrink-0"
+      <div className="grid gap-6 lg:grid-cols-2">
+        <DashboardSection title="Continue where you left off" viewAllHref="/bookmarks">
+          {continueItems.length === 0 ? (
+            <EmptyState
+              icon={Bookmark}
+              title="Nothing saved yet"
+              description="Bookmark a company or internship and it'll show up here."
+              action={{ label: "Browse companies", href: "/companies" }}
+              compact
             />
-          ))}
-        </HScroll>
-      </DashboardSection>
+          ) : (
+            <div className="space-y-3">
+              {continueItems.map((b) =>
+                b.internship ? (
+                  <InternshipCard key={b.id} internship={b.internship} />
+                ) : b.company ? (
+                  <CompanyCard key={b.id} company={b.company} />
+                ) : null,
+              )}
+            </div>
+          )}
+        </DashboardSection>
 
-      <DashboardSection title="Latest internships" viewAllHref="/internships">
-        <HScroll>
-          {latestInternships.map((internship) => (
-            <InternshipCard
-              key={internship.id}
-              internship={internship}
-              className="w-80 shrink-0"
-            />
-          ))}
-        </HScroll>
-      </DashboardSection>
+        <DashboardSection title="Recent activity">
+          {activity.length === 0 ? (
+            <p className="text-body-sm text-muted-foreground">No activity yet.</p>
+          ) : (
+            <ul className="space-y-3">
+              {activity.map((item, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <span className="flex size-8 shrink-0 items-center justify-center rounded-[3px] border-2 border-neutral-950 bg-card">
+                    <item.icon className="size-4 text-neutral-950" strokeWidth={1.75} aria-hidden />
+                  </span>
+                  <p className="min-w-0 flex-1 text-body-sm text-foreground">{item.text}</p>
+                  <span className="shrink-0 text-caption text-muted-foreground">
+                    {timeAgo(item.at)}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </DashboardSection>
+      </div>
 
-      <DashboardSection title="Bookmarks" viewAllHref="/bookmarks">
-        {bookmarkPreview.length === 0 ? (
-          <EmptyState
-            icon={Bookmark}
-            title="Nothing saved yet"
-            description="Save companies worth remembering — they'll show up here."
-            action={{ label: "Browse companies", href: "/companies" }}
-            compact
-          />
-        ) : (
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {bookmarkPreview.map((bookmark) =>
-              bookmark.company ? (
-                <CompanyCard key={bookmark.id} company={bookmark.company} />
-              ) : bookmark.internship ? (
-                <InternshipCard key={bookmark.id} internship={bookmark.internship} />
-              ) : null,
-            )}
+      <div className="grid gap-6 lg:grid-cols-2">
+        <DashboardSection title="Browse by category" viewAllHref="/categories">
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+            {categories.map((category) => {
+              const Icon = CATEGORY_ICON[category.slug] ?? Layers;
+              return (
+                <Link
+                  key={category.id}
+                  href={`/search?category=${category.slug}`}
+                  className="retro-card retro-hover flex flex-col items-center gap-2 p-3 text-center"
+                >
+                  <span className="flex size-9 items-center justify-center rounded-[3px] border-2 border-neutral-950 bg-tile-lavender">
+                    <Icon className="size-4.5 text-neutral-950" strokeWidth={1.75} aria-hidden />
+                  </span>
+                  <span className="text-caption font-medium text-foreground">{category.name}</span>
+                </Link>
+              );
+            })}
           </div>
-        )}
-      </DashboardSection>
+        </DashboardSection>
 
-      <DashboardSection title="Application tracker" viewAllHref="/applications">
-        <div className="grid grid-cols-5 gap-2">
-          {tracker.map(({ status, count }) => (
+        <DashboardSection title="Application tracker" viewAllHref="/applications">
+          <div className="space-y-3">
+            <div className="grid grid-cols-5 gap-2">
+              {tracker.map(({ status, count }) => (
+                <Link
+                  key={status}
+                  href="/applications"
+                  className="rounded-lg border-[3px] border-neutral-950 bg-card p-3 text-center shadow-brutal-xs hover:bg-muted"
+                >
+                  <p className="font-display text-h3 tabular text-foreground">{count}</p>
+                  <p className="mt-0.5 text-caption text-muted-foreground">{STATUS_LABEL[status]}</p>
+                </Link>
+              ))}
+            </div>
             <Link
-              key={status}
               href="/applications"
-              className="rounded-lg border-[3px] border-neutral-950 bg-card p-3 text-center shadow-brutal-xs hover:bg-muted"
+              className="flex items-center gap-3 rounded-lg border-2 border-dashed border-neutral-400 p-3 text-body-sm text-muted-foreground hover:border-neutral-950 hover:text-foreground"
             >
-              <p className="font-display text-h3 tabular text-foreground">{count}</p>
-              <p className="mt-0.5 text-caption text-muted-foreground">
-                {STATUS_LABEL[status]}
-              </p>
+              <span className="flex size-8 shrink-0 items-center justify-center rounded-full border-2 border-dashed border-current">
+                ★
+              </span>
+              <span>
+                <span className="font-medium text-foreground">Keep tracking to stay organized</span>
+                <br />
+                Track your applications and never miss an update.
+              </span>
             </Link>
-          ))}
-        </div>
-      </DashboardSection>
+          </div>
+        </DashboardSection>
+      </div>
 
-      <DashboardSection title="Recent activity">
-        {activity.length === 0 ? (
-          <p className="text-body-sm text-muted-foreground">No activity yet.</p>
-        ) : (
-          <ul className="space-y-3">
-            {activity.map((item, i) => (
-              <li key={i} className="flex items-center gap-3">
-                <item.icon className="size-4 shrink-0 text-muted-foreground" strokeWidth={1.75} aria-hidden />
-                <p className="text-body-sm text-foreground">{item.text}</p>
-                <span className="text-caption text-muted-foreground">
-                  {timeAgo(item.at)}
-                </span>
-              </li>
-            ))}
-          </ul>
-        )}
-      </DashboardSection>
+      <div className="flex flex-col items-center justify-between gap-4 rounded-[4px] border-[3px] border-neutral-950 bg-lime-200 p-6 [box-shadow:4px_4px_0_0_var(--color-neutral-950)] sm:flex-row">
+        <div>
+          <p className="font-display text-xl font-bold text-neutral-950">
+            Find the right opportunities. Apply with confidence.
+          </p>
+        </div>
+        <div className="flex shrink-0 gap-2.5">
+          <Button size="lg" render={<Link href="/jobs" />}>
+            Explore Jobs <SearchIcon className="size-4" />
+          </Button>
+          <Button size="lg" variant="outline" className="bg-card" render={<Link href="/companies" />}>
+            Browse Startups
+          </Button>
+        </div>
+      </div>
     </div>
   );
 }

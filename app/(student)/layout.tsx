@@ -23,6 +23,11 @@ const SECTIONS: NavSection[] = [
       { href: "/search", icon: navIcon(Search), label: "Search" },
       { href: "/bookmarks", icon: navIcon(Bookmark), label: "Bookmarks" },
       { href: "/applications", icon: navIcon(Briefcase), label: "Applications" },
+    ],
+  },
+  {
+    label: "Explore",
+    items: [
       { href: "/companies", icon: navIcon(Building2), label: "Startups" },
       { href: "/internships", icon: navIcon(GraduationCap), label: "Internships" },
       { href: "/jobs", icon: navIcon(Layers), label: "Jobs" },
