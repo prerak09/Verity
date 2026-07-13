@@ -1,6 +1,25 @@
 import type { NextConfig } from "next";
 
+// Baseline security headers (audit ISSUE-013). A strict Content-Security-Policy
+// is intentionally omitted here: Clerk + Vercel inject inline/eval scripts and a
+// wrong CSP silently breaks auth, so it needs its own tested rollout. These four
+// are safe to apply globally today.
+const securityHeaders = [
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  {
+    key: "Permissions-Policy",
+    value: "camera=(), microphone=(), geolocation=(), browsing-topics=()",
+  },
+];
+
 const nextConfig: NextConfig = {
+  // Don't advertise the framework/version (audit ISSUE-035).
+  poweredByHeader: false,
+  async headers() {
+    return [{ source: "/:path*", headers: securityHeaders }];
+  },
   images: {
     // Many imported company logos are official brand SVGs (Wikimedia, company
     // sites). Next blocks SVGs through the optimizer by default since a raw SVG

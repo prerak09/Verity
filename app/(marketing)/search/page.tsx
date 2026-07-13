@@ -5,23 +5,23 @@ import { Search, SearchX, X as XIcon } from "lucide-react";
 import { CompanyCard } from "@/components/shared/CompanyCard";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { Pagination } from "@/components/shared/Pagination";
-import {
-  MOCK_COMPANY_DETAILS,
-  MOCK_CATEGORIES,
-  MOCK_TECHNOLOGIES,
-} from "@/components/lib/mocks";
+import { listCompanies, listCategories } from "@/features/companies/queries";
+import { listTechnologies } from "@/features/admin/taxonomy";
 import type {
   CompanyCard as CompanyCardDTO,
-  CompanyDetail,
   FundingStage,
+  FundingStageFilter,
   PageMeta,
   RemotePolicy,
+  TaxonomyRef,
 } from "@/types";
 
 export const metadata: Metadata = {
   title: "Search",
   description: "Search verified companies by category, technology, funding stage, and more.",
 };
+
+export const dynamic = "force-dynamic";
 
 const FUNDING_STAGES: { value: FundingStage; label: string }[] = [
   { value: "BOOTSTRAPPED", label: "Bootstrapped" },
@@ -39,10 +39,6 @@ const REMOTE_POLICIES: { value: RemotePolicy; label: string }[] = [
   { value: "ONSITE", label: "Onsite" },
 ];
 
-// FR-31 wants this facet; CompanyFilters/CompanyCard don't carry it yet
-// (CONTRACTS.md CR-5) — filters against the fuller CompanyDetail records here.
-const EMPLOYEE_RANGES = ["1-10", "11-50", "51-200", "201-500", "500+"];
-
 const SORT_OPTIONS: { value: string; label: string }[] = [
   { value: "recent", label: "Recently added" },
   { value: "trending", label: "Trending" },
@@ -58,36 +54,9 @@ interface SearchParams {
   fundingStage?: string;
   remotePolicy?: string;
   visaSponsorship?: string;
-  employeeCountRange?: string;
   location?: string;
   sort?: string;
   page?: string;
-}
-
-function toCompanyCard(company: CompanyDetail): CompanyCardDTO {
-  return {
-    id: company.id,
-    slug: company.slug,
-    name: company.name,
-    tagline: company.tagline,
-    logoUrl: company.logoUrl,
-    fundingStage: company.fundingStage,
-    remotePolicy: company.remotePolicy,
-    verified: company.verified,
-    categories: company.categories,
-    openInternshipCount: company.openInternships.length,
-  };
-}
-
-function matchesQuery(company: CompanyDetail, q: string): boolean {
-  const needle = q.toLowerCase();
-  return (
-    company.name.toLowerCase().includes(needle) ||
-    company.categories.some((c) => c.name.toLowerCase().includes(needle)) ||
-    company.technologies.some((t) => t.name.toLowerCase().includes(needle)) ||
-    (company.tagline?.toLowerCase().includes(needle) ?? false) ||
-    company.founders.some((f) => f.name.toLowerCase().includes(needle))
-  );
 }
 
 /** Builds the href for toggling one filter param — clears it if already active. */
@@ -147,47 +116,52 @@ export default async function SearchPage({
     fundingStage,
     remotePolicy,
     visaSponsorship,
-    employeeCountRange,
     location,
     sort,
   } = params;
   const page = Math.max(1, Number(params.page) || 1);
 
-  let results = Object.values(MOCK_COMPANY_DETAILS);
+  const sortParam: "recent" | "trending" | "name" | undefined =
+    sort === "recent" || sort === "trending" || sort === "name" ? sort : undefined;
 
-  if (q) results = results.filter((c) => matchesQuery(c, q));
-  if (category) results = results.filter((c) => c.categories.some((x) => x.slug === category));
-  if (technology) results = results.filter((c) => c.technologies.some((x) => x.slug === technology));
-  if (fundingStage) results = results.filter((c) => c.fundingStage === fundingStage);
-  if (remotePolicy) results = results.filter((c) => c.remotePolicy === remotePolicy);
-  if (visaSponsorship) {
-    results = results.filter((c) => c.visaSponsorship === (visaSponsorship === "true"));
-  }
-  if (employeeCountRange) {
-    results = results.filter((c) => c.employeeCountRange === employeeCountRange);
-  }
-  if (location) {
-    const needle = location.toLowerCase();
-    results = results.filter((c) =>
-      c.locations.some((l) => l.city.toLowerCase().includes(needle)),
-    );
+  let pageResults: CompanyCardDTO[] = [];
+  let meta: PageMeta = { page, pageSize: PAGE_SIZE, totalCount: 0, totalPages: 1 };
+  let categories: TaxonomyRef[] = [];
+  let technologies: TaxonomyRef[] = [];
+
+  try {
+    const [result, cats, techs] = await Promise.all([
+      listCompanies({
+        page,
+        pageSize: PAGE_SIZE,
+        q: q || undefined,
+        category: category || undefined,
+        technology: technology || undefined,
+        fundingStage: (fundingStage as FundingStageFilter) || undefined,
+        remotePolicy: (remotePolicy as RemotePolicy) || undefined,
+        visaSponsorship:
+          visaSponsorship === "true"
+            ? true
+            : visaSponsorship === "false"
+              ? false
+              : undefined,
+        location: location || undefined,
+        sort: sortParam,
+      }),
+      listCategories(),
+      listTechnologies(),
+    ]);
+    pageResults = result.data;
+    meta = result.meta;
+    categories = cats;
+    technologies = techs;
+  } catch {
+    // DB unreachable — render the empty state below.
   }
 
-  if (sort === "name") {
-    results = [...results].sort((a, b) => a.name.localeCompare(b.name));
-  } else if (sort === "recent") {
-    results = [...results].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
-  }
-  // "trending" and unset (implicit relevance when q is present) keep catalog order.
-
-  const totalCount = results.length;
-  const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
-  const start = (page - 1) * PAGE_SIZE;
-  const pageResults = results.slice(start, start + PAGE_SIZE).map(toCompanyCard);
-  const meta: PageMeta = { page, pageSize: PAGE_SIZE, totalCount, totalPages };
-
+  const totalCount = meta.totalCount;
   const hasActiveFilters = Boolean(
-    category || technology || fundingStage || remotePolicy || visaSponsorship || employeeCountRange || location,
+    category || technology || fundingStage || remotePolicy || visaSponsorship || location,
   );
 
   return (
@@ -212,7 +186,7 @@ export default async function SearchPage({
           <div>
             <h2 className="text-overline text-muted-foreground">Category</h2>
             <div className="mt-2 flex flex-wrap gap-1.5">
-              {MOCK_CATEGORIES.map((c) => (
+              {categories.map((c) => (
                 <FilterPill
                   key={c.id}
                   href={filterHref(params, "category", c.slug)}
@@ -227,7 +201,7 @@ export default async function SearchPage({
           <div>
             <h2 className="text-overline text-muted-foreground">Technology</h2>
             <div className="mt-2 flex flex-wrap gap-1.5">
-              {MOCK_TECHNOLOGIES.map((t) => (
+              {technologies.map((t) => (
                 <FilterPill
                   key={t.id}
                   href={filterHref(params, "technology", t.slug)}
@@ -284,21 +258,6 @@ export default async function SearchPage({
               >
                 No
               </FilterPill>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-overline text-muted-foreground">Employees</h2>
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              {EMPLOYEE_RANGES.map((range) => (
-                <FilterPill
-                  key={range}
-                  href={filterHref(params, "employeeCountRange", range)}
-                  active={employeeCountRange === range}
-                >
-                  {range}
-                </FilterPill>
-              ))}
             </div>
           </div>
 

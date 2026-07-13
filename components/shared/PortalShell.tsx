@@ -60,7 +60,7 @@ export function PortalShell({ sections, profileHref, settingsHref, children }: P
           </DialogPortal>
         </Dialog>
 
-        <main className="min-w-0 flex-1">{children}</main>
+        <main id="main-content" className="min-w-0 flex-1">{children}</main>
       </div>
     </div>
   );

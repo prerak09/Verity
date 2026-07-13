@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Search, Building2, Briefcase, Tag } from "lucide-react";
 
-import { MOCK_SEARCH_SUGGESTIONS } from "@/components/lib/mocks";
 import type { SearchSuggestion } from "@/types";
 import { cn } from "@/components/lib/utils";
 
@@ -39,26 +38,36 @@ export function NavSearch({ className }: { className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const trimmed = query.trim().toLowerCase();
+    const trimmed = query.trim();
 
-    const timeout = setTimeout(() => {
-      if (!trimmed) {
-        setResults([]);
-        setOpen(false);
-        setActiveIndex(-1);
-        return;
-      }
-      // Swap for suggestSearch(query) the moment Dev A's implementation
-      // lands — same call site, same shape.
-      const matches = MOCK_SEARCH_SUGGESTIONS.filter((s) =>
-        s.label.toLowerCase().includes(trimmed),
-      ).slice(0, MAX_RESULTS);
-      setResults(matches);
-      setOpen(true);
+    if (!trimmed) {
+      setResults([]);
+      setOpen(false);
       setActiveIndex(-1);
+      return;
+    }
+
+    const controller = new AbortController();
+    const timeout = setTimeout(async () => {
+      try {
+        const res = await fetch(
+          `/api/search/suggest?q=${encodeURIComponent(trimmed)}`,
+          { signal: controller.signal },
+        );
+        if (!res.ok) return;
+        const json = (await res.json()) as { data?: SearchSuggestion[] };
+        setResults((json.data ?? []).slice(0, MAX_RESULTS));
+        setOpen(true);
+        setActiveIndex(-1);
+      } catch {
+        // Aborted (newer keystroke) or network error — keep the last results.
+      }
     }, DEBOUNCE_MS);
 
-    return () => clearTimeout(timeout);
+    return () => {
+      clearTimeout(timeout);
+      controller.abort();
+    };
   }, [query]);
 
   useEffect(() => {

@@ -107,20 +107,24 @@ export async function getStudentProfile(
 
 /** 0–100 completeness across the key profile fields (for the dashboard meter). */
 export function profileCompletenessPercent(p: StudentProfileDTO): number {
-  const checks = [
-    !!p.name,
-    !!p.headline,
-    !!p.location,
-    !!p.college,
-    !!p.degree,
-    !!p.major,
-    p.gradYear != null,
-    p.skills.length > 0,
-    p.interests.length > 0,
-    !!p.linkedinUrl,
-    !!p.resumeUrl,
-    !!p.bio,
+  // Weighted so the fields companies actually filter/screen on (identity,
+  // education, skills, resume) count more than nice-to-haves like a portfolio
+  // link (audit ISSUE-040). Weights sum to 100.
+  const weighted: [boolean, number][] = [
+    [!!p.name, 12],
+    [!!p.headline, 8],
+    [!!p.location, 6],
+    [!!p.college, 12],
+    [!!p.degree, 6],
+    [!!p.major, 8],
+    [p.gradYear != null, 8],
+    [p.skills.length > 0, 14],
+    [p.interests.length > 0, 6],
+    [!!p.resumeUrl, 12],
+    [!!p.linkedinUrl, 4],
+    [!!p.bio, 4],
   ];
-  const filled = checks.filter(Boolean).length;
-  return Math.round((filled / checks.length) * 100);
+  const total = weighted.reduce((sum, [, w]) => sum + w, 0);
+  const earned = weighted.reduce((sum, [ok, w]) => sum + (ok ? w : 0), 0);
+  return Math.round((earned / total) * 100);
 }
