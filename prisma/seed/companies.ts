@@ -3960,6 +3960,247 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "truelayer",
+    name: "TrueLayer",
+    tagline: "Europe's fastest-growing Pay by Bank network",
+    about:
+      "TrueLayer powers smarter, safer and faster payments by combining real-time bank payments with financial and identity data. E-commerce, iGaming, and financial services businesses use its products to onboard users, accept money, and make payouts in seconds, live across 22 countries. Founded in 2016 by Francesco Simoneschi and Luca Martinetti, TrueLayer has raised over $300 million from investors including Stripe, Tiger Global, Northzone, and Tencent, and is headquartered in London with offices in Milan and Dublin.",
+    logoUrl: "https://truelayer.com/icons/icon-256x256.png",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "201-500",
+    websiteUrl: "https://truelayer.com",
+    categories: ["fintech"],
+    technologies: ["rust", "aws", "kubernetes"],
+    location: { city: "London", country: "UK" },
+    founders: [
+      { name: "Francesco Simoneschi", title: "Co-founder & CEO" },
+      { name: "Luca Martinetti", title: "Co-founder & CTO" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/truelayer" },
+      { type: "twitter", url: "https://twitter.com/TrueLayer" },
+    ],
+    internships: [
+      {
+        slug: "truelayer-product-manager-consumer-payments",
+        title: "Product Manager [Consumer Payments]",
+        description: `
+<h2>Who we are:</h2>
+<p>TrueLayer is Europe's fastest-growing Pay by Bank network. We power smarter, safer and faster payments by combining real-time bank payments with financial and identity data. E-commerce, iGaming and Financial Services businesses use our products to onboard new users, accept money and make payouts in seconds, and at scale. Live across 22 countries and with 1 new user joining TrueLayer's Pay by Bank network every 3 seconds, we're in a very exciting growth stage. This is why we're expanding the team across our offices in London, Milan, and Dublin.</p>
+<p>Listed in Sifted as one of the 100 fastest growing start-ups in UK & Ireland, and CNBC's World Top Fintech Companies, we're trusted by industry leaders like RyanAir and Just Eat Takeaway for continued innovation within our payment products. To date, we've raised over $300 million from world-renowned investors including Stripe, Tiger Global, Northzone, and Tencent. But this is just the beginning.</p>
+<p>We're looking for people who are excited about joining the Pay by Bank revolution and helping us change the way the world pays. Could this be you?</p>
+<h2>Description</h2>
+<p>As <strong>Product Manager II – Consumer Payments</strong>, you'll help shape the strategy and execution of TrueLayer's consumer-facing payment journeys, working closely with a world-class team of engineers, PM's and designers. You'll define, track, iterate, and improve upon how users initiate, confirm and complete payments across our network, ensuring that every transaction is simple, trusted and effective.</p>
+<p>You'll operate at the intersection of technology, regulation and partnership, collaborating with merchants, platforms and internal teams to design experiences that feel effortless, even when delivered through complex integrations. This role is pivotal to ensuring that the scale and reliability of TrueLayer's infrastructure translate into seamless experiences for end users.</p>
+<p>Your work will directly influence how millions of people experience bank payments across Europe, helping TrueLayer set the standard for how money moves online.</p>
+<h3>As our Product Manager, you will:</h3>
+<ul>
+<li>Craft the design of our critical Payments API, the gateway to TrueLayer's products for our merchants and a foundation for our user interfaces.</li>
+<li>In collaboration with other functional PMs, lead the product vision and roadmap for consumer payments, from initiation through settlement.</li>
+<li>Partner with merchants, partners and other teams to design user journeys, and the technical aspects behind them, that maximise conversion and trust.</li>
+<li>Develop and champion a deep understanding of user motivations and behaviours, translating insights into improvements that drive adoption and satisfaction.</li>
+<li>Own the sprint planning and backlog for the PayIns Engineering team, working closely with Design, Compliance, Data and Commercial teams to deliver products that balance regulatory standards, technical excellence and user experience.</li>
+<li>Use quantitative and qualitative insight to identify friction, test hypotheses and measure the impact of new capabilities and design improvements.</li>
+<li>Define, own and co-own clear metrics for success and establish accountability for outcomes across your product area.</li>
+</ul>
+<h3>About you</h3>
+<ul>
+<li>Good product management experience. It would be great if this experience was within payments or fintech, but we're open to non-fintech backgrounds, particularly another regulated technology environment.</li>
+<li>Highly comfortable working with API-driven products or infrastructure and translating technical capability into customer value. Ideally, you'll have built public-facing APIs before.</li>
+<li>Proven experience delivering products where customer experience depends on integrations with partners or third-party systems.</li>
+<li>Good understanding of payment flows and the financial ecosystem</li>
+<li>Clear communicator who can build alignment across engineering, design, compliance, commercial and external partner teams, including navigating strong conflicting opinions</li>
+<li>You're comfortable operating where data, systems and ownership are distributed, and can create clarity and momentum in complex client ecosystems.</li>
+</ul>
+<p><strong>Don't meet all the requirements?</strong></p>
+<p>Multiple studies have shown that women and people of underrepresented groups are sometimes less likely to apply to jobs unless they meet every single requirement. At TrueLayer, we are committed to building a diverse workforce, so if you are excited about this role and have the essential skills, but not the entire checklist - we'd still love to hear from you!</p>
+<h2>Benefits</h2>
+<h4>What you can expect from us:</h4>
+<ul>
+<li>Meaningful equity in the company</li>
+<li>Flexible hours and hybrid working. Split your time 50/50 between working from home and our welcoming offices in London and Milan, spending 2-3 days per week in the office.</li>
+<li>Need to collect the kids from childcare? Love a workout in the gym first thing? No worries, we trust you to do your best work within our hybrid framework</li>
+<li>24 days holiday as standard, with flexible bank holidays, so you can take those days whenever you like</li>
+<li>12 fully-paid wellbeing days a year and your birthday off (on top of the holiday allowance)</li>
+<li>2 volunteering days to support causes important to you</li>
+<li>90 day 'work from abroad' policy</li>
+<li>Generous parental leave, above and beyond statutory requirements</li>
+<li>Competitive pension contribution at 4% & 4%</li>
+<li>Private health insurance from the day you start</li>
+<li>Membership of mental wellbeing platform Spill</li>
+<li>A £1000 budget to spend on learning & development each year</li>
+<li>Free lunch from Just Eat 3 days a week when you are in the office</li>
+</ul>
+<p>At TrueLayer, we don't just do inclusion and diversity. We embrace people that have different opinions, perspectives and personalities. Because we believe that by seeing the world from all sorts of angles, we can make life better for all the people who live in it. We strongly encourage applications from underrepresented groups (e.g. people of colour, the LGBTQ+ community, people with disabilities, neurodivergent people, parents, carers, and people from all socio-economic backgrounds). If you'd like to discuss alternative working patterns, please let us know.</p>
+<p>We will always aim to make appropriate adjustments to ensure we are fully inclusive to people with different needs during our interview process. So if you need us to make any adjustments to suit your individual needs please let us know - we'll be happy to support you.</p>
+`.trim(),
+        location: "London, United Kingdom",
+        department: "Product Development",
+        jobType: "FULL_TIME",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.eu.greenhouse.io/truelayer/jobs/4924731101",
+      },
+      {
+        slug: "truelayer-senior-software-engineer",
+        title: "Senior Software Engineer",
+        description: `
+<h2>Who we are:</h2>
+<p>TrueLayer is Europe's fastest-growing Pay by Bank network. We power smarter, safer and faster payments by combining real-time bank payments with financial and identity data. E-commerce, iGaming and Financial Services businesses use our products to onboard new users, accept money and make payouts in seconds, and at scale. Live across 22 countries and with 1 new user joining TrueLayer's Pay by Bank network every 3 seconds, we're in a very exciting growth stage. This is why we're expanding the team across our offices in London, Milan, and Dublin.</p>
+<p>Listed in Sifted as one of the 100 fastest growing start-ups in UK & Ireland, and CNBC's World Top Fintech Companies, we're trusted by industry leaders like RyanAir and Just Eat Takeaway for continued innovation within our payment products. To date, we've raised over $300 million from world-renowned investors including Stripe, Tiger Global, Northzone, and Tencent. But this is just the beginning.</p>
+<p>We're looking for people who are excited about joining the Pay by Bank revolution and helping us change the way the world pays. Could this be you?</p>
+<h3>Description</h3>
+<p><em>The role is Remote, but only for people in Italy.</em><br>At TrueLayer, we're building a global open banking platform that's changing how money moves and so much more. We make payments and refunds instant, account data accessible and verification seamless — all so innovators in every industry can build better financial experiences for their users.</p>
+<p>We're looking for software engineers who love learning new things and working with others to solve complex customer problems. You'll be at the heart of financial innovation, using industry-disrupting technologies like open banking, to revolutionise online payments and enable financial data to be integrated into any app or website.</p>
+<p>Working at a rapidly growing fintech, you'll encounter new and exciting challenges as we scale our products and infrastructure to meet the demands of our customers, and expand our ecosystem to open up new possibilities. Guided by our <a href="https://truelayer.com/blog/engineering-principles/" target="_blank" rel="noopener noreferrer">Engineering Principles</a>, you'll collaborate on the design, implementation, delivery and operation of our products — in short: you'll build it, you'll run it!</p>
+<p>In addition to working with modern development frameworks and cloud technologies, we are committed to helping you develop new skills and advance in your career. Whether you want to continue to grow your technical expertise or move into leadership, we have clear and tangible paths for everyone, irrespective of your level of experience, role or discipline.</p>
+<h3>Our challenges</h3>
+<ul>
+<li>We want to continuously iterate and improve our offering without compromising the stability or long-term maintainability of our systems.</li>
+<li>We serve millions of API requests with a 99.5% availability SLA. Our platform must remain a reliable foundation that our customers can build upon as we expand (new products, new geographies, more volume).</li>
+<li>We want TrueLayer to be an exceptional place to work. We want our processes and interactions to stay honest, genuine and human as the company grows.</li>
+<li>We want our engineers to grow with us. To have the opportunity, the guidance and the support to develop their technical and core skills to the fullest within the organisation.</li>
+</ul>
+<h3>What we expect from you, as a Senior Software Engineer</h3>
+<ul>
+<li>Become a proficient user of our platforms (AWS, Kubernetes, Prometheus/Grafana, etc) and our tools (Rust and .NET). Training will be available to fill in any gaps in your current knowledge</li>
+<li>Partner with your Engineering Manager and Product Manager to size and break down requirements for new features and product efforts</li>
+<li>Communicate effectively with both technical and non-technical stakeholders</li>
+<li>Employ design patterns, testing and automation to ensure fast and safe iteration cycles. Use your knowledge to coach your teammates and level up the whole engineering organisation</li>
+<li>Play an active role in our incident response. Support the Incident Lead by taking ownership of investigation and service recovery for the areas of our platform under your responsibility</li>
+<li>Contribute to cross-team technology efforts by joining our engineering guilds</li>
+<li>Role model our values and help make sure TrueLayer remains an exceptional place to work</li>
+</ul>
+<h3>Requirements</h3>
+<ul>
+<li>Experience building distributed systems in any common backend language/framework such as Rust, .NET, Java, and Go</li>
+<li>Thorough understanding of common design patterns and principles, and how/when to apply them</li>
+<li>Familiarity with API design and experience with at least one web framework</li>
+<li>Knowledge of both SQL and NoSQL data technologies</li>
+<li>Understanding of microservice architecture and its associated challenges</li>
+<li>Familiarity with testing best practices — TDD, unit testing and integration testing, etc</li>
+<li>Experience with observability and alerting in mission-critical distributed systems</li>
+</ul>
+<h3>We'd be particularly excited if you have:</h3>
+<ul>
+<li>Understanding of protocol buffers, gRPC, and message queue systems.</li>
+<li>Experience building libraries and involvement in open source software.</li>
+<li>Hands-on experience with AWS and infrastructure-as-code tools such as Terraform.</li>
+</ul>
+<h3>Benefits and Compensation</h3>
+<p>€65,750 - €79,000 + equity</p>
+<h3>What you can expect from us</h3>
+<ul>
+<li>Competitive salary and meaningful equity in the company</li>
+<li>Flexible hours and hybrid working - we offer a hybrid approach to work of 3 days per week remote working and 2 days per week in our new offices in London, Milan, and Dublin</li>
+<li>Need to collect the kids from childcare? Love a workout in the gym first thing? No worries, we trust you to do your best work within our hybrid framework</li>
+<li>Flexible holiday policy, with 24 days as standard</li>
+<li>2 volunteering days to support causes important to you</li>
+<li>Generous parental leave, above and beyond statutory requirements and with no minimum tenure</li>
+<li>Meal vouchers for every day you're working, including while remote</li>
+<li>Budget to spend on learning & development each year</li>
+<li>12 fully-paid wellbeing days a year and your birthday off (on top of the holiday allowance)</li>
+<li>Membership of mental wellbeing platform Spill</li>
+</ul>
+<h3>About our hiring process</h3>
+<p>Our hiring process typically consists of four stages:</p>
+<ol>
+<li>A call with one of our Talent Acquisition Partners.</li>
+<li>A take-home exercise <a href="https://docs.google.com/document/d/1P5i5AdnnJ7jTpxBJ6vrNGz-yGIT3zl68a94YZKuQovg/edit" target="_blank" rel="noopener noreferrer">Software Engineering Challenge</a>.</li>
+<li>2-hour video interview with two TrueLayer engineers.</li>
+<li>1.5-hour total final round video interviews.</li>
+</ol>
+<p>Full details on the interview process, including preparation tips and the qualities we look for in future TrueLayeristas, can be found on our <a href="https://truelayer.com/blog/interviewing" target="_blank" rel="noopener noreferrer">blog</a>.</p>
+<p>At TrueLayer, we don't just do inclusion and diversity. We embrace people that have different opinions, perspectives and personalities. Because we believe that by seeing the world from all sorts of angles, we can make life better for all the people who live in it. We strongly encourage applications from underrepresented groups (e.g. people of colour, the LGBTQ+ community, people with disabilities, neurodivergent people, parents, carers, and people from all socio-economic backgrounds). If you'd like to discuss alternative working patterns, please let us know.</p>
+<p>We will always aim to make appropriate adjustments to ensure we are fully inclusive to people with different needs during our interview process. So if you need us to make any adjustments to suit your individual needs please let us know - we'll be happy to support you.</p>
+`.trim(),
+        location: "Milan, Italy",
+        department: "Product Development",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.eu.greenhouse.io/truelayer/jobs/4890092101",
+      },
+      {
+        slug: "truelayer-software-engineer",
+        title: "Software Engineer",
+        description: `
+<h2>Who we are:</h2>
+<p>TrueLayer is Europe's fastest-growing Pay by Bank network. We power smarter, safer and faster payments by combining real-time bank payments with financial and identity data. E-commerce, iGaming and Financial Services businesses use our products to onboard new users, accept money and make payouts in seconds, and at scale. Live across 22 countries and with 1 new user joining TrueLayer's Pay by Bank network every 3 seconds, we're in a very exciting growth stage. This is why we're expanding the team across our offices in London, Milan, and Dublin.</p>
+<p>Listed in Sifted as one of the 100 fastest growing start-ups in UK & Ireland, and CNBC's World Top Fintech Companies, we're trusted by industry leaders like RyanAir and Just Eat Takeaway for continued innovation within our payment products. To date, we've raised over $300 million from world-renowned investors including Stripe, Tiger Global, Northzone, and Tencent. But this is just the beginning.</p>
+<p>We're looking for people who are excited about joining the Pay by Bank revolution and helping us change the way the world pays. Could this be you?</p>
+<h2>Description</h2>
+<p>At TrueLayer, we want the financial system to work for everyone — so we've made it our mission to open up access and put fintech at people's fingertips.</p>
+<p>We're looking for Engineers who love learning new things and working with others to solve complex customer problems. You'll be at the heart of financial innovation, using industry-disrupting technologies like open banking to revolutionise online payments, and enable financial data to be integrated into any app or website.</p>
+<p>Working at a rapidly growing fintech, you'll encounter new and exciting challenges as we scale our products and infrastructure to meet the demands of our customers, and expand our ecosystem to open up new possibilities. Guided by our Engineering Principles, you'll collaborate on the design, implementation, delivery and operation of our products — in short: you'll build it, you'll run it!</p>
+<p>In addition to working with modern development frameworks and cloud technologies, we are committed to helping you develop new skills and advance in your career. Whether you want to continue to grow your technical expertise or move into leadership, we have clear and tangible paths for everyone, irrespective of your level of experience, role or discipline.</p>
+<h3>Our challenges</h3>
+<ul>
+<li>We want to continuously iterate and improve our offering without compromising the stability or long-term maintainability of our systems.</li>
+<li>We serve millions of API requests with a 99.95% availability SLA. Our platform must remain a reliable foundation that our customers can build upon as we expand (new products, new geographies, more volume).</li>
+<li>We want TrueLayer to be an exceptional place to work. We want our processes and interactions to stay honest, genuine and human as the company grows.</li>
+<li>We want our engineers to grow with us. To have the opportunity, the guidance and the support to develop their technical and core skills to the fullest within the organisation.</li>
+</ul>
+<h3>What we expect from you, as a Software Engineer</h3>
+<ul>
+<li>Aim to reach proficiency as a user of our platforms (AWS, Kubernetes, Prometheus/Grafana, etc). Training will be available to boost your current knowledge.</li>
+<li>Collaborate with Product stakeholders and iterate fast on product development.</li>
+<li>Communicate effectively with both technical and non-technical stakeholders.</li>
+<li>Help the rest of the team to deliver in fast and safe iteration cycles promoting design patterns, testing and automation.</li>
+<li>Advocate for operational readiness, help the team to maintain dashboards and alerting systems and eventually participate in the incident response process.</li>
+<li>Contribute to cross-team technology efforts by joining our engineering guilds.</li>
+<li>Align with our values and help make sure TrueLayer remains an exceptional place to work.</li>
+</ul>
+<h3>We'd be particularly excited if you have</h3>
+<ul>
+<li>Experience with Rust</li>
+<li>Understanding of protocol buffers, gRPC, and message queue systems.</li>
+<li>Experience building libraries and involvement in open source software.</li>
+<li>Hands-on experience with AWS and infrastructure-as-code tools such as Terraform.</li>
+</ul>
+<h3>Benefits and Compensation</h3>
+<p>€50,000 - €60,000 + equity</p>
+<h3>What you can expect from us</h3>
+<ul>
+<li>Competitive salary and meaningful equity in the company</li>
+<li>Flexible hours and hybrid working - we offer a hybrid approach to work of 3 days per week remote working and 2 days per week in our new offices in London, Milan, and Dublin</li>
+<li>Need to collect the kids from childcare? Love a workout in the gym first thing? No worries, we trust you to do your best work within our hybrid framework</li>
+<li>A one-off contribution of €200 to help you set up your home office</li>
+<li>Flexible holiday policy, with 24 days as standard</li>
+<li>2 volunteering days to support causes important to you</li>
+<li>Generous parental leave, above and beyond statutory requirements and with no minimum tenure</li>
+<li>Meal vouchers for every day you're working, including while remote</li>
+<li>Budget to spend on learning & development each year</li>
+<li>12 fully-paid wellbeing days a year and your birthday off (on top of the holiday allowance)</li>
+<li>Membership of mental wellbeing platform Spill</li>
+</ul>
+<h3>About our hiring process</h3>
+<p>Our hiring process typically consists of four stages:</p>
+<ol>
+<li>A call with one of our Talent Acquisition Partners.</li>
+<li>A take-home exercise <a href="https://docs.google.com/document/d/1P5i5AdnnJ7jTpxBJ6vrNGz-yGIT3zl68a94YZKuQovg/edit" target="_blank" rel="noopener noreferrer">Software Engineering Challenge</a>.</li>
+<li>2-hour video interview with two TrueLayer engineers.</li>
+<li>1.5-hour total final round video interviews.</li>
+</ol>
+<p>Full details on the interview process, including preparation tips and the qualities we look for in future TrueLayeristas, can be found on our <a href="https://truelayer.com/blog/interviewing" target="_blank" rel="noopener noreferrer">blog</a>.</p>
+<p>At TrueLayer, we don't just do inclusion and diversity. We embrace people that have different opinions, perspectives and personalities. Because we believe that by seeing the world from all sorts of angles, we can make life better for all the people who live in it. We strongly encourage applications from underrepresented groups (e.g. people of colour, the LGBTQ+ community, people with disabilities, neurodivergent people, parents, carers, and people from all socio-economic backgrounds). If you'd like to discuss alternative working patterns, please let us know.</p>
+<p>We will always aim to make appropriate adjustments to ensure we are fully inclusive to people with different needs during our interview process. So if you need us to make any adjustments to suit your individual needs please let us know - we'll be happy to support you.</p>
+`.trim(),
+        location: "Milan, Italy",
+        department: "Product Development",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.eu.greenhouse.io/truelayer/jobs/4885149101",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
