@@ -49,6 +49,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.ory.com" },
       { protocol: "https", hostname: "www.finn.com" },
       { protocol: "https", hostname: "www.tines.com" },
+      { protocol: "https", hostname: "wayflyer.com" },
     ],
   },
 };
