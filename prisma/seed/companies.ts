@@ -4201,6 +4201,460 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "lenskart",
+    name: "Lenskart",
+    tagline: "India's largest eyewear company",
+    about:
+      "Lenskart is an Indian multinational eyewear company offering prescription glasses, sunglasses, and contact lenses through its omnichannel network of 2,000+ stores and its app and website, combined with AI-powered try-on and eye-testing technology. Founded in 2010 by Peyush Bansal, Amit Chaudhary, and Sumeet Kapahi, Lenskart went public on the BSE and NSE in November 2025, raising $828 million in its IPO at a market cap of roughly $9.4 billion. It's headquartered in Gurugram, India, with operations across 40+ countries.",
+    logoUrl: "https://static.lenskart.com/media/desktop/img/site-images/main_logo.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.lenskart.com",
+    categories: ["consumer"],
+    technologies: ["java", "python", "react", "aws", "mongodb"],
+    location: { city: "Gurugram", country: "India" },
+    founders: [
+      { name: "Peyush Bansal", title: "Co-founder & CEO" },
+      { name: "Amit Chaudhary", title: "Co-founder" },
+      { name: "Sumeet Kapahi", title: "Co-founder" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/lenskart-com" },
+      { type: "twitter", url: "https://twitter.com/lenskart" },
+    ],
+    internships: [
+      {
+        slug: "lenskart-product-manager",
+        title: "Product Manager",
+        description: `
+<p>The person will be managing Lenskart's products and primarily be responsible for ensuring that the product is aligned with the short term tactical and long term strategic goals of the company. You will be working with an experienced team of engineers, content writers, animators and designers to take the product through multiple successful releases.</p>
+<p>The following crisply defines our philosophy of Product Management and describes our "Ideal Product Manager": your product strategy and vision are most effective when they are substantiated with real user interactions and data analytics. A list of 10 items for the next release with a clear sense of priority will go a long way to ensure that the release is both effective and on-time.</p>
+<ul><li>While working closely with Engineering, Content developers and other product managers it is crucial to identify dependencies early on for a smooth release</li><li>You know from the bottom of your heart that a PRD that speaks out the user's needs and wants is the best way to ensure internal buy-in and super high productivity levels</li><li>A simple annotated wireframe is much better than a 5 page PRD</li><li>A PRD that is more than 5 pages will not be read</li><li>A feature no matter how great it sounds, is a true success only when it can be measured</li><li>Not all your features will be a runaway success and will need constant fine-tuning on an iterative basis</li><li>In spirit, you are the CEO of your product.</li></ul>
+`.trim(),
+        location: "Bangalore",
+        department: "Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/23/",
+      },
+      {
+        slug: "lenskart-online-product-revenue-leader",
+        title: "Online Product & Revenue Leader",
+        description: `
+<h3>Mission Brief: Own the World's Most Intelligent Online Eyewear Business</h3>
+<p>This is not a conventional e-commerce leadership role. This is your opportunity to architect and own the entire digital growth engine of a global eyewear tech company — one that is redefining how hundreds of millions of people experience vision care.</p>
+<p>As the <strong>Global Online Product & Revenue Leader</strong>, you will own the full Online P&L across India and Lenskart's international markets, and you will build the AI-powered commercial machine that drives it. You will move us from campaign-driven growth to a <strong>real-time, intelligence-led revenue system</strong> — where every rupee of media spend, every digital touchpoint, and every customer interaction is optimised by data and AI.</p>
+<p>Your mandate: <strong>make Lenskart the most commercially effective and customer-obsessed digital eyewear brand on the planet.</strong></p>
+<h3>Core Mandate</h3>
+<h4>1. Own the P&L. Define the Roadmap.</h4>
+<p>Take full end-to-end ownership of the Online P&L across all channels and geographies — India, Southeast Asia, the Middle East, and beyond. Build and execute a forward-looking online growth roadmap that works backward from deep consumer insight, not internal assumptions. Integrate marketplace and quick commerce into the core business architecture — not as side channels, but as scaled, intelligent revenue streams.</p>
+<h4>2. Build an AI-First Performance Marketing Engine</h4>
+<p>Lead the transformation of Lenskart's performance marketing from manual optimisation to an <strong>AI-driven acquisition and retention engine</strong> — across Meta, Google, Programmatic, Affiliates, and emerging channels. Deploy sophisticated <strong>LTV-based audience modelling, predictive cohort targeting, and AI-powered bidding strategies</strong> to maximise return on every dollar of media spend. Develop and own the frameworks for <strong>AI-assisted creative testing</strong> and <strong>real-time campaign optimisation</strong> at scale. Scale marketplace and quick commerce presence through intelligent catalogue management, algorithmic ranking strategies, and demand-signal-driven inventory positioning.</p>
+<h4>3. Lead a Global Online Team</h4>
+<p>Provide strategic direction and operational clarity to regional online channel teams across markets. Ensure each market accelerates its own growth trajectory while staying coherent with global brand, tech, and operational standards. Build a team culture where speed, data fluency, and customer obsession are non-negotiable defaults.</p>
+<h4>4. Drive AI-Powered Product & Experience Innovation</h4>
+<p>Partner with Product and Tech to embed <strong>AI deeply into the customer journey</strong> — from intelligent search and personalised recommendations to virtual try-on and AI-led conversion optimisation. Champion a culture of continuous experimentation: own the A/B testing roadmap, accelerate learning velocity, and ensure every insight compounds into measurable conversion and retention uplift. Define and deliver the digital experience standard that makes Lenskart's web and app not just functional — but genuinely delightful and differentiated.</p>
+<h4>5. Turn Data Into Decisions, at Speed</h4>
+<p>Build and operate a real-time performance intelligence system — dashboards, funnels, cohort analyses — that enables the team to make high-quality decisions in hours, not weeks. Own growth forecasting, customer segmentation, and hyper-targeted audience strategies that power scalable, profitable marketing. Move the organisation from reactive reporting to <strong>predictive, AI-assisted growth operations.</strong></p>
+<h4>6. Connect the Entire Value Chain</h4>
+<p>Work hand-in-hand with Supply Chain, Category, CX, Merchandising, and Creative to ensure every online touchpoint is backed by seamless operational execution. Be the connective tissue between commercial ambition and operational reality — ensuring the customer experience is consistent, compelling, and continuously improving.</p>
+<h3>The Essentials</h3>
+<ul>
+<li><strong>Commercial Ownership at Scale:</strong> You have held full P&L accountability for a large-scale digital business — and you have delivered aggressive, sustainable revenue growth while managing cost discipline.</li>
+<li><strong>AI & Data Fluency:</strong> You don't just commission data analyses — you understand how AI and ML can be applied to performance marketing, personalisation, forecasting, and customer experience. You've either built or led teams that have deployed these capabilities in production.</li>
+<li><strong>Performance Marketing Depth:</strong> You have managed large, complex media budgets across search and social, and you have led the shift from manual to algorithmic and AI-assisted campaign management.</li>
+<li><strong>Multi-channel Architecture:</strong> You have scaled revenue across owned digital channels (web, app), third-party marketplaces, and rapid-delivery platforms — simultaneously, not sequentially.</li>
+<li><strong>Customer Experience Instinct:</strong> You obsess over the digital journey. You can identify friction at a granular level and move fast to eliminate it — using data, design, and product thinking together.</li>
+<li><strong>Cross-functional Influence:</strong> You have a track record of aligning supply chain, creative, and engineering teams behind a single commercial vision — across geographies and cultures.</li>
+</ul>
+<h3>The Mindset</h3>
+<ul>
+<li><strong>Builder, not Manager.</strong> You are energised by the opportunity to construct something new — a smarter, faster, more intelligent online business — not just to optimise what already exists.</li>
+<li><strong>AI-Native Thinker.</strong> You see AI not as a feature to add, but as the foundational layer through which growth is designed. You are curious about what is possible, and you move fast to test it.</li>
+<li><strong>Commercially Fearless.</strong> You are comfortable with ambitious targets and the accountability that comes with them. You set the bar high for yourself and for your team.</li>
+<li><strong>Customer-Backward.</strong> You make every strategic decision by starting with the customer — their needs, their friction points, their moments of delight — and working backwards to the business model.</li>
+<li><strong>Globally Curious.</strong> You thrive in multi-market complexity. You understand that what works in one market is a hypothesis in another, and you build systems that can learn and adapt.</li>
+</ul>
+<p><em>Lenskart is on a mission to make quality eyewear accessible to everyone on the planet. If you want to build the digital engine that powers that mission — and you're ready to do it with AI at the centre — we want to meet you.</em></p>
+<h3>Job Requirements</h3>
+<ul>
+<li><strong>P&L Responsibility:</strong> A proven history of managing the complete income and expense statement for a large-scale digital business, with a focus on sustainable profit and aggressive revenue growth.</li>
+<li><strong>Product-Driven Customer Experience:</strong> The ability to lead technical teams to build digital features that simplify complex buying decisions, such as virtual fitting tools and seamless try-on experiences.</li>
+<li><strong>Strategic Marketing Oversight:</strong> Expertise in managing large advertising budgets across search engines and social media, ensuring the cost to acquire a customer is balanced against their long-term value.</li>
+<li><strong>Multichannel Distribution:</strong> Practical experience scaling sales through company-owned websites, mobile applications, third-party marketplaces, and rapid-delivery platforms.</li>
+<li><strong>Customer Experience Focus:</strong> The skill to analyze complex customer data to identify friction points in the digital journey and implement rapid improvements to drive customer experience online.</li>
+<li><strong>Cross-Functional Leadership:</strong> A track record of aligning diverse departments — including supply chain, creative design, and engineering — to ensure a consistent customer experience across different global regions.</li>
+</ul>
+`.trim(),
+        location: "Delhi",
+        department: "Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/25/",
+      },
+      {
+        slug: "lenskart-inventory-intelligence-planning-platform-leader",
+        title: "Inventory Intelligence & Planning Platform Leader",
+        description: `
+<h3>Mission Brief: Lead the Transformation of Lenskart's Inventory</h3>
+<p>This is a high-impact leadership role focused on building and operationalizing a world-class, proprietary Inventory Planning Platform. You will be the architect responsible for transforming how Lenskart manages over $1 billion in inventory, moving us from static planning methods to a real-time, AI-driven decision engine.</p>
+<p>Your mission is to bridge the gap between cutting-edge technology and exponential retail growth. You will be defining and delivering the system that ensures we have the right product, in the right place, at the right time, maximizing profitability and customer satisfaction globally.</p>
+<h3>Core Mandate: Platform Development & Business Transformation</h3>
+<h4>1. Internal Planning Platform Creation (The Builder's Focus)</h4>
+<ul>
+<li><strong>Platform Visionary:</strong> Own the strategic vision, architecture, and deployment of Lenskart's proprietary AI/ML-based planning platform (the Inventory Decision Engine). This includes key modules for predictive demand sensing, optimal allocation, dynamic safety stock calculations, and system-driven buying signals.</li>
+<li><strong>Technical Partnership:</strong> Act as the primary business lead, translating complex inventory and retail requirements into actionable technical specifications for Data Science and Engineering teams.</li>
+<li><strong>Systems Design Ownership:</strong> Lead the design and configuration of all core replenishment algorithms and logic, ensuring they maximize inventory turnover and fill rates while intelligently navigating complex fashion cycles and global supply chain volatility.</li>
+</ul>
+<h4>2. Strategic Inventory & Growth (The Business Focus)</h4>
+<ul>
+<li><strong>P&L Impact:</strong> Directly influence working capital performance by minimizing inventory obsolescence and maximizing product availability across our extensive network of stores and e-commerce channels.</li>
+<li><strong>Forecasting Excellence:</strong> Implement and manage advanced models to continuously improve forecast accuracy (MAPE/WAPE) across millions of SKUs, driving significant improvements in financial planning and operational execution.</li>
+<li><strong>Strategic Buying:</strong> Define the logic and processes for transitioning tactical purchasing to strategic oversight, ensuring system-generated buying signals and Open-to-Buy (OTB) strategies are dynamically linked to real-time sales and financial goals.</li>
+</ul>
+<h4>3. Cross-Functional Leadership & Adoption</h4>
+<ul>
+<li><strong>Change Agent:</strong> Lead the cultural and technical adoption of the new platform across the organization (Merchandising, Finance, Retail Operations). Challenge the status quo and enforce a data-driven decision-making culture.</li>
+<li><strong>New Product Integration:</strong> Design the system capabilities to seamlessly integrate new product introductions (NPIs) and manage product lifecycle events, ensuring rapid scaling and minimal end-of-life write-offs.</li>
+</ul>
+<h3>Candidate Profile: The Technical Leader</h3>
+<h4>The Essentials</h4>
+<ul>
+<li><strong>Experience:</strong> 7+ years of progressive leadership experience in Inventory Planning, Supply Chain Systems, or Merchandise Planning, with a strong track record of defining, building, or significantly revamping a core planning platform (internal or external).</li>
+<li><strong>Technical Acumen:</strong> Proven experience as a business lead for enterprise planning solutions, with a deep, practical understanding of time-series forecasting, statistical modeling, and machine learning applications in demand planning.</li>
+<li><strong>Education:</strong> Bachelor's or Master's degree in Supply Chain Management, Operations Research, Engineering, or a highly quantitative field.</li>
+</ul>
+<h4>The Mindset</h4>
+<ul>
+<li><strong>Systems & Product Thinking:</strong> You possess the intellectual curiosity and technical capability to define the architecture of a global retail planning system. You see planning as a product that requires continuous development and optimization.</li>
+<li><strong>Analytical Rigor & Speed:</strong> You thrive on data complexity, transforming ambiguity into clear, scalable, and profitable solutions at the pace of a high-growth tech company.</li>
+<li><strong>Transformational Leadership:</strong> You are a compelling communicator capable of driving strategic change, securing organizational alignment, and mentoring a team of high-performing planners and analysts.</li>
+</ul>
+`.trim(),
+        location: "Delhi",
+        department: "Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/44/",
+      },
+      {
+        slug: "lenskart-backend-developer",
+        title: "Backend Developer",
+        description: `
+<p>We are building the next-generation technology platforms that power the Lenskart Group — spanning multiple brands (Lenskart, Owndays, Meller, Aqualens) and operating across geographies including India, KSA, UAE, Singapore, Japan, and beyond.</p>
+<p>As a Backend Developer, you'll play a key role in shaping the core systems that drive this global vision — from intelligent inventory and omnichannel commerce to personalized experiences powered by AI and data. You'll design and build high-performance backend services that scale seamlessly across markets and products, delivering delightful and frictionless eyewear experiences to millions of customers worldwide.</p>
+<h3>Key Responsibilities</h3>
+<ul><li>Design, develop, and own microservice-based backend applications using Java Spring Boot.</li><li>Build APIs and platforms that serve multiple brands and geographies, ensuring scalability and flexibility for global rollout.</li><li>Implement event-driven architectures for systems like order management, fulfillment, and inventory synchronization.</li><li>Integrate AI-driven capabilities such as personalized recommendations, intelligent product search, and predictive operations.</li><li>Collaborate closely with product, AI/ML, DevOps, and frontend teams to build systems that bridge online and offline experiences.</li><li>Design efficient database schemas (MySQL, MongoDB), optimize data flows, and maintain consistency across distributed systems.</li><li>Monitor, optimize, and scale backend services for performance, reliability, and global availability.</li><li>Participate in code reviews, architectural discussions, and innovation sprints to drive continuous improvement.</li></ul>
+<h3>Required Skills & Qualifications</h3>
+<ul><li>3–8+ years of backend development experience using Java Spring Boot</li><li>Strong understanding of microservices architecture and REST API design</li><li>Proficiency in SQL and NoSQL databases (MySQL, MongoDB)</li><li>Experience with event-driven systems and message brokers (Kafka or similar)</li><li>Familiarity with caching strategies (Redis, Memcached)</li><li>Solid foundation in object-oriented programming, design patterns, and clean code principles</li><li>Experience with Git, CI/CD pipelines, and deployments on AWS or GCP</li></ul>
+<h3>Nice to Have</h3>
+<ul><li>Experience building multi-brand or multi-tenant platforms</li><li>Exposure to AI/ML integrations in production environments</li><li>Background in e-commerce, retail tech, or global-scale applications</li><li>Knowledge of Docker, Kubernetes, Elasticsearch, and recommendation engines</li></ul>
+<h3>Why Join Us</h3>
+<ul><li>Build the global technology backbone of Lenskart Group — uniting brands, markets, and customer journeys under one intelligent platform</li><li>Work at the intersection of vision, design, and AI, redefining how the world discovers and experiences eyewear</li><li>Be part of a fast-scaling, global tech team solving complex challenges with data, systems thinking, and creativity</li><li>Enjoy a culture of innovation, ownership, and collaboration</li><li>Competitive compensation, learning opportunities, and a chance to create impact at global scale</li></ul>
+<p>At Lenskart, you won't just write code — you'll help build the intelligent platforms that shape how the world sees.</p>
+`.trim(),
+        location: "Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/50/",
+      },
+      {
+        slug: "lenskart-devops-engineer",
+        title: "DevOps Engineer",
+        description: `
+<p>We are looking for a hands-on DevOps engineer who can take up the following responsibilities:</p>
+<ul><li>Monitor the progress of technical personnel, ensuring that application development and deployment is done in the best possible way, and implement quality control and review systems throughout the development and deployment processes.</li><li>Be responsible for ensuring that the DevOps strategy is implemented in the end-to-end development of the product, while ensuring scalability, stability, and high performance.</li><li>Find ways to improve the existing architecture of the product keeping in mind the various automation tools available and the skills required.</li><li>Manage other DevOps roles and obtain full efficiency from the team.</li><li>Employ and leverage standard tools and techniques to maximize team effectiveness (physical and/or virtual boards, collaboration and productivity software, etc.).</li><li>Be an evangelist for DevOps technology and champion agile development best practices, including automated testing using CI/CD, Perl/Python/Groovy/Java/Bash.</li><li>Manage build and release and provide CI/CD expertise to agile teams in the enterprise, and infrastructure automation using Ansible and IAC tools.</li><li>Work on a cloud-based infrastructure spanning Amazon Web Services, Microsoft Azure, and Google Cloud.</li><li>Be responsible for defining the business continuity framework/disaster recovery of the group.</li><li>Evaluate and collaborate with cross-functional teams on how to achieve strategic development objectives using DevOps methodologies.</li><li>Work with senior software managers and architects to develop multi-generation applications/product/cloud plans.</li><li>Work with tech partners and professional consultants for great and successful DevOps and Microservices journey adoption or implementations.</li><li>Contribute to and create integrations and orchestration blueprints.</li></ul>
+<h3>Technical Expertise</h3>
+<ul><li>Deep knowledge of Infrastructure, Cloud, DevOps, SRE, Database Management, Observability, and Cybersecurity services.</li></ul>
+<h3>Preferred Experience</h3>
+<ul><li>Solid 4+ years of experience as an SRE and DevOps with a proven track record of handling large-scale production environments.</li><li>Strong experience with databases.</li><li>Can join us immediately post offer acceptance.</li></ul>
+`.trim(),
+        location: "Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/53/",
+      },
+      {
+        slug: "lenskart-ui-developer",
+        title: "UI Developer",
+        description: `
+<h3>Key Responsibilities</h3>
+<ul><li>Develop new user-facing features</li><li>Build reusable code and libraries for future use</li><li>Ensure the technical feasibility of UI/UX designs</li><li>Optimize application for maximum speed and scalability</li><li>Collaborate with other team members and stakeholders</li></ul>
+<h3>Skills Required</h3>
+<ul><li>Proficient in web markup, including HTML5, CSS3</li><li>Proficient in client-side scripting like JavaScript and ReactJS</li><li>Proficient in server side scripting like ExpressJS & Redux</li><li>Proficient understanding of cross-browser compatibility issues and ways to work around them</li><li>Proven ability to work creatively and analytically in a problem-solving environment</li><li>Work with cross-functional teams to ensure any tech glitch issues are resolved. Also work with Product Management and Engineering for the release of the fixes.</li></ul>
+<h3>Ideal Experience</h3>
+<ul><li>3 to 6 years of industry experience</li><li>Bachelors or Master's Degree in Computer Science/IT</li><li>Drive discussions to create/improve product, process and technology</li><li>Provide end to end solution and design details</li><li>Mentoring the junior devs is a plus</li><li>Lead development of formalized solution methodologies</li><li>Passion to work in a startup-like environment</li></ul>
+`.trim(),
+        location: "Delhi",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/55/",
+      },
+      {
+        slug: "lenskart-product-voice-conversational-ai",
+        title: "Product@Lenskart (Voice & Conversational AI)",
+        description: `
+<p><strong>About the role:</strong></p>
+<p>At Lenskart, we are reimagining how millions of customers interact with technology—making experiences intuitive, intelligent, and human.</p>
+<p>We are looking for a <strong>Product Management Leader</strong> who has <strong>built and scaled voice-first or conversational interfaces</strong> (Alexa, Google Assistant–like platforms, IVR modernization, AI agents, or multimodal assistants) and can <strong>own the vision, strategy, and execution</strong> of voice-led product experiences at scale.</p>
+<p>This role sits at the intersection of <strong>AI, UX, and consumer behavior</strong>, and will define how voice becomes a core interaction layer across Lenskart's ecosystem.</p>
+<h3>What you'll Do</h3>
+<ul><li><strong>Own the Voice Product Vision:</strong> Define and drive the end-to-end product strategy for voice and conversational interfaces across customer and internal platforms.</li><li><strong>Build at Scale:</strong> Lead products that serve <strong>millions of users</strong>, ensuring high accuracy, low latency, and delightful experiences across languages and accents.</li><li><strong>Translate AI into Real Products:</strong> Work closely with AI/ML, NLP, Data Science, and Engineering teams to turn complex models into simple, usable products.</li><li><strong>Customer-First Innovation:</strong> Deeply understand customer journeys and identify where voice can reduce friction, increase accessibility, and improve engagement.</li><li><strong>Product Leadership:</strong> Mentor and scale a team of senior product managers, setting high standards for discovery, execution, and outcomes.</li><li><strong>Stakeholder Influence:</strong> Partner with Design, Engineering, Business, and Leadership to align product roadmaps with company priorities.</li><li><strong>Metrics & Outcomes:</strong> Define success metrics (adoption, engagement, accuracy, NPS, conversion) and continuously improve product performance.</li></ul>
+<h3>Person's Specifications</h3>
+<ul><li><strong>10+ years of Product Management experience</strong>, with at least <strong>3–5 years leading complex, AI-driven or platform products</strong>.</li><li>Proven experience building <strong>voice interfaces, conversational AI products, or virtual assistants</strong> (e.g., Alexa, Google Assistant, Siri-like systems, AI agents, IVR modernization, multimodal assistants).</li><li>Strong understanding of <strong>NLP, ASR, TTS, LLM-based systems</strong>, and how they translate into consumer experiences (technical depth without being an engineer).</li><li>Experience working in <strong>high-scale consumer tech, e-commerce, or platform companies</strong>.</li><li>Exceptional product sense—able to balance <strong>user needs, technology constraints, and business outcomes</strong>.</li><li>Strong leadership presence with the ability to influence senior stakeholders and executive leadership.</li><li>Experience working with <strong>global teams</strong> and launching products across markets is a plus.</li></ul>
+<h3>Why Join Lenskart</h3>
+<ul><li>Build <strong>category-defining products</strong> used by millions of customers daily.</li><li>Opportunity to shape <strong>voice as a core interaction layer</strong> in a leading consumer tech brand.</li><li>High ownership, high impact role with direct visibility to leadership.</li><li>Work with world-class teams across Product, Design, AI, and Engineering.</li><li>Fast-growing organization where <strong>bold ideas move quickly to reality</strong>.</li></ul>
+<p>If this excites you and you've built voice-first or conversational products that changed how users interact with technology — and you're ready to do it at massive scale — we'd love to talk.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/63/",
+      },
+      {
+        slug: "lenskart-database-reliability-engineer",
+        title: "Database Reliability Engineer (SQL and MongoDB)",
+        description: `
+<p>The Role: We are looking for a high-caliber DataOps / Database Reliability Engineer who brings strong engineering fundamentals and a deep sense of ownership. You will design, build, and operate MySQL, MongoDB, MSSQL, and BigQuery platforms that enable product teams to ship quickly and safely - at scale. This role is hands-on, impact-driven, and aligned with top-tier engineering standards.</p>
+<h3>What You Will Do</h3>
+<p><strong>Database Architecture & Reliability</strong></p>
+<ul><li>Architect and operate highly available MySQL (InnoDB Cluster, Group Replication), MongoDB (Replica Sets, Sharded Clusters), MSSQL, and BigQuery environments.</li><li>Lead migrations (version upgrades, cloud transitions to AWS RDS/Aurora, MongoDB Atlas, BigQuery).</li><li>Define and enforce standards, schema design best practices, and governance policies.</li><li>Drive SLIs, SLOs, and error budgets for mission-critical data services.</li></ul>
+<p><strong>Performance Engineering</strong></p>
+<ul><li>Optimize queries, indexes, and workloads using advanced profiling tools across MySQL, MongoDB, MSSQL, and BigQuery.</li><li>Tune InnoDB internals, buffer pools, shard keys, working sets, and query execution plans.</li><li>Resolve bottlenecks across CPU, memory, and I/O.</li><li>Implement advanced monitoring and alerting (PMM, Ops Manager, Grafana, Datadog).</li></ul>
+<p><strong>Operational Excellence & Automation</strong></p>
+<ul><li>Automate backup/recovery (XtraBackup, mysqldump/mysqlpump, Ops Manager, filesystem snapshots, MSSQL native tools).</li><li>Champion Infrastructure-as-Code (Terraform, Ansible, Kubernetes Operators).</li><li>Implement Change Data Capture (CDC) pipelines using Debezium and integrate with downstream systems.</li><li>Enforce strong security: authentication, authorization, encryption, auditing.</li><li>Conduct DR drills, capacity planning, and maintain clear documentation/runbooks.</li><li>Continuously reduce operational toil through automation and engineering solutions.</li></ul>
+<p><strong>Collaboration & Incident Response</strong></p>
+<ul><li>Partner with DevOps/SRE teams to integrate DB ops into CI/CD pipelines.</li><li>Mentor engineers on database best practices.</li><li>Participate in on-call rotations, lead incident response, and write clear, blameless RCAs.</li><li>Work closely with product and platform teams to influence system design through the lens of scale, resilience, and cost efficiency.</li></ul>
+<h3>What We're Looking For</h3>
+<p><strong>Core Engineering</strong></p>
+<ul><li>Strong foundations in Linux/Unix, networking (DNS, TCP/IP), and distributed systems.</li><li>Proficiency in Python, Bash, or JavaScript for automation and tooling.</li><li>Clean Git practices and strong software engineering discipline.</li></ul>
+<p><strong>Databases</strong></p>
+<ul><li>Deep expertise in MySQL and MongoDB.</li><li>Proven experience with HA/DR setups, replication, and performance tuning.</li><li>Backup/recovery expertise with XtraBackup, mongodump, Ops Manager, MSSQL native tools.</li><li>Working knowledge of PostgreSQL, Redis, Elasticsearch, Cassandra, and BigQuery.</li><li>Experience building and operating CDC pipelines with Debezium.</li></ul>
+<p><strong>Infrastructure & Tooling</strong></p>
+<ul><li>Infrastructure as Code using Terraform (required).</li><li>Configuration and automation using Ansible/Chef (preferred).</li><li>CI/CD integration with Jenkins, GitLab CI, GitHub Actions.</li></ul>
+<p><strong>Observability & Reliability</strong></p>
+<ul><li>Metrics and alerting: PMM, Prometheus, Grafana, Alertmanager.</li><li>Tracing/APM: Datadog, New Relic, OpenTelemetry.</li><li>Incident management experience (PagerDuty or equivalent).</li></ul>
+<h3>Nice to Have</h3>
+<ul><li>Experience with managed database services (AWS RDS/Aurora, MongoDB Atlas, BigQuery).</li><li>Exposure to DevSecOps and cloud security.</li><li>Experience operating high-traffic, consumer-facing systems.</li><li>Relevant certifications (MongoDB Certified DBA, Oracle MySQL DBA, MSSQL certifications).</li><li>Strong written communication (design docs, RFCs, runbooks).</li></ul>
+<h3>What Success Looks Like at Lenskart</h3>
+<ul><li>Databases that are reliable, scalable, and boring in production.</li><li>Faster delivery with fewer incidents.</li><li>Strong developer trust in the data platform.</li><li>Systems that scale seamlessly with business growth.</li></ul>
+<h3>Why Lenskart</h3>
+<ul><li>Real-world scale with tangible customer impact.</li><li>Strong engineering ownership and autonomy.</li><li>Opportunity to shape data platforms used across the company.</li><li>A culture that values craft, clarity, and engineering excellence.</li></ul>
+`.trim(),
+        location: "Gurgaon",
+        department: "Data & Analytics",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/64/",
+      },
+      {
+        slug: "lenskart-senior-manager-network-security",
+        title: "Senior Manager - Network and Security",
+        description: `
+<p>We are looking for a <strong>Senior Manager</strong> — server platforms, network architecture, security tooling, identity management, and plant IT operations — to lead and manage our enterprise IT backbone.</p>
+<h3>Key Responsibilities</h3>
+<ul><li>Manage on-prem and cloud servers, ensuring high availability and performance</li><li>Own backup, disaster recovery, patching, and infrastructure lifecycle management</li><li>Lead enterprise network operations (LAN/WAN/VPN/Firewalls)</li><li>Ensure network security, uptime, and performance across offices and plants</li><li>Own and administer security platforms including <strong>Netskope, DLP, and Email Security</strong></li><li>Implement security controls, monitor threats, and manage incident response</li><li>Manage <strong>Azure AD, Active Directory, DNS</strong>, and access controls</li><li>Oversee application access management for platforms like <strong>D365, Nexus, Sprinklr</strong>, and others</li><li>Lead IT server and network operations for plant locations</li><li>Visit plants as required to support critical issues and audits</li><li>Manage OEMs, MSPs, and security vendors</li><li>Partner with business and IT stakeholders to support new initiatives</li></ul>
+<h3>What We're Looking For</h3>
+<ul><li>12–15+ years of experience in IT Infrastructure, Network, and Security</li><li>Strong hands-on knowledge of servers, networks, and cybersecurity tools</li><li>Experience with <strong>Azure AD, enterprise security platforms, and backup solutions</strong></li><li>Exposure to <strong>manufacturing / plant IT environments</strong> is a plus</li><li>Strong ownership, leadership, and incident management skills</li></ul>
+`.trim(),
+        location: "Gurgaon",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/69/",
+      },
+      {
+        slug: "lenskart-plant-it-support-executive",
+        title: "Plant IT Support Executive",
+        description: `
+<h3>Role Summary</h3>
+<p>The IT Support Engineer will be responsible for providing end-to-end technical support for all plant-level IT systems including production floor equipment, hardware, network infrastructure, shop-floor applications, and user devices. They will ensure high system uptime, timely troubleshooting, preventive maintenance, and adherence to IT standards, while supporting day-to-day operations critical to manufacturing continuity.</p>
+<h3>Key Responsibilities</h3>
+<p>Technical Support</p>
+<ul><li>Provide first-line and second-line support for desktops, laptops, printers, scanners, handhelds, PLC-connected systems, and production terminals.</li><li>Diagnose and resolve hardware, software, and network issues raised by plant users.</li><li>Install, configure, and maintain Windows OS, industrial applications, and security software.</li></ul>
+<p>Manufacturing Systems & Applications</p>
+<ul><li>Support MES, SCADA/HMI interfaces, SAP/ERP access, and shop-floor automation devices.</li><li>Troubleshoot connectivity between OT (Operational Technology) and IT systems.</li><li>Coordinate installation, updates, and patching for plant-critical applications.</li></ul>
+<p>Network and Infrastructure</p>
+<ul><li>Manage LAN/WAN connectivity, Wi-Fi access points, switches, CCTV monitoring, access control systems, and IP telephony.</li><li>Coordinate with central IT for firewall policies and network security.</li></ul>
+<p>Maintenance & Compliance</p>
+<ul><li>Perform periodic preventive maintenance across plant systems.</li><li>Maintain asset inventory, AMC records, and compliance documentation.</li><li>Support IT audits, data backup, antivirus deployment, and patch compliance.</li></ul>
+<p>User Support & Training</p>
+<ul><li>Provide technical guidance to employees on system usage, safety, and best practices.</li><li>Conduct basic training sessions for plant and office staff.</li></ul>
+<p>Vendor & Stakeholder Coordination</p>
+<ul><li>Liaise with vendors for equipment servicing, component replacement, and AMC.</li><li>Work with cross-functional teams (production, maintenance, quality) to ensure smooth operations.</li></ul>
+<h3>Required Skills and Competencies</h3>
+<ul><li>Strong knowledge of Windows OS, Active Directory, user management.</li><li>Basic understanding of networking (TCP/IP, DNS, DHCP, VLANs).</li><li>Experience supporting manufacturing environments, OT/IT integration (preferred).</li><li>Hands-on exposure to industrial peripherals, barcode systems, production terminals.</li><li>Familiarity with CCTV, access control, printers, handheld devices.</li><li>Good analytical and troubleshooting capabilities.</li><li>Ability to prioritize and resolve issues under time pressure.</li></ul>
+<h3>Qualifications</h3>
+<ul><li>Bachelor's degree in Computer Science, IT, Electronics, or related field.</li><li>2 to 5 years of IT support experience, preferably in a manufacturing plant.</li><li>Certifications such as CompTIA A+, N+, CCNA, or Microsoft MCP are a plus.</li></ul>
+`.trim(),
+        location: "Bhiwadi",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/70/",
+      },
+      {
+        slug: "lenskart-it-support-executive",
+        title: "IT Support Executive",
+        description: `
+<h3>Role Summary</h3>
+<p>The IT Support Engineer will be responsible for providing end-to-end technical support for all plant-level IT systems including production floor equipment, hardware, network infrastructure, shop-floor applications, and user devices. They will ensure high system uptime, timely troubleshooting, preventive maintenance, and adherence to IT standards, while supporting day-to-day operations critical to manufacturing continuity.</p>
+<h3>Key Responsibilities</h3>
+<p>Technical Support</p>
+<ul><li>Provide first-line and second-line support for desktops, laptops, printers, scanners, handhelds, PLC-connected systems, and production terminals.</li><li>Diagnose and resolve hardware, software, and network issues raised by plant users.</li><li>Install, configure, and maintain Windows OS, industrial applications, and security software.</li></ul>
+<p>Manufacturing Systems & Applications</p>
+<ul><li>Support MES, SCADA/HMI interfaces, SAP/ERP access, and shop-floor automation devices.</li><li>Troubleshoot connectivity between OT (Operational Technology) and IT systems.</li><li>Coordinate installation, updates, and patching for plant-critical applications.</li></ul>
+<p>Network and Infrastructure</p>
+<ul><li>Manage LAN/WAN connectivity, Wi-Fi access points, switches, CCTV monitoring, access control systems, and IP telephony.</li><li>Coordinate with central IT for firewall policies and network security.</li></ul>
+<p>Maintenance & Compliance</p>
+<ul><li>Perform periodic preventive maintenance across plant systems.</li><li>Maintain asset inventory, AMC records, and compliance documentation.</li><li>Support IT audits, data backup, antivirus deployment, and patch compliance.</li></ul>
+<p>User Support & Training</p>
+<ul><li>Provide technical guidance to employees on system usage, safety, and best practices.</li><li>Conduct basic training sessions for plant and office staff.</li></ul>
+<p>Vendor & Stakeholder Coordination</p>
+<ul><li>Liaise with vendors for equipment servicing, component replacement, and AMC.</li><li>Work with cross-functional teams (production, maintenance, quality) to ensure smooth operations.</li></ul>
+<h3>Required Skills and Competencies</h3>
+<ul><li>Strong knowledge of Windows OS, Active Directory, user management.</li><li>Basic understanding of networking (TCP/IP, DNS, DHCP, VLANs).</li><li>Experience supporting manufacturing environments, OT/IT integration (preferred).</li><li>Hands-on exposure to industrial peripherals, barcode systems, production terminals.</li><li>Familiarity with CCTV, access control, printers, handheld devices.</li><li>Good analytical and troubleshooting capabilities.</li><li>Ability to prioritize and resolve issues under time pressure.</li></ul>
+<h3>Qualifications</h3>
+<ul><li>Bachelor's degree in Computer Science, IT, Electronics, or related field.</li><li>2 to 5 years of IT support experience, preferably in a manufacturing plant.</li><li>Certifications such as CompTIA A+, N+, CCNA, or Microsoft MCP are a plus.</li></ul>
+`.trim(),
+        location: "Gurgaon",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/72/",
+      },
+      {
+        slug: "lenskart-commercial-leader",
+        title: "Commercial Leader",
+        description: `
+<h3>Mission Brief: Build Lenskart's Commercial Engine</h3>
+<p>This is a high-impact leadership role focused on transforming how Lenskart buys, negotiates, and manages every rupee of external spend across manufacturing, retail, and corporate categories. You will be the architect of a tech-led, AI-first commercial function that turns procurement from a cost center into a structural margin and growth lever.</p>
+<p>Lenskart spends across hundreds of categories, thousands of suppliers, and multiple geographies and that footprint is compounding as we scale globally. Your mission is to build the systems, frameworks, and team that convert this spend into a durable competitive advantage: delivering step-change cost savings while making procurement faster, more transparent, and more intelligent than anyone else in the industry.</p>
+<p>This is your canvas to define what modern commercial leadership looks like and to build something that outlasts you.</p>
+<h3>Core Mandate: Commercial Transformation & Value Creation</h3>
+<h4>1. Commercial Intelligence Platform (The Builder's Focus)</h4>
+<ul><li>Platform Visionary: Own the strategic vision and rollout of Lenskart's commercial intelligence stack — should-cost models, spend analytics, supplier scorecards, e-sourcing, contract lifecycle, and AI-assisted negotiation insights — moving procurement from spreadsheets and email threads to a real-time decision engine.</li><li>Technical Partnership: Act as the primary business lead, translating sourcing and category requirements into actionable specifications for Tech, Data Science, and Finance Systems teams. Drive enterprise-grade ERP, S2P, and analytics adoption across the function.</li><li>Systems Design Ownership: Define the logic for category strategies, approval workflows, vendor risk scoring, and exception-based management — so that the majority of routine decisions are system-guided and only true exceptions reach human review.</li><li>AI-First Operating Model: Embed AI and ML into every layer of the function — supplier discovery, price prediction, contract intelligence, negotiation playbooks. Set the bar for what an AI-native procurement org looks like.</li></ul>
+<h4>2. Strategic Sourcing & P&L Impact (The Business Focus)</h4>
+<ul><li>Margin Impact: Directly influence gross margin and EBITDA through strategic sourcing, negotiations, demand consolidation, and value engineering across manufacturing inputs, retail spend (store CapEx and OpEx, marketing, logistics), and corporate categories.</li><li>Year-on-Year P&L Delivery: Own and deliver structural year-on-year Store EBITDA cost savings benchmarked to the best in the industry — step-change, not incremental.</li><li>Should-Cost & TCO Discipline: Make should-cost, total-cost-of-ownership, and value engineering the default lens for every major category decision — embedded in tools and workflows, not one-off exercises.</li><li>Supplier Ecosystem: Build a supplier base optimized for cost, quality, speed, and resilience. Drive localization, alternate sourcing, and dual-sourcing strategies to de-risk global supply volatility.</li><li>Strategic Buying: Transition the team from tactical PO-pushing to strategic oversight — system-generated demand signals, dynamic category playbooks, and contracts linked to real-time business KPIs.</li><li>Negotiation Excellence: Be the commercial sharpshooter at the table for the highest-stakes negotiations — and build a team that negotiates with the same rigor.</li></ul>
+<h4>3. Cross-Functional Leadership & Adoption</h4>
+<ul><li>Change Agent: Lead the cultural and technical adoption of the new commercial platform across Finance, Supply Chain, Manufacturing, Retail, and Marketing. Enforce a data-driven, evidence-led decision-making culture and challenge entrenched ways of working.</li><li>Commercial Voice: Be the commercial conscience in planning, budgeting, and capital allocation forums. Bring rigor to make-vs-buy, vendor selection, and CapEx decisions across the business.</li><li>Team Building: Build, mentor, and develop a high-performing commercial team spanning category leaders, sourcing analysts, and platform owners — and create the next generation of commercial leaders for the industry.</li></ul>
+<h3>The Essentials</h3>
+<ul><li>Experience: Proven leadership in procurement, strategic sourcing, or commercial roles, with proven ownership of end-to-end procurement across manufacturing, retail, and corporate spend. Exposure to global or multi-country sourcing is a strong plus.</li><li>Commercial Track Record: Proven history of delivering breakthrough — not incremental — cost savings through strategic sourcing, negotiation, and value engineering at scale. Consistent year-on-year P&L impact, benchmarked against the best in the industry.</li><li>Negotiation Mastery: Track record of leading complex, high-stakes negotiations and building negotiation discipline into the broader team.</li><li>Tech & AI Acumen: Familiarity with enterprise procurement platforms and an open, curious mindset toward leveraging data, ML, and AI in commercial decision-making. A willingness to learn and partner with tech teams matters more than deep technical expertise.</li><li>Education: Bachelor's or Master's degree in Engineering, Supply Chain, Operations, or a quantitative field; MBA preferred.</li></ul>
+<h3>The Mindset</h3>
+<ul><li>Systems & Product Thinking: You see procurement as a product to be built, not a queue to be cleared. You're as comfortable specifying a sourcing platform with engineers as you are negotiating with a Tier-1 supplier.</li><li>Analytical Rigor & Speed: You thrive on spend data, supplier benchmarks, and cost models. You move at the pace of a high-growth tech company — fast, decisive, willing to ship a V1 and improve it.</li><li>Transformational Leadership: You're a compelling commercial voice — capable of driving change across functions, securing alignment from CXOs to category managers, and developing the next generation of commercial talent.</li><li>Hands-On & Outcome-Driven: You don't outsource the hard parts. You're in the room for the toughest negotiations, the messiest data, and the most stuck stakeholders — and you deliver outcomes, not decks.</li><li>Tech-First & AI-First Operator: You default to automation, data, and intelligent systems. You believe the next generation of commercial leaders will be defined by how well they harness AI and you're already building that way.</li></ul>
+`.trim(),
+        location: "Gurgaon",
+        department: "Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/164/",
+      },
+      {
+        slug: "lenskart-ios-engineer",
+        title: "iOS Engineer",
+        description: `
+<ul><li>Design and develop iOS applications using Swift, with a strong focus on performance and usability.</li><li>Build programmatic UIs using UIKit and Auto Layout, ensuring scalable and reusable UI components.</li><li>Understand product requirements and translate them into clean, maintainable, and scalable solutions.</li><li>Take end-to-end ownership of features, including development, testing, and production support.</li><li>Perform Root Cause Analysis (RCA) and resolve production issues in a timely manner.</li><li>Write unit tests to ensure code reliability, edge-case handling, and long-term stability.</li><li>Follow best coding practices, architecture patterns, and iOS development standards.</li><li>Actively contribute to code reviews and continuously improve development processes.</li></ul>
+<h3>Job Requirements</h3>
+<ul><li>3–6 years of software engineering experience, with strong hands-on experience in iOS development using Swift and UIKit.</li><li>Experience collaborating with Product Managers, Designers, and cross-functional teams to define and ship features.</li><li>Strong team player with the ability to multitask and adapt in a fast-paced environment.</li><li>Solid understanding of the software development life cycle (SDLC) and engineering best practices.</li><li>Excellent analytical and problem-solving skills, with the ability to debug and resolve complex issues.</li><li>Good understanding of data structures and algorithms and their practical application.</li><li>Recognised for high-impact contributions or going above and beyond in previous roles.</li><li>Contributions to open-source projects or personal/pet projects demonstrating passion for iOS development.</li></ul>
+<h3>Nice to Have</h3>
+<ul><li>Experience with SwiftUI and modern iOS development patterns.</li><li>Familiarity with CI/CD pipelines for iOS.</li><li>Experience integrating RESTful APIs and handling asynchronous networking.</li><li>Knowledge of common iOS architectural patterns (MVVM, VIPER, etc.).</li><li>Experience with app performance optimization, debugging, and memory management.</li><li>Familiarity with App Store deployment, provisioning profiles, and release management.</li><li>Exposure to analytics, crash reporting, and monitoring tools (e.g., Firebase, Crashlytics).</li></ul>
+`.trim(),
+        location: "Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/171/",
+      },
+      {
+        slug: "lenskart-backend-engineer-java",
+        title: "Backend Engineer - Java",
+        description: `
+<p>Translation of complex functional requirements into technical requirements, implementing and maintaining a coherent and progressive development strategy for our product line. Design, develop, and maintain complex systems using the best of breed development practices and technology.</p>
+<ul>
+<li>Responsible for the overall software development life cycle.</li>
+<li>Delivery of high quality, scalable and extensible systems, and applications on-time and on-budget.</li>
+<li>Adoption and evolution of software engineering practices and tools within the organization. Keep in sync with the latest technology developments and open source offerings, and evaluate and adapt them to solving the business problems of the organization.</li>
+<li>Collaborate with other technology and business teams within the organization to provide efficient, robust solutions to problems.</li>
+<li>Drive and manage the bug triage process. Report on the status of product delivery and quality to management, customer support, and product teams.</li>
+</ul>
+<h3>Requirements</h3>
+<ul>
+<li>Minimum of 4+ years of experience in Java backend development.</li>
+<li>Strong understanding of data structures and algorithms.</li>
+<li>Sound understanding of object-oriented programming and excellent software design skills.</li>
+<li>Good experience of SOA/Microservices/RESTful services and development of N-tier J2EE / Java Spring Boot applications (APIs).</li>
+<li>Strong understanding of database design and SQL (MySQL/MongoDB) development.</li>
+<li>Should have experience with Apache Kafka, RabbitMQ, or other queueing systems.</li>
+<li>Drive discussions to create/improve the product, process, and technology.</li>
+<li>Provide end-to-end solution and design details.</li>
+<li>Lead development of formalized solution methodologies.</li>
+<li>Passion to work in a startup-like environment.</li>
+</ul>
+`.trim(),
+        location: "Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/176/",
+      },
+      {
+        slug: "lenskart-business-strategy-operations",
+        title: "Business Strategy & Operations",
+        description: `
+<p><strong>About the Role</strong></p>
+<p>This is a mandate to take end-to-end ownership of a problem that genuinely matters to Lenskart's next phase of scale - with real ownership, direct access to senior leadership, and the accountability that comes with it. This role is for builders who want to build something new, scale something that's already working, or take an established part of the business to its next order of magnitude. This is the kind of opportunity that can change the trajectory of your career.</p>
+<h3>What You'll Do</h3>
+<ul><li>Take full, end-to-end ownership of a business-critical mandate - not a slice of it, not a support role on it - with full accountability for the outcome</li><li>Set the strategy for your area yourself, in close partnership with senior leadership, rather than executing someone else's plan</li><li>Build and lead the cross functional muscle needed to get there - pulling in Sales, Operations, Supply Chain, Marketing, Finance, and Customer Experience as the problem demands, often without formal authority over those teams</li><li>Use AI as a default part of how you work - for research, analysis, drafting, decision-support and speed. Build AI-driven workflows, automations, and tools to solve problems and remove manual work wherever it makes sense, not just use AI as a personal productivity aid</li><li>Get hands-on wherever the problem is - a boardroom strategy conversation one day, a store floor or a vendor negotiation the next</li><li>Be personally accountable for the outcome, and be recognized accordingly when it moves the needle</li></ul>
+<h3>What We're Looking For</h3>
+<ul><li>Undergraduate degree from an IIT (or equivalent top-tier engineering institute) and/or an MBA from an IIM (or a global top-10 program) - this bar is real and non-negotiable</li><li>6-10 years of experience with at least one stint at a top-tier management consulting firm (McKinsey, BCG, Bain), a bulge-bracket investment bank, or a similarly selective, high rigor environment</li><li>Direct experience having led or personally driven a program, deal, or business line worth $50-100M+ in revenue, cost, or capital impact</li><li>Prior experience as a founder or founding team member of a startup (funded or bootstrapped, successful or not) is a strong plus</li><li>A track record of solving genuinely hard, ambiguous problems at some of the best companies in the world</li><li>Fluency with AI tools as a bare minimum, non-negotiable requirement. You should already be using AI daily to research, analyze, write, and make decisions faster, and be able to build AI-driven workflows, automations, or lightweight agents/tools to solve real problems, not just use AI as a chat assistant</li><li>Excellent written and verbal communication — you can distill complexity into a one-pager a founder can act on immediately</li></ul>
+<h3>What You Can Expect</h3>
+<ul><li>A real, named mandate - not a rotation, not a bench role - with your name on the outcome</li><li>Direct exposure to how a ~$10B+ scale, founder led business makes decisions, and a genuine seat at the table where those decisions get made</li><li>The resources and backing to build, scale, or transform something that matters, plus the pressure and visibility that comes with owning it</li><li>A career defining reference point: the thing you built, not the title you held</li></ul>
+`.trim(),
+        location: "Gurugram / Delhi NCR / Bengaluru",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://ainterviews.com/job_board/lenskart_ho/job/178/",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
