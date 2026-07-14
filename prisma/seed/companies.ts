@@ -3606,6 +3606,278 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "tines",
+    name: "Tines",
+    tagline: "The intelligent workflow platform",
+    about:
+      "Tines is a no-code workflow automation platform that applies AI, automation, and integration to help security, IT, and engineering teams build and run powerful workflows without writing code. Born in security, it's now used across security operations, IT, and engineering teams at companies like Canva, Databricks, Elastic, and McKesson. Founded in 2018, Tines is co-headquartered in Dublin, Ireland and Boston, Massachusetts, and reached a $1.13 billion valuation with its Series C round led by Goldman Sachs and SoftBank in February 2025.",
+    logoUrl: "https://www.tines.com/icons/icon-256x256.png",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "REMOTE",
+    visaSponsorship: false,
+    employeeCountRange: "501-1000",
+    websiteUrl: "https://www.tines.com",
+    categories: ["infrastructure", "devtools"],
+    technologies: ["ruby", "typescript", "aws", "docker"],
+    location: { city: "Dublin", country: "Ireland" },
+    founders: [
+      { name: "Eoin Hinchy", title: "Co-founder & CEO" },
+      { name: "Thomas Kinsella", title: "Co-founder & CCO" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/tines-io/" },
+      { type: "twitter", url: "https://twitter.com/tines_hq" },
+      { type: "youtube", url: "https://www.youtube.com/@TinesHQ" },
+    ],
+    internships: [
+      {
+        slug: "tines-senior-site-reliability-engineer-government-cloud",
+        title: "Senior Site Reliability Engineer - Government Cloud",
+        description: `
+<p>Join the team building and operating the AWS GovCloud environment for Tines' federal customers. You'll own infrastructure-as-code, container pipelines, and day-to-day operations while shaping technical direction and company culture. You can work fully remotely from anywhere in the US, with a preference for being based in the Greater Boston Area.</p>
+<h3>Key Responsibilities</h3>
+<ul>
+<li>Build and operate the AWS GovCloud environment, from foundational network architecture through production-ready infrastructure</li>
+<li>Design and implement repeatable infrastructure-as-code for dedicated customer environments</li>
+<li>Own the container image pipeline: building, hardening, scanning, and promoting FIPS-compliant images via CI/CD</li>
+<li>Identify and fix availability risks; ensure environments remain healthy, observable, and auditable</li>
+<li>Work with assessment partners on FedRAMP authorization documentation and architecture diagrams</li>
+<li>Enable product engineers building features across commercial and government environments</li>
+<li>Define separation of compliance-restricted functions from day-to-day engineering operations</li>
+<li>Support self-hosted federal customers in a CMMC environment; handle escalations and on-call responsibilities</li>
+</ul>
+<h3>Required Qualifications</h3>
+<ul>
+<li>5+ years in infrastructure, DevOps, or cloud engineering with meaningful AWS experience</li>
+<li>Hands-on experience designing VPC architectures and operating AWS services in production</li>
+<li>Infrastructure-as-code experience (CDK or Terraform) in compliance environments</li>
+<li>Understanding of compliance-regulated environments (FedRAMP, FISMA, or similar)</li>
+<li>Comfort with container image pipelines and hardening practices</li>
+<li>Clear writing skills for technical documentation and assessments</li>
+<li>Broad technical foundation and willingness to learn across the stack</li>
+</ul>
+<p><strong>Salary Range:</strong> $210,000 - $220,000 + equity</p>
+`.trim(),
+        location: "United States - East (Remote)",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/tines/jobs/6019545004",
+      },
+      {
+        slug: "tines-senior-software-engineer-government-cloud",
+        title: "Senior Software Engineer - Government Cloud",
+        description: `
+<p>Tines is seeking a software engineer to join the team bringing Tines to federal customers in AWS GovCloud. The role focuses on building product features and tooling that let Tines run seamlessly in compliance-regulated environments while preserving the experience commercial users get. You can work fully remotely from anywhere in the US, with a preference for being based in the Greater Boston Area.</p>
+<h3>What You Will Be Doing</h3>
+<ul>
+<li>Design, build, and harden product features within compliance-regulated cloud environments, with emphasis on security controls, data privacy, and auditability</li>
+<li>Build AWS GovCloud-specific features including federal authentication methods, audit capabilities, and tenant operation tooling</li>
+<li>Create abstractions that reduce friction for engineers authoring and testing government cloud features without direct access</li>
+<li>Enable seamless feature development across commercial and government environments through observability and logging solutions</li>
+<li>Analyze applications for security gaps and implement hardening measures meeting government standards</li>
+<li>Collaborate cross-functionally to translate compliance requirements into engineering solutions</li>
+<li>Mentor engineers on secure design patterns for regulated environments</li>
+<li>Support self-hosted federal customers and handle on-call responsibilities</li>
+</ul>
+<h3>Key Requirements</h3>
+<ul>
+<li>Approximately 7+ years of professional software engineering experience as a senior-level engineer</li>
+<li>Direct experience building software using high-level programming languages</li>
+<li>Experience in compliance-regulated or security-sensitive environments (FedRAMP, FISMA, SOC 2, HIPAA) preferred</li>
+<li>Demonstrated ability reasoning about application-layer security</li>
+<li>Curiosity and eagerness to learn across diverse technical domains</li>
+<li>Customer-focused approach with willingness to investigate complex technical issues</li>
+<li>U.S. citizenship required; applicants must work within the United States</li>
+</ul>
+<p><strong>Target salary range:</strong> $210,000 - $220,000 + equity</p>
+`.trim(),
+        location: "United States (Remote)",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/tines/jobs/6017339004",
+      },
+      {
+        slug: "tines-software-engineer-backend",
+        title: "Software Engineer (back-end)",
+        description: `
+<p>Join the team responsible for scaling the throughput and performance of the backend job processing system and code execution engines that power Tines' intelligent workflows. This role extends beyond coding to shaping technical direction, product, and culture within a collaborative engineering team. You can work fully remotely from anywhere in Ireland, with optional access to Dublin office space.</p>
+<h3>Key Responsibilities</h3>
+<ul>
+<li>Influence technical direction for critical systems</li>
+<li>Deploy production changes within minutes of merging code</li>
+<li>Shape job and code execution at the core of the application</li>
+<li>Write and review high-quality, well-tested code</li>
+<li>Identify improvements in the codebase and team processes</li>
+<li>Own problems through to production, responding to customer feedback</li>
+</ul>
+<h3>Potential Projects</h3>
+<ul>
+<li>Build high-availability systems supporting massive data throughput</li>
+<li>Improve action throughput for scaling customers</li>
+<li>Create job prioritization controls for workflow execution</li>
+<li>Build customer code execution features</li>
+<li>Ensure fair, balanced job execution in multitenant stacks</li>
+<li>Share engineering learnings via blog posts</li>
+</ul>
+<h3>Requirements</h3>
+<ul>
+<li>6+ years of professional software engineering experience</li>
+<li>Background in Linux systems, container runtimes, filesystems, low-level system primitives, or debugging</li>
+<li>Willingness to work across the full stack when needed</li>
+<li>Focus on solving important problems pragmatically</li>
+<li>Collaborative, inclusive approach to teamwork</li>
+</ul>
+<h3>What Tines Values</h3>
+<p>Simplicity, Speed, and Soundness — with an emphasis on sustainable work practices, engineer productivity, and an inclusive culture.</p>
+`.trim(),
+        location: "Ireland (Remote)",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/tines/jobs/6108006004",
+      },
+      {
+        slug: "tines-staff-software-engineer-backend",
+        title: "Staff Software Engineer (backend)",
+        description: `
+<p>Founded in 2018 with co-headquarters in Dublin and Boston, Tines powers some of the world's most important workflows. The intelligent workflow platform applies AI, automation, and integration with human ingenuity to drive real business results, serving customers including Canva, Databricks, Elastic, Kayak, Intercom, and McKesson.</p>
+<p>Join the team responsible for scaling the throughput and performance of the backend job processing system and code execution engines. This role carries an influential voice in shaping technical direction, product, and culture within a small, growing software engineering organization. You can work fully remotely from anywhere in EST states, with a preference for the Boston area.</p>
+<h3>Responsibilities</h3>
+<ul>
+<li>Lead technical direction for critical systems</li>
+<li>Make valuable codebase changes deployed to production within minutes</li>
+<li>Shape job and code execution at the core of the application</li>
+<li>Write and review high-quality, well-tested code</li>
+<li>Identify improvement areas in the codebase and team workflows</li>
+<li>Own problems from conception through production and customer feedback</li>
+<li>Mentor other engineers on the team</li>
+</ul>
+<h3>Projects You Might Work On</h3>
+<ul>
+<li>Build robust, high-availability systems supporting massive data throughput</li>
+<li>Improve action throughput for growing customer scale</li>
+<li>Create controls enabling job prioritization configuration</li>
+<li>Build features allowing customer code execution</li>
+<li>Ensure balanced, fair job execution on multitenant stacks</li>
+<li>Write blog posts sharing engineering learnings with the community</li>
+</ul>
+<h3>Requirements</h3>
+<ul>
+<li><strong>10+ years of professional software engineering experience</strong> with a proven staff-level track record</li>
+<li>Preferred expertise in Linux systems (namespaces, file descriptors, Unix sockets, mounts, networking, process isolation), container runtimes/orchestration, filesystem and storage internals, or low-level system primitives in Rust or Go</li>
+<li>Strong debugging skills for complex kernel, runtime, and storage issues</li>
+<li>Willingness to work across the full stack despite a specialized backend focus</li>
+<li>Commitment to solving important problems pragmatically, with a focus on engineer productivity and developer experience</li>
+</ul>
+<h3>Technology Stack</h3>
+<p>Ruby, Rails, React, TypeScript, Rust, Go, Postgres, Redis, AWS CDK, and Docker.</p>
+<p><strong>Target salary range:</strong> $230,000 - $250,000 + equity</p>
+`.trim(),
+        location: "United States (Remote)",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/tines/jobs/6014045004",
+      },
+      {
+        slug: "tines-senior-product-security-engineer",
+        title: "Senior Product Security Engineer",
+        description: `
+<p>Tines is looking for a Senior Product Security Engineer passionate about building and scaling robust security programs in an AI-forward engineering environment. Reporting to the Head of IT Operations & Information Security, this role leads efforts to mature product security initiatives as the product expands, ensuring security keeps pace with AI-assisted development workflows. This position can be based remotely in the United States.</p>
+<h3>Key Responsibilities</h3>
+<ul>
+<li>Partner with product and engineering teams to integrate security throughout the development lifecycle</li>
+<li>Leverage AI and automation to scale product security coverage across engineering</li>
+<li>Design and implement security controls and architecture that scale with product portfolio growth</li>
+<li>Conduct comprehensive security reviews and threat modeling to identify vulnerabilities, including risks from AI-generated code</li>
+<li>Contribute to vulnerability management, including triaging bug bounty reports and driving remediation</li>
+<li>Develop automated security testing, monitoring, and response capabilities</li>
+<li>Serve as incident responder during security events and lead post-incident reviews</li>
+<li>Champion security awareness and provide technical guidance on secure AI-assisted development</li>
+</ul>
+<h3>Qualifications</h3>
+<ul>
+<li>8+ years in application or product security roles with cloud-native application expertise</li>
+<li>Strong understanding of modern application security principles, OWASP Top 10, and secure SDLC</li>
+<li>Experience leveraging AI and automation to scale security programs</li>
+<li>Cloud security expertise (AWS preferred) and containerized environment experience</li>
+<li>Proficiency in modern programming languages; Ruby, TypeScript, and/or Rust highly desirable</li>
+<li>Knowledge of security testing methodologies (SAST, DAST, SCA) and CI/CD security integration</li>
+<li>Strong incident response skills and on-call rotation experience</li>
+</ul>
+<h3>Nice to Haves</h3>
+<ul>
+<li>Experience securing AI/ML systems and LLM-powered features, including LLM red-teaming and AI threat modeling</li>
+<li>Hands-on agentic or automated security workflow building</li>
+<li>Open-source security contributions or security research participation</li>
+<li>Bug bounty triage or VDP/bug bounty program management</li>
+<li>Multi-tenant SaaS security or FedRAMP/DoD Impact Level environment experience</li>
+</ul>
+<p><strong>Target Annual Compensation:</strong> $218,000 - $235,000 + equity</p>
+<p>Applicants for this opportunity must be authorized to work for any employer in the U.S. Tines is unable to sponsor or take over sponsorship of an employment visa at this time.</p>
+`.trim(),
+        location: "United States (Remote)",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/tines/jobs/6011382004",
+      },
+      {
+        slug: "tines-senior-security-operations-engineer",
+        title: "Senior Security Operations Engineer",
+        description: `
+<p>Founded in 2018 with co-headquarters in Dublin and Boston, Tines powers some of the world's most important workflows, applying AI, automation, and integration with human ingenuity to drive real business results.</p>
+<p>Tines is looking for a Senior Security Operations Engineer passionate about security and automation to help grow and mature its security program, reporting to the Security Operations Manager. You'll have the opportunity to make your mark and build new projects from the ground up.</p>
+<h3>What You'll Be Doing</h3>
+<ul>
+<li>Drive security projects that facilitate the business function and protect customers, brand, and employees</li>
+<li>Stay apprised of security trends and incidents, reviewing and implementing controls based on lessons learned</li>
+<li>Perform security reviews of infrastructure and product features to ensure high standards</li>
+<li>Assist with updating policies and procedures to maintain Tines' security standards</li>
+<li>Scale detection and response capabilities across the environment and systems</li>
+<li>Track and drive vulnerability remediation across production and corporate environments, partnering with engineering and infrastructure teams</li>
+<li>Assist with security training and keeping employees up to date on the latest threats</li>
+<li>Act as an escalation point for automated detections raised for human review, and proactively hunt for threats</li>
+<li>Perform regular on-call duties, including incident commander responsibilities during security incidents</li>
+<li>Ensure security controls are deployed and tested across cloud environments and corporate endpoints — automating as much of this as possible using Tines itself</li>
+</ul>
+<h3>What You Bring</h3>
+<ul>
+<li>8+ years in a security role managing complex cloud environments</li>
+<li>Deep familiarity with cloud security, including deploying, managing, securing, and monitoring services in AWS or Azure</li>
+<li>Familiarity with securing container technologies like Docker, AWS ECS, and Kubernetes</li>
+<li>Skilled with AWS (or similar) security management and monitoring tools such as CloudTrail, GuardDuty, CloudWatch, Security Hub, Inspector, and Config</li>
+<li>Experience implementing and monitoring controls around frameworks such as SOC2, ISO, CMMC, and FedRAMP</li>
+<li>Background automating security tasks with SOAR tools and/or languages like Python/Go</li>
+<li>Knowledge of command-line, log analysis, common attacks, and OS hardening for Linux and macOS</li>
+<li>Experience working an on-call rotation in a fast-paced environment</li>
+</ul>
+<p><strong>Target Salary:</strong> $160,000 - $170,000</p>
+<p>Due to the nature of this role and associated U.S. Government customer requirements, applicants must be U.S. citizens and must perform work while located within the United States.</p>
+`.trim(),
+        location: "United States (Remote)",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/tines/jobs/5973812004",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
