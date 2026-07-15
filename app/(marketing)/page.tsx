@@ -14,16 +14,17 @@ import {
 import { Button } from "@/components/ui/button";
 import { WindowChrome } from "@/components/shared/WindowChrome";
 import { StatTile } from "@/components/shared/StatTile";
-import { InternshipCard } from "@/components/shared/InternshipCard";
 import { CompanyLogo } from "@/components/shared/CompanyLogo";
-import { listInternships } from "@/features/internships/queries";
+import { PostingCard } from "@/components/shared/PostingCard";
+import { HorizontalCarousel } from "@/components/shared/HorizontalCarousel";
+import { getPostingsOfTheDay } from "@/features/internships/queries";
 import {
   getPlatformStats,
   getFeaturedLogos,
   type PlatformStats,
   type FeaturedLogo,
 } from "@/features/stats/queries";
-import type { InternshipCard as InternshipCardDTO } from "@/types";
+import type { PostingOfTheDay } from "@/types";
 
 /** "1,240" for small numbers; "12K+" once it's worth rounding. Never inflates. */
 function formatCount(n: number): string {
@@ -84,40 +85,23 @@ export default async function LandingPage() {
     countries: 0,
   };
   let logos: FeaturedLogo[] = [];
-  let latestRoles: InternshipCardDTO[] = [];
+  let postings: PostingOfTheDay[] = [];
 
   try {
-    const [s, l, roles] = await Promise.all([
+    const [s, l, p] = await Promise.all([
       getPlatformStats(),
       getFeaturedLogos(12),
-      // Over-fetch, then keep at most one role per company so the strip shows a
-      // spread of startups instead of four listings from one bulk importer.
-      listInternships({ page: 1, pageSize: 24, sort: "recent" }),
+      getPostingsOfTheDay(8),
     ]);
     stats = s;
     logos = l;
-
-    const seen = new Set<string>();
-    for (const role of roles.data) {
-      if (seen.has(role.companyId)) continue;
-      seen.add(role.companyId);
-      latestRoles.push(role);
-      if (latestRoles.length === 4) break;
-    }
-    // If fewer than 4 distinct companies exist, backfill to keep the row full.
-    if (latestRoles.length < 4) {
-      for (const role of roles.data) {
-        if (latestRoles.some((r) => r.id === role.id)) continue;
-        latestRoles.push(role);
-        if (latestRoles.length === 4) break;
-      }
-    }
+    postings = p;
   } catch {
     // DB unreachable — hero renders with zeros and the thin sections hide below.
   }
 
   const showLogos = logos.length >= 6;
-  const showRoles = latestRoles.length >= 3;
+  const showPostings = postings.length >= 3;
 
   return (
     <>
@@ -224,14 +208,14 @@ export default async function LandingPage() {
         </section>
       )}
 
-      {/* ── Open roles right now ─────────────────────────────────────── */}
-      {showRoles && (
+      {/* ── Postings of the day ──────────────────────────────────────── */}
+      {showPostings && (
         <section className="mx-auto max-w-wide px-4 py-10 sm:px-6">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <span className="retro-eyebrow">Hiring now</span>
+              <span className="retro-eyebrow">Postings of the Day</span>
               <h2 className="mt-3 font-display text-3xl font-bold text-neutral-950">
-                Open right now
+                Hand-picked opportunities worth your attention
               </h2>
             </div>
             <Link
@@ -241,11 +225,11 @@ export default async function LandingPage() {
               View all <ArrowRight className="size-3.5" aria-hidden />
             </Link>
           </div>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {latestRoles.map((role) => (
-              <InternshipCard key={role.id} internship={role} />
+          <HorizontalCarousel className="mt-6">
+            {postings.map((posting) => (
+              <PostingCard key={posting.id} posting={posting} />
             ))}
-          </div>
+          </HorizontalCarousel>
         </section>
       )}
 

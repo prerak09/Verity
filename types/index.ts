@@ -311,6 +311,23 @@ export interface InternshipDetail extends InternshipCard {
   updatedAt: string;
 }
 
+/** Landing-page "Postings of the Day" carousel — a lighter slice than
+ *  InternshipCard, with the extra fields (applyUrl, createdAt, bookmarkCount)
+ *  that section needs and none of the ones it doesn't. */
+export interface PostingOfTheDay {
+  id: string;
+  slug: string;
+  title: string;
+  companySlug: string;
+  companyName: string;
+  companyLogoUrl: string | null;
+  location: string | null;
+  remotePolicy: RemotePolicy | null;
+  applyUrl: string;
+  createdAt: string; // ISO
+  bookmarkCount: number;
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Student DTOs (PRD §14.1)
 // ─────────────────────────────────────────────────────────────────────────────

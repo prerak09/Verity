@@ -9,6 +9,7 @@ import type {
   InternshipDetail,
   InternshipFilters,
   Paginated,
+  PostingOfTheDay,
 } from "@/types";
 
 const DEFAULT_PAGE_SIZE = 20;
@@ -181,4 +182,52 @@ export async function listAllInternshipsForAdmin(
     },
   });
   return internships.map((i) => toInternshipCard(i, i.company));
+}
+
+/** Landing-page "Postings of the Day" — most recent listings, one per company
+ *  so the carousel shows a spread of startups rather than a bulk importer's
+ *  whole batch (same over-fetch-then-dedupe shape as listInternships' callers
+ *  use for the "Open right now" strip). */
+export function getPostingsOfTheDay(limit = 8): Promise<PostingOfTheDay[]> {
+  return unstable_cache(
+    () => getPostingsOfTheDayUncached(limit),
+    ["postings-of-the-day", String(limit)],
+    { tags: ["internships:list"], revalidate: 60 },
+  )();
+}
+
+async function getPostingsOfTheDayUncached(
+  limit: number,
+): Promise<PostingOfTheDay[]> {
+  const rows = await db.internship.findMany({
+    where: LISTED_WHERE,
+    orderBy: { createdAt: "desc" },
+    take: 40,
+    include: {
+      company: { select: { id: true, slug: true, name: true, logoUrl: true } },
+      _count: { select: { bookmarks: true } },
+    },
+  });
+
+  const seen = new Set<string>();
+  const postings: PostingOfTheDay[] = [];
+  for (const i of rows) {
+    if (seen.has(i.company.id)) continue;
+    seen.add(i.company.id);
+    postings.push({
+      id: i.id,
+      slug: i.slug,
+      title: i.title,
+      companySlug: i.company.slug,
+      companyName: i.company.name,
+      companyLogoUrl: i.company.logoUrl,
+      location: i.location,
+      remotePolicy: i.remotePolicy,
+      applyUrl: i.applyUrl,
+      createdAt: i.createdAt.toISOString(),
+      bookmarkCount: i._count.bookmarks,
+    });
+    if (postings.length === limit) break;
+  }
+  return postings;
 }
