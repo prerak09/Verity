@@ -5083,6 +5083,318 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "swiggy",
+    name: "Swiggy",
+    tagline: "India's on-demand convenience platform",
+    about:
+      "Swiggy is India's leading on-demand convenience platform, spanning hyperlocal food delivery, quick commerce (Instamart), package delivery (Genie), and restaurant discovery (Dineout). Founded in 2014 by Sriharsha Majety and Nandan Reddy, Swiggy processes millions of orders daily across thousands of Indian cities and listed on the NSE and BSE in November 2024, valuing the company at over $11 billion at IPO. It's headquartered in Bengaluru, India.",
+    logoUrl: "https://careers.swiggy.com/assets/img/swiggy_favicon.png",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.swiggy.com",
+    categories: ["consumer", "logistics"],
+    technologies: ["java", "python", "react-native", "aws"],
+    location: { city: "Bengaluru", country: "India" },
+    founders: [
+      { name: "Sriharsha Majety", title: "Co-founder & CEO" },
+      { name: "Nandan Reddy", title: "Co-founder" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/swiggy" },
+      { type: "twitter", url: "https://twitter.com/swiggy_in" },
+    ],
+    internships: [
+      {
+        slug: "swiggy-senior-security-operations-engineer",
+        title: "Software Dev Engineer II",
+        description: `
+<p><strong>Job Profile: -</strong> Software Development Engineer II</p>
+<p><strong>Years of Experience:</strong> 3 - 5</p>
+<p><strong>Location:</strong> Bangalore</p>
+<p><strong>Position Overview:</strong></p>
+<p>We're looking for a Senior Security Operations Engineer to join our Security team. You'll own offensive security programs, lead penetration testing initiatives, and help build a security-first culture across engineering. This role sits at the intersection of traditional AppSec and emerging AI security threats — you'll be one of the few people in the industry who gets to define what "secure AI" looks like in practice.</p>
+<p><strong>What qualities are we looking for?</strong></p>
+<p><strong>Must-Have</strong></p>
+<ul><li>4+ years in security engineering, with at least 2 years of hands-on penetration testing</li><li>Demonstrated experience with AI/LLM security — prompt injection, model manipulation, or MCP security assessments</li><li>Strong proficiency in web app and API pentesting (OWASP Top 10, business logic flaws, auth bypasses)</li><li>Solid scripting ability in Python, Go, or Bash to build custom tooling</li><li>Experience with cloud security (AWS, GCP, or Azure) — misconfigurations, IAM abuse, lateral movement</li><li>Familiarity with CI/CD security tooling — integrating SAST/DAST/SCA into pipelines</li><li>Experience conducting risk assessments and communicating findings to non-technical stakeholders</li></ul>
+<p><strong>Good to Have</strong></p>
+<ul><li>Bug bounty track record or CVE publications</li><li>Experience with agentic AI frameworks (LangChain, AutoGPT, Claude Agents) from an attacker's perspective</li><li>Knowledge of compliance frameworks: SOC 2, ISO 27001, PCI-DSS</li></ul>
+<p><strong>What will you get to do here?</strong></p>
+<p><strong>Penetration Testing (Primary)</strong></p>
+<ul><li>Lead and execute end-to-end penetration tests across web applications, APIs, internal services, and cloud infrastructure</li><li>Design and run red team exercises simulating real-world adversarial scenarios</li><li>Perform threat modeling on new product features and architectures before they ship</li><li>Develop custom exploits, scripts, and tooling to improve test coverage and repeatability</li><li>Produce clear, actionable pentest reports for both engineering and leadership audiences</li><li>Manage third-party pentest vendors and coordinate responsible disclosure programs</li></ul>
+<p><strong>AI & LLM Security</strong></p>
+<ul><li>Research and execute attacks against AI/LLM-powered systems — prompt injection, jailbreaks, indirect prompt injection via tool outputs, and data exfiltration through model responses</li><li>Assess security risks in Model Context Protocol (MCP) deployments — evaluate tool call boundaries, context poisoning vectors, and privilege escalation through agentic workflows</li><li>Build an internal threat library for AI attack patterns and maintain a red-teaming playbook for LLM features</li><li>Partner with ML and product teams to bake security into the AI feature development lifecycle</li></ul>
+<p><strong>DevSecOps</strong></p>
+<ul><li>Embed security controls into CI/CD pipelines — SAST, DAST, SCA, secret scanning, and container scanning</li><li>Define and enforce secure coding standards and review gates across teams</li><li>Champion security automation so engineers can move fast without introducing critical vulnerabilities</li></ul>
+<p><strong>Risk Assessment (Supporting)</strong></p>
+<ul><li>Assess and prioritize security risks across the organization using frameworks such as CVSS, DREAD, or FAIR</li><li>Maintain a live risk register; track remediation progress and report risk posture to leadership</li><li>Evaluate risks introduced by third-party vendors, integrations, and open-source dependencies</li><li>Quantify business impact of vulnerabilities to support data-driven remediation prioritization</li></ul>
+<p><strong>Compliance & Governance (Supporting)</strong></p>
+<ul><li>Assist in security audits and gap assessments</li><li>Help define and maintain security policies, standards, and exception processes</li></ul>
+<p><strong>Visit our tech blogs to learn more about some the challenges we deal with:</strong></p>
+<p><a href="https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6</a></p>
+<p><a href="https://bytes.swiggy.com/swiggy-distance-service-9868dcf613f4" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/swiggy-distance-service-9868dcf613f4</a></p>
+<p><a href="https://bytes.swiggy.com/the-tech-that-brings-you-your-food-1a7926229886" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/the-tech-that-brings-you-your-food-1a7926229886</a></p>
+<p>We are an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, colour, religion, sex, disability status, or any other characteristic protected by the law.</p>
+`.trim(),
+        location: "Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://careers.swiggy.com/#/careers?career_page_category=Technology",
+      },
+      {
+        slug: "swiggy-engineering-manager",
+        title: "Engineering Manager",
+        description: `
+<p><strong>Job Profile</strong>: Engineering Manager</p>
+<p><strong>Location</strong>: Bangalore | Karnataka</p>
+<p><strong>Years of Experience</strong>: 8 - 10</p>
+<p><strong>ABOUT THE TEAM & ROLE:</strong></p>
+<p><strong>Engineering Managers</strong> in Swiggy contribute not only to the high-level architecture of several systems but also to the product's overall success by driving technology and best practices in engineering in their respective teams.</p>
+<p>They establish technology vision for respective teams and demonstrate how to solve a deeply complex and hard technical challenge, and help communicate that vision upward (CTO), inward (peers and engineering team) and outward (product & business teams).</p>
+<p><strong>What will you get to do here?</strong></p>
+<ul><li>Engineering Manager at Swiggy will work closely with the Product Management, Business, Development, Design and Operations team, enabling them by providing scalable and high quality technology solutions at a rapid pace.</li><li>They co-own the technology vision of the respective team and significantly contribute to the overall success of the team</li><li>You will manage your business goals, contribute to product strategy and help develop your team</li><li>Create clear career paths for team members and help them grow</li><li>Architect & design technically robust, flexible and scalable solution</li><li>Set up best practices for development and champion their adoption at the same time</li></ul>
+<p><strong>What qualities are we looking for?</strong></p>
+<ul><li>We are looking for a passionate, entrepreneurial, hands-on Engineering Manager to join the Bangalore Swiggy Engineering team</li><li>8-10 years of experience in developing products with 1+ years in leading a team of 5+</li><li>In this role, you will be responsible for leading a team of application and front-end / back-end engineers to drive innovation in full-stack product development, while relentlessly improving performance, scalability, and maintainability.</li><li>Technically hands-on, prior experience with scalable architecture managing a team of (5-10)</li><li>Coaching, mentoring managers and architects in the team. Good team management skills with ability to multitask, strong problem solving and analytical skills</li><li>Experience working with Product Managers and UX Designers</li><li>Experience with web technologies, Java/Golang, MySQL, NoSql, redis, Python, Linux, AWS etc.</li><li>Experience with high performance websites catering to millions of daily traffic is a plus with an ability to bring in software engineering life cycle best practices</li></ul>
+<p><strong>Visit our tech blogs to learn more about some of the challenging problem statements the team works at:</strong></p>
+<ul><li><a href="https://bytes.swiggy.com/engineering-challenges-at-swiggy-430dea6c86a3" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/engineering-challenges-at-swiggy-430dea6c86a3</a></li><li><a href="https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6</a></li><li><a href="https://bytes.swiggy.com/what-serviceability-means-at-swiggy-c94c1aad352a" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/what-serviceability-means-at-swiggy-c94c1aad352a</a></li><li><a href="https://bytes.swiggy.com/architecture-and-design-principles-behind-the-swiggys-delivery-partners-app-4db1d87a048a" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/architecture-and-design-principles-behind-the-swiggys-delivery-partners-app-4db1d87a048a</a></li><li><a href="https://bytes.swiggy.com/swiggy-distance-service-9868dcf613f4" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/swiggy-distance-service-9868dcf613f4</a></li><li><a href="https://bytes.swiggy.com/the-tech-that-brings-you-your-food-1a7926229886" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/the-tech-that-brings-you-your-food-1a7926229886</a></li></ul>
+<p>We are an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, colour, religion, sex, disability status, or any other characteristic protected by the law.</p>
+`.trim(),
+        location: "Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://careers.swiggy.com/#/careers?career_page_category=Technology",
+      },
+      {
+        slug: "swiggy-staff-data-scientist",
+        title: "Staff Data Scientist",
+        description: `
+<p>Job Role: Staff Data Scientist</p>
+<p>Grade: 9</p>
+<p>Experience Required: 8–12 years</p>
+<p>Location: Bangalore | Karnataka</p>
+<h3>About Swiggy and the Team</h3>
+<p>Swiggy is India's leading on-demand delivery platform, leveraging data science and cutting-edge AI to redefine convenience for millions of customers. The AI team works at the intersection of machine learning, advanced architecture, and applied research to shape AI-first systems that directly impact customer experience and business growth. The team values cross-functional collaboration, open sharing of ideas, and innovation to roll out AI solutions at scale.</p>
+<p>Bring your expertise in building scalable AI systems and leading next-generation Generative AI and Agentic AI initiatives, and join a motivated team making a tangible business impact.</p>
+<h3>About the Role</h3>
+<p>As a Staff Data Scientist, you will lead the design and implementation of cutting-edge AI solutions, focusing on Large Language Models (LLMs), Generative AI applications, and Agentic AI platforms. This role demands expertise in AI-native products, hands-on experience with real-world GenAI deployment, and a clear understanding of trade-offs while building scalable solutions for production environments.</p>
+<p>You will be a pivotal leader in designing and implementing the next generation of AI-first systems at Swiggy. You will act as both a hands-on data scientist and a strategic thinker—working with multi-agent systems, defining operational workflows, and ensuring the alignment of AI capabilities with Swiggy's business vision and customer needs. This role demands a unique blend of deep technical expertise in advanced AI concepts (especially Large Language Models, Generative AI, and Agentic AI) and strong systems thinking to build scalable, high-performance, and cost-effective AI solutions. You will be instrumental in shaping our AI strategy, driving innovation, and ensuring the successful delivery of impactful AI products that directly influence customer experience and business metrics. We foster an environment of open sharing of ideas and encourage contributions to both internal and external forums.</p>
+<h3>What qualities are we looking for?</h3>
+<p><strong>Technical Expertise:</strong></p>
+<ul><li>Overall 8-12 years of experience in AI and Data science with 2–3 years of hands-on experience with Large Language Models (LLMs), Generative AI applications, and Agentic AI architectures (e.g., multi-agent workflows, copilots, autonomous agents).</li><li>Proven track record of building AI-first systems (e.g., conversational agents, copilots).</li><li>Strong system design skills with experience in designing scalable, low-latency AI-powered platforms.</li><li>Familiarity with orchestration tools/technologies like LangGraph, CrewAI, AutoGen, and distributed multi-agent system design.</li><li>Deep understanding of the trade-offs between open-source vs proprietary AI models and related tools.</li><li>Experience building or integrating components such as Ontology Layers, Graph Knowledge Bases, and feedback loops into AI systems.</li></ul>
+<p><strong>Strategic Thinking:</strong></p>
+<ul><li>Expertise in evaluating build-vs-buy options and supporting recommendations with logical explanations.</li><li>Ability to identify scalability, latency, and inference-cost bottlenecks and devise solutions.</li><li>Updated knowledge and insights on the latest tools, frameworks, and trends in AI and multi-agent ecosystems.</li></ul>
+<p><strong>Product Knowledge:</strong></p>
+<ul><li>Strong curiosity and empathy for end-user personas.</li><li>Demonstrates end-to-end product thinking beyond model performance.</li><li>Ability to connect AI capabilities with business KPIs while ensuring ROI on AI investments.</li><li>Experience working closely with Product Managers to identify workflows and bottlenecks, collaboratively defining roadmaps.</li></ul>
+<p><strong>Communication and Leadership:</strong></p>
+<ul><li>Demonstrates the ability to act as a thought partner to product managers and stakeholders.</li><li>Exceptional written and verbal communication skills to align cross-functional teams on objectives, deliverables, and methodologies.</li><li>Thrives in a fast-paced environment with a "Founder Mentality" to move</li><li>Entrepreneurial stint or experience with startups building AI products</li><li>R&D experience with language models</li></ul>
+<p><strong>What will you get to do here?</strong></p>
+<ul><li>Build AI-first systems with a focus on multi-agent systems, LLMs, Generative AI, and Agentic AI workflows.</li><li>Define and build scalable and efficient AI systems with low latency at production scale.</li><li>Design orchestration mechanisms like Ontology Layers and incorporate feedback loops for enriching system capabilities.</li><li>Stay updated on emerging AI frameworks, tools, and technologies, applying learnings to both technological and business problem statements.</li><li>Evaluate and benchmark open-source and proprietary AI frameworks based on cost, scalability, and suitability.</li><li>Collaborate with engineering, product, analysts and business stakeholders to define workflows, address bottlenecks, and create product roadmaps.</li><li>Provide recommendations on AI investments with a critical eye on ROI and business impact.</li><li>Present your work in internal and external forums, thought-leadership events, and research publications.</li></ul>
+<p><strong>Why Join Swiggy?</strong></p>
+<ul><li>Opportunity to work on impactful and challenging projects in the AI domain.</li><li>Chance to build innovative solutions at scale, directly impacting millions of users.</li><li>Collaborative work culture fostering learning, growth, and innovation.</li></ul>
+<p>We believe in promoting equal opportunities and diversity. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, age, or disability.</p>
+<p>Visit our tech blogs to learn more about some of the challenges we deal with:</p>
+<ul><li><a href="https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6" target="_blank" rel="noopener noreferrer">The Swiggy Delivery Challenge Part One</a></li><li><a href="https://bytes.swiggy.com/how-ai-at-swiggy-is-transforming-convenience-eae0a32055ae" target="_blank" rel="noopener noreferrer">How AI at Swiggy is Transforming Convenience</a></li><li><a href="https://bytes.swiggy.com/decoding-food-intelligence-at-swiggy-5011e21dbc86" target="_blank" rel="noopener noreferrer">Decoding Food Intelligence at Swiggy</a></li></ul>
+<p>We are an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, color, religion, sex, disability status, or any other characteristic protected by the law.</p>
+`.trim(),
+        location: "Sumadhura Capitol Towers, Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://careers.swiggy.com/#/careers?career_page_category=Technology",
+      },
+      {
+        slug: "swiggy-software-dev-engineer-ii-react-native",
+        title: "Software Dev Engineer II",
+        description: `
+<p>Job Profile: React Native - Software Development Engineer II</p>
+<p>Location: Bangalore | Karnataka</p>
+<p>Years of Experience: 3 - 5</p>
+<p><strong>ABOUT THE TEAM & ROLE:</strong></p>
+<p>At Swiggy, SDE II(s) play an integral role in owning end-to-end design/architecture of complex systems. They co-own the technology vision of the respective team and significantly contribute to the overall success of the team. They partner with the product/business teams to understand the product features and specifications, translate them into high level and low-level design thereby facilitating the team in design and development of mission critical applications.</p>
+<p><strong>What qualities are we looking for?</strong></p>
+<ul><li>Proficient understanding of React Native and React fundamentals</li><li>Experience and working knowledge of Android native development</li><li>Good understanding of ES6 and above</li><li>Experience with TypeScript is required</li><li>Sound knowledge of design patterns and practices for writing clean, linted, maintainable and reusable code</li><li>Understanding of version control systems like Git</li><li>Experience in using supplementary libraries like Redux, Redux Saga, Zustand, Lerna etc. is a plus</li><li>Experience in TDD (Test Driven Development) for unit testing with libraries like Jest, react-native-testing library etc.</li></ul>
+<p><strong>What will you get to do here?</strong></p>
+<ul><li>Enable best practices to help the team achieve their technical tasks and continually thrive in improving the technology of the product/team</li><li>Develop user-facing features and apps</li><li>Build reusable code and libraries for future use</li><li>Ensure the technical feasibility of UI/UX designs</li><li>Be extremely detail oriented to strive for pixel perfect implementation on all Android devices</li><li>Optimize application for maximum speed and scalability</li><li>Should know the internals of third party libraries being used</li></ul>
+<p><strong>Visit our tech blogs to learn more about some the challenges we deal with:</strong></p>
+<p><a href="https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6</a></p>
+<p><a href="https://bytes.swiggy.com/swiggy-distance-service-9868dcf613f4" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/swiggy-distance-service-9868dcf613f4</a></p>
+<p><a href="https://bytes.swiggy.com/the-tech-that-brings-you-your-food-1a7926229886" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/the-tech-that-brings-you-your-food-1a7926229886</a></p>
+<p>We are an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, colour, religion, sex, disability status, or any other characteristic protected by the law.</p>
+`.trim(),
+        location: "Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://careers.swiggy.com/#/careers?career_page_category=Technology",
+      },
+      {
+        slug: "swiggy-senior-manager-data-science",
+        title: "Senior Manager - Data Science",
+        description: `
+<p><strong>Job Title: Senior Manager, Data Science</strong></p>
+<p><strong>Team:</strong> Data Science</p>
+<p><strong>Location:</strong> Bangalore, India</p>
+<p><strong>About Swiggy</strong></p>
+<p>Swiggy is India's leading on-demand convenience platform, with a mission to elevate the quality of life for the urban consumer by offering unparalleled convenience. From our beginnings as a hyperlocal food delivery service, we have expanded to become a logistics hub for the nation, with services like Swiggy Instamart (quick commerce), Swiggy Genie (package delivery), and Dineout (restaurant discovery and reservations).</p>
+<p>At the heart of this ecosystem is a world-class Data Science team. We are the brain that powers Swiggy, turning petabytes of real-time data into intelligent products and decisions that impact millions of users, delivery partners, and restaurant partners every day.</p>
+<p><strong>About the Team & The Role</strong></p>
+<p>The Swiggy Data Science team is a vibrant group of scientists, engineers, and problem-solvers who are passionate about tackling some of the most complex challenges in machine learning at scale. We work on everything from ETA prediction and delivery partner assignment to personalized recommendations, demand forecasting, and fraud detection.</p>
+<p>We are looking for an experienced and visionary <strong>Data Science Senior Manager</strong> to lead a team of talented data scientists. In this role, you will be a player-coach, blending deep technical expertise with strategic thinking and people leadership. You will own the roadmap for a critical business area, partner with product and engineering leaders, and guide your team to build and deploy ML models that drive direct business impact.</p>
+<p>This isn't just a management role; it's an opportunity to shape the future of convenience in India.</p>
+<p><strong>What You'll Do:</strong></p>
+<ul><li><strong>Lead & Mentor:</strong> Lead, manage, and mentor a team of 8-10 data scientists and machine learning engineers, fostering their career growth and building a culture of innovation, accountability, and excellence.</li><li><strong>Strategic Roadmap & Vision:</strong> Partner with Product, Engineering, and Business leaders to identify high-impact opportunities. You will translate ambiguous business problems into a clear, data-driven strategic roadmap for your team.</li><li><strong>Technical Leadership & Execution:</strong> Oversee the end-to-end machine learning lifecycle—from ideation, data exploration, and model prototyping to deployment, monitoring, and iteration. You will ensure the team adheres to the highest standards of statistical rigor and engineering best practices.</li><li><strong>Problem Solving on Latest Generative AI Solutions:</strong> Guide your team in solving complex problems in personalization, support discovery, and internal productivity.</li><li><strong>Logistics & Fulfillment:</strong> Optimizing the three-way marketplace (ETA prediction, batching, driver assignment, route optimization).</li><li><strong>Discovery & Personalization:</strong> Building recommendation engines, personalized search, and discovery journeys for Food, Instamart, and Dineout.</li><li><strong>Growth & Economics:</strong> Customer segmentation, LTV prediction, churn modeling, and designing optimal pricing and promotion strategies.</li><li><strong>Forecasting & Supply Chain:</strong> Demand forecasting for Instamart, restaurant supply prediction, and inventory management.</li><li><strong>Stakeholder Management & Communication:</strong> Effectively communicate complex technical concepts and the business impact of your team's work to a diverse audience, including senior leadership.</li><li><strong>Hiring & Team Building:</strong> Be a bar-raiser for talent. Actively participate in the hiring process to attract and retain top-tier data scientists.</li></ul>
+<p><strong>What You'll Need (Must-Have Skills):</strong></p>
+<ul><li><strong>Educational Background:</strong> A Bachelor's or Master's in a quantitative field like Computer Science, Statistics, Operations Research, Economics, or a related discipline.</li><li>10+ years of hands-on experience in data science or a machine learning-focused role.</li><li>2+ years of experience in a formal leadership capacity, managing and mentoring data scientists.</li><li><strong>Technical Proficiency:</strong> Expert-level proficiency in Python and its data science libraries (e.g., Pandas, NumPy, Scikit-learn, Matplotlib).</li><li>Deep, hands-on experience with modern machine learning frameworks like TensorFlow, PyTorch, or Keras.</li><li>Strong expertise in SQL and experience with large-scale data processing using tools like Spark, Hive, or Presto.</li><li>A solid understanding of both classical ML and deep learning along with exposure to Generative AI solutions (e.g., CNNs, RNNs, Transformers).</li><li><strong>Core Competencies:</strong> A proven track record of converting vague business questions into well-defined machine learning problems (problem formulation); deep understanding of statistical methods, experimental design (A/B testing), and causal inference (statistical rigor); experience in deploying, monitoring, and maintaining machine learning models in production environments, with familiarity with MLOps principles and tools (e.g., Kubeflow, MLflow) a strong plus (ML systems design).</li><li><strong>Leadership:</strong> Exceptional leadership skills with a passion for developing people and building high-performing teams.</li><li><strong>Communication:</strong> Outstanding communication and presentation skills, with the ability to influence and align cross-functional partners.</li></ul>
+<p><strong>Preferred Qualifications:</strong></p>
+<ul><li>Experience working with real-time, low-latency model deployment and MLOps.</li><li>Strong experience with geospatial data and relevant libraries (e.g., GeoPandas, H3, S2).</li><li>A portfolio of patents or publications in top-tier ML/AI conferences (e.g., NeurIPS, ICML, KDD, ICLR).</li><li>Prior experience leading and scaling a team of scientists.</li></ul>
+<p><strong>Why Join Swiggy?</strong></p>
+<ul><li><strong>Unprecedented Scale:</strong> Work with one of the richest datasets in India, covering user behavior, logistics, geography, and real-time transactions.</li><li><strong>Tangible Impact:</strong> See your models come to life and directly influence the experience of millions of Indians in near real-time. The feedback loop is immediate and gratifying.</li><li><strong>Complex Challenges:</strong> The problems we are solving are not just intellectually stimulating; they are unique to our three-way marketplace and will push the boundaries of your knowledge.</li><li><strong>A Culture of Data:</strong> We are a data-driven organization from top to bottom. Your work will be valued, and your insights will shape our strategy.</li><li><strong>World-Class Team:</strong> Collaborate with a brilliant, diverse, and humble team of data scientists, engineers, and product managers who are among the best in the industry.</li></ul>
+<p>If you are a first-principles thinker who is passionate about solving hard problems in logistics using a blend of optimization and machine learning, we want to talk to you.</p>
+<p>We are an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, color, religion, sex, disability status, or any other characteristic protected by the law.</p>
+`.trim(),
+        location: "Sumadhura Capitol Towers, Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://careers.swiggy.com/#/careers?career_page_category=Technology",
+      },
+      {
+        slug: "swiggy-senior-data-scientist",
+        title: "Senior Data Scientist",
+        description: `
+<p><strong>Job Role</strong>: Senior Data Scientist</p>
+<p><strong>Experience Required</strong>: 6–9 years</p>
+<p><strong>Location</strong>: Bangalore | Karnataka</p>
+<p><strong>About Swiggy and the Team</strong></p>
+<p>Swiggy is India's leading on-demand delivery platform, leveraging data science and cutting-edge AI to redefine convenience for millions of customers. The <strong>Food-DS</strong> team works at the intersection of machine learning, advanced architecture, and applied research to shape AI-first systems that directly impact customer experience and business growth. The team values cross-functional collaboration, open sharing of ideas, and innovation to roll out machine learning and AI solutions at scale. Bring your expertise in making a tangible business impact by building scalable machine learning systems and leading next-generation Generative AI and Agentic AI initiatives.</p>
+<p><strong>About the role</strong></p>
+<p>As a Senior Data Scientist, you will lead the design and implementation of Swiggy's core Machine Learning (ML), Deep Learning (DL), and next-generation AI systems. This role requires deep-rooted expertise in classical ML, DL, large-scale search, and recommendation systems. You will act as a hands-on technical leader, balancing the deployment of cutting-edge systems with influencing business KPIs to enhance the customer experience.</p>
+<p><strong>What Qualities Are We Looking For?</strong></p>
+<p><strong>Technical Expertise</strong></p>
+<ul><li><strong>Experience:</strong> 6–9 years in AI/Data Science, with a proven track record of deploying models in production.</li><li><strong>NLP:</strong> Hands-on experience with transformer-based open-source SLMs and fine-tuning encoder models (e.g., Nomic, RoBERTa, GTE etc.) for specialized tasks.</li><li><strong>Search & RecSys:</strong> Deep expertise in building and scaling large-scale search systems, ranking (learn to rank), and recommendation engines using ML/DL, productionized conversational bots.</li><li><strong>Computer Vision & Multimodal:</strong> Deep understanding of classical computer vision (OCR, segmentation, filtering) and modern image understanding models (CLIP, ViT). Hands-on experience with stable diffusion models is preferred.</li><li><strong>GenAI & Agents:</strong> Fine-tuning SLMs, training SLM/LLM from scratch, understanding of SOTA LLM models and capabilities, multi-agent workflows (e.g., LangGraph, CrewAI, AutoGen), and AI-native "co-pilot" architectures.</li><li><strong>Engineering Excellence:</strong> Strong system design skills for low-latency, high-throughput platforms.</li><li>Experience with vector DBs, graph knowledge bases, and service layer architectures.</li><li>Proficiency in coding skills with prior experience in PySpark, Python, TensorFlow, Torch and version control systems.</li></ul>
+<p><strong>Strategic & Product Thinking</strong></p>
+<ul><li><strong>Optimization:</strong> Ability to evaluate trade-offs between proprietary LLMs vs. fine-tuned open-source models regarding cost, latency, and accuracy.</li><li><strong>ROI Focus:</strong> A "Founder Mentality" that connects model performance to business KPIs and customer experience.</li><li><strong>Collaboration:</strong> Experience partnering with Product Managers to translate complex workflows into technical roadmaps.</li><li>Expertise in evaluating build-vs-buy options and supporting recommendations with logical explanations.</li></ul>
+<p><strong>What Will You Do?</strong></p>
+<ul><li><strong>Architect Hybrid Systems:</strong> Build systems that leverage both Generative AI (agents/LLMs) and traditional ML (ranking/search) to solve complex search and discovery problems.</li><li><strong>Scale High-Performance Models:</strong> Design and train large-scale machine learning and deep learning models for Swiggy's recommendation and ranking pipelines.</li><li><strong>Innovation & Benchmarking:</strong> Stay ahead of the curve by benchmarking emerging trends and contributing to the global AI community through research or blog publications.</li><li><strong>Cross-functional Leadership:</strong> Lead end-to-end projects from problem statements to production, ensuring scalable and cost-effective AI deployments.</li></ul>
+<p><strong>Why Join Swiggy?</strong></p>
+<ul><li><strong>Impact at Scale:</strong> Your models will directly influence the experience of millions of users daily.</li><li><strong>Cutting-Edge Stack:</strong> Work with the latest in agentic AI, vector search, and distributed ML.</li><li><strong>Innovation-First Culture:</strong> A collaborative environment that encourages risk-taking, quick deployments, and continuous learning, collaborating with engineering, product, analysts, and business stakeholders to define workflows, address bottlenecks, and be part of end-to-end product development.</li></ul>
+<p><strong>Product Knowledge:</strong></p>
+<ul><li>Strong curiosity and empathy for end-user personas.</li><li>Demonstrates end-to-end product thinking beyond model performance.</li><li>Ability to connect AI capabilities with business KPIs while ensuring ROI on AI investments.</li><li>Experience working closely with Product Managers to identify workflows and bottlenecks, collaboratively defining roadmaps.</li></ul>
+<p><strong>Communication and Leadership:</strong></p>
+<ul><li>Demonstrates the ability to act as a thought partner to product managers and stakeholders.</li><li>Exceptional written and verbal communication skills to align cross-functional teams on objectives, deliverables, and methodologies.</li><li>Thrives in a fast-paced environment with a "Founder Mentality" to move fast.</li></ul>
+<p>We are an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, color, religion, sex, disability status, or any other characteristic protected by the law.</p>
+`.trim(),
+        location: "Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://careers.swiggy.com/#/careers?career_page_category=Technology",
+      },
+      {
+        slug: "swiggy-forward-deployed-ai-engineer-1",
+        title: "Software Dev Engineer II",
+        description: `
+<p>Job Profile: Software Development Engineer II</p>
+<p>Location: Bengaluru</p>
+<p>Years of Experience: 3 - 5</p>
+<p><strong>ABOUT THE TEAM & ROLE:</strong></p>
+<p>Swiggy is India's largest on-demand platform for food, groceries, and dining. We're one of the few companies where AI meets physical-world execution at scale: predicting demand across 5,000+ dark stores, optimizing millions of deliveries daily, and building agents that operate in real-time with real constraints.</p>
+<p>About the Role:</p>
+<p>Forward Deployed AI Engineers embed with teams across Swiggy to solve their hardest problems using AI. You'll work in small pods, report into the Central AI team, and deploy to where the problems are: supply chain, category ops, marketplace, support, and beyond.</p>
+<p>Think of it as being the AI CTO for the domain you're embedded in.</p>
+<p><strong>What qualities are we looking for?</strong></p>
+<ul><li>Why did availability drop 15% in a zone last week? Build the prediction system that prevents it before it happens.</li><li>Ops teams spend 3 days onboarding new catalog items. Can an agent do it in 20 minutes?</li><li>The Dineout discovery bot answers questions but doesn't learn from mistakes. Make it self-improving.</li><li>Every team wants to build AI products but keeps rebuilding the same infrastructure. Create the foundation they build on.</li><li>Prediction agents for availability, inventory, and demand forecasting</li><li>MCP servers connecting AI to Swiggy's operational systems</li><li>Evaluation frameworks that prove AI impact in production</li><li>Self-improving agents that learn from ops feedback loops</li><li>Reusable skills and subagent libraries that other teams can deploy</li><li>60% embedded with business teams (Instamart, Food, Dineout, Customer Support etc)</li><li>40% Central AI: roadmap input, pattern codification, build platform features</li><li>Rotation model: ~3 month deployments per domain</li><li>Join their standups, map their workflows, find the highest-leverage problems</li><li>Ship production systems that handle real traffic. Not decks, not demos.</li><li>Package what works into skills and playbooks others can use</li><li>Your field learnings directly shape what the Central AI platform builds next</li><li>You've built and deployed agentic AI systems in production, not just notebooks or demos</li><li>Advanced context engineering, evaluation frameworks, and agent harness patterns</li><li>Experience with skills, subagents, tool integration, and orchestration patterns</li><li>You understand the gap between "it works locally" and "it works at scale with real latency and cost constraints"</li><li>You apply first principles thinking to re-imagine existing workflows in an AI native way</li><li>Claude Code, Cursor, or Codex is your primary environment. You ship faster with AI tools than without.</li><li>You think in skills, subagents, and parallel workflows</li><li>You can design an agent architecture, implement it, and iterate based on production feedback</li><li>You've shipped at least one AI system that moved a real business metric. Not incremental, transformative.</li><li>You can show it to us: a repo, a production deployment, metrics before/after, or a recorded demo</li><li>You know what it takes to get from prototype to production</li><li>2+ years shipping production systems with real traffic, real users, real constraints (exceptional freshers who are AI power users with proof of work will also be considered)</li><li>OR: technical founder / early engineer at a startup with demonstrable AI impact</li><li>Trade-off fluency: latency vs accuracy, cost vs reliability, autonomy vs predictability</li><li>Strong in Python or TypeScript, LLMs, orchestration frameworks, system design</li><li>You translate complex AI concepts to non-technical ops teams</li><li>You can lead a discovery session, whiteboard an architecture, and get buy-in in the same meeting</li><li>You write clear documentation that becomes the team's playbook</li><li>You're comfortable context-switching: ops workflows in the morning, architecture reviews in the afternoon</li><li>You find problems worth solving. You don't wait for specs.</li><li>You ship when the path isn't clear</li><li>You're energized by ambiguity and moving fast in complex environments</li></ul>
+<p><strong>What will you get to do here?</strong></p>
+<ul><li>Real problems at real scale: systems that affect millions of orders, thousands of dark stores, and real P&L</li><li>Direct access: no layers between you and the teams you're solving for. You see the problem, you ship the fix.</li><li>Shape the platform: your field work defines what the Central AI team builds. Direct input into roadmap and architecture decisions.</li><li>Founder-like ownership: you're essentially the CTO of AI for your embedded domain</li><li>Career leverage: FDE is the fastest path to becoming a technical leader who understands both AI and operations at scale</li></ul>
+<p><strong>Visit our tech blogs to learn more about some of the challenges we deal with:</strong></p>
+<p>https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6</p>
+<p>https://bytes.swiggy.com/swiggy-distance-service-9868dcf613f4</p>
+<p>https://bytes.swiggy.com/the-tech-that-brings-you-your-food-1a7926229886</p>
+<p>We are an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, colour, religion, sex, disability status, or any other characteristic protected by the law.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://careers.swiggy.com/#/careers?career_page_category=Technology",
+      },
+      {
+        slug: "swiggy-forward-deployed-ai-engineer-2",
+        title: "Software Dev Engineer II",
+        description: `
+<p>Job Profile: Software Development Engineer II</p>
+<p>Location: Bengaluru</p>
+<p>Years of Experience: 3 - 5</p>
+<p><strong>ABOUT THE TEAM & ROLE:</strong></p>
+<p>Swiggy is India's largest on-demand platform for food, groceries, and dining. We're one of the few companies where AI meets physical-world execution at scale: predicting demand across 5,000+ dark stores, optimizing millions of deliveries daily, and building agents that operate in real-time with real constraints.</p>
+<p>About the Role:</p>
+<p>Forward Deployed AI Engineers embed with teams across Swiggy to solve their hardest problems using AI. You'll work in small pods, report into the Central AI team, and deploy to where the problems are: supply chain, category ops, marketplace, support, and beyond.</p>
+<p>Think of it as being the AI CTO for the domain you're embedded in.</p>
+<p><strong>What qualities are we looking for?</strong></p>
+<ul><li>Why did availability drop 15% in a zone last week? Build the prediction system that prevents it before it happens.</li><li>Ops teams spend 3 days onboarding new catalog items. Can an agent do it in 20 minutes?</li><li>The Dineout discovery bot answers questions but doesn't learn from mistakes. Make it self-improving.</li><li>Every team wants to build AI products but keeps rebuilding the same infrastructure. Create the foundation they build on.</li><li>Prediction agents for availability, inventory, and demand forecasting</li><li>MCP servers connecting AI to Swiggy's operational systems</li><li>Evaluation frameworks that prove AI impact in production</li><li>Self-improving agents that learn from ops feedback loops</li><li>Reusable skills and subagent libraries that other teams can deploy</li><li>60% embedded with business teams (Instamart, Food, Dineout, Customer Support etc)</li><li>40% Central AI: roadmap input, pattern codification, build platform features</li><li>Rotation model: ~3 month deployments per domain</li><li>Join their standups, map their workflows, find the highest-leverage problems</li><li>Ship production systems that handle real traffic. Not decks, not demos.</li><li>Package what works into skills and playbooks others can use</li><li>Your field learnings directly shape what the Central AI platform builds next</li><li>You've built and deployed agentic AI systems in production, not just notebooks or demos</li><li>Advanced context engineering, evaluation frameworks, and agent harness patterns</li><li>Experience with skills, subagents, tool integration, and orchestration patterns</li><li>You understand the gap between "it works locally" and "it works at scale with real latency and cost constraints"</li><li>You apply first principles thinking to re-imagine existing workflows in an AI native way</li><li>Claude Code, Cursor, or Codex is your primary environment. You ship faster with AI tools than without.</li><li>You think in skills, subagents, and parallel workflows</li><li>You can design an agent architecture, implement it, and iterate based on production feedback</li><li>You've shipped at least one AI system that moved a real business metric. Not incremental, transformative.</li><li>You can show it to us: a repo, a production deployment, metrics before/after, or a recorded demo</li><li>You know what it takes to get from prototype to production</li><li>2+ years shipping production systems with real traffic, real users, real constraints (exceptional freshers who are AI power users with proof of work will also be considered)</li><li>OR: technical founder / early engineer at a startup with demonstrable AI impact</li><li>Trade-off fluency: latency vs accuracy, cost vs reliability, autonomy vs predictability</li><li>Strong in Python or TypeScript, LLMs, orchestration frameworks, system design</li><li>You translate complex AI concepts to non-technical ops teams</li><li>You can lead a discovery session, whiteboard an architecture, and get buy-in in the same meeting</li><li>You write clear documentation that becomes the team's playbook</li><li>You're comfortable context-switching: ops workflows in the morning, architecture reviews in the afternoon</li><li>You find problems worth solving. You don't wait for specs.</li><li>You ship when the path isn't clear</li><li>You're energized by ambiguity and moving fast in complex environments</li></ul>
+<p><strong>What will you get to do here?</strong></p>
+<ul><li>Real problems at real scale: systems that affect millions of orders, thousands of dark stores, and real P&L</li><li>Direct access: no layers between you and the teams you're solving for. You see the problem, you ship the fix.</li><li>Shape the platform: your field work defines what the Central AI team builds. Direct input into roadmap and architecture decisions.</li><li>Founder-like ownership: you're essentially the CTO of AI for your embedded domain</li><li>Career leverage: FDE is the fastest path to becoming a technical leader who understands both AI and operations at scale</li></ul>
+<p><strong>Visit our tech blogs to learn more about some of the challenges we deal with:</strong></p>
+<p>https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6</p>
+<p>https://bytes.swiggy.com/swiggy-distance-service-9868dcf613f4</p>
+<p>https://bytes.swiggy.com/the-tech-that-brings-you-your-food-1a7926229886</p>
+<p>We are an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, colour, religion, sex, disability status, or any other characteristic protected by the law.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://careers.swiggy.com/#/careers?career_page_category=Technology",
+      },
+      {
+        slug: "swiggy-data-scientist-ii",
+        title: "Data Scientist II",
+        description: `
+<p><strong>Job Profile</strong>: Data Scientist II</p>
+<p><strong>Location</strong>: Bangalore | Karnataka</p>
+<p><strong>Years of Experience</strong>: 2 - 5</p>
+<p>Data Science at Swiggy</p>
+<p>Data Science and applied ML is ingrained deeply in decision making and product development at Swiggy. Our data scientists work closely with cross-functional teams to ship end-to-end data products, from formulating the business problem in mathematical/ML terms to iterating on ML/DL methods to taking them to production. We own or co-own several initiatives with a direct line of sight to impact on customer experience as well as business metrics. We also encourage open sharing of ideas and publishing in internal and external avenues.</p>
+<p>What will you get to do here?</p>
+<ul><li>You will leverage your strong ML/DL/Statistics background to build new and next generation of ML based solutions to improve the quality of ads recommendation and leverage various optimization techniques to improve the campaign performance.</li><li>You will mine and extract relevant information from Swiggy's massive historical data to help ideate and identify solutions to business and CX problems.</li><li>You will work closely with engineers/PMs/analysts on detailed requirements, technical designs, and implementation of end-to-end inference solutions at Swiggy scale.</li><li>You will stay abreast with the latest in ML research for ads bidding algorithms, recommendation systems related areas and help adapt it to Swiggy's problem statements.</li><li>You will publish and talk about your work in internal and external forums to both technical and layman audiences.</li><li>Opportunity to work on challenging and impactful projects in the logistics domain</li><li>Collaborate with cross-functional teams, including software developers and product managers, to integrate data-driven solutions into our systems</li><li>Develop and deploy machine learning and deep learning models</li><li>Take ownership of projects from inception to delivery, ensuring high-quality and impactful results.</li></ul>
+<p>What qualities are we looking for?</p>
+<ul><li>Masters degree in areas related to Applied Mathematics, Machine Learning, Statistics, with 2 to 5 years of industry/research lab experience</li><li>Technically hands-on with deep dive expertise in applying ML to big data</li><li>History of having shipped ML data products</li><li>Results-oriented team player with a strong sense of ownership</li><li>Experience working with software developers, product managers and overall SDLC</li><li>Experience in Deep Learning and previous experience in startups and/or product-based consumer/internet companies is preferred</li></ul>
+<p><strong>Visit our tech blogs to learn more about some the challenges we deal with:</strong></p>
+<p><a href="https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/the-swiggy-delivery-challenge-part-one-6a2abb4f82f6</a></p>
+<p><a href="https://bytes.swiggy.com/how-ai-at-swiggy-is-transforming-convenience-eae0a32055ae" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/how-ai-at-swiggy-is-transforming-convenience-eae0a32055ae</a></p>
+<p><a href="https://bytes.swiggy.com/decoding-food-intelligence-at-swiggy-5011e21dbc86" target="_blank" rel="noopener noreferrer">https://bytes.swiggy.com/decoding-food-intelligence-at-swiggy-5011e21dbc86</a></p>
+<p>We are an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, colour, religion, sex, disability status, or any other characteristic protected by the law.</p>
+`.trim(),
+        location: "Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://careers.swiggy.com/#/careers?career_page_category=Technology",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
