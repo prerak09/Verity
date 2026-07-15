@@ -52,6 +52,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "wayflyer.com" },
       { protocol: "https", hostname: "truelayer.com" },
       { protocol: "https", hostname: "static.lenskart.com" },
+      { protocol: "https", hostname: "razorpay.com" },
     ],
   },
 };

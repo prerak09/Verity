@@ -4655,6 +4655,434 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "razorpay",
+    name: "Razorpay",
+    tagline: "Full-stack financial technology for Indian businesses",
+    about:
+      "Razorpay is one of India's leading full-stack financial technology companies, powering payments, business banking, and payroll for millions of businesses across India, Singapore, and Malaysia. Founded in 2014 by Harshil Mathur and Shashank Kumar, Razorpay processes over $180 billion in annualized transactions for customers including Airbnb, Zomato, Swiggy, CRED, and over 100 of India's unicorns. It has raised over $740 million from investors including GIC, Peak XV Partners, Tiger Global, Ribbit Capital, MasterCard, and Salesforce Ventures, and is headquartered in Bengaluru, India.",
+    logoUrl: "https://razorpay.com/assets/razorpay-logo.svg",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://razorpay.com",
+    categories: ["fintech"],
+    technologies: ["go", "python", "java", "aws", "kubernetes"],
+    location: { city: "Bengaluru", country: "India" },
+    founders: [
+      { name: "Harshil Mathur", title: "Co-founder & CEO" },
+      { name: "Shashank Kumar", title: "Co-founder & CTO" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/razorpay" },
+      { type: "twitter", url: "https://twitter.com/Razorpay" },
+    ],
+    internships: [
+      {
+        slug: "razorpay-engineering-manager-platform",
+        title: "Engineering Manager, Platform",
+        description: `
+<p>Razorpay is one of India's leading full-stack financial technology companies, powering the way businesses move, manage, and grow money. Founded in 2014 by Harshil Mathur and Shashank Kumar with a simple vision - to simplify payments for Indian businesses - we've since grown into a fintech powerhouse driving India's digital payment revolution.</p>
+<p>Razorpay powers millions of businesses with a smarter, scalable stack that goes beyond transactions to help them truly build and grow.</p>
+<p>From building AI-native agentic payments, to AI-assisted fraud detection and real-time risk intelligence to automated reconciliation, smart payouts, and predictive financial insights, we are embedding intelligence across our stack to make money movement faster, safer, and more efficient. In close collaboration with ecosystem partners - including banks, networks, regulators - we are pioneering industry-first solutions that are shaping the next era of fintech.</p>
+<p>Across India, Singapore and Malaysia, our products span everything from seamless checkouts to payroll automation - powering a fintech ecosystem that's redefining how money moves across Asia.</p>
+<p>Today, that ecosystem supports everyone from early-stage startups to some of India's largest enterprises, enabling them to accept, process, and disburse payments at scale while expanding into new ways of managing money more efficiently.</p>
+<p>Our scale speaks volumes: Razorpay processes $180+ billion in annualized transactions, powering leading businesses like Airbnb, Facebook, WhatsApp, Airtel, CRED, BookmyShow, Zomato, Swiggy, Lenskart, Mirae Asset Capital markets, Indian Oil, National Pension Scheme - and over 100 of India's unicorns. With strong roots in India and growing operations in Southeast Asia, we are shaping the next chapter of financial technology across the region.</p>
+<p>We are backed by global investors including GIC, Peak XV Partners (formerly Sequoia Capital India & SEA), Tiger Global, Ribbit Capital, Matrix Partners, MasterCard, and Salesforce Ventures, having raised over $740 million to date. Strategic acquisitions - including Ezetap (POS and offline payments), Curlec (Malaysia expansion), BillMe (digital invoicing), and POP (rewards-first UPI) - along with earlier moves in fraud prevention, payroll, and lending, have further strengthened our platform and widened our footprint across Asia.</p>
+<p>But what truly sets Razorpay apart is our culture. At Razorpay, ownership is our oxygen - you own what you build, with no micromanagement or red tape, just the runway to make your ideas fly. Learning is a lifestyle - if you're curious, you'll feel at home here. People > Pedigree - we hire for attitude, hustle, and hunger more than degrees. Transparency thrives over titles - this is where interns question CXOs and CXOs say "thank you." Guided by our values of Customer First, Autonomy & Ownership, Agility with Integrity, Transparency, Challenging the status quo and a strong belief that Razorpay grows with Razors, you'll be part of a 3000+ strong team building not just products, but the financial infrastructure of the future.</p>
+<p><strong>About the Role:</strong></p>
+<p>The Engineering Manager, Platform at Razorpay is a highly technical, innovative, and hands-on leader with deep expertise in building and scaling core platform systems. You are passionate about solving complex technical challenges through robust, resilient, and highly scalable software. You will architect and operate foundational services that empower Razorpay's product engineering teams, ensuring the long-term health and scalability of our platform. While you will lead and mentor a team, you will also actively contribute to technical strategy, architectural decisions, and maintain a strong hands-on connection with coding and system design. You will champion a culture of engineering excellence, resilience, and continuous improvement, with a keen eye on product and business impact.</p>
+<p><strong>Roles and Responsibilities:</strong></p>
+<ul>
+<li><strong>Hands-on Technical Leadership & Platform Architecture:</strong> Actively engage in coding, perform in-depth code reviews, and partner with tech leads and senior engineers on complex platform-level problem-solving, system design, and architectural decisions. You will be an architect in the room, guiding the technical direction for critical platform initiatives.</li>
+<li><strong>Resilience & Scalability Engineering:</strong> Drive the design, implementation, and operation of highly scalable and resilient distributed systems. You will champion practices like chaos engineering, robust error handling, effective caching strategies, and performance tuning to ensure our platform can handle extreme scale and traffic spikes (e.g., for events like IPL). You'll focus on reducing Mean Time To Recovery (MTTR) and maintaining high availability.</li>
+<li><strong>Strategic Platform Development:</strong> Define and execute the technical strategy and roadmap for core platform services, leveraging cutting-edge technologies and methodologies to enhance workflows, optimize performance, and drive innovation across the engineering lifecycle. This includes owning charters for areas like API gateways, service mesh, messaging/eventing platforms, auth/identity, observability stacks, or deployment platforms.</li>
+<li><strong>Customer & Business Centricity:</strong> Champion an internal customer-first approach, ensuring platform solutions are deeply aligned with business goals and directly contribute to measurable business impact. Treat internal engineering teams as customers of the platform.</li>
+<li><strong>Process & Quality Champion:</strong> Drive engineering craftsmanship by championing effective processes, standards, and tools that enhance code quality, system reliability, and developer productivity. Foster a culture of ownership where teams run what they build.</li>
+<li><strong>Talent & Growth Focus:</strong> Attract, hire, and technically mentor top-tier engineering talent, fostering their growth and empowering independent, data-driven decision-making. Develop engineers into senior/staff roles and maintain a high hiring bar.</li>
+<li><strong>Collaborative Innovation:</strong> Lead technical collaborations across functions (Product, Business, Operations), providing insights, gathering requirements, and fostering bottom-up innovation that results in robust, scalable solutions aligned with business objectives.</li>
+<li><strong>Site Reliability & Operations:</strong> Instill a strong sense of operational excellence, focusing on observability, automation, and proactive incident management.</li>
+</ul>
+<p><strong>Mandatory Qualifications:</strong></p>
+<ul>
+<li><strong>Experience:</strong></li>
+<ul>
+<li>8–12 years of total experience in software engineering.</li>
+<li>4–6 years of hands-on experience building and operating distributed systems at a serious scale.</li>
+<li>2–3 years of people management experience, leading teams of 8–15 engineers (ideally including senior/staff ICs).</li>
+</ul>
+<li><strong>Technical Expertise:</strong></li>
+<ul>
+<li>Deep proficiency in at least one backend programming language (preferably Go, Python, or Java). You should be able to review designs and code effectively.</li>
+<li>Proven experience with distributed systems, including personally dealing with challenges like cascading failures, thundering herds, cache stampedes, database hotspotting, and retry storms.</li>
+<li>Strong understanding of resilience engineering principles and practices (e.g., circuit breakers, graceful degradation, chaos engineering, load testing, capacity planning, SLOs/error budgets).</li>
+<li>Experience taking systems through significant scale-up (e.g., 10x traffic growth) or architectural evolution (e.g., monolith to microservices decomposition).</li>
+<li>Cloud-native fluency (AWS/GCP), containerization (Kubernetes), messaging/eventing (Kafka), caching (Redis), and observability stacks (Prometheus/Grafana/tracing).</li>
+<li>Experience using and building with LLMs is a plus.</li>
+</ul>
+<li><strong>People Management:</strong></li>
+<ul>
+<li>Demonstrated ability to grow engineers into senior/staff or lead roles.</li>
+<li>Experience running hiring loops end-to-end and maintaining a high hiring bar.</li>
+<li>Proven ability to coach and mentor engineers, delegating outcomes rather than tasks, and focusing on team OKRs and operational health metrics.</li>
+<li>Ability to operate autonomously and represent platform decisions effectively, especially given that much of Razorpay's engineering leadership is based in Bangalore and Gurgaon.</li>
+</ul>
+</ul>
+<p><strong>Good to have:</strong></p>
+<ul>
+<li>Contributions to open-source projects or personal side projects on GitHub.</li>
+<li>Experience in a product-driven company, understanding the full software development lifecycle.</li>
+<li>Comprehensive understanding of backend programming languages and ecosystem trends.</li>
+<li>Experience with Web Technologies, databases, and/or messaging systems.</li>
+</ul>
+<p>Razorpay believes in and follows an equal employment opportunity policy that doesn't discriminate on gender, religion, sexual orientation, colour, nationality, age, etc. We welcome interests and applications from all groups and communities across the globe.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4712147005",
+      },
+      {
+        slug: "razorpay-engineering-manager",
+        title: "Engineering Manager",
+        description: `
+<p>Razorpay is one of India's leading full-stack financial technology companies, powering the way businesses move, manage, and grow money. Founded in 2014 by Harshil Mathur and Shashank Kumar with a simple vision - to simplify payments for Indian businesses - we've since grown into a fintech powerhouse driving India's digital payment revolution.</p>
+<p>Razorpay powers millions of businesses with a smarter, scalable stack that goes beyond transactions to help them truly build and grow.</p>
+<p>From building AI-native agentic payments, to AI-assisted fraud detection and real-time risk intelligence to automated reconciliation, smart payouts, and predictive financial insights, we are embedding intelligence across our stack to make money movement faster, safer, and more efficient. In close collaboration with ecosystem partners - including banks, networks, regulators - we are pioneering industry-first solutions that are shaping the next era of fintech.</p>
+<p>Across India, Singapore and Malaysia, our products span everything from seamless checkouts to payroll automation - powering a fintech ecosystem that's redefining how money moves across Asia.</p>
+<p>Today, that ecosystem supports everyone from early-stage startups to some of India's largest enterprises, enabling them to accept, process, and disburse payments at scale while expanding into new ways of managing money more efficiently.</p>
+<p>Our scale speaks volumes: Razorpay processes $180+ billion in annualized transactions, powering leading businesses like Airbnb, Facebook, WhatsApp, Airtel, CRED, BookmyShow, Zomato, Swiggy, Lenskart, Mirae Asset Capital markets, Indian Oil, National Pension Scheme - and over 100 of India's unicorns. With strong roots in India and growing operations in Southeast Asia, we are shaping the next chapter of financial technology across the region.</p>
+<p>We are backed by global investors including GIC, Peak XV Partners (formerly Sequoia Capital India & SEA), Tiger Global, Ribbit Capital, Matrix Partners, MasterCard, and Salesforce Ventures, having raised over $740 million to date. Strategic acquisitions - including Ezetap (POS and offline payments), Curlec (Malaysia expansion), BillMe (digital invoicing), and POP (rewards-first UPI) - along with earlier moves in fraud prevention, payroll, and lending, have further strengthened our platform and widened our footprint across Asia.</p>
+<p>But what truly sets Razorpay apart is our culture. At Razorpay, ownership is our oxygen - you own what you build, with no micromanagement or red tape, just the runway to make your ideas fly. Learning is a lifestyle - if you're curious, you'll feel at home here. People > Pedigree - we hire for attitude, hustle, and hunger more than degrees. Transparency thrives over titles - this is where interns question CXOs and CXOs say "thank you." Guided by our values of Customer First, Autonomy & Ownership, Agility with Integrity, Transparency, Challenging the status quo and a strong belief that Razorpay grows with Razors, you'll be part of a 3000+ strong team building not just products, but the financial infrastructure of the future.</p>
+<p><strong>The Role:</strong></p>
+<p>The Engineering Manager at Razorpay comes with considerable engineering management experience and proven leadership skills. You are expected to work on multiple projects at the same time, and also build and manage teams of engineers, possibly with a diverse set of tech skills. You may also be required to manage first-line managers. You will formulate and execute strategies, and coordinate with other managers. Your responsibilities mainly include people management, delivery management, and overseeing all the activities related to each project.</p>
+<p><strong>Roles and Responsibilities:</strong></p>
+<ul>
+<li>We believe in impact creation at scale, so it is imperative for an Engineering Manager.</li>
+<li>Ability to attract and hire top-notch engineering talent for the organization.</li>
+<li>Be responsible for the group's technical strategy and roadmap - creating success metrics in close collaboration with other groups across the organization in executing initiatives in an agile way.</li>
+<li>Brings a strong perspective that drives change and motivates engineers to develop simple solutions to complex problems.</li>
+<li>Help implement effective engineering processes and champion their adoption.</li>
+<li>Has the technical capacity and capability to partner with tech leads and architects in problem-solving.</li>
+<li>Mentor the professional development of each direct report through personal and performance management.</li>
+<li>Give engineers the tools, confidence, and motivation to make decisions independently that lead to their recognition.</li>
+<li>Effective at influencing a culture of engineering craftsmanship and excellence.</li>
+<li>Initiate cross-functional (Product, Business, Operations) collaborations with development teams throughout Razorpay and gather feedback and requirements. Seek diverse perspectives to drive bottom-up innovation and create buy-in from all technical stakeholders.</li>
+<li>Ensure the team fully understands the goals and objectives of Razorpay as a company and how their work fits into the bigger picture.</li>
+</ul>
+<p><strong>Mandatory Qualifications:</strong></p>
+<ul>
+<li>Total of 10+ years experience, 6+ years of experience in very large-scale applications, and 3+ years experience in actual people management.</li>
+<li>Strong problem-solving skills, data structures, and algorithms.</li>
+<li>Experience with distributed systems handling large amounts of data.</li>
+<li>Excellent coding skills in one of the languages PHP/Python/C++/Java.</li>
+<li>Very good understanding of Web Technologies.</li>
+<li>Very good understanding of any RDBMS and/or messaging.</li>
+</ul>
+<p>Razorpay believes in and follows an equal employment opportunity policy that doesn't discriminate on gender, religion, sexual orientation, colour, nationality, age, etc. We welcome interests and applications from all groups and communities across the globe.</p>
+`.trim(),
+        location: "Bangalore",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4684254005",
+      },
+      {
+        slug: "razorpay-senior-software-development-engineer",
+        title: "Senior Software Development Engineer",
+        description: `
+<p>Razorpay is one of India's leading full-stack financial technology companies, powering the way businesses move, manage, and grow money. Founded in 2014 by Harshil Mathur and Shashank Kumar with a simple vision - to simplify payments for Indian businesses - we've since grown into a fintech powerhouse driving India's digital payment revolution.</p>
+<p>Razorpay powers millions of businesses with a smarter, scalable stack that goes beyond transactions to help them truly build and grow.</p>
+<p>From building AI-native agentic payments, to AI-assisted fraud detection and real-time risk intelligence to automated reconciliation, smart payouts, and predictive financial insights, we are embedding intelligence across our stack to make money movement faster, safer, and more efficient. In close collaboration with ecosystem partners - including banks, networks, regulators - we are pioneering industry-first solutions that are shaping the next era of fintech.</p>
+<p>Across India, Singapore and Malaysia, our products span everything from seamless checkouts to payroll automation - powering a fintech ecosystem that's redefining how money moves across Asia.</p>
+<p>Today, that ecosystem supports everyone from early-stage startups to some of India's largest enterprises, enabling them to accept, process, and disburse payments at scale while expanding into new ways of managing money more efficiently.</p>
+<p>Our scale speaks volumes: Razorpay processes $180+ billion in annualized transactions, powering leading businesses like Airbnb, Facebook, WhatsApp, Airtel, CRED, BookmyShow, Zomato, Swiggy, Lenskart, Mirae Asset Capital markets, Indian Oil, National Pension Scheme - and over 100 of India's unicorns. With strong roots in India and growing operations in Southeast Asia, we are shaping the next chapter of financial technology across the region.</p>
+<p>We are backed by global investors including GIC, Peak XV Partners (formerly Sequoia Capital India & SEA), Tiger Global, Ribbit Capital, Matrix Partners, MasterCard, and Salesforce Ventures, having raised over $740 million to date. Strategic acquisitions - including Ezetap (POS and offline payments), Curlec (Malaysia expansion), BillMe (digital invoicing), and POP (rewards-first UPI) - along with earlier moves in fraud prevention, payroll, and lending, have further strengthened our platform and widened our footprint across Asia.</p>
+<p>But what truly sets Razorpay apart is our culture. At Razorpay, ownership is our oxygen - you own what you build, with no micromanagement or red tape, just the runway to make your ideas fly. Learning is a lifestyle - if you're curious, you'll feel at home here. People > Pedigree - we hire for attitude, hustle, and hunger more than degrees. Transparency thrives over titles - this is where interns question CXOs and CXOs say "thank you." Guided by our values of Customer First, Autonomy & Ownership, Agility with Integrity, Transparency, Challenging the status quo and a strong belief that Razorpay grows with Razors, you'll be part of a 3000+ strong team building not just products, but the financial infrastructure of the future.</p>
+<p><strong>About Us</strong></p>
+<p>Razorpay today processes $150 billion+ payments for 10 million+ businesses across 4 continents. The company enables businesses to accept, process, and disburse payments at scale, while helping them manage their finances. We are the leading payments and neobanking provider in India and are one of the fastest growing payments providers across South East Asia. We have been the first to bring to market major innovations in India and Malaysia.</p>
+<p>Razorpay has raised USD $700M+ in funding till date from marquee investors like GIC, Sequoia Capital, Tiger Global, Ribbit Capital, YC, Matrix Partners and many stellar angels.</p>
+<p>As part of its ambitious growth strategy in Southeast Asia, Razorpay acquired Curlec in Malaysia. Since making the acquisition, Curlec by Razorpay has received an acquiring license by Bank Negara and is a registered member of Paynet. The Malaysia market presents a unique opportunity for Razorpay Curlec due to its rapid digitalization and growing e-commerce ecosystem. Razorpay Curlec aims to become the preferred payment partner for businesses across Malaysia, offering them the same level of reliability, security, and convenience that has made Razorpay a trusted name in India. We also live in Singapore with plans of expansion to Thailand, Indonesia and the rest of SEA.</p>
+<p><strong>About the Role</strong></p>
+<p>A Senior Software Development Engineer at Razorpay Curlec is well-grounded - smart, quality focussed, product thinker, business conscious - not mere coders, of course, with very good technical context and experience to write and build quality software. Engineering creates a significant impact across different areas, considering the scale of our software product outreach. You're also expected to influence the culture of the company and help shape it in the right way.</p>
+<p><strong>Location & Commitments</strong></p>
+<ul><li>Permanent full time role based at our office - Kuala Lumpur (Mondays to Fridays)</li></ul>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Be involved and drive product & design discussions.</li>
+<li>Help us scale our payment infrastructure to get every Malaysian to pay online.</li>
+<li>Help us make decisions to shape our REST APIs for developers worldwide.</li>
+<li>Contribute to open source as we set the standards for mobile payments.</li>
+<li>Brainstorm and create new directions that Razorpay can take in our quest to make online payments easy and accessible to all.</li>
+<li>Improve system reliability through monitoring, alerting, logging, and automated recovery.</li>
+<li>Promote a culture of continuous improvement and engineering excellence.</li>
+</ul>
+<p><strong>Requirements</strong></p>
+<ul>
+<li>4-5 years of experience in technology.</li>
+<li>A strong product design sense.</li>
+<li>Good experience in working with any of the programming languages like PHP, Python, Django, Golang, Java, C++.</li>
+<li>Understand end-user requirements, formulate use cases and come up with effective solutions.</li>
+<li>Good understanding of REST APIs and the web in general.</li>
+<li>Ability to build a feature from scratch & drive it to completion.</li>
+<li>A willingness to learn new technology, whatever lets you deliver the best product.</li>
+<li>Have a few weekend side projects up on GitHub.</li>
+<li>Have contributed to an open-source project.</li>
+<li>Have worked at a product company.</li>
+<li>Have a working knowledge of a backend programming language.</li>
+<li>Have worked with AI code builders like Cursor, Claude etc. — a plus.</li>
+</ul>
+<p>Razorpay believes in and follows an equal employment opportunity policy that doesn't discriminate on gender, religion, sexual orientation, colour, nationality, age, etc. We welcome interests and applications from all groups and communities across the globe.</p>
+`.trim(),
+        location: "Kuala Lumpur, Malaysia",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4694070005",
+      },
+      {
+        slug: "razorpay-full-stack-builder-1",
+        title: "Full Stack Builder",
+        description: `
+<p>Razorpay is one of India's leading full-stack financial technology companies, powering the way businesses move, manage, and grow money. Founded in 2014 by Harshil Mathur and Shashank Kumar with a simple vision - to simplify payments for Indian businesses - we've since grown into a fintech powerhouse driving India's digital payment revolution.</p>
+<p>Razorpay powers millions of businesses with a smarter, scalable stack that goes beyond transactions to help them truly build and grow.</p>
+<p>From building AI-native agentic payments, to AI-assisted fraud detection and real-time risk intelligence to automated reconciliation, smart payouts, and predictive financial insights, we are embedding intelligence across our stack to make money movement faster, safer, and more efficient. In close collaboration with ecosystem partners - including banks, networks, regulators - we are pioneering industry-first solutions that are shaping the next era of fintech.</p>
+<p>Across India, Singapore and Malaysia, our products span everything from seamless checkouts to payroll automation - powering a fintech ecosystem that's redefining how money moves across Asia.</p>
+<p>Today, that ecosystem supports everyone from early-stage startups to some of India's largest enterprises, enabling them to accept, process, and disburse payments at scale while expanding into new ways of managing money more efficiently.</p>
+<p>Our scale speaks volumes: Razorpay processes $180+ billion in annualized transactions, powering leading businesses like Airbnb, Facebook, WhatsApp, Airtel, CRED, BookmyShow, Zomato, Swiggy, Lenskart, Mirae Asset Capital markets, Indian Oil, National Pension Scheme - and over 100 of India's unicorns. With strong roots in India and growing operations in Southeast Asia, we are shaping the next chapter of financial technology across the region.</p>
+<p>We are backed by global investors including GIC, Peak XV Partners (formerly Sequoia Capital India & SEA), Tiger Global, Ribbit Capital, Matrix Partners, MasterCard, and Salesforce Ventures, having raised over $740 million to date. Strategic acquisitions - including Ezetap (POS and offline payments), Curlec (Malaysia expansion), BillMe (digital invoicing), and POP (rewards-first UPI) - along with earlier moves in fraud prevention, payroll, and lending, have further strengthened our platform and widened our footprint across Asia.</p>
+<p>But what truly sets Razorpay apart is our culture. At Razorpay, ownership is our oxygen - you own what you build, with no micromanagement or red tape, just the runway to make your ideas fly. Learning is a lifestyle - if you're curious, you'll feel at home here. People > Pedigree - we hire for attitude, hustle, and hunger more than degrees. Transparency thrives over titles - this is where interns question CXOs and CXOs say "thank you." Guided by our values of Customer First, Autonomy & Ownership, Agility with Integrity, Transparency, Challenging the status quo and a strong belief that Razorpay grows with Razors, you'll be part of a 3000+ strong team building not just products, but the financial infrastructure of the future.</p>
+<h3>Role Summary</h3>
+<p>Most engineers, PMs & designers use AI. Few are AI-native. We're hiring the latter and looking for someone who can drive things end-to-end (discovery to conceptualisation to design to building to driving adoption) for a given canvas. Own a product or a feature end-to-end. Scope the problem, build the solution, ship it to users. Flex between frontend and backend based on what the problem needs, not your title. Work on 0→1 projects with real autonomy. Be part of Razorpay's AI transformation at scale and define the journey.</p>
+<h3>You Know Who You Are</h3>
+<p>You have deep expertise across the building journey:</p>
+<ol>
+<li>Customer backward thinking</li>
+<li>Product solutioning</li>
+<li>Prototyping & designing</li>
+<li>Building & taking products live</li>
+<li>Taking solutions to market, driving adoption & measuring impact</li>
+</ol>
+<p>You also exhibit good competence in the others. In past roles, you've juggled multiple hats. You've been using AI tools for over a year—Claude Code or Cursor is your default environment, not a novelty. You orchestrate agents, build with skills and MCPs. AI assistance is muscle memory. You're a polyglot—picking up new stacks fast because AI handles the ramp. Discovering & solving customer problems gives joy to you.</p>
+<h3>You Will Be a Good Fit If You Bring</h3>
+<ul>
+<li>Product sense: you ask "why" before "how"</li>
+<li>3-6 years building software as technical PM, user focussed product engineer</li>
+<li>Deep expertise in one domain + breadth across others</li>
+<li>Should be able to read code, fix CI/CD configurations if needed</li>
+<li>Track record of shipping, not just building</li>
+</ul>
+<h3>You Will Not Be a Good Fit If You</h3>
+<p>You need detailed specs handed to you. You prefer deep specialization over breadth. You're uncomfortable with ambiguity. You optimize for code elegance over customer outcomes. You still thrive living in a 2 week sprint.</p>
+<p>Razorpay believes in and follows an equal employment opportunity policy that doesn't discriminate on gender, religion, sexual orientation, colour, nationality, age, etc. We welcome interests and applications from all groups and communities across the globe.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4699107005",
+      },
+      {
+        slug: "razorpay-full-stack-builder-2",
+        title: "Full Stack Builder",
+        description: `
+<p>Razorpay is one of India's leading full-stack financial technology companies, powering the way businesses move, manage, and grow money. Founded in 2014 by Harshil Mathur and Shashank Kumar with a simple vision - to simplify payments for Indian businesses - we've since grown into a fintech powerhouse driving India's digital payment revolution.</p>
+<p>Razorpay powers millions of businesses with a smarter, scalable stack that goes beyond transactions to help them truly build and grow.</p>
+<p>From building AI-native agentic payments, to AI-assisted fraud detection and real-time risk intelligence to automated reconciliation, smart payouts, and predictive financial insights, we are embedding intelligence across our stack to make money movement faster, safer, and more efficient. In close collaboration with ecosystem partners - including banks, networks, regulators - we are pioneering industry-first solutions that are shaping the next era of fintech.</p>
+<p>Across India, Singapore and Malaysia, our products span everything from seamless checkouts to payroll automation - powering a fintech ecosystem that's redefining how money moves across Asia.</p>
+<p>Today, that ecosystem supports everyone from early-stage startups to some of India's largest enterprises, enabling them to accept, process, and disburse payments at scale while expanding into new ways of managing money more efficiently.</p>
+<p>Our scale speaks volumes: Razorpay processes $180+ billion in annualized transactions, powering leading businesses like Airbnb, Facebook, WhatsApp, Airtel, CRED, BookmyShow, Zomato, Swiggy, Lenskart, Mirae Asset Capital markets, Indian Oil, National Pension Scheme - and over 100 of India's unicorns. With strong roots in India and growing operations in Southeast Asia, we are shaping the next chapter of financial technology across the region.</p>
+<p>We are backed by global investors including GIC, Peak XV Partners (formerly Sequoia Capital India & SEA), Tiger Global, Ribbit Capital, Matrix Partners, MasterCard, and Salesforce Ventures, having raised over $740 million to date. Strategic acquisitions - including Ezetap (POS and offline payments), Curlec (Malaysia expansion), BillMe (digital invoicing), and POP (rewards-first UPI) - along with earlier moves in fraud prevention, payroll, and lending, have further strengthened our platform and widened our footprint across Asia.</p>
+<p>But what truly sets Razorpay apart is our culture. At Razorpay, ownership is our oxygen - you own what you build, with no micromanagement or red tape, just the runway to make your ideas fly. Learning is a lifestyle - if you're curious, you'll feel at home here. People > Pedigree - we hire for attitude, hustle, and hunger more than degrees. Transparency thrives over titles - this is where interns question CXOs and CXOs say "thank you." Guided by our values of Customer First, Autonomy & Ownership, Agility with Integrity, Transparency, Challenging the status quo and a strong belief that Razorpay grows with Razors, you'll be part of a 3000+ strong team building not just products, but the financial infrastructure of the future.</p>
+<h3>Role Summary</h3>
+<p>Most engineers, PMs & designers use AI. Few are AI-native. We're hiring the latter and looking for someone who can drive things end-to-end (discovery to conceptualisation to design to building to driving adoption) for a given canvas. Own a product or a feature end-to-end. Scope the problem, build the solution, ship it to users. Flex between frontend and backend based on what the problem needs, not your title. Work on 0→1 projects with real autonomy. Be part of Razorpay's AI transformation at scale and define the journey.</p>
+<h3>You Know Who You Are</h3>
+<p>You have deep expertise across the building journey:</p>
+<ol>
+<li>Customer backward thinking</li>
+<li>Product solutioning</li>
+<li>Prototyping & designing</li>
+<li>Building & taking products live</li>
+<li>Taking solutions to market, driving adoption & measuring impact</li>
+</ol>
+<p>You also exhibit good competence in the others. In past roles, you've juggled multiple hats. You've been using AI tools for over a year—Claude Code or Cursor is your default environment, not a novelty. You orchestrate agents, build with skills and MCPs. AI assistance is muscle memory. You're a polyglot—picking up new stacks fast because AI handles the ramp. Discovering & solving customer problems gives joy to you.</p>
+<h3>You Will Be a Good Fit If You Bring</h3>
+<ul>
+<li>Product sense: you ask "why" before "how"</li>
+<li>3-6 years building software as technical PM, user focussed product engineer</li>
+<li>Deep expertise in one domain + breadth across others</li>
+<li>Should be able to read code, fix CI/CD configurations if needed</li>
+<li>Track record of shipping, not just building</li>
+</ul>
+<h3>You Will Not Be a Good Fit If You</h3>
+<p>You need detailed specs handed to you. You prefer deep specialization over breadth. You're uncomfortable with ambiguity. You optimize for code elegance over customer outcomes. You still thrive living in a 2 week sprint.</p>
+<p>Razorpay believes in and follows an equal employment opportunity policy that doesn't discriminate on gender, religion, sexual orientation, colour, nationality, age, etc. We welcome interests and applications from all groups and communities across the globe.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4712960005",
+      },
+      {
+        slug: "razorpay-product-manager-ii",
+        title: "Product Manager II",
+        description: `
+<p>Razorpay is one of India's leading full-stack financial technology companies, powering the way businesses move, manage, and grow money. Founded in 2014 by Harshil Mathur and Shashank Kumar with a simple vision - to simplify payments for Indian businesses - we've since grown into a fintech powerhouse driving India's digital payment revolution.</p>
+<p>Razorpay powers millions of businesses with a smarter, scalable stack that goes beyond transactions to help them truly build and grow.</p>
+<p>From building AI-native agentic payments, to AI-assisted fraud detection and real-time risk intelligence to automated reconciliation, smart payouts, and predictive financial insights, we are embedding intelligence across our stack to make money movement faster, safer, and more efficient. In close collaboration with ecosystem partners - including banks, networks, regulators - we are pioneering industry-first solutions that are shaping the next era of fintech.</p>
+<p>Across India, Singapore and Malaysia, our products span everything from seamless checkouts to payroll automation - powering a fintech ecosystem that's redefining how money moves across Asia.</p>
+<p>Today, that ecosystem supports everyone from early-stage startups to some of India's largest enterprises, enabling them to accept, process, and disburse payments at scale while expanding into new ways of managing money more efficiently.</p>
+<p>Our scale speaks volumes: Razorpay processes $180+ billion in annualized transactions, powering leading businesses like Airbnb, Facebook, WhatsApp, Airtel, CRED, BookmyShow, Zomato, Swiggy, Lenskart, Mirae Asset Capital markets, Indian Oil, National Pension Scheme - and over 100 of India's unicorns. With strong roots in India and growing operations in Southeast Asia, we are shaping the next chapter of financial technology across the region.</p>
+<p>We are backed by global investors including GIC, Peak XV Partners (formerly Sequoia Capital India & SEA), Tiger Global, Ribbit Capital, Matrix Partners, MasterCard, and Salesforce Ventures, having raised over $740 million to date. Strategic acquisitions - including Ezetap (POS and offline payments), Curlec (Malaysia expansion), BillMe (digital invoicing), and POP (rewards-first UPI) - along with earlier moves in fraud prevention, payroll, and lending, have further strengthened our platform and widened our footprint across Asia.</p>
+<p>But what truly sets Razorpay apart is our culture. At Razorpay, ownership is our oxygen - you own what you build, with no micromanagement or red tape, just the runway to make your ideas fly. Learning is a lifestyle - if you're curious, you'll feel at home here. People > Pedigree - we hire for attitude, hustle, and hunger more than degrees. Transparency thrives over titles - this is where interns question CXOs and CXOs say "thank you." Guided by our values of Customer First, Autonomy & Ownership, Agility with Integrity, Transparency, Challenging the status quo and a strong belief that Razorpay grows with Razors, you'll be part of a 3000+ strong team building not just products, but the financial infrastructure of the future.</p>
+<p><strong>The Role:</strong> As a PM2, you will independently own a product area or platform charter end-to-end — from strategy and roadmap to execution and business impact. You will operate with significant autonomy and drive initiatives across customer experience, platform scalability, automation, growth, and monetization. You will be expected to think beyond features and solve for systems, operational leverage, and long-term platform evolution.</p>
+<h3>What You Will Do</h3>
+<ul>
+<li><strong>Build Customer Empathy:</strong> Regularly engage with customers, internal stakeholders, and ecosystem partners to deeply understand pain points, workflows, and unmet needs through both qualitative and quantitative insights.</li>
+<li><strong>Drive Product Strategy:</strong> Define long-term product vision and quarterly roadmap aligned with business goals, customer outcomes, and platform scalability.</li>
+<li><strong>Build Scalable Products:</strong> Collaborate with engineering, design, analytics, and operations teams to build reliable, scalable, and high-impact products.</li>
+<li><strong>Lead Product Execution:</strong> Write high-quality product specifications, prioritize effectively, manage tradeoffs, and ensure timely execution across releases.</li>
+<li><strong>Own Metrics & Outcomes:</strong> Define success metrics, monitor business impact, and drive iterative improvements through experimentation and data analysis.</li>
+<li><strong>Ecosystem Collaboration:</strong> Partner with banks, regulators, vendors, and ecosystem players to co-build industry-defining solutions.</li>
+</ul>
+<h3>What We're Looking For</h3>
+<ul>
+<li>4–7 years of product management experience</li>
+<li>Strong product execution and prioritization skills</li>
+<li>Experience owning business metrics and customer outcomes</li>
+<li>Strong analytical thinking and experimentation mindset</li>
+<li>Ability to work across technical and business stakeholders</li>
+<li>Systems thinking and platform orientation</li>
+<li>Strong customer empathy balanced with business acumen</li>
+<li>Ability to thrive in ambiguity and fast-paced environments</li>
+</ul>
+<p>Razorpay believes in and follows an equal employment opportunity policy that doesn't discriminate on gender, religion, sexual orientation, colour, nationality, age, etc. We welcome interests and applications from all groups and communities across the globe.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4712108005",
+      },
+      {
+        slug: "razorpay-senior-product-manager",
+        title: "Senior Product Manager",
+        description: `
+<p>Razorpay is one of India's leading full-stack financial technology companies, powering the way businesses move, manage, and grow money. Founded in 2014 by Harshil Mathur and Shashank Kumar with a simple vision - to simplify payments for Indian businesses - we've since grown into a fintech powerhouse driving India's digital payment revolution.</p>
+<p>Razorpay powers millions of businesses with a smarter, scalable stack that goes beyond transactions to help them truly build and grow.</p>
+<p>From building AI-native agentic payments, to AI-assisted fraud detection and real-time risk intelligence to automated reconciliation, smart payouts, and predictive financial insights, we are embedding intelligence across our stack to make money movement faster, safer, and more efficient. In close collaboration with ecosystem partners - including banks, networks, regulators - we are pioneering industry-first solutions that are shaping the next era of fintech.</p>
+<p>Across India, Singapore and Malaysia, our products span everything from seamless checkouts to payroll automation - powering a fintech ecosystem that's redefining how money moves across Asia.</p>
+<p>Today, that ecosystem supports everyone from early-stage startups to some of India's largest enterprises, enabling them to accept, process, and disburse payments at scale while expanding into new ways of managing money more efficiently.</p>
+<p>Our scale speaks volumes: Razorpay processes $180+ billion in annualized transactions, powering leading businesses like Airbnb, Facebook, WhatsApp, Airtel, CRED, BookmyShow, Zomato, Swiggy, Lenskart, Mirae Asset Capital markets, Indian Oil, National Pension Scheme - and over 100 of India's unicorns. With strong roots in India and growing operations in Southeast Asia, we are shaping the next chapter of financial technology across the region.</p>
+<p>We are backed by global investors including GIC, Peak XV Partners (formerly Sequoia Capital India & SEA), Tiger Global, Ribbit Capital, Matrix Partners, MasterCard, and Salesforce Ventures, having raised over $740 million to date. Strategic acquisitions - including Ezetap (POS and offline payments), Curlec (Malaysia expansion), BillMe (digital invoicing), and POP (rewards-first UPI) - along with earlier moves in fraud prevention, payroll, and lending, have further strengthened our platform and widened our footprint across Asia.</p>
+<p>But what truly sets Razorpay apart is our culture. At Razorpay, ownership is our oxygen - you own what you build, with no micromanagement or red tape, just the runway to make your ideas fly. Learning is a lifestyle - if you're curious, you'll feel at home here. People > Pedigree - we hire for attitude, hustle, and hunger more than degrees. Transparency thrives over titles - this is where interns question CXOs and CXOs say "thank you." Guided by our values of Customer First, Autonomy & Ownership, Agility with Integrity, Transparency, Challenging the status quo and a strong belief that Razorpay grows with Razors, you'll be part of a 3000+ strong team building not just products, but the financial infrastructure of the future.</p>
+<p><strong>The Role</strong></p>
+<p>As a Senior Product Manager, you will lead large product areas with significant business impact and organizational visibility. You will define multi-quarter strategy, mentor PMs, influence organizational priorities, and drive cross-functional alignment across teams. You are expected to operate as a business owner — balancing customer needs, platform investments, operational complexity, revenue impact, and long-term strategic bets.</p>
+<h3>What You'll Do</h3>
+<ul>
+<li>Own strategy and execution for a major business or platform area</li>
+<li>Lead cross-functional initiatives spanning multiple teams and systems</li>
+<li>Drive product direction through strong market, customer, and data insights</li>
+<li>Build scalable frameworks for prioritization, experimentation, and decision-making</li>
+<li>Mentor PM1/PM2s and improve product management quality across the org</li>
+<li>Influence executive stakeholders through structured communication and strategic thinking</li>
+<li>Partner with engineering leadership on architecture and platform evolution</li>
+<li>Identify new growth vectors, monetization opportunities, and ecosystem partnerships</li>
+</ul>
+<h3>What We're Looking For</h3>
+<ul>
+<li>7–10 years of product management experience</li>
+<li>Proven ownership of large-scale products or business lines</li>
+<li>Strong strategic thinking combined with execution rigor</li>
+<li>Ability to influence without authority across functions</li>
+<li>Strong technical fluency and platform thinking</li>
+<li>Experience managing ambiguity and organizational complexity</li>
+<li>Strong leadership presence and communication skills</li>
+</ul>
+<h3>Preferred Experience</h3>
+<ul>
+<li>Fintech infrastructure or platform experience</li>
+<li>AI-native product development</li>
+</ul>
+<p>Razorpay believes in and follows an equal employment opportunity policy that doesn't discriminate on gender, religion, sexual orientation, colour, nationality, age, etc. We welcome interests and applications from all groups and communities across the globe.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4686405005",
+      },
+      {
+        slug: "razorpay-senior-product-manager-growth",
+        title: "Senior Product Manager (Growth)",
+        description: `
+<p>Razorpay is one of India's leading full-stack financial technology companies, powering the way businesses move, manage, and grow money. Founded in 2014 by Harshil Mathur and Shashank Kumar with a simple vision - to simplify payments for Indian businesses - we've since grown into a fintech powerhouse driving India's digital payment revolution.</p>
+<p>Razorpay powers millions of businesses with a smarter, scalable stack that goes beyond transactions to help them truly build and grow.</p>
+<p>From building AI-native agentic payments, to AI-assisted fraud detection and real-time risk intelligence to automated reconciliation, smart payouts, and predictive financial insights, we are embedding intelligence across our stack to make money movement faster, safer, and more efficient. In close collaboration with ecosystem partners - including banks, networks, regulators - we are pioneering industry-first solutions that are shaping the next era of fintech.</p>
+<p>Across India, Singapore and Malaysia, our products span everything from seamless checkouts to payroll automation - powering a fintech ecosystem that's redefining how money moves across Asia.</p>
+<p>Today, that ecosystem supports everyone from early-stage startups to some of India's largest enterprises, enabling them to accept, process, and disburse payments at scale while expanding into new ways of managing money more efficiently.</p>
+<p>Our scale speaks volumes: Razorpay processes $180+ billion in annualized transactions, powering leading businesses like Airbnb, Facebook, WhatsApp, Airtel, CRED, BookmyShow, Zomato, Swiggy, Lenskart, Mirae Asset Capital markets, Indian Oil, National Pension Scheme - and over 100 of India's unicorns. With strong roots in India and growing operations in Southeast Asia, we are shaping the next chapter of financial technology across the region.</p>
+<p>We are backed by global investors including GIC, Peak XV Partners (formerly Sequoia Capital India & SEA), Tiger Global, Ribbit Capital, Matrix Partners, MasterCard, and Salesforce Ventures, having raised over $740 million to date. Strategic acquisitions - including Ezetap (POS and offline payments), Curlec (Malaysia expansion), BillMe (digital invoicing), and POP (rewards-first UPI) - along with earlier moves in fraud prevention, payroll, and lending, have further strengthened our platform and widened our footprint across Asia.</p>
+<p>But what truly sets Razorpay apart is our culture. At Razorpay, ownership is our oxygen - you own what you build, with no micromanagement or red tape, just the runway to make your ideas fly. Learning is a lifestyle - if you're curious, you'll feel at home here. People > Pedigree - we hire for attitude, hustle, and hunger more than degrees. Transparency thrives over titles - this is where interns question CXOs and CXOs say "thank you." Guided by our values of Customer First, Autonomy & Ownership, Agility with Integrity, Transparency, Challenging the status quo and a strong belief that Razorpay grows with Razors, you'll be part of a 3000+ strong team building not just products, but the financial infrastructure of the future.</p>
+<p><strong>The Role:</strong></p>
+<p>As a Growth PM at Razorpay, you will play a pivotal role in driving the adoption, activation, retention, and monetization of our products. You'll combine customer empathy with analytical rigor and a deep understanding of product levers to accelerate user and revenue growth across the lifecycle.</p>
+<p><strong>The charter:</strong> Own activation, retention, and monetization for Razorpay's SME merchant base. Work shoulder-to-shoulder with Growth business counterparts and DEPA (Design, Engineering, Product Analytics) partners.</p>
+<p><strong>What we need:</strong></p>
+<ul>
+<li>Data-native PM — you think in funnels, cohorts, and experiments before PRDs. You write SQL, build dashboards, and catch insights nobody asked you to find.</li>
+<li>Hands-on with AI agents — you've actually built something with LLMs, not just read about them. Prompt engineering is table stakes.</li>
+<li>Entrepreneur DNA — you've tried building something of your own (a startup, a side project, a 0→1 product) or you're a seasoned Growth PM who's operated across the full acquisition-to-revenue loop.</li>
+<li>Business-grade judgment — you hold your own in revenue conversations, understand unit economics, and translate growth levers into P&L impact.</li>
+</ul>
+<p><strong>This is not a feature PM role.</strong> There's no stable roadmap someone hands you. You define problems, find levers, ship fast, and measure what matters.</p>
+<h3>What You'll Do</h3>
+<ul>
+<li>Build Customer Empathy: PMs have to regularly meet and understand customer needs first-hand as well as stay on top of the customer pulse via secondary insights - both qualitative and quantitative.</li>
+<li>Devise Strategy: Define both long-term strategy and quarterly roadmap to achieve the product vision and create impact.</li>
+<li>Conceptualize New Solutions: Product conceptualization with a problem-first, data-driven, and test-and-iterate approach. Ensures conceptualization from a platform and a long-term view, and value-based prioritization of product initiatives.</li>
+<li>Build Products: Collaborate with Engineering and ecosystem players to build products that customers love. Produce high-quality product specifications and effectively prioritize and manage the scope of each product launch to deliver products and features on time.</li>
+<li>Launch Products: Draft and execute a go-to-market plan in conjunction with Product Marketing. Be the internal and external authority and advocate for your given area of focus.</li>
+<li>Ecosystem Collaboration: Self-starter to collaborate closely with ecosystem players to co-build products that don't exist.</li>
+</ul>
+<h3>Mandatory Qualifications</h3>
+<ul>
+<li>You are obsessed with users but grounded in business and data.</li>
+<li>You have 6+ years of experience in product management with at least 2 years focused on growth or PLG initiatives.</li>
+<li>You're hands-on, hungry, and thrive in fast-paced environments.</li>
+<li>You have a strong command over product analytics and experimentation frameworks.</li>
+<li>You understand technology deeply enough to work well with engineers, but your core superpower is thinking from a customer-first and business-first lens.</li>
+<li>You think in systems, love solving root problems, and approach prioritization through impact and effort.</li>
+<li>You're structured in thinking, biased for action, and love taking ownership end-to-end.</li>
+</ul>
+<p>Razorpay believes in and follows an equal employment opportunity policy that doesn't discriminate on gender, religion, sexual orientation, colour, nationality, age, etc. We welcome interests and applications from all groups and communities across the globe.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4694507005",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
