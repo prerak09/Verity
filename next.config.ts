@@ -54,6 +54,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "static.lenskart.com" },
       { protocol: "https", hostname: "razorpay.com" },
       { protocol: "https", hostname: "careers.swiggy.com" },
+      { protocol: "https", hostname: "www.hudsonrivertrading.com" },
     ],
   },
 };
