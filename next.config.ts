@@ -55,6 +55,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "razorpay.com" },
       { protocol: "https", hostname: "careers.swiggy.com" },
       { protocol: "https", hostname: "www.hudsonrivertrading.com" },
+      { protocol: "https", hostname: "hiringsolutions.blob.core.windows.net" },
     ],
   },
 };

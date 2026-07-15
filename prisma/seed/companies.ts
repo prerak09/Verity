@@ -6418,6 +6418,119 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "khatabook",
+    name: "Khatabook",
+    tagline: "Digital ledger for India's MSMEs",
+    about:
+      "Khatabook is an app-based bookkeeping and lending platform for India's micro, small, and medium enterprises (MSMEs), which control roughly 90% of India's $1 trillion retail market. The app helps businesses manage receivables, inventory, and billing, and offers short-term working capital loans to qualifying users. Founded in 2018 by Ravish Naresh and Rishabh Gupta, Khatabook has been downloaded over 100 million times with 8 million+ monthly active users, and has raised $187 million across 7 rounds at a valuation near $600 million. It's headquartered in Bengaluru, India.",
+    logoUrl: "https://hiringsolutions.blob.core.windows.net/company/bc96a558-4f98-49d6-82f1-7abfc0b3d61a/KB-Red-favicon.png",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "201-500",
+    websiteUrl: "https://khatabook.com",
+    categories: ["fintech"],
+    technologies: ["java", "typescript", "react", "python"],
+    location: { city: "Bengaluru", country: "India" },
+    founders: [
+      { name: "Ravish Naresh", title: "Co-founder & CEO" },
+      { name: "Rishabh Gupta", title: "Co-founder" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/khatabook" },
+      { type: "twitter", url: "https://twitter.com/khatabook" },
+    ],
+    internships: [
+      {
+        slug: "khatabook-fullstack-developer-sde-ii",
+        title: "Fullstack Developer - SDE II",
+        description: `
+<p><strong>Are you passionate about solving roadblocks & challenges faced by MSMEs in India?</strong></p><p>MSMEs contribute significantly to India's total GDP. 90% of India's ~$1 Trillion Retail Market is controlled by Micro, Small & Medium Enterprises (MSMEs). Which means ~$900B worth of commerce flows through these ~60M MSMEs in the form of shops/kiosks/homes, scattered all over the country. We at Khatabook, have a vision to empower MSMEs and help them increase their incomes. We have built a product that brings efficiency in MSME operations by providing them easy to use tools to manage their receivables, inventory and billing which creates transparency in their cash flow. Within the Khatabook platform, we have also enabled the facility to take loans for their short term working capital needs for select Khatabook users that are displaying good credit behavior. Our app has been downloaded over 100 Million times with a monthly active user base of 8 Million+ which are adding 220 Million+ transactions with a transaction value of $18 Billion.</p><p><strong>Why work with us?</strong></p><p>People are our biggest asset! At <strong>Khatabook</strong>, every one of us is a dynamic superstar. We have carefully bred an ecosystem which hires nothing but incredibly and exceptionally talented people who can dream, collaborate, experiment, and break new ground. We're a strong team that looks out for each other.</p><p><strong>Your role:</strong></p><p>We, at Khatabook, are looking for a <strong>Fullstack SDE II</strong>. You will design, build and operate production-grade services and user-facing features that directly move metrics for millions of merchants. You will pair robust engineering fundamentals with modern AI-first workflows to ship high-quality code at speed.</p><p><strong>What would you do at Khatabook?</strong></p><ul><li>End-to-End Ownership – Take features from one-line problem statement through high-level design, coding, testing, deployment and monitoring.</li><li>Full-Stack Delivery – While you will spend ~80% of your time on backend micro-services, you should be comfortable jumping into TypeScript/React when the product demands it.</li><li>AI-Accelerated Development – Leverage tools such as Cursor, GitHub Copilot and code-gen LLMs to amplify productivity, enforce best practices and reduce toil.</li><li>Production Stewardship – Debug, triage and resolve live issues with a "fix forward" attitude; participate in incident reviews.</li><li>Team Collaboration – Work closely with PMs, Designers and Senior Engineers; communicate trade-offs, unblock peers, mentor interns or new grads.</li></ul><p><strong>What are we looking for?</strong></p><ul><li>3 years of hands-on experience building and operating scalable REST services in Java/Spring or Node.js/TypeScript (or similar)</li><li>Willingness to adopt new technologies quickly — especially AI-powered developer tools — and apply them pragmatically.</li><li>Bias for execution – You proactively break down problems, ship incremental value quickly, measure impact, and iterate quickly.</li><li>Solid understanding of fundamentals - data structures, algorithms, databases.</li><li>Working familiarity with frontend frameworks (React / Next.js)</li><li>Good written and verbal communication</li></ul>
+`.trim(),
+        location: "Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://khatabook.turbohire.co/job/publicjobs/002254b9-de96-4a4a-8d5b-2250cf360f34?utm_source=CareerPage",
+      },
+      {
+        slug: "khatabook-sdet-ii",
+        title: "SDET - II",
+        description: `
+<p><strong>Job Profile:</strong> SDET - II</p>
+<p><strong>Experience:</strong> 5–8 years</p>
+<p><strong>Location:</strong> Bangalore, Karnataka, India</p>
+<p>Khatabook hasn't published a detailed description for this role yet. Please check the official application page linked below for the latest details, or reach out to Khatabook's talent team directly.</p>
+`.trim(),
+        location: "Bangalore",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://khatabook.turbohire.co/job/publicjobs/6d4f830d-41b7-4ba4-9c00-32cb95156040?utm_source=CareerPage",
+      },
+      {
+        slug: "khatabook-data-scientist-iii-iv",
+        title: "Data Scientist - III/IV",
+        description: `
+<h3>Are you passionate about solving roadblocks & challenges faced by MSMEs in India</h3><p>MSMEs contribute significantly to India's total GDP. 90% of India's ~$1 Trillion Retail Market is controlled by MSMEs. Which means ~$900B worth of commerce flows through these ~60M MSMEs in the form of shops/kiosks/homes, scattered all over the country.</p><p>We at Khatabook, have built a product that saves time of MSMEs by managing their credit, and creating transparency in cash flow, henceforth increasing trust with their consumers and that paved the path for us to become India's fastest-growing fintech company.</p><h3>Why work with us</h3><p>People are our biggest asset! At Khatabook, every one of us is a dynamic superstar. We have carefully bred an ecosystem which hires nothing but incredibly and exceptionally talented people who can dream, collaborate, experiment, and break new ground. We're a strong team that looks out for each other.</p><h3>Your role</h3><p>We are seeking a highly skilled and innovative <strong>Data Scientist</strong> to strengthen our credit risk modeling team. As a <strong>Senior Data Scientist</strong>, you will be a technical leader owning high-impact machine learning solutions across the entire borrower journey. You will partner with business leaders to drive growth, manage risk, and optimize operations.</p><h3>What would you do at Khatabook</h3><ul><li>End-to-End Borrower Lifecycle Modeling: Develop and deploy advanced machine learning solutions across the entire lending value chain, optimizing customer acquisition (propensity-to-borrow, uplift models, CAC/ROAS), strengthening credit risk underwriting (PD, LGD, risk-based pricing), and driving intelligent collections strategies (propensity-to-pay, dynamic recovery interventions).</li><li>End-to-End Execution: Own the complete machine learning lifecycle, from translating ambiguous business requirements into mathematical frameworks to data pipeline creation, model training, and production deployment.</li><li>Cross-Functional Leadership & Mentorship: Act as the strategic bridge between technical teams and business stakeholders (Risk, Growth, Ops). Mentor junior Data Scientists, conduct rigorous code reviews, and elevate the team's technical standards.</li></ul><h3>What are we looking for</h3><ul><li>We are looking for a seasoned practitioner with a deep understanding of algorithmic development and a proven track record of solving complex problems within the financial services ecosystem.</li><li>Experience: 5–8+ years of hands-on industry experience in Data Science, with a core focus on FinTech, consumer lending, or banking.</li><li>Domain Expertise: Deep understanding of lending economics and the regulatory landscape. Proven experience building models for at least two of the following: marketing/growth, credit risk scorecards, or debt recovery/collections.</li><li>Programming Mastery: Expert-level proficiency in Python (Pandas, Scikit-learn, NumPy) and SQL for complex data manipulation and feature engineering on large-scale datasets.</li><li>Machine Learning & Statistics: Deep practical knowledge of ensemble methods (e.g., XGBoost, LightGBM, Random Forests) and foundational statistical models (Logistic Regression, Generalized Linear Models).</li><li>Familiarity with survival analysis, causal inference, and experimental design (A/B testing).</li><li>Big Data & Cloud Infrastructure: Experience extracting and processing large datasets using distributed computing frameworks (e.g., PySpark).</li><li>Proficiency within modern cloud ecosystems (AWS, GCP, or Azure).</li><li>MLOps & Deployment: Solid track record of bringing models to production. Familiarity with version control (Git), orchestration tools (Airflow), and ML lifecycle management (MLflow, CI/CD pipelines, model monitoring).</li></ul>
+`.trim(),
+        location: "Bangalore",
+        department: "Data Science",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://khatabook.turbohire.co/job/publicjobs/7e7743e0-2856-43e1-be6c-4c4cc969cc23?utm_source=CareerPage",
+      },
+      {
+        slug: "khatabook-senior-product-designer",
+        title: "Senior Product Designer",
+        description: `
+<h3>Are you passionate about solving roadblocks & challenges faced by MSMEs in India?</h3><p>MSMEs contribute significantly to India's total GDP. 90% of India's ~$1 Trillion Retail Market is controlled by Micro, Small & Medium Enterprises (MSMEs). Which means ~$900B worth of commerce flows through these ~60M MSMEs in the form of shops/kiosks/homes, scattered all over the country. We at Khatabook, have a vision to empower MSMEs and help them increase their incomes. We have built a product that brings efficiency in MSME operations by providing them easy to use tools to manage their receivables, inventory and billing which creates transparency in their cash flow. Within the Khatabook platform, we have also enabled the facility to take loans for their short term working capital needs for select Khatabook users that are displaying good credit behavior. Our app has been downloaded over 100 Million times with a monthly active user base of 8 Million+ which are adding 220 Million+ transactions with a transaction value of $18 Billion.</p><h3>Why work with us?</h3><p>People are our biggest asset! At <strong>Khatabook</strong>, every one of us is a dynamic superstar. We have carefully bred an ecosystem which hires nothing but incredibly and exceptionally talented people who can dream, collaborate, experiment, and break new ground. We're a strong team that looks out for each other.</p><h3>Your role:</h3><p>We, at <strong>Khatabook</strong>, are looking for a <strong>Senior Product Designer</strong>. If you're a strong creative thinker, constantly curious, and excited about providing your end-users with a seamless experience, we want to hear from you!</p><h3>What would you do at Khatabook?</h3><ul><li>Collaborate with the Design team and engineering to define and implement innovative mobile solutions, visuals, and experience.</li><li>Execute all design stages from concept to final hand-off to developers.</li><li>Create wireframes, storyboards, user flows, process flows, and sitemaps to communicate.</li><li>Drive the UI/UX design with a focus on branding, and usability, and ensure visual coherence effectively.</li><li>Deliver pixel-perfect UI elements.</li><li>Believe in fundamental thinking. We love candidates who think by first principles.</li><li>A user-centric approach to problem-solving. You understand the importance of consistently being in touch with users.</li></ul><h3>What are we looking for?</h3><ul><li>3+ years of experience in building design solutions for mobile applications, consumer products, and SaaS.</li><li>Should have a degree in HCI / Product design or have relevant experience in building digital products.</li><li>Experience in developing design solutions through research, user testing, and following a data-driven design approach.</li><li>Experience in leading the design development from the ideation phase to delightful user experience by collaborating with the product, engineering, and design team. Up-to-date knowledge and skill in using tools such as Figma, Adobe Creative Suite, Principle, etc.</li><li>Solid understanding of building design systems, responsive layouts, and Information Architecture.</li><li>Ensure solutions meet high visual and interaction design standards while maintaining consistency with Khatabook's design system.</li><li>Good understanding of design thinking processes, techniques, and methodologies.</li><li>Additional skills in visual design, micro-interaction, and animation are a plus.</li><li>You actively explore how emerging tools like generative AI can enhance workflows, creativity, or product experiences.</li><li>High sense of ownership and relentlessness to deliver projects. You value integrity and derive great personal joy from efficient teamwork.</li><li>Effectively mentor and inspire junior designers as we expand the team. Help the team in raising the bar, resolving blockers, prioritizing and breaking down complex projects into simpler tasks.</li><li>Ability to articulate product priorities and strategy in a compelling manner.</li><li>Heavy bias towards numbers and a keen eye for business metrics.</li><li>Always hustling - You know nothing works until a bunch of amazing beings decide that it does.</li></ul>
+`.trim(),
+        location: "Bangalore",
+        department: "Product & Design",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://khatabook.turbohire.co/job/publicjobs/4a34c640-c6bd-4671-8fb4-f5c9d600f999?utm_source=CareerPage",
+      },
+      {
+        slug: "khatabook-senior-product-manager-payments",
+        title: "Senior Product Manager - Payments",
+        description: `
+<p><strong>Are you passionate about solving roadblocks & challenges faced by MSMEs in India?</strong></p><p>MSMEs contribute significantly to India's total GDP. 90% of India's ~$1 Trillion Retail Market is controlled by Micro, Small & Medium Enterprises (MSMEs). Which means ~$900B worth of commerce flows through these ~60M MSMEs in the form of shops/kiosks/homes, scattered all over the country. We at Khatabook, have a vision to empower MSMEs and help them increase their incomes. We have built a product that brings efficiency in MSME operations by providing them easy to use tools to manage their receivables, inventory and billing which creates transparency in their cash flow. Within the Khatabook platform, we have also enabled the facility to take loans for their short term working capital needs for select Khatabook users that are displaying good credit behavior. Our app has been downloaded over 100 Million times with a monthly active user base of 8 Million+ which are adding 220 Million+ transactions with a transaction value of $18 Billion.</p><p><strong>Why work with us?</strong></p><p>People are our biggest asset! At <strong>Khatabook</strong>, every one of us is a dynamic superstar. We have carefully bred an ecosystem which hires nothing but incredibly and exceptionally talented people who can dream, collaborate, experiment, and break new ground. We're a strong team that looks out for each other.</p><p><strong>Your role:</strong></p><p>We, at Khatabook, are looking to hire a <strong>Senior Product Manager - Payments</strong>. The Product team at Khatabook is not just responsible for building products but guiding the overall strategy for the company. You will have full autonomy to identify & solve problems across different areas of the business.</p><p><strong>What would you do at Khatabook?</strong></p><ul><li>You'll build a central payments platform that will power all our use cases across business lines.</li><li>Enabling businesses using Khatabook or BizAnalyst to send & receive money to/from other businesses - both online & offline.</li><li>Solve for disbursement & collections from borrowers through our lending products.</li><li>Enable buyers on our commerce platform to pay sellers.</li><li>You'll own relationships with banks, PGs, networks, NPCI & other relevant bodies in the ecosystem.</li><li>Ensure that we're on top of & in compliance with the latest payments regulations.</li></ul><p><strong>What are we looking for?</strong></p><ul><li>You have PM experience of 2-6 years and are extremely strong at first principles thinking.</li><li>You enjoy building businesses & not just product features.</li><li>You are passionate about building beautiful & intuitive products.</li><li>You have a high sense of ownership and relentlessness hustle to get things done.</li><li>You're able to rally your & others teams behind your vision.</li><li>You want to build your own billion dollar startup some day.</li><li>Ex-founders or consultants with prior consumer internet experience (and other folks who are ambitious & generally thrive in ambiguity)</li></ul>
+`.trim(),
+        location: "Bangalore",
+        department: "Product & Design",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://khatabook.turbohire.co/job/publicjobs/5f0bf5e5-3512-470b-8e1a-09bfbcf8db18?utm_source=CareerPage",
+      },
+      {
+        slug: "khatabook-product-manager-i",
+        title: "Product Manager - I",
+        description: `
+<p><strong>Are you passionate about solving roadblocks & challenges faced by MSMEs in India?</strong></p><p>MSMEs contribute significantly to India's total GDP. 90% of India's ~$1 Trillion Retail Market is controlled by Micro, Small & Medium Enterprises (MSMEs). Which means ~$900B worth of commerce flows through these ~60M MSMEs in the form of shops/kiosks/homes, scattered all over the country. We at Khatabook, have a vision to empower MSMEs and help them increase their incomes. We have built a product that brings efficiency in MSME operations by providing them easy to use tools to manage their receivables, inventory and billing which creates transparency in their cash flow. Within the Khatabook platform, we have also enabled the facility to take loans for their short term working capital needs for select Khatabook users that are displaying good credit behavior. Our app has been downloaded over 100 Million times with a monthly active user base of 8 Million+ which are adding 220 Million+ transactions with a transaction value of $18 Billion.</p><p><strong>Why work with us?</strong></p><p>People are our biggest asset! At <strong>Khatabook</strong>, every one of us is a dynamic superstar. We have carefully bred an ecosystem which hires nothing but incredibly and exceptionally talented people who can dream, collaborate, experiment, and break new ground. We're a strong team that looks out for each other.</p><p><strong>Your role:</strong></p><p>We, at <strong>Khatabook</strong> are looking to hire a <strong>Product Manager</strong>. The Product team at Khatabook is not just responsible for building products but guiding the overall strategy for the company. You will have full autonomy to identify & solve problems across different areas of the business.</p><p><strong>What would you do at Khatabook?</strong></p><ul><li>Help us scale our lending product (platform and user experience) as we move from our 10→100 journey.</li><li>Build products that solve problems across the lending lifecycle — from <strong>lead generation to underwriting, disbursement, and collections</strong>.</li><li>Drive development of key platforms such as <strong>Loan Origination System (LOS)</strong>, <strong>Loan Management System (LMS)</strong>, and <strong>Business Rule Engine (BRE)</strong>.</li><li>Be the face of Khatabook in conversations with <strong>lenders</strong>, ensuring seamless orchestration across multiple partners.</li><li>Own and manage relationships with <strong>banks, PGs, networks, NPCI</strong>, and other ecosystem stakeholders.</li><li>Ensure full <strong>compliance with the latest payments and lending regulations</strong>.</li></ul><p><strong>What are we looking for?</strong></p><ul><li>You have PM experience of 2-4 years and are extremely strong at first principles thinking.</li><li>You enjoy building businesses & not just product features.</li><li>You are passionate about building beautiful & intuitive products.</li><li>You have a high sense of ownership and relentlessness hustle to get things done.</li><li>You're able to rally your & others teams behind your vision.</li><li>You want to build your own billion dollar startup some day.</li><li>Ex-founders or consultants with prior consumer internet experience (and other folks who are ambitious & generally thrive in ambiguity)</li></ul>
+`.trim(),
+        location: "Bangalore",
+        department: "Product & Design",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://khatabook.turbohire.co/job/publicjobs/bbdc6e81-13ba-4baf-830f-8fe82e74d8ac?utm_source=CareerPage",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
