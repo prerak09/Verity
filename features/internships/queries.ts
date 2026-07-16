@@ -81,6 +81,7 @@ async function listInternshipsUncached(
       ? { department: { contains: filters.department, mode: "insensitive" } }
       : {}),
     ...(filters.jobType ? { jobType: filters.jobType } : {}),
+    ...(filters.forWomen ? { forWomen: true } : {}),
     ...(filters.season ? { season: filters.season } : {}),
     ...(and.length ? { AND: and } : {}),
   };
@@ -137,9 +138,15 @@ function kindWhere(kind?: "internship" | "job"): Prisma.InternshipWhereInput {
  *  and /jobs filter dropdowns only offer locations that actually have results. */
 export async function listInternshipLocations(
   kind?: "internship" | "job",
+  forWomen?: boolean,
 ): Promise<string[]> {
   const rows = await db.internship.findMany({
-    where: { ...LISTED_WHERE, ...kindWhere(kind), location: { not: null } },
+    where: {
+      ...LISTED_WHERE,
+      ...kindWhere(kind),
+      ...(forWomen ? { forWomen: true } : {}),
+      location: { not: null },
+    },
     select: { location: true },
     distinct: ["location"],
     orderBy: { location: "asc" },
@@ -150,9 +157,15 @@ export async function listInternshipLocations(
 /** Distinct departments across open listings, scoped to a kind (see above). */
 export async function listInternshipDepartments(
   kind?: "internship" | "job",
+  forWomen?: boolean,
 ): Promise<string[]> {
   const rows = await db.internship.findMany({
-    where: { ...LISTED_WHERE, ...kindWhere(kind), department: { not: null } },
+    where: {
+      ...LISTED_WHERE,
+      ...kindWhere(kind),
+      ...(forWomen ? { forWomen: true } : {}),
+      department: { not: null },
+    },
     select: { department: true },
     distinct: ["department"],
     orderBy: { department: "asc" },

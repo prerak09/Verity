@@ -18,7 +18,7 @@ import { SEASON_OPTIONS } from "@/config/seasons";
 
 const ALL = "all";
 
-// Jobs page only — internships are split out into their own /internships surface.
+// Jobs and Women pages only — internships are split out into their own /internships surface.
 const JOB_TYPES: { value: JobType; label: string }[] = [
   { value: "FULL_TIME", label: "Full-time" },
   { value: "PART_TIME", label: "Part-time" },
@@ -43,8 +43,8 @@ export function InternshipsFilterBar({
 }: {
   locations: string[];
   departments: string[];
-  /** "internship" surfaces a Season filter; "job" surfaces a Job Type filter. */
-  variant?: "internship" | "job";
+  /** "internship" surfaces a Season filter; "job"/"women" surface a Job Type filter. */
+  variant?: "internship" | "job" | "women";
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -151,7 +151,7 @@ export function InternshipsFilterBar({
         </SelectContent>
       </Select>
 
-      {variant === "job" ? (
+      {variant === "job" || variant === "women" ? (
         <Select value={jobType} onValueChange={(v) => updateParam("jobType", v)}>
           <SelectTrigger className={selectTriggerClass}>
             <SelectValue>

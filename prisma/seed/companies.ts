@@ -28,6 +28,7 @@ interface DemoCompany {
     location: string;
     department: string;
     jobType: "FULL_TIME" | "PART_TIME" | "CONTRACT" | "INTERNSHIP";
+    forWomen?: boolean;
     remotePolicy: "REMOTE" | "HYBRID" | "ONSITE";
     stipend: string;
     duration: string;
@@ -7177,6 +7178,7 @@ export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) 
           location: i.location,
           department: i.department,
           jobType: i.jobType,
+          forWomen: i.forWomen ?? false,
           remotePolicy: i.remotePolicy,
           stipend: i.stipend,
           duration: i.duration,
@@ -7191,6 +7193,7 @@ export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) 
           location: i.location,
           department: i.department,
           jobType: i.jobType,
+          forWomen: i.forWomen ?? false,
           remotePolicy: i.remotePolicy,
           stipend: i.stipend,
           duration: i.duration,

@@ -295,6 +295,7 @@ export interface InternshipCard {
   location: string | null;
   department: string | null;
   jobType: JobType | null;
+  forWomen: boolean;
   season: Season | null;
   remotePolicy: RemotePolicy | null;
   stipend: string | null;
@@ -396,6 +397,7 @@ export interface InternshipFilters extends PaginationParams {
   location?: string;
   department?: string;
   jobType?: JobType;
+  forWomen?: boolean;
   season?: Season;
   /** Strict listing split: "internship" = INTERNSHIP only; "job" = full-time/
    *  part-time/contract only. Keeps /internships and /jobs from bleeding. */

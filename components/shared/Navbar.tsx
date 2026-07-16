@@ -193,10 +193,15 @@ export function Navbar({
                     <Link
                       key={link.href + link.label}
                       href={link.href}
-                      className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted"
+                      className="inline-flex items-center gap-1.5 rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted"
                       onClick={() => setMarketingMenuOpen(false)}
                     >
                       {link.label}
+                      {link.badge && (
+                        <span className="rounded-[3px] border-2 border-neutral-950 bg-primary px-1 py-0 font-mono text-[0.625rem] font-bold text-primary-foreground">
+                          {link.badge}
+                        </span>
+                      )}
                     </Link>
                   ))}
                   {!signedIn && (

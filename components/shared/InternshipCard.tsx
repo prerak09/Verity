@@ -73,6 +73,11 @@ export function InternshipCard({
           ) : (
             <>
               {internship.remotePolicy && <RemoteChip policy={internship.remotePolicy} />}
+              {internship.forWomen && (
+                <span className="inline-flex items-center rounded-sm border-2 border-neutral-950 bg-tile-pink px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-neutral-950">
+                  For Women
+                </span>
+              )}
               {internship.season && (
                 <span className="inline-flex items-center rounded-sm border-2 border-neutral-950 bg-tile-lavender px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.04em] text-neutral-950">
                   {SEASON_LABEL[internship.season]}

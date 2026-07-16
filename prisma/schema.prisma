@@ -261,6 +261,7 @@ model Internship {
   location     String?
   department   String?
   jobType      JobType?
+  forWomen     Boolean                  @default(false)
   season       Season? // internships: Summer/Fall/... for season sort+filter
   remotePolicy RemotePolicy?
   stipend      String?
