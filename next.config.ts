@@ -56,6 +56,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "careers.swiggy.com" },
       { protocol: "https", hostname: "www.hudsonrivertrading.com" },
       { protocol: "https", hostname: "hiringsolutions.blob.core.windows.net" },
+      { protocol: "https", hostname: "juspay.io" },
     ],
   },
 };

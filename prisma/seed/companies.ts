@@ -6974,6 +6974,98 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "juspay",
+    name: "Juspay",
+    tagline: "Global payments operating system",
+    about:
+      "Juspay is a multinational payments technology company that powers payment orchestration, checkout experiences, authentication, tokenisation, payouts, and reconciliation for 500+ global enterprises and banks. Founded in 2012 by Vimal Kumar and Sheetal Lalwani, Juspay processes over 300 million daily transactions with an annualized total payment volume exceeding $1 trillion at 99.999% reliability. It raised a $110 million Series D (including a $50 million extension) at a $1.2 billion valuation, becoming a unicorn in 2025. Headquartered in Bangalore, India, with offices in San Francisco, Dublin, São Paulo, and Singapore.",
+    logoUrl: "https://juspay.io/juspaylogo.svg",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://juspay.io",
+    categories: ["fintech"],
+    technologies: ["react", "kubernetes", "aws"],
+    location: { city: "Bengaluru", country: "India" },
+    founders: [
+      { name: "Vimal Kumar", title: "Co-founder & CEO" },
+      { name: "Sheetal Lalwani", title: "Co-founder" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/juspay-technologies" },
+      { type: "twitter", url: "https://x.com/juspay" },
+    ],
+    internships: [
+      {
+        slug: "juspay-software-development-engineer-backend",
+        title: "Software Development Engineer Backend",
+        description: `
+<p>Juspay is a leading multinational payments technology company, powering superior conversion rates, seamless customer experiences, cost optimization, and fraud reduction at scale for 500+ top global enterprises and banks. Founded in 2012, the company processes over 300 million daily transactions, exceeding an annualized total payment volume (TPV) of $1 trillion with 99.999% reliability. Headquartered in Bangalore, India, Juspay's global network of 1200+ payment experts operates across San Francisco, Dublin, São Paulo, and Singapore.</p>
+<p>Juspay offers a modular and interoperable product suite for merchants that includes open-source payment orchestration, seamless authentication, payment tokenization, fraud &amp; risk management, global payouts, end-to-end reconciliation, unified payment analytics, and more. For banks, Juspay's offerings include end-to-end white label payment gateway solutions &amp; real-time payments infrastructure.</p>
+<h4>What you'll be doing</h4>
+<p>You'll be working on the core problems pertaining to our centers of excellence. Each of our Centres of Excellence balances the dual of Framework Development (The Ideal) and Business Enablement (The Practical).</p>
+<ul>
+<li><strong>SDK:</strong> Building UI/UX experiences that enable frictionless user payments and enable merchants to manage payment options seamlessly &mdash; frictionless 1-click payment with a native payment page, incorporating React markup in 'Presto' (Juspay's proprietary UI framework).</li>
+<li><strong>Backend:</strong> Business logic to handle evolving payment requirements (UPI, integrations, authentication) flexibly &mdash; the biggest FP (functional programming) company with entire business logic in FP, concise expression of complex payment logic, API integrations.</li>
+<li><strong>Data Science:</strong> Intelligence from more than a billion transactions to enable automated and intelligent payment operations &mdash; intelligent traffic routing, self-healing systems, automatic anomaly detection, intelligent payment assist, AI-powered payment operations, aesthetic visualization of data.</li>
+<li><strong>Infrastructure:</strong> Reliable and 99.999% available infrastructure which can power the payments for India &mdash; multi-DC architecture, infrastructure DSL for unified management at scale, distributed computing on edge devices.</li>
+</ul>
+<h4>Apply if you are</h4>
+<ul>
+<li>Enthusiastic about architecting expansive frameworks using deep functional programming languages.</li>
+<li>Interested in solving reliability &amp; performance problems that occur at large scale.</li>
+<li>Passionate about developing low-code &amp; no-code platforms within a framework to streamline &amp; accelerate application development.</li>
+<li>Excited to incorporate self-service features in application development, enabling end users to efficiently modify and customize their applications as needed.</li>
+<li>Excited about managing merchants (big &amp; small) with zero issues.</li>
+</ul>
+<h4>What's in it for you</h4>
+<p>Welcome to Day 0! You'll hit the ground running with a focus on mission-critical projects &amp; the development of next-generation frameworks. You'll work on challenging problems that put you to your best, dive into a development journey anchored in first-principles thinking, and progress into a skilled system architect, inspired by the growth of Juspay's DUI/Hyper SDK team. Learn from the best, unleashing your potential for ten-fold growth.</p>
+`.trim(),
+        location: "Bangalore",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://joinus.juspay.in?jobId=DEV-BE01",
+      },
+      {
+        slug: "juspay-software-development-engineer-backend-intern",
+        title: "Software Development Engineer Backend (Intern)",
+        description: `
+<p>Juspay is a leading multinational payments technology company, powering superior conversion rates, seamless customer experiences, cost optimization, and fraud reduction at scale for 500+ top global enterprises and banks. Founded in 2012, the company processes over 300 million daily transactions, exceeding an annualized total payment volume (TPV) of $1 trillion with 99.999% reliability. Headquartered in Bangalore, India, Juspay's global network of 1200+ payment experts operates across San Francisco, Dublin, São Paulo, and Singapore.</p>
+<p>Juspay offers a modular and interoperable product suite for merchants that includes open-source payment orchestration, seamless authentication, payment tokenization, fraud &amp; risk management, global payouts, end-to-end reconciliation, unified payment analytics, and more. For banks, Juspay's offerings include end-to-end white label payment gateway solutions &amp; real-time payments infrastructure.</p>
+<h4>What you'll be doing</h4>
+<p>You'll be working on the core problems pertaining to our centers of excellence. Each of our Centres of Excellence balances the dual of Framework Development (The Ideal) and Business Enablement (The Practical).</p>
+<ul>
+<li><strong>SDK:</strong> Building UI/UX experiences that enable frictionless user payments and enable merchants to manage payment options seamlessly &mdash; frictionless 1-click payment with a native payment page, incorporating React markup in 'Presto' (Juspay's proprietary UI framework).</li>
+<li><strong>Backend:</strong> Business logic to handle evolving payment requirements (UPI, integrations, authentication) flexibly &mdash; the biggest FP (functional programming) company with entire business logic in FP, concise expression of complex payment logic, API integrations.</li>
+<li><strong>Data Science:</strong> Intelligence from more than a billion transactions to enable automated and intelligent payment operations &mdash; intelligent traffic routing, self-healing systems, automatic anomaly detection, intelligent payment assist, AI-powered payment operations, aesthetic visualization of data.</li>
+<li><strong>Infrastructure:</strong> Reliable and 99.999% available infrastructure which can power the payments for India &mdash; multi-DC architecture, infrastructure DSL for unified management at scale, distributed computing on edge devices.</li>
+</ul>
+<h4>Apply if you are</h4>
+<ul>
+<li>Enthusiastic about architecting expansive frameworks using deep functional programming languages.</li>
+<li>Interested in solving reliability &amp; performance problems that occur at large scale.</li>
+<li>Passionate about developing low-code &amp; no-code platforms within a framework to streamline &amp; accelerate application development.</li>
+<li>Excited to incorporate self-service features in application development, enabling end users to efficiently modify and customize their applications as needed.</li>
+<li>Excited about managing merchants (big &amp; small) with zero issues.</li>
+</ul>
+<h4>What's in it for you</h4>
+<p>Welcome to Day 0! You'll hit the ground running with a focus on mission-critical projects &amp; the development of next-generation frameworks. You'll work on challenging problems that put you to your best, dive into a development journey anchored in first-principles thinking, and progress into a skilled system architect, inspired by the growth of Juspay's DUI/Hyper SDK team. Learn from the best, unleashing your potential for ten-fold growth.</p>
+`.trim(),
+        location: "Bangalore",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Internship",
+        applyUrl: "https://joinus.juspay.in?jobId=DEV-BE02",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
