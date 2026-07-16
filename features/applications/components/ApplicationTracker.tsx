@@ -158,7 +158,7 @@ export function ApplicationTracker({
           onClick={() => setView("kanban")}
           aria-pressed={view === "kanban"}
           aria-label="Kanban view"
-          className={cn("rounded-md p-1.5", view === "kanban" && "bg-muted")}
+          className={cn("rounded-md p-2.5 sm:p-1.5", view === "kanban" && "bg-muted")}
         >
           <LayoutGrid className="size-4" aria-hidden />
         </button>
@@ -167,7 +167,7 @@ export function ApplicationTracker({
           onClick={() => setView("list")}
           aria-pressed={view === "list"}
           aria-label="List view"
-          className={cn("rounded-md p-1.5", view === "list" && "bg-muted")}
+          className={cn("rounded-md p-2.5 sm:p-1.5", view === "list" && "bg-muted")}
         >
           <ListIcon className="size-4" aria-hidden />
         </button>

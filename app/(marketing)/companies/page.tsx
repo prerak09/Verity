@@ -4,6 +4,7 @@ import { Building2 } from "lucide-react";
 import { CompanyCard } from "@/components/shared/CompanyCard";
 import { CompanyListRow } from "@/components/shared/CompanyListRow";
 import { EmptyState } from "@/components/shared/EmptyState";
+import { MobileFilterSheet } from "@/components/shared/MobileFilterSheet";
 import { Pagination } from "@/components/shared/Pagination";
 import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
 import { CompaniesFilterBar } from "@/features/companies/components/CompaniesFilterBar";
@@ -110,7 +111,12 @@ export default async function CompaniesDirectoryPage({
       <CompaniesFilterBar view={view} />
 
       <div className="mt-6 grid gap-8 lg:grid-cols-[288px_1fr]">
-        <CompaniesFilterSidebar categories={categories} locations={locations} />
+        <div className="hidden lg:block">
+          <CompaniesFilterSidebar categories={categories} locations={locations} />
+        </div>
+        <MobileFilterSheet>
+          <CompaniesFilterSidebar categories={categories} locations={locations} />
+        </MobileFilterSheet>
 
         <div className="min-w-0">
           <p className="text-body-sm text-muted-foreground">

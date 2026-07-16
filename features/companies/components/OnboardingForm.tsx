@@ -139,7 +139,7 @@ export function OnboardingForm() {
             </span>
             <span
               className={cn(
-                "text-body-sm",
+                "hidden text-body-sm sm:block",
                 i === step ? "font-medium text-foreground" : "text-muted-foreground",
               )}
             >

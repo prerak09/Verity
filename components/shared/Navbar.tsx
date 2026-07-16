@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useClerk } from "@clerk/nextjs";
-import { Menu, User as UserIcon, ChevronDown, UserCircle, Settings, LogOut } from "lucide-react";
+import { Menu, Search, User as UserIcon, ChevronDown, UserCircle, Settings, LogOut } from "lucide-react";
 
 import { Logo } from "@/components/shared/Logo";
 import { NotificationBell } from "@/components/shared/NotificationBell";
@@ -116,6 +116,7 @@ export function Navbar({
   className,
 }: NavbarProps) {
   const [marketingMenuOpen, setMarketingMenuOpen] = useState(false);
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
 
   return (
     <header
@@ -187,7 +188,7 @@ export function Navbar({
             </div>
 
             <Dialog open={marketingMenuOpen} onOpenChange={setMarketingMenuOpen}>
-              <DialogContent className="border-[3px] border-neutral-950 shadow-brutal-md sm:hidden">
+              <DialogContent className="border-[3px] border-neutral-950 shadow-brutal-md md:hidden">
                 <nav className="flex flex-col gap-1">
                   {links.map((link) => (
                     <Link
@@ -225,8 +226,27 @@ export function Navbar({
               </div>
             )}
             <nav className="ml-auto flex items-center gap-2">
+              {centerSlot && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="sm:hidden"
+                  aria-label="Search"
+                  onClick={() => setMobileSearchOpen(true)}
+                >
+                  <Search className="size-5" aria-hidden />
+                </Button>
+              )}
               {userSlot ?? <AccountMenu profileHref={profileHref} settingsHref={settingsHref} />}
             </nav>
+
+            {centerSlot && (
+              <Dialog open={mobileSearchOpen} onOpenChange={setMobileSearchOpen}>
+                <DialogContent className="border-[3px] border-neutral-950 shadow-brutal-md sm:hidden">
+                  {centerSlot}
+                </DialogContent>
+              </Dialog>
+            )}
           </>
         )}
       </div>

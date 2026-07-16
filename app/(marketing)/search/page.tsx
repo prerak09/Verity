@@ -4,6 +4,7 @@ import { Search, SearchX, X as XIcon } from "lucide-react";
 
 import { CompanyCard } from "@/components/shared/CompanyCard";
 import { EmptyState } from "@/components/shared/EmptyState";
+import { MobileFilterSheet } from "@/components/shared/MobileFilterSheet";
 import { Pagination } from "@/components/shared/Pagination";
 import { listCompanies, listCategories } from "@/features/companies/queries";
 import { listTechnologies } from "@/features/admin/taxonomy";
@@ -164,6 +165,94 @@ export default async function SearchPage({
     category || technology || fundingStage || remotePolicy || visaSponsorship || location,
   );
 
+  const filterSidebarContent = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-overline text-muted-foreground">Category</h2>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {categories.map((c) => (
+            <FilterPill
+              key={c.id}
+              href={filterHref(params, "category", c.slug)}
+              active={category === c.slug}
+            >
+              {c.name}
+            </FilterPill>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-overline text-muted-foreground">Technology</h2>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {technologies.map((t) => (
+            <FilterPill
+              key={t.id}
+              href={filterHref(params, "technology", t.slug)}
+              active={technology === t.slug}
+            >
+              {t.name}
+            </FilterPill>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-overline text-muted-foreground">Funding stage</h2>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {FUNDING_STAGES.map((f) => (
+            <FilterPill
+              key={f.value}
+              href={filterHref(params, "fundingStage", f.value)}
+              active={fundingStage === f.value}
+            >
+              {f.label}
+            </FilterPill>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-overline text-muted-foreground">Remote policy</h2>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {REMOTE_POLICIES.map((r) => (
+            <FilterPill
+              key={r.value}
+              href={filterHref(params, "remotePolicy", r.value)}
+              active={remotePolicy === r.value}
+            >
+              {r.label}
+            </FilterPill>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-overline text-muted-foreground">Visa sponsorship</h2>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          <FilterPill
+            href={filterHref(params, "visaSponsorship", "true")}
+            active={visaSponsorship === "true"}
+          >
+            Yes
+          </FilterPill>
+          <FilterPill
+            href={filterHref(params, "visaSponsorship", "false")}
+            active={visaSponsorship === "false"}
+          >
+            No
+          </FilterPill>
+        </div>
+      </div>
+
+      {hasActiveFilters && (
+        <Link href={q ? `/search?q=${encodeURIComponent(q)}` : "/search"} className="text-body-sm font-medium text-foreground hover:underline">
+          Clear all filters
+        </Link>
+      )}
+    </div>
+  );
+
   return (
     <div className="mx-auto max-w-wide px-4 py-10 sm:px-6">
       <form action="/search" method="get" className="max-w-lg">
@@ -182,91 +271,10 @@ export default async function SearchPage({
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[288px_1fr]">
         {/* Filter sidebar */}
-        <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-          <div>
-            <h2 className="text-overline text-muted-foreground">Category</h2>
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              {categories.map((c) => (
-                <FilterPill
-                  key={c.id}
-                  href={filterHref(params, "category", c.slug)}
-                  active={category === c.slug}
-                >
-                  {c.name}
-                </FilterPill>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-overline text-muted-foreground">Technology</h2>
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              {technologies.map((t) => (
-                <FilterPill
-                  key={t.id}
-                  href={filterHref(params, "technology", t.slug)}
-                  active={technology === t.slug}
-                >
-                  {t.name}
-                </FilterPill>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-overline text-muted-foreground">Funding stage</h2>
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              {FUNDING_STAGES.map((f) => (
-                <FilterPill
-                  key={f.value}
-                  href={filterHref(params, "fundingStage", f.value)}
-                  active={fundingStage === f.value}
-                >
-                  {f.label}
-                </FilterPill>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-overline text-muted-foreground">Remote policy</h2>
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              {REMOTE_POLICIES.map((r) => (
-                <FilterPill
-                  key={r.value}
-                  href={filterHref(params, "remotePolicy", r.value)}
-                  active={remotePolicy === r.value}
-                >
-                  {r.label}
-                </FilterPill>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-overline text-muted-foreground">Visa sponsorship</h2>
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              <FilterPill
-                href={filterHref(params, "visaSponsorship", "true")}
-                active={visaSponsorship === "true"}
-              >
-                Yes
-              </FilterPill>
-              <FilterPill
-                href={filterHref(params, "visaSponsorship", "false")}
-                active={visaSponsorship === "false"}
-              >
-                No
-              </FilterPill>
-            </div>
-          </div>
-
-          {hasActiveFilters && (
-            <Link href={q ? `/search?q=${encodeURIComponent(q)}` : "/search"} className="text-body-sm font-medium text-foreground hover:underline">
-              Clear all filters
-            </Link>
-          )}
+        <aside className="hidden lg:sticky lg:top-24 lg:block lg:self-start">
+          {filterSidebarContent}
         </aside>
+        <MobileFilterSheet>{filterSidebarContent}</MobileFilterSheet>
 
         {/* Results */}
         <div className="min-w-0">

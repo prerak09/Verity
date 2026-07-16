@@ -20,7 +20,7 @@ export function CompanyListRow({
   className?: string;
 }) {
   return (
-    <div className={cn("retro-card relative flex gap-4 p-4 sm:p-5", className)}>
+    <div className={cn("retro-card relative flex flex-col gap-4 p-4 sm:flex-row sm:p-5", className)}>
       {company.logoUrl ? (
         <Image
           src={company.logoUrl}
@@ -65,7 +65,7 @@ export function CompanyListRow({
         </div>
       </div>
 
-      <div className="flex shrink-0 flex-col items-end justify-between gap-3">
+      <div className="flex shrink-0 flex-row items-center justify-between gap-3 sm:flex-col sm:items-end">
         <div className="flex items-center gap-2">
           {company.openInternshipCount > 0 && (
             <span className="inline-flex items-center rounded-[3px] border-2 border-neutral-950 bg-lime px-2 py-0.5 font-mono text-[0.6875rem] font-bold text-neutral-950">

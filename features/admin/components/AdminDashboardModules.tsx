@@ -114,7 +114,7 @@ export function AdminDashboardModules({
 
       <div className="grid gap-4 sm:grid-cols-2">
         <ModuleCard title="Users" href="/admin/users" linkLabel="Manage">
-          <form action="/admin/users" className="flex gap-2">
+          <form action="/admin/users" className="flex flex-col gap-2 sm:flex-row">
             <Input name="q" placeholder="Search by name or email…" />
             <Button type="submit" size="sm" variant="outline">
               Search
@@ -123,7 +123,7 @@ export function AdminDashboardModules({
         </ModuleCard>
 
         <ModuleCard title="Companies" href="/admin/companies" linkLabel="Manage">
-          <div className="flex gap-2">
+          <div className="flex flex-col gap-2 sm:flex-row">
             <form action="/admin/companies" className="flex flex-1 gap-2">
               <Input name="q" placeholder="Search companies…" />
               <Button type="submit" size="sm" variant="outline">
