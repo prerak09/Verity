@@ -6531,6 +6531,156 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "setu",
+    name: "Setu",
+    tagline: "API infrastructure for financial services",
+    about:
+      "Setu builds developer-first API infrastructure that lets any business embed financial services — payments, lending, account aggregation, and more — directly into their products. Founded in 2018 by Nikhil Kumar and Sahil Kini, Setu was acquired by Pine Labs in June 2022 in a deal reported at roughly $70 million, and now operates as Pine Labs' API infrastructure arm powering bill payments and other financial rails for banks and fintechs across India. It's headquartered in Bengaluru, India.",
+    logoUrl: "https://hiringsolutions.blob.core.windows.net/company/0c477d09-037b-4de1-a1d6-6e42dad1ff4d/squareLogo.jpg",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "201-500",
+    websiteUrl: "https://setu.co",
+    categories: ["fintech"],
+    technologies: ["go", "typescript", "react", "python"],
+    location: { city: "Bengaluru", country: "India" },
+    founders: [
+      { name: "Nikhil Kumar", title: "Co-founder" },
+      { name: "Sahil Kini", title: "Co-founder" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/setu-apis" },
+      { type: "twitter", url: "https://twitter.com/setuhq" },
+    ],
+    internships: [
+      {
+        slug: "setu-sde-ii-platform",
+        title: "SDE II — Platform",
+        description: `
+<p><strong>SDE II — Platform</strong> · 2-4 years of experience</p>
+<h4>About Setu</h4>
+<p>India's economic infrastructure needs a complete overhaul. Today our digital economy rides on rickety monolithic systems built in the mid-90s. It takes months to do a simple bank integration and launch a fintech product. This inefficiency cannot continue. If our economy has to grow, we need killer API infrastructure for financial services that rivals the likes of Stripe, and AWS. At Setu, we are fixing this for good, by abstracting away the complexity of working with legacy financial infrastructure and replacing it with a developer platform that offers clean, high-performance API bundles to embed finance into any application. So that developers can do what they do best, build amazing products that improve people's lives.</p>
+<h4>Importance of the role</h4>
+<p>This is a mission-critical role. We are a small, diverse, agile, and high-performance engineering team. We're looking for versatile developers who will: Build new products and tools to crunch integration times and time to market. Improve through peer learning and transmit them to the Setu dev ecosystem. Take ownership and get the job done. We need role-shapers, not role takers. One particular area of focus for us is to empower developers and users to make the most of financial data. Today, our data is locked up in silos that add friction to how data is accessed and shared. With RBI's new Account Aggregator framework, this will change forever: data will be seamlessly shared and accessed, based entirely on user consent. At Setu, we are leading this ecosystem shift and building developer infrastructure and user experiences to enable this change. Our APIs and SDKs will enable developers to improve existing fintech apps and build new apps that amaze all of us.</p>
+<h4>What will you do at Setu</h4>
+<p>Work with product and engineering teams to build tools and services that impacts and improves the efficiency of the entire organization. Figure out gaps in the engineering and products and build solutions that solve these gaps. Guide interns and contribute across teams (PRD reviews, MR reviews) and contribute toward improving the product engineering quality and benchmarks. Build high scale and durable solutions that stand the test of time. Stay updated with coding trends and developments.</p>
+<h4>Who is the right fit for this role</h4>
+<p>2 - 4 years of experience with programming. Experience with programming languages (e.g.: Java/Python/Go/Rust/Ruby/Javascript) and SQL. Experience working in cloud environments (AWS/GCP/Azure). Ability to work effectively in a dynamic group that has several concurrent projects. Ability to communicate effectively (verbally and in writing) with various stakeholders and can crisply articulate customer challenges. Most importantly, someone who can get stuff done!</p>
+<h4>Why Setu</h4>
+<p>We will spare no efforts to ensure that Setu empowers you to do the most important and impactful work of your career. Opportunity to work closely with the founding team who built and scaled public infrastructure such as UPI, GST, Aadhaar, etc. We care deeply about your growth, so we work hard to provide exposure to other verticals such as product, business, design, etc., a fully stocked library and unlimited book budget, tickets to conferences and industry events, fortnightly learning sessions with team members and external experts, and a learning and development allowance covering subscriptions, courses, certifications, and more. Kick-ass benefits include comprehensive health insurance for you and your family, personal accident and term life insurance, access to mental health counselors, extraordinary coffee, and a beautiful office with lots of solid wood and natural light. We hire purely on merit, skill, and competence.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://pinelabsgroup.turbohire.co/get/YXQ5M3d",
+      },
+      {
+        slug: "setu-associate-audit-and-infosec",
+        title: "Associate — Audit and Infosec",
+        description: `
+<p><strong>Associate — Audit and Infosec</strong> · 2 to 4 years of work experience · Bengaluru</p>
+<h4>About Setu</h4>
+<p>Setu is working to reimagine financial products for the next billion users. How do you put a dent in India's economy when most of her population cannot afford insurance, credit, investments, etc. through the formal channels that you and I take for granted? If we break down financial products such as loans, insurance and investments into their fundamental building blocks, and offer them as APIs to businesses, they then package these APIs into highly custom apps, tailor-made for their specific customers, instead of a generic one-size-for-all approach that is the norm today. This also enables them to go live with a fintech product or service in a matter of days, not months. We believe that fintech will be a core part of every company's offering, and at Setu, we're building the infrastructure that will accelerate this.</p>
+<h4>More about Setu</h4>
+<p>Setu is an acquired entity of Pine Labs, one of the fastest growing fintech companies in India and rapidly expanding its footprint in Asia, UAE, and the US. At Pine Labs, we're looking for those who share our core belief — "Every Day is Game Day". We bring our best selves to work each day to realise our mission of enriching the world through the power of digital commerce and financial services.</p>
+<h4>Importance of the role</h4>
+<p>We are seeking a dedicated and skilled Associate — Audit and Infosec. Financial services is a highly regulated sector, which means our mission of being a bridge between regulated financial institutions (asset partners) and fast-growing technology companies (developers) comes with a significant set of responsibilities, including audit and compliance. Our asset partners, including some of India's largest private and public sector banks, have very high expectations when it comes to a partner like us, who have direct access to their technical infrastructure. This includes vendor audits and certifications at the start of a relationship, as well as continuing audits on a set schedule. At present, we have an ISO 27001 certification and are compliant with data localisation requirements, and intend to build on this base to complete more relevant certifications.</p>
+<h4>What will you do at Setu</h4>
+<p>This role reports to the Audit & Compliance Head. Implement, maintain, and improve a best-in-class information security, risk & compliance management framework, covering Setu at both the company and individual product level. Help manage and improve Setu's security, compliance, assessment, and penetration testing programs. Establish, in consultation with management, the level of risk Setu is willing to take and ensure it isn't breached. Work with Engineering, Customer Success, and other teams to improve security compliance and reduce risks. Review and update security policies and standards regularly. Plan, prepare for, and conduct process-led internal, external, and vendor audits. Ensure Setu achieves and maintains relevant certifications such as ISO 27001:2022, SOC2 Type 2, and data localisation, and proactively recommend new certifications/audits. Coordinate regular internal system and network audits, reviews, and tests to verify compliance with security policies and standards.</p>
+<h4>Who is the right fit for this role</h4>
+<p>Minimum 2-4 years of prior experience in managing audit and compliance at a fintech or a regulated financial institution, with specific experience in frameworks and audits such as ISO 27001:2022, SOC, ReBIT, SOX and PCI DSS, and completed bank/financial institution vendor and technical audits in the past. Patient and detail-oriented, comfortable being the last line of defence. Process-driven, with a knack for building accountability into processes — checklists, TATs, and sanity checks. Well versed in the prevalent tools used in this domain, and values intelligent automation over throwing bodies at a problem.</p>
+<h4>Why Setu</h4>
+<p>We will spare no efforts to ensure that Setu empowers you to do the most important and impactful work of your career. Opportunity to work closely with the founding team who built and scaled public infrastructure such as UPI, GST, Aadhaar, etc. We care deeply about your growth, so we provide a fully stocked library and unlimited book budget, tickets to conferences and industry events, learning sessions with team members and external experts, and a learning and development allowance covering subscriptions, courses, certifications, and more. Kick-ass benefits include comprehensive health insurance for you and your family, personal accident and term life insurance, access to mental health counsellors, extraordinary coffee, and a beautiful office with lots of solid wood and natural light. Our culture code, "How We Move", centers on six elements: Take the shot, Sign your work like an artist, Be the sherpa, Be the CEO of what you do, Care with tough love, and Own tomorrow.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://pinelabsgroup.turbohire.co/get/d3dKWlU",
+      },
+      {
+        slug: "setu-full-stack-engineer-frontend-heavy-sde2",
+        title: "Full Stack Engineer (Frontend-heavy, SDE2)",
+        description: `
+<p><strong>Full Stack Engineer (Frontend-heavy, SDE2)</strong> · 2-4 years of experience</p>
+<h4>About Setu</h4>
+<p>India's economic infrastructure needs a complete overhaul. Today our digital economy rides on rickety monolithic systems built in the mid-90s. It takes months to do a simple bank integration and launch a fintech product. This inefficiency cannot continue. If our economy has to grow, we need killer API infrastructure for financial services that rivals the likes of Stripe, and AWS. At Setu, we are fixing this for good, by abstracting away the complexity of working with legacy financial infrastructure and replacing it with a developer platform that offers clean, high-performance API bundles to embed finance into any application. So that developers can do what they do best, build amazing products that improve people's lives.</p>
+<h4>What we do</h4>
+<p>We are a micro-startup within Setu, owning the BBPS Stack — powering bill payments across leading banks and fintechs including (but not limited to) CRED, Axis Bank, Canara Bank, Fold, and INDMoney. Every month, transactions worth around ₹70,000 crore flow through our systems. We build for scale, reliability, and trust, ensuring that millions of customers experience seamless bill payments across India.</p>
+<h4>What you'll do</h4>
+<p>Take end-to-end ownership of features — from design and implementation to deployment and monitoring. Collaborate with product, design, and backend teams to deliver intuitive and performant user experiences. Lead frontend development efforts within the team, driving high-quality UI and UX implementations. Work with TypeScript and modern frontend frameworks (React, Next.js) to build robust, maintainable interfaces. Contribute to backend services written in Golang, and maintain a working understanding of backend systems. Follow and promote industry-standard engineering practices — clean code, testing, reviews, and CI/CD.</p>
+<h4>Our stack</h4>
+<p>Languages & frameworks: React, TypeScript, Next.js, Golang. Datastores: PostgreSQL, Redis, ClickHouse, DynamoDB. Messaging & queues: RabbitMQ, SQS. Infra & monitoring: AWS, Prometheus, Grafana, Sentry. CI/CD & tooling: GitLab, SST, Terraform, Docker.</p>
+<h4>What we're looking for</h4>
+<p>Strong hands-on experience with TypeScript and modern frontend frameworks. Some exposure to mobile app development (especially webview integrations). Comfortable working across the stack with a high level of ownership and bias for action. Solid understanding of engineering best practices and code quality. Passion for building performant, reliable, and scalable products that users love.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://pinelabsgroup.turbohire.co/get/RFZUclV",
+      },
+      {
+        slug: "setu-backend-engineer-sde2-sde3",
+        title: "Backend Engineer (SDE2 / SDE3)",
+        description: `
+<p><strong>Backend Engineer (SDE2 / SDE3)</strong> · 3-6 years of experience</p>
+<h4>About Setu</h4>
+<p>India's economic infrastructure needs a complete overhaul. Today our digital economy rides on rickety monolithic systems built in the mid-90s. It takes months to do a simple bank integration and launch a fintech product. This inefficiency cannot continue. If our economy has to grow, we need killer API infrastructure for financial services that rivals the likes of Stripe, and AWS. At Setu, we are fixing this for good, by abstracting away the complexity of working with legacy financial infrastructure and replacing it with a developer platform that offers clean, high-performance API bundles to embed finance into any application. So that developers can do what they do best, build amazing products that improve people's lives.</p>
+<h4>What we do</h4>
+<p>We are a micro-startup within Setu, owning the BBPS Stack — powering bill payments across leading banks and fintechs including (but not limited to) CRED, Axis Bank, Canara Bank, Fold, and INDMoney. Every month, transactions worth around ₹70,000 crore flow through our systems. We build for scale, reliability, and trust, ensuring that millions of customers experience seamless bill payments across India.</p>
+<h4>What you'll do</h4>
+<p>This isn't just another backend role — we're looking for engineers who are excited to make a measurable impact on cost efficiency and system performance while building resilient, scalable systems. Design, build, and maintain backend services that power high-scale, low-latency payment systems. Take end-to-end ownership of problem statements — from architecture and implementation to rollout and monitoring. Continuously optimize performance and infrastructure costs, identifying opportunities to make our systems faster and leaner. Collaborate with product, frontend, and infra teams to deliver reliable and scalable solutions. Strengthen system observability, fault tolerance, and scalability through metrics, tracing, and alerting. Follow and champion engineering best practices — testing, documentation, code reviews, and CI/CD automation.</p>
+<h4>Our stack</h4>
+<p>Languages & frameworks: Golang. Datastores: PostgreSQL, Redis, ClickHouse, DynamoDB. Messaging & queues: RabbitMQ, SQS. Infra & monitoring: AWS, Prometheus, Grafana. CI/CD & tooling: GitLab, Terraform, Docker.</p>
+<h4>What we're looking for</h4>
+<p>Strong hands-on experience with Golang and related backend technologies. Solid understanding of relational databases (PostgreSQL), distributed systems, concurrency, and system design. Experience in scaling backend systems or cost optimization at high scale. Familiarity with AWS and observability tooling (Grafana, Prometheus, ClickHouse, etc.). Demonstrated ownership mindset — ability to take initiatives from concept to production. Passion for clean, maintainable, and efficient code.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://pinelabsgroup.turbohire.co/get/bGFRMGN",
+      },
+      {
+        slug: "setu-data-engineer-ii",
+        title: "Data Engineer II",
+        description: `
+<p><strong>Data Engineer</strong> · 3 to 5 years of experience</p>
+<h4>About Setu</h4>
+<p>India's economic infrastructure needs a complete overhaul. Today our digital economy rides on rickety monolithic systems built in the mid-90s. It takes months to do a simple bank integration and launch a fintech product. This inefficiency cannot continue. If our economy has to grow, we need killer API infrastructure for financial services that rivals the likes of Stripe and AWS. At Setu, we are fixing this for good, by abstracting away the complexity of working with legacy financial infrastructure and replacing it with a developer platform that offers clean, high-performance API bundles to embed finance into any application. So that developers can do what they do best, build amazing products that improve people's lives.</p>
+<h4>Importance of the role</h4>
+<p>Setu is building fintech infrastructure at scale. We're strengthening our data platform to power revenue analytics, data science workloads, and product insights across the company. We need a software engineer who understands data systems — someone who can build robust, production-grade pipelines and models.</p>
+<h4>What will you do at Setu</h4>
+<p>Build, maintain, and redesign reliable, scalable data pipelines and reporting tables, primarily using DBT and OLAP databases (preferably ClickHouse, open to others). Collaborate with business, product, and DS teams to understand needs and translate them into data architecture. Develop production-ready data models that drive business insights and analytics. Accountable for data cataloging, metadata management, and overall platform hygiene. Take ownership of the existing platform and pipelines and proactively improve architecture and reliability. Work on operational tasks: monitoring, scheduling, alerting, and documentation. Stay hands-on with Python, SQL, and DBT for day-to-day engineering. Build and maintain real-time/batch data pipelines that consolidate and clean up usage analytics. Own data quality and reliability for critical datasets — define and maintain SLAs, manage retention policies, and monitor consumption patterns.</p>
+<h4>Who is the right fit</h4>
+<p>3+ years of practical experience building and maintaining analytics/reporting pipelines. Strong programming skills in Python and SQL. Hands-on with DBT and OLAP DBs (ClickHouse preferred, others like BigQuery/Redshift also fine). Production experience: testing, CI/CD, monitoring, debugging, on-call. Willingness to learn new technologies (pipelines, data catalogs, streaming). Ability to independently debug issues and proactively improve processes. Good written and oral communication skills. Detail-oriented and passionate about consistently high-quality deliverables.</p>
+<h4>Tech stack</h4>
+<p>Python, SQL, DBT, ClickHouse/OLAP DBs. Good to have: Airflow, Spark, Flink, Kafka, or other streaming platforms.</p>
+<h4>Why Setu</h4>
+<p>We will spare no efforts to ensure that Setu empowers you to do the most important and impactful work of your career. Opportunity to work closely with the founding team who built and scaled public infrastructure such as UPI, GST, Aadhaar, etc. We care deeply about your growth, so we provide a fully stocked library and unlimited book budget, tickets to conferences and industry events, learning sessions with team members and external experts, and a learning and development allowance covering subscriptions, courses, certifications, and more. Kick-ass benefits include comprehensive health insurance for you and your family, personal accident and term life insurance, access to mental health counsellors, extraordinary coffee, and a beautiful office with lots of solid wood and natural light.</p>
+`.trim(),
+        location: "Bengaluru",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://pinelabsgroup.turbohire.co/get/aDFnNUx",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
