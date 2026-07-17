@@ -7454,6 +7454,225 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "amazon",
+    name: "Amazon",
+    tagline: "Earth's most customer-centric company",
+    about:
+      "Amazon is a global technology and e-commerce company operating across online retail, cloud computing (AWS), digital streaming, and artificial intelligence. Founded in 1994 by Jeff Bezos, it is headquartered in Seattle, Washington, and is publicly traded (NASDAQ: AMZN) with over 1.5 million employees worldwide.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/06/Amazon_2024.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: true,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.amazon.jobs",
+    categories: ["infrastructure"],
+    technologies: ["java", "python", "aws"],
+    location: { city: "Seattle", country: "United States" },
+    founders: [{ name: "Jeff Bezos", title: "Founder & Executive Chairman" }],
+    links: [{ type: "linkedin", url: "https://www.linkedin.com/company/amazon" }],
+    internships: [
+      {
+        slug: "amazon-software-dev-engineer-i-university-talent-acquisition",
+        title: "Software Dev Engineer I, Amazon University Talent Acquisition",
+        description: `
+<p>This role is intended for 2026 and 2025 graduates only. Amazon is looking for Software Development Engineers who are passionate about solving complex, ambiguous problems with elegant and efficient solutions.</p>
+<h4>Key responsibilities</h4>
+<ul>
+<li>Collaborate with cross-functional teams to develop innovative products and services.</li>
+<li>Design and build technologies for large distributed computing environments.</li>
+<li>Create solutions for predictions on distributed systems at scale.</li>
+<li>Develop distributed storage, indexing, and query systems.</li>
+<li>Write solutions for broadly-defined problems in agile environments.</li>
+</ul>
+<h4>Basic qualifications</h4>
+<ul>
+<li>Bachelor's degree in computer science or a related field.</li>
+<li>Knowledge of computer science fundamentals — object-oriented design, algorithms, data structures, and complexity analysis.</li>
+<li>Programming proficiency in C/C++, Python, Java, or Perl.</li>
+</ul>
+<h4>Preferred qualifications</h4>
+<ul>
+<li>Prior technical internship experience.</li>
+<li>Distributed systems and database experience.</li>
+<li>Knowledge of optimization mathematics.</li>
+<li>Strong technical communication skills.</li>
+<li>Ability to handle ambiguous problems abstractly.</li>
+</ul>
+`.trim(),
+        location: "Bengaluru / Hyderabad / Chennai / Delhi, India",
+        department: "Software Development",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.amazon.jobs/en/jobs/10454435/software-dev-engineer-i-amazon-university-talent-acquisition",
+      },
+    ],
+  },
+  {
+    slug: "google",
+    name: "Google",
+    tagline: "Organizing the world's information",
+    about:
+      "Google builds products and platforms used by billions of people, spanning search, advertising, cloud computing, consumer hardware, and artificial intelligence. Founded in 1998 by Larry Page and Sergey Brin, it is headquartered in Mountain View, California, and operates as a subsidiary of Alphabet Inc. (NASDAQ: GOOGL), with over 180,000 employees worldwide.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Google_2026_logo.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: true,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://careers.google.com",
+    categories: ["infrastructure"],
+    technologies: ["cpp", "python", "java"],
+    location: { city: "Mountain View", country: "United States" },
+    founders: [
+      { name: "Larry Page", title: "Co-founder" },
+      { name: "Sergey Brin", title: "Co-founder" },
+    ],
+    links: [{ type: "linkedin", url: "https://www.linkedin.com/company/google" }],
+    internships: [
+      {
+        slug: "google-silicon-engineer-platform-and-devices-university-graduate-2026",
+        title: "Silicon Engineer, Platform and Devices, University Graduate, 2026",
+        description: `
+<p>This role is for candidates graduating in 2026, joining Google's Platform and Devices organization as a Silicon Engineer.</p>
+<p>Google's careers site renders full job descriptions client-side, so the complete responsibilities and qualifications for this specific role couldn't be reliably extracted for this listing. Please check the official application page linked below for the full job description, or reach out to Google's university recruiting team directly.</p>
+`.trim(),
+        location: "Not specified",
+        department: "Platform and Devices",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.google.com/about/careers/applications/jobs/results/73379279982731974-silicon-engineer-platform-and-devices-university-graduate-2026",
+      },
+    ],
+  },
+  {
+    slug: "graviton-research-capital",
+    name: "Graviton Research Capital",
+    tagline: "Quantitative trading firm",
+    about:
+      "Graviton Research Capital is a bootstrapped, high-frequency and quantitative trading firm developing and deploying advanced algorithmic strategies across global financial markets. Founded in 2014 by IIT Delhi alumnus Ankit Gupta, it is headquartered in Gurugram, India, with additional offices in GIFT City, Gujarat, and Singapore.",
+    fundingStage: "BOOTSTRAPPED",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "51-200",
+    websiteUrl: "https://www.gravitontrading.com",
+    categories: ["fintech"],
+    technologies: ["cpp", "python"],
+    location: { city: "Gurugram", country: "India" },
+    founders: [{ name: "Ankit Gupta", title: "Founder & CEO" }],
+    links: [{ type: "linkedin", url: "https://in.linkedin.com/company/gravitonresearchcapital" }],
+    internships: [
+      {
+        slug: "graviton-software-engineering-intern-2028",
+        title: "Software Engineering Intern (2028 Graduates)",
+        description: `
+<p>Every great trading strategy depends on exceptional engineering. At Graviton, software is the infrastructure that enables every research breakthrough, every trading decision and every competitive advantage. As a Software Engineering Intern, you'll spend eight weeks building systems that power our quantitative research and live trading platforms.</p>
+<h4>What you'll work on</h4>
+<ul>
+<li>Designing and building software components that power our trading and quantitative research platforms.</li>
+<li>Developing high-performance applications in modern C++ and across our engineering stack.</li>
+<li>Building distributed systems that process and analyze massive volumes of market data.</li>
+<li>Optimizing systems where latency, throughput and reliability directly influence trading performance.</li>
+<li>Debugging complex production systems and improving performance through thoughtful engineering.</li>
+<li>Building AI-powered developer tools and intelligent automation that improve software development workflows.</li>
+<li>Collaborating closely with quantitative researchers and traders to transform ideas into production systems.</li>
+</ul>
+<h4>Mentorship</h4>
+<p>Every intern is paired with a dedicated mentor who guides technical development, a reporting manager who provides continuous feedback, and a buddy who helps you settle into the team.</p>
+<h4>Who we're looking for</h4>
+<ul>
+<li>Pursuing a Bachelor's or Integrated Master's degree in Mathematics, Computer Science, or Electrical Engineering.</li>
+<li>Expected graduation in 2028.</li>
+<li>CGPA of 8.5 or above, no active backlogs.</li>
+<li>Strong programming skills in C++ and/or Python.</li>
+<li>Excellent understanding of data structures, algorithms, and object-oriented programming.</li>
+<li>Familiarity with operating systems, computer architecture, and networking fundamentals.</li>
+</ul>
+`.trim(),
+        location: "Gurugram, India",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "8 weeks",
+        applyUrl: "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8630807002",
+      },
+      {
+        slug: "graviton-software-engineering-intern-ultra-low-latency-2028",
+        title: "Software Engineering Intern — Ultra Low Latency (2028 Graduates)",
+        description: `
+<p>Every nanosecond matters. In high-frequency trading, every optimization, every instruction and every decision can create a measurable competitive advantage. As a Software Engineering Intern, you'll spend eight weeks working on the critical systems that sit at the heart of our trading platform.</p>
+<h4>What you'll work on</h4>
+<ul>
+<li>Building and optimizing ultra-low latency systems using modern C++.</li>
+<li>Designing FPGA components using VHDL/Verilog for latency-critical workflows.</li>
+<li>Profiling applications to identify bottlenecks across CPU architecture, memory hierarchy, threading and networking.</li>
+<li>Developing benchmarking, monitoring and profiling tools that improve engineering productivity.</li>
+<li>Optimizing market data processing and order execution pipelines.</li>
+<li>Improving the reliability, scalability and performance of the firm's core trading infrastructure.</li>
+</ul>
+<h4>Mentorship</h4>
+<p>Every intern is paired with a dedicated mentor who guides technical development, a reporting manager who provides continuous feedback, and a buddy who helps you navigate the internship experience.</p>
+<h4>Who we're looking for</h4>
+<ul>
+<li>Pursuing a Bachelor's or Integrated Master's degree in Computer Science, Electrical Engineering, or Mathematics.</li>
+<li>Expected graduation in 2028.</li>
+<li>CGPA of 8.5 or above, no active backlogs.</li>
+<li>Strong programming skills in modern C++.</li>
+<li>Understanding of operating systems, computer architecture, and data structures.</li>
+<li>Familiarity with concurrency, networking, or systems programming.</li>
+<li>Experience with performance optimization through coursework, projects, or competitive programming.</li>
+</ul>
+`.trim(),
+        location: "Gurugram, India",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "8 weeks",
+        applyUrl: "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8630909002",
+      },
+      {
+        slug: "graviton-quantitative-research-intern-2028",
+        title: "Quantitative Research Intern (2028 Graduates)",
+        description: `
+<p>Every trading decision begins as a research question. As a Quantitative Research Intern, you'll spend eight weeks working on research that directly influences how we understand markets and build trading strategies, collaborating with quantitative researchers and technologists to investigate market behaviour, test hypotheses, and build predictive models.</p>
+<h4>What you'll work on</h4>
+<ul>
+<li>Discovering predictive patterns from billions of market events.</li>
+<li>Designing statistical models that identify trading opportunities.</li>
+<li>Applying probability, optimization, and machine learning to challenging research problems.</li>
+<li>Building AI-powered research agents that accelerate idea generation, experimentation, and analysis.</li>
+<li>Developing research infrastructure that enables rapid experimentation and large-scale data analysis.</li>
+<li>Designing rigorous experiments and backtests to evaluate hypotheses.</li>
+<li>Working with traders to translate research into production-ready trading signals.</li>
+</ul>
+<h4>Mentorship</h4>
+<p>Every intern is paired with a dedicated mentor who guides technical development, a reporting manager who provides continuous feedback, and a buddy who helps you navigate the internship experience.</p>
+<h4>Who we're looking for</h4>
+<ul>
+<li>Pursuing a Bachelor's or Integrated Master's degree in Mathematics, Computer Science, or Electrical Engineering.</li>
+<li>Expected graduation in 2028.</li>
+<li>CGPA of 8.5 or above, no active backlogs.</li>
+<li>Strong programming skills in Python and/or C++.</li>
+<li>Solid understanding of probability, statistics, linear algebra, and optimization.</li>
+<li>Experience with machine learning, statistical modelling, or data analysis through coursework, research, or personal projects.</li>
+<li>Confidence working with large datasets.</li>
+</ul>
+`.trim(),
+        location: "Gurugram, India",
+        department: "Quantitative Research",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "8 weeks",
+        applyUrl: "https://job-boards.greenhouse.io/gravitonresearchcapital/jobs/8630903002",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
