@@ -8695,6 +8695,339 @@ Job Description<p>Adobe InDesign is the industry-leading page design software an
       },
     ],
   },
+  {
+    slug: "nav-canada",
+    name: "NAV CANADA",
+    tagline: "Canada's civil air navigation service provider",
+    about:
+      "NAV CANADA is a privately run, not-for-profit corporation that owns and operates Canada's civil air navigation system, safely managing the flow of air traffic across Canadian airspace. It has operated the system since November 1996, when it was transferred from Transport Canada under the 1995 Civil Air Navigation Services Commercialization Act. Self-financing through fees charged to system users, it is headquartered at 77 Metcalfe Street, Ottawa, Ontario, and governed by a 15-member board representing the Government of Canada, commercial air carriers, general aviation, and unionized air navigation employees.",
+    fundingStage: "BOOTSTRAPPED",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.navcanada.ca",
+    categories: ["infrastructure"],
+    technologies: ["cpp", "python"],
+    location: { city: "Ottawa", country: "Canada" },
+    founders: [],
+    links: [],
+    internships: [
+      {
+        slug: "nav-canada-system-test-specialist",
+        title: "System Test Specialist (Hybrid – 3 days in office)",
+        description: `
+<p>NAV CANADA is seeking detail-oriented and experienced System Test Specialists to join our technology team. These roles are ideal for someone with a strong foundation in software and system testing who is eager to take on greater responsibility in validating complex, real-time systems that support and shape the present and future of Air Navigation Services in Canada. You will work with a cross-functional team to plan and execute testing activities, analyze system behaviour, and ensure systems meet functional, performance, and safety requirements.</p>
+<h4>Key accountabilities</h4>
+<ul>
+<li>Validate software features and system enhancements to ensure alignment with business, operational, and performance objectives.</li>
+<li>Participate in planning, feasibility analysis, and effort estimation, providing input on timelines, risks, and solution viability.</li>
+<li>Contribute to the development of test strategies, standards, and specifications for moderately complex to complex systems.</li>
+<li>Review and analyze system requirements to ensure clarity, completeness, and testability.</li>
+<li>Design, develop, and execute comprehensive test plans, test cases, and automated/manual test scripts.</li>
+<li>Analyze test results, identify defects, and ensure accurate documentation, tracking, and resolution in collaboration with cross-functional teams.</li>
+<li>Investigate system issues, perform root cause analysis, and support corrective actions to improve system reliability and performance.</li>
+<li>Support system lifecycle activities, including deployment, configuration, verification, and post-release validation.</li>
+</ul>
+<h4>Education &amp; experience</h4>
+<p>Degree from a recognized university or community college with an acceptable specialization in computer science, information technology, engineering, or an acceptable combination of education, experience, and training. 3-5 years of experience in system testing, software testing, or quality assurance, preferably in complex or real-time environments. Demonstrated experience designing and executing test plans, test cases, and validation activities. Experience with test automation and test management tools (e.g., Azure DevOps, IBM Jazz, Selenium, FitNesse, or similar frameworks). Experience conducting testing activities within Agile or team-based development environments.</p>
+<h4>Working conditions</h4>
+<p>This is a hybrid position with a minimum requirement of 3 days per week on site. Travel may be required on occasion. NAV CANADA is committed to building a skilled, diverse workforce reflective of Canadian society, and encourages applicants who don't match every requirement to apply.</p>
+`.trim(),
+        location: "Ottawa, ON",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        forWomen: true,
+        remotePolicy: "HYBRID",
+        stipend: "$111,451–$140,007 CAD",
+        duration: "Permanent",
+        applyUrl: "https://navcanada.wd10.myworkdayjobs.com/NAV_Careers/job/Ottawa/System-Test-Specialist--Hybrid---3-days-in-office-_JR-8205",
+      },
+      {
+        slug: "nav-canada-solutions-architect",
+        title: "Solutions Architect (Hybrid – 3 days in office)",
+        description: `
+<p>NAV CANADA is seeking motivated and experienced Solutions Architects to join our technology team. These roles are ideal for an individual with experience in system design and integration who is ready to shape solutions that support and advance Air Navigation Services in Canada. You will work closely with a cross-functional team to translate business and operational needs into effective system solutions, conducting requirements analysis and integration planning to ensure solutions align with technical, safety, and performance standards across complex environments.</p>
+<h4>Key accountabilities</h4>
+<ul>
+<li>Contribute to the design and integration of systems, subsystems, and interfaces, ensuring alignment with operational, technical, safety, and security requirements.</li>
+<li>Participate in planning, feasibility assessments, and effort estimation, providing input on risks, dependencies, and solution viability.</li>
+<li>Conduct impact analysis to assess how system changes affect existing architectures, integrations, and operations.</li>
+<li>Collaborate with cross-functional teams to ensure clear communication and alignment of requirements, design, and implementation.</li>
+<li>Develop technical documentation, including specifications, design artifacts, and standards.</li>
+<li>Support system lifecycle activities, including implementation, integration, validation, and transition to operations.</li>
+<li>Identify system deficiencies and recommend improvements or corrective actions to enhance performance, reliability, and maintainability.</li>
+</ul>
+<h4>Education &amp; experience</h4>
+<p>Graduation from a recognized university with a specialization in computer engineering, systems engineering, computer science, electrical engineering, or an acceptable combination of education, experience, and training. 3–5 years of experience in systems engineering, solution design, or related roles, preferably within complex or integrated environments. Experience gathering and analyzing requirements and contributing to system design and integration activities. Experience with tools supporting requirements management, modeling, configuration management, and testing (e.g., Jira, Azure DevOps, Enterprise Architect, IBM Jazz).</p>
+<h4>Working conditions</h4>
+<p>This is a hybrid position with a minimum requirement of 3 days per week on site. Travel may be required on occasion.</p>
+`.trim(),
+        location: "Ottawa, ON",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        forWomen: true,
+        remotePolicy: "HYBRID",
+        stipend: "$111,451–$140,007 CAD",
+        duration: "Permanent",
+        applyUrl: "https://navcanada.wd10.myworkdayjobs.com/NAV_Careers/job/Ottawa/Solutions-Architect--Hybrid---3-days-in-office-_JR-8204",
+      },
+      {
+        slug: "nav-canada-software-developer",
+        title: "Software Developer (Hybrid – 3 days in office)",
+        description: `
+<p>NAV CANADA is seeking skilled and experienced Software Developers to join our technology team. These roles are ideal for someone with experience in designing and developing software solutions who is ready to contribute to complex, mission-critical systems that support and shape the present and future of Air Navigation Services in Canada. You will work collaboratively with a cross-functional team to design, build, and maintain high-quality software that gives air traffic controllers the toolset they need to move aircraft safely and efficiently.</p>
+<h4>Key accountabilities</h4>
+<ul>
+<li>Design, develop, and maintain software applications and system components that meet business and operational requirements.</li>
+<li>Contribute to detailed design and implementation, ensuring code quality, performance, and maintainability.</li>
+<li>Collaborate with cross-functional teams to integrate software components and support system-level functionality.</li>
+<li>Participate in code reviews and contribute to the adoption of coding standards, best practices, and knowledge sharing.</li>
+<li>Troubleshoot, analyze, and resolve software defects and system issues in both development and operational environments.</li>
+<li>Support system integration, testing, and validation activities, working closely with solutions architects and test teams.</li>
+</ul>
+<h4>Education &amp; experience</h4>
+<p>Degree from a recognized university or community college with an acceptable specialization in electrical engineering, systems engineering, computer science or information systems, or an acceptable combination of education, experience, and training. 3–5 years of experience in software development, preferably in complex or integrated system environments. Experience designing and developing software using modern programming languages (e.g., C++, Java, Ada, Qt, Python, Ruby, or similar). Experience with shell scripting (Bash), Python, Ruby, JSON, XML, MySQL, Postgres and Elastic (ELK) Stack. Experience with the full software development lifecycle (SDLC).</p>
+<h4>Working conditions</h4>
+<p>This is a hybrid position with a minimum requirement of 3 days per week on site. Travel may be required on occasion.</p>
+`.trim(),
+        location: "Ottawa, ON",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        forWomen: true,
+        remotePolicy: "HYBRID",
+        stipend: "$111,451–$140,007 CAD",
+        duration: "Permanent",
+        applyUrl: "https://navcanada.wd10.myworkdayjobs.com/NAV_Careers/job/Ottawa/Software-Developer--Hybrid---3-days-in-office-_JR-8203",
+      },
+      {
+        slug: "nav-canada-junior-solutions-architect",
+        title: "Junior Solutions Architect (Hybrid – 3 days in office)",
+        description: `
+<p>NAV CANADA is seeking self-motivated and detail-oriented Junior Solutions Architects to join our technology team. These entry-level positions are ideal for someone passionate about system design, eager to learn, and ready to contribute to real-world software projects that support and shape the present and future of Air Navigation Services in Canada. You'll work closely with senior solutions architects and cross-functional teams on requirements analysis, impact assessments, system design, system performance, system integration, system safety, system security design, and strategic system enhancement planning.</p>
+<h4>Key accountabilities</h4>
+<ul>
+<li>Assist in the analysis, design, and integration of system requirements to support operational, technical, and safety needs.</li>
+<li>Support the development of system designs and specifications, including participation in impact assessments and integration activities.</li>
+<li>Contribute to maintaining system safety and quality standards throughout the software development and release lifecycle.</li>
+<li>Support system testing and validation activities, including identifying, documenting, and tracking defects.</li>
+<li>Collaborate with developers, testers, and other stakeholders to ensure effective teamwork and communication within an Agile environment.</li>
+<li>Support field investigations by gathering data, analyzing system behaviour, identifying root causes, and contributing to recommended solutions.</li>
+</ul>
+<h4>Education &amp; experience</h4>
+<p>Degree from a recognized university or community college with an acceptable specialization in computer science, information technology, engineering, or an acceptable combination of education, experience, and training. 1-3 years of relevant experience participating in the planning, design, or implementation of complex systems; this may include co-op placements or internships. Familiarity with interpreting requirements and developing technical documentation, such as software requirements specifications. Hands-on experience with system modeling or design tools, such as UML, SysML, or Enterprise Architect.</p>
+<h4>Working conditions</h4>
+<p>This is a hybrid position with a minimum requirement of 3 days per week on site.</p>
+`.trim(),
+        location: "Ottawa, ON",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        forWomen: true,
+        remotePolicy: "HYBRID",
+        stipend: "$91,278–$114,668 CAD",
+        duration: "Permanent",
+        applyUrl: "https://navcanada.wd10.myworkdayjobs.com/NAV_Careers/job/Ottawa/Junior-Solutions-Architect--Hybrid---3-days-in-office-_JR-8201",
+      },
+      {
+        slug: "nav-canada-junior-software-developer",
+        title: "Junior Software Developer (Hybrid – 3 days in office)",
+        description: `
+<p>NAV CANADA is looking for curious and motivated Junior Software Developers to join our team and help power the systems behind Canada's air navigation services. This is an exciting opportunity for a developer who is passionate about coding, eager to learn, and ready to contribute to real-world solutions in a high-impact, safety-critical environment. You'll collaborate with experienced developers and cross-functional teams to design, build, test, and maintain complex software systems that support the safe and efficient movement of aircraft across the country.</p>
+<h4>Key accountabilities</h4>
+<ul>
+<li>Assist in the design, development, and maintenance of software applications.</li>
+<li>Write clean, efficient, and well-documented code.</li>
+<li>Participate in code reviews and contribute to team knowledge sharing.</li>
+<li>Collaborate with system engineering and test teams to debug software and ensure quality software releases.</li>
+<li>Support the integration of third-party APIs and services.</li>
+<li>Stay current with emerging technologies and development practices.</li>
+</ul>
+<h4>Education &amp; experience</h4>
+<p>Degree from a recognized university or community college with an acceptable specialization in electrical engineering, systems engineering, computer science or information systems, or an acceptable combination of education, experience, and training. 1–3 years of hands-on experience developing software in a Linux-based environment using at least one programming language such as Ada, C++, Qt or Python; this may include co-op placements or internships. Experience contributing to the development of end-to-end software solutions (front-end and server-side). Experience with version control systems (e.g., Git, Jazz).</p>
+<h4>Working conditions</h4>
+<p>This is a hybrid position with a minimum requirement of 3 days per week on site.</p>
+`.trim(),
+        location: "Ottawa, ON",
+        department: "Technology",
+        jobType: "FULL_TIME",
+        forWomen: true,
+        remotePolicy: "HYBRID",
+        stipend: "$91,278–$114,668 CAD",
+        duration: "Permanent",
+        applyUrl: "https://navcanada.wd10.myworkdayjobs.com/NAV_Careers/job/Ottawa/Junior-Software-Developer--Hybrid---3-days-in-office-_JR-8200",
+      },
+    ],
+  },
+  {
+    slug: "practice-better",
+    name: "Practice Better",
+    tagline: "All-in-one EHR and practice management for wellness professionals",
+    about:
+      "Practice Better is an all-in-one practice management and EHR platform for health and wellness practitioners, integrating scheduling, telehealth, client engagement, nutrition planning, and billing. Founded in 2014 by Graeme Downes and Nathalie Garcia, and headquartered in Toronto, Canada, it is trusted by over 50,000 practitioners across 70+ countries. In 2023 it expanded into nutrition planning through its acquisition of That Clean Life.",
+    fundingStage: "SERIES_A",
+    remotePolicy: "REMOTE",
+    visaSponsorship: false,
+    employeeCountRange: "51-200",
+    websiteUrl: "https://practicebetter.io",
+    categories: ["healthtech"],
+    technologies: ["typescript", "aws", "mongodb"],
+    location: { city: "Toronto", country: "Canada" },
+    founders: [
+      { name: "Graeme Downes", title: "Co-founder" },
+      { name: "Nathalie Garcia", title: "Co-founder" },
+    ],
+    links: [{ type: "linkedin", url: "https://ca.linkedin.com/company/practicebetter" }],
+    internships: [
+      {
+        slug: "practice-better-senior-full-stack-developer",
+        title: "Senior Full Stack Developer",
+        description: `
+<p>Practice Better is an all-in-one platform helping health and wellness practitioners run their businesses, care for their clients, and scale their impact. Founded by practitioners, we're now the leading EHR and practice management platform in the wellness industry, trusted by tens of thousands of practitioners across 70+ countries. We're a remote-first team headquartered in Toronto.</p>
+<h4>Position summary</h4>
+<p>We are looking for a Senior Full Stack Developer to join our growing team. In this role, you will be responsible for applying your technical expertise to scale our AI-powered all-in-one practice management platform for health and wellness professionals. You'll collaborate with a cross-functional team (Engineering, Product, Design) to understand customer needs, address technical challenges, and make technology decisions to deliver innovative, high-quality experiences that improve customers' lives.</p>
+<p>The role of a software developer has fundamentally changed — we're looking for engineers who leverage AI-assisted development tools to dramatically accelerate their output while maintaining high standards for quality, security, and maintainability, working alongside AI coding assistants as a force multiplier. This role is currently open to Canadian-based candidates only, with preference given to applicants legally authorized to work in Canada.</p>
+<h4>What you'll be doing</h4>
+<ul>
+<li>Develop software solutions based on direction from management, investigation of problem areas, and feedback from customers.</li>
+<li>Build new user-facing features with everything from database models to APIs and UI components.</li>
+<li>Leverage agentic AI development tools (Claude Code, Cursor, or similar) to accelerate development velocity while ensuring code quality and architectural integrity.</li>
+<li>Help our customer support team with technical-related requests, reproducing bugs, and resolving issues for customers.</li>
+<li>Improve performance and optimize our stack by applying better patterns and protocols.</li>
+<li>Add analytics, monitoring, and alerts to our service to better respond to operational incidents.</li>
+</ul>
+<h4>What you bring</h4>
+<ul>
+<li>8+ years of relevant experience in full-stack development in a SaaS B2B, customer-focused environment.</li>
+<li>Demonstrated experience using AI-assisted coding tools (Claude Code, Cursor, GitHub Copilot, or equivalent) in your daily development workflow — this is not optional.</li>
+<li>Fully capable of taking on substantial features from concept to shipping as the sole engineer.</li>
+<li>Tools &amp; tech stack: .NET, AngularJS/jQuery, Angular, and TypeScript; Cordova, Java, Objective-C, and Swift (mobile); MongoDB, S3, SQS, Lambda (AWS); Bitbucket, Slack, Claude Code.</li>
+</ul>
+<h4>Compensation &amp; benefits</h4>
+<p>Anticipated salary range (Canada): $150,000–$160,000/yr CAD. Comprehensive health, dental, and vision coverage from day 1, RRSP matching, generous paid parental leave, annual learning stipends, unlimited vacation, $750 annual Health &amp; Wellness Allowance, $1,000 annual Learning &amp; Development Allowance, $500 annual Home Office Allowance, and optional access to a downtown Toronto office with regular team off-sites.</p>
+`.trim(),
+        location: "Remote, Canada",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        forWomen: true,
+        remotePolicy: "REMOTE",
+        stipend: "$150,000–$160,000 CAD",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/practicebetter/jobs/5080687008",
+      },
+    ],
+  },
+  {
+    slug: "zenika-singapore",
+    name: "Zenika Singapore",
+    tagline: "Open-source technology consultancy",
+    about:
+      "Zenika is a technology consultancy built around community, transparency, and craftsmanship, advising clients on web, mobility, cloud, and big data with deep expertise in open-source technology. Founded in Paris in 2006 by CEO Carl Azoury, Zenika now operates across 11 international locations including France, Canada, Singapore, and Morocco, partnering with organizations such as Google Cloud and Scrum.org.",
+    fundingStage: "BOOTSTRAPPED",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "201-500",
+    websiteUrl: "https://www.zenika.com",
+    categories: ["devtools"],
+    technologies: ["react", "typescript", "angular"],
+    location: { city: "Singapore", country: "Singapore" },
+    founders: [{ name: "Carl Azoury", title: "Founder & CEO" }],
+    links: [{ type: "linkedin", url: "https://www.linkedin.com/company/zenika-singapore" }],
+    internships: [
+      {
+        slug: "zenika-singapore-senior-front-end-engineer",
+        title: "Senior Front End Engineer",
+        description: `
+<p>You're more than a coder — you're a front-end craftsman, creating engaging, seamless web experiences with expertise in JavaScript frameworks and UI design. With Angular, ReactJS, or Vue.js as part of your toolkit, you stay up-to-date with the latest best practices and tools, bringing deep experience and leadership to every project.</p>
+<h4>Your role as a Zenika consultant</h4>
+<p>As a consultant, you'll lead on client projects, bringing senior-level expertise to shape user-facing applications. You'll work alongside client teams to:</p>
+<ul>
+<li>Build and enhance responsive, mobile-first web applications using frameworks like Angular, ReactJS, or Vue.js, as well as tools like NPM, Webpack, Gulp, and Grunt.</li>
+<li>Follow top UI coding practices, utilizing CSS in JS, styled components, custom hooks, state machines, and architecture patterns such as Flux, MVC, and MVVM.</li>
+<li>Write clean, efficient, and reusable code with modern JavaScript, ensuring high standards through testing and debugging with frameworks like Jest, Enzyme, and Cypress.</li>
+<li>Lead collaborations with cross-functional teams, including designers, product managers, and back-end engineers, to deliver pixel-perfect, responsive web applications.</li>
+<li>Translate UI/UX designs and wireframes into functional, intuitive web pages, ensuring a seamless user experience.</li>
+<li>Work closely with back-end engineers to design and integrate APIs, ensuring smooth data flow between the front and back end.</li>
+</ul>
+<h4>Why join Zenika?</h4>
+<ul>
+<li>Work with a global client base across 11 locations, benefiting from over 28,000 Zenika-led training sessions.</li>
+<li>Partner with tech giants like Google Cloud and Scrum.org, and engage in research, open-source contributions, and conferences outside client projects.</li>
+<li>Hybrid work arrangement.</li>
+<li>Participate in Zenika tech conferences (TechnoZaures) to learn, share, and grow together.</li>
+<li>20 days of annual leave plus up to 5 LEAP (Learning, Education, Advancement, Progress) days.</li>
+<li>Dedicated Learning &amp; Development budget and comprehensive international medical insurance.</li>
+</ul>
+`.trim(),
+        location: "Singapore",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        forWomen: true,
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.zenika.sg/jobs/5680542-senior-front-end-engineer",
+      },
+    ],
+  },
+  {
+    slug: "robinhood",
+    name: "Robinhood",
+    tagline: "Democratizing finance for all",
+    about:
+      "Robinhood is a financial services company offering commission-free stock, ETF, options, and cryptocurrency trading through its mobile and web platforms. Founded in 2013 by Vladimir Tenev and Baiju Bhatt, it is headquartered in Menlo Park, California, and has been publicly traded on the NASDAQ (HOOD) since 2021.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/10/Robinhood_Markets_logo.png",
+    fundingStage: "PUBLIC",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://robinhood.com",
+    categories: ["fintech"],
+    technologies: ["react", "typescript", "python"],
+    location: { city: "Menlo Park", country: "United States" },
+    founders: [
+      { name: "Vladimir Tenev", title: "Co-founder & CEO" },
+      { name: "Baiju Bhatt", title: "Co-founder" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/robinhood-markets" },
+      { type: "twitter", url: "https://twitter.com/robinhoodapp" },
+    ],
+    internships: [
+      {
+        slug: "robinhood-web-developer-crypto-expansion",
+        title: "Web Developer, Crypto Expansion",
+        description: `
+<p>Join us in building the future of finance. Our mission is to democratize finance for all. An estimated $124 trillion of assets will be inherited by younger generations in the next two decades — the largest transfer of wealth in human history. If you're ready to be at the epicenter of this historic cultural and financial shift, keep reading.</p>
+<h4>About the team + role</h4>
+<p>As a Web Developer, you will lead the web development process and build products from inception to deployment. We also work closely with cross-functional teams like design, product management, and internal platforms to deliver high-impact features within multidisciplinary product teams.</p>
+<h4>What you'll do</h4>
+<ul>
+<li>Create high-quality, performant products that leverage technologies like React, TypeScript, and CSS-in-JS.</li>
+<li>Own and drive features from inception and design to implementation and launch, being the web expert on your team.</li>
+<li>Build and improve tools to support Robinhood's operations and platforms, providing leverage across the company.</li>
+<li>Collaborate with design and product experts to rapidly iterate and ship financial products.</li>
+<li>Build frameworks and abstractions to materially accelerate and empower other developers.</li>
+</ul>
+<h4>What you bring</h4>
+<ul>
+<li>2+ years of full-time professional experience with modern Web standards, technologies, and frameworks.</li>
+<li>Skilled at writing and efficiently debugging JavaScript in Node and browser environments.</li>
+<li>Have a track record of successfully leading projects and delivering large scope technical projects at scale.</li>
+<li>Constantly setting a high standard for code quality, advocating for best practices in testing, and improving code review processes.</li>
+</ul>
+<h4>What we offer</h4>
+<p>Market competitive and pay equity-focused compensation structure. 100% paid health insurance for employees with 90% coverage for dependents. Annual lifestyle wallet for personal wellness, learning and development, and more. Dedicated mental health support for employees and eligible dependents. Generous time away including company holidays, paid time off, sick time, and parental leave.</p>
+`.trim(),
+        location: "Toronto, ON",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        forWomen: true,
+        remotePolicy: "HYBRID",
+        stipend: "$136,000–$160,000 CAD",
+        duration: "Permanent",
+        applyUrl: "https://boards.greenhouse.io/robinhood/jobs/8049662",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
