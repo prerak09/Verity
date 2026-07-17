@@ -57,6 +57,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.hudsonrivertrading.com" },
       { protocol: "https", hostname: "hiringsolutions.blob.core.windows.net" },
       { protocol: "https", hostname: "juspay.io" },
+      { protocol: "https", hostname: "fiverings.com" },
+      { protocol: "https", hostname: "www.heizen.work" },
     ],
   },
 };

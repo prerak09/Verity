@@ -7235,6 +7235,225 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "five-rings",
+    name: "Five Rings",
+    tagline: "Proprietary trading firm",
+    about:
+      "Five Rings is a proprietary trading firm founded in 2006 by Jason McCarthy with a vision of combining strategy, innovation, and technology to succeed in global markets. The firm trades a wide range of domestic and international markets, both established and esoteric, integrating quantitative analysts, software developers, and traders to design, optimize, and execute strategies. Headquartered in New York, with offices in Boca Raton, London, and Amsterdam.",
+    fundingStage: "BOOTSTRAPPED",
+    remotePolicy: "ONSITE",
+    visaSponsorship: true,
+    employeeCountRange: "51-200",
+    websiteUrl: "https://fiverings.com",
+    categories: ["fintech"],
+    technologies: ["python", "cpp"],
+    location: { city: "New York", country: "United States" },
+    founders: [{ name: "Jason McCarthy", title: "Founder & Managing Director" }],
+    links: [{ type: "linkedin", url: "https://www.linkedin.com/company/fiverings" }],
+    internships: [
+      {
+        slug: "five-rings-campus-full-time-2027-quantitative-trader-amsterdam",
+        title: "Campus Full Time 2027 — Quantitative Trader (Amsterdam)",
+        description: `
+<p><strong>About Five Rings</strong></p>
+<p>Five Rings is a proprietary trading firm founded with a vision of combining strategy, innovation and technology to succeed in today's global markets. With offices in New York, Boca Raton, London and Amsterdam, Five Rings trades in various domestic and international markets, both established and esoteric. Our team constantly seeks new opportunities, analyzes their risks and rewards, and creates strategies and tools to capitalize on them.</p>
+<p>We have an open culture and encourage the flow of knowledge and ideas between all areas of the firm.</p>
+<h4>About the role</h4>
+<p>Traders manage their unique strategies in rapidly evolving live markets. They tune model parameters to reflect prevailing conditions, execute trades based on model recommendations, evaluate the real-time feedback provided by market participants' reactions, and reincorporate this information into their models in a continuous feedback loop.</p>
+<p>Five Rings gives people as much responsibility as quickly as it can be earned. From day one, as a new Quant Trader (QT), you will gain unrivaled experience both on the desk and in the classroom.</p>
+<ul>
+<li>New hires work closely with senior traders — analyzing risks and rewards, exploring new strategies, collaborating with quants and software developers to build and optimize trading models.</li>
+<li>Quant Traders work independently and with others to develop ideas and analyses, and integrate them into our trading strategies and systems.</li>
+</ul>
+<h4>About you</h4>
+<ul>
+<li>Graduating in winter of 2026 or spring/summer of 2027</li>
+<li>Quantitatively-focused</li>
+<li>Thrive in a highly collaborative and fast-paced environment</li>
+<li>Quick learner</li>
+<li>Intellectually curious</li>
+<li>Detail-oriented</li>
+<li>Self-starter</li>
+</ul>
+`.trim(),
+        location: "Amsterdam, Netherlands",
+        department: "Trading",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://job-boards.greenhouse.io/fiveringsllc/jobs/5344213008",
+      },
+    ],
+  },
+  {
+    slug: "cme-group",
+    name: "CME Group",
+    tagline: "The world's leading derivatives marketplace",
+    about:
+      "CME Group is the world's leading derivatives marketplace, operating exchanges for futures and options across interest rates, equity indexes, foreign exchange, energy, agricultural products, and metals. Tracing its roots to 1898 as the Chicago Butter and Egg Board, the exchange was transformed by Leo Melamed's pioneering work creating financial futures. Headquartered in Chicago, Illinois, CME Group is publicly traded (NASDAQ: CME).",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f0/CME_Group_Logo.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.cmegroup.com",
+    categories: ["fintech"],
+    technologies: ["cpp", "csharp"],
+    location: { city: "Chicago", country: "United States" },
+    founders: [{ name: "Leo Melamed", title: "Chairman Emeritus; pioneer of financial futures" }],
+    links: [{ type: "linkedin", url: "https://www.linkedin.com/company/cmegroup" }],
+    internships: [
+      {
+        slug: "cme-group-quant-risk-intern-bangalore",
+        title: "Quant Risk Intern",
+        description: `
+<p>The Quantitative Risk Intern is responsible for working in a team that develops Risk/Pricing Models evaluating counterparty exposures to the Clearing House, including models related to Pricing, Value-at-Risk, Stress Testing, Liquidity, Regulatory Capital, and also developing tools for Portfolio Analytics. He/She works in a team that performs back testing and statistical analysis required to ensure the adequacy of margin coverage and justify other model assumptions.</p>
+<h4>Principal accountabilities</h4>
+<ul>
+<li>Conduct empirical studies and make recommendations on margin levels, modeling issues, and other risk-mitigation measures. Ensure that the model is up to date with the proven theories in the field.</li>
+<li>Ensure deployment, testing, and continuous improvement of these models within the Production Infrastructure of CME. Present results to Sr. Management and/or Risk Committees.</li>
+<li>Work on a team that enhances existing risk models as well as designs/prototypes new models across different asset classes like OTC and Futures (e.g. Pricing, VaR, Backtest, Stress, Liquidity, etc.).</li>
+</ul>
+<h4>Skills &amp; software requirements</h4>
+<p>Experience with some programming languages such as C++/C#, R, VBA and SQL is also required. Bachelor's degree required in a technical discipline, but a Master's degree is preferred in the following disciplines: Math Finance, Applied Mathematics, Financial Engineering, Software Engineering.</p>
+<h4>CME Group: where futures are made</h4>
+<p>CME Group is the world's leading derivatives marketplace. Here, you can impact markets worldwide, transform industries, and build a career by shaping tomorrow. At CME Group, we embrace our employees' unique experiences and skills to ensure that everyone's perspectives are acknowledged and valued. As an equal-opportunity employer, we consider all potential employees without regard to any protected characteristic.</p>
+`.trim(),
+        location: "Bangalore, India",
+        department: "Risk Management",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Internship",
+        applyUrl: "https://cmegroup.wd1.myworkdayjobs.com/cme_careers/job/Bangalore---Bagmane-Tridib/Quant-Risk-Intern_34590",
+      },
+    ],
+  },
+  {
+    slug: "heizen",
+    name: "Heizen",
+    tagline: "Custom AI intelligence for supply chains",
+    about:
+      "Heizen is an AI-powered software services startup combining elite engineering talent with proprietary AI agents to deliver enterprise-grade products with speed and quality, focused on supply chain and legacy workflow automation for startups and large enterprises. Founded in April 2024 by Aman Arora, Abhilasha Singh, and Nijansh Verma — alumni of Microsoft, JPMorgan, IIT Madras, ISB, and NIT Bhopal — the company raised $500K from Titan Capital and is scaling its engineering team out of India, serving clients across India and the US.",
+    logoUrl: "https://www.heizen.work/apple-icon.png",
+    fundingStage: "PRE_SEED",
+    remotePolicy: "REMOTE",
+    visaSponsorship: false,
+    employeeCountRange: "1-10",
+    websiteUrl: "https://www.heizen.work",
+    categories: ["ai-ml"],
+    technologies: ["react-native", "typescript", "python"],
+    location: { city: "Hyderabad", country: "India" },
+    founders: [
+      { name: "Aman Arora", title: "Co-founder" },
+      { name: "Abhilasha Singh", title: "Co-founder" },
+      { name: "Nijansh Verma", title: "Co-founder" },
+    ],
+    links: [{ type: "linkedin", url: "https://www.linkedin.com/company/heizen-work" }],
+    internships: [
+      {
+        slug: "heizen-software-engineer-fullstack-react-native",
+        title: "Software Engineer (Fullstack + React Native)",
+        description: `
+<p>Heizen is an AI-powered software services startup founded by ex-Microsoft, JP Morgan, IIT, and ISB alumni. We're building a new model of software delivery — combining elite engineering talent with proprietary AI agents to create enterprise-grade products with unmatched speed and quality.</p>
+<p>We work with ambitious startups and large enterprises to solve complex business and technical challenges — from mission-critical platforms to legacy workflow automation.</p>
+<h4>Role overview</h4>
+<p>As a Software Engineer at Heizen, you will collaborate closely with clients, PMs, and designers. You'll take full ownership of features from idea to deployment — understanding core problems, designing comprehensive technical solutions, and implementing them end-to-end across our web, mobile, and backend stacks.</p>
+<h4>Core responsibilities</h4>
+<ul>
+<li>Architect systems and write scalable full-stack backend/frontend code for web and React Native mobile applications.</li>
+<li>Work seamlessly with APIs, interactive UI components, databases, and cloud infrastructure.</li>
+<li>Collaborate with clients to understand needs and demo solutions.</li>
+<li>Own your work from whiteboard to production.</li>
+</ul>
+<h4>Requirements</h4>
+<ul>
+<li>0-2 years of software engineering experience (fresh graduates welcome).</li>
+<li>Strong proficiency or core focus in full-stack development &amp; React Native mobile app development.</li>
+<li>Proficient in JavaScript/TypeScript, alongside Python, Java, Go (or similar backend languages).</li>
+<li>Experience or strong interest in building and shipping end-to-end software applications.</li>
+<li>Basic knowledge or willingness to learn SQL/NoSQL databases, REST APIs, and cloud platforms (AWS/GCP/etc.).</li>
+<li>Ability to thrive in fast-paced environments and work with diverse teams.</li>
+</ul>
+<h4>Compensation</h4>
+<p>₹12-18L fixed + ESOPs, based on skills, experience, and fit. Performance-based bonuses and equity participation available.</p>
+`.trim(),
+        location: "Remote / Hyderabad",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "₹12-18L fixed + ESOPs",
+        duration: "Permanent",
+        applyUrl: "https://forms.gle/iV2kuwGEEBkCWsVZ6",
+      },
+    ],
+  },
+  {
+    slug: "elevenlabs",
+    name: "ElevenLabs",
+    tagline: "AI research and product company for voice and audio",
+    about:
+      "ElevenLabs is an AI research and product company transforming how we interact with technology, best known for pioneering human-like AI voice models. Launched in January 2023, it now serves millions of users and thousands of businesses, from startups to enterprises like Deutsche Telekom and Meta. Founded in 2022 by Piotr Dąbkowski and Mati Staniszewski, ElevenLabs has raised $781M from investors including Andreessen Horowitz, ICONIQ Growth, and Sequoia, at a last valuation of $11B. Headquartered in New York City, with a European headquarters in London.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c7/ElevenLabs_Logo_03.svg",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "REMOTE",
+    visaSponsorship: false,
+    employeeCountRange: "201-500",
+    websiteUrl: "https://elevenlabs.io",
+    categories: ["ai-ml"],
+    technologies: ["python", "react", "typescript"],
+    location: { city: "New York", country: "United States" },
+    founders: [
+      { name: "Piotr Dąbkowski", title: "Co-founder" },
+      { name: "Mati Staniszewski", title: "Co-founder & CEO" },
+    ],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/elevenlabsio" },
+      { type: "twitter", url: "https://twitter.com/elevenlabsio" },
+    ],
+    internships: [
+      {
+        slug: "elevenlabs-forward-deployed-engineer-software-engineer",
+        title: "Forward Deployed Engineer — Software Engineer",
+        description: `
+<h4>About ElevenLabs</h4>
+<p>ElevenLabs is an AI research and product company transforming how we interact with technology.</p>
+<p>We launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses — from fast-growing startups to large enterprises like Deutsche Telekom and Meta. Our investors are some of the world's most prominent, including Andreessen Horowitz, ICONIQ Growth and Sequoia. We've raised $781M in funding and our last valuation was $11B.</p>
+<p>We have expanded from voice into three main platforms:</p>
+<ul>
+<li>ElevenAgents enables businesses to deliver seamless and intelligent customer experiences, with the integrations, testing, monitoring, and reliability necessary to deploy voice and chat agents at scale.</li>
+<li>ElevenCreative empowers creators and marketers to generate and edit speech, music, image, and video across 70+ languages.</li>
+<li>ElevenAPI gives developers access to our leading AI audio foundational models.</li>
+</ul>
+<p>This role is remote, so it can be executed globally.</p>
+<h4>About the role</h4>
+<p>You'll use your creativity, problem-solving, and technical expertise to design tailored solutions that make a real impact.</p>
+<p>Embedded with our most strategic customers, you'll get a front-row seat to some of our highest-stakes projects. From brainstorming technical architectures and product features to building full-scale integrations, you'll take full ownership of complex, high-impact challenges — helping clients achieve their goals and push the limits of what's possible.</p>
+<p>What you will do:</p>
+<ul>
+<li>Take full ownership of end-to-end execution of major projects for our most strategic partners, working hands-on to deliver high-impact solutions.</li>
+<li>Collaborate daily with our customer's engineers and executive teams to ensure the best use of ElevenLabs' technologies.</li>
+<li>Drive real innovation by using your coding and technical skills to solve complex problems, making a real difference for our customers.</li>
+</ul>
+<h4>Requirements</h4>
+<ul>
+<li>Experience working with customers. It's ok if you only worked with customers in student clubs or side projects, as long as you are interested in working closely with them on a technical capacity.</li>
+<li>Proficiency in Python and strong software development knowledge, inclusive of a deep understanding of software development, software architecture, and API integrations.</li>
+<li>Excellent communication and problem-solving skills, especially the ability to summarize complex technical knowledge and use logic in pursuing optimal solutions.</li>
+</ul>
+`.trim(),
+        location: "Remote",
+        department: "Engineering & Product",
+        jobType: "FULL_TIME",
+        remotePolicy: "REMOTE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://jobs.ashbyhq.com/elevenlabs/6c4c57c1-ec72-42ba-af3a-eb7aebbde2e6",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
