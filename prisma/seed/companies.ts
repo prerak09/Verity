@@ -7165,6 +7165,76 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "jpmorgan-chase",
+    name: "JPMorgan Chase",
+    tagline: "Global financial services firm",
+    about:
+      "JPMorgan Chase & Co. is a leading global financial services firm offering investment banking, consumer and commercial banking, and asset and wealth management. The modern firm was formed by the 2000 merger of Chase Manhattan Corporation and J.P. Morgan & Co., institutions with roots tracing back to 1799 and 1871 respectively. Headquartered in New York City and led by Chairman & CEO Jamie Dimon, it employs over 300,000 people worldwide and is listed on the NYSE (JPM).",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Logo_of_JPMorganChase_2024.svg",
+    fundingStage: "PUBLIC",
+    remotePolicy: "HYBRID",
+    visaSponsorship: true,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.jpmorganchase.com",
+    categories: ["fintech"],
+    technologies: ["java", "python", "go"],
+    location: { city: "New York", country: "United States" },
+    founders: [{ name: "Jamie Dimon", title: "Chairman & CEO" }],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/jpmorganchase" },
+      { type: "twitter", url: "https://twitter.com/jpmorgan" },
+    ],
+    internships: [
+      {
+        slug: "jpmorgan-chase-2027-software-engineer-program-summer-analyst-singapore",
+        title: "2027 Software Engineer Program — Summer Analyst (Singapore)",
+        description: `
+<p>As an Early Careers Software Engineer Intern, you'll make an immediate impact at JPMorganChase by contributing to high-impact technology projects in a modern engineering environment. You will build strong technical foundations while developing the critical thinking skills and judgment needed to grow into a confident, effective engineer. You will collaborate with experienced engineers to deliver high-quality solutions, expand your skills through continuous learning, and access clear opportunities for career growth within the firm.</p>
+<h4>About the program</h4>
+<p>As an Early Careers Software Engineer Intern in our Software Engineer Program, you will play a vital role in building and optimizing digital applications and systems that serve millions globally. You will start with an induction that introduces our technology strategies, products, and systems, and provides an overview of our technology community. Working in a collaborative team, you will partner with peers and experienced software engineers to enhance your skills, share ideas and feedback, and help deliver reliable solutions in a modern engineering environment. This internship offers a chance to gain deeper insights into our work culture through networking events, senior speaker sessions, and peer-mentorship programs. As it is a pipeline for future graduate opportunities, based on individual performance and achievements, those who successfully complete the program may receive offers of full-time opportunities with the firm.</p>
+<p>Holding the permanent right to work in Singapore is an advantage, however, candidates requiring visa sponsorship may still apply.</p>
+<h4>Job responsibilities</h4>
+<ul>
+<li>Develop skills through ongoing training, mentorship, and access to senior leaders.</li>
+<li>Design, develop, test, and troubleshoot software solutions.</li>
+<li>Write secure, high-quality code in at least one programming language, following established standards and best practices.</li>
+<li>Collaborate with engineers, managers, and stakeholders across teams to understand problems, share ideas and feedback, and deliver reliable solutions.</li>
+<li>Communicate clearly in writing and verbally, documenting solutions and effectively prompting approved AI-assisted development tools to produce high-quality outputs.</li>
+<li>Leverage approved AI development tools (code generation, refactoring, test creation, documentation) to improve code quality and productivity, validating outputs through peer review, automated testing, and secure coding practices.</li>
+<li>Apply automation and modern tooling across the software development life cycle, including AI-enabled capabilities, to improve delivery efficiency and reliability.</li>
+</ul>
+<h4>Required qualifications, capabilities, and skills</h4>
+<ul>
+<li>Pursuing a bachelor's degree with expected graduation between September 2027 and August 2028.</li>
+<li>Available for a full-time internship from June 2027 to August 2027.</li>
+<li>Demonstrated ability to code in one or more general-purpose programming languages such as Java, Python, Go, or other technologies like robotics and mobile apps.</li>
+<li>Understanding of software skills such as business analysis, development, maintenance, and software improvement.</li>
+<li>Proficiency in developmental toolsets; exposure to agile methodologies such as CI/CD, application resiliency, and security.</li>
+<li>Studying Computer Science, Information Science, Information Technology, Data Science, Artificial Intelligence, Big Data, or a related field, with less than 2 years of experience.</li>
+<li>Basic knowledge of industry-wide technology trends and best practices.</li>
+<li>Strong written and verbal communication skills, including the ability to articulate technical concepts and collaborate effectively across teams.</li>
+</ul>
+<h4>Preferred qualifications, capabilities, and skills</h4>
+<ul>
+<li>Interpersonal and problem-solving skills, with the ability to thrive in a fast-paced, collaborative environment.</li>
+<li>Curiosity about emerging technologies and thoughtful judgment about when and how to apply them.</li>
+<li>Experience applying software engineering skills to open-ended or ambiguous problems, breaking work into steps and iterating based on feedback.</li>
+<li>Sound judgment in validating AI-generated outputs while maintaining ownership of solution quality, correctness, and security.</li>
+</ul>
+<h4>What's next</h4>
+<p>Submit a complete application including your resume. If you meet the required qualifications, you'll receive an invitation to complete a coding challenge powered by HackerRank, followed by a video interview powered by HireVue. Shortlisted students will be invited to a Code for Good Hackathon/interview as the next stage. Programs close as positions are filled, so early application is encouraged.</p>
+`.trim(),
+        location: "Singapore",
+        department: "Technology",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Internship (June–August 2027)",
+        applyUrl: "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210754425",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
