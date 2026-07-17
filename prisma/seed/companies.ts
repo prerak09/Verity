@@ -7067,6 +7067,104 @@ Your individual placement within this range will be determined during the applic
       },
     ],
   },
+  {
+    slug: "yash-technologies",
+    name: "YASH Technologies",
+    tagline: "Consulting-led digital transformation partner",
+    about:
+      "YASH Technologies is a consulting-led digital transformation partner providing IT consulting, SAP services, and technology outsourcing to enterprise clients, including 75+ global Fortune 500 companies. Founded in 2002 by Manoj Baheti, it is a privately held (promoter-owned) company headquartered in East Moline, Illinois, with major delivery centers across India including Pune, Hyderabad, and Indore.",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/ca/YASH_Technologies_Logo.jpg",
+    fundingStage: "BOOTSTRAPPED",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.yash.com",
+    categories: ["infrastructure"],
+    technologies: ["kubernetes", "docker"],
+    location: { city: "Pune", country: "India" },
+    founders: [{ name: "Manoj Baheti", title: "Founder, CEO & President" }],
+    links: [
+      { type: "linkedin", url: "https://www.linkedin.com/company/yash-technologies" },
+      { type: "twitter", url: "https://twitter.com/YASH_Tech" },
+    ],
+    internships: [
+      {
+        slug: "yash-technologies-sap-sac",
+        title: "SAP SAC",
+        description: `
+<p>YASH Technologies is a consulting-led transformation partner with a proven track record of helping customers address their current and prospective digital transformation challenges. Recognized as "Large enough to transform and small enough to care," our customer-centricity and robust value systems have helped us earn the trust of our clients globally and enabled us to be the "Digital Partner of choice" of 75+ global F500 companies.</p>
+<h4>Role</h4>
+<p>SAP SAC — 6+ years of experience, onsite in Pune.</p>
+<h4>Required skills</h4>
+<ul>
+<li>SAP</li>
+<li>SAC (SAP Analytics Cloud)</li>
+<li>DataSphere</li>
+<li>SAC Analytics CDS Views / DataSphere</li>
+</ul>
+`.trim(),
+        location: "Pune, India",
+        department: "SAP Consulting",
+        jobType: "FULL_TIME",
+        forWomen: true,
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://recruitcrm.io/apply/17652810104120057748ZPS",
+      },
+      {
+        slug: "yash-technologies-sap-abap",
+        title: "SAP ABAP",
+        description: `
+<p>YASH Technologies is a consulting-led transformation partner with a proven track record of helping customers address their current and prospective digital transformation challenges. Recognized as "Large enough to transform and small enough to care," our customer-centricity and robust value systems have helped us earn the trust of our clients globally and enabled us to be the "Digital Partner of choice" of 75+ global F500 companies.</p>
+<h4>Role</h4>
+<p>SAP ABAP — 5+ years of experience, onsite in Pune.</p>
+<h4>Preferred knowledge, skills, and abilities</h4>
+<p>Experience gathering requirements and providing technical solution design. SAP S4 HANA ABAP OO skills is a must. Extensive knowledge of ABAP development workbench, Dictionary, Workflows, Adobe forms, SAP Forms, BAPI's, Enhancement Framework, RFC's, BADI's, IDOC, ALE and ABAP Objects, IDoc Queue handling, ABAP Proxy Framework, Change document framework, Conversions and Data load methods, SPAU, SPDD and post-upgrade activities, Open-SQL performance tuning. Must have strong experience working with ALE / IDoc configuration, enhancements, user exits, error handling. Working knowledge of CDS and OData Services.</p>
+<h4>Other requirements</h4>
+<p>Excellent analytical, logical problem-solving and technological skills. Ability to work in a global and virtual environment and to effectively prioritize and execute tasks in a high-pressure environment. Ability to work autonomously in a fast-paced &amp; complex environment with a self-motivated work ethic. Willingness for global travel.</p>
+`.trim(),
+        location: "Pune, India",
+        department: "SAP Consulting",
+        jobType: "FULL_TIME",
+        forWomen: true,
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://recruitcrm.io/apply/17652813481800057748PwD",
+      },
+      {
+        slug: "yash-technologies-sap-btp-backend",
+        title: "SAP BTP Backend",
+        description: `
+<p>YASH Technologies is a consulting-led transformation partner with a proven track record of helping customers address their current and prospective digital transformation challenges. Recognized as "Large enough to transform and small enough to care," our customer-centricity and robust value systems have helped us earn the trust of our clients globally and enabled us to be the "Digital Partner of choice" of 75+ global F500 companies.</p>
+<h4>Role</h4>
+<p>SAP BTP Backend — 5-9 years of experience, onsite in Pune.</p>
+<h4>What we're looking for</h4>
+<ul>
+<li>Strong experience in designing and implementing SAP BTP-based solutions</li>
+<li>Extensive experience on SAP HANA Cloud Development, HDI Containers, HANA OData Services (XSOData), HANA XSA/XSJS, SQL Scripting, Node.js, and CF XSUAA services</li>
+<li>Extensive project experience developing applications using CAPM on SAP BTP</li>
+<li>Hands-on experience with Git and BAS</li>
+<li>Sound knowledge of microservices architecture, web services, and OData</li>
+<li>Experience with HANA Transport Management System and HANA Transport Container</li>
+<li>Experience with HANA XS Advanced and HANA 2.0</li>
+<li>Exposure to SAP Fiori, SAP UI5, JavaScript, JSON, and XML technologies</li>
+<li>Good exposure to DevOps methodologies and cloud technologies (e.g. Kubernetes, Jenkins, Docker)</li>
+<li>Knowledge of transaction systems such as SAP ECC, SAP GTS, SAP CRM, SAP APO, and EWM</li>
+</ul>
+`.trim(),
+        location: "Pune, India",
+        department: "SAP Consulting",
+        jobType: "FULL_TIME",
+        forWomen: true,
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://recruitcrm.io/apply/17652867879270057748UHI",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
