@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { cn } from "@/components/lib/utils";
 import type { JobType, RemotePolicy } from "@/types";
 import { SEASON_OPTIONS } from "@/config/seasons";
@@ -54,6 +55,7 @@ export function InternshipsFilterBar({
   const [q, setQ] = useState(searchParams.get("q") ?? "");
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [showMore, setShowMore] = useState(Boolean(searchParams.get("remotePolicy")));
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   useEffect(() => {
     return () => {
@@ -100,6 +102,112 @@ export function InternshipsFilterBar({
           { value: "title", label: "Title (A–Z)" },
         ];
 
+  const locationSelect = (
+    <Select value={location} onValueChange={(v) => updateParam("location", v)}>
+      <SelectTrigger className={selectTriggerClass}>
+        <SelectValue>{(v: string) => (v === ALL ? "All Locations" : v)}</SelectValue>
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value={ALL}>All Locations</SelectItem>
+        {locations.map((loc) => (
+          <SelectItem key={loc} value={loc}>
+            {loc}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+  );
+
+  const departmentSelect = (
+    <Select value={department} onValueChange={(v) => updateParam("department", v)}>
+      <SelectTrigger className={selectTriggerClass}>
+        <SelectValue>{(v: string) => (v === ALL ? "All Departments" : v)}</SelectValue>
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value={ALL}>All Departments</SelectItem>
+        {departments.map((dept) => (
+          <SelectItem key={dept} value={dept}>
+            {dept}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+  );
+
+  const jobTypeOrSeasonSelect =
+    variant === "job" || variant === "women" ? (
+      <Select value={jobType} onValueChange={(v) => updateParam("jobType", v)}>
+        <SelectTrigger className={selectTriggerClass}>
+          <SelectValue>
+            {(v: string) => (v === ALL ? "All Job Types" : JOB_TYPES.find((j) => j.value === v)?.label ?? v)}
+          </SelectValue>
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value={ALL}>All Job Types</SelectItem>
+          {JOB_TYPES.map((j) => (
+            <SelectItem key={j.value} value={j.value}>
+              {j.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    ) : (
+      <Select value={season} onValueChange={(v) => updateParam("season", v)}>
+        <SelectTrigger className={selectTriggerClass}>
+          <SelectValue>
+            {(v: string) => (v === ALL ? "All Seasons" : SEASONS.find((s) => s.value === v)?.label ?? v)}
+          </SelectValue>
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value={ALL}>All Seasons</SelectItem>
+          {SEASONS.map((s) => (
+            <SelectItem key={s.value} value={s.value}>
+              {s.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    );
+
+  const remotePolicySelect = (
+    <Select value={remotePolicy} onValueChange={(v) => updateParam("remotePolicy", v)}>
+      <SelectTrigger className={selectTriggerClass}>
+        <SelectValue>
+          {(v: string) =>
+            v === ALL ? "All Remote Policies" : REMOTE_POLICIES.find((r) => r.value === v)?.label ?? v
+          }
+        </SelectValue>
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value={ALL}>All Remote Policies</SelectItem>
+        {REMOTE_POLICIES.map((r) => (
+          <SelectItem key={r.value} value={r.value}>
+            {r.label}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+  );
+
+  const sortSelect = (
+    <Select value={sort} onValueChange={(v) => updateParam("sort", v)}>
+      <SelectTrigger className={selectTriggerClass} aria-label="Sort">
+        <SelectValue>
+          {(v: string) =>
+            `Sort: ${sortOptions.find((s) => s.value === v)?.label ?? "Most recent"}`
+          }
+        </SelectValue>
+      </SelectTrigger>
+      <SelectContent>
+        {sortOptions.map((s) => (
+          <SelectItem key={s.value} value={s.value}>
+            {s.label}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+  );
+
   return (
     <div
       className={cn(
@@ -123,116 +231,53 @@ export function InternshipsFilterBar({
         />
       </div>
 
-      <Select value={location} onValueChange={(v) => updateParam("location", v)}>
-        <SelectTrigger className={selectTriggerClass}>
-          <SelectValue>{(v: string) => (v === ALL ? "All Locations" : v)}</SelectValue>
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value={ALL}>All Locations</SelectItem>
-          {locations.map((loc) => (
-            <SelectItem key={loc} value={loc}>
-              {loc}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-
-      <Select value={department} onValueChange={(v) => updateParam("department", v)}>
-        <SelectTrigger className={selectTriggerClass}>
-          <SelectValue>{(v: string) => (v === ALL ? "All Departments" : v)}</SelectValue>
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value={ALL}>All Departments</SelectItem>
-          {departments.map((dept) => (
-            <SelectItem key={dept} value={dept}>
-              {dept}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-
-      {variant === "job" || variant === "women" ? (
-        <Select value={jobType} onValueChange={(v) => updateParam("jobType", v)}>
-          <SelectTrigger className={selectTriggerClass}>
-            <SelectValue>
-              {(v: string) => (v === ALL ? "All Job Types" : JOB_TYPES.find((j) => j.value === v)?.label ?? v)}
-            </SelectValue>
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value={ALL}>All Job Types</SelectItem>
-            {JOB_TYPES.map((j) => (
-              <SelectItem key={j.value} value={j.value}>
-                {j.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      ) : (
-        <Select value={season} onValueChange={(v) => updateParam("season", v)}>
-          <SelectTrigger className={selectTriggerClass}>
-            <SelectValue>
-              {(v: string) => (v === ALL ? "All Seasons" : SEASONS.find((s) => s.value === v)?.label ?? v)}
-            </SelectValue>
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value={ALL}>All Seasons</SelectItem>
-            {SEASONS.map((s) => (
-              <SelectItem key={s.value} value={s.value}>
-                {s.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      )}
-
+      {/* Below sm: everything but search collapses into one "Filters" dialog so
+          results aren't pushed hundreds of pixels down the page. sm and up:
+          unchanged inline row (rendered via `hidden sm:contents`). */}
       <Button
         type="button"
         variant="outline"
         size="lg"
-        className="gap-2"
-        onClick={() => setShowMore((s) => !s)}
-        aria-expanded={showMore}
+        className="gap-2 sm:hidden"
+        onClick={() => setMobileFiltersOpen(true)}
       >
         <SlidersHorizontal className="size-4" aria-hidden />
         Filters
       </Button>
 
-      {showMore && (
-        <Select value={remotePolicy} onValueChange={(v) => updateParam("remotePolicy", v)}>
-          <SelectTrigger className={selectTriggerClass}>
-            <SelectValue>
-              {(v: string) =>
-                v === ALL ? "All Remote Policies" : REMOTE_POLICIES.find((r) => r.value === v)?.label ?? v
-              }
-            </SelectValue>
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value={ALL}>All Remote Policies</SelectItem>
-            {REMOTE_POLICIES.map((r) => (
-              <SelectItem key={r.value} value={r.value}>
-                {r.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      )}
+      <Dialog open={mobileFiltersOpen} onOpenChange={setMobileFiltersOpen}>
+        <DialogContent className="max-h-[85vh] overflow-y-auto border-[3px] border-neutral-950 shadow-brutal-md">
+          <div className="flex flex-col gap-3 pt-6">
+            {locationSelect}
+            {departmentSelect}
+            {jobTypeOrSeasonSelect}
+            {remotePolicySelect}
+            {sortSelect}
+          </div>
+        </DialogContent>
+      </Dialog>
 
-      <Select value={sort} onValueChange={(v) => updateParam("sort", v)}>
-        <SelectTrigger className={selectTriggerClass} aria-label="Sort">
-          <SelectValue>
-            {(v: string) =>
-              `Sort: ${sortOptions.find((s) => s.value === v)?.label ?? "Most recent"}`
-            }
-          </SelectValue>
-        </SelectTrigger>
-        <SelectContent>
-          {sortOptions.map((s) => (
-            <SelectItem key={s.value} value={s.value}>
-              {s.label}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+      <div className="hidden sm:contents">
+        {locationSelect}
+        {departmentSelect}
+        {jobTypeOrSeasonSelect}
+
+        <Button
+          type="button"
+          variant="outline"
+          size="lg"
+          className="gap-2"
+          onClick={() => setShowMore((s) => !s)}
+          aria-expanded={showMore}
+        >
+          <SlidersHorizontal className="size-4" aria-hidden />
+          Filters
+        </Button>
+
+        {showMore && remotePolicySelect}
+
+        {sortSelect}
+      </div>
     </div>
   );
 }
