@@ -153,7 +153,7 @@ export default async function LandingPage() {
 
         {/* verity.exe window with pixel city + two real stat tiles */}
         <WindowChrome title="verity.exe" bodyClassName="p-4">
-          <div className="grid gap-4 sm:grid-cols-[1.3fr_1fr]">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-[1.3fr_1fr]">
             <div className="relative flex items-center justify-center overflow-hidden rounded-[3px] border-[3px] border-neutral-950 bg-neutral-950 p-6">
               <PixelCity />
               <span
@@ -236,7 +236,7 @@ export default async function LandingPage() {
       {/* ── Feature cards ────────────────────────────────────────────── */}
       <section className="mx-auto max-w-wide px-4 py-12 sm:px-6">
         <h2 className="sr-only">What Verity offers</h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map(({ icon: Icon, tile, title, body }) => (
             <div key={title} className="retro-card retro-hover p-6">
               <span
@@ -260,7 +260,7 @@ export default async function LandingPage() {
         <h2 className="text-center font-display text-4xl font-bold text-neutral-950">
           How Verity works
         </h2>
-        <div className="relative mt-12 grid gap-6 md:grid-cols-3">
+        <div className="relative mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {STEPS.map(({ n, icon: Icon, title, body }) => (
             <div key={n} className="retro-card relative p-6 pt-8 text-center">
               <span className="absolute -top-4 left-6 inline-flex size-8 items-center justify-center rounded-[3px] border-[3px] border-neutral-950 bg-tile-lavender font-display text-sm font-bold text-neutral-950">

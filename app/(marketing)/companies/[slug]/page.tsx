@@ -152,7 +152,7 @@ export default async function CompanyProfilePage({
         ]}
       />
 
-      <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_320px]">
         {/* Main column */}
         <div className="min-w-0 space-y-10">
           {company.about && (

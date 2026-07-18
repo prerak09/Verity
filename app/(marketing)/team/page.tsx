@@ -178,7 +178,7 @@ export default function TeamPage() {
       {/* ── Founders ─────────────────────────────────────────────────── */}
       <section className="mt-20">
         <SectionHeading>Meet the Co-Founders</SectionHeading>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {FOUNDERS.map((f) => (
             <div key={f.name} className="retro-card p-6">
               <span className="retro-eyebrow bg-lime">{f.badge}</span>
@@ -213,7 +213,7 @@ export default function TeamPage() {
       {/* ── Values ───────────────────────────────────────────────────── */}
       <section className="mt-20">
         <SectionHeading>What drives us</SectionHeading>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {VALUES.map((v) => (
             <div key={v.title} className="retro-card retro-hover p-4">
               <span
@@ -236,7 +236,7 @@ export default function TeamPage() {
       {/* ── Story ────────────────────────────────────────────────────── */}
       <section className="mt-20">
         <SectionHeading>Our Story</SectionHeading>
-        <div className="mt-8 grid gap-6 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-5">
           {STORY.map((s) => (
             <div key={s.title} className="flex flex-col items-center text-center">
               <span

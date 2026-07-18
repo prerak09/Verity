@@ -96,7 +96,7 @@ export default async function JobsListPage({
         />
       ) : (
         <>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {internships.map((internship) => (
               <InternshipCard key={internship.id} internship={internship} />
             ))}

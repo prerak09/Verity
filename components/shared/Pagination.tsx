@@ -31,7 +31,7 @@ export function Pagination({
   return (
     <nav
       aria-label="Pagination"
-      className={cn("flex items-center justify-center gap-1.5", className)}
+      className={cn("flex flex-wrap items-center justify-center gap-1.5", className)}
     >
       <PageLink
         href={page > 1 ? href(page - 1) : undefined}

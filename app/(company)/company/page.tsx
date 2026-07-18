@@ -62,7 +62,7 @@ export default function CompanyDashboardPage() {
 
       <section>
         <h2 className="font-display text-xl font-bold text-neutral-950">Analytics</h2>
-        <div className="mt-3 grid gap-4 sm:grid-cols-3">
+        <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <KpiCard
             icon={Eye}
             label="Profile views"
@@ -84,7 +84,7 @@ export default function CompanyDashboardPage() {
         </div>
       </section>
 
-      <section className="grid gap-4 sm:grid-cols-2">
+      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="rounded-[4px] border-[3px] border-neutral-950 bg-card p-4 shadow-brutal-sm">
           <div className="flex items-center justify-between">
             <h2 className="text-h4 text-foreground">Profile completeness</h2>

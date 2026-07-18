@@ -69,7 +69,7 @@ export default async function InternshipDetailPage({
 
   return (
     <div className="mx-auto max-w-wide px-4 py-10 sm:px-6">
-      <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_320px]">
         <div className="min-w-0">
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">

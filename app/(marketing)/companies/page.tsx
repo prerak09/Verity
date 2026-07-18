@@ -110,7 +110,7 @@ export default async function CompaniesDirectoryPage({
 
       <CompaniesFilterBar view={view} />
 
-      <div className="mt-6 grid gap-8 lg:grid-cols-[288px_1fr]">
+      <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-[288px_1fr]">
         <div className="hidden lg:block">
           <CompaniesFilterSidebar categories={categories} locations={locations} />
         </div>
@@ -135,7 +135,7 @@ export default async function CompaniesDirectoryPage({
           ) : (
             <>
               {view === "grid" ? (
-                <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
                   {companies.map((company) => (
                     <CompanyCard
                       key={company.id}

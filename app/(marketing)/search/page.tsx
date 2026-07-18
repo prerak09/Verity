@@ -269,7 +269,7 @@ export default async function SearchPage({
         </div>
       </form>
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[288px_1fr]">
+      <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[288px_1fr]">
         {/* Filter sidebar */}
         <aside className="hidden lg:sticky lg:top-24 lg:block lg:self-start">
           {filterSidebarContent}
@@ -282,7 +282,7 @@ export default async function SearchPage({
             <p className="text-body-sm text-muted-foreground">
               {totalCount} {totalCount === 1 ? "company" : "companies"}
             </p>
-            <div className="flex items-center gap-1.5">
+            <div className="flex flex-wrap items-center gap-1.5">
               <span className="text-body-sm text-muted-foreground">Sort:</span>
               {SORT_OPTIONS.map((opt) => (
                 <FilterPill
@@ -307,7 +307,7 @@ export default async function SearchPage({
             />
           ) : (
             <>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {pageResults.map((company) => (
                   <CompanyCard key={company.id} company={company} />
                 ))}
