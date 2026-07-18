@@ -176,11 +176,11 @@ export function Navbar({
                     variant="outline"
                     size="sm"
                     className="hidden sm:inline-flex"
-                    render={<Link href="/sign-in" />}
+                    render={<Link href="/sign-in" prefetch={false} />}
                   >
                     Log in
                   </Button>
-                  <Button variant="secondary" size="sm" render={<Link href="/sign-up" />}>
+                  <Button variant="secondary" size="sm" render={<Link href="/sign-up" prefetch={false} />}>
                     Sign up
                   </Button>
                 </>
@@ -208,6 +208,7 @@ export function Navbar({
                   {!signedIn && (
                     <Link
                       href="/sign-in"
+                      prefetch={false}
                       className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted"
                       onClick={() => setMarketingMenuOpen(false)}
                     >

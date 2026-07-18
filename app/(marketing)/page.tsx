@@ -295,7 +295,7 @@ export default async function LandingPage() {
             <Button
               size="lg"
               variant="secondary"
-              render={<Link href="/sign-up" />}
+              render={<Link href="/sign-up" prefetch={false} />}
             >
               <GraduationCap className="size-4" /> Join as a student
             </Button>
