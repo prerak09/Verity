@@ -6417,6 +6417,409 @@ Your individual placement within this range will be determined during the applic
         duration: "Permanent",
         applyUrl: "https://www.hudsonrivertrading.com/hrt-job/software-engineer-python/",
       },
+      {
+        slug: "hrt-security-engineering-lead",
+        title: "Security Engineering Lead",
+        description: `
+<p>Hudson River Trading (HRT) is seeking an experienced Security Engineer to join our growing Enterprise Security team. This team is responsible for securing the systems and tools HRT employees rely on every day, including managing AI security, Cloud Security Posture Management (CSPM), Identity and Access Management (IAM), Public Key Infrastructure (PKI), Endpoint Security, Vulnerability Management, and protecting HRT’s infrastructure across on-prem and cloud environments.</p>
+<p>In this role, you will lead a small team of security engineers focused on enabling employees to work safely and productively from any device, anywhere. The ideal candidate is a hands-on, technical leader and security generalist with broad experience developing practical security solutions that enhance both protection and user experience, and the ability to quickly adapt in a fast-paced environment. Responsibilities range from managing device posture and machine identity across thousands of endpoints, to identifying vulnerabilities in servers, containers, and serverless workloads, securing AI agents with guardrails and containerization, and advising teams on securing productivity applications.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Define technical strategy for securing enterprise products and services</li>
+<li>Design, review, and implement robust security hardening solutions for hosts and workloads spanning multiple data centers, colocation facilities, public cloud services, offices, and remote endpoints running various operating systems and applications</li>
+<li>Build and maintain a unified vulnerability management solution from disparate agents, scanners, SBOM tools, and threat intelligence feeds</li>
+<li>Partner with developers, engineers, and vendors across the organization to identify, prioritize, and drive initiatives in AI security, IAM, PKI, endpoint security, and more</li>
+<li>Foster a high-performing and inclusive team environment</li>
+<li>Execute projects smoothly, both as an individual contributor and as a project lead</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>7+ years of experience in security engineering</li>
+<li>2+ years of experience leading a technical team</li>
+<li>Experience hardening Linux environments at scale using configuration management and infrastructure-as-code tooling</li>
+<li>Experience in cloud security posture management on GCP, Azure, and/or AWS</li>
+<li>Familiarity with emerging generative AI security tooling and best practices (guardrails, agents, sandboxing, MCP security, etc.)</li>
+<li>Familiarity with endpoint security technologies on macOS and Windows</li>
+<li>Familiarity with PKI workflows: certificate templates, issuance, renewal and revocation</li>
+<li>Proficiency in Python is required</li>
+<li>Strong ability to make principled decisions, balancing workforce productivity with security needs</li>
+<li>Curious, agile, eager to learn, and capable of implementing novel solutions, even when confronted with complexity or uncertainty</li>
+<li>Experience working with partners throughout the business to achieve company-wide impact</li>
+</ul>
+<p>The estimated base salary range for this position is 200,000 to 300,000 USD per year (or local equivalent). The base pay offered may vary depending on multiple individualized factors, including location, job-related knowledge, skills, and experience. This role will also be eligible for discretionary performance-based bonuses and a competitive benefits package.&nbsp;</p><div><p><strong>Culture</strong></p>
+<p><span>Hudson River Trading (HRT) brings a scientific approach to trading financial products. We have built one of the world's most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading. <br><br><span>At HRT we welcome a variety of expertise: mathematics and computer science, physics and engineering, media and tech. We’re a community of self-starters who are motivated by the excitement of being at the cutting edge of automation in every part of our organization—from trading, to business operations, to recruiting and beyond. We value openness and transparency, and celebrate great ideas from HRT veterans and new hires alike. At HRT we’re friends and colleagues – whether we are sharing a meal, playing the latest board game, or writing elegant code. We embrace a culture of togetherness that extends far beyond the walls of our office.</span><br><br>Feel like you belong at HRT? Our goal is to find the best people and bring them together to do great work in a place where everyone is valued. HRT is proud of our diverse staff; we have offices all over the globe and benefit from our varied and unique perspectives. HRT is an equal opportunity employer; so whoever you are we’d love to get to know you.</span></p>
+<p><em><span>Please be advised: Use of AI tools during interviews or assessments is strictly prohibited, unless otherwise instructed or agreed upon. We employ various methods to evaluate the authenticity of candidate responses. If we determine that AI assistance was used during any stage of the hiring process, we reserve the right to immediately disqualify your candidacy or rescind any job offers extended.</span></em></p>
+`.trim(),
+        location: "New York, NY, United States",
+        department: "Security",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.hudsonrivertrading.com/careers/job/?gh_jid=7972565",
+      },
+      {
+        slug: "hrt-execution-quality-specialist-client-market-making",
+        title: "Execution Quality Specialist, Client Market Making",
+        description: `
+<p>Hudson River Trading (HRT) is seeking an Execution Quality Specialist to join our Client Market Making team in New York City. This is a unique opportunity for a quantitative, technically-minded professional to drive analytical initiatives focused on execution quality, market structure, and platform performance in US Equities markets.</p>
+<p>In this role, you will work closely with HRT’s Trading, Engineering, Compliance, and Legal teams to analyze execution outcomes, support strategic initiatives, and enhance the firm’s Wholesale platform through data-driven decision-making.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Oversee the Best Execution (Best Ex) program: Conduct detailed analysis of execution quality metrics and manage associated order handling and routing practices for HRT’s US Equities Wholesale business&nbsp;</li>
+<li>Lead the quarterly Best Execution review cycle end-to-end:&nbsp;</li>
+<ul>
+<li>Prepare committee materials</li>
+<li>Identify statistical outliers across execution quality metrics</li>
+<li>Conduct deep-dive investigations into root causes</li>
+<li>Drive remediation of findings&nbsp;</li>
+</ul>
+<li>Conduct quantitative analysis of client trading activity, execution outcomes, and venue performance to support platform development initiatives</li>
+<li>Support regulatory and analytical reporting workflows, including Rule 605 and 606 reporting and data reconciliation processes</li>
+<li>Develop scalable analytical tooling and reporting infrastructure using Python, SQL, and large-scale query systems</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>8+ years of experience in a quantitative or market structure-related role within financial services, or experience working with broker-dealers or retail routing firms</li>
+<li>Experience supporting Best Execution, execution analytics, market structure, or trading-related initiatives within US Equities markets</li>
+<li>FINRA Series 7, 57, SIE, or willingness to obtain through HRT</li>
+<li>Proficient with Python, Unix, and using AI tools to build software, develop analyses, and automate workflows</li>
+<li>Excellent cross-functional written and verbal communication skills and strong interpersonal abilities</li>
+<li>Strong work ethic and a desire to see complex projects through from concept to completion</li>
+<li>Meticulous attention to detail</li>
+<li>Keen interest in technology and trading is mandatory</li>
+</ul>
+<p>The estimated base salary range for this position is 150,000 - 200,000 USD per year (or local equivalent). The base pay offered may vary depending on multiple individualized factors, including location, job-related knowledge, skills, and experience. This role will also be eligible for discretionary performance-based bonuses and a competitive benefits package.</p><div><p><strong>Culture</strong></p>
+<p><span>Hudson River Trading (HRT) brings a scientific approach to trading financial products. We have built one of the world's most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading. <br><br><span>At HRT we welcome a variety of expertise: mathematics and computer science, physics and engineering, media and tech. We’re a community of self-starters who are motivated by the excitement of being at the cutting edge of automation in every part of our organization—from trading, to business operations, to recruiting and beyond. We value openness and transparency, and celebrate great ideas from HRT veterans and new hires alike. At HRT we’re friends and colleagues – whether we are sharing a meal, playing the latest board game, or writing elegant code. We embrace a culture of togetherness that extends far beyond the walls of our office.</span><br><br>Feel like you belong at HRT? Our goal is to find the best people and bring them together to do great work in a place where everyone is valued. HRT is proud of our diverse staff; we have offices all over the globe and benefit from our varied and unique perspectives. HRT is an equal opportunity employer; so whoever you are we’d love to get to know you.</span></p>
+<p><em><span>Please be advised: Use of AI tools during interviews or assessments is strictly prohibited, unless otherwise instructed or agreed upon. We employ various methods to evaluate the authenticity of candidate responses. If we determine that AI assistance was used during any stage of the hiring process, we reserve the right to immediately disqualify your candidacy or rescind any job offers extended.</span></em></p>
+`.trim(),
+        location: "New York, NY, United States",
+        department: "Business Development",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.hudsonrivertrading.com/careers/job/?gh_jid=7962162",
+      },
+      {
+        slug: "hrt-communications-specialist",
+        title: "Communications Specialist",
+        description: `
+<p>Hudson River Trading (HRT) is seeking a Communications Specialist to join our Communications &amp; Creative Team. In this role, you’ll collaborate across teams to develop and execute messaging that enhances the employee experience and elevates our external brand. You’ll manage the full project lifecycle for communications initiatives but also apply your writing expertise to ensure all communications meet the highest editorial standards. Working closely with the People Ops team, you’ll craft messaging that engages our global workforce and streamlines communication across the firm.</p>
+<p>The ideal candidate is a superior communicator who understands how to engage a highly technical audience. You know how to distill information, cut through noise, and deliver content in a way that drives alignment, excitement, and clarity. You thrive in a fast-moving, highly collaborative environment and can manage multiple projects without missing a detail. You’re proactive, organized, and adaptable—always anticipating the needs of stakeholders. Most importantly, you understand the importance of building strong working relationships and react with an appropriate level of urgency.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Develop, draft, and refine communications across the firm, maintaining clarity and consistency in tone and messaging</li>
+<li>Provide editorial guidance and feedback to ensure internal and external communications are polished, inclusive, engaging, and aligned with our organizational voice and goals&nbsp;</li>
+<li>Manage logistics and timelines for communications projects, collaborating with team members and key stakeholders to ensure transparency, efficiency, and excellence in execution&nbsp;&nbsp;</li>
+<li>Maintain the internal communications editorial calendar, pitch employee engagement content ideas, manage timelines, and keep stakeholders informed</li>
+<li>Work collaboratively with all departments on content generation, from simple refinements and edits to full project management of new comms initiatives</li>
+<li>Develop content that effectively communicates complex technical concepts, for both internal and external audiences, from internal all-hands to our social channels and tech blog</li>
+<li>Assist with photo and video shoots, manage production timelines, participant communications, talking points, and documentation</li>
+<li>Proactively and efficiently address ad-hoc and time-sensitive requests from stakeholders&nbsp;</li>
+<li>Drive technical content deliverables while navigating ambiguity in a high-touch, highly technical environment</li>
+<li>Prioritize fast and efficient project execution, meeting requests with a strong sense of urgency and attention to quality and detail&nbsp;</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>Bachelor’s in English, Communications, or related degree</li>
+<li>5+ years of experience in corporate communications, content development, or editorial roles, preferably in a fast-paced or technical environment</li>
+<li>Exceptional writing, editing, and proofreading skills; adapts style to audience; presents data clearly</li>
+<li>Ability to communicate clearly and persuasively, engaging others, listening actively, and responding thoughtfully</li>
+<li>Proficiency in Google Workspace with a strong focus on creating automations and streamlining workflows for greater efficiency</li>
+<li>Meticulous in ensuring clarity and consistency, while staying aligned with brand guidelines</li>
+<li>Strong interpersonal skills and extremely resourceful</li>
+</ul>
+<p>The estimated base salary range for this position is 110,000 to 160,000 USD per year (or local equivalent). The base pay offered may vary depending on multiple individualized factors, including location, job-related knowledge, skills, and experience. This role will also be eligible for discretionary performance-based bonuses and a competitive benefits package.</p><div><p><strong>Culture</strong></p>
+<p><span>Hudson River Trading (HRT) brings a scientific approach to trading financial products. We have built one of the world's most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading. <br><br><span>At HRT we welcome a variety of expertise: mathematics and computer science, physics and engineering, media and tech. We’re a community of self-starters who are motivated by the excitement of being at the cutting edge of automation in every part of our organization—from trading, to business operations, to recruiting and beyond. We value openness and transparency, and celebrate great ideas from HRT veterans and new hires alike. At HRT we’re friends and colleagues – whether we are sharing a meal, playing the latest board game, or writing elegant code. We embrace a culture of togetherness that extends far beyond the walls of our office.</span><br><br>Feel like you belong at HRT? Our goal is to find the best people and bring them together to do great work in a place where everyone is valued. HRT is proud of our diverse staff; we have offices all over the globe and benefit from our varied and unique perspectives. HRT is an equal opportunity employer; so whoever you are we’d love to get to know you.</span></p>
+<p><em><span>Please be advised: Use of AI tools during interviews or assessments is strictly prohibited, unless otherwise instructed or agreed upon. We employ various methods to evaluate the authenticity of candidate responses. If we determine that AI assistance was used during any stage of the hiring process, we reserve the right to immediately disqualify your candidacy or rescind any job offers extended.</span></em></p>
+`.trim(),
+        location: "New York, NY, United States",
+        department: "People Operations",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.hudsonrivertrading.com/careers/job/?gh_jid=7980396",
+      },
+      {
+        slug: "hrt-people-data-lead",
+        title: "People Data Lead",
+        description: `
+<p>Hudson River Trading (HRT) is seeking a People Analytics Lead to own the strategic direction and operational maturity of the People Analytics function. This role is responsible for transforming People Analytics at HRT into an insights-driven strategic partner that delivers analytics products to the People Operations team and the broader organization. The People Analytics Lead will architect our people data infrastructure, update governance standards, build dashboards and predictive models, and serve as the primary people analytics advisor to the business.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Design and deliver periodic people analytics insights and reporting covering standard people metrics, tailored both for leadership and company-wide consumption</li>
+<li>Build predictive models for projections such as headcount growth and time-to-fill forecasting</li>
+<li>Establish a standardized metrics library with clear definitions, data sources, calculation methodologies, and refresh cadences</li>
+<li>Architect and govern a single source of truth for people data, replacing fragmented spreadsheets with a structured, auditable data repository</li>
+<li>Develop and maintain automated dashboards that refresh on schedule and serve self-service needs for People Ops and managers</li>
+<li>Translate complex analytical findings into clear, actionable narratives for non-technical audiences, linking data to business outcomes</li>
+<li>Conduct deep-dive investigations into workforce trends and present findings</li>
+<li>Partner with other teams to integrate people data with financial and operational datasets for cross-functional insights</li>
+<li>Set analytics roadmap aligned to People Operations and business strategy, managing competing priorities with a clear intake and prioritization process</li>
+<li>Manage, mentor, and develop the People Analytics team, building technical skills and business acumen across the team</li>
+<li>Establish data governance policies including data access controls, privacy compliance, documentation standards, and quality assurance processes</li>
+<li>Drive stakeholder engagement by proactively identifying high-value analytics opportunities and building trust through consistent, reliable delivery</li>
+<li>Champion a culture of data literacy across the People Ops function and broader organisation through training, enablement sessions, and accessible reporting</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>Bachelor's degree in a quantitative field (e.g., I/O Psychology, Statistics, Data Science, Economics); Master's degree in People Analytics, Applied Statistics, Data Science, or an analytics-focused MBA strongly preferred</li>
+<li>10+ years progressive people analytics experience</li>
+<li>5+ years leading or managing an analytics team (strategy, mentoring, executive presentation)</li>
+<li>5+ years embedded within or alongside HR, with expertise across the full employee lifecycle (talent acquisition, engagement, performance, compensation, retention, planning)</li>
+<li>Experience supporting 1,000+ global or multi-site workforce preferred</li>
+<li>Expertise in regression, modeling, clustering, factor analysis, and A/B testing for workforce questions</li>
+<li>Ability to drive AI/LLM solutions for data synthesis and workforce storytelling, with proven prompt engineering skills to automate data requests and executive summaries</li>
+<li>Experience with advanced SQL (complex joins, CTEs, window functions) and proficiency in Python/R for statistical modeling and data pipeline automation</li>
+<li>Experience building and maintaining a people data warehouse</li>
+<li>Deep mastery of Workday analytics (Advanced/Matrix Reporting, Calculated Fields, Prism)</li>
+<li>Working knowledge of ETL/ELT</li>
+<li>Strong Excel/Google Sheets skills for ad-hoc analysis; ability and desire to reduce spreadsheet dependency</li>
+<li>Familiarity with survey platforms (Qualtrics, Culture Amp, Glint) and data integration</li>
+<li>Familiarity with multi-country data privacy regulations (GDPR, CCPA)</li>
+</ul>
+<p>The estimated base salary range for this position is&nbsp;$225,000-$275,000, based on job-related skills and experience. This role will also be eligible for discretionary performance-based bonuses and a competitive benefits package.</p><div><p><strong>Culture</strong></p>
+<p><span>Hudson River Trading (HRT) brings a scientific approach to trading financial products. We have built one of the world's most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading. <br><br><span>At HRT we welcome a variety of expertise: mathematics and computer science, physics and engineering, media and tech. We’re a community of self-starters who are motivated by the excitement of being at the cutting edge of automation in every part of our organization—from trading, to business operations, to recruiting and beyond. We value openness and transparency, and celebrate great ideas from HRT veterans and new hires alike. At HRT we’re friends and colleagues – whether we are sharing a meal, playing the latest board game, or writing elegant code. We embrace a culture of togetherness that extends far beyond the walls of our office.</span><br><br>Feel like you belong at HRT? Our goal is to find the best people and bring them together to do great work in a place where everyone is valued. HRT is proud of our diverse staff; we have offices all over the globe and benefit from our varied and unique perspectives. HRT is an equal opportunity employer; so whoever you are we’d love to get to know you.</span></p>
+<p><em><span>Please be advised: Use of AI tools during interviews or assessments is strictly prohibited, unless otherwise instructed or agreed upon. We employ various methods to evaluate the authenticity of candidate responses. If we determine that AI assistance was used during any stage of the hiring process, we reserve the right to immediately disqualify your candidacy or rescind any job offers extended.</span></em></p>
+`.trim(),
+        location: "New York, NY, United States",
+        department: "People Operations",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.hudsonrivertrading.com/careers/job/?gh_jid=7958945",
+      },
+      {
+        slug: "hrt-people-operations-generalist",
+        title: "People Operations Generalist",
+        description: `
+<p>Hudson River Trading (HRT) is seeking a People Operations Generalist to join our People team in NYC. The People team is responsible for the well-being and performance of all HRT employees across our global offices. From recruiting to onboarding to the continued engagement and development of our employees, the People team is dedicated to creating an environment that is authentic, inclusive, and upholds our company values.&nbsp;</p>
+<p>In this role, you will oversee a variety of operational functions related to the People Operations team. Responsibilities include owning all due diligence tasks between offer acceptance and a new hire’s first day, and constantly looking for ways to improve the employee experience.&nbsp;</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Support the new hire experience from offer acceptance through onboarding, acting as a primary point of contact to ensure a welcoming environment and seamless transition</li>
+<li>Manage and oversee the background check process for all incoming hires, ensuring all screenings are completed and cleared in accordance with company standards and local regulations before the start date</li>
+<li>Facilitate and authorize relocation benefits for eligible new hires, serving as the bridge between the employee and third-party vendors to ensure a smooth move and compliance with HRT policies</li>
+<li>Assist with various traditional HR functions, including HRIS entry and maintenance, and ensure data validity in our systems and other HR applications by keeping records up to date</li>
+<li>Perform regular audits to ensure all required employee documentation is collected, organized, and retained according to global document retention guidelines and HRT policies</li>
+<li>Assist with the coordination and scheduling of new employee orientation and ongoing training sessions</li>
+<li>Coordinate with hiring managers, recruiters, and local workplace managers to ensure all stakeholders are prepared for a new hire’s first day</li>
+<li>Support cross-team projects related to the pre-hire experience, including managing swag and travel</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>3+ years of relevant work experience, with a minimum of 1 year as an HR Coordinator or similar</li>
+<li>Bachelor’s or Master’s Degree; a PHR/PHR/SHRM-CP certification is a plus</li>
+<li>Experience with HR software platforms, Workday experience required</li>
+<li>Ability and desire to learn new technologies quickly</li>
+<li>Meticulous attention to detail</li>
+<li>Highly ethical and accustomed to managing confidential information with discretion</li>
+<li>Strong interpersonal skills</li>
+<li>Outstanding written and verbal communication skills</li>
+</ul>
+<p>The estimated base salary range for this position is $110,000 - $140,000, based on job-related skills and experience. This role will also be eligible for discretionary performance-based bonuses and a competitive benefits package.</p><div><p><strong>Culture</strong></p>
+<p><span>Hudson River Trading (HRT) brings a scientific approach to trading financial products. We have built one of the world's most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading. <br><br><span>At HRT we welcome a variety of expertise: mathematics and computer science, physics and engineering, media and tech. We’re a community of self-starters who are motivated by the excitement of being at the cutting edge of automation in every part of our organization—from trading, to business operations, to recruiting and beyond. We value openness and transparency, and celebrate great ideas from HRT veterans and new hires alike. At HRT we’re friends and colleagues – whether we are sharing a meal, playing the latest board game, or writing elegant code. We embrace a culture of togetherness that extends far beyond the walls of our office.</span><br><br>Feel like you belong at HRT? Our goal is to find the best people and bring them together to do great work in a place where everyone is valued. HRT is proud of our diverse staff; we have offices all over the globe and benefit from our varied and unique perspectives. HRT is an equal opportunity employer; so whoever you are we’d love to get to know you.</span></p>
+<p><em><span>Please be advised: Use of AI tools during interviews or assessments is strictly prohibited, unless otherwise instructed or agreed upon. We employ various methods to evaluate the authenticity of candidate responses. If we determine that AI assistance was used during any stage of the hiring process, we reserve the right to immediately disqualify your candidacy or rescind any job offers extended.</span></em></p>
+`.trim(),
+        location: "New York, NY, United States",
+        department: "People Operations",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.hudsonrivertrading.com/careers/job/?gh_jid=7964800",
+      },
+      {
+        slug: "hrt-recruiter-phd-research",
+        title: "Recruiter, PhD & Research",
+        description: `
+<p>Hudson River Trading (HRT) is seeking a PhD Recruiter to join our Campus Recruiting team. In this role, you’ll focus on building deep, long-term relationships with elite<strong> </strong>graduate students, specialized research labs, and top-tier industry talent to ensure HRT consistently connects with the world's strongest researchers in math, physics, computer science, and related fields.</p>
+<p>The ideal candidate is adept at identifying passive talent and building genuine relationships with top-tier PhDs and industry researchers. We are looking for someone who enjoys immersing themselves in deep technical domains to understand what truly best-in-class talent looks like, seamlessly bridges the gap between academia and industry, and thrives in an open and collaborative environment. While you will ultimately help shape our long-term talent strategy, you should be highly execution-focused and energized by the immediate challenge of navigating a fast-paced, high-volume pipeline of top talent and engaging with the world’s foremost mathematical and computational minds.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Proactively source and cultivate long-term relationships with top-tier PhD candidates, pioneering research labs, and elite industry researchers globally</li>
+<li>Immerse yourself in technical domains to build a deep understanding of what world-class quantitative and computational talent looks like</li>
+<li>Manage a high-volume, fast-paced inbound pipeline of applications with energy and enthusiasm</li>
+<li>Deliver a highly personalized, intellectually engaging candidate experience that mirrors HRT's culture from first contact to close</li>
+<li>Identify and execute strategic opportunities to position HRT as the premier destination for the world’s foremost scientific and mathematical minds</li>
+<li>Represent HRT at high-caliber academic and industry events (such as specialized conferences, workshops, and research seminars) that align with our rigorous hiring bar</li>
+<li>Partner with Recruiting Coordinators to ensure an exceptionally efficient, streamlined interview process</li>
+<li>Own the entire offer and conversion process, navigating complex negotiations and closing elite talent in a highly competitive market</li>
+<li>“Make it Better” is one of HRT’s core values. You will be responsible for process improvements across the areas you oversee, including pipeline management, candidate experience, and academic engagement&nbsp;</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>2+ years track record of hiring elite technical or quantitative talent against an extremely high bar (experience recruiting PhDs, researchers, or elite tech talent is a plus, but a sharp eye for elite capability is the priority)</li>
+<li>Full-lifecycle agility, with the ability to balance targeted campus engagement and proactive outbound scouting with the efficient management of a fast-paced inbound funnel</li>
+<li>Exceptional intellectual curiosity – you are eager to deeply understand complex technical domains and can engage thoughtfully with world-class minds</li>
+<li>A hands-on execution mindset. You are energized by the day-to-day momentum of active recruiting and enjoy staying close to the ground, driving results rather than focusing solely on high-level strategy</li>
+<li>High resilience and composure, with the organizational precision required to navigate a busy, fluid pipeline seamlessly</li>
+<li>A collaborative, thoughtful disposition – we want teammates who value joining a close-knit group of incredibly smart and supportive people</li>
+</ul>
+<p>The estimated base salary range for this position is 140,000 to 180,000 USD per year (or local equivalent). The base pay offered may vary depending on multiple individualized factors, including location, job-related knowledge, skills, and experience. This role will also be eligible for discretionary performance-based bonuses and a competitive benefits package.</p><div><p><strong>Culture</strong></p>
+<p><span>Hudson River Trading (HRT) brings a scientific approach to trading financial products. We have built one of the world's most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading. <br><br><span>At HRT we welcome a variety of expertise: mathematics and computer science, physics and engineering, media and tech. We’re a community of self-starters who are motivated by the excitement of being at the cutting edge of automation in every part of our organization—from trading, to business operations, to recruiting and beyond. We value openness and transparency, and celebrate great ideas from HRT veterans and new hires alike. At HRT we’re friends and colleagues – whether we are sharing a meal, playing the latest board game, or writing elegant code. We embrace a culture of togetherness that extends far beyond the walls of our office.</span><br><br>Feel like you belong at HRT? Our goal is to find the best people and bring them together to do great work in a place where everyone is valued. HRT is proud of our diverse staff; we have offices all over the globe and benefit from our varied and unique perspectives. HRT is an equal opportunity employer; so whoever you are we’d love to get to know you.</span></p>
+<p><em><span>Please be advised: Use of AI tools during interviews or assessments is strictly prohibited, unless otherwise instructed or agreed upon. We employ various methods to evaluate the authenticity of candidate responses. If we determine that AI assistance was used during any stage of the hiring process, we reserve the right to immediately disqualify your candidacy or rescind any job offers extended.</span></em></p>
+`.trim(),
+        location: "New York, NY, United States",
+        department: "People Operations",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.hudsonrivertrading.com/careers/job/?gh_jid=7997989",
+      },
+      {
+        slug: "hrt-posttrade-strategy-specialist-singapore",
+        title: "PostTrade Strategy Specialist",
+        description: `
+<p>Hudson River Trading (HRT) is seeking a PostTrade Strategy Specialist to join our PostTrade team in Singapore. Encompassing the firm’s Global Funding &amp; Clearing, Middle Office, and Product Control teams, the PostTrade team ensures the smooth daily operation of our global PostTrade platform and helps to drive strategic optimization of our existing trading and enable new, complex trading initiatives.</p>
+<p>In this role, you will lead initiatives to improve our current processes while designing and building new solutions to seamlessly trade on an even wider range of asset classes, exchanges, and products. You will work closely with the PostTrade Tech team to define the requirements and architect the infrastructure required to support these new trading opportunities and strategically optimize our existing setup.</p>
+<p>Being a member of the PostTrade team at HRT means working on a tight-knit, highly productive team. The ideal candidate is a strong cross-functional communicator with a can-do attitude and expertise in financial instruments who loves utilizing technology and automation tools to own and execute a wide scope of operational projects.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Evaluate and deploy advanced post-trade technologies and risk controls</li>
+<li>Design and develop scalable onboarding processes to reduce go-to-market time for new initiatives globally</li>
+<li>Drive collaboration with internal stakeholders to devise and implement new global strategic optimizations</li>
+<li>Evaluate existing processes, relationships, and systems to proactively identify opportunities for strategic improvement, automation, and growth within HRT’s PostTrade functions</li>
+<li>Serve as the subject matter expert and collaborate with development teams to optimize PostTrade’s cataloging and ingestion of external data to facilitate consolidated and standardized sources for uses in reconciliation, reporting, and analytics</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>Expert-level knowledge of the trade lifecycle, financial instruments, and the global trading landscape</li>
+<li>5+ years in a senior, hands-on operational role supporting trading; the ideal candidate will have a mix of buy-side and sell-side experience</li>
+<li>Deep, global understanding of the strategic role that prime brokers play at a multi-strategy trading firm</li>
+<li>Ability to build new and strengthen existing relationships with prime brokers to facilitate platform needs and act in the best interests of HRT</li>
+<li>Ability to navigate and negotiate with technical and nontechnical stakeholders on complex problems, from internal developers building trading systems to external vendors on the sell-side</li>
+<li>Excellent cross-functional communication skills&nbsp;</li>
+<li>Proven ability to foster a collaborative work environment with a sense of ownership and a “no task too small” attitude</li>
+</ul><div><p><strong>Culture</strong></p>
+<p><span>Hudson River Trading (HRT) brings a scientific approach to trading financial products. We have built one of the world's most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading. <br><br><span>At HRT we welcome a variety of expertise: mathematics and computer science, physics and engineering, media and tech. We’re a community of self-starters who are motivated by the excitement of being at the cutting edge of automation in every part of our organization—from trading, to business operations, to recruiting and beyond. We value openness and transparency, and celebrate great ideas from HRT veterans and new hires alike. At HRT we’re friends and colleagues – whether we are sharing a meal, playing the latest board game, or writing elegant code. We embrace a culture of togetherness that extends far beyond the walls of our office.</span><br><br>Feel like you belong at HRT? Our goal is to find the best people and bring them together to do great work in a place where everyone is valued. HRT is proud of our diverse staff; we have offices all over the globe and benefit from our varied and unique perspectives. HRT is an equal opportunity employer; so whoever you are we’d love to get to know you.</span></p>
+<p><em><span>Please be advised: Use of AI tools during interviews or assessments is strictly prohibited, unless otherwise instructed or agreed upon. We employ various methods to evaluate the authenticity of candidate responses. If we determine that AI assistance was used during any stage of the hiring process, we reserve the right to immediately disqualify your candidacy or rescind any job offers extended.</span></em></p>
+`.trim(),
+        location: "Singapore",
+        department: "Post-Trade",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.hudsonrivertrading.com/careers/job/?gh_jid=8020012",
+      },
+      {
+        slug: "hrt-posttrade-strategy-specialist-ny",
+        title: "PostTrade Strategy Specialist",
+        description: `
+<p>Hudson River Trading (HRT) is seeking a PostTrade Strategy Specialist to join our PostTrade team in New York City. Encompassing the firm’s Global Funding &amp; Clearing, Middle Office, and Product Control teams, the PostTrade team ensures the smooth daily operation of our global PostTrade platform and helps to drive strategic optimization of our existing trading and enable new, complex trading initiatives.</p>
+<p>In this role, you will lead initiatives to improve our current processes while designing and building new solutions to seamlessly trade on an even wider range of asset classes, exchanges, and products. You will work closely with the PostTrade Tech team to define the requirements and architect the infrastructure required to support these new trading opportunities and strategically optimize our existing setup.</p>
+<p>Being a member of the PostTrade team at HRT means working on a tight-knit, highly productive team. The ideal candidate is a strong cross-functional communicator with a can-do attitude and expertise in financial instruments who loves utilizing technology and automation tools to own and execute a wide scope of operational projects.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Evaluate and deploy advanced post-trade technologies and risk controls</li>
+<li>Design and develop scalable onboarding processes to reduce go-to-market time for new initiatives globally</li>
+<li>Drive collaboration with internal stakeholders to devise and implement new global strategic optimizations</li>
+<li>Evaluate existing processes, relationships, and systems to proactively identify opportunities for strategic improvement, automation, and growth within HRT’s PostTrade functions</li>
+<li>Serve as the subject matter expert and collaborate with development teams to optimize PostTrade’s cataloging and ingestion of external data to facilitate consolidated and standardized sources for uses in reconciliation, reporting, and analytics</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>Expert-level knowledge of the trade lifecycle, financial instruments, and the global trading landscape</li>
+<li>5+ years in a senior, hands-on operational role supporting trading; the ideal candidate will have a mix of buy-side and sell-side experience</li>
+<li>Deep, global understanding of the strategic role that prime brokers play at a multi-strategy trading firm</li>
+<li>Ability to build new and strengthen existing relationships with prime brokers to facilitate platform needs and act in the best interests of HRT</li>
+<li>Ability to navigate and negotiate with technical and nontechnical stakeholders on complex problems, from internal developers building trading systems to external vendors on the sell-side</li>
+<li>Excellent cross-functional communication skills&nbsp;</li>
+<li>Proven ability to foster a collaborative work environment with a sense of ownership and a “no task too small” attitude</li>
+</ul>
+<p>The estimated base salary range for this position is 150,000 to 200,000 USD per year (or local equivalent). The base pay offered may vary depending on multiple individualized factors, including location, job-related knowledge, skills, and experience. This role will also be eligible for discretionary performance-based bonuses and a competitive benefits package.</p><div><p><strong>Culture</strong></p>
+<p><span>Hudson River Trading (HRT) brings a scientific approach to trading financial products. We have built one of the world's most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading. <br><br><span>At HRT we welcome a variety of expertise: mathematics and computer science, physics and engineering, media and tech. We’re a community of self-starters who are motivated by the excitement of being at the cutting edge of automation in every part of our organization—from trading, to business operations, to recruiting and beyond. We value openness and transparency, and celebrate great ideas from HRT veterans and new hires alike. At HRT we’re friends and colleagues – whether we are sharing a meal, playing the latest board game, or writing elegant code. We embrace a culture of togetherness that extends far beyond the walls of our office.</span><br><br>Feel like you belong at HRT? Our goal is to find the best people and bring them together to do great work in a place where everyone is valued. HRT is proud of our diverse staff; we have offices all over the globe and benefit from our varied and unique perspectives. HRT is an equal opportunity employer; so whoever you are we’d love to get to know you.</span></p>
+<p><em><span>Please be advised: Use of AI tools during interviews or assessments is strictly prohibited, unless otherwise instructed or agreed upon. We employ various methods to evaluate the authenticity of candidate responses. If we determine that AI assistance was used during any stage of the hiring process, we reserve the right to immediately disqualify your candidacy or rescind any job offers extended.</span></em></p>
+`.trim(),
+        location: "New York, NY, United States",
+        department: "Post-Trade",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.hudsonrivertrading.com/careers/job/?gh_jid=7407294",
+      },
+      {
+        slug: "hrt-junior-treasury-quant-researcher",
+        title: "Junior Treasury Quant Researcher",
+        description: `
+<p>Hudson River Trading (HRT) is seeking a Quantitative Researcher focused on Treasury Optimization and Research to join our PostTrade team. In this role, you’ll work closely with our Funding, Finance, and Treasury Engineering teams to develop HRT's Treasury optimization and enhance funding &amp; capital efficiency. Researchers at HRT work on small, highly productive teams that design, analyze, and maintain the models and strategies that drive the efficiency and profitability of our business. As a member of our PostTrade team, you will be challenged by dynamic financial markets and contribute to critical optimization models in an extremely fast-paced setting. The ideal candidate is a brilliant quantitative mind who enjoys solving complex problems, values a highly collaborative culture, and thrives in a performance-driven environment.&nbsp;</p>
+<p><strong>Responsibilities&nbsp;</strong></p>
+<ul>
+<li>Build and enhance the quantitative components of HRT’s Treasury Optimization Platform, including designing and developing optimization models to improve funding efficiency and collateral allocation across global markets</li>
+<li>Conduct research to expand funding &amp; collateral modeling and analytical capabilities, and identify new opportunities to maximize returns</li>
+<li>Collaborate with partners across Funding, Finance, and Engineering teams to integrate research and analytics into production systems, streamline cash and collateral workflows, and develop comprehensive metrics for funding, margin, and counterparty management</li>
+</ul>
+<p><strong>Qualifications </strong></p>
+<ul>
+<li>Bachelor’s, Master’s, or PhD in Computer Science, Engineering, Mathematics, Statistics, Physics, Operations Research, or a related quantitative field</li>
+<li>Exceptional problem-solving skills, with a strong foundation in mathematical, statistical, or optimization fundamentals</li>
+<li>Strong programming skills, with solid experience in Python</li>
+<li>Proficiency with numerical computing or machine learning libraries (e.g., NumPy, Pandas, PyTorch, TensorFlow) is a significant advantage</li>
+<li>Familiarity with optimization techniques, such as gradient descent and linear/convex programming, is highly desirable</li>
+<li>Knowledge of portfolio financing, funding mechanics, prime brokerage, or risk management frameworks is a plus</li>
+<li>Excellent cross-functional communication skills, with the ability to work effectively with engineers, researchers, and financial professionals</li>
+</ul>
+<p>The estimated base salary range for this position is $150,000 - $200,000, based on job-related skills and experience. This role will also be eligible for discretionary performance-based bonuses and a competitive benefits package.</p><div><p><strong>Culture</strong></p>
+<p><span>Hudson River Trading (HRT) brings a scientific approach to trading financial products. We have built one of the world's most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading. <br><br><span>At HRT we welcome a variety of expertise: mathematics and computer science, physics and engineering, media and tech. We’re a community of self-starters who are motivated by the excitement of being at the cutting edge of automation in every part of our organization—from trading, to business operations, to recruiting and beyond. We value openness and transparency, and celebrate great ideas from HRT veterans and new hires alike. At HRT we’re friends and colleagues – whether we are sharing a meal, playing the latest board game, or writing elegant code. We embrace a culture of togetherness that extends far beyond the walls of our office.</span><br><br>Feel like you belong at HRT? Our goal is to find the best people and bring them together to do great work in a place where everyone is valued. HRT is proud of our diverse staff; we have offices all over the globe and benefit from our varied and unique perspectives. HRT is an equal opportunity employer; so whoever you are we’d love to get to know you.</span></p>
+<p><em><span>Please be advised: Use of AI tools during interviews or assessments is strictly prohibited, unless otherwise instructed or agreed upon. We employ various methods to evaluate the authenticity of candidate responses. If we determine that AI assistance was used during any stage of the hiring process, we reserve the right to immediately disqualify your candidacy or rescind any job offers extended.</span></em></p>
+`.trim(),
+        location: "New York, NY, United States",
+        department: "Post-Trade",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.hudsonrivertrading.com/careers/job/?gh_jid=7364943",
+      },
+      {
+        slug: "hrt-people-partner-2",
+        title: "People Partner",
+        description: `
+<p>Hudson River Trading (HRT) is seeking a People Partner (HRBP) to join our People Operations team in NYC.&nbsp;</p>
+<p>In this role, you’ll support a highly technical employee population, partnering with engineering leaders to understand their challenges and design and execute talent solutions to drive organizational effectiveness and employee engagement.You will operate as both a strategic advisor and a hands-on problem-solver, building strong relationships with leaders to advise and support them through organizational growth, team design, change management, and leadership development.</p>
+<p>The ideal candidate brings strong business acumen and EQ, experience supporting engineering teams, and the ability to operate in a fast-paced environment.&nbsp;</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Coach managers and employees through performance challenges, conflict resolution, and career development&nbsp;</li>
+<li>Partner with technical leads to evaluate team health, identify friction points, and optimize structures to drive team effectiveness and long-term engagement</li>
+<li>Lead and manage workforce planning for the teams you support, helping leaders anticipate talent gaps, succession needs, and growth opportunities</li>
+<li>Elevate the quality of feedback within the technical org, guiding managers through performance evaluations and fostering a culture of continuous development</li>
+<li>Design tailored talent solutions for software engineers, including professional development, mentorship models, and high-potential development</li>
+<li>Partner with members of the People Operations team to execute on people initiatives and collaborate on building and improving processes</li>
+<li>Coordinate offsites, leadership retreats, and team-building workshops that bridge the gap between strategic goal-setting and meaningful team connection</li>
+<li>Maintain a pulse on organizational morale and office dynamics to proactively address engagement trends and foster an inclusive, high-energy environment</li>
+</ul>
+<p><strong>Qualifications</strong></p>
+<ul>
+<li>8+ years of progressive HR experience, with a proven track record supporting engineering or highly technical teams</li>
+<li>Deep understanding of the software engineering lifecycle and the dynamics of high-performance, intellectually rigorous environments</li>
+<li>Proven ability to coach highly analytical leaders through complex interpersonal and organizational challenges</li>
+<li>Strong business acumen, including the ability to “look around corners” and anticipate talent implications of technical strategy</li>
+<li>Direct experience in organizational design, workforce planning, and succession strategies</li>
+<li>Strong analytical skills and a high degree of comfort using data to inform decision-making</li>
+<li>Exceptional judgment and professional maturity, with the ability to act as a trusted, neutral advisor across all levels of the organization</li>
+<li>A natural bias toward simplicity and high-impact solutions over bureaucracy</li>
+<li>A hands-on, collaborative approach that prioritizes crafting specific tools and processes that fit our unique needs over generic HR programs</li>
+<li>Foundational knowledge of Organizational Development (a related degree or equivalent is preferred, but not required)</li>
+</ul>
+<p>The estimated base salary range for this position is 200,000 - 250,000 USD per year (or local equivalent). The base pay offered may vary depending on multiple individualized factors, including location, job-related knowledge, skills, and experience. This role will also be eligible for discretionary performance-based bonuses and a competitive benefits package.</p><div><p><strong>Culture</strong></p>
+<p><span>Hudson River Trading (HRT) brings a scientific approach to trading financial products. We have built one of the world's most sophisticated computing environments for research and development. Our researchers are at the forefront of innovation in the world of algorithmic trading. <br><br><span>At HRT we welcome a variety of expertise: mathematics and computer science, physics and engineering, media and tech. We’re a community of self-starters who are motivated by the excitement of being at the cutting edge of automation in every part of our organization—from trading, to business operations, to recruiting and beyond. We value openness and transparency, and celebrate great ideas from HRT veterans and new hires alike. At HRT we’re friends and colleagues – whether we are sharing a meal, playing the latest board game, or writing elegant code. We embrace a culture of togetherness that extends far beyond the walls of our office.</span><br><br>Feel like you belong at HRT? Our goal is to find the best people and bring them together to do great work in a place where everyone is valued. HRT is proud of our diverse staff; we have offices all over the globe and benefit from our varied and unique perspectives. HRT is an equal opportunity employer; so whoever you are we’d love to get to know you.</span></p>
+<p><em><span>Please be advised: Use of AI tools during interviews or assessments is strictly prohibited, unless otherwise instructed or agreed upon. We employ various methods to evaluate the authenticity of candidate responses. If we determine that AI assistance was used during any stage of the hiring process, we reserve the right to immediately disqualify your candidacy or rescind any job offers extended.</span></em></p>
+`.trim(),
+        location: "New York, NY, United States",
+        department: "People Operations",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://www.hudsonrivertrading.com/careers/job/?gh_jid=8068289",
+      },
     ],
   },
   {
