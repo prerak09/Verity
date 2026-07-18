@@ -21,6 +21,7 @@ export async function POST() {
   }
   revalidateTag("companies:list", "max");
   revalidateTag("internships:list", "max");
+  revalidateTag("taxonomy:list", "max");
 
   return NextResponse.json({ revalidated: true, companies: companies.length });
 }

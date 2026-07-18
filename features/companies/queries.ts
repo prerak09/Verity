@@ -306,8 +306,18 @@ export async function getProfileCompleteness(
   };
 }
 
-/** Distinct countries across verified companies, for the directory's location filter. */
-export async function listCompanyLocations(): Promise<string[]> {
+/** Distinct countries across verified companies, for the directory's location filter.
+ *  Cached (tag `companies:list`, same invalidation as the directory itself) since
+ *  this only changes when a company's verification/location changes. */
+export function listCompanyLocations(): Promise<string[]> {
+  return unstable_cache(
+    listCompanyLocationsUncached,
+    ["company-locations"],
+    { tags: ["companies:list"], revalidate: 300 },
+  )();
+}
+
+async function listCompanyLocationsUncached(): Promise<string[]> {
   const rows = await db.companyLocation.findMany({
     where: { company: { deletedAt: null, verificationStatus: "VERIFIED" } },
     select: { country: true },
@@ -317,8 +327,17 @@ export async function listCompanyLocations(): Promise<string[]> {
   return rows.map((r) => r.country);
 }
 
-/** Full category taxonomy, for the directory's industry filter. */
-export async function listCategories(): Promise<TaxonomyRef[]> {
+/** Full category taxonomy, for the directory's industry filter.
+ *  Cached — taxonomy is admin-managed and changes rarely. */
+export function listCategories(): Promise<TaxonomyRef[]> {
+  return unstable_cache(
+    listCategoriesUncached,
+    ["categories-list"],
+    { tags: ["taxonomy:list"], revalidate: 300 },
+  )();
+}
+
+async function listCategoriesUncached(): Promise<TaxonomyRef[]> {
   const rows = await db.category.findMany({ orderBy: { name: "asc" } });
   return rows.map((c) => ({ id: c.id, slug: c.slug, name: c.name }));
 }
@@ -327,8 +346,17 @@ export interface CategoryWithCount extends TaxonomyRef {
   companyCount: number;
 }
 
-/** Categories with a live count of verified, non-deleted companies in each. */
-export async function listCategoriesWithCounts(): Promise<CategoryWithCount[]> {
+/** Categories with a live count of verified, non-deleted companies in each.
+ *  Cached — invalidated on the same `companies:list` tag as the directory. */
+export function listCategoriesWithCounts(): Promise<CategoryWithCount[]> {
+  return unstable_cache(
+    listCategoriesWithCountsUncached,
+    ["categories-with-counts"],
+    { tags: ["companies:list", "taxonomy:list"], revalidate: 300 },
+  )();
+}
+
+async function listCategoriesWithCountsUncached(): Promise<CategoryWithCount[]> {
   const rows = await db.category.findMany({
     orderBy: { name: "asc" },
     select: {

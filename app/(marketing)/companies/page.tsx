@@ -57,10 +57,10 @@ export default async function CompaniesDirectoryPage({
   let canBookmark = false;
 
   try {
-    const user = await getCurrentUser();
-    canBookmark = user?.role === "STUDENT";
-
-    const [result, locationOptions, categoryOptions, bookmarks] = await Promise.all([
+    // getCurrentUser runs alongside the rest (not blocking first) since only
+    // the bookmark lookup actually depends on its result.
+    const [user, result, locationOptions, categoryOptions] = await Promise.all([
+      getCurrentUser(),
       listCompanies({
         page,
         pageSize: PAGE_SIZE,
@@ -73,13 +73,13 @@ export default async function CompaniesDirectoryPage({
       }),
       listCompanyLocations(),
       listCategories(),
-      canBookmark ? getBookmarkedIds(user!.id, "COMPANY") : Promise.resolve(new Set<string>()),
     ]);
+    canBookmark = user?.role === "STUDENT";
     companies = result.data;
     meta = result.meta;
     locations = locationOptions;
     categories = categoryOptions;
-    bookmarkedIds = bookmarks;
+    bookmarkedIds = canBookmark ? await getBookmarkedIds(user!.id, "COMPANY") : new Set<string>();
   } catch {
     // DB unreachable — render the empty state instead of a hard 500.
   }

@@ -135,8 +135,20 @@ function kindWhere(kind?: "internship" | "job"): Prisma.InternshipWhereInput {
 }
 
 /** Distinct locations across open listings, scoped to a kind so the /internships
- *  and /jobs filter dropdowns only offer locations that actually have results. */
-export async function listInternshipLocations(
+ *  and /jobs filter dropdowns only offer locations that actually have results.
+ *  Cached — same tag/TTL as the listings themselves. */
+export function listInternshipLocations(
+  kind?: "internship" | "job",
+  forWomen?: boolean,
+): Promise<string[]> {
+  return unstable_cache(
+    () => listInternshipLocationsUncached(kind, forWomen),
+    ["internship-locations", kind ?? "all", String(forWomen ?? false)],
+    { tags: ["internships:list"], revalidate: 60 },
+  )();
+}
+
+async function listInternshipLocationsUncached(
   kind?: "internship" | "job",
   forWomen?: boolean,
 ): Promise<string[]> {
@@ -154,8 +166,20 @@ export async function listInternshipLocations(
   return rows.map((r) => r.location).filter((l): l is string => Boolean(l));
 }
 
-/** Distinct departments across open listings, scoped to a kind (see above). */
-export async function listInternshipDepartments(
+/** Distinct departments across open listings, scoped to a kind (see above).
+ *  Cached — same tag/TTL as the listings themselves. */
+export function listInternshipDepartments(
+  kind?: "internship" | "job",
+  forWomen?: boolean,
+): Promise<string[]> {
+  return unstable_cache(
+    () => listInternshipDepartmentsUncached(kind, forWomen),
+    ["internship-departments", kind ?? "all", String(forWomen ?? false)],
+    { tags: ["internships:list"], revalidate: 60 },
+  )();
+}
+
+async function listInternshipDepartmentsUncached(
   kind?: "internship" | "job",
   forWomen?: boolean,
 ): Promise<string[]> {

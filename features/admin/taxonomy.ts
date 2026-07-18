@@ -3,6 +3,7 @@
 // features/admin/taxonomy.ts — Category & Technology CRUD + merge (FR-54).
 // Admin-only (category:manage / technology:manage).
 
+import { revalidateTag, unstable_cache } from "next/cache";
 import { db } from "@/lib/db";
 import { requireUser } from "@/lib/auth";
 import { assertCan } from "@/lib/rbac";
@@ -17,8 +18,18 @@ import {
   type TaxonomyRef,
 } from "@/types";
 
-/** Full technology taxonomy, for the admin CRUD page (CONTRACTS.md CR-13). */
+/** Full technology taxonomy, for the admin CRUD page (CONTRACTS.md CR-13) and
+ *  the public search filters. Cached — taxonomy is admin-managed and changes
+ *  rarely; mutations below revalidate the `taxonomy:list` tag. */
 export async function listTechnologies(): Promise<TaxonomyRef[]> {
+  return unstable_cache(
+    listTechnologiesUncached,
+    ["technologies-list"],
+    { tags: ["taxonomy:list"], revalidate: 300 },
+  )();
+}
+
+async function listTechnologiesUncached(): Promise<TaxonomyRef[]> {
   const rows = await db.technology.findMany({ orderBy: { name: "asc" } });
   return rows.map((t) => ({ id: t.id, slug: t.slug, name: t.name }));
 }
@@ -43,6 +54,7 @@ export async function createCategory(input: TaxonomyInput): Promise<Result<{ id:
     const exists = await db.category.findUnique({ where: { slug }, select: { id: true } });
     if (exists) throw new ConflictError("Category slug already exists.");
     const c = await db.category.create({ data: { name: data.name, slug } });
+    revalidateTag("taxonomy:list", "max");
     return { id: c.id };
   });
 }
@@ -56,6 +68,7 @@ export async function renameCategory(
     assertCan(user, "category:manage");
     const parsed = z.string().trim().min(2).max(80).parse(name);
     await db.category.update({ where: { id }, data: { name: parsed } });
+    revalidateTag("taxonomy:list", "max");
     return null;
   });
 }
@@ -87,6 +100,7 @@ export async function mergeCategories(
       await tx.companyCategory.deleteMany({ where: { categoryId: sourceId } });
       await tx.category.delete({ where: { id: sourceId } });
     });
+    revalidateTag("taxonomy:list", "max");
     return null;
   });
 }
@@ -102,6 +116,7 @@ export async function createTechnology(input: TaxonomyInput): Promise<Result<{ i
     const exists = await db.technology.findUnique({ where: { slug }, select: { id: true } });
     if (exists) throw new ConflictError("Technology slug already exists.");
     const t = await db.technology.create({ data: { name: data.name, slug } });
+    revalidateTag("taxonomy:list", "max");
     return { id: t.id };
   });
 }
@@ -132,6 +147,7 @@ export async function mergeTechnologies(
       await tx.companyTechnology.deleteMany({ where: { technologyId: sourceId } });
       await tx.technology.delete({ where: { id: sourceId } });
     });
+    revalidateTag("taxonomy:list", "max");
     return null;
   });
 }
