@@ -12574,6 +12574,42 @@ Tremend is looking for a Senior Java Developer to join our team of bright thinke
       },
     ],
   },
+  {
+    slug: "salesforce",
+    name: "Salesforce",
+    tagline: "The #1 AI CRM",
+    about:
+      "Salesforce is the world's leading customer relationship management (CRM) platform, helping companies connect with customers through sales, service, marketing, and commerce clouds built on its Agentforce and Data Cloud AI platform. Founded in 1999 by Marc Benioff, Parker Harris, Dave Moellenhoff, and Frank Dominguez, and headquartered in San Francisco, Salesforce trades on the NYSE (CRM) and serves customers across more than 150 countries.",
+    fundingStage: "PUBLIC",
+    remotePolicy: "HYBRID",
+    visaSponsorship: true,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.salesforce.com",
+    categories: ["saas"],
+    technologies: ["java", "python", "react"],
+    location: { city: "San Francisco", country: "USA" },
+    founders: [
+      { name: "Marc Benioff", title: "Co-founder & CEO" },
+      { name: "Parker Harris", title: "Co-founder & CTO" },
+    ],
+    internships: [
+      {
+        slug: "salesforce-summer-2027-intern-software-engineer",
+        title: "Summer 2027 Intern - Software Engineer",
+        description: `
+<p>Salesforce's FutureForce internship program gives interns the opportunity to work on real projects within Scrum teams, contributing to software design, development, testing, and deployment. Interns write optimized code, develop automated tests, and support cloud service monitoring — gaining hands-on experience with live projects and the opportunity to make a tangible impact on company operations.</p><p><strong>Required Qualifications</strong></p><ul><li>Currently enrolled as a sophomore or higher, pursuing a B.E./B.Tech in Computer Science, IT, or a related Circuit Branch (graduating 2028)</li></ul><p><strong>Desired Skills</strong></p><ul><li>Java, C++, Python</li><li>Web technologies: HTML, CSS, JavaScript</li><li>React, Angular, or Vue.js</li><li>SQL databases</li><li>Strong computer science fundamentals</li></ul><p>Salesforce reports converting roughly 80% of eligible FutureForce interns into full-time offers, and referrals roughly double interview chances.</p>
+`.trim(),
+        location: "Hyderabad, India",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        forWomen: false,
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Summer 2027",
+        applyUrl: "https://www.linkedin.com/jobs/view/4446350750/",
+      },
+    ],
+  },
 ];
 
 export async function seedCompanies(db: PrismaClient, taxonomy: SeededTaxonomy) {
