@@ -5,8 +5,8 @@ import { getCurrentUser } from "@/lib/auth";
 const NAV_LINKS = [
   { href: "/companies", label: "Startups" },
   { href: "/internships", label: "Internships" },
-  { href: "/jobs", label: "Jobs", badge: "NEW" },
-  { href: "/women", label: "Women", badge: "NEW" },
+  { href: "/jobs", label: "Jobs" },
+  { href: "/women", label: "Women" },
   { href: "/categories", label: "Categories" },
 ];
 
