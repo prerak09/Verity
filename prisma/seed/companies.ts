@@ -13225,7 +13225,7 @@ Tremend is looking for a Senior Java Developer to join our team of bright thinke
     employeeCountRange: "501-1000",
     websiteUrl: "https://www.akunacapital.com",
     categories: ["fintech"],
-    technologies: ["react", "typescript", "python"],
+    technologies: ["react", "typescript", "python", "cpp", "csharp"],
     location: { city: "Chicago", country: "USA" },
     founders: [],
     internships: [
@@ -13263,6 +13263,113 @@ Tremend is looking for a Senior Java Developer to join our team of bright thinke
         stipend: "$145,000/yr equivalent (min.)",
         duration: "10 weeks (Summer 2027)",
         applyUrl: "https://www.akunacapital.com/careers/job/8018893/?gh_jid=8018893",
+      },
+      {
+        slug: "akuna-capital-software-engineer-intern-cpp-summer-2027",
+        title: "Software Engineer Intern - C++, Summer 2027",
+        description: `
+<p>Akuna Capital seeks interns to work on high-performance systems that power the firm's core business, joining small-to-medium-sized teams that interface with the Quant and Trading divisions on projects ranging from system enhancements to new technology exploration, from ideation and design through delivery and maintenance.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Develop and maintain multithreaded, asynchronous, distributed C++ systems.</li>
+<li>Ensure systems are reliable, efficient, scalable, and flexible for various use cases.</li>
+<li>Work on projects from conception through implementation and ongoing support.</li>
+<li>Collaborate with Quant and Trading teams on requirements and solutions.</li>
+<li>Respond effectively to rapidly changing market conditions.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Bachelor's, Master's, or Ph.D. in a technical field (computer science, math, physics, or equivalent).</li>
+<li>Graduation by August 2028.</li>
+<li>Legal U.S. work authorization (including F-1 OPT/STEM).</li>
+<li>Modern C++ experience (C++20+; C++23 preferred).</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Distributed systems, parallel processing, or asynchronous architecture experience.</li>
+<li>Networking/protocol knowledge, lock-free data structures, performance profiling.</li>
+<li>Python or shell scripting familiarity.</li>
+<li>Debugging tools proficiency (GDB, Valgrind, address sanitizer).</li>
+</ul>
+`.trim(),
+        location: "Chicago, IL",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$145,000/yr equivalent (min.)",
+        duration: "10 weeks (Summer 2027)",
+        applyUrl: "https://www.akunacapital.com/careers/job/8018847/?gh_jid=8018847",
+      },
+      {
+        slug: "akuna-capital-software-engineer-intern-python-summer-2027",
+        title: "Software Engineer Intern - Python, Summer 2027",
+        description: `
+<p>Akuna Capital seeks Python interns for their Summer 2027 program to work on either the Post Trade Technology or Data Engineering teams, collaborating with software engineers and traders to develop solutions for complex problems involving high-performance systems that handle large trading and market data volumes.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Design and implement solutions to intricate technical challenges.</li>
+<li>Work alongside trading and engineering teams on trading infrastructure systems.</li>
+<li>Develop code for algorithms, exchange gateways, and data analysis.</li>
+<li>Build systems handling significant volumes of market and trading information.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Pursuing a Bachelor's, Master's, or Ph.D. in a technical field (CS/Engineering, Math, Physics, or equivalent).</li>
+<li>Graduating by August 2028.</li>
+<li>Minimum 3.5 major GPA.</li>
+<li>Legal U.S. work authorization required on first day.</li>
+<li>Strong programming skills in object-oriented Python development.</li>
+<li>Experience with distributed systems.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Strong analytical and problem-solving abilities.</li>
+<li>Communication skills with trading teams.</li>
+<li>Self-starter mentality and independence.</li>
+</ul>
+`.trim(),
+        location: "Chicago, IL",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$145,000/yr equivalent (min.)",
+        duration: "10 weeks (Summer 2027)",
+        applyUrl: "https://www.akunacapital.com/careers/job/8018853/?gh_jid=8018853",
+      },
+      {
+        slug: "akuna-capital-software-engineer-intern-csharp-net-desktop-summer-2027",
+        title: "Software Engineer Intern - C# .NET Desktop, Summer 2027",
+        description: `
+<p>Akuna Capital seeks a software engineering intern to join their User Interface team, collaborating with traders, quants, and engineers to build real-time trading applications for market-making operations. Each intern owns their project and presents accomplishments at program completion.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Design and develop Windows desktop applications using C# .NET, WinForms, and WPF.</li>
+<li>Write unit and integration tests ensuring software quality.</li>
+<li>Evaluate and implement technologies to enhance user experience and development efficiency.</li>
+<li>Participate in Agile/Scrum processes and support workflows.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Pursuing a Bachelor's, Master's, or Ph.D. in a technical field (Computer Science/Engineering equivalent).</li>
+<li>Graduating by August 2028.</li>
+<li>Minimum 3.5 major GPA.</li>
+<li>U.S. work authorization (F-1 OPT/STEM eligible).</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>.NET Framework and C# proficiency.</li>
+<li>WinForms or WPF experience.</li>
+<li>Object-oriented programming and design patterns knowledge.</li>
+<li>Unit testing frameworks (NUnit).</li>
+</ul>
+`.trim(),
+        location: "Chicago, IL",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$145,000/yr equivalent (min.)",
+        duration: "10 weeks (Summer 2027)",
+        applyUrl: "https://www.akunacapital.com/careers/job/8018886/?gh_jid=8018886",
       },
     ],
   },
@@ -13315,6 +13422,40 @@ Tremend is looking for a Senior Java Developer to join our team of bright thinke
         stipend: "$80,000/yr equivalent (base)",
         duration: "Summer 2027",
         applyUrl: "https://www.optiver.com/join-us/jobs/8604760002/?gh_jid=8604760002",
+      },
+      {
+        slug: "optiver-software-engineer-intern-summer-2027-austin",
+        title: "Software Engineer Intern - Summer 2027 - Austin",
+        description: `
+<p>Optiver seeks interns to collaborate with mentors and engineers on real-world applications for a global trading firm, contributing to production-level projects addressing trading challenges while enhancing system performance and reliability, and working with cutting-edge AI technology within competitive financial markets.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Deep dive into trading fundamentals, from theoretical concepts to financial markets.</li>
+<li>Develop, test, and deploy code to production environments.</li>
+<li>Collaborate with engineers, traders, and business teams.</li>
+<li>Address complex problems to strengthen analytical and problem-solving abilities.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Enrolled in a Bachelor's, Master's, or PhD program in Computer Science or Engineering.</li>
+<li>Junior standing or higher; graduation expected December 2027–June 2028.</li>
+<li>Proficiency in C++, Python, or Java.</li>
+<li>Strong computer science fundamentals and engineering instincts.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Passion for clean code and well-architected systems.</li>
+<li>Entrepreneurial mindset with interest in financial technology.</li>
+</ul>
+<p>Includes flight coverage, housing accommodations, commuting stipends, office perks, and immigration sponsorship available.</p>
+`.trim(),
+        location: "Austin, TX",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Summer 2027",
+        applyUrl: "https://www.optiver.com/join-us/jobs/8401052002/?gh_jid=8401052002",
       },
     ],
   },
@@ -13431,6 +13572,82 @@ Tremend is looking for a Senior Java Developer to join our team of bright thinke
         stipend: "Not specified",
         duration: "Internship to full-time",
         applyUrl: "http://blackcape.applytojob.com/apply/7o6mmAYryt/US-Military-Skillbridge-Internship-Software-EngineerArlington-VA",
+      },
+    ],
+  },
+  {
+    slug: "jane-street",
+    name: "Jane Street",
+    tagline: "A quantitative trading firm",
+    about:
+      "Jane Street is a quantitative trading firm and liquidity provider active in markets worldwide, known for its distinctive engineering culture built around OCaml. Headquartered in New York City, the firm was founded in 2000.",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: true,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.janestreet.com",
+    categories: ["fintech"],
+    technologies: ["python"],
+    location: { city: "New York", country: "USA" },
+    founders: [],
+    internships: [
+      {
+        slug: "jane-street-software-engineer-winter-co-op",
+        title: "Software Engineer Winter Co-Op",
+        description: `
+<p>Jane Street's internship gives students a real sense of what it's like to work at Jane Street full time while also providing a hands-on educational experience. Interns are paired with full-time mentors and collaborate on actual production projects.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Learn OCaml, Jane Street's primary development language, through practical application.</li>
+<li>Gain exposure to internal libraries and foundational tools.</li>
+<li>Work on diverse projects ranging from high-performance trading systems to programming language design.</li>
+<li>Develop maintainable, production-quality software under mentor guidance.</li>
+<li>Potentially work with Python depending on project assignment.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Strong programming skills with a genuine passion for technology.</li>
+<li>Intellectual curiosity and a collaborative mindset.</li>
+<li>Humble and unafraid to ask questions and admit mistakes.</li>
+<li>Must be enrolled in a co-op program.</li>
+</ul>
+`.trim(),
+        location: "New York, NY",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$300,000/yr equivalent",
+        duration: "January–April",
+        applyUrl: "https://www.janestreet.com/join-jane-street/position/8419303002",
+      },
+      {
+        slug: "jane-street-software-engineer-summer-internship",
+        title: "Software Engineer Summer Internship",
+        description: `
+<p>Jane Street's summer internship gives students the opportunity to experience full-time work while receiving significant educational mentorship, collaborating with established engineers on genuine projects the firm actually needs done.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Learn OCaml, the company's primary programming language, through hands-on application.</li>
+<li>Work on real-world projects with production-quality standards.</li>
+<li>Gain exposure to internal libraries and foundational systems.</li>
+<li>Potentially work with Python depending on team assignment.</li>
+<li>Contribute to diverse projects spanning high-performance trading systems to programming language design.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Strong programming skills with a genuine passion for technology.</li>
+<li>Intellectual curiosity and a collaborative mindset.</li>
+<li>Willingness to learn and ask questions.</li>
+<li>Humility and openness to admitting mistakes.</li>
+</ul>
+`.trim(),
+        location: "New York, NY",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$300,000/yr equivalent",
+        duration: "May–August (Summer)",
+        applyUrl: "https://www.janestreet.com/join-jane-street/position/8599644002",
       },
     ],
   },
