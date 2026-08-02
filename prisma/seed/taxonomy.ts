@@ -52,6 +52,7 @@ const TECHNOLOGIES = [
   { slug: "android", name: "Android" },
   { slug: "kotlin", name: "Kotlin" },
   { slug: "sap", name: "SAP" },
+  { slug: "php", name: "PHP" },
 ];
 
 export async function seedTaxonomy(db: PrismaClient): Promise<SeededTaxonomy> {

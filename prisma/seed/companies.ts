@@ -7911,6 +7911,20 @@ Your individual placement within this range will be determined during the applic
         duration: "Permanent",
         applyUrl: "https://www.amazon.jobs/en/jobs/10454435/software-dev-engineer-i-amazon-university-talent-acquisition",
       },
+      {
+        slug: "amazon-sde-i-intern-university-talent-acquisition",
+        title: "SDE I Intern, Amazon University Talent Acquisition",
+        description: `
+<p>Amazon interns collaborate with experienced cross-disciplinary Amazonians to conceive, design, and bring innovative products and services to market, working on distributed systems, scalability, and software solutions in an agile environment. This is a full-time internship of 24–26 consecutive weeks (approximately 6 months), running January–June 2027, with no academic or employment conflicts permitted during the internship.</p><h4>Basic qualifications</h4><ul><li>Computer science fundamentals — object-oriented design, algorithms, data structures, and complexity analysis</li><li>Programming proficiency in C/C++, Python, Java, or Perl</li><li>Currently enrolled in a Bachelor's or Master's in Computer Science or a related field, expected graduation 2027</li></ul><h4>Preferred qualifications</h4><ul><li>Previous technical internship experience</li><li>Distributed systems knowledge</li><li>Optimization mathematics background</li><li>Ability to handle ambiguous problems</li></ul>
+`.trim(),
+        location: "Bengaluru / Chennai / Hyderabad / Delhi / Mumbai / Pune, India",
+        department: "Software Development",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "24–26 weeks (Jan–Jun 2027)",
+        applyUrl: "https://www.amazon.jobs/applicant/jobs/10488368/apply",
+      },
     ],
   },
   {
@@ -12607,6 +12621,38 @@ Tremend is looking for a Senior Java Developer to join our team of bright thinke
         stipend: "Not specified",
         duration: "Summer 2027",
         applyUrl: "https://www.linkedin.com/jobs/view/4446350750/",
+      },
+    ],
+  },
+  {
+    slug: "powerschool",
+    name: "PowerSchool",
+    tagline: "Cloud-based education technology for K-12 schools",
+    about:
+      "PowerSchool provides cloud-based software for K-12 education, including student information systems, learning management, analytics, and enrollment tools used by thousands of school districts. Headquartered in Folsom, California, PowerSchool is publicly traded (NYSE: PWSC) and serves millions of students worldwide.",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.powerschool.com",
+    categories: ["edtech"],
+    technologies: ["php", "angular", "mysql"],
+    location: { city: "Chennai", country: "India" },
+    founders: [],
+    internships: [
+      {
+        slug: "powerschool-associate-software-engineer-1-chennai",
+        title: "Associate Software Engineer 1",
+        description: `
+<p>PowerSchool is hiring an Associate Software Engineer 1 to join its full-stack development team in Chennai, India, building and maintaining web applications with PHP and Angular.</p><h4>Responsibilities</h4><ul><li>Build and maintain web applications using PHP and Angular</li><li>Design REST APIs</li><li>Work with MySQL databases</li><li>Integrate third-party services</li><li>Debug issues and collaborate across teams on performance optimization and feature development</li></ul><h4>Required Qualifications</h4><ul><li>6 months to 1 year of full-stack development experience</li><li>Strong PHP knowledge with hands-on Angular proficiency</li><li>Proficiency in HTML, CSS, JavaScript, and TypeScript</li><li>MySQL database experience</li><li>REST API development understanding</li><li>Git version control familiarity</li><li>Linux server basics and deployment knowledge</li></ul><p>PowerSchool India offers medical insurance, parental leave, paid time off, wellness programs, and tuition reimbursement.</p>
+`.trim(),
+        location: "Chennai, India",
+        department: "Engineering",
+        jobType: "FULL_TIME",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Permanent",
+        applyUrl: "https://careers-powerschool.icims.com/jobs/52669/job/login",
       },
     ],
   },
