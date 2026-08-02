@@ -112,6 +112,42 @@ const COMPANIES: DemoCompany[] = [
         duration: "Permanent",
         applyUrl: "https://job-boards.greenhouse.io/cloudflare/jobs/8015230",
       },
+      {
+        slug: "cloudflare-software-engineer-intern-fall-2026-austin",
+        title: "Software Engineer Intern (Fall 2026) - Austin, TX",
+        description: `
+<p>Cloudflare operates one of the world's largest networks, spanning over 330 cities in 125+ countries, serving customers from individual bloggers to Fortune 500 companies. Interns will develop software handling massive traffic flows, shipping real code that impacts hundreds of millions of users, working with modern technologies including TypeScript/JavaScript, Go, Rust, C/C++, and Python in a microservices-based architecture.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Deliver an autonomous project over 12–14 weeks with mentor guidance.</li>
+<li>Collaborate across multiple teams.</li>
+<li>Present completed work to the entire company.</li>
+<li>Participate in professional development workshops and networking events.</li>
+<li>Contribute to Cloudflare's blog and video content.</li>
+<li>Engage with company leadership and co-founders.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Currently pursuing a degree in Computer Science, Engineering, Mathematics, Statistics, or a related field.</li>
+<li>Critical thinking skills and a desire to learn emerging technologies.</li>
+<li>Demonstrated curiosity and ability to execute projects.</li>
+<li>Commitment to 40 hours weekly, Monday–Friday for a minimum of 12 weeks, available September–December 2026.</li>
+<li>Ability to work in-office 3–5 days weekly in Austin.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Personal software projects or open-source contributions.</li>
+<li>Experience with Cloudflare's developer platform.</li>
+</ul>
+`.trim(),
+        location: "Austin, Texas",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "12–14 weeks (Fall 2026)",
+        applyUrl: "https://job-boards.greenhouse.io/cloudflare/jobs/8052785",
+      },
     ],
   },
   {
@@ -12653,6 +12689,748 @@ Tremend is looking for a Senior Java Developer to join our team of bright thinke
         stipend: "Not specified",
         duration: "Permanent",
         applyUrl: "https://careers-powerschool.icims.com/jobs/52669/job/login",
+      },
+    ],
+  },
+  {
+    slug: "redwood-materials",
+    name: "Redwood Materials",
+    tagline: "Building a domestic supply chain for battery materials",
+    about:
+      "Redwood Materials recycles end-of-life batteries and manufactures battery components (anode and cathode materials) to build a closed-loop, domestic supply chain for lithium-ion batteries used in EVs and energy storage. Founded in 2017 by JB Straubel (Tesla's co-founder and former CTO), the company is headquartered in Carson City, Nevada, with additional operations in South Carolina and San Francisco.",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.redwoodmaterials.com",
+    categories: ["mobility"],
+    technologies: ["cpp", "rust"],
+    location: { city: "Carson City", country: "USA" },
+    founders: [{ name: "JB Straubel", title: "Founder & CEO" }],
+    internships: [
+      {
+        slug: "redwood-materials-embedded-software-engineer-intern-fall-2026",
+        title: "Embedded Software Engineer Intern - Fall 2026",
+        description: `
+<p>Redwood Materials seeks an embedded software intern to work on firmware for power conversion and battery management systems. The role focuses on real-time control software that manages energy storage solutions for grid stabilization, contributing to "software-defined power systems" rather than traditional hardware approaches.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Develop bare-metal firmware for power electronics, including PWM generation and ADC synchronization.</li>
+<li>Create and test microcontroller drivers for communication protocols (SPI, CAN, Ethernet).</li>
+<li>Collaborate with power electronics engineers on Cortex-R and Cortex-M architectures.</li>
+<li>Support battery management system development and cell monitoring functionality.</li>
+<li>Maintain build scripts and contribute to CI/CD pipeline validation.</li>
+<li>Debug embedded systems using oscilloscopes, logic analyzers, and JTAG/SWD debuggers.</li>
+<li>Document processes supporting prototype-to-production transitions.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Pursuing BS or MS in Electrical Engineering, Computer Engineering, Computer Science, or a related field.</li>
+<li>Programming experience in C, C++, or Rust.</li>
+<li>Some exposure to embedded systems or microcontrollers.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Familiarity with SPI, I2C, UART, or CAN protocols.</li>
+<li>Battery management systems or energy storage knowledge.</li>
+<li>Experience with build tools (Make, CMake), git, or hardware debugging.</li>
+</ul>
+`.trim(),
+        location: "San Francisco, CA",
+        department: "Embedded Software",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$41–$47.50/hr",
+        duration: "Not specified",
+        applyUrl: "https://job-boards.greenhouse.io/redwoodmaterials/jobs/6126784004",
+      },
+    ],
+  },
+  {
+    slug: "virtu-financial",
+    name: "Virtu Financial",
+    tagline: "A leading provider of financial services and market making",
+    about:
+      "Virtu Financial is a global financial services firm providing execution, liquidity, and trading technology across more than 235 markets and asset classes worldwide. Headquartered in New York City, Virtu is publicly traded (NASDAQ: VIRT) and operates one of the largest market-making franchises in the industry.",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.virtu.com",
+    categories: ["fintech"],
+    technologies: ["react", "python", "cpp"],
+    location: { city: "New York", country: "USA" },
+    founders: [{ name: "Vincent Viola", title: "Founder" }],
+    internships: [
+      {
+        slug: "virtu-financial-2027-internship-frontend-engineer-ui",
+        title: "2027 Internship - Frontend Engineer (UI)",
+        description: `
+<p>Virtu Financial seeks frontend interns to join their User Interface development team, working alongside the senior team to improve scalability, performance, and efficiency of trading systems while completing real-world projects under senior mentorship.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Develop real-time trading, visualization, analysis, and reporting tools.</li>
+<li>Collaborate with traders and developers to gather requirements.</li>
+<li>Work on challenging development projects improving system performance.</li>
+<li>Support scaling of high-volume financial data processing systems.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Rising juniors or students graduating December 2027–June 2028.</li>
+<li>Strong Computer Science or related field background.</li>
+<li>Strong programming skills in JavaScript, React, and Node.</li>
+<li>Self-directed problem-solver capable of independent initiative.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>TypeScript, Java, C++, or Python experience.</li>
+<li>Comfort tackling diverse projects across frontend/backend domains.</li>
+</ul>
+<p>Program dates: June 7–August 13, 2027, including a training week held in New York.</p>
+`.trim(),
+        location: "New York, NY",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$5,000–$5,800/week",
+        duration: "10 weeks (Summer 2027)",
+        applyUrl: "https://job-boards.greenhouse.io/virtu/jobs/8657500002",
+      },
+      {
+        slug: "virtu-financial-2027-internship-software-engineer",
+        title: "2027 Internship - Software Engineer",
+        description: `
+<p>Virtu Financial seeks talented student developers to join their internship program, offering exposure to proprietary trading systems and financial technology. The firm operates across 235+ financial exchanges and processes significant U.S. retail order flow through its trading technology.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Complete challenging development projects involving trading system design and optimization.</li>
+<li>Collaborate with senior engineers on improving scalability and performance.</li>
+<li>Work on low-latency trading systems and proprietary trading algorithms.</li>
+<li>Develop trading tools supporting high-performance systems deployed globally.</li>
+<li>Learn system architecture handling massive daily data volumes.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Rising juniors or students graduating December 2027–June 2028.</li>
+<li>Strong Computer Science or related background.</li>
+<li>Proficiency in Python plus Java or C++.</li>
+<li>Outstanding quantitative problem-solving skills and mathematical aptitude.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>JavaScript experience.</li>
+<li>Lower-level programming background.</li>
+</ul>
+<p>Program dates: June 7–August 13, 2027, with a global training week and ongoing summer mentorship.</p>
+`.trim(),
+        location: "Austin, TX / New York, NY",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$5,000–$5,800/week",
+        duration: "10 weeks (Summer 2027)",
+        applyUrl: "https://job-boards.greenhouse.io/virtu/jobs/8624410002",
+      },
+    ],
+  },
+  {
+    slug: "two-six-technologies",
+    name: "Two Six Technologies",
+    tagline: "Technology solutions for national security and defense",
+    about:
+      "Two Six Technologies develops technology solutions spanning information operations, intelligence, cyber, and special operations for government and commercial clients. Headquartered in Arlington, Virginia, the company runs a Department of Defense SkillBridge program helping transitioning service members move into technical careers.",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "500-1000",
+    websiteUrl: "https://twosixtech.com",
+    categories: ["govtech"],
+    technologies: ["python"],
+    location: { city: "Arlington", country: "USA" },
+    founders: [],
+    internships: [
+      {
+        slug: "two-six-technologies-skillbridge-internship-io",
+        title: "Skillbridge Internship - IO",
+        description: `
+<p>Two Six Technologies hosts transitioning active-duty US military members through the Department of Defense SkillBridge Program, allowing service members to utilize skills developed in active-duty service during up to the final six months of their obligated service. Participants continue receiving military compensation and benefits rather than company compensation.</p>
+<p><strong>Career Tracks</strong></p>
+<ul>
+<li>Technology integration supporting information operations, psychological operations, civil affairs, intelligence, special operations, and cyber.</li>
+<li>Technical development: data science, machine learning, programming.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Minimum 180 days active duty service.</li>
+<li>Within 180 days of separation or retirement.</li>
+<li>Honorable discharge eligibility.</li>
+<li>Completed service TAPS/TGPS training and an ethics briefing within the last 12 months.</li>
+<li>Unit Commander approval for DoD participation.</li>
+<li>TS/SCI security clearance eligibility.</li>
+</ul>
+<p>Benefits include medical, dental, vision, life/disability insurance, retirement benefits, and professional development (provided by the military during the SkillBridge period).</p>
+`.trim(),
+        location: "Doral, FL",
+        department: "Information Operations",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified (military compensation during SkillBridge)",
+        duration: "Up to 6 months",
+        applyUrl: "https://job-boards.greenhouse.io/twosixtechnologies/jobs/6126995004",
+      },
+    ],
+  },
+  {
+    slug: "pdt-partners",
+    name: "PDT Partners",
+    tagline: "A quantitative investment manager",
+    about:
+      "PDT Partners is a quantitative investment manager with over 30 years of experience building systematic trading strategies. Headquartered in New York City, the firm was founded as Process Driven Trading, a proprietary trading group, by Peter Muller.",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "201-500",
+    websiteUrl: "https://www.pdtpartners.com",
+    categories: ["fintech"],
+    technologies: ["python"],
+    location: { city: "New York", country: "USA" },
+    founders: [{ name: "Peter Muller", title: "Founder" }],
+    internships: [
+      {
+        slug: "pdt-partners-summer-2027-software-engineering-intern",
+        title: "Summer 2027 Software Engineering Intern",
+        description: `
+<p>PDT Partners seeks engineering students for software-focused internships. Interns work with senior developers on individual projects, receive mentorship, and participate in company events, designing, developing, debugging, and testing software components handling financial data, real-time events, and batch processing.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Face problems that don't have well-defined solutions, requiring creative approaches.</li>
+<li>Learn quantitative trading and financial markets.</li>
+<li>Build trading technology and infrastructure tooling.</li>
+<li>Contribute to large-scale dataset management, with a focus on program correctness, maintainability, and efficiency.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Current Bachelor's, Master's, or PhD student in a rigorous technical field.</li>
+<li>Strong programming skills with a deep understanding of data structures.</li>
+<li>Expected graduation Fall 2027 or later.</li>
+<li>US work authorization.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Fast learner with a problem-solving approach.</li>
+<li>Strong communication skills.</li>
+<li>GitHub projects or repositories.</li>
+<li>Interest in quantitative finance.</li>
+</ul>
+<p>Program duration: 10 weeks, early June to mid-August.</p>
+`.trim(),
+        location: "New York, NY",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$180,000/yr equivalent",
+        duration: "10 weeks (Summer 2027)",
+        applyUrl: "https://job-boards.greenhouse.io/pdtpartners/jobs/8077685",
+      },
+    ],
+  },
+  {
+    slug: "appian",
+    name: "Appian",
+    tagline: "AI-powered process automation platform",
+    about:
+      "Appian provides a low-code process automation platform that helps enterprises build applications and workflows quickly, combining process management, AI, and data fabric capabilities. Headquartered in McLean, Virginia, Appian is publicly traded (NASDAQ: APPN) and was founded in 1999 by Matt Calkins.",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.appian.com",
+    categories: ["saas"],
+    technologies: ["java"],
+    location: { city: "McLean", country: "USA" },
+    founders: [{ name: "Matt Calkins", title: "Founder & CEO" }],
+    internships: [
+      {
+        slug: "appian-software-engineering-intern",
+        title: "Software Engineering Intern",
+        description: `
+<p>Appian seeks interns to contribute to its AI-powered Process Automation platform. The role involves working within small, high-performing engineering teams to gain experience with enterprise-scale software development, from foundational systems to AI capabilities and developer tooling. Interns are expected in the office 5 days a week to experience company culture and collaborate directly with teams.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Develop clean software using data structures, algorithms, and object-oriented programming.</li>
+<li>Apply AI coding tools for code generation, review, and evaluation.</li>
+<li>Support debugging and root cause analysis of software defects.</li>
+<li>Participate in design discussions, code reviews, and technical problem-solving.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Currently pursuing a Bachelor's or Master's degree in Computer Science or Computer Engineering with strong academic performance.</li>
+<li>Must return to school after the internship to continue degree requirements.</li>
+<li>Proven fluency in AI and LLMs for both strategic development and practical workflow acceleration.</li>
+<li>Ability to commit full-time for 10 weeks.</li>
+<li>Must be authorized to work in McLean, Virginia; no visa sponsorship available.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Prior technical internship experience or a portfolio of significant personal/academic projects.</li>
+</ul>
+`.trim(),
+        location: "McLean, VA",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$50/hr",
+        duration: "10 weeks (Summer 2027)",
+        applyUrl: "https://job-boards.greenhouse.io/appian/jobs/8041237",
+      },
+    ],
+  },
+  {
+    slug: "astranis-space-technologies",
+    name: "Astranis Space Technologies",
+    tagline: "Small geostationary telecommunications satellites",
+    about:
+      "Astranis builds small, dedicated geostationary telecommunications satellites to expand internet connectivity for underserved regions. Headquartered in San Francisco, California, and founded in 2015 by John Gedmark, Astranis designs, manufactures, and operates its satellites in-house.",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "201-500",
+    websiteUrl: "https://www.astranis.com",
+    categories: ["infrastructure"],
+    technologies: ["python"],
+    location: { city: "San Francisco", country: "USA" },
+    founders: [{ name: "John Gedmark", title: "Co-founder & CEO" }],
+    internships: [
+      {
+        slug: "astranis-software-engineer-intern-enterprise-systems-fall-2026",
+        title: "Software Engineer Intern - Enterprise Systems (Fall 2026)",
+        description: `
+<p>Astranis seeks interns to work on internal software tools supporting satellite design, manufacturing, and operations. The Enterprise Systems team develops applications enabling end-to-end engineering workflows, requiring on-site work at the San Francisco HQ, 5 days per week.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Design, build, and test software supporting daily engineering operations.</li>
+<li>Develop test infrastructure and production tracking applications.</li>
+<li>Support hardware design and supply chain management tools.</li>
+<li>Create automated workflows using orchestration platforms.</li>
+<li>Contribute to data warehousing, analytics pipelines, and BI tooling.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Enrolled in a B.S. or M.S. program (Computer Science, Electrical Engineering, Computer Engineering, or equivalent).</li>
+<li>Python proficiency.</li>
+<li>Demonstrated ability to independently design, write, and test software.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Embedded systems experience.</li>
+<li>Frontend development skills.</li>
+<li>DevOps/internal tools expertise.</li>
+</ul>
+<p>U.S. citizenship, lawful permanent residency, or refugee/asylee status is required for export compliance.</p>
+`.trim(),
+        location: "San Francisco, CA",
+        department: "Enterprise Systems",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$29/hr",
+        duration: "12 weeks (Fall 2026)",
+        applyUrl: "https://job-boards.greenhouse.io/astranis/jobs/4699071006",
+      },
+    ],
+  },
+  {
+    slug: "chicago-trading-company",
+    name: "Chicago Trading Company",
+    tagline: "A proprietary trading firm specializing in options market making",
+    about:
+      "Chicago Trading Company (CTC) is a proprietary trading firm specializing in options market making, founded in 1995 and headquartered in Chicago, Illinois.",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "201-500",
+    websiteUrl: "https://www.chicagotrading.com",
+    categories: ["fintech"],
+    technologies: ["java", "cpp", "python"],
+    location: { city: "Chicago", country: "USA" },
+    founders: [],
+    internships: [
+      {
+        slug: "chicago-trading-company-software-engineering-internship-summer-2027",
+        title: "Software Engineering Internship - Summer 2027",
+        description: `
+<p>Chicago Trading Company (CTC) seeks software engineering interns to join their Summer 2027 cohort, working on trading tools and risk applications alongside experienced engineers in a fast-paced and dynamic team environment.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Develop solutions for trading tools and risk applications.</li>
+<li>Participate in collaborative problem-solving with software engineers.</li>
+<li>Write code that reaches production within days and impacts the trading desk.</li>
+<li>Participate in classroom learning: options basics, market making simulation, and quantitative framework introduction.</li>
+<li>Deliver a technical project mirroring full-time software engineering associate roles.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Pursuing a Bachelor's or Master's degree in Computer Science, Computer Engineering, or a similar technical field.</li>
+<li>Proficiency in Java, C++, or Python.</li>
+<li>Expected graduation between December 2027–June 2028.</li>
+<li>Demonstrated academic success.</li>
+<li>Ability to relocate to Chicago for mid-June through early August 2027.</li>
+<li>A foundation in data structures, object-oriented programming, and algorithms.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Interest in trading, pricing, and risk management.</li>
+<li>Strong teamwork and collaboration abilities.</li>
+<li>Excellent written and verbal communication skills.</li>
+</ul>
+<p>Includes free housing in downtown Chicago plus breakfast, lunch, and snacks (interns are ineligible for standard employee benefits).</p>
+`.trim(),
+        location: "Chicago, IL",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$14,500/month + signing bonus",
+        duration: "8 weeks (Summer 2027)",
+        applyUrl: "https://job-boards.greenhouse.io/ctccampusboard/jobs/4708230005",
+      },
+    ],
+  },
+  {
+    slug: "drw",
+    name: "DRW",
+    tagline: "A diversified proprietary trading firm",
+    about:
+      "DRW is a diversified proprietary trading firm that trades a variety of asset classes using its own capital and technology. Founded in 1992 by Don Wilson and headquartered in Chicago, Illinois, DRW builds advanced trading and risk applications leveraging cutting-edge technology.",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://drw.com",
+    categories: ["fintech"],
+    technologies: ["cpp", "python", "java"],
+    location: { city: "Chicago", country: "USA" },
+    founders: [{ name: "Don Wilson", title: "Founder & CEO" }],
+    internships: [
+      {
+        slug: "drw-software-developer-intern",
+        title: "Software Developer Intern",
+        description: `
+<p>DRW seeks exceptional interns to build advanced trading and risk applications leveraging cutting-edge technology. The role emphasizes developing computationally intensive software under senior mentorship, with deployment expectations during the internship period.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Design, develop, test, and deploy proprietary software solutions, including decoders for exchange data, normalizers for market books, and compliance communication applications.</li>
+<li>Identify and advocate for innovative solutions to complex problems through clear communication.</li>
+<li>Conduct data-driven research using statistical analytics on large datasets.</li>
+<li>Collaborate across cross-functional teams including developers, traders, researchers, and analysts.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Pursuing a Bachelor's, Master's, or PhD in Computer Science, Engineering, Physics, Mathematics, ML, or a related discipline.</li>
+<li>Expected graduation between December 2027 and June 2028.</li>
+<li>Exposure to network programming, multi-threaded applications, algorithms, or GUI programming.</li>
+<li>Strong understanding of object-oriented design and data structures.</li>
+<li>Proficiency in C++, Python, or Java.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Experience with low-level hardware programming and optimization.</li>
+<li>Familiarity with debuggers and profilers.</li>
+<li>Comfort with vague requirements and high-pressure environments.</li>
+</ul>
+<p>Includes fully furnished housing near the office, an options course, mentorship program, and educational/social events throughout the summer.</p>
+`.trim(),
+        location: "Chicago, IL",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$225,000/yr equivalent",
+        duration: "10 weeks (Summer 2027)",
+        applyUrl: "https://job-boards.greenhouse.io/drweng/jobs/7992936",
+      },
+    ],
+  },
+  {
+    slug: "eulerity",
+    name: "Eulerity",
+    tagline: "AI-powered marketing platform for local businesses",
+    about:
+      "Eulerity builds an AI-powered advertising and marketing automation platform for local and franchise businesses, headquartered in New York City.",
+    fundingStage: "SEED",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "11-50",
+    websiteUrl: "https://www.eulerity.com",
+    categories: ["saas"],
+    technologies: ["react", "nextjs"],
+    location: { city: "New York", country: "USA" },
+    founders: [],
+    internships: [
+      {
+        slug: "eulerity-website-developer-content-marketing-intern",
+        title: "Website Developer & Content Marketing Intern - AI & Automation",
+        description: `
+<p>Eulerity seeks a technically skilled intern to develop and maintain their marketing website and content — someone who can write clean code and clear copy while leveraging AI tools daily.</p>
+<p><strong>Website Development</strong></p>
+<ul>
+<li>Build and maintain landing pages, product pages, and blog templates using HTML, CSS, and JavaScript within their CMS.</li>
+<li>Optimize page speed, mobile responsiveness, and SEO for search and AI answer engines.</li>
+<li>Implement conversion optimization through forms, CTAs, and A/B testing.</li>
+<li>Manage site deployments, bug fixes, and infrastructure.</li>
+</ul>
+<p><strong>Content Writing</strong></p>
+<ul>
+<li>Produce landing page copy, product descriptions, and long-form articles on AI and Ad-Tech topics.</li>
+<li>Use AI tools to accelerate content while maintaining quality and originality.</li>
+<li>Audit existing pages for outdated information and inconsistencies.</li>
+</ul>
+<p><strong>Marketing Support</strong></p>
+<ul>
+<li>Build lightweight automations using n8n, Zapier, or Make.</li>
+<li>Pull analytics data and recommend evidence-based improvements.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Working knowledge of HTML, CSS, and JavaScript.</li>
+<li>Strong written English with the ability to explain technical concepts clearly.</li>
+<li>A portfolio demonstrating built work (website, GitHub, published projects).</li>
+<li>Comfort using AI tools for coding and writing with good judgment.</li>
+<li>Currently pursuing or recently completed a degree in Computer Science, Marketing, Communications, or equivalent self-taught experience.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Experience with React, Next.js, WordPress, or Webflow.</li>
+<li>Writing samples or a personal blog.</li>
+<li>Understanding of modern marketing operations.</li>
+</ul>
+<p>30–40 hours/week, flexible schedule; includes lunch credits, unlimited office snacks, direct mentorship, and a potential pathway to a full-time role.</p>
+`.trim(),
+        location: "New York, NY",
+        department: "Marketing",
+        jobType: "INTERNSHIP",
+        remotePolicy: "HYBRID",
+        stipend: "$18–$20/hr",
+        duration: "Summer 2026",
+        applyUrl: "https://job-boards.greenhouse.io/eulerity/jobs/4694300006",
+      },
+    ],
+  },
+  {
+    slug: "akuna-capital",
+    name: "Akuna Capital",
+    tagline: "A global proprietary trading firm specializing in options",
+    about:
+      "Akuna Capital is a global proprietary trading firm specializing in derivatives market making, headquartered in Chicago, Illinois.",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: true,
+    employeeCountRange: "501-1000",
+    websiteUrl: "https://www.akunacapital.com",
+    categories: ["fintech"],
+    technologies: ["react", "typescript", "python"],
+    location: { city: "Chicago", country: "USA" },
+    founders: [],
+    internships: [
+      {
+        slug: "akuna-capital-software-engineer-intern-full-stack-web-summer-2027",
+        title: "Software Engineer Intern - Full Stack Web, Summer 2027",
+        description: `
+<p>Akuna Capital seeks Web Software Engineer Interns to join their UI team as part of the "Akunacademy" 10-week summer program. Interns work directly with traders, quants, and other software engineers to design, build, test, and maintain real-time trading applications, owning their own project and presenting accomplishments at program completion.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Develop web applications using React, TypeScript, and Python with cross-functional teams.</li>
+<li>Create unit and integration tests for software quality assurance.</li>
+<li>Identify and implement technologies to enhance user experience and development efficiency.</li>
+<li>Participate in Agile/Scrum workflows.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Pursuing a Bachelor's, Master's, or Ph.D. in a technical field (Computer Science/Engineering or equivalent).</li>
+<li>Graduation by August 2028.</li>
+<li>Minimum 3.5 major GPA.</li>
+<li>Legal authorization to work in the U.S. (including F-1 students on OPT/STEM).</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Web programming languages (JavaScript, TypeScript, Python, HTML/CSS).</li>
+<li>Linux and command-line proficiency.</li>
+<li>Unit testing frameworks (pytest, Jest, Storybook).</li>
+<li>Version control (Git).</li>
+</ul>
+`.trim(),
+        location: "Chicago, IL",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$145,000/yr equivalent (min.)",
+        duration: "10 weeks (Summer 2027)",
+        applyUrl: "https://www.akunacapital.com/careers/job/8018893/?gh_jid=8018893",
+      },
+    ],
+  },
+  {
+    slug: "optiver",
+    name: "Optiver",
+    tagline: "A global market maker and proprietary trading firm",
+    about:
+      "Optiver is a global market maker and proprietary trading firm founded in 1986 in Amsterdam, the Netherlands, trading a broad range of financial instruments across major exchanges worldwide, with a significant U.S. office in Chicago.",
+    fundingStage: "SERIES_C_PLUS",
+    remotePolicy: "ONSITE",
+    visaSponsorship: true,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.optiver.com",
+    categories: ["fintech"],
+    technologies: ["cpp", "python", "java"],
+    location: { city: "Chicago", country: "USA" },
+    founders: [],
+    internships: [
+      {
+        slug: "optiver-software-engineer-intern-summer-2027-chicago",
+        title: "Software Engineer Intern - Summer 2027 - Chicago",
+        description: `
+<p>Optiver seeks interns to work side-by-side with a mentor and teammates building real-world applications that power a global trading firm, focusing on developing production-quality software that addresses genuine business needs within financial markets technology.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Explore trading fundamentals and financial market concepts alongside AI-enabled tools.</li>
+<li>Collaborate with engineers, traders, and business teams to develop, test, and deploy code.</li>
+<li>Address complex real-world problems in a high-performance trading environment.</li>
+<li>Contribute to system performance, reliability, and scalability improvements.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Pursuing a Bachelor's, Master's, or PhD in Computer Science or Computer Engineering.</li>
+<li>Expected graduation December 2027 through June 2028 (junior standing minimum).</li>
+<li>Proficiency in C++, Python, or Java.</li>
+<li>Strong computer science fundamentals and engineering instincts.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Passion for clean code and well-architected systems.</li>
+<li>Entrepreneurial mindset with curiosity about technology's financial applications.</li>
+</ul>
+<p>Optiver covers flights, housing, and commuting stipends, plus office amenities (meals, social events, clubs, sporting leagues).</p>
+`.trim(),
+        location: "Chicago, IL",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "$80,000/yr equivalent (base)",
+        duration: "Summer 2027",
+        applyUrl: "https://www.optiver.com/join-us/jobs/8604760002/?gh_jid=8604760002",
+      },
+    ],
+  },
+  {
+    slug: "bosch",
+    name: "Bosch",
+    tagline: "Global engineering and technology company",
+    about:
+      "Robert Bosch GmbH is a German multinational engineering and technology company operating across mobility, industrial, consumer goods, and energy/building technology sectors. Founded in 1886 by Robert Bosch and headquartered in Stuttgart, Germany, Bosch is majority-owned by the Robert Bosch Stiftung charitable foundation.",
+    fundingStage: "PUBLIC",
+    remotePolicy: "ONSITE",
+    visaSponsorship: false,
+    employeeCountRange: "1000+",
+    websiteUrl: "https://www.bosch.com",
+    categories: ["mobility"],
+    technologies: ["cpp", "python"],
+    location: { city: "Stuttgart", country: "Germany" },
+    founders: [{ name: "Robert Bosch", title: "Founder" }],
+    internships: [
+      {
+        slug: "bosch-adas-software-engineering-intern",
+        title: "ADAS Software Engineering Intern",
+        description: `
+<p>Bosch's internship focuses on developing a proof-of-concept system to evaluate and showcase advanced driver assistance system (ADAS) capabilities, partnering with the ADAS engineering team on visualization and validation frameworks used for showcasing ADAS functionality. This position requires in-person presence, as the work involves direct interaction with development vehicles.</p>
+<p><strong>Responsibilities</strong></p>
+<ul>
+<li>Create proof-of-concept software for testing and demonstrating ADAS features.</li>
+<li>Collaborate with ADAS teams to understand requirements and integration needs.</li>
+<li>Support development of visualization or simulation tools for ADAS functionality.</li>
+<li>Modify and enhance C++ and Python codebases.</li>
+<li>Assist in building, deploying, and flashing software to test vehicles.</li>
+<li>Conduct hands-on vehicle testing and validation.</li>
+<li>Document work, design decisions, and usage instructions.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>Minimum 3.0 cumulative GPA.</li>
+<li>Enrolled in an accredited Bachelor's or Master's program in Computer Engineering, Electrical Engineering, or a related field (minimum 5 semesters completed).</li>
+<li>At least 18 years old.</li>
+<li>Proficiency understanding and modifying C++ and Python code.</li>
+<li>Willingness to work on-site and support in-vehicle development activities.</li>
+<li>Indefinite U.S. work authorization (no future sponsorship available).</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Knowledge of graphics rendering frameworks (OpenGL, Godot, or similar).</li>
+<li>Familiarity with computer vision or machine learning concepts.</li>
+</ul>
+`.trim(),
+        location: "Plymouth, MI",
+        department: "ADAS Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "ONSITE",
+        stipend: "Not specified",
+        duration: "Not specified",
+        applyUrl: "https://jobs.smartrecruiters.com/BoschGroup/744000140317669-adas-software-engineering-intern",
+      },
+    ],
+  },
+  {
+    slug: "black-cape",
+    name: "Black Cape",
+    tagline: "Veteran-owned technology company for government and commercial clients",
+    about:
+      "Black Cape is a veteran-owned small business building cloud-native web applications, data analysis tools, and machine learning capabilities for the Intelligence Community, Department of Defense, and commercial clients. Headquartered in Arlington, Virginia.",
+    fundingStage: "SERIES_A",
+    remotePolicy: "HYBRID",
+    visaSponsorship: false,
+    employeeCountRange: "51-200",
+    websiteUrl: "https://blackcape.io",
+    categories: ["govtech"],
+    technologies: ["java", "python"],
+    location: { city: "Arlington", country: "USA" },
+    founders: [],
+    internships: [
+      {
+        slug: "black-cape-skillbridge-internship-software-engineer-arlington",
+        title: "US Military Skillbridge Internship - Software Engineer, Arlington VA",
+        description: `
+<p>Black Cape, a veteran-owned small business, seeks technologists to support mission-critical projects in government and commercial sectors. This internship bridges military technical training to civilian software development roles, covering project lifecycles from inception through deployment. Only in the Arlington, VA area (DMV) at this time — fully remote internships are not offered.</p>
+<p><strong>Key Focus Areas</strong></p>
+<ul>
+<li>Cloud-native web application development.</li>
+<li>Advanced data analysis tools.</li>
+<li>Machine learning capabilities.</li>
+<li>Full-stack software development for traditional, cloud, and hybrid environments.</li>
+<li>Intelligence Community and Department of Defense solutions.</li>
+</ul>
+<p><strong>Required Qualifications</strong></p>
+<ul>
+<li>6 months to 1+ year of technical experience (preferably software-related).</li>
+<li>Proficiency in one object-oriented language: Java, Python, C#, or C++.</li>
+<li>Experience with one MVC framework (Spring, Django, Flask, Rails).</li>
+<li>Familiarity with relational databases (MySQL, PostgreSQL, SQLite3).</li>
+<li>Linux distribution experience (Ubuntu, RedHat, CentOS).</li>
+<li>Web application fundamentals: HTTP, HTML, REST, CSS, JavaScript.</li>
+<li>Completed or near-completed Bachelor's degree (Associate's considered).</li>
+<li>Must be willing to obtain TS/SCI clearance with polygraph if not already held.</li>
+<li>US citizenship required.</li>
+</ul>
+<p><strong>Preferred Qualifications</strong></p>
+<ul>
+<li>Scripting language proficiency (Python, Perl).</li>
+<li>Web server configuration knowledge (NGINX, Apache).</li>
+<li>JavaScript framework experience (Backbone, Angular, Ember, Vue.js).</li>
+<li>NoSQL experience (ElasticSearch, Accumulo, MongoDB, HBase).</li>
+</ul>
+<p>Benefits include 401K, competitive salary, generous time off, team-building events, mentorship, professional development, and tuition reimbursement.</p>
+`.trim(),
+        location: "Arlington, VA",
+        department: "Engineering",
+        jobType: "INTERNSHIP",
+        remotePolicy: "HYBRID",
+        stipend: "Not specified",
+        duration: "Internship to full-time",
+        applyUrl: "http://blackcape.applytojob.com/apply/7o6mmAYryt/US-Military-Skillbridge-Internship-Software-EngineerArlington-VA",
       },
     ],
   },

@@ -14,6 +14,7 @@ const CATEGORIES = [
   { slug: "edtech", name: "Edtech" },
   { slug: "logistics", name: "Logistics" },
   { slug: "mobility", name: "Mobility" },
+  { slug: "govtech", name: "Government & Defense Technology" },
 ];
 
 const TECHNOLOGIES = [
