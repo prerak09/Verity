@@ -7,17 +7,7 @@ import { VerifiedBadge } from "@/components/shared/VerifiedBadge";
 import { RemoteChip } from "@/components/shared/RemoteChip";
 import { SignInGate } from "@/components/shared/SignInGate";
 import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
-
-const DAY_MS = 24 * 60 * 60 * 1000;
-
-function timeAgo(iso: string): string {
-  const ms = Date.now() - new Date(iso).getTime();
-  const days = Math.floor(ms / DAY_MS);
-  if (days <= 0) return "Posted today";
-  if (days === 1) return "Posted yesterday";
-  if (days < 30) return `Posted ${days}d ago`;
-  return `Posted ${Math.floor(days / 30)}mo ago`;
-}
+import { timeAgo, DAY_MS } from "@/lib/time-ago";
 
 // Hostname substring -> display label, checked against every applyUrl host
 // actually present in the seeded data (Greenhouse, Ashby, Lever, Workday,

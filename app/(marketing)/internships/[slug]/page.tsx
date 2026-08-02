@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MapPin, Clock } from "lucide-react";
+import { MapPin, Clock, CalendarDays } from "lucide-react";
 
 import { RemoteChip } from "@/components/shared/RemoteChip";
 import { BookmarkButton } from "@/features/bookmarks/components/BookmarkButton";
@@ -14,6 +14,7 @@ import { getBookmarkedIds } from "@/features/bookmarks/queries";
 import { listApplications } from "@/features/applications/queries";
 import { SEASON_LABEL } from "@/config/seasons";
 import { excerpt } from "@/lib/sanitize";
+import { timeAgo } from "@/lib/time-ago";
 
 export const dynamic = "force-dynamic";
 
@@ -135,6 +136,12 @@ export default async function InternshipDetailPage({
             )}
             {internship.stipend && (
               <span className="font-medium text-foreground">{internship.stipend}</span>
+            )}
+            {internship.publishedAt && (
+              <span className="inline-flex items-center gap-1">
+                <CalendarDays className="size-4" aria-hidden />
+                {timeAgo(internship.publishedAt)}
+              </span>
             )}
           </div>
 

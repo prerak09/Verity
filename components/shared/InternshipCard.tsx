@@ -4,6 +4,7 @@ import type { InternshipCard as InternshipCardDTO } from "@/types";
 import { RemoteChip } from "@/components/shared/RemoteChip";
 import { CompanyLogo } from "@/components/shared/CompanyLogo";
 import { SEASON_LABEL } from "@/config/seasons";
+import { timeAgo } from "@/lib/time-ago";
 import { cn } from "@/components/lib/utils";
 
 /**
@@ -96,6 +97,11 @@ export function InternshipCard({
             </>
           )}
         </div>
+        {!archived && internship.publishedAt && (
+          <p className="mt-1.5 text-caption text-muted-foreground">
+            {timeAgo(internship.publishedAt)}
+          </p>
+        )}
       </div>
 
       {bookmarkSlot && (
